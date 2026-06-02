@@ -1,0 +1,157 @@
+<!--
+Elementos para áudio e vídeo: Uso de <audio> e <video>, e seus
+atributos e formatos suportados.
+
+Incorporar conteúdo de áudio e vídeo em páginas web pode enriquecer
+significativamente a experiência do usuário, oferecendo mídia interativa e
+envolvente. Os elementos HTML <audio> e <video> permitem essa
+incorporação diretamente no navegador, sem a necessidade de plugins
+externos. Vou criar um exemplo de documento HTML que demonstra o uso
+desses elementos, explicando os atributos importantes e os formatos de
+arquivo suportados.
+-->
+
+<!DOCTYPE html>
+<!-- Esta declaração define o documento como HTML5, a versão mais 
+    recente e amplamente suportada de HTML, que inclui suporte aprimorado 
+    para elementos de mídia como áudio e vídeo. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt"' especifica 
+    que o idioma do documento é o português, o que ajuda os navegadores a 
+    entenderem o contexto linguístico para acessibilidade e busca. -->
+
+<head>
+    <!-- A tag <head> contém metadados, que são informações sobre o documento 
+        que não são exibidamente diretamente na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define a codificação de 
+        caracteres utilizada no documento. UTF-8 é uma codificação universal que 
+        suporta quase todos os idiomas e caracteres usados na escrita. -->
+
+    <title>Mídia com HTML: Áudio e Vídeo</title>
+    <!-- A tag <title> define o título da página, que aparece na aba do navegador. 
+        Este título é útil tanto para a experiência do usuário quanto para a 
+        otimização para motores de busca (SEO). -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página, como texto, 
+        imagens, links, áudio e vídeo. -->
+
+    <h1>Exemplos de Áudio e Vídeo em HTML</h1>
+    <!-- A tag <h1> é usada para o título principal da página, destacando o tema 
+        principal do conteúdo, o que é crucial para SEO e para dar contexto aos usuários. -->
+
+    <h2>Elemento &lt;audio&gt;</h2>
+    <!-- A tag <h2> introduz um subtítulo, aqui usado para começar a seção sobre o 
+        elemento <audio>. A utilização de "&lt;" e "&gt;" ajuda a mostrar as tags 
+        literalmente sem que o navegador tente interpretá-las como código. -->
+
+    <p>Um exemplo simples de um player de áudio:</p>
+    <!-- Um parágrafo introduzindo o exemplo de áudio que será mostrado a seguir. -->
+
+    <audio controls>
+        <!-- A tag <audio> é usada para incorporar conteúdo de áudio na 
+            página. O atributo 'controls' é adicionado para fornecer ao 
+            usuário controles de reprodução como play, pause e volume. -->
+
+        <source src="audio/musica.mp3" type="audio/mpeg">
+        <!-- A tag <source> dentro de <audio> especifica a fonte do arquivo 
+            de áudio e seu tipo. 'src' define o caminho para o arquivo, 
+            enquanto 'type' especifica o formato do arquivo de áudio. -->
+
+        Seu navegador não suporta o elemento de áudio.
+        <!-- Este texto será mostrado apenas se o navegador do usuário 
+            não suportar o elemento <audio>. -->
+
+    </audio>
+
+    <h2>Elemento &lt;video&gt;</h2>
+    <!-- Outro <h2> para introduzir a seção sobre o elemento <video>. -->
+
+    <p>Um exemplo simples de um player de vídeo:</p>
+    <!-- Um parágrafo que antecede o exemplo de vídeo. -->
+
+    <video width="320" height="240" controls>
+        <!-- A tag <video> é usada para incorporar conteúdo de vídeo. 'width' e 
+            'height' definem as dimensões do vídeo. O atributo 'controls' 
+            adiciona controles de vídeo. -->
+
+        <source src="video/filme.mp4" type="video/mp4">
+        <!-- A tag <source> define a fonte do arquivo de vídeo e seu formato. -->
+
+        Seu navegador não suporta o elemento de vídeo.
+        <!-- Este texto é exibido se o navegador do usuário não 
+            suportar o elemento <video>. -->
+
+    </video>
+
+    <h2>Atributos Comuns</h2>
+    <!-- <h2> usado para introduzir informações sobre os atributos 
+        comuns aos elementos de mídia. -->
+
+    <ul>
+        <!-- A tag <ul> define uma lista não ordenada. -->
+        
+        <li><strong>controls:</strong> Adiciona controles de reprodução, como play, pause e volume.</li>
+        <!-- Cada <li> descreve um atributo usado em elementos de mídia. -->
+
+        <li><strong>width e height:</strong> Define as dimensões do vídeo. Não se aplica ao áudio.</li>
+        <li><strong>autoplay:</strong> Começa a reprodução automaticamente ao carregar a página. Uso não recomendado por questões de usabilidade e consumo de dados.</li>
+        <li><strong>loop:</strong> Repete o áudio ou vídeo automaticamente.</li>
+        <li><strong>muted:</strong> Inicia o vídeo sem som. Útil em combinação com autoplay.</li>
+    </ul>
+
+    <h2>Formatos de Arquivo Suportados</h2>
+    <!-- Mais um <h2> para discutir os formatos de arquivo de mídia suportados pelos navegadores. -->
+
+    <ul>
+        <!-- Outra lista não ordenada para os formatos de arquivo. -->
+        <li><strong>Áudio:</strong> MP3 (audio/mpeg), Ogg (audio/ogg), WAV (audio/wav)</li>
+        <li><strong>Vídeo:</strong> MP4 (video/mp4), WebM (video/webm), Ogg (video/ogg)</li>
+    </ul>
+
+</body>
+</html>
+<!-- A tag </html> marca o fim do documento HTML. -->
+
+
+
+<!--
+Explicação do Exemplo
+
+Elemento <audio>
+<audio>: Usado para incorporar conteúdo de áudio.
+controls: Mostra os controles de reprodução como play, pause e volume.
+source: Define múltiplas fontes de áudio para compatibilidade entre navegadores.
+
+Elemento <video>
+<video>: Usado para incorporar conteúdo de vídeo.
+width e height: Define o tamanho do player de vídeo.
+controls: Similar ao <audio>, adiciona controles de reprodução no vídeo.
+
+Atributos Adicionais
+autoplay: Inicia a reprodução assim que a página é carregada (não recomendado 
+    para uma boa experiência do usuário).
+loop: Repete o conteúdo indefinidamente.
+muted: Inicia o vídeo sem som, útil quando usado com autoplay para 
+    evitar surpresas sonoras ao carregar a página.
+Formatos de Arquivo Suportados
+
+Áudio:
+MP3 (audio/mpeg): Amplamente suportado em todos os navegadores modernos.
+Ogg Vorbis (audio/ogg): Suporte variável, mas boa qualidade e compressão.
+WAV (audio/wav): Suportado, geralmente usado para áudio sem perdas.
+
+Vídeo:
+MP4 (video/mp4): O formato mais comum e amplamente suportado para vídeo.
+WebM (video/webm): Suporte crescente, conhecido por sua compressão eficiente.
+Ogg Theora (video/ogg): Menos comum, mas uma opção livre de royalties.
+
+Este exemplo oferece uma visão geral de como incorporar e trabalhar com
+mídia em HTML, permitindo criar experiências ricas e
+interativas em páginas web.
+-->

@@ -1,0 +1,141 @@
+<!--
+Caminhos relativos e absolutos: Como referenciar arquivos e
+páginas dentro e fora do site.
+
+Ao trabalhar com HTML, é crucial entender como referenciar arquivos e
+páginas corretamente usando caminhos relativos e absolutos. Essas
+referências são usadas principalmente nos atributos href de links ou src
+de imagens e outros recursos. Um caminho absoluto fornece o URL completo
+de um recurso, enquanto um caminho relativo fornece um caminho a partir
+do arquivo atual até o recurso desejado. Vamos criar um exemplo de
+documento HTML que ilustra essas duas formas de referência para arquivos e
+páginas.
+-->
+
+<!DOCTYPE html>
+<!-- Esta linha informa ao navegador que o tipo de documento é HTML5, 
+        que é a versão mais recente e recomendada do HTML. O uso desta 
+        declaração garante que o navegador interprete o código corretamente 
+        segundo os padrões modernos. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt"' especifica 
+        que o idioma do conteúdo do documento é o português. Isso é útil para 
+        ajudar os navegadores a entender o idioma predominante da página, 
+        influenciando, por exemplo, a forma como o conteúdo é lido por 
+        leitores de tela. -->
+
+<head>
+    <!-- A tag <head> contém informações que não são exibidas diretamente na 
+        página, mas que são importantes para o navegador, como metadados, 
+        links para folhas de estilo, e o título da página. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define a codificação de 
+        caracteres utilizada no documento. UTF-8 é uma codificação que suporta 
+        todos os caracteres de quase todos os idiomas, garantindo que o texto 
+        seja exibido corretamente. -->
+
+    <title>Referências de Caminhos em HTML</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba do 
+        navegador. O título é importante para a experiência do usuário e SEO, 
+        pois dá uma ideia do conteúdo da página. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página, como 
+        texto, imagens, links, etc. -->
+
+    <h1>Como Referenciar Arquivos e Páginas em HTML</h1>
+    <!-- A tag <h1> é usada para o título principal da página. Ela ajuda na 
+        organização do conteúdo e é crucial para SEO, indicando o tópico 
+        mais importante da página. -->
+
+    <h2>Caminhos Absolutos</h2>
+    <!-- A tag <h2> é usada para títulos de seções, que são menos importantes 
+        que <h1> mas ainda são significativos para a estrutura do conteúdo. 
+        Esta seção falará sobre caminhos absolutos. -->
+
+    <p>Um link externo para o Google, usando caminho absoluto:</p>
+    <!-- Um parágrafo explicando o que será demonstrado a seguir, neste 
+        caso, um link externo usando um caminho absoluto. -->
+
+    <p><a href="https://www.google.com">Visite o Google</a></p>
+    <!-- A tag <a> cria um link. O atributo 'href' define o destino do 
+        link. Neste caso, o destino é 'https://www.google.com', um URL completo, 
+        conhecido como caminho absoluto, que leva diretamente ao site do Google. -->
+
+    <h2>Caminhos Relativos</h2>
+    <!-- Outro <h2> para uma nova seção que discute caminhos relativos, que são 
+        usados para referenciar arquivos dentro do mesmo site. -->
+
+    <p>Links internos usando caminhos relativos:</p>
+    <!-- Um parágrafo introduzindo o conceito de links internos com caminhos relativos. -->
+
+    <ul>
+        <!-- A tag <ul> define uma lista não ordenada. Aqui, ela é 
+            usada para listar exemplos de caminhos relativos. -->
+
+        <li><a href="pagina2.html">Página 2 (no mesmo diretório)</a></li>
+        <!-- Cada <li> é um item da lista. Este item é um link para 'pagina2.html', 
+            um arquivo no mesmo diretório do documento atual. -->
+
+        <li><a href="subdiretorio/pagina3.html">Página 3 (em um subdiretório)</a></li>
+        <!-- Este link aponta para 'pagina3.html', localizado dentro de um subdiretório 
+            chamado 'subdiretorio'. -->
+
+        <li><a href="../pagina4.html">Página 4 (no diretório acima)</a></li>
+        <!-- Este link usa '../' para subir um nível no diretório e então 
+            acessar 'pagina4.html'. '../' significa "diretório pai". -->
+
+    </ul>
+
+    <p>Imagens e outros recursos também podem ser referenciados. Exemplo com uma imagem:</p>
+    <!-- Um parágrafo explicando que não apenas páginas, mas também recursos 
+        como imagens podem ser referenciados. -->
+
+    <img src="imagens/logo.png" alt="Logo da Empresa">
+    <!-- A tag <img> é usada para inserir uma imagem. O atributo 'src' especifica o 
+        caminho para a imagem, e 'alt' fornece um texto alternativo que descreve a 
+        imagem, importante para acessibilidade e quando a imagem não pode ser carregada. -->
+
+    
+    </body>
+</html>
+<!-- A tag </html> marca o fim do documento HTML. -->
+
+
+
+<!--
+Explicação do Exemplo
+
+Caminhos Absolutos
+Links Externos: A tag <a href="https://www.google.com">Visite o Google</a> usa
+um caminho absoluto que especifica a URL completa. Este tipo de caminho é
+necessário quando se refere a recursos que estão fora do seu domínio.
+
+Caminhos Relativos
+Mesmo diretório: href="pagina2.html" aponta para um arquivo que está no
+mesmo diretório que o documento atual.
+
+Subdiretório: href="subdiretorio/pagina3.html" aponta para um arquivo
+localizado em um subdiretório chamado "subdiretorio".
+
+Diretório acima: href="../pagina4.html" aponta para um arquivo que está um
+nível acima do diretório atual.
+
+Imagens e Recursos
+Relativos: src="imagens/logo.png" indica que a imagem está armazenada dentro
+de uma pasta chamada "imagens", que está no mesmo diretório que o
+documento HTML.
+
+Absolutos: src="/imagens/logo.png" refere-se a uma imagem usando um caminho
+absoluto dentro do mesmo site, útil quando a base do site é conhecida e
+constante, como em um domínio de produção.
+
+Este exemplo cobre o uso básico de caminhos relativos e absolutos em HTML,
+essencial para a correta organização de links e recursos em um site,
+garantindo que eles sejam acessíveis independente da estrutura de
+diretórios ou do ambiente de desenvolvimento.
+-->

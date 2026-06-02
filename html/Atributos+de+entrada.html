@@ -1,0 +1,190 @@
+<!--
+Atributos de entrada: Como type, placeholder, required, value.
+
+Vamos criar um exemplo de documento HTML que demonstra o uso de vários
+atributos importantes de entrada em um formulário. Esses atributos ajudam a
+especificar o tipo de dados que o campo deve receber, oferecem uma breve
+dica dentro do campo, marcam um campo como obrigatório para o envio do
+formulário, e definem um valor inicial para o campo. Este exemplo incluirá
+diferentes tipos de campos de entrada para mostrar como esses atributos
+são usados na prática.
+-->
+
+<!DOCTYPE html>
+<!-- A linha acima define o tipo de documento como HTML5, que é a 
+    versão mais recente do HTML. -->
+
+<html lang="pt">
+<!-- A tag <html> indica o início do documento HTML. O atributo 'lang="pt"' 
+    especifica que o idioma principal do documento é o português. -->
+
+<head>
+    <!-- A tag <head> contém metadados (dados sobre dados) que geralmente não 
+        são visíveis para o usuário, mas são úteis para o navegador e para os 
+        motores de busca. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo charset="UTF-8" especifica que o documento 
+        usa o conjunto de caracteres UTF-8, que inclui a maioria dos caracteres 
+        usados em diversos idiomas. -->
+
+    <title>Formulário com Atributos de Entrada</title>
+    <!-- A tag <title> define o título do documento, que é mostrado na aba 
+        do navegador. -->
+
+</head>
+
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página, como texto, 
+        imagens, links, formulários, etc. -->
+
+    <h1>Formulário de Inscrição</h1>
+    <!-- A tag <h1> define um cabeçalho de nível 1, que é usado para 
+        títulos principais na página. Geralmente é o mais importante e o maior. -->
+
+    <form action="submit_form.php" method="post">
+    <!-- A tag <form> é usada para criar um formulário para coletar dados do usuário. 
+         'action' define para onde os dados do formulário são enviados (neste 
+                caso, para o arquivo 'submit_form.php').
+         'method' define o método HTTP de envio dos dados, 'post' é usado 
+                para enviar dados de forma segura e privada. -->
+         <!-- Campo de texto simples com placeholder e required -->
+
+        <label for="nome">Nome:</label>
+        <!-- <label> define um rótulo para um elemento <input>. O atributo 'for' 
+                deve ser igual ao id do elemento <input> para associar o rótulo ao campo. -->
+
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        <!-- <input type="text"> cria uma caixa de texto. 
+             'id' é um identificador único para o elemento.
+             'name' é o nome da variável que será enviada ao servidor.
+             'placeholder' fornece uma breve descrição dentro do campo (desaparece 
+                    quando o usuário começa a digitar).
+             'required' indica que o campo deve ser preenchido antes de 
+                    enviar o formulário. -->
+
+        <br><br> <!-- <br> insere uma quebra de linha. -->
+
+        <!-- Campo de E-mail com descrições completas -->
+        <label for="email">E-mail:</label>
+        <!-- A tag <label> serve para definir um rótulo para o campo de entrada 
+            de dados, especificamente para o campo de e-mail neste caso. 
+            O atributo 'for' deste rótulo se associa ao 'id' do campo de 
+            entrada, permitindo que um clique no rótulo ative o campo 
+            correspondente, melhorando a usabilidade para o usuário. -->
+
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        <!-- A tag <input> com o tipo 'email' é usada para criar um campo 
+                    destinado à entrada de e-mails. 
+            - O atributo 'id' fornece uma identificação única para o campo, 
+                    que é vinculada pelo 'for' no <label>.
+            - O atributo 'name' define o nome da variável que armazenará os 
+                    dados deste campo, importante para o processamento no servidor.
+            - 'placeholder' proporciona uma descrição dentro do campo que 
+                    orienta o usuário sobre o que inserir.
+            - 'required' é um validador que impede o envio do formulário se o 
+                    campo estiver vazio, garantindo que o usuário forneça um e-mail. -->
+        <br><br>
+
+        <!-- Campo de Senha com descrições completas -->
+        <label for="senha">Senha:</label>
+        <!-- <label> identifica o campo associado para entrada de senha. 
+                    Utiliza o 'for' para se conectar com o 'id' do campo de 
+                    entrada, permitindo ativação por clique no rótulo. -->
+
+        <input type="password" id="senha" name="senha" required>
+        <!-- <input type="password"> é utilizado para criar um campo 
+                    onde o usuário pode inserir uma senha.
+            - 'id' atribui uma identificação única ao campo, conectando-o ao rótulo.
+            - 'name' é o nome da variável que será utilizada para processar os 
+                    dados do campo no servidor.
+            - 'required' garante que o campo não seja deixado em branco, 
+                    aumentando a segurança do formulário ao exigir que o usuário 
+                    insira uma senha antes de enviar os dados. -->
+
+        <br><br>
+
+        <!-- Campo de Número com descrições completas -->
+        <label for="idade">Idade:</label>        
+        <!-- <label> serve para designar o rótulo para o campo de idade, 
+            associando-se ao 'id' do campo de entrada pelo 'for'. -->
+
+        <input type="number" id="idade" name="idade" placeholder="Digite sua idade" value="18">
+        <!-- <input type="number"> cria um campo para a inserção de números, ideal para dados como idade.
+            - 'id' fornece um identificador único que liga o campo ao seu rótulo.
+            - 'name' define o nome da variável para o processamento dos dados.
+            - 'placeholder' oferece um guia visual temporário dentro do campo.
+            - 'value' define um valor inicial para o campo, que neste caso é 18, 
+                    mas pode ser alterado pelo usuário. -->
+        <br><br>
+
+        <!-- Campo de Data com descrições completas -->
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <!-- <label> define o rótulo para o campo de data de nascimento. -->
+
+        <input type="date" id="dataNascimento" name="dataNascimento" value="2000-01-01">
+        <!-- <input type="date"> é usado para permitir ao usuário selecionar uma 
+                    data de um calendário interativo.
+            - 'id' é o identificador único que conecta o campo ao rótulo.
+            - 'name' nomeia a variável que será usada para armazenar os dados no servidor.
+            - 'value' pré-carrega o campo com uma data inicial, aqui definida 
+                    como 1º de janeiro de 2000. -->
+        <br><br>
+
+        <!-- Campo de Checkbox com descrições completas -->
+        <label for="termos">Aceito os termos e condições</label>
+        <!-- <label> associa um rótulo à caixa de seleção para termos e condições. -->
+
+        <input type="checkbox" id="termos" name="termos">
+        <!-- <input type="checkbox"> cria uma caixa que pode ser marcada ou desmarcada pelo usuário.
+            - 'id' liga a caixa de seleção ao seu rótulo correspondente, permitindo ativação por clique.
+            - 'name' é a variável que indica se os termos foram aceitos ou não. -->
+
+        <br><br>
+
+        <!-- Botões para enviar e limpar o formulário -->
+        <button type="submit">Enviar</button>
+        <!-- <button type="submit"> cria um botão que, quando clicado, envia 
+                todos os dados do formulário para o servidor, conforme especificado 
+                no atributo 'action' da tag <form>. -->
+
+        <button type="reset">Limpar</button>
+        <!-- <button type="reset"> cria um botão que, quando clicado, reinicia 
+                todos os campos do formulário para seus valores iniciais ou os limpa 
+                completamente, dependendo dos tipos de entrada. -->
+
+    </form>
+</body>
+</html>
+
+
+
+<!--
+Explicação dos Atributos de Entrada Usados
+
+type: Define o tipo de dado que o campo deve receber, como text, email,
+password, number, e date. Isso informa ao navegador como tratar cada
+entrada, incluindo quaisquer validações específicas (como verificar o
+formato de um e-mail).
+
+placeholder: Fornece um texto de ajuda dentro do campo, que desaparece
+quando o usuário começa a digitar. É útil para dar uma dica sobre o que
+deve ser inserido no campo.
+
+required: Um atributo booleano que indica que o campo deve ser preenchido
+antes de enviar o formulário. Campos com esse atributo precisam ter
+algum valor para que o formulário seja submetido, garantindo que dados
+essenciais não sejam omitidos.
+
+value: Define um valor inicial para o campo. No campo de número e data,
+estabelece um valor padrão que o usuário pode modificar.
+
+Uso Prático
+Esse exemplo ilustra um formulário que poderia ser usado para inscrições
+ou registros, utilizando atributos de entrada para garantir que os dados
+coletados sejam válidos e completos. A escolha correta do type e a
+definição de valores padrão ou placeholders ajudam a orientar os usuários
+durante o preenchimento do formulário, melhorando a experiência do
+usuário e a qualidade dos dados coletados.
+-->

@@ -1,0 +1,130 @@
+<!--
+Criação de links: Uso da tag <a> para links internos e externos.
+
+A criação de links em HTML é feita com a tag <a>, que é uma das
+ferramentas mais fundamentais da web, permitindo a conexão entre
+páginas internas de um site ou com páginas externas. Neste exemplo,
+demonstraremos como usar a tag <a> para criar links internos (links
+que apontam para uma seção diferente da mesma página ou para outra
+página no mesmo site) e externos (links que levam a outro site).
+-->
+
+<!DOCTYPE html>
+<!-- A declaração <!DOCTYPE html> informa ao navegador que esta página deve 
+        ser interpretada como um documento HTML5. É importante porque define a 
+        versão do HTML que está sendo usada, garantindo que o navegador processe o 
+        documento corretamente. -->
+
+<html lang="pt">
+<!-- A tag <html> marca o início do documento HTML. O atributo 'lang="pt"' 
+        especifica que o idioma principal do documento é o português. Isso ajuda os 
+        navegadores e ferramentas de acessibilidade a processar o texto de acordo 
+        com as especificações do idioma definido. -->
+
+<head>
+    <!-- A tag <head> contém informações sobre o documento que não são exibidas 
+        diretamente na página. Essas informações incluem metadados, links para 
+        scripts, folhas de estilo e outros. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' especifica que o documento 
+        usa a codificação de caracteres UTF-8. Esta codificação suporta quase todos os 
+        caracteres dos idiomas do mundo, assegurando que qualquer texto seja 
+        exibido corretamente. -->
+
+    <title>Exemplo de Criação de Links</title>
+    <!-- A tag <title> define o título da página, que é mostrado na aba do navegador. 
+        O título é fundamental tanto para a experiência do usuário quanto para a otimização 
+        para motores de busca (SEO), pois dá uma ideia do conteúdo da página. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível para os usuários na página, 
+        como texto, imagens, vídeos, links, entre outros. -->
+
+    <h1>Como Criar Links com HTML</h1>
+    <!-- A tag <h1> é usada para o título principal da página. Ela é muito 
+        importante para SEO e ajuda os usuários a entenderem rapidamente o 
+        tópico principal da página. -->
+
+    <h2>Links Internos</h2>
+    <!-- A tag <h2> é usada para subtítulos, ajudando a organizar o conteúdo 
+        em seções claramente definidas. Aqui, ela introduz uma seção sobre links internos. -->
+
+    <p><a href="#secao-informacoes">Clique aqui para ir para a seção de Informações</a></p>
+    <!-- A tag <p> define um parágrafo. Dentro deste parágrafo, a tag <a> é usada 
+        para criar um link. O atributo 'href' com o valor "#secao-informacoes" cria 
+        um link interno que leva o usuário para uma parte específica desta mesma 
+        página, marcada com um ID de 'secao-informacoes'. -->
+
+    <p><a href="pagina-local.html">Clique aqui para ir para outra página local</a></p>
+    <!-- Outro parágrafo com um link. Este link aponta para 'pagina-local.html', um 
+        arquivo no mesmo site. Este é um exemplo de link interno que leva a uma outra 
+        página do mesmo website. -->
+
+    <h2>Links Externos</h2>
+    <!-- Outro <h2> que introduz a seção sobre links externos, que são links para 
+        páginas fora do site atual. -->
+
+    <p><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Visite o site Example</a></p>
+    <!-- Este parágrafo contém um link externo. O 'href' aponta para 'https://www.google.com'. 
+        O atributo 'target="_blank"' faz com que o link seja aberto em uma nova aba do 
+        navegador. O atributo 'rel="noopener noreferrer"' é uma medida de segurança para 
+        proteger a privacidade e segurança tanto do usuário quanto do site. -->
+
+    <h2 id="secao-informacoes">Informações</h2>
+    <!-- A tag <h2> com o atributo 'id="secao-informacoes"' define um ponto de 
+        destino na página que pode ser acessado diretamente através de um link 
+        interno. A seção de 'Informações' é onde o usuário será levado ao 
+        clicar no link interno mencionado anteriormente. -->
+
+    <p>Esta é uma seção interna da página, alcançada através de um link interno.</p>
+    <!-- Um parágrafo explicando que esta parte do conteúdo pode ser acessada 
+        diretamente por um link interno, demonstrando o uso prático de um link que 
+        leva a uma seção específica da mesma página. -->
+        
+</body>
+</html>
+<!-- A tag </html> marca o fim do documento HTML. -->
+
+
+
+<!--
+Explicação do Exemplo
+
+<a>: A tag <a> é usada para criar hyperlinks. Ela tem vários atributos,
+mas os mais importantes são href e target.
+
+href: Especifica o destino do link. Pode ser um URL para uma página
+externa, um caminho para uma página interna ou um identificador de
+seção precedido por # para navegação interna na mesma página.
+
+target: Especifica onde abrir o link. O valor _blank abre o link em
+uma nova aba do navegador. Este atributo é comumente usado para links
+externos para manter os visitantes no site original enquanto exploram o
+link externo.
+
+rel="noopener noreferrer": Este atributo é uma prática de segurança
+recomendada para links que usam target="_blank", protegendo contra
+vulnerabilidades e passagem de informações de referência.
+
+Links Internos
+
+Link para uma seção na mesma página: Usando href="#secao-informacoes", o
+link pula para a parte da página com o id "secao-informacoes".
+
+Link para outra página no mesmo site: href="pagina-local.html" aponta para
+um arquivo no mesmo diretório ou caminho especificado.
+
+Links Externos
+
+Link para um site externo: href="https://www.google.com" define o URL do
+site de destino, e target="_blank" faz com que o link seja aberto em uma
+nova aba.
+
+Este exemplo ilustra como estruturar links internos e externos em um
+documento HTML, facilitando a navegação dentro e fora do site. A habilidade de
+interligar conteúdos é fundamental para a construção de uma boa experiência do
+usuário na web.
+-->

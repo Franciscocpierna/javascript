@@ -1,0 +1,201 @@
+<!--
+Atributos de tabela: Como colspan, rowspan para formatar e ajustar tabelas.
+
+Atributos como colspan e rowspan são fundamentais para ajustar e
+formatar tabelas em HTML, permitindo que você controle como as
+células se expandem ao longo de várias colunas ou linhas. Isso é
+particularmente útil para criar cabeçalhos de seção ou agrupar
+informações relacionadas visualmente. Vamos ver um exemplo detalhado de
+como esses atributos são usados para criar uma tabela complexa e bem
+organizada.
+-->
+
+<!DOCTYPE html>
+<!-- A linha acima declara o tipo de documento como HTML5, informando ao 
+    navegador que a página deve ser interpretada conforme os padrões da 
+    versão HTML5. Esta declaração é essencial para garantir que todos os 
+    recursos do HTML5 sejam suportados corretamente pelo navegador. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt"' especifica 
+    que o idioma principal do documento é o português, o que ajuda os 
+    navegadores a tratar o conteúdo adequadamente para acessibilidade, 
+    busca e outros recursos que dependem do idioma. -->
+
+<head>
+    <!-- A tag <head> contém metadados e outras informações sobre o 
+        documento HTML que não são visíveis diretamente na página, como o 
+        título e a codificação de caracteres. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define a codificação 
+        de caracteres para UTF-8, que suporta quase todos os caracteres de 
+        todos os idiomas, garantindo que qualquer texto seja exibido corretamente. -->
+
+    <title>Atributos de Tabela em HTML</title>
+    <!-- A tag <title> define o título da página, que é mostrado na aba do 
+        navegador. O título é importante para a experiência do usuário e para 
+        SEO (Search Engine Optimization). -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página web, 
+        como texto, imagens, tabelas, etc. -->
+
+    <h1>Atributos colspan e rowspan em Tabelas HTML</h1>
+    <!-- A tag <h1> é usada para o título principal da página. É uma boa 
+        prática usar apenas um <h1> por página para dar destaque ao título 
+        principal e ajudar na estruturação SEO. -->
+
+    <table border="1">
+        <!-- A tag <table> é usada para criar uma tabela. O atributo 'border="1"' 
+            adiciona uma borda simples de 1 pixel ao redor da tabela e suas células, 
+            ajudando visualmente a diferenciar os elementos da tabela. -->
+
+        <caption>Horário de Aulas</caption>
+        <!-- A tag <caption> fornece um título para a tabela, que é "Horário de Aulas" 
+            neste caso, ajudando o usuário a entender o conteúdo apresentado na tabela. -->
+
+        <thead>
+            <!-- A tag <thead> é usada para agrupar o cabeçalho da tabela, contendo as 
+                linhas de cabeçalho. -->
+
+            <tr>
+                <!-- A tag <tr> define uma linha na tabela. -->
+                
+                <th>Dia</th>
+                <!-- A tag <th> define uma célula de cabeçalho na tabela, que por padrão é 
+                    exibida em negrito e centralizada. "Dia" é uma célula de cabeçalho 
+                    que descreve os dias da semana abaixo. -->
+
+                <th colspan="3">Manhã</th>
+                <!-- A tag <th> com o atributo 'colspan="3"' significa que esta célula de 
+                    cabeçalho deve se estender por três colunas. "Manhã" é um cabeçalho 
+                    que abrange três períodos de tempo da manhã. -->
+
+                <th colspan="3">Tarde</th>
+                <!-- Similarmente, esta célula de cabeçalho se estende por três colunas 
+                    para cobrir os períodos da tarde. -->
+
+            </tr>
+            <tr>
+                <!-- Outra linha de cabeçalho definindo horários 
+                    específicos para cada período. -->
+
+                <th>Horário</th>
+                <!-- Uma célula de cabeçalho para o rótulo "Horário". -->
+
+                <th>8h-9h</th>
+                <!-- Células de cabeçalho para cada hora específica da manhã. -->
+
+                <th>9h-10h</th>
+                <th>10h-11h</th>
+                <th>13h-14h</th>
+                <!-- Células de cabeçalho para cada hora específica da tarde. -->
+
+                <th>14h-15h</th>
+                <th>15h-16h</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- A tag <tbody> é usada para agrupar o corpo principal da tabela, 
+                contendo todas as linhas de dados. -->
+
+            <tr>
+                <!-- Define uma linha no corpo da tabela. -->
+
+                <td>Segunda-feira</td>
+                <!-- A tag <td> define uma célula de dados padrão na tabela. "Segunda-feira" 
+                    indica o dia da semana para as aulas listadas nesta linha. -->
+
+                <td rowspan="2">Matemática</td>
+                <!-- 'rowspan="2"' faz com que a célula se estenda verticalmente por 
+                    duas linhas, indicando que a aula de Matemática ocorre no mesmo 
+                    horário na Segunda e na Terça-feira. -->
+
+                <td rowspan="2">Física</td>
+                <!-- Similarmente, Física também se estende por duas linhas. -->
+
+                <td>Química</td>
+                <!-- Uma aula regular que ocupa apenas uma célula. -->
+
+                <td colspan="2">Literatura</td>
+                <!-- 'colspan="2"' faz com que a célula se estenda por duas colunas, 
+                    indicando que a aula de Literatura ocupa dois períodos de 
+                    tempo consecutivos. -->
+
+                <td rowspan="3">Artes</td>
+                <!-- 'rowspan="3"' faz com que a célula se estenda por três linhas, 
+                    indicando que a aula de Artes ocorre no mesmo horário de 
+                    Segunda a Quarta-feira. -->
+
+            </tr>
+            <tr>
+                <!-- Outra linha para Terça-feira. -->
+
+                <td>Terça-feira</td>
+                <!-- Indica o dia da semana. -->
+
+                <td>Geografia</td>
+                <!-- Uma aula que ocupa o último período da manhã. -->
+                
+            </tr>
+            <tr>
+                <!-- Uma linha para Quarta-feira. -->
+
+                <td>Quarta-feira</td>
+                <!-- Indica o dia da semana. -->
+
+                <td colspan="2">Biologia</td>
+                <!-- 'colspan="2"' indica que Biologia ocupa dois períodos da manhã. -->
+
+                <td>Português</td>
+                <!-- Aula regular de uma hora. -->
+
+                <td>História</td>
+                <!-- Outra aula regular de uma hora. -->
+
+                <td>Educação Física</td>
+                <!-- A última aula da tarde. -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+<!--
+Explicação do Exemplo
+
+Atributos colspan e rowspan
+colspan: Este atributo é usado para especificar o número de colunas que
+uma célula deve se estender horizontalmente. No exemplo, o cabeçalho "Manhã"
+se estende por três colunas para abranger o horário das 8h às 11h.
+
+rowspan: Este atributo é usado para especificar o número de linhas que uma
+célula deve ocupar verticalmente. No exemplo, a aula de "Matemática" ocorre
+tanto na segunda-feira quanto na terça-feira no mesmo horário das 8h às 9h,
+então o rowspan é usado para expandir a célula verticalmente por duas linhas.
+
+Uso Prático
+Cabeçalhos de Seção: colspan é frequentemente usado em cabeçalhos de tabela
+para agrupar colunas sob um único tema ou categoria, como demonstrado no
+exemplo com os períodos de "Manhã" e "Tarde".
+
+Agrupamento de Dados: rowspan é útil quando a mesma informação ou
+categoria se aplica a múltiplas linhas consecutivas. Isso é comum em
+horários ou em tabelas que listam grupos ou categorias que englobam várias
+entradas.
+
+Considerações de Design
+O uso desses atributos não apenas ajuda na organização visual da informação,
+mas também melhora a leitura e compreensão dos dados apresentados. Tabelas
+com colspan e rowspan são mais compactas e evitam redundância, tornando a
+apresentação mais limpa e profissional.
+
+Este exemplo ilustra claramente como manipular e ajustar células de tabela
+para uma apresentação mais eficaz e esteticamente agradável. Usar esses
+atributos com precisão pode significativamente melhorar a funcionalidade e
+a aparência de tabelas complexas em suas páginas web.
+-->

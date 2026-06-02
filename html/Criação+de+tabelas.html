@@ -1,0 +1,182 @@
+<!--
+Criação de tabelas: Uso de <table>, <tr>, <th>, <td>.
+
+A criação de tabelas em HTML é realizada através de uma série de
+elementos específicos que ajudam a organizar dados em um formato de
+grade, facilitando a leitura e a interpretação. A tag <table> serve
+como o contêiner principal, enquanto <tr>, <th>, e <td> são usados
+para definir linhas, cabeçalhos de colunas e células de dados,
+respectivamente. Abaixo, apresentarei um exemplo completo que demonstra
+como criar uma tabela em HTML, explicando cada um desses elementos
+em detalhes.
+-->
+
+<!DOCTYPE html>
+<!-- Esta declaração informa ao navegador que este documento deve ser 
+    interpretado como um documento HTML5. É o primeiro item e necessário 
+    para garantir que o navegador trate o documento de acordo com os 
+    padrões modernos da web. -->
+
+<html lang="pt">
+<!-- A tag <html> marca o início do documento HTML. O atributo 'lang="pt"' 
+    especifica que o idioma do conteúdo do documento é o português, o que 
+    ajuda na acessibilidade e na localização do conteúdo para ferramentas 
+    de leitura de tela e mecanismos de busca. -->
+
+<head>
+    <!-- A tag <head> contém metadados e links para scripts ou folhas de 
+        estilo. Ela não é visível diretamente na página, mas contém 
+        informações essenciais sobre o documento. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' especifica que a 
+        codificação de caracteres do documento é UTF-8, uma codificação de 
+        caracteres universal que inclui quase todos os caracteres e símbolos 
+        de todos os idiomas, garantindo que o texto seja exibido corretamente. -->
+
+    <title>Exemplo de Tabela em HTML</title>
+    <!-- A tag <title> define o título da página, que aparece na aba do 
+        navegador. É importante para SEO (otimização para mecanismos de busca) e 
+        para que os usuários saibam o que esperar da página. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página, como texto, 
+        imagens, tabelas e outros elementos. -->
+
+    <h1>Exemplo de Criação de Tabelas em HTML</h1>
+    <!-- A tag <h1> é usada para o título principal da página. Ajuda na 
+        acessibilidade e SEO, indicando o conteúdo principal do documento. -->
+
+    <table border="1">
+        <!-- A tag <table> é usada para criar uma tabela. O atributo 'border="1"' 
+            adiciona uma borda de 1 pixel ao redor das células da tabela, tornando-as 
+            visualmente distintas. -->
+
+        <caption>Tabela de Vendas Anuais</caption>
+        <!-- A tag <caption> fornece um título ou legenda para a tabela, que 
+            ajuda os usuários a entenderem o contexto dos dados apresentados. -->
+
+        <thead>
+            <!-- A tag <thead> é usada para agrupar o cabeçalho da tabela, onde você 
+                pode definir as linhas que contêm as células de cabeçalho. -->
+
+            <tr>
+                <!-- A tag <tr> define uma linha da tabela. -->
+
+                <th>Ano</th>
+                <!-- A tag <th> define uma célula de cabeçalho, que por padrão é 
+                    em negrito e centralizada. "Ano" é o título da primeira coluna. -->
+
+                <th>Vendas (em milhões)</th>
+                <!-- Outra célula de cabeçalho para a segunda coluna, descrevendo 
+                    que os valores são relativos a vendas em milhões. -->
+
+                <th>Lucro (em milhões)</th>
+                <!-- Uma célula de cabeçalho para a terceira coluna, indicando 
+                    lucros em milhões. -->
+
+            </tr>
+        </thead>
+        <tbody>
+            <!-- A tag <tbody> é usada para agrupar o corpo principal da tabela, 
+                que contém todas as linhas de dados. -->
+
+            <tr>
+                <!-- Define uma linha de dados na tabela. -->
+
+                <td>2024</td>
+                <!-- A tag <td> define uma célula de dados padrão. Aqui, contém o ano 2024. -->
+
+                <td>150</td>
+                <!-- Célula de dados contendo o valor de vendas para o ano 2024. -->
+
+                <td>5</td>
+                <!-- Célula de dados contendo o valor do lucro para o ano 2024. -->
+            </tr>
+            <tr>
+                <!-- Outra linha de dados para o ano seguinte. -->
+
+                <td>2021</td>
+                <!-- Célula de dados para o ano 2021. -->
+
+                <td>200</td>
+                <!-- Célula de dados com as vendas de 2021. -->
+
+                <td>20</td>
+                <!-- Célula de dados com o lucro de 2021. -->
+            </tr>
+            <tr>
+                <!-- Terceira linha de dados para o ano 2022. -->
+
+                <td>2022</td>
+                <!-- Célula de dados para o ano 2022. -->
+
+                <td>250</td>
+                <!-- Célula de dados com as vendas de 2022. -->
+
+                <td>50</td>
+                <!-- Célula de dados com o lucro de 2022. -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- A tag <tfoot> é usada para agrupar o rodapé da tabela, útil para 
+                conter linhas de sumarização ou totalização dos dados acima. -->
+
+            <tr>
+                <!-- Uma linha no rodapé da tabela. -->
+
+                <td colspan="2">Total Vendas</td>
+                <!-- A tag <td> com o atributo 'colspan="2"' faz com que esta célula 
+                    ocupe duas colunas, sendo usada aqui para a célula "Total Vendas". -->
+
+                <td>600</td>
+                <!-- Célula de dados mostrando o total de vendas combinadas de todos os anos. -->
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+
+
+<!--
+Explicação do Exemplo
+
+Elemento <table>
+<table>: Define a estrutura básica da tabela. O atributo border="1"
+foi usado para adicionar uma borda simples à tabela para melhor
+visualização. Em produção, o estilo geralmente é definido via CSS.
+
+Elemento <caption>
+<caption>: Fornece um título para a tabela, que é útil para contextos de
+acessibilidade e para fornecer uma descrição geral do que a tabela representa.
+
+Elemento <thead>
+- <thead>: Agrupa o cabeçalho da tabela, geralmente contendo as células de
+cabeçalho.
+- <tr>: Abreviação de table row, usado para definir uma linha da tabela.
+- <th>: Abreviação de table header, usado para definir uma célula de
+cabeçalho, que por padrão é em negrito e centralizado.
+
+Elemento <tbody>
+<tbody>: Contém a maioria das linhas de dados da tabela, permitindo
+múltiplas seções <tbody> para agrupar dados logicamente.
+
+<td>: Abreviação de table data, usado para definir células de
+dados normais, que são alinhadas à esquerda por padrão.
+
+Elemento <tfoot>
+<tfoot>: Contém informações de rodapé da tabela, que podem incluir
+sumários ou totais. O uso de <tfoot> ajuda a organizar o conteúdo da
+tabela e também pode ser útil para processamento de dados por scripts.
+
+colspan="2": Atributo usado em <td> para indicar que a célula deve se
+estender por duas colunas, útil para cabeçalhos de grupo ou células de
+totalização.
+
+Este exemplo ilustra a estrutura básica de uma tabela HTML, destacando a
+utilidade de organizar dados complexos de maneira clara e acessível. As
+tabelas são extremamente versáteis e podem ser estilizadas de várias
+maneiras usando CSS para se adequar ao design de qualquer site.
+-->

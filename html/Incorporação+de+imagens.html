@@ -1,0 +1,142 @@
+<!--
+Incorporação de imagens: Uso da tag <img> e atributos importantes
+como src, alt, title.
+
+Incorporar imagens em um documento HTML é uma prática comum e essencial
+para tornar as páginas mais visuais e atraentes. A tag <img> é usadapara
+esse fim, e ela suporta vários atributos importantes que ajudam a melhorar
+a acessibilidade e a funcionalidade do conteúdo. Abaixo, criarei um
+exemplo de documento HTML que demonstra como usar a tag <img> para
+incorporar imagens, explicando cada um dos atributos importantes como src,
+alt, e title.
+-->
+
+<!DOCTYPE html>
+<!-- Esta linha é uma declaração do tipo de documento (DOCTYPE) que diz ao 
+    navegador que esta página deve ser interpretada usando a versão HTML5, a 
+    especificação mais atual do HTML. É fundamental para garantir que o 
+    navegador processe todos os elementos modernos de HTML corretamente. -->
+
+<html lang="pt">
+<!-- A tag <html> abre o documento HTML. O atributo 'lang="pt"' define que o 
+    idioma principal do conteúdo do documento é o português. Isso é útil para 
+    acessibilidade e SEO, ajudando os navegadores a oferecer a melhor 
+    localização e acessibilidade possíveis. -->
+
+<head>
+    <!-- A tag <head> é usada para incluir informações sobre o documento que 
+        não são mostradas diretamente na área de visualização da página, como 
+        metadados, links para folhas de estilo, scripts e outras 
+        configurações técnicas. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' especifica que o 
+        documento utiliza a codificação de caracteres UTF-8, que inclui um 
+        vasto conjunto de caracteres de múltiplas línguas, assegurando que 
+        qualquer texto seja representado corretamente. -->
+
+    <title>Incorporação de Imagens em HTML</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba do 
+        navegador. Este título ajuda os usuários a identificar o conteúdo da 
+        página e é também usado pelos motores de busca para indexar a página. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo principal que será exibido na 
+        janela do navegador, como texto, links, imagens, vídeos e outros 
+        elementos interativos. -->
+
+    <h1>Incorporando Imagens em HTML</h1>
+    <!-- A tag <h1> é usada para o título principal da página. Ela é importante 
+        para SEO, pois ajuda os motores de busca a entenderem o tópico 
+        principal da página. -->
+
+    <h2>Exemplo Básico de Uso da Tag &lt;img&gt;</h2>
+    <!-- A tag <h2> é usada para subtítulos, que ajudam a organizar o conteúdo 
+        em seções. Aqui, introduz a seção sobre como usar a tag <img> para 
+        inserir imagens. -->
+
+    <p>Aqui está uma imagem simples de um cachorro:</p>
+    <!-- A tag <p> define um parágrafo de texto, fornecendo uma introdução ou 
+        descrição para a imagem que será exibida a seguir. -->
+
+    <img src="cachorro.jpg" alt="Um cachorro pequeno brincando no parque" title="Cachorro no Parque">
+    <!-- A tag <img> é utilizada para incorporar uma imagem na página. O atributo 'src' 
+        especifica o caminho para o arquivo da imagem. 'alt' fornece um texto 
+        alternativo que descreve a imagem, crucial para usuários que utilizam 
+        leitores de tela ou em situações onde a imagem não carrega. 'title' 
+        oferece um texto de tooltip que aparece quando o cursor do mouse passa 
+        sobre a imagem, fornecendo informações adicionais ou contexto sobre a imagem. -->
+
+    <h2>Importância dos Atributos</h2>
+    <!-- Outro <h2> para destacar a importância dos atributos na tag <img>. -->
+
+    <ul>
+        <!-- A tag <ul> é usada para criar uma lista não ordenada. -->
+        <li><strong>src:</strong> Especifica o caminho para a imagem que você deseja exibir.</li>
+        <li><strong>alt:</strong> Fornece uma descrição alternativa da imagem para acessibilidade. Isso é essencial para leitores de tela e em casos onde a imagem não pode ser carregada.</li>
+        <li><strong>title:</strong> Oferece uma informação adicional quando o usuário passa o mouse sobre a imagem, geralmente usado para fornecer contexto adicional ou explicar a imagem.</li>
+    </ul>
+
+    <h2>Imagem com Caminho Relativo</h2>
+    <!-- Esta seção introduz o conceito de caminho relativo, um método de 
+        especificar o local do arquivo de imagem em relação à localização do 
+        arquivo HTML atual. -->
+
+    <p>Imagem de uma praia, usando um caminho relativo:</p>
+    <!-- Introduz uma imagem especificada com um caminho relativo. -->
+
+    <img src="imagens/praia.jpg" alt="Uma vista panorâmica de uma praia deserta ao pôr do sol" title="Praia ao Pôr do Sol">
+    <!-- Aqui, a tag <img> usa 'src' para apontar para um caminho relativo, que 
+        parte do diretório atual para a pasta 'imagens'. Os atributos 'alt' e 
+        'title' são usados como explicado anteriormente. -->
+
+    <h2>Imagem com Caminho Absoluto</h2>
+    <!-- Esta seção discute o uso de caminhos absolutos, que especificam a 
+        localização completa de um arquivo, incluindo o protocolo (http, https) e 
+        o domínio completo. -->
+
+    <p>Imagem de uma cidade, acessada por um URL completo:</p>
+    <!-- Introduz a imagem especificada com um caminho absoluto. -->
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyptta7_IeLbmsPiaPoll8H5aSBLXn0jyGtjRxHiY8T4wno_lSpUXTJAWvlAZ6YmZJl1c&usqp=CAU" alt="Vista aérea da cidade durante a noite" title="Cidade à Noite">
+    
+    <!-- A imagem é incorporada usando um caminho absoluto, que fornece o 
+        endereço completo na web. Isso é útil quando a imagem está hospedada em um 
+        servidor externo. Os atributos 'alt' e 'title' melhoram a acessibilidade e 
+        fornecem informações adicionais. -->
+        
+</body>
+</html>
+
+
+
+<!--
+Explicação do Exemplo
+
+Tag <img> e Seus Atributos
+src (source): Este é o atributo mais importante da tag <img>. Ele
+especifica o caminho para a imagem que você deseja exibir. Pode ser um
+caminho relativo ou absoluto.
+
+Caminho Relativo: src="imagens/praia.jpg" se refere a uma imagem que está na
+pasta "imagens" no mesmo diretório que o documento HTML.
+
+Caminho Absoluto: src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyptta7_IeLbmsPiaPoll8H5aSBLXn0jyGtjRxHiY8T4wno_lSpUXTJAWvlAZ6YmZJl1c&usqp=CAU" se
+refere a uma imagem hospedada em um servidor externo.
+
+alt (alternative text): Fornece uma descrição textual da imagem. Isso é
+crucial para acessibilidade, permitindo que pessoas com deficiências
+visuais compreendam o que a imagem representa através de leitores de tela.
+
+title: Este atributo é opcional e cria uma dica de ferramenta que é
+exibida quando o mouse é passado sobre a imagem. Ele pode ser usado para
+fornecer informações adicionais sobre a imagem.
+
+Este exemplo mostra como incorporar imagens em uma página web usando a
+tag <img> e destaca a importância dos atributos para a acessibilidade e a
+experiência do usuário. Através de diferentes abordagens para especificar o
+caminho da imagem, você pode gerenciar como as imagens são carregadas e
+apresentadas em seu site.
+-->
