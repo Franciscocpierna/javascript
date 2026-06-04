@@ -1,166 +1,137 @@
-// Adiciona um ouvinte de evento de clique ao botão com o ID 'btnTitulo'.
-document.getElementById('btnTitulo').addEventListener('click', function() {
+// Inicialmente, acessa o documento HTML e seleciona o botão
+            // pelo ID 'mudarTexto'. Então, anexa um ouvinte de
+            // eventos de 'click'.
+document.getElementById('mudarTexto').addEventListener('click', function() {
 
-    // Declara uma variável 'titulo' e atribui a ela o 
-            // elemento HTML com o ID 'titulo'.
+    // Utiliza o método 'getElementById' para buscar e recuperar o
+            // elemento do tipo <h1> com o ID 'titulo'.
     var titulo = document.getElementById('titulo');
 
-    // Acessa o elemento de entrada de texto com o
-            // ID 'inputTitulo' e define seu valor para
-    // o conteúdo de texto do elemento 'titulo' (o que
-            // está dentro da tag <h1>).
-    document.getElementById('inputTitulo').value = titulo.textContent;
+    // Atribui uma nova string ao atributo 'textContent' do
+            // elemento <h1>, modificando o texto visível na
+            // página para 'Título Alterado'.
+    // Ação direta que altera o conteúdo textual do cabeçalho,
+            // refletindo a mudança imediatamente na interface do usuário.
+    titulo.textContent = 'Título Alterado'; 
 
 });
 
 
-// Adiciona um ouvinte de evento de clique ao botão
-            // com o ID 'btnItensTag'.
-document.getElementById('btnItensTag').addEventListener('click', function() {
+// Adiciona um ouvinte de evento de clique ao botão identificado por
+            // 'modificarHTML' no documento HTML.
+document.getElementById('modificarHTML').addEventListener('click', function() {
 
-    // Obtém todos os elementos do tipo 'li' presentes na
-            // página e armazena em 'itensLista'.
-    var itensLista = document.getElementsByTagName('li');
+    // Busca o elemento <div> com o ID 'conteudo' para manipulação.
+    var conteudo = document.getElementById('conteudo');
 
-    // Cria um array vazio chamado 'texto' para armazenar os
-            // textos de cada item da lista.
-    var texto = [];
+    // Redefine completamente o HTML interno da <div> especificada,
+            // inserindo um novo parágrafo com algumas palavras em negrito.
+    // Esta operação ilustra como alterar dinamicamente o conteúdo HTML,
+            // usando tags como <strong> para enfatizar partes do texto.
+    // Substitui integralmente o HTML dentro de 'conteudo',
+            // introduzindo novos elementos HTML para exibição.
+    conteudo.innerHTML = '<p>Novo conteúdo em <strong>HTML</strong>!</p>';
 
-    // Inicia um loop que percorre cada elemento da
-            // lista armazenada em 'itensLista'.
-    for (var i = 0; i < itensLista.length; i++) {
+});
 
-        // Adiciona o conteúdo de texto de cada item da
-                // lista ao array 'texto'.
-        texto.push(itensLista[i].textContent);
+
+// Vincula um evento de clique ao botão identificado pelo ID 'adicionarElemento'
+            // usando o método 'addEventListener'.
+document.getElementById('adicionarElemento').addEventListener('click', function() {
+
+    // Cria um novo elemento HTML do tipo parágrafo (<p>) utilizando o
+            // método 'createElement' do documento.
+    var novoElemento = document.createElement('p');
+
+    // Define o texto dentro do novo parágrafo criado para 'Um novo
+            // parágrafo adicionado!' usando a propriedade 'textContent'.
+    novoElemento.textContent = 'Um novo parágrafo adicionado!';
+
+    // Insere o parágrafo criado como um novo filho ao final do
+            // elemento <body> do documento, utilizando o
+            // método 'appendChild'.
+    // Isso adiciona fisicamente o elemento ao final de
+            // todos os elementos já presentes dentro de <body>.
+    document.body.appendChild(novoElemento);
+
+});
+
+
+// Vincula um evento de clique ao botão identificado pelo
+            // ID 'removerElemento' usando o método 'addEventListener'.
+document.getElementById('removerElemento').addEventListener('click', function() {
+
+    // Utiliza o método 'getElementById' para buscar o elemento
+            // com o ID 'conteudo' dentro do documento.
+    var conteudo = document.getElementById('conteudo');
+
+    // Checa se o elemento 'conteudo' possui um primeiro filho
+            // usando a propriedade 'firstChild'.
+    if (conteudo.firstChild) {
+
+        // Remove o primeiro filho do elemento 'conteudo' se
+                // existir, usando o método 'removeChild'.
+        // Remove o elemento que é o primeiro filho de 'conteudo',
+                // alterando o conteúdo visível.
+        conteudo.removeChild(conteudo.firstChild);
 
     }
 
-    // Acessa o elemento de entrada de texto com o
-            // ID 'inputItensTag' e define seu valor para
-    // a string formada pela junção dos elementos do
-            // array 'texto', separados por vírgula.
-    document.getElementById('inputItensTag').value = texto.join(', ');
-
 });
 
 
-// Seleciona o botão com o ID 'btnMensagensClass' e adiciona um
-            // ouvinte de evento de clique a ele.
-document.getElementById('btnMensagensClass').addEventListener('click', function() {
+// Anexa um ouvinte de evento de clique ao botão com o ID 'substituirElemento'
+            // utilizando 'addEventListener'.
+document.getElementById('substituirElemento').addEventListener('click', function() {
 
-    // Recupera todos os elementos com a classe 'mensagem' e
-            // armazena na variável 'mensagens'.
-    var mensagens = document.getElementsByClassName('mensagem');
+    // Cria um novo elemento do tipo parágrafo (<p>)
+            // usando 'document.createElement'.
+    var novoElemento = document.createElement('p');
 
-    // Inicializa um array vazio 'texto' para coletar os
-            // textos de cada elemento 'mensagem'.
-    var texto = [];
+    // Atribui texto ao novo parágrafo, especificamente 'Este é um
+            // elemento substituto.' usando 'textContent'.
+    novoElemento.textContent = 'Este é um elemento substituto.';
 
-    // Itera sobre a coleção de elementos 'mensagens'.
-    for (var i = 0; i < mensagens.length; i++) {
+    // Busca no documento o elemento com o ID 'conteudo'.
+    var conteudo = document.getElementById('conteudo');
 
-        // Adiciona o texto de cada elemento 'mensagem' ao
-                // array 'texto'.
-        texto.push(mensagens[i].textContent);
+    // Verifica se o elemento 'conteudo' possui um primeiro
+            // filho utilizando 'firstChild'.
+    if (conteudo.firstChild) {
 
+        // Substitui o primeiro filho do elemento 'conteudo' pelo
+                // 'novoElemento' criado, usando 'replaceChild'.
+        // 'replaceChild' toma dois argumentos, o novo elemento a ser
+                // inserido e o elemento existente a ser substituído.
+        // Realiza a substituição do elemento, atualizando o DOM.
+        conteudo.replaceChild(novoElemento, conteudo.firstChild);
+        
     }
-
-    // Encontra o campo de entrada com o ID 'inputMensagensClass' e
-                // define seu valor para uma string única que
-                // concatena todos os textos em 'texto',
-                // separados por vírgula.
-    document.getElementById('inputMensagensClass').value = texto.join(', ');
-
 });
 
-
-// Seleciona o botão com o ID 'btnPrimeiroItem' e
-            // adiciona um ouvinte de evento para o tipo 'click'
-document.getElementById('btnPrimeiroItem').addEventListener('click', function() {
-
-    // Utiliza o método 'querySelector' para selecionar o
-                // primeiro elemento <li> encontrado no DOM
-    var primeiroItem = document.querySelector('li');
-
-    // Acessa o campo de entrada com o ID 'inputPrimeiroItem'
-    // Atribui ao valor desse campo o texto contido no
-                // primeiro item <li> encontrado
-    document.getElementById('inputPrimeiroItem').value = primeiroItem.textContent;
-
-});
-
-
-// Adiciona um ouvinte de evento de clique ao botão com o ID 'btnTodosItens'
-document.getElementById('btnTodosItens').addEventListener('click', function() {
-
-    // Seleciona todos os elementos 'li' no documento e os
-            // armazena na variável 'todosItens'
-    var todosItens = document.querySelectorAll('li');
-
-    // Inicializa um array vazio chamado 'texto' para
-            // armazenar os textos de cada item
-    var texto = [];
-
-    // Utiliza o método forEach para iterar sobre
-            // cada item em 'todosItens'
-    todosItens.forEach(function(item) {
-
-        // Adiciona o conteúdo de texto de cada
-                // item ao array 'texto'
-        texto.push(item.textContent);
-
-    });
-
-    // Acessa o elemento de entrada com o
-            // ID 'inputTodosItens' e define seu valor
-    // para uma string contendo todos os textos de
-            // 'texto', separados por vírgula
-    document.getElementById('inputTodosItens').value = texto.join(', ');
-    
-});
-
-
-/* 
+/*
 Explicação
 
-    getElementById: Este método é usado para selecionar um único elemento 
-            pelo seu ID. No exemplo, o título da página é selecionado e 
-            seu texto é exibido.
+    Alterar o conteúdo de texto: Usamos textContent para alterar diretamente o 
+            texto de um elemento. Isso não interpreta o texto como HTML, apenas 
+            como texto puro.
 
-    getElementsByTagName: Seleciona todos os elementos que compartilham a 
-            mesma tag. Aqui, todos os itens da lista (li) são selecionados e 
-            iterados para exibir seus textos.
+    Modificar o HTML interno: innerHTML é usado para modificar o conteúdo HTML 
+            de um elemento. Isso permite incluir tags HTML que serão renderizadas 
+            como parte do DOM.
 
-    getElementsByClassName: Similar ao método anterior, mas seleciona 
-            elementos pela classe. No exemplo, todas as mensagens com a 
-            classe mensagem são selecionadas.
+    Criar e adicionar elementos: Usamos createElement para criar um novo elemento 
+            no DOM, appendChild para adicionar este elemento ao final de um 
+            elemento existente.
 
-    querySelector: Este método retorna o primeiro elemento que 
-            corresponde ao seletor CSS fornecido. É útil quando você precisa de 
-            apenas um elemento de um tipo específico.
+    Remover elementos: removeChild é usado para remover um elemento filho de 
+            um elemento pai específico.
 
-    querySelectorAll: Retorna todos os elementos que correspondem ao 
-            seletor CSS. No exemplo, todos os li são selecionados e seus 
-            textos são exibidos com a ajuda de um loop forEach.
+    Substituir elementos: replaceChild substitui um elemento filho existente 
+            por um novo elemento que criamos.
 
-Este exemplo cobre a base de como manipular e interagir com elementos do DOM em 
-        uma página web, fornecendo um fundamento sólido para construção de 
-        interfaces interativas.
-
-
-Explicação
-
-    Botões e Campos de Texto: Cada botão é ligado a um campo de texto 
-            específico. Quando o botão é clicado, o resultado correspondente é 
-            exibido no campo de texto associado.
-    Event Listeners: Adicionamos um ouvinte de eventos para cada botão. 
-    Quando um botão é clicado, a função associada é executada, 
-            capturando e mostrando os dados relevantes no campo de 
-            entrada correspondente.
-
-Este exemplo interativo fornece uma maneira visual e prática de 
-            entender como diferentes métodos de seleção de elementos 
-            no DOM funcionam, permitindo que você veja imediatamente os 
-            resultados de suas ações.
+Este exemplo oferece uma visão prática e interativa de como manipular elementos 
+            no DOM, essencial para desenvolver aplicações web dinâmicas. 
+            Comentários detalhados no código ajudam a entender cada passo e a 
+            função de cada método utilizado.
 */
