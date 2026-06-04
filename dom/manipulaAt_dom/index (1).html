@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- A declaração <!DOCTYPE html> é uma instrução para o 
+                navegador sobre a versão do HTML que a página está escrita. 
+     "HTML5" é a versão mais recente e esta declaração garante que o 
+                navegador utilize as funcionalidades mais atuais durante a 
+                renderização da página. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt"' 
+                especifica que o idioma principal do conteúdo da 
+                página é o português.
+     Isso é importante para acessibilidade e SEO, ajudando os 
+                leitores de tela a pronunciar corretamente o conteúdo e 
+                os motores de busca a identificar o idioma da página. -->
+
+<head>
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' especifica que o 
+                documento usa UTF-8, um sistema de codificação de caracteres 
+                que inclui praticamente todos os caracteres de todos os idiomas. 
+         Isso garante que qualquer texto seja exibido corretamente. -->
+
+    <title>Manipulação de Atributos no DOM</title>
+    <!-- A tag <title> define o título da página, que é exibido 
+                na aba do navegador. 
+         Este título é importante tanto para a usabilidade quanto 
+                para o SEO, pois fornece uma descrição concisa do 
+                conteúdo da página. -->
+
+</head>
+
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página, 
+                como texto, imagens, vídeos, jogos, botões de 
+                reprodução de áudio, etc. -->
+
+    <p id="meuParagrafo" title="Parágrafo de Exemplo">Este é um parágrafo de exemplo.</p>
+    <!-- Um elemento <p> define um parágrafo de texto. 
+         O atributo 'id' é usado para dar ao parágrafo um identificador 
+                único ('meuParagrafo'), que pode ser referenciado 
+                em JavaScript e CSS.
+         O atributo 'title' oferece uma informação adicional que é 
+                mostrada geralmente como uma dica de ferramenta 
+                quando o usuário passa o mouse sobre o parágrafo. -->
+
+    <button id="modificarAtributo">Modificar Atributo</button>
+    <!-- Um elemento <button> cria um botão clicável. 
+         Este botão está configurado para modificar o 
+                atributo 'title' do parágrafo quando clicado.
+         O 'id' do botão permite que ele seja facilmente 
+                identificado e manipulado com JavaScript. -->
+
+    <button id="adicionarAtributo">Adicionar Atributo</button>
+    <!-- Outro botão que, ao ser clicado, adicionará um 
+                atributo 'class' ao parágrafo, modificando seu 
+                estilo ou comportamento conforme definido em 
+                CSS ou JavaScript. -->
+
+    <button id="removerAtributo">Remover Atributo</button>
+    <!-- Este botão, quando clicado, removerá o atributo 'title' 
+                do parágrafo, demonstrando como os atributos podem 
+                ser dinamicamente removidos dos elementos HTML. -->
+
+    <button id="acessarAtributo">Acessar Atributo</button>
+    <!-- Este botão é usado para acessar e exibir o valor do 
+                atributo 'title' do parágrafo, mostrando como se 
+                pode ler atributos dos elementos HTML. -->
+
+    <p id="resultadoAtributo">Resultado aqui.</p>
+    <!-- Um parágrafo usado para exibir resultados das 
+                operações executadas pelos botões acima. 
+         Isso fornece feedback visual direto das ações do usuário. -->
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' inclui um arquivo 
+                JavaScript externo chamado 'script.js'.
+         Este arquivo contém a lógica para manipular os atributos 
+                dos elementos HTML quando os botões são clicados. -->
+                
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- A declaração <!DOCTYPE html> é fundamental para 
+        informar ao navegador que este documento deve ser 
+        interpretado como HTML5, a versão mais recente e robusta 
+        do HTML. Isso assegura compatibilidade e comportamento 
+        consistente em todos os navegadores modernos. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt"' 
+                especifica que o idioma predominante na página é o português. 
+        Essa informação ajuda os motores de busca a entenderem o idioma 
+                do conteúdo, e é crucial para tecnologias assistivas como 
+                leitores de tela, melhorando a acessibilidade. -->
+
+<head>
+    <!-- A tag <head> é utilizada para agrupar metadados (dados 
+                sobre dados) e links para recursos externos como 
+                folhas de estilo e scripts. Elementos dentro de <head> 
+                        não são diretamente visíveis na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' especifica a 
+                codificação de caracteres usada no documento. UTF-8 é 
+                uma codificação que inclui todos os caracteres de todos os 
+                idiomas conhecidos, garantindo que qualquer texto, independente 
+                do idioma, seja corretamente exibido no navegador. -->
+
+    <title>Manipulação de Estilos e Classes no DOM</title>
+    <!-- A tag <title> define o título do documento, que aparece na aba 
+                do navegador. Este título é vital para a experiência do 
+                usuário, pois fornece uma rápida orientação sobre o conteúdo 
+                da página. Além disso, é um fator importante para a otimização 
+                de motores de busca (SEO), ajudando a definir o tópico da 
+                página nos resultados de pesquisa. -->
+
+    <style>
+
+        /* A tag <style> é usada para escrever CSS diretamente dentro de 
+                um documento HTML. Estilos definidos aqui são aplicados aos 
+                elementos da página conforme especificado. */
+        .destaque {
+
+            /* A propriedade 'color' define a cor do texto dos elementos 
+                        com a classe 'destaque'. Aqui, o texto será vermelho, o 
+                        que ajuda a destacar esses elementos visualmente. */
+            color: red;  
+
+            /* A propriedade 'font-weight' com valor 'bold' faz com que o 
+                        texto dos elementos com a classe 'destaque' seja exibido 
+                        em negrito, aumentando a ênfase visual. */
+            font-weight: bold;  
+
+        }
+
+        .fundo-azul {
+
+           /* A propriedade 'background-color' define a cor de fundo dos 
+                        elementos com a classe 'fundo-azul'. Neste caso, o 
+                        fundo será azul claro, proporcionando um contraste 
+                        distinto para os elementos que possuem essa classe. */
+            background-color: lightblue;  
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <!-- Início do corpo do documento HTML, onde todo o conteúdo 
+                visível da página é colocado. -->
+
+    <p id="paragrafo">Texto para estilização.</p>
+    <!-- Elemento parágrafo com ID 'paragrafo'. Este ID pode ser 
+                usado para referenciar este elemento especificamente 
+                no CSS e JavaScript. O texto dentro do parágrafo é destinado a 
+                demonstrações de estilização. -->
+
+    <button id="alterarEstilo">Alterar Estilo Direto</button>
+    <!-- Botão com ID 'alterarEstilo'. Quando clicado, ele dispara um 
+                evento no JavaScript que altera o estilo do parágrafo 
+                diretamente pelo JavaScript, sem usar classes CSS. -->
+
+    <button id="adicionarClasse">Adicionar Classe</button>
+    <!-- Botão com ID 'adicionarClasse'. Esse botão, quando clicado, aciona 
+                uma função JavaScript para adicionar uma classe CSS ao 
+                parágrafo, mudando sua aparência conforme a definição da classe. -->
+
+    <button id="removerClasse">Remover Classe</button>
+    <!-- Botão com ID 'removerClasse'. Este botão permite ao usuário 
+                remover uma classe previamente adicionada ao parágrafo, 
+                potencialmente revertendo alterações de estilo feitas 
+                via classes CSS. -->
+
+    <button id="alternarClasse">Alternar Classe</button>
+    <!-- Botão com ID 'alternarClasse'. Este botão ativa uma função 
+                JavaScript que alterna uma classe no parágrafo cada vez 
+                que é clicado, adicionando ou removendo a classe para 
+                demonstrar uma alteração dinâmica de estilos. -->
+
+    <script src="script.js"></script>
+    <!-- Tag <script> que inclui o arquivo JavaScript 'script.js'. 
+        Este script contém as funções que são chamadas pelos botões 
+                acima para manipular estilos e classes no parágrafo. -->
+
+</body>
+</html>

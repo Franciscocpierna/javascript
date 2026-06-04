@@ -1,0 +1,133 @@
+<!-- Vamos criar um exemplo prático que demonstra como 
+        selecionar elementos no DOM usando diferentes métodos em 
+        JavaScript. Este exemplo incluirá HTML e JavaScript para 
+        mostrar como cada método funciona na prática.
+
+HTML
+
+Primeiro, vamos definir uma estrutura HTML básica com alguns 
+        elementos para manipulação: -->
+
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento. Define que o documento é HTML5, 
+        garantindo que o navegador saiba como interpretar corretamente o 
+        conteúdo da página. -->
+
+<html lang="en">
+<!-- Tag raiz do documento HTML, definindo o idioma principal do 
+        conteúdo da página como inglês (en). Isso é útil para 
+        acessibilidade e motores de busca. -->
+
+<head>
+    <!-- Cabeçalho do documento, contém metadados, links para folhas de 
+            estilo e scripts que não são exibidos diretamente na área de 
+            visualização da página. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres para o documento como UTF-8, que 
+            inclui quase todos os caracteres e símbolos de todos os idiomas 
+            humanos, garantindo a correta exibição de texto. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tag meta para configuração da viewport. Garante que a página seja 
+                exibida de forma adequada em dispositivos móveis. 
+        'width=device-width' faz com que a largura da página seja 
+                igual à largura do dispositivo. 
+        'initial-scale=1.0' estabelece o nível de zoom inicial quando a 
+                página é carregada pela primeira vez. -->
+
+    <title>Interatividade com Seleção de Elementos no DOM</title>
+    <!-- Define o título da página, que é exibido na aba do navegador. 
+     O título é importante tanto para a experiência do usuário quanto 
+                para SEO (otimização para motores de busca). -->
+
+</head>
+
+
+<body>
+    <!-- Corpo do documento HTML, onde todo o conteúdo visível da 
+                página é colocado. -->
+
+    <h1 id="titulo">Olá, bem-vindo!</h1>
+    <!-- Título principal da página com um identificador único 'titulo'. 
+     Este título é geralmente o mais importante na página e é frequentemente 
+                usado para SEO e acessibilidade. -->
+
+    <p class="mensagem">Esta é uma mensagem importante.</p>
+    <!-- Parágrafo com a classe 'mensagem'. Este parágrafo contém texto 
+                informativo importante. A classe pode ser usada para aplicar 
+                estilos específicos ou para manipulação via JavaScript. -->
+
+    <p class="mensagem">Esta é outra mensagem importante.</p>
+    <!-- Outro parágrafo com a mesma classe 'mensagem', funcionando como o 
+                anterior para fornecer mais informações importantes. -->
+
+    <ul>
+        <!-- Lista não ordenada para agrupar itens relacionados, 
+                neste caso, uma lista simples de itens. -->
+
+        <li>Item 1</li>
+        <!-- Item individual da lista. -->
+
+        <li>Item 2</li>
+        <!-- Segundo item da lista. -->
+
+        <li>Item 3</li>
+        <!-- Terceiro item da lista. -->
+
+        <li>Aula</li>
+
+    </ul>
+
+    <button id="btnTitulo">Mostrar Título</button>
+    <!-- Botão com um identificador único 'btnTitulo'. Quando clicado, ele 
+                aciona um evento no JavaScript que mostra o conteúdo do 
+                título na página. -->
+
+    <input type="text" id="inputTitulo" readonly><br>
+    <!-- Campo de entrada de texto que exibe o título da página. 
+     É somente leitura, o que significa que o usuário não pode 
+                editar o conteúdo diretamente. -->
+
+    <button id="btnItensTag">Mostrar Itens por Tag</button>
+    <!-- Botão que, quando clicado, exibe todos os itens da lista 
+                por sua tag ('li') no campo de entrada correspondente 
+                abaixo. -->
+
+    <input type="text" id="inputItensTag" readonly><br>
+    <!-- Campo de entrada de texto para exibir os itens da lista 
+                obtidos pelo botão acima. Também é somente leitura. -->
+
+    <button id="btnMensagensClass">Mostrar Mensagens por Classe</button>
+    <!-- Botão destinado a mostrar no campo de entrada abaixo as 
+                mensagens que têm a classe 'mensagem'. -->
+
+    <input type="text" id="inputMensagensClass" readonly><br>
+    <!-- Campo de entrada de texto para exibir as mensagens coletadas 
+                pelo botão acima. Este campo é somente leitura. -->
+
+    <button id="btnPrimeiroItem">Mostrar Primeiro Item</button>
+    <!-- Botão que exibe o primeiro item da lista no campo de 
+                entrada abaixo quando clicado. -->
+
+    <input type="text" id="inputPrimeiroItem" readonly><br>
+    <!-- Campo de entrada de texto que mostra o primeiro item da lista, 
+                manipulado pelo botão acima. Também somente leitura. -->
+
+    <button id="btnTodosItens">Mostrar Todos os Itens</button>
+    <!-- Botão para mostrar todos os itens da lista no campo de 
+                entrada de texto abaixo. -->
+
+    <input type="text" id="inputTodosItens" readonly><br>
+    <!-- Campo de entrada de texto onde os textos de todos os itens da 
+                lista são exibidos após a ação do botão acima. 
+                Este campo é somente leitura. -->
+
+    <script src="script.js"></script>
+    <!-- Tag de script para incluir um arquivo JavaScript externo 
+                chamado 'script.js'. Este script contém a lógica para 
+                manipular os elementos acima com base nas interações 
+                do usuário. -->
+                
+</body>
+</html>

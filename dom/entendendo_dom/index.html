@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento como HTML5, garantindo 
+            que o navegador interprete a página de acordo com 
+            as últimas especificações do HTML. -->
+
+<html lang="pt">
+<!-- Define a raiz do documento HTML e especifica que o 
+            idioma principal do conteúdo é português. -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres do documento 
+            como UTF-8, permitindo a correta exibição de 
+            caracteres especiais e acentos. -->
+
+    <title>Entendendo o DOM</title>
+    <!-- Define o título da página, que aparece na aba do 
+            navegador ou na barra de título. -->
+
+    <style>
+        /* Estilos para o elemento com a classe 'box' */
+
+        .box {
+
+            width: 200px;
+            /* Define a largura da caixa como 200 pixels */
+
+            height: 200px;
+            /* Define a altura da caixa como 200 pixels */
+
+            background-color: lightblue;
+            /* Define a cor de fundo da caixa como azul claro */
+
+            transition: background-color 0.5s ease;
+            /* Define uma transição suave de 0.5 segundos para 
+                    mudanças na cor de fundo da caixa */
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Início do corpo do documento HTML, onde são colocados 
+                todos os elementos visíveis ao usuário. -->
+
+    <div class="box" id="colorBox"></div>
+    <!-- Div com a classe 'box' e o ID 'colorBox'. Esta div 
+                será estilizada como uma caixa de 200x200 pixels 
+                com fundo azul claro e transição suave para 
+                mudanças de cor. -->
+
+    <button id="mudarCor">Mudar Cor</button>
+    <!-- Botão com o ID 'mudarCor'. Quando clicado, este 
+                botão mudará a cor da div 'colorBox'. -->
+
+    <button id="redefenirColor">Redefinir Cor</button>
+    <!-- Botão com o ID 'redefenirColor'. Quando clicado, este botão 
+                redefinirá a cor da div 'colorBox' para a cor original. -->
+
+    <script src="script.js"></script>
+    <!-- Inclusão do arquivo JavaScript 'script.js', que contém a 
+                lógica para mudar e redefinir a cor da div 'colorBox' 
+                ao clicar nos botões. -->
+
+</body>
+</html>

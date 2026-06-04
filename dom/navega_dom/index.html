@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento como HTML5, garantindo a 
+            correta interpretação pelo navegador. -->
+
+<html lang="pt">
+<!-- Define o elemento raiz do documento HTML, especificando que o 
+            idioma principal do conteúdo é português. -->
+
+<head>
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, que suporta a 
+            maioria dos caracteres de todos os idiomas. -->
+
+    <title>Navegação no DOM</title>
+    <!-- Define o título do documento que aparece na aba do navegador. -->
+
+</head>
+
+
+<body>
+    <!-- Início do corpo do documento HTML, onde são colocados 
+            todos os elementos visíveis ao usuário. -->
+
+    <div id="divPrincipal">
+        <!-- Div principal que contém outros elementos como 
+                    parágrafos e listas. -->
+
+        <p>Parágrafo Principal</p>
+        <!-- Parágrafo dentro da div principal. -->
+
+        <ul>
+            <!-- Lista não ordenada dentro da div principal. -->
+
+            <li id="item1">Item 1</li>
+            <!-- Primeiro item da lista com ID 'item1'. -->
+
+            <li id="item2">Item 2
+                <!-- Segundo item da lista com ID 'item2', que 
+                            também contém uma lista aninhada. -->
+
+                <ul>
+                    <!-- Lista não ordenada aninhada dentro do item 2. -->
+
+                    <li id="subitem1">Subitem 1</li>
+                    <!-- Primeiro subitem da lista aninhada com ID 'subitem1'. -->
+
+                    <li id="subitem2">Subitem 2</li>
+                    <!-- Segundo subitem da lista aninhada com ID 'subitem2'. -->
+
+                </ul>
+            </li>
+
+            <li id="item3">Item 3</li>
+            <!-- Terceiro item da lista com ID 'item3'. -->
+
+            <li id="item4">Item 4</li>
+            <!-- Quarto item da lista com ID 'item4'. -->
+
+        </ul>
+    </div>
+    <!-- Fim da div principal. -->
+    
+    <button onclick="acessarParent()">Acessar Elemento Pai</button>
+    <!-- Botão que chama a função 'acessarParent' ao ser clicado. -->
+
+    <button onclick="listarChildren()">Listar Filhos</button>
+    <!-- Botão que chama a função 'listarChildren' ao ser clicado. -->
+
+    <button onclick="irProximo()">Ir para o Próximo Irmão</button>
+    <!-- Botão que chama a função 'irProximo' ao ser clicado. -->
+
+    <button onclick="irAnterior()">Ir para o Irmão Anterior</button>
+    <!-- Botão que chama a função 'irAnterior' ao ser clicado. -->
+
+    <p id="resultado">Resultados aparecerão aqui.</p>
+    <!-- Parágrafo com ID 'resultado' onde os resultados das 
+                funções serão exibidos. -->
+
+    <script src="script.js"></script>
+    <!-- Inclusão do arquivo JavaScript 'script.js' que 
+                contém a lógica para manipulação do DOM. -->
+                
+</body>
+</html>

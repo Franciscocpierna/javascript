@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- Declara que o documento está usando HTML5. 
+            Isso é importante para garantir que o navegador 
+            renderize a página corretamente e utilize as 
+            últimas especificações do HTML. -->
+
+<html lang="pt">
+<!-- Define a raiz do documento HTML e especifica que o 
+            idioma do conteúdo é português. -->
+
+<head>
+    <!-- Cabeçalho do documento HTML, que contém metadados, 
+            links para estilos, scripts e outras informações que 
+            não são exibidas diretamente na página. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres do documento como UTF-8. 
+            Esta codificação é capaz de representar quase todos os 
+            caracteres usados em línguas escritas do mundo, garantindo 
+            que o texto seja exibido corretamente. -->
+
+    <title>Exemplo de Modal</title>
+    <!-- Define o título da página, que será exibido na aba do 
+            navegador ou na barra de título. -->
+
+    <style>
+        /* Bloco de estilos CSS que define a aparência do modal e 
+                do conteúdo do modal. */
+
+        #modal {
+
+            display: none;
+            /* O modal é escondido por padrão. Ele só será exibido quando o 
+                        estilo 'display' for alterado para 'block' através 
+                        do JavaScript. */
+
+            position: fixed;
+            /* Posiciona o modal de forma fixa na tela. Ele permanecerá na 
+                        mesma posição mesmo se a página for rolada. */
+
+            left: 0;
+            /* Posiciona o modal no extremo esquerdo da janela. */
+
+            top: 0;
+            /* Posiciona o modal no topo da janela. */
+
+            width: 100%;
+            /* Faz com que o modal ocupe 100% da largura da janela. */
+
+            height: 100%;
+            /* Faz com que o modal ocupe 100% da altura da janela. */
+
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Define a cor de fundo do modal como preto semi-transparente. 
+                A parte 'rgba(0, 0, 0, 0.5)' significa que a cor é preta (0, 0, 0) 
+                        com 50% de opacidade (0.5). Isso cria um efeito de 
+                        escurecimento da tela quando o modal é exibido. */
+
+            z-index: 1;
+            /* Define a propriedade z-index para 1, o que garante que o 
+                        modal seja exibido acima de outros elementos na página. */
+        }
+
+        #modalContent {
+
+            position: relative;
+            /* Define a posição do conteúdo do modal como relativa ao 
+                        seu contêiner (o modal). */
+
+            width: 50%;
+            /* Define a largura do conteúdo do modal como 50% da 
+                        largura da janela. */
+
+            margin: 10% auto;
+            /* Centraliza o conteúdo do modal na janela. '10% auto' 
+                        significa que haverá uma margem superior de 10% e as 
+                        margens laterais serão automáticas, centralizando 
+                        horizontalmente. */
+
+            padding: 20px;
+            /* Adiciona um preenchimento de 20 pixels ao redor do 
+                        conteúdo do modal, criando espaço interno. */
+
+            background: white;
+            /* Define a cor de fundo do conteúdo do modal como branco. */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Início do corpo do documento HTML, onde são colocados 
+                todos os elementos visíveis ao usuário. -->
+
+    <button id="openModal">Abrir Modal</button>
+    <!-- Botão com o ID 'openModal'. Quando clicado, este 
+                botão abrirá o modal. -->
+
+    <div id="modal">
+        <!-- Div que serve como contêiner para o modal. 
+                Tem o ID 'modal'. -->
+        <!-- Inicialmente, o modal está oculto (display: none) 
+                conforme definido no CSS. -->
+
+        <div id="modalContent">
+            <!-- Div que contém o conteúdo do modal. Tem o ID 'modalContent'. -->
+            <!-- Esta div é centralizada e estilizada conforme definido no CSS. -->
+
+            <span id="closeModal">&times;</span>
+            <!-- Elemento span que serve como botão para fechar o 
+                    modal. Tem o ID 'closeModal'. -->
+            <!-- O conteúdo '&times;' exibe um "X" para indicar a 
+                    função de fechar o modal. -->
+
+            <p>Conteúdo do Modal</p>
+            <!-- Parágrafo que contém o texto do conteúdo do modal. -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Inclusão do arquivo JavaScript 'script.js'. Este arquivo 
+                contém a lógica para abrir e fechar o modal. -->
+                
+</body>
+</html>

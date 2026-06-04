@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento como HTML5, garantindo 
+            que o navegador interprete a página de acordo com as 
+            últimas especificações do HTML. -->
+
+<html lang="pt">
+<!-- Define a raiz do documento HTML e especifica que o idioma
+            principal do conteúdo é português. -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres do documento como UTF-8, 
+            permitindo a correta exibição de caracteres 
+            especiais e acentos. -->
+
+    <title>Tabulação Dinâmica de Conteúdo</title>
+    <!-- Define o título da página, que aparece na aba do 
+                navegador ou na barra de título. -->
+
+    <style>
+        /* Estilos para os botões das abas */
+
+        .tablinks {
+
+            padding: 10px;
+            /* Adiciona um preenchimento de 10 pixels ao redor do 
+                        texto dos botões, para torná-los maiores e 
+                        mais fáceis de clicar. */
+
+            border: 1px solid #ccc;
+            /* Adiciona uma borda cinza clara de 1 pixel ao redor 
+                        dos botões, para definir seus contornos. */
+
+            background-color: #f1f1f1;
+            /* Define a cor de fundo dos botões como cinza claro, 
+                        para que pareçam como áreas clicáveis. */
+
+            cursor: pointer;
+            /* Muda o cursor para um ponteiro (mão) ao passar sobre os 
+                        botões, indicando que são clicáveis. */
+
+            float: left;
+            /* Faz com que os botões flutuem à esquerda, permitindo que 
+                        fiquem alinhados horizontalmente lado a lado. */
+
+            margin-right: 4px;
+            /* Adiciona uma margem direita de 4 pixels entre os botões, 
+                        para separá-los visualmente. */
+
+        }
+
+        .tablinks.active, .tablinks:hover {
+
+            background-color: #ddd;
+            /* Muda a cor de fundo dos botões para um cinza mais escuro 
+                        quando estão ativos ou quando o cursor está sobre eles. */
+
+        }
+
+        /* Estilos para o conteúdo das abas */
+        .tabcontent {
+
+            clear: both;
+            /* Limpa o float dos botões, garantindo que o conteúdo 
+                        das abas não fique ao lado deles. */
+
+            padding: 20px;
+            /* Adiciona um preenchimento de 20 pixels ao redor do conteúdo 
+                        das abas, para torná-lo mais legível. */
+
+            border: 1px solid #ccc;
+            /* Adiciona uma borda cinza clara de 1 pixel ao redor do conteúdo 
+                        das abas, para definir seus contornos. */
+
+            border-top: none;
+            /* Remove a borda superior do conteúdo das abas, para que se 
+                        integre visualmente aos botões das abas. */
+
+            display: none;
+            /* Esconde o conteúdo das abas por padrão. Será exibido apenas 
+                        quando a aba correspondente for ativada. */
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Início do corpo do documento HTML, onde são colocados todos os 
+                elementos visíveis ao usuário. -->
+
+    <div id="tabs">
+        <!-- Div que contém os botões das abas e o conteúdo das abas. -->
+
+        <button class="tablinks" onclick="openTab(event, 'Tab1')">Tab 1</button>
+        <!-- Botão com a classe 'tablinks'. Quando clicado, chama a 
+                        função 'openTab' passando o evento e 
+                        o ID 'Tab1' como parâmetros.
+             Este botão é responsável por abrir a aba 'Tab1'. -->
+
+        <button class="tablinks" onclick="openTab(event, 'Tab2')">Tab 2</button>
+        <!-- Botão com a classe 'tablinks'. Quando clicado, chama a 
+                        função 'openTab' passando o evento e 
+                        o ID 'Tab2' como parâmetros.
+             Este botão é responsável por abrir a aba 'Tab2'. -->
+
+        <div id="Tab1" class="tabcontent">
+            <!-- Div que contém o conteúdo da aba 'Tab1'. 
+             Esta div será exibida quando o botão 'Tab 1' for clicado. -->
+
+            <h3>Tab 1</h3>
+            <!-- Cabeçalho da aba 'Tab 1'. -->
+
+            <p>Conteúdo da Tab 1. Aqui pode ser inserido texto, imagens ou qualquer outro conteúdo HTML.</p>
+            <!-- Parágrafo com o conteúdo da aba 'Tab 1'. -->
+
+        </div>
+
+        <div id="Tab2" class="tabcontent">
+            <!-- Div que contém o conteúdo da aba 'Tab2'. Esta div será 
+                        exibida quando o botão 'Tab 2' for clicado. -->
+
+            <h3>Tab 2</h3>
+            <!-- Cabeçalho da aba 'Tab 2'. -->
+
+            <p>Conteúdo da Tab 2. Aula de DOM.</p>
+            <!-- Parágrafo com o conteúdo da aba 'Tab 2'. -->
+
+        </div>
+    </div>
+
+    <script src="tabulacao.js"></script>
+    <!-- Inclusão do arquivo JavaScript 'tabulacao.js', que 
+                contém a lógica para abrir e fechar as abas. -->
+                
+</body>
+</html>
