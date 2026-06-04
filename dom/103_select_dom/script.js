@@ -1,17 +1,39 @@
+
 // Adiciona um ouvinte de evento de clique ao botão com o ID 'btnTitulo'.
-document.getElementById('btnTitulo').addEventListener('click', function() {
+// usei dois exemplos fazendo a msma coisa abaixo
+document.getElementById('btnTitulo').addEventListener('click', function(){ 
+        // acima usa function() função anonima ou () =>  função arrow e função externa e sem parenteses
+        // exemplo abaixo desse
+        // Declara uma variável 'titulo' e atribui a ela o 
+        // elemento HTML com o ID 'titulo'.
+        var titulo = document.getElementById('titulo');
 
-    // Declara uma variável 'titulo' e atribui a ela o 
-            // elemento HTML com o ID 'titulo'.
-    var titulo = document.getElementById('titulo');
+        // Acessa o elemento de entrada de texto com o
+                // ID 'inputTitulo' e define seu valor para
+        // o conteúdo de texto do elemento 'titulo' (o que
+                // está dentro da tag <h1>).
+        document.getElementById('inputTitulo').value = titulo.textContent;
 
-    // Acessa o elemento de entrada de texto com o
-            // ID 'inputTitulo' e define seu valor para
-    // o conteúdo de texto do elemento 'titulo' (o que
-            // está dentro da tag <h1>).
-    document.getElementById('inputTitulo').value = titulo.textContent;
+})
 
-});
+// usando a função externa igual a de cima
+
+document.getElementById('btnTitulo').addEventListener('click', externa)
+
+    
+function externa() {
+        // acima usa function() função anonima ou () =>  função arrow e externa
+        // Declara uma variável 'titulo' e atribui a ela o 
+                // elemento HTML com o ID 'titulo'.
+                var titulo = document.getElementById('titulo');
+    
+                // Acessa o elemento de entrada de texto com o
+                        // ID 'inputTitulo' e define seu valor para
+                // o conteúdo de texto do elemento 'titulo' (o que
+                        // está dentro da tag <h1>).
+                document.getElementById('inputTitulo').value = titulo.textContent;
+    
+    }
 
 
 // Adiciona um ouvinte de evento de clique ao botão
@@ -164,3 +186,5 @@ Este exemplo interativo fornece uma maneira visual e prática de
             no DOM funcionam, permitindo que você veja imediatamente os 
             resultados de suas ações.
 */
+
+
