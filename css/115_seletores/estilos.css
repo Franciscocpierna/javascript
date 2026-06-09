@@ -1,0 +1,72 @@
+/* Seletor de Tag para parágrafos */
+p {
+
+    /* Define a cor do texto de todos os elementos <p> (parágrafos) para
+    azul. Esta regra CSS afeta todos os parágrafos do documento, tornando o
+    texto deles azul, a menos que outra regra mais específica sobreponha esta. */
+    color: blue; 
+
+}
+
+/* Seletor de Classe para 'highlight' */
+.highlight {
+
+    /* Atribui a cor vermelha ao texto de todos os elementos que
+    possuem a classe 'highlight'. Isso é usado para destacar elementos
+    importantes e chamar a atenção para eles. */
+    color: red; 
+
+    /* Define a cor de fundo desses elementos para amarelo, aumentando o
+    contraste e a visibilidade do texto vermelho, o que ajuda na leitura e destaque. */
+    background-color: yellow; 
+}
+
+/* Seletor de ID para 'main-title' */
+#main-title {
+
+    /* Aplica a cor verde ao texto do elemento que tem o ID 'main-title'.
+    IDs são únicos dentro de uma página HTML, portanto esta regra afetará
+    apenas o elemento específico com este ID, usualmente usado para estilizar
+    um título principal ou elemento chave na página. */
+    color: green; 
+
+}
+
+/* Seletor de Tag para elementos 'small' */
+small {
+
+    /* Define a cor do texto para cinza em todos os elementos <small>.
+    Este seletor é geralmente usado para textos de menor importância como
+    notas de rodapé ou pequenas observações, onde o texto cinza oferece uma
+    leitura mais suave e menos proeminente comparado ao resto do conteúdo. */
+    color: gray; 
+    
+}
+
+
+/*
+Explicação Detalhada:
+
+Seletor de Tag (p): Aplica a cor azul a todos os parágrafos (`
+p`) no documento. Esse é um estilo global que afeta todos os
+elementos dessa tag, a menos que seja sobrescrito por outro
+seletor mais específico.
+
+Seletor de Classe (.highlight): Afeta todos os elementos que
+têm a classe "highlight". Esses elementos terão o texto vermelho e
+um fundo amarelo. Esse seletor é usado para destacar certos parágrafos e
+torná-los mais visíveis.
+
+Seletor de ID (#main-title): Aplica estilos ao elemento com o ID "main-title".
+Neste caso, o título principal (h1) tem o texto colorido de verde. Este seletor é
+muito específico e é usado apenas para estilizar um único elemento na página.
+
+Outro Seletor de Tag (small): Todos os elementos small terão texto cinza. Este
+seletor é útil para textos menores e menos importantes, como notas de rodapé ou
+informações adicionais, oferecendo um contraste suave em relação aos outros textos.
+
+Este exemplo ilustra como os seletores CSS podem ser usados para aplicar estilos
+específicos baseados em tags, classes e IDs, facilitando a organização e manutenção
+dos estilos em uma página web. Com esses seletores, você pode criar regras claras e
+eficazes que ajudam a manter a consistência e a legibilidade do design do site.
+*/

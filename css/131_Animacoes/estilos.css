@@ -1,0 +1,120 @@
+/*
+Criação de animações chaveadas (keyframes).
+
+Animações chaveadas (keyframes) no CSS permitem criar animações 
+complexas definindo estilos em pontos específicos durante a animação. 
+
+Isso pode ser usado para criar movimentos, transformações, mudanças de 
+cor, e muito mais, com um controle detalhado sobre o comportamento da 
+animação. Vamos criar um exemplo que demonstra como usar keyframes para 
+animar um elemento ao longo do tempo.
+*/
+
+/* Estilo básico para o quadrado animado */
+.animated-box {
+
+    /* Define a largura do quadrado como 100 pixels. */
+    width: 100px; 
+
+    /* Define a altura do quadrado como 100 pixels, criando um quadrado perfeito. */
+    height: 100px; 
+
+    /* Define a cor inicial de fundo do quadrado como um azul vibrante (#3498db). */
+    background-color: #3498db;
+    
+    /* Define a cor do texto dentro do quadrado como branco, garantindo
+    contraste suficiente para legibilidade. */
+    color: white; 
+
+    /* Utiliza o modelo de layout Flexbox para alinhar itens dentro do quadrado. */
+    display: flex; 
+
+    /* Centraliza os itens verticalmente dentro do quadrado. */
+    align-items: center; 
+
+    /* Centraliza os itens horizontalmente dentro do quadrado. */
+    justify-content: center; 
+
+    /* Define a família de fontes Arial, com sans-serif como
+    fallback, oferecendo uma aparência clara e legível. */
+    font-family: Arial, sans-serif; 
+
+    /* Define a posição do quadrado como relativa, permitindo
+    que ele seja movido usando propriedades 'top' e 'left'. */
+    position: relative; 
+
+    /* Aplica a animação 'moveAround', que dura 5 segundos para
+    cada ciclo, se repete infinitamente e alterna a direção da animação a
+    cada ciclo para um efeito dinâmico. */
+    animation: moveAround 5s infinite alternate; 
+}
+
+/* Definição de keyframes para a animação 'moveAround' */
+@keyframes moveAround {
+
+    /* Início da animação: o quadrado começa no canto
+    superior esquerdo com a cor azul. */
+    0% {
+        top: 0;
+        left: 0;
+        background-color: #3498db; 
+    }
+    25% {
+        top: 0;
+        left: 80%; /* Move o quadrado para 80% à direita, permanecendo no topo. */
+        background-color: #9b59b6; /* Muda a cor para um roxo (#9b59b6). */
+    }
+    50% {
+        top: 80%;
+        left: 80%; /* Move o quadrado para o canto inferior direito. */
+        background-color: #e74c3c; /* Muda a cor para um vermelho (#e74c3c). */
+    }
+    75% {
+        top: 80%;
+        left: 0; /* Move o quadrado para o canto inferior esquerdo. */
+        background-color: #f1c40f; /* Muda a cor para um amarelo (#f1c40f). */
+    }
+    100% {
+        top: 0;
+        left: 0; /* Retorna o quadrado para o canto superior esquerdo, completando o ciclo. */
+        background-color: #3498db; /* Retorna a cor para azul, reiniciando o padrão de cores. */
+    }
+}
+
+
+
+/*
+Explicação das Keyframes
+
+Animation: A propriedade animation no .animated-box aplica a 
+animação definida. moveAround 5s infinite alternate especifica que:
+
+moveAround é o nome dos keyframes que definem a animação.
+
+5s é a duração da animação.
+
+infinite indica que a animação se repetirá infinitamente.
+
+alternate faz com que a animação se mova para frente e para trás, em 
+    vez de reiniciar abruptamente ao final de cada ciclo.
+
+Keyframes (moveAround): Define os estados da animação em diferentes 
+    pontos do tempo:
+
+0% e 100% representam o estado inicial e final, onde o quadrado está 
+    no canto superior esquerdo com a cor de fundo azul.
+
+25%, 50%, e 75% mudam a posição e a cor do quadrado ao longo da animação, 
+    criando um movimento pelo espaço visível da tela.
+
+Visualização e Utilidade
+Quando você visualizar a página, verá o quadrado se movendo em um padrão 
+de caixa, mudando de posição e cor ao longo do tempo. Este tipo de animação 
+pode ser usado para destacar elementos, criar apresentações visuais 
+dinâmicas ou simplesmente adicionar interatividade lúdica a uma página web.
+
+As animações baseadas em keyframes oferecem um alto grau de controle sobre 
+as transições de estilo de elementos e podem ser personalizadas para 
+qualquer número de efeitos visuais, tornando-as ferramentas poderosas para 
+designers e desenvolvedores web.
+*/

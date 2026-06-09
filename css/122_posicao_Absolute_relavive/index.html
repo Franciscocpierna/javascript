@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- A declaração <!DOCTYPE html> informa ao navegador que
+    este documento segue o padrão HTML5, garantindo que seja
+    interpretado corretamente de acordo com as especificações
+    mais recentes do HTML. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML e o atributo 'lang="pt"'
+    especifica que o idioma principal do conteúdo da página é o
+    português, influenciando como os motores de busca indexam o site
+    e auxiliando tecnologias assistivas. -->
+
+<head>
+    <!-- A seção <head> contém metadados e links para recursos externos,
+        essenciais para a configuração da página mas que não são
+        visíveis na área de conteúdo. -->
+
+    <title>Exemplo de Posicionamento CSS</title>
+    <!-- A tag <title> define o título da página, que é mostrado na
+        aba do navegador. Esse título é crucial para SEO e para orientar
+        os usuários sobre o conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada para vincular uma folha de estilo externa
+        ao documento. O atributo 'href' aponta para o local do arquivo CSS
+        que contém as regras de estilo que afetarão a apresentação
+        visual da página. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível ao usuário final,
+        como texto, imagens, vídeos e outros elementos interativos. -->
+
+    <div class="relative" style="height: 200px;">
+        Posicionamento Relativo
+        <!-- Um <div> com a classe 'relative', aplicando o estilo de
+            posicionamento relativo. A altura é definida diretamente no
+            elemento para 200px. Este tipo de posicionamento permite que os
+            elementos filhos sejam posicionados relativamente a este. -->
+
+        <div class="absolute">Posicionamento Absoluto</div>
+        <!-- Um <div> interno com a classe 'absolute', demonstrando o
+            posicionamento absoluto, que é posicionado em relação ao
+            primeiro pai posicionado não estático (neste caso, o div
+            com classe 'relative'). -->
+
+    </div>
+    <div class="fixed">Posicionamento Fixo</div>
+    <!-- Um <div> com a classe 'fixed', mostrando como o posicionamento
+        fixo funciona. Elementos com posicionamento fixo são fixados na
+        janela do navegador e não se movem ao rolar a página. -->
+
+    <div class="long-content" style="height: 1500px;">Role para baixo</div>
+    <!-- Um <div> com a classe 'long-content', usado para demonstrar a
+        necessidade de rolar a página devido à sua grande altura (1500px). -->
+
+    <div class="sticky">Posicionamento Grudento</div>
+    <!-- Um <div> com a classe 'sticky', ilustrando o posicionamento
+        grudento. Esse tipo de posicionamento faz com que o elemento seja
+        tratado como relativamente posicionado até que seu bloco de
+        rolagem atinja um ponto de limite, momento no qual ele se torna fixo. -->
+
+    <div class="footer">Conteúdo do Rodapé</div>
+    <!-- Um <div> com a classe 'footer', usado para demonstrar conteúdo
+        típico de um rodapé de página, normalmente encontrado no final
+        de uma página. -->
+        
+</body>
+</html>

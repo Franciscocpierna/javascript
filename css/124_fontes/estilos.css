@@ -1,0 +1,144 @@
+/*
+Fontes (tipos, font-weight, font-style).
+
+A estilização de texto é uma parte crucial do design de interface, 
+ajudando a melhorar a legibilidade e a estética de um site. Abordaremos 
+como usar diferentes propriedades de fonte em CSS, incluindo font-family, 
+font-weight, font-style e outras, para criar um design de texto atraente e 
+funcional.
+
+*/
+
+/* Estilos básicos */
+body {
+
+    /* Define a família de fontes padrão para o corpo do documento. Arial é
+    uma fonte sem serifa amplamente usada por sua clareza e legibilidade em
+    diferentes resoluções de tela. */
+    font-family: Arial, sans-serif;
+    
+    /* Estabelece a altura da linha como 1.6 vezes o tamanho da fonte padrão.
+    Isso aumenta a legibilidade do texto, criando mais espaço vertical
+    entre as linhas de texto. */
+    line-height: 1.6;
+    
+    /* Aplica uma margem de 20 pixels em todos os lados do corpo do 
+    documento, proporcionando um espaçamento entre o conteúdo da 
+    página e as bordas do navegador. */
+    margin: 20px; 
+
+}
+
+h1, h2, h3 {
+
+    /* Define a cor do texto para os cabeçalhos h1, h2 e h3 como um
+    cinza escuro (#333). Essa cor é frequentemente escolhida por seu
+    contraste moderado, que é mais suave para os olhos do que o preto puro. */
+    color: #333; 
+
+}
+
+h1 {
+
+    /* Define o tamanho da fonte para h1 como 24 pixels, tornando-o
+    proeminente e facilmente distinguível como o cabeçalho principal da página. */
+    font-size: 24px; 
+
+}
+
+h2 {
+
+    /* Define o tamanho da fonte para h2 como 20 pixels, assegurando que
+    ele seja menor que h1 mas ainda assim significativamente destacado. */
+    font-size: 20px; 
+    
+    /* Aplica o estilo de fonte negrito para h2, aumentando
+    sua visibilidade e importância. */
+    font-weight: bold; 
+    
+}
+
+h3 {
+
+    /* Define o tamanho da fonte para h3 como 18 pixels, menor que h2,
+    adequado para subseções dentro das seções marcadas por h2. */
+    font-size: 18px; 
+
+    /* Aplica o estilo de fonte itálico para h3, o que ajuda a diferenciá-lo
+    dos outros cabeçalhos e pode ser usado para enfatizar uma nuance
+    ou uma subcategoria. */
+    font-style: italic; 
+
+}
+
+/* Diferentes famílias de fontes */
+.serif {
+
+    /* Define a família de fontes para Times New Roman, uma
+    fonte com serifa clássica, usada por sua formalidade e
+    legibilidade em textos impressos. */
+    font-family: 'Times New Roman', serif;
+    
+    /* Define o tamanho da fonte para 16 pixels, adequado para
+    leitura confortável em dispositivos digitais. */
+    font-size: 16px; 
+
+}
+
+.sans-serif {
+
+    /* Define a família de fontes para Helvetica, uma fonte sem
+    serifa limpa e moderna, escolhida por sua legibilidade e aparência
+    profissional em contextos digitais. */
+    font-family: 'Helvetica', sans-serif; 
+
+    /* Mantém o tamanho da fonte em 16 pixels, consistente com
+    as outras variantes para uniformidade na leitura. */
+    font-size: 16px; 
+
+}
+
+.monospace {
+
+    /* Define a família de fontes para Courier New, uma fonte
+    monospace que cada caractere ocupa o mesmo espaço horizontal.
+    Monospaces são frequentemente usadas em contextos de codificação
+    ou onde a alinhamento do texto é crucial. */
+    font-family: 'Courier New', monospace; 
+
+    /* Define o tamanho da fonte para 16 pixels, mantendo a consistência
+    com outras famílias de fontes para evitar desequilíbrios visuais. */
+    font-size: 16px; 
+    
+}
+
+
+/*
+Explicação das Propriedades de Fonte
+
+Font-Family: Define a família tipográfica para o texto. Por exemplo, 
+    serif para 'Times New Roman', sans-serif para 'Helvetica', e 
+    monospace para 'Courier New'. Essa propriedade ajuda a determinar a 
+    aparência geral do texto.
+
+Font-Size: Controla o tamanho do texto. Valores maiores aumentam a 
+    legibilidade em títulos e cabeçalhos.
+
+Font-Weight: Controla o peso da fonte. bold é frequentemente usado para 
+    destacar títulos ou informações importantes.
+
+Font-Style: Usado principalmente para aplicar estilo itálico, o que é 
+    útil para enfatizar palavras ou frases específicas.
+
+Visualização
+Quando visualizar a página, você verá que os diferentes estilos de 
+fonte são aplicados de forma a diferenciar claramente os tipos de texto. 
+O h1 apresentará o tamanho padrão, o h2 estará em negrito para destacar 
+sua importância, e o h3 estará em itálico, ideal para títulos secundários 
+ou citações. Os parágrafos em diferentes famílias de fontes demonstram a 
+variedade visual que pode ser alcançada com a propriedade font-family.
+
+Este exemplo demonstra como as propriedades de fonte podem ser utilizadas 
+para criar um texto esteticamente agradável e funcional em um website, 
+melhorando a experiência do usuário e a apresentação das informações.
+*/

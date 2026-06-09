@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- A declaração <!DOCTYPE html> informa ao navegador que
+    este documento é um HTML5, a versão mais recente e
+    amplamente suportada do HTML. Esta declaração é
+    necessária para garantir que o navegador processe o
+    documento de acordo com as normas atuais da web. -->
+
+<html lang="pt">
+<!-- A tag <html> marca o início do documento HTML. O atributo 'lang="pt"'
+    especifica que o idioma principal da página é o português, o
+    que é importante para acessibilidade, SEO e para fornecer
+    localização correta no conteúdo da página. -->
+
+<head>
+    <!-- A seção <head> contém metadados, links para folhas de
+        estilo externas, e scripts que são necessários para a página,
+        mas que não são exibidos diretamente na área de visualização do navegador. -->
+    
+    <title>Exemplo de Combinadores CSS</title>
+    <!-- A tag <title> define o título da página, que aparece na
+        aba do navegador. O título é crucial para a experiência do
+        usuário e para a otimização de motores de busca (SEO), pois
+        fornece um contexto sobre o conteúdo da página. -->
+    
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada para vincular uma folha de estilos externa ao documento 
+        HTML. O atributo 'href="estilos.css"' especifica o caminho para o arquivo CSS
+        que contém as regras de estilo que serão aplicadas aos elementos da página. 
+        <link>: Esta tag é um elemento HTML usado para definir uma relação
+            entre o documento HTML e um recurso externo. No contexto de
+            CSS, a tag <link> é comumente utilizada para conectar uma
+            folha de estilo externa ao documento HTML.
+        rel="stylesheet": rel: O atributo rel especifica o tipo de relação que 
+            o documento HTML tem com o recurso vinculado.
+        "stylesheet": Este valor indica que o recurso vinculado é uma folha de 
+            estilos CSS. O navegador, ao interpretar este valor, entende que 
+            deve buscar o recurso especificado no atributo href e aplicá-lo 
+            como CSS ao conteúdo da página.
+        Em resumo, rel="stylesheet" é essencial para informar ao navegador 
+            que o link aponta para uma folha de estilos que deve ser usada 
+            para estilizar a página. Sem esse atributo configurado corretamente, 
+            o navegador pode não reconhecer o arquivo vinculado como uma folha de 
+            estilo e não aplicará os estilos definidos nele.-->
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página web que os 
+        usuários interagem, como texto, imagens, vídeos, formulários, etc. -->
+
+    <div class="container">
+        <!-- Um <div> com a classe "container". O <div> é um contêiner
+             genérico para conteúdo de fluxo, usado frequentemente para 
+             agrupar elementos para fins de estilos ou scripts. A classe 
+             "container" pode ser usada para aplicar estilos específicos 
+             definidos no arquivo CSS. -->
+
+        <p>Parágrafo no container (pai).</p>
+        <!-- Um elemento <p> que contém texto. Este parágrafo está dentro do 
+            div "container", o que significa que pode ser estilizado de forma 
+            específica com CSS usando combinações de seletores baseados na 
+            classe do contêiner. -->
+
+        <div class="subcontainer">
+            <!-- Um <div> interno com a classe "subcontainer", utilizado para 
+                demonstrar aninhamento e a relação pai-filho entre elementos. -->
+            
+            <p>Parágrafo no subcontainer (filho).</p>
+            <!-- Um parágrafo dentro do subcontainer, que é considerado um 
+                elemento filho dentro do div "container". Pode ser alvo de 
+                regras CSS específicas que se aplicam apenas a elementos dentro 
+                de "subcontainer". -->
+
+        </div>
+    </div>
+
+    <ul>
+
+        <!-- A tag <ul> define uma lista não ordenada. Usada aqui para 
+            demonstrar como listas podem ser manipuladas com CSS, especialmente 
+            com combinadores como :first-child e :last-child. -->
+        
+        <li>Primeiro item</li>        
+        <!-- Cada <li> é um item da lista. Este é o primeiro item, que pode ser 
+            especificamente estilizado usando o pseudo-classe :first-child. -->
+        
+        <li>Segundo item</li>
+        <!-- Segundo item da lista, que pode receber estilos padrões ou 
+            modificados com pseudo-classes. -->
+
+        <li>Terceiro item</li>
+        <!-- Terceiro item da lista, que pode ser especificamente estilizado 
+            usando o pseudo-classe :last-child. -->
+    </ul>
+
+    <button class="botao">Botão 1</button>
+    <!-- Um <button> com a classe "botao". Este botão pode ser estilizado 
+        com CSS e é o primeiro botão de uma sequência, permitindo o uso de 
+        combinadores adjacentes no CSS. -->
+
+    <button class="botao">Botão 2</button>
+    
+    <!-- Segundo <button> na sequência, que pode ser especificamente estilizado 
+        usando o combinador adjacente (+) para diferenciar o estilo quando 
+        próximo a outro botão. -->
+        
+</body>
+</html>

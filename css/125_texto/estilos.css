@@ -1,0 +1,137 @@
+/*
+Controle de texto (espaçamento, alinhamento, quebra de linha).
+
+O controle do texto em CSS permite ajustar características como 
+espaçamento entre letras, linhas e palavras, alinhamento do texto e 
+manipulação de quebras de linha. Vamos criar um exemplo prático que 
+demonstra essas propriedades para fornecer uma compreensão clara de 
+como elas podem ser aplicadas para melhorar a legibilidade e a estética 
+do texto em um website.
+*/
+
+/* Estilos básicos */
+body {
+
+    /* Define a família de fontes do corpo do documento. 'Segoe UI' é a
+    fonte primária, com Arial como fallback secundário e sans-serif como
+    genérico se os outros não estiverem disponíveis. Essas fontes são
+    escolhidas por sua clareza e legibilidade em interfaces digitais. */
+    font-family: 'Segoe UI', Arial, sans-serif; 
+
+    /* Define uma margem de 20 pixels em todos os lados do corpo do
+    documento, criando um espaço entre o conteúdo da página e as
+    bordas do navegador. */
+    margin: 20px; 
+
+    /* Define a altura da linha para 1.6 vezes o tamanho da fonte
+    padrão, melhorando a legibilidade ao aumentar o espaço
+    entre as linhas de texto. */
+    line-height: 1.6; 
+}
+
+h1, h2 {
+
+    /* Define a cor do texto para cabeçalhos h1 e h2 como um
+    cinza escuro (#333), proporcionando um contraste forte contra
+    fundos claros sem ser tão duro quanto o preto puro. */
+    color: #333; 
+
+    /* Define uma margem inferior de 10 pixels para os
+    cabeçalhos h1 e h2, ajudando a separar visualmente esses
+    cabeçalhos dos conteúdos que os seguem. */
+    margin-bottom: 10px; 
+
+}
+
+/* Alinhamento de texto */
+.left-align {
+
+    /* Alinha o texto à esquerda do elemento, o padrão para
+    texto em muitos idiomas, incluindo o português. */
+    text-align: left; 
+
+}
+
+.center-align {
+
+    /* Centraliza o texto dentro do elemento, útil para títulos,
+    cabeçalhos ou qualquer texto que necessite destaque visual. */
+    text-align: center; 
+
+}
+
+.right-align {
+
+    /* Alinha o texto à direita do elemento, frequentemente usado para
+    textos em idiomas que são escritos da direita para a esquerda ou
+    para criar um efeito estilístico. */
+    text-align: right; 
+
+}
+
+/* Espaçamento de texto */
+.spacing {
+
+    /* Aumenta o espaçamento entre as letras em 1.5 pixels, o que
+    pode ajudar a melhorar a legibilidade ou criar um estilo
+    visual particular. */
+    letter-spacing: 1.5px; 
+
+    /* Aumenta o espaçamento entre as palavras em 4 pixels, útil
+    para ajustar a densidade visual do texto e melhorar a clareza. */
+    word-spacing: 4px;     
+
+    /* Define a altura da linha para 2 vezes o tamanho da fonte padrão,
+    aumentando significativamente o espaço entre as linhas e melhorando a
+    legibilidade em blocos de texto mais densos. */
+    line-height: 2;        
+}
+
+/* Controle de quebra de linha */
+.no-wrap {
+
+    /* Define o espaço em branco para 'nowrap', o que impede que o
+    texto dentro do elemento quebre em múltiplas linhas, mantendo todo o
+    texto em uma única linha contínua. */
+    white-space: nowrap;   
+
+    /* Oculta qualquer conteúdo que exceda a largura do elemento,
+    evitando que o texto derrame para fora do espaço designado. */
+    overflow: hidden;      
+
+    /* Adiciona reticências ('...') ao final do texto se ele
+    exceder o espaço disponível, indicando visualmente que há mais
+    conteúdo que não está sendo exibido. */
+    text-overflow: ellipsis; 
+}
+
+
+/*
+Explicação das Propriedades de Texto
+
+Text-Align: Permite alinhar o texto à esquerda (left), ao centro (center) ou 
+    à direita (right). Isso ajuda a posicionar o texto de acordo com o 
+    contexto de uso.
+
+Letter-Spacing, Word-Spacing e Line-Height: Ajustam o espaçamento entre 
+    letras, palavras e linhas, respectivamente. Esses espaçamentos podem ser 
+    aumentados para melhorar a legibilidade ou para efeitos estilísticos.
+
+White-Space, Overflow e Text-Overflow: white-space: nowrap; impede que o 
+    texto seja quebrado em várias linhas. Combinado com overflow: hidden; e 
+    text-overflow: ellipsis;, você pode criar um efeito onde o texto 
+    excedente é ocultado e substituído por reticências, útil para evitar a 
+    sobreposição de texto em contêineres com espaço limitado.
+
+Visualização e Utilidade
+Ao visualizar a página, notará que os parágrafos estão alinhados conforme 
+especificado, e o espaçamento entre letras, palavras e linhas é claramente 
+visível no parágrafo com classe .spacing. O parágrafo .no-wrap mostra como o 
+texto pode ser gerido em espaços restritos sem quebrar linhas, o que é 
+particularmente útil em layouts de interface do usuário onde o espaço é 
+limitado.
+
+Este exemplo ilustra como o controle do texto através do CSS pode ser 
+utilizado para melhorar tanto a funcionalidade quanto a estética do 
+conteúdo textual, permitindo designs responsivos e bem estruturados.
+*/

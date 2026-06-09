@@ -1,0 +1,138 @@
+/* 
+Sintaxe básica, incluindo seletores, propriedades e valores.
+
+CSS (Cascading Style Sheets) é uma linguagem usada para descrever a
+apresentação de um documento escrito em HTML ou XML. CSS descreve como
+os elementos devem ser renderizados na tela, em papel, na fala ou
+em outras mídias. Vamos explorar a sintaxe básica do CSS, incluindo
+seletores, propriedades e valores através de um exemplo prático e
+detalhado.
+
+1. Sintaxe Básica
+A sintaxe de um CSS consiste em seletores e um conjunto de declarações. Cada
+declaração contém uma propriedade e um valor associado a essa propriedade. 
+
+A estrutura básica é:
+
+css
+
+seletor {
+    propriedade: valor;
+}
+
+Seletores definem em quais elementos do HTML as declarações de estilo
+serão aplicadas.
+
+Propriedades são os tipos de ajustes que você pode fazer (como cor,
+largura, altura).
+
+Valores especificam as configurações das propriedades (como red para cor,
+100px para largura).
+*/
+
+
+/* Estilo para todos os elementos <p> */
+p {
+
+    /* Cor do texto: Define a cor dos caracteres para um tom de cinza
+    escuro (#333). Esta cor é escolhida por sua legibilidade em
+    fundos claros. */
+    color: #333;     
+    
+    /* Tamanho da fonte: Especifica que o texto dentro dos elementos <p> deve
+    ter 16 pixels de altura. Este tamanho é frequentemente usado por
+    ser confortável para leitura em telas de desktop e dispositivos móveis. */
+    font-size: 16px; 
+    
+    /* Espaçamento entre linhas: Define a altura da linha como 1.5
+    vezes o tamanho da fonte. Isso melhora a legibilidade, espaçando
+    as linhas de texto de forma que seja fácil seguir uma linha e
+    passar para a próxima. */
+    line-height: 1.5;  
+
+}
+
+/* Estilo específico para o elemento com id 'titulo-principal' */
+#titulo-principal {
+
+    /* Cor do texto: Especifica que o texto do elemento com o
+    ID 'titulo-principal' deve ser da cor navy, um tom de azul escuro.
+    Esta cor é escolhida para destacar o título principal da página. */
+    color: navy;             
+    
+    /* Tamanho da fonte: Define o tamanho do texto para 24 pixels,
+    que é maior do que o texto normal para chamar atenção ao
+    título principal. */
+    font-size: 24px;          
+
+    /* Alinhamento do texto: Centraliza o texto dentro do elemento,
+    o que é comum para títulos para dar um visual mais
+    organizado e focado. */
+    text-align: center;       
+
+}
+
+/* Estilo para elementos <p> com a classe 'destaque' */
+.destaque {
+
+    /* Cor do texto: Muda a cor do texto para vermelho para
+    elementos <p> que tenham a classe 'destaque'. Vermelho é
+    usado para chamar atenção para texto importante ou alertas. */
+    color: red;              
+    
+    /* Peso da fonte: Aumenta o peso da fonte para 'bold' (negrito),
+    o que faz com que o texto se destaque ainda mais contra o
+    restante do texto na página. */
+    font-weight: bold;        
+
+}
+
+/* Estilo para links com a classe 'link' */
+.link {
+
+    /* Cor do texto: Define a cor dos links com a classe 'link'
+    para verde. Verde é muitas vezes usado para indicar ação ou
+    disponibilidade, associado com ir ou permitir acesso. */
+    color: green;            
+    
+    /* Remover sublinhado do link: Remove o sublinhado padrão
+    dos links. Isso é útil para estilos de design onde o sublinhado
+    pode distrair do layout visual geral ou quando os links estão
+    incorporados dentro de um contexto que já indica clicabilidade. */
+    text-decoration: none;
+
+}
+
+/* Estilo ao passar o mouse sobre os links */
+.link:hover {
+
+    /* Adiciona sublinhado ao passar o mouse: Reinserindo o
+    sublinhado quando o usuário passa o mouse sobre o link para
+    indicar claramente que é um elemento interativo, melhorando a
+    usabilidade ao fornecer um feedback visual de que o
+    item é clicável. */
+    text-decoration: underline;  
+    
+}
+
+
+
+/*
+Explicação do CSS
+
+p é um seletor de tipo que aplica estilos a todos os elementos <p> da página.
+
+#titulo-principal é um seletor de ID que aplica estilos apenas ao
+elemento <h1> com o ID titulo-principal.
+
+.destaque é um seletor de classe que aplica estilos aos elementos <p> que
+possuem a classe destaque.
+
+.link e .link:hover são seletores de classe que aplicam e modificam estilos
+dos elementos <a> com a classe link. O pseudo-seletor :hover é usado para
+definir um estilo quando o usuário passa o mouse sobre o elemento.
+
+Esse exemplo cobre a criação de um arquivo CSS básico que interage com
+um documento HTML para estilizar textos, links e cabeçalhos, demonstrando
+como usar seletores, propriedades e valores em CSS.
+*/

@@ -1,0 +1,100 @@
+/*
+Especificação de cores (hexadecimal, RGB, HSL).
+
+As cores são um aspecto fundamental do design web e podem ser 
+especificadas em CSS de várias formas, incluindo valores hexadecimais, 
+RGB (Red, Green, Blue), e HSL (Hue, Saturation, Lightness). 
+
+Vamos criar um exemplo prático que demonstra como usar esses diferentes 
+formatos de cores para estilizar uma página web.
+*/
+
+/* Estilos básicos */
+div {
+
+    /* Aplica um preenchimento de 20 pixels em todos os lados do
+    elemento div. Isso aumenta a área entre o conteúdo do div e
+    suas bordas, melhorando a legibilidade e a apresentação visual. */
+    padding: 20px;
+    
+    /* Define uma margem externa de 10 pixels em todos os lados do
+    div. As margens externas criam espaço adicional ao redor do
+    elemento, separando-o de outros elementos adjacentes na página. */
+    margin: 10px; 
+
+    /* Define a cor do texto dentro do div para branco, garantindo
+    que o texto seja legível contra cores de fundo mais escuras
+    que podem ser aplicadas. */
+    color: white; 
+
+    /* Especifica a família de fontes para Arial, com um fallback
+    genérico sans-serif. Arial é uma escolha popular devido à sua
+    legibilidade e aparência limpa em interfaces digitais. */
+    font-family: 'Arial', sans-serif; 
+
+    /* Centraliza o texto dentro do div, o que é útil para cabeçalhos,
+    títulos ou qualquer conteúdo que se beneficie de alinhamento simétrico. */
+    text-align: center; 
+
+}
+
+/* Especificação de cor hexadecimal */
+.hex {
+
+    /* Define a cor de fundo do div para um azul específico (#3498db).
+    As cores hexadecimais são uma maneira comum de especificar cores na
+    web devido à sua precisão e controle. */
+    background-color: #3498db; 
+
+}
+
+/* Especificação de cor RGB */
+.rgb {
+
+    /* Define a cor de fundo do div usando o modelo de cor RGB para
+    vermelho-tomate (255, 99, 71). RGB especifica os valores de vermelho,
+    verde e azul, permitindo uma ampla gama de cores ajustáveis. */
+    background-color: rgb(255, 99, 71); 
+
+}
+
+/* Especificação de cor HSL */
+.hsl {
+
+    /* Define a cor de fundo do div usando o modelo de cor HSL para
+    verde (120, 75%, 50%). HSL representa matiz, saturação e luminosidade,
+    oferecendo uma abordagem intuitiva para ajustar tons de cor. */
+    background-color: hsl(120, 75%, 50%); 
+
+}
+
+/*
+Explicação das Propriedades de Cor
+
+Hexadecimal: O formato hexadecimal é um dos métodos mais comuns para 
+    especificar cores em CSS. Ele usa valores que vão de 00 a FF para 
+    representar os níveis de vermelho, verde e azul. No exemplo, #3498db é 
+    um tom de azul.
+
+RGB: RGB é um sistema de cor baseado na mistura de luz vermelha, verde e 
+    azul. A função rgb() aceita três parâmetros que representam a 
+    intensidade de cada componente de cor, variando de 0 a 255. rgb(255, 99, 71) cria 
+    um tom de vermelho-tomate.
+
+HSL: HSL representa matiz (hue), saturação (saturation) e 
+    luminosidade (lightness). hsl(120, 75%, 50%) representa uma cor verde, 
+    onde 120 é o grau do círculo de cor (verde), 75% é a saturação da cor, 
+    e 50% é a luminosidade.
+
+Visualização
+Quando visualizar a página, cada <div> aparecerá com uma cor de 
+fundo diferente correspondente ao método de especificação de cor usado. 
+Isso ajuda a entender visualmente como cada formato impacta a 
+apresentação dos elementos e oferece uma ampla gama de possibilidades 
+criativas para o design web.
+
+Este exemplo ilustra como diferentes especificações de cor podem ser 
+aplicadas em CSS, permitindo um controle preciso sobre a estética do 
+site e oferecendo flexibilidade para ajustar as cores conforme necessário 
+para se adequar a diferentes temas e estilos de design.
+*/

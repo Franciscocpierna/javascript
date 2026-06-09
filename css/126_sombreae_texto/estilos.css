@@ -1,0 +1,135 @@
+/*
+Sombreamento de texto e efeitos de texto.
+
+O sombreamento de texto e outros efeitos visuais em CSS são ferramentas 
+poderosas para adicionar profundidade, destaque e interesse visual ao 
+texto em páginas web. Eles podem ser usados para melhorar a legibilidade, 
+destacar informações importantes ou simplesmente adicionar um toque 
+estético ao design. Vamos criar um exemplo prático que demonstra como 
+aplicar sombras e outros efeitos de texto usando CSS.
+*/
+
+/* Estilos básicos */
+body {
+
+    /* Define a família de fontes para o corpo do documento,
+    utilizando 'Segoe UI' como primeira opção e Arial como alternativa.
+    Ambas são fontes sans-serif, que são populares pela sua
+    legibilidade em telas digitais. */
+    font-family: 'Segoe UI', Arial, sans-serif; 
+
+    /* Aplica uma margem de 20px em todos os lados do corpo do
+    documento, criando um espaço entre o conteúdo e as
+    bordas da janela do navegador. */
+    margin: 20px; 
+
+    /* Define a cor de fundo do corpo do documento como um
+    cinza muito claro (#f4f4f4), proporcionando um contraste
+    suave que é fácil para os olhos. */
+    background: #f4f4f4; 
+
+}
+
+h1, h2, h3 {
+
+    /* Define a cor do texto para cabeçalhos h1, h2, e h3 como um
+    cinza escuro (#333), oferecendo um contraste forte contra o fundo
+    claro sem ser tão agressivo quanto o preto puro. */
+    color: #333; 
+
+    /* Adiciona um preenchimento na parte inferior de cada cabeçalho para
+    separar visualmente os cabeçalhos do texto ou conteúdo que segue. */
+    padding-bottom: 10px; 
+
+}
+
+/* Efeito de sombra no texto */
+.text-shadow {
+
+    /* Aplica uma sombra ao texto que cria um efeito de elevação ou
+    profundidade, usando um preto semi-transparente. A sombra é deslocada 2px
+    para a direita e para baixo, com um desfoque de 4px. */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+
+    /* Define o tamanho da fonte para textos com este efeito,
+    garantindo que o efeito de sombra seja visível e efetivo. */
+    font-size: 18px; 
+}
+
+/* Efeito de brilho no texto */
+.text-glow {
+
+    /* Define a cor do texto para branco, o que ajuda a
+    realçar o efeito de brilho aplicado. */
+    color: rgb(157, 143, 143); 
+
+    /* Aplica uma sombra de texto que atua como um brilho ao
+    redor das letras, usando uma cor amarela com alta transparência
+    para criar o efeito de brilho luminoso. */
+    text-shadow: 0 0 8px rgba(161, 172, 11, 0.8); 
+
+    /* Mantém a consistência do tamanho da fonte para
+    textos com efeitos visuais especiais. */
+    font-size: 30px; 
+
+}
+
+/* Efeito de máscara de recorte no texto */
+.clipping-mask {
+
+    /* Define uma imagem de fundo para o texto. A imagem não se repete. */
+    background: url('https://example.com/background.jpg') no-repeat; 
+
+    /* Ajusta a imagem de fundo para cobrir completamente a área do texto,
+    garantindo que todo o texto seja preenchido pela imagem. */
+    background-size: cover; 
+
+    /* Especifica que o plano de fundo será recortado para se ajustar ao
+    texto; este prefixo é necessário para suporte em navegadores WebKit
+    como Chrome e Safari. */
+    -webkit-background-clip: text; 
+
+    /* Define o recorte de fundo para seguir as formas do texto. */
+    background-clip: text;
+    
+    /* Torna o texto em si transparente, o que permite que a imagem de
+    fundo seja vista através das formas das letras. 
+    
+    color: transparent;*/
+    color: blue;
+    
+    
+    /* Define o tamanho da fonte um pouco maior para este efeito, para
+    garantir que o efeito de máscara de recorte seja claramente visível. */
+    font-size: 20px; 
+    
+}
+
+
+/*
+Explicação dos Efeitos de Texto
+
+Text-Shadow: Utilizado na classe .text-shadow, aplica uma sombra ao 
+    texto, criando um efeito de profundidade. 2px 2px 4px rgba(0,0,0,0.5) 
+    define o deslocamento horizontal e vertical da sombra, o desfoque da 
+    sombra e a cor.
+
+Text-Glow: Na classe .text-glow, o text-shadow é usado para criar um 
+    efeito de brilho ao redor do texto, simulando uma iluminação. A cor 
+    branca do texto com uma sombra amarela luminosa faz o texto parecer 
+    brilhar.
+
+Clipping-Mask: A classe .clipping-mask usa a propriedade -webkit-background-clip: text; 
+    para aplicar um fundo como máscara de texto, resultando em um efeito 
+    visual onde o fundo preenche apenas o texto, tornando-o transparente.
+
+Notas Adicionais e Visualização
+
+Ao visualizar a página, você notará que os efeitos de sombra e brilho 
+    adicionam dimensão e ênfase visual ao texto, enquanto o efeito de 
+    recorte com máscara cria um estilo distintamente moderno e artístico.
+
+Estes exemplos demonstram como pequenos ajustes no estilo de texto podem 
+significativamente melhorar a apresentação visual e a experiência do 
+usuário em um site.
+*/

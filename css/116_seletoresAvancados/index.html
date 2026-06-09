@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- A declaração <!DOCTYPE html> informa ao navegador que
+    este documento deve ser interpretado como HTML5. É importante
+    para garantir que o navegador processe a página de acordo com
+    os padrões modernos da web. -->
+
+<html lang="pt">
+<!-- A tag <html> marca o início do documento HTML. O atributo 'lang="pt"' 
+    especifica que o idioma principal da página é o português, o que é 
+    relevante para acessibilidade, motores de busca e para definir o 
+    comportamento de algumas funcionalidades do navegador. -->
+
+<head>
+    <!-- A seção <head> contém metadados e referências a recursos externos 
+        como CSS, scripts e ícones de página. Estes elementos não são 
+        visíveis diretamente na interface da página, mas são essenciais para 
+        o funcionamento e a apresentação da página. -->
+    
+        <title>Exemplo CSS com Seletores Avançados</title>
+    <!-- A tag <title> define o título da página, que aparece na aba do 
+        navegador. Este título é importante para a experiência do usuário e 
+        otimização de motores de busca (SEO), fornecendo contexto sobre o 
+        conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para conectar uma folha de estilos externa 
+        ao documento HTML. O atributo 'href' especifica o caminho para o 
+        arquivo CSS, 'estilos.css', que contém as regras de estilo que 
+        afetarão a apresentação visual da página. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo da página que é visível para os 
+        usuários, como texto, imagens, formulários e outros controles 
+        interativos. -->
+
+    <input type="text" placeholder="Digite algo...">
+    <!-- Um campo de entrada de texto (<input type="text">) permite que os 
+        usuários digitem texto livre. O atributo 'placeholder' fornece um 
+        texto de exemplo dentro do campo, que desaparece quando o usuário 
+        começa a digitar, servindo como uma pista sobre o que deve ser 
+        inserido. -->
+
+    <input type="password" placeholder="Sua senha">
+    <!-- Um campo de entrada para senhas (<input type="password">) esconde 
+        os caracteres digitados para proteger a informação. Assim como no 
+        campo de texto, o 'placeholder' ajuda a indicar a função do campo. -->
+
+    <p title="dica">Passe o mouse aqui para ver a dica.</p>
+    <!-- Um parágrafo (<p>) que contém uma dica interativa. O atributo 'title' é 
+        usado para fornecer informações adicionais que são mostradas em um 
+        tooltip quando o usuário passa o mouse sobre o elemento, enriquecendo a 
+        interatividade sem necessidade de elementos visuais adicionais. -->
+
+    <ul>
+        <!-- A tag <ul> define uma lista não ordenada, usada para agrupar 
+            itens que não requerem uma sequência numérica. -->
+        <li>Item 1</li>
+        <!-- Cada <li> representa um item individual na lista. -->
+        <li>Item 2</li>
+        <!-- Segundo item da lista. -->
+        <li>Item 3</li>
+        <!-- Terceiro item da lista. -->
+    </ul>
+
+    <div class="texto">Este é um <span>exemplo</span> de uso de pseudo-elementos.</div>
+    <!-- Um <div> com a classe 'texto' que contém texto misturado com um <span>. 
+        O <span> é usado para destacar ou diferenciar parte do texto dentro do <div>. 
+        O conteúdo e a classe indicam que o <div> e o <span> podem ser estilizados 
+        especificamente, potencialmente com pseudo-elementos definidos no CSS. -->
+</body>
+</html>
+

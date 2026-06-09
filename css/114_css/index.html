@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- A declaração <!DOCTYPE html> informa ao navegador
+    que este documento é um HTML5, que é a versão mais
+    recente e comum do HTML. Essa declaração ajuda o navegador a
+    interpretar corretamente o resto do documento. -->
+
+<html lang="pt">
+<!-- A tag <html> marca o início do documento HTML. O atributo
+    'lang="pt"' especifica que o idioma principal do documento é
+    o português. Isso é importante para acessibilidade, motores
+    de busca e navegadores, que podem fornecer ferramentas e
+    funcionalidades específicas baseadas no idioma definido. -->
+
+<head>
+    <!-- A seção <head> contém metadados e links para scripts e folhas 
+        de estilo. Essa seção não é visível diretamente na interface do 
+        usuário. -->
+    
+    <title>Exemplo de CSS</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba do 
+        navegador. O título é importante para SEO (Search Engine Optimization) e 
+        para a experiência do usuário, pois fornece uma rápida orientação sobre o
+        conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é utilizada aqui para incluir uma folha de estilos 
+        externa. O atributo 'rel="stylesheet"' indica que o tipo de documento
+        vinculado é uma folha de estilo CSS. O atributo 'href' especifica o 
+        caminho para o arquivo CSS que define os estilos para esta página, 
+        chamado 'estilos.css'. Isso permite que o estilo seja definido 
+        separadamente do HTML, promovendo a reutilização e a manutenção mais 
+        fácil do código. -->
+
+</head>
+
+<body>    
+    <!-- A tag <body> contém todo o conteúdo visível da página,
+        como texto, imagens, formulários e outros elementos interativos. -->
+
+    <h1 id="titulo-principal">Bem-vindo ao Nosso Site!</h1>
+    <!-- A tag <h1> é usada para o título principal da página. Este é o
+        elemento mais importante para a estrutura de tópicos da página
+        para acessibilidade e SEO. O atributo 'id' com o valor
+        'titulo-principal' fornece um identificador único para o
+        elemento, que pode ser referenciado na folha de estilos CSS
+        e usado para estilização específica ou manipulação via JavaScript. -->
+
+    <p class="descricao">Este é um exemplo de parágrafo com CSS aplicado.</p>
+    <!-- A tag <p> define um parágrafo. O atributo 'class' com o
+        valor 'descricao' associa este parágrafo a uma classe CSS
+        que pode ser usada para aplicar estilos específicos a todos os
+        elementos que compartilham esta classe. Isso é útil para aplicar
+        uma estilização consistente a múltiplos elementos sem repetir estilos inline. -->
+
+    <p class="destaque">Este parágrafo é um destaque!</p>
+    <!-- Outro <p>, também com um atributo 'class', mas com o valor
+        'destaque'. Isso indica que este parágrafo deve ser estilizado
+        de maneira diferente, possivelmente de forma mais chamativa, de
+        acordo com as regras definidas na folha de estilos para a
+        classe 'destaque'. -->
+
+    <a href="#" class="link">Clique aqui</a>
+    <!-- A tag <a> define um hiperlink, que é usado para linkar para
+        outra página ou para um local na mesma página. O atributo 'href="#"'
+        indica que este link, por enquanto, não aponta para nenhum
+        destino específico (é um placeholder). O atributo 'class="link"'
+        associa este link a uma classe CSS, que define como links com
+        esta classe devem ser estilizados. -->
+        
+</body>
+</html>
+

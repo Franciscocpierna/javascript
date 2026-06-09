@@ -1,0 +1,101 @@
+/*
+Gradientes lineares e radiais.
+
+Gradientes são uma maneira eficaz de adicionar profundidade, 
+textura e interesse visual às suas páginas da web. Em CSS, você 
+pode criar tanto gradientes lineares quanto radiais. Vamos explorar 
+como aplicar esses dois tipos de gradientes por meio de um exemplo prático.
+*/
+
+/* Estilos básicos para os divs */
+div {
+
+    /* Define um preenchimento de 50 pixels em todos os lados do
+    elemento, criando um espaço substancial entre o conteúdo
+    interno do div e suas bordas. */
+    padding: 50px; 
+
+    /* Aplica uma margem de 20 pixels em todos os lados do div,
+    separando-o dos outros elementos na página e evitando que
+    eles toquem diretamente o div. */
+    margin: 20px; 
+
+    /* Define a cor do texto dentro do div para branco,
+    garantindo que o texto seja legível contra os fundos
+    coloridos dos gradientes aplicados. */
+    color: white; 
+
+    /* Define o tamanho da fonte para 20 pixels, o que
+    ajuda a tornar o texto dentro do div mais visível e legível. */
+    font-size: 20px; 
+
+    /* Especifica a família de fontes Arial como a principal e
+    sans-serif como fallback, proporcionando uma aparência
+    limpa e moderna ao texto. */
+    font-family: Arial, sans-serif; 
+
+    /* Centraliza o texto dentro do div, alinhando-o simetricamente
+    no meio para um layout equilibrado e esteticamente agradável. */
+    text-align: center; 
+
+    /* Aplica um raio de borda de 10 pixels, arredondando os
+    cantos do div, o que suaviza sua aparência geral e o torna
+    mais esteticamente agradável. */
+    border-radius: 10px; 
+    
+}
+
+/* Gradiente linear */
+.linear-gradient {
+
+    /* Define um gradiente linear como imagem de fundo, começando com a
+    cor #ff7e5f (um tom de rosa) e transitando para #feb47b (um tom de laranja) da
+    esquerda para a direita. Esta combinação cria um visual vibrante e energético. */
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b); 
+
+}
+
+/* Gradiente radial */
+.radial-gradient {
+
+    /* Aplica um gradiente radial do centro para fora em forma de
+    círculo, começando com #84fab0 (um tom de verde claro) e transitando
+    para #8fd3f4 (um tom de azul claro). Este padrão sugere uma expansão
+    suave das cores do centro para as bordas, conferindo uma aparência
+    dinâmica e fluida ao fundo do div. */
+    background-image: radial-gradient(circle, #84fab0, #8fd3f4); 
+    
+
+}
+
+
+/*
+Explicação dos Gradientes
+
+Gradiente Linear: linear-gradient(to right, #ff7e5f, #feb47b) define um 
+    gradiente que varia linearmente de uma cor a outra. Neste caso, ele 
+    varia do rosa (#ff7e5f) para o laranja (#feb47b). O parâmetro to right 
+    indica a direção do gradiente, que nesse caso é da esquerda para a 
+    direita. Você pode controlar a direção mudando esse valor para to left, 
+    to bottom, to top left, entre outros.
+
+Gradiente Radial: radial-gradient(circle, #84fab0, #8fd3f4) cria um 
+    gradiente radial que começa no centro e se expande em círculo. As cores 
+    começam no verde claro (#84fab0) e transicionam para o azul (#8fd3f4). 
+    O formato circle especifica que o gradiente deve se espalhar em 
+    forma de círculo, mas você também pode usar ellipse para uma forma 
+    elíptica.
+
+Visualização e Uso
+Quando você visualizar a página, verá dois blocos: um com gradiente 
+linear e outro com gradiente radial. Esses efeitos são frequentemente 
+usados para criar um visual dinâmico e atraente em botões, cabeçalhos, 
+seções de destaque e outros componentes interativos de uma interface. 
+Os gradientes não só adicionam um elemento visualmente interessante, mas 
+também podem ser usados para guiar o olhar do usuário para áreas 
+importantes da página.
+
+Este exemplo demonstra como aplicar e personalizar gradientes lineares e
+radiais, proporcionando uma poderosa ferramenta de design para enriquecer a 
+estética de sites sem a necessidade de imagens adicionais.
+*/

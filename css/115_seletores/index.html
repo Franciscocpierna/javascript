@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<!-- Define o tipo do documento como HTML5, que
+    é a versão mais recente do HTML. -->
+
+<html lang="pt"> 
+    <!-- Elemento raiz que contém todo o conteúdo da página; 'lang="pt"'
+        especifica que o idioma principal do documento é o português. -->
+
+<head> 
+    <!-- Contém metadados (dados sobre dados) que não são exibidos
+        diretamente na página web, mas são essenciais para a
+        configuração da página. -->
+
+    <meta charset="UTF-8"> 
+    <!-- Define o conjunto de caracteres usado no documento como UTF-8,
+        que inclui a maioria dos caracteres de todos os idiomas escritos e
+        é a prática recomendada. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A tag <meta> com o atributo name="viewport" controla o layout da 
+        página nos navegadores de dispositivos móveis.
+        
+        O atributo 'content' especifica como a página deve ser exibida:
+
+        1. 'width=device-width' instrui o navegador a configurar a largura da 
+            viewport (área visível da página web no navegador)
+            para corresponder à largura da tela do dispositivo. Isso é essencial para 
+            sites responsivos porque garante que o conteúdo 
+            será dimensionado corretamente para se ajustar à tela do dispositivo, sem 
+            necessidade de rolar horizontalmente.
+         
+            2. 'initial-scale=1.0' define o nível de zoom inicial quando a página é 
+            carregada pela primeira vez. O valor 1.0 configura o zoom
+            para 100%, o que significa que o zoom está definido para não ampliar nem 
+            reduzir a página inicialmente.
+             
+            Esses parâmetros juntos ajudam a garantir que o site seja visualizado de 
+            forma adequada em diferentes dispositivos, oferecendo
+            uma experiência de usuário consistente, independente do tamanho do 
+            dispositivo (como smartphones, tablets, laptops, etc.).
+            Sem essa meta tag, os sites não responsivos podem aparecer pequenos e 
+            inacessíveis em dispositivos móveis, obrigando os usuários
+            a usarem o zoom manual para ler o conteúdo ou interagir com a página. -->
+        
+    <title>Exemplo de Seletores CSS com Cores</title> 
+    <!-- Define o título da página, que aparece na aba do navegador. -->
+
+    <link rel="stylesheet" href="estilos.css"> 
+    <!-- Vincula uma folha de estilo CSS externa chamada 'estilos.css' à página,
+        que contém os estilos que definirão a aparência dos elementos HTML. -->
+
+</head>
+
+<body> 
+    <!-- Contém todos os conteúdos da página, como texto, imagens, links, etc.,
+        que são exibidos aos usuários. -->
+
+    <h1 id="main-title">Título com ID</h1> 
+    <!-- 'h1' é um cabeçalho de nível um, usado para o título principal
+        da página; 'id="main-title"' é um identificador único usado para
+        aplicar estilos específicos a este elemento através do CSS. -->
+    
+    <p>Este é um parágrafo comum.</p> 
+    <!-- 'p' define um parágrafo; este contém texto comum sem
+        estilização especial. -->
+
+    <p class="highlight">Este parágrafo tem classe 'highlight'.</p> 
+    <!-- Outro 'p', mas este tem uma classe 'highlight' que permite que
+        estilos específicos sejam aplicados a ele através do CSS. -->
+
+    <div> 
+        <!-- 'div' é um contêiner genérico para agrupamento de conteúdo;
+            não tem efeito na apresentação, a menos que estilos sejam aplicados. -->
+        
+        <p>Outro parágrafo comum dentro de uma div.</p> 
+        <!-- Parágrafo dentro de uma 'div', sem estilos aplicados. -->
+
+        <p class="highlight">Outro parágrafo com classe 'highlight', dentro de uma div.</p> 
+        <!-- Parágrafo dentro de uma 'div' com a classe 'highlight', o que o torna
+            sujeito aos estilos definidos para essa classe. -->
+
+    </div>
+    <footer> 
+        <!-- 'footer' é usado para definir o rodapé do documento ou
+            seção; geralmente contém informações de direitos autorais,
+            links de contato, etc. -->
+
+        <small>Texto pequeno no rodapé.</small> 
+        <!-- 'small' diminui a importância e o tamanho do texto;
+            neste caso, usado para texto de rodapé. -->
+
+    </footer>
+</body>
+</html>

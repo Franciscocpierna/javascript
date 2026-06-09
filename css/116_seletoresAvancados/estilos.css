@@ -1,0 +1,139 @@
+/*
+Seletores avançados (atributo, pseudo-classes, pseudo-elementos).
+
+Os seletores avançados em CSS permitem uma maior precisão e controle
+sobre a estilização dos elementos HTML. Vamos criar um exemplo que
+explora seletores de atributos, diversas pseudo-classes e pseudo-elementos.
+
+Este exemplo ajudará a entender como aplicar estilos de forma mais
+específica e dinâmica.
+*/
+
+/* Seletor de atributo para inputs de tipo 'password' */
+input[type="password"] {
+
+    /* Esta regra aplica uma borda sólida vermelha de 2 pixels
+    de espessura a todos os elementos <input> do tipo 'password'. 
+    O uso da cor vermelha pode servir como um alerta visual que
+    enfatiza a importância da segurança e privacidade dos dados
+    inseridos nesses campos. */
+    border: 2px solid red;       
+
+}
+
+/* Pseudo-classe :hover aplicada a qualquer elemento <p>
+com atributo 'title' */
+p[title]:hover {
+
+    /* Esta regra muda a cor de fundo para amarelo apenas
+    quando o cursor do mouse está sobre um parágrafo <p> que
+    possui um atributo 'title'. Essa mudança de cor ao passar o
+    mouse serve como um indicador visual de que o elemento pode
+    conter informações adicionais ou importantes, incentivando a interação. */
+    background-color: yellow;    
+
+}
+
+/* Pseudo-classe :first-child para estilizar o primeiro item de uma lista */
+ul li:first-child {
+
+    /* Esta regra aplica um peso de fonte em negrito ao primeiro
+    item (<li>) de qualquer lista (<ul>). Este destaque visual pode
+    ser usado para enfatizar a importância ou prioridade do primeiro
+    item na lista, tornando-o mais notável para os leitores. */
+    font-weight: bold;           
+
+}
+
+/* Pseudo-classe :last-child para estilizar o último item de uma lista */
+ul li:last-child {
+
+    /* Esta regra muda a cor do texto do último item (<li>) de qualquer
+    lista (<ul>) para azul. Isso pode ajudar a diferenciar o último item
+    dos outros, potencialmente indicando conclusão ou um resumo final dentro
+    de uma lista de opções ou instruções. */
+    color: blue;                 
+
+}
+
+/* Pseudo-elemento ::first-letter para estilizar a primeira letra do parágrafo */
+p::first-letter {
+
+    /* Esta regra aumenta o tamanho da primeira letra de cada
+    parágrafo (<p>) para 200% do tamanho padrão do texto. Isso cria um
+    efeito tipográfico conhecido como 'letra capitular', que é frequentemente
+    usado para adicionar um impacto visual e estilístico ao início de
+    novas seções de texto. */
+    font-size: 200%;             
+
+    /* Além disso, a primeira letra é colorida de verde, aumentando ainda
+    mais o destaque e o apelo visual, o que pode atrair a atenção do leitor
+    para o início do conteúdo do parágrafo. */
+    color: green;                
+
+}
+
+/* Pseudo-elemento ::after para adicionar conteúdo após um div */
+div.texto::after {
+
+    /* Esta regra adiciona texto diretamente após o conteúdo de
+    qualquer <div> com a classe 'texto'. Este método pode ser usado
+    para incluir automaticamente notas, disclaimers ou outras informações
+    suplementares sem modificar o HTML original. */
+    content: " adicionado via CSS.";
+    
+    /* O texto adicionado é colorido de roxo, o que proporciona um
+    contraste visual que pode separar visualmente o texto adicional do
+    conteúdo padrão do <div>, tornando claro que se trata de uma adição ou comentário. */
+    color: purple;               
+
+}
+
+/* Pseudo-elemento ::before em um <span> dentro de .texto */
+.texto span::before {
+
+    /* Esta regra insere o texto "Texto " antes do conteúdo de
+    qualquer <span> dentro de elementos com a classe 'texto'. Isso
+    pode ser útil para prefixar todos os <span> com um rótulo ou
+    introdução padrão, garantindo consistência em elementos semelhantes. */
+    content: "Texto ";           
+
+    /* O texto inserido é colorido de laranja, destacando-o do texto
+    subsequente no <span>, o que pode ajudar a chamar atenção para o
+    prefixo ou torná-lo visualmente distinto do resto do conteúdo. */
+    color: orange;               
+
+}
+
+
+/*
+Explicação do CSS com Seletores Avançados
+
+Seletor de Atributo (input[type="password"]): Seleciona elementos
+baseados no valor de um atributo específico. Neste caso, ele aplica uma
+borda vermelha a todos os campos de entrada (input) do tipo password.
+
+Pseudo-classes (:hover, :first-child, :last-child):
+
+:hover é usado para definir um estilo quando o usuário passa o mouse
+sobre o elemento.
+
+:first-child seleciona o primeiro filho de seu elemento pai, aplicando
+um estilo específico.
+
+:last-child seleciona o último filho de seu elemento pai, diferenciando-o
+dos demais.
+
+Pseudo-elementos (::first-letter, ::after, ::before):
+
+::first-letter aplica estilo à primeira letra de um bloco de texto.
+
+::after e ::before são usados para inserir conteúdo antes ou depois do
+conteúdo de um elemento. São úteis para adicionar ícones, citações, e
+outras decorações estilísticas sem alterar o HTML.
+
+Esse exemplo demonstra como os seletores avançados podem oferecer controle
+detalhado e criativo sobre a apresentação dos elementos de uma página web,
+permitindo ajustes específicos e a adição de efeitos interativos e
+estilísticos sem a necessidade de alterar a estrutura HTML subjacente.
+*/

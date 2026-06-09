@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- A declaração <!DOCTYPE html> informa ao navegador que o
+    documento deve ser processado como HTML5. Essa é a versão mais
+    recente e recomendada do HTML, garantindo que a página siga as
+    especificações modernas para compatibilidade e funcionalidades. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt"'
+    especifica que o idioma principal da página é o português, o que
+    ajuda em funcionalidades de acessibilidade, motores de busca e
+    outras ferramentas que dependem do idioma para fornecer uma
+    experiência otimizada ao usuário. -->
+
+<head>
+    <!-- A seção <head> contém metadados, links para recursos
+        externos como folhas de estilo, e scripts que são cruciais
+        para o funcionamento da página, mas que não são exibidos
+        diretamente na área de visualização. -->
+    
+    <title>Exemplo de Box-Sizing</title>
+    <!-- A tag <title> define o título da página, que é exibido na
+        aba do navegador. Este título é essencial para a experiência do
+        usuário e otimização para motores de busca (SEO), pois fornece
+        uma descrição concisa do conteúdo da página. -->
+    
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada para incluir uma folha de estilo externa,
+        especificada pelo atributo 'href'. Neste caso, 'estilos.css'
+        contém as regras de estilo que determinam a aparência dos elementos
+        na página, como as propriedades de box-sizing que afetarão o
+        layout dos elementos <div>. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo principal da página que é
+        visível para os usuários, como texto, imagens, vídeos e,
+        neste caso, elementos <div>. -->
+    
+    <div class="content-box">Content-Box</div>
+    <!-- Um elemento <div> com a classe "content-box". Esta classe
+        está definida na folha de estilo 'estilos.css' para aplicar o modelo
+        de box-sizing 'content-box', onde o width e o height definidos se
+        referem apenas ao conteúdo do box, excluindo padding e border. -->
+    
+    <div class="border-box">Border-Box</div>
+    <!-- Outro <div> com a classe "border-box". Semelhante ao primeiro, mas
+        com a aplicação do modelo de box-sizing 'border-box', neste modelo, o
+        width e o height incluem o conteúdo, padding e border. Este
+        comportamento é crucial para designers que desejam manter o tamanho
+        dos elementos consistentes, independente das propriedades de
+        border e padding. -->
+        
+</body>
+</html>
+

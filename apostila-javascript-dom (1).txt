@@ -1,0 +1,247 @@
+# 📘 Apostila JavaScript - DOM (Document Object Model)
+
+Autor: Grok (xAI)  
+Versão: 2026  
+Objetivo: Dominar a manipulação do DOM com JavaScript de forma prática e completa.
+
+## 1. Introdução ao DOM
+
+O **DOM (Document Object Model)** é uma representação em formato de árvore de toda a página HTML carregada no navegador. Ele permite que o JavaScript leia, modifique, adicione ou remova elementos da página de forma dinâmica.
+
+### Exemplo básico
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Exemplo DOM</title></head>
+<body>
+    <h1 id="titulo">Bem-vindo ao DOM!</h1>
+    <button id="meuBotao">Clique aqui</button>
+</body>
+</html>
+```
+
+```javascript
+console.log(document); // Objeto principal do DOM
+```
+
+### Estrutura em Árvore
+```
+Document
+└── <html>
+    ├── <head>
+    └── <body>
+        ├── <h1 id="titulo">
+        └── <button id="meuBotao">
+```
+
+## 2. Selecionando Elementos
+
+### 2.1 Por ID (getElementById) - Muito usado e rápido
+
+```javascript
+// Buscando por ID
+const titulo = document.getElementById('titulo');
+
+// Exemplo completo
+const titulo = document.getElementById('titulo');
+console.log(titulo.textContent); // Mostra o texto
+
+// Alterando o conteúdo
+titulo.textContent = "Título alterado com JavaScript!";
+
+// Exemplo prático com evento
+const botao = document.getElementById('meuBotao');
+botao.addEventListener('click', function() {
+    titulo.style.color = "blue";
+    titulo.textContent = "Você clicou no botão!";
+});
+```
+
+**Vantagens do getElementById:**
+- Mais rápido que querySelector
+- Retorna null se não encontrar
+- ID deve ser único na página
+
+### 2.2 Outros métodos de seleção
+
+```javascript
+// Por classe
+const cards = document.getElementsByClassName('card');
+
+// Por tag HTML
+const paragrafos = document.getElementsByTagName('p');
+
+// CSS Selector (recomendado na maioria dos casos)
+const primeiroCard = document.querySelector('.card');           // apenas o primeiro
+const todosCards = document.querySelectorAll('.card');          // todos os cards
+
+// Exemplos avançados de querySelector
+const inputEmail = document.querySelector('input[type="email"]');
+const itemAtivo = document.querySelector('.menu .item.ativo');
+const ultimoParagrafo = document.querySelector('p:last-child');
+```
+
+**Comparação:**
+- `getElementById()` → rápido, retorna único elemento
+- `querySelector()` → flexível, retorna o primeiro
+- `querySelectorAll()` → retorna NodeList (melhor para loops)
+
+## 3. Alterando Conteúdo
+
+```javascript
+// Alterar texto (seguro)
+elemento.textContent = "Novo texto simples";
+
+// Alterar HTML (cuidado com segurança)
+elemento.innerHTML = "<strong>Texto em negrito</strong> <em>itálico</em>";
+
+// Exemplos práticos
+const titulo = document.getElementById('titulo');
+titulo.textContent = "Novo Título da Página";
+
+const input = document.getElementById('meuInput');
+input.value = "Valor preenchido automaticamente";
+
+// Imagens e links
+const imagem = document.getElementById('foto');
+imagem.src = "nova-imagem.jpg";
+imagem.alt = "Descrição atualizada";
+
+const link = document.getElementById('meuLink');
+link.href = "https://google.com";
+link.textContent = "Ir para Google";
+```
+
+## 4. Manipulando Estilos e Classes
+
+```javascript
+// Estilos inline
+const titulo = document.getElementById('titulo');
+titulo.style.color = "red";
+titulo.style.backgroundColor = "#f4f4f4";
+titulo.style.fontSize = "2rem";
+titulo.style.padding = "20px";
+
+// Melhor prática: usar classList
+titulo.classList.add('destaque', 'ativo');
+titulo.classList.remove('ativo');
+titulo.classList.toggle('escuro'); // alterna a classe
+
+if (titulo.classList.contains('destaque')) {
+    console.log("O título tem a classe destaque");
+}
+
+// Exemplo prático: alternar tema
+const botaoTema = document.getElementById('btnTema');
+botaoTema.addEventListener('click', () => {
+    document.body.classList.toggle('modo-escuro');
+});
+```
+
+## 5. Criando Novos Elementos
+
+```javascript
+// Criando um novo elemento
+const novoDiv = document.createElement('div');
+novoDiv.textContent = "Este elemento foi criado com JavaScript";
+novoDiv.classList.add('box', 'destaque');
+novoDiv.id = "novo-elemento";
+
+// Adicionando ao DOM
+document.body.append(novoDiv);                    // no final
+document.body.prepend(novoDiv);                   // no início
+
+// Dentro de um container específico
+const container = document.getElementById('container');
+container.appendChild(novoDiv);
+
+// Exemplo prático: lista dinâmica
+function adicionarItem(texto) {
+    const li = document.createElement('li');
+    li.textContent = texto;
+    document.getElementById('minhaLista').appendChild(li);
+}
+```
+
+## 6. Removendo Elementos
+
+elemento.remove();
+elemento.parentNode.removeChild(elemento);
+
+## 7. Navegando entre Elementos
+
+elemento.parentElement;
+elemento.children;
+elemento.firstElementChild;
+elemento.nextElementSibling;
+
+## 8. Atributos
+
+elemento.getAttribute('id');
+elemento.setAttribute('data-id', '12345');
+elemento.dataset.id = '12345';
+
+## 9. Eventos
+
+botao.addEventListener('click', () => {
+    console.log('Clicado!');
+});
+
+elemento.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+});
+
+## 10. Formulários
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const dados = new FormData(form);
+});
+
+## 11. Trabalhando com Múltiplos Elementos
+
+document.querySelectorAll('.item').forEach(item => {
+    item.classList.add('processado');
+});
+
+## 12. Boas Práticas e Dicas Avançadas
+
+- Sempre cacheie seleções: `const btn = document.getElementById('btn');`
+- Prefira `classList` em vez de `style`
+- Evite `innerHTML` para dados de usuário (risco XSS)
+- Use `DocumentFragment` para inserir muitos elementos de uma vez
+- Delegação de eventos para elementos dinâmicos
+
+**Exemplo de DocumentFragment:**
+```javascript
+const fragment = document.createDocumentFragment();
+for (let i = 1; i <= 100; i++) {
+    const p = document.createElement('p');
+    p.textContent = `Item ${i}`;
+    fragment.appendChild(p);
+}
+document.getElementById('container').appendChild(fragment);
+```
+
+## 13. Cheat Sheet Rápido
+
+| Operação                    | Código Exemplo                              |
+|----------------------------|---------------------------------------------|
+| Buscar por ID              | `document.getElementById('id')`             |
+| Buscar com CSS             | `document.querySelector('.classe')`         |
+| Todos os elementos         | `document.querySelectorAll('div')`          |
+| Alterar texto              | `el.textContent = "novo"`                   |
+| Alterar HTML               | `el.innerHTML = "<b>negrito</b>"`           |
+| Adicionar classe           | `el.classList.add('nova')`                  |
+| Criar elemento             | `document.createElement('div')`             |
+| Adicionar ao DOM           | `pai.appendChild(filho)`                    |
+| Remover elemento           | `el.remove()`                               |
+| Evento                     | `el.addEventListener('click', fn)`          |
+
+---
+
+**Fim da Apostila JavaScript - DOM**
+
+Agora com muito mais exemplos práticos, especialmente de busca por ID e aplicações reais.
+Espero que ajude no seu aprendizado! 🚀

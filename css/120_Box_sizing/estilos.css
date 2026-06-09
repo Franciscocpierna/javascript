@@ -1,0 +1,112 @@
+/*
+Propriedades box-sizing.
+
+A propriedade box-sizing em CSS é extremamente útil para controlar o
+modelo de caixa de elementos HTML. Essencialmente, ela altera a forma
+como a largura e a altura de um elemento são calculadas. Há basicamente
+dois valores que box-sizing pode receber: content-box e border-box. 
+
+Vamos explorar esses valores e como eles afetam o dimensionamento dos
+elementos com um exemplo prático e completo.
+*/
+
+/* Estilo básico para ambos os divs */
+div {
+
+    /* Largura fixa: Define a largura de todos os elementos <div> como
+    200 pixels. Isso garante que todos os divs terão a mesma largura,
+    independentemente do conteúdo interno. */
+    width: 200px;                 
+
+    /* Altura fixa: Estabelece a altura de todos os elementos <div> em 200
+    pixels, mantendo uma forma quadrada para cada <div>. */
+    height: 200px;                
+
+    /* Preenchimento interno: Aplica um espaço de 30 pixels entre o
+    conteúdo do <div> e suas bordas, aumentando o espaço interno e
+    reduzindo a área visível do conteúdo central. */
+    padding: 30px;                
+
+    /* Borda sólida preta: Adiciona uma borda preta sólida de 10
+    pixels em torno de cada <div>, claramente delimitando os
+    elementos na página. */
+    border: 10px solid black;    
+    
+    /* Margem externa: Define um espaço de 20 pixels ao redor de
+    cada <div> para separá-los de outros elementos ou do container
+    da página, ajudando a evitar a superposição e a manter
+    um layout limpo. */
+    margin: 20px;                 
+
+    /* Cor de fundo: Define a cor de fundo de cada <div> como
+    azul claro, tornando-os visualmente distintos e atraentes na página. */
+    background-color: lightblue; 
+    
+    /* Centralização do texto: Alinha todo o texto dentro dos
+    divs ao centro horizontalmente, facilitando a leitura e
+    melhorando o aspecto estético. */
+    text-align: center;           
+
+    /* Altura da linha para centralizar verticalmente o
+    texto: Configura a altura da linha igual à altura do <div> para
+    que qualquer texto dentro seja centralizado verticalmente,
+    criando um alinhamento uniforme e atraente. */
+    line-height: 200px;           
+
+}
+
+/* Aplicação de box-sizing */
+.content-box {
+
+    /* O tamanho (width/height) inclui apenas o conteúdo: Com
+    esta configuração, as dimensões (largura e altura) especificadas
+    aplicam-se somente ao conteúdo do elemento, excluindo o padding e
+    a borda. Portanto, o tamanho total do elemento será maior do que o
+    especificado devido ao acréscimo do padding e da borda. */
+    box-sizing: content-box;      
+
+}
+
+.border-box {
+
+    /* O tamanho (width/height) inclui conteúdo, padding e
+    border: Neste modelo, as dimensões de largura e altura incluem o
+    conteúdo, o padding e a borda. Isso significa que o tamanho
+    total do elemento, conforme definido por width e height, será
+    exatamente o especificado, com o padding e a borda incluídos
+    dentro dessa medida, não adicionando tamanho extra ao elemento. */
+    box-sizing: border-box;       
+}
+
+/*
+Explicação do CSS
+
+Content-Box: Este é o valor padrão para box-sizing em CSS. Com box-sizing: content-box;,
+    as propriedades width e height especificam o tamanho do conteúdo do 
+    elemento. O padding e a borda são adicionados ao tamanho final do 
+    elemento, o que significa que o tamanho total do elemento será maior 
+    que 200x200 pixels devido ao padding de 30px em todos os lados e a 
+    borda de 10px.
+
+Border-Box: Com box-sizing: border-box;, as propriedades width e height 
+    incluem o conteúdo, o padding e a borda. Isso significa que o tamanho 
+    total do elemento permanecerá em 200x200 pixels, com o conteúdo sendo 
+    reduzido para acomodar o padding e a borda. Esta é uma opção muito útil 
+    quando você quer ter controle total sobre as dimensões do elemento, 
+    independentemente do padding ou da borda.
+
+
+Visualização e Utilização
+Na página resultante, os dois divs serão renderizados lado a lado. O div
+    com content-box aparecerá maior que 200x200 pixels devido ao acréscimo do 
+    padding e da borda às suas dimensões. Por outro lado, o div com border-box
+    manterá as dimensões de 200x200 pixels, com o espaço interno ajustado
+    para incluir o padding e a borda.
+
+Aplicação Prática
+A propriedade box-sizing é particularmente útil em layouts responsivos e
+    complexos onde o controle preciso sobre as dimensões dos elementos é
+    necessário. Ela permite que desenvolvedores construam layouts que se 
+    adaptam melhor aos diferentes tamanhos de tela sem que haja surpresas 
+    no dimensionamento dos elementos devido a paddings e bordas.
+*/

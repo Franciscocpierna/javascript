@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- A declaração <!DOCTYPE html> indica que este documento é HTML5,
+    a versão mais atual e suportada do HTML. Esta declaração assegura
+    que o navegador trate o documento de acordo com as especificações
+    do HTML5, garantindo uma melhor compatibilidade e performance. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt"'
+    especifica que o idioma principal do conteúdo da página é português.
+    Isso é importante para acessibilidade, SEO e funcionalidades de
+    internacionalização, como formatação de data, hora e números. -->
+
+<head>
+    <!-- A seção <head> contém metadados e referências a recursos
+        externos, essenciais para a configuração da página, mas que
+        não são visíveis diretamente na interface. -->
+
+    <title>Exemplo de Float e Clear em CSS</title>
+    <!-- A tag <title> define o título da página que é exibido na
+        aba do navegador. Este título fornece uma visão geral do
+        conteúdo da página, essencial para a experiência do usuário e
+        otimização de motores de busca. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada para vincular uma folha de estilo externa,
+        neste caso 'estilos.css', ao documento HTML. O arquivo CSS contém
+        regras de estilo que definem a apresentação dos elementos na página,
+        incluindo as propriedades de layout como 'float' e 'clear'. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todos os elementos visíveis ao usuário na
+        página, como texto, imagens, vídeos, e outros controles interativos. -->
+
+    <div class="container">
+        <!-- Um <div> com a classe "container", que serve como contêiner
+            para outros elementos. Normalmente, ele é estilizado para
+            gerenciar o layout dos elementos filhos, incluindo o
+            posicionamento e alinhamento. -->
+
+        <div class="float-left">Caixa 1 (flutuante à esquerda)</div>
+        <!-- Um <div> com a classe "float-left". Este elemento é estilizado
+            para flutuar à esquerda, o que significa que ele se alinha à
+            margem esquerda do seu contêiner, e o texto e outros elementos
+            fluirão ao seu redor pelo lado direito. -->
+
+        <div class="float-right">Caixa 2 (flutuar à direita)</div>
+        <!-- Um <div> com a classe "float-right". Este elemento é
+            estilizado para flutuar à direita, alinhando-se à margem
+            direita do contêiner, com o texto e outros elementos fluindo
+            ao seu redor pelo lado esquerdo. -->
+
+        <div class="clear-both">Texto após Floats (Limpar Ambos)</div>
+        <!-- Um <div> com a classe "clear-both". Este elemento é usado
+            para 'limpar' os efeitos dos floats anteriores, garantindo que
+            ele apareça após quaisquer elementos flutuantes dentro do
+            contêiner, sem que haja texto ou outros elementos fluindo ao redor dele. -->
+
+        <p>Este é um exemplo de texto que flui ao redor dos elementos flutuantes, preenchendo todo o espaço disponível ao redor das caixas flutuantes. Este parágrafo continua fluindo e preenchendo o espaço, demonstrando como o conteúdo se adapta ao redor dos floats.</p>
+        <!-- Um parágrafo que explica visualmente como o texto se comporta em
+            relação aos elementos flutuantes. O texto flui ao redor das caixas
+            flutuantes, preenchendo o espaço horizontalmente conforme disponível,
+            mostrando o efeito prático da propriedade CSS 'float' em um layout
+            de página real. -->
+
+    </div>
+</body>
+</html>

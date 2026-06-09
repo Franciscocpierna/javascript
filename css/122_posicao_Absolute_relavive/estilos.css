@@ -1,0 +1,171 @@
+/*
+Posicionamento (relative, absolute, fixed, sticky)
+
+O posicionamento de elementos em CSS permite que você controle como um 
+elemento é posicionado na tela, modificando seu comportamento padrão 
+dentro do fluxo normal do documento. Existem vários tipos de 
+posicionamento: relative, absolute, fixed, e sticky. Cada um tem seu 
+propósito e comportamento específico.
+
+Vamos explorar esses tipos de posicionamento com um exemplo prático para 
+entender como eles funcionam e quando utilizá-los.
+*/
+
+/* Posicionamento relativo */
+.relative {
+
+    /* O elemento é posicionado relativo à sua posição normal na
+    página. Isso permite ajustar a posição do elemento com as
+    propriedades top, right, bottom, e left sem afetar a
+    disposição dos elementos adjacentes no fluxo normal do documento. */
+    position: relative; 
+
+    /* Define a cor de fundo do elemento como azul claro. */
+    background-color: lightblue;
+    
+    /* Alinha o texto dentro do elemento ao centro. */
+    text-align: center;
+    
+    /* Adiciona um preenchimento de 20 pixels em todos os lados
+    dentro do elemento, aumentando o espaço entre o conteúdo
+    interno e as bordas do elemento. */
+    padding: 20px; 
+
+}
+
+/* Posicionamento absoluto */
+.absolute {
+
+    /* O elemento é removido do fluxo normal do documento e nenhum
+    espaço é criado para o elemento. Ele é posicionado em relação
+    ao seu ancestral mais próximo não estático (neste caso, o mais
+    próximo com position:relative). */
+    position: absolute; 
+
+    /* Posiciona o elemento a 40 pixels do topo de seu contêiner relativo. */
+    top: 40px; 
+
+    /* Posiciona o elemento a 10 pixels da direita de seu contêiner relativo. */
+    right: 10px; 
+
+    /* Define a cor de fundo do elemento como coral claro. */
+    background-color: lightcoral; 
+
+    /* Adiciona um preenchimento de 10 pixels em todos os lados dentro do elemento. */
+    padding: 10px; 
+
+}
+
+/* Posicionamento fixo */
+.fixed {
+
+    /* O elemento é posicionado em relação à janela de visualização
+    do navegador, o que significa que ele permanece no lugar mesmo
+    quando a página é rolada. */
+    position: fixed; 
+
+    /* Posiciona o elemento a 10 pixels do topo da janela de visualização. */
+    top: 10px; 
+
+    /* Posiciona o elemento a 10 pixels da esquerda da janela de visualização. */
+    left: 10px; 
+
+    /* Define a cor de fundo do elemento como verde claro. */
+    background-color: lightgreen; 
+
+    /* Adiciona um preenchimento de 10 pixels em todos os lados dentro do elemento. */
+    padding: 10px; 
+
+    /* Define a ordem de empilhamento do elemento como 1000, o que pode
+    ajudar a garantir que o elemento apareça acima de outros elementos na página. */
+    z-index: 1000; 
+
+}
+
+/* Posicionamento grudento */
+.sticky {
+
+    /* O elemento é tratado como relativo até que seu ponto de deslocamento
+    seja atingido na janela de visualização, momento em que ele se torna fixo. */
+    position: sticky; 
+
+    /* Define o deslocamento superior como 0, o que faz o elemento grudar no
+    topo da janela de visualização quando você rola a página até ele. */
+    top: 0; 
+
+    /* Define a cor de fundo do elemento como amarelo claro. */
+    background-color: lightyellow; 
+
+    /* Adiciona um preenchimento de 10 pixels em todos os
+    lados dentro do elemento. */
+    padding: 10px; 
+
+    /* Alinha o texto dentro do elemento ao centro. */
+    text-align: center;
+    
+    /* Define a ordem de empilhamento do elemento como 500, o que ajuda a
+    controlar sua visibilidade relativa a outros elementos. */
+    z-index: 500; 
+
+}
+
+/* Conteúdo longo */
+.long-content {
+
+    /* Define a cor de fundo do elemento como cinza claro. */
+    background-color: #f0f0f0; 
+
+    /* Adiciona um preenchimento de 10 pixels em todos os lados dentro do elemento. */
+    padding: 10px; 
+
+    /* Adiciona uma margem vertical de 20 pixels acima e abaixo do
+    elemento, separando-o de outros elementos na página. */
+    margin: 20px 0; 
+
+}
+
+/* Rodapé */
+.footer {
+
+    /* Define a cor de fundo do rodapé como cinza claro. */
+    background-color: #ddd;
+    
+    /* Alinha o texto dentro do rodapé ao centro. */
+    text-align: center;
+    
+    /* Adiciona um preenchimento de 10 pixels em todos os lados
+    dentro do rodapé, aumentando o conforto visual e o espaço para o conteúdo. */
+    padding: 10px; 
+
+}
+
+/*
+Explicação do CSS
+
+Relative: O elemento com position: relative; é posicionado relativo à 
+    sua posição original no fluxo do documento, sem afetar a posição dos 
+    elementos ao redor. Alterações em suas propriedades top, right, 
+    bottom, e left o moverão em relação a essa posição original.
+
+Absolute: O elemento com position: absolute; é removido do fluxo do 
+    documento e posicionado em relação ao seu ancestral posicionado 
+    mais próximo (neste caso, o .relative). Ele não ocupa espaço no 
+    documento.
+
+Fixed: O elemento com position: fixed; é fixado em relação à viewport, o 
+    que significa que ele permanecerá no lugar mesmo quando a página for 
+    rolada.
+
+Sticky: O elemento com position: sticky; é tratado como relative até 
+    que seu bloco de posicionamento atinja um determinado ponto dentro 
+    da viewport (neste caso, top: 0), momento em que se comporta como 
+    fixed, grudando na posição especificada.
+
+Visualização e Comportamento
+Quando você visualizar a página, notará que o elemento .fixed sempre 
+    fica visível, enquanto o .sticky começa a se comportar como fixed 
+    quando você rola a página até ele. O .absolute estará posicionado 
+    dentro do .relative, que é o seu contêiner relativo. Esses comportamentos 
+    mostram a flexibilidade do CSS para controlar o layout e a interatividade 
+    de uma página de maneiras dinâmicas e responsivas.
+*/

@@ -1,0 +1,134 @@
+/*
+Float e Clear
+
+As propriedades float e clear são usadas em CSS para controlar o 
+posicionamento e o fluxo dos elementos na página, influenciando como 
+os elementos são alinhados e como eles interagem entre si. Float é usado 
+para fazer com que um elemento seja empurrado para a esquerda ou 
+direita, permitindo que outros conteúdos fluam ao redor dele. Clear, por 
+sua vez, é utilizado para controlar o fluxo de elementos ao redor de 
+elementos flutuantes, especificando de que lado não deve haver elementos 
+flutuantes.
+
+Vamos criar um exemplo prático para demonstrar como usar float e clear 
+para criar um layout simples.
+*/
+
+/* Estilo básico para o container */
+.container {
+
+    /* Define a largura do container para ocupar 100% da largura do seu
+    elemento pai. Isso garante que o container se estenda horizontalmente
+    por toda a largura disponível. */
+    width: 100%;                 
+
+    /* Aplica uma borda sólida de 1 pixel na cor preta (#000) ao redor
+    do container. A borda ajuda a visualizar os limites do container na página. */
+    border: 1px solid #000;     
+    
+    /* Configura a propriedade overflow para 'auto', o que significa que o
+    navegador irá gerenciar a exibição de barras de rolagem quando o
+    conteúdo exceder as dimensões do container. Isso também tem o efeito
+    de fazer com que o container englobe completamente os elementos
+    flutuantes ('floats') dentro dele, evitando que eles 'vazem' para
+    fora do seu contexto. */
+    overflow: auto;              
+
+}
+
+/* Float à esquerda */
+.float-left {
+
+    /* Faz com que o elemento seja flutuado para a esquerda. Isso
+    significa que ele será alinhado à esquerda do container, e o texto
+    e outros elementos fluirão ao redor dele pelo lado direito. */
+    float: left;                 
+
+    /* Define uma largura fixa de 100 pixels para o elemento. */
+    width: 100px;                
+
+    /* Define uma altura fixa de 100 pixels para o elemento. */
+    height: 100px;               
+
+    /* Aplica uma cor de fundo azul claro ao elemento. Isso facilita a
+    visualização do elemento na página e destaca sua posição e dimensão. */
+    background-color: lightblue;
+    
+    /* Aplica uma margem de 10 pixels em todos os lados do elemento.
+    Isso cria um espaço entre o elemento flutuante e outros elementos
+    ou bordas do container. */
+    margin: 10px;    
+
+}
+
+/* Float à direita */
+.float-right {
+
+    /* Faz com que o elemento seja flutuado para a direita. Isso
+    significa que ele será alinhado à direita do container, e o
+    texto e outros elementos fluirão ao redor dele pelo lado esquerdo. */
+    float: right;                
+
+    /* Define uma largura fixa de 100 pixels para o elemento,
+    garantindo consistência no tamanho. */
+    width: 100px;                
+
+    /* Define uma altura fixa de 100 pixels para o elemento. */
+    height: 100px;               
+
+    /* Aplica uma cor de fundo coral claro ao elemento. A cor ajuda a
+    diferenciar visualmente este elemento de outros na página. */
+    background-color: lightcoral;
+    
+    /* Aplica uma margem de 10 pixels em todos os lados do elemento,
+    proporcionando espaço suficiente ao redor para evitar
+    sobreposições indesejadas. */
+    margin: 10px;                
+
+}
+
+/* Clear both */
+.clear-both {
+
+    /* Remove o efeito de flutuação de ambos os lados. Isso é
+    útil para elementos que devem ser posicionados abaixo de
+    elementos flutuantes sem serem afetados por eles. */
+    clear: both;                 
+
+    /* Aplica uma cor de fundo verde claro, útil para visualizar o
+    elemento e entender claramente sua posição relativa a elementos
+    flutuantes anteriores. */
+    background-color: lightgreen;
+    
+    /* Aplica um preenchimento de 10 pixels em todos os lados do
+    elemento, aumentando o espaço interno disponível para o conteúdo
+    do elemento e melhorando a legibilidade. */
+    padding: 10px;               
+
+}
+
+
+/*
+Explicação das Propriedades
+
+Float: A propriedade float faz com que as caixas float-left e float-right 
+sejam empurradas para a esquerda e direita, respectivamente. O texto e 
+outros elementos subsequentes fluem ao redor destes elementos flutuantes.
+
+Clear: A propriedade clear na caixa clear-both é usada para evitar que 
+essa caixa se posicione ao lado de elementos flutuantes. Ao definir 
+clear: both;, garantimos que este elemento apareça abaixo de qualquer 
+elemento flutuante anterior, independentemente de eles flutuarem à 
+esquerda ou à direita.
+
+Visualização
+No layout final, as duas primeiras caixas estarão alinhadas a esquerda e 
+a direita do topo do container, respectivamente. O texto do parágrafo 
+fluirá ao redor desses elementos. A caixa clear-both aparecerá abaixo dos 
+elementos flutuantes, e não ao lado deles, criando uma clara separação e 
+mantendo a estrutura organizada.
+
+Este exemplo ilustra o impacto que float e clear podem ter no layout de 
+uma página, mostrando como elementos podem ser posicionados de forma 
+dinâmica e como o fluxo do documento pode ser controlado.
+*/
