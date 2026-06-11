@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento. Esta linha indica
+     que o documento é HTML5, ajudando o navegador a 
+     renderizar a página corretamente. -->
+
+<html lang="pt">
+<!-- A tag <html> envolve todo o conteúdo da página. O atributo 'lang' 
+    especifica o idioma do conteúdo, que é português neste caso. -->
+
+<head>
+    <!-- A tag <head> contém metadados que não são exibidos diretamente
+         na página web, mas são importantes para o navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres usado no documento, que é UTF-8. 
+        Isso ajuda a exibir corretamente caracteres especiais e acentos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A meta tag 'viewport' controla o layout em dispositivos móveis. 
+         'width=device-width' faz com que a largura da página
+                 seja igual à largura do dispositivo.
+         'initial-scale=1.0' define o nível inicial de zoom
+                 quando a página é carregada pela primeira vez. -->
+
+    <title>Trocador de Cores</title>
+    <!-- Define o título da página, que aparece na aba do navegador. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para vincular um arquivo CSS externo, 
+        que contém os estilos da página. O atributo 'href' especifica o 
+        caminho para o arquivo CSS. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo da página que é 
+        visível para o usuário. -->
+
+    <div class="trocador-de-cores">
+        <!-- Um <div> define uma seção ou um divisor na página. 
+            A classe 'trocador-de-cores' é usada para aplicar estilos 
+            específicos a esta seção. -->
+
+        <h2>Trocador de Cores</h2>
+        <!-- A tag <h2> é usada para títulos de segundo nível. 
+            Neste caso, define o título da seção. -->
+
+        <button id="mudarCor">Mudar Cor</button>
+        <!-- A tag <button> cria um botão clicável. O atributo 'id' dá 
+            ao botão um identificador único, 'mudarCor', que pode ser 
+            usado em CSS ou JavaScript. -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> é usada para carregar um arquivo JavaScript 
+        externo, que contém lógica de programação para a página. O atributo 'src' 
+        especifica o caminho para o arquivo JavaScript. -->
+        
+</body>
+</html>
