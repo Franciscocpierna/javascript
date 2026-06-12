@@ -1,0 +1,991 @@
+/* Configurações Básicas */
+.contenedor-imagem {
+
+    position: relative;
+    /* A propriedade 'position: relative;' define que a posição 
+            do elemento será relativa.
+       Isso permite que você posicione elementos filhos (como a 
+            descrição oculta) em relação a este contêiner. */
+    
+    display: inline-block;
+    /* 'display: inline-block;' faz com que o elemento se comporte como um bloco, 
+       mas é disposto em linha com outros elementos. Isso permite que várias imagens 
+       se alinhem lado a lado, desde que haja espaço horizontal suficiente. */
+    
+    margin: 20px;
+    /* 'margin: 20px;' adiciona espaço ao redor do elemento, 
+            separando-o de outros elementos 
+       em todos os lados por 20 pixels. Isso evita que as 
+            imagens fiquem muito juntas. */
+    
+    overflow: hidden;
+    /* 'overflow: hidden;' garante que qualquer conteúdo que ultrapasse
+             os limites deste contêiner seja cortado.
+       Isso é útil para manter os efeitos de hover ou animações dentro 
+            dos limites do contêiner da imagem. */
+    
+    border-radius: 10px;
+    /* 'border-radius: 10px;' arredonda os cantos do contêiner da 
+            imagem, dando-lhe bordas suaves de 10 pixels.
+       Isso proporciona um visual mais moderno e amigável. */
+
+}
+
+
+.contenedor-imagem img {
+    width: 300px;
+    /* 'width: 300px;' define a largura de cada imagem em 300 
+            pixels, garantindo que todas as imagens
+       tenham a mesma largura e sejam exibidas de forma uniforme. */
+    
+    height: auto;
+    /* 'height: auto;' ajusta a altura da imagem automaticamente 
+            com base na sua largura original
+       e na proporção da imagem, mantendo a proporção aspecto natural da imagem. */
+    
+    transition: all 0.5s ease;
+    /* 'transition: all 0.5s ease;' aplica uma transição suave a 
+            todas as propriedades modificáveis (como opacidade,
+       cor de fundo) ao longo de 0.5 segundos. O valor 'ease' especifica 
+            um tipo de temporização que começa lento,
+       acelera no meio e termina lentamente. Isso é comumente usado para 
+            suavizar efeitos de hover ou foco. */
+}
+
+/*
+Este trecho de código CSS é essencial para criar uma galeria de imagens com 
+um visual estético e interativo. As propriedades usadas não só ajustam o 
+layout e o espaçamento das imagens mas também adicionam suavidade às transições 
+visuais, melhorando a experiência do usuário ao interagir com as imagens na página.
+*/
+
+
+/* CSS para Descrição Oculta */
+.descricao-oculta {
+
+    position: absolute;
+    /* 'position: absolute;' posiciona o elemento de forma absoluta
+             em relação ao seu contêiner mais próximo 
+       com posição não estática, que é o '.contenedor-imagem' 
+            com 'position: relative;'. */
+
+    width: 100%;
+    /* 'width: 100%;' faz com que a descrição ocupe toda a 
+            largura do contêiner da imagem. */
+
+    bottom: 0;
+    /* 'bottom: 0;' posiciona a descrição na parte inferior do 
+            contêiner da imagem. */
+
+    background-color: rgba(0,0,0,0.7);
+    /* 'background-color: rgba(0,0,0,0.7);' define uma cor de 
+            fundo preta com opacidade de 70%, 
+       permitindo que o texto seja mais visível contra a imagem de fundo. */
+
+    color: white;
+    /* 'color: white;' define a cor do texto da descrição para branco, 
+            garantindo que ele se destaque contra o fundo escuro. */
+
+    text-align: center;
+    /* 'text-align: center;' centraliza o texto dentro da descrição. */
+
+    padding: 10px 0;
+    /* 'padding: 10px 0;' adiciona 10 pixels de preenchimento na 
+            parte superior e inferior da descrição, 
+       mas nenhum na esquerda ou direita, ajudando a centralizar 
+            visualmente o texto verticalmente. */
+
+    opacity: 0;
+    /* 'opacity: 0;' torna a descrição totalmente transparente inicialmente. */
+
+    transition: opacity 0.5s ease;
+    /* 'transition: opacity 0.5s ease;' suaviza a mudança de 
+            opacidade ao longo de meio segundo,
+       usando um efeito de 'ease' para iniciar e terminar a transição suavemente. */
+
+}
+
+.contenedor-imagem:hover .descricao-oculta {
+    opacity: 1;
+    /* Ao passar o mouse sobre o '.contenedor-imagem', a opacidade 
+            da '.descricao-oculta' muda para 1 (totalmente visível). */
+}
+
+/* CSS para Efeito de Zoom com Sombra
+
+Efeito de Zoom com Sombra */
+/* Efeito de Zoom com Sombra */
+#imagem1:hover img {
+
+    transform: scale(1.15) rotateX(5deg) rotateY(5deg);
+    /* 'transform: scale(1.15) rotateX(5deg) rotateY(5deg);' aumenta o 
+            tamanho da imagem para 115% do seu tamanho original e
+            adiciona uma leve rotação tanto no eixo X quanto no Y, criando um 
+            efeito tridimensional sutil. */
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    /* 'box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);' adiciona uma sombra 
+        profunda e dispersa ao redor da imagem,
+        aumentando a ilusão de profundidade e destacando a imagem 
+        durante o efeito de hover. */
+
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    /* 'transition: transform 0.5s ease, box-shadow 0.5s ease;' aplica 
+        uma transição suave tanto para a transformação quanto para a sombra,
+        garantindo que as mudanças sejam visivelmente agradáveis e não abruptas. */
+}
+
+/*
+Esses trechos de código CSS explicam como criar interatividade 
+visual em uma galeria de imagens, utilizando efeitos de hover que 
+incluem mudanças de opacidade, transformações e sombras, proporcionando 
+uma experiência rica e dinâmica ao usuário.
+*/
+
+/*---------------------------*/
+
+
+/* Rotação 3D */
+#imagem2:hover img {
+
+    transform: rotateY(180deg);
+    /* 'transform: rotateY(180deg);' aplica uma transformação 
+        3D no eixo Y (vertical),
+        rotacionando a imagem em 180 graus. Isso efetivamente gira a 
+        imagem ao redor de seu eixo central vertical,
+        fazendo com que pareça estar virando de frente para trás. 
+        Essa rotação ocorre quando o usuário passa o mouse sobre a imagem. */
+}
+
+
+/*---------------------------*/
+
+
+/* Efeito de Pulsar */
+#imagem3:hover img {
+
+    animation: heartBeat 0.8s infinite;
+    /* 'animation: heartBeat 0.8s infinite;' atribui a 
+        animação chamada 'heartBeat' à imagem,
+        com a duração de 0.8 segundos por ciclo, 
+        repetindo infinitamente ('infinite').
+       Isso faz com que o efeito de pulsar seja contínuo 
+       enquanto o mouse estiver sobre a imagem. */
+
+}
+
+@keyframes heartBeat {
+
+    /* '@keyframes heartBeat' define os quadros-chave 
+        da animação 'heartBeat', 
+        especificando como as propriedades da imagem devem se 
+        alterar durante o ciclo de animação. */
+    
+    0%, 100% {
+        transform: scale(1);
+        filter: brightness(100%);
+        /* No início (0%) e no fim (100%) da animação, a imagem retorna 
+            ao seu tamanho original (scale(1))
+            e a sua luminosidade original (brightness(100%)). */
+    }
+    25%, 75% {
+        transform: scale(1.2);
+        filter: brightness(120%);
+        /* Aos 25% e 75% da animação, a imagem cresce para 120% do 
+            seu tamanho original (scale(1.2)),
+            e sua luminosidade é aumentada para 120% (brightness(120%)). 
+            Isso cria um efeito de 'batida' ou 'pulso',
+            como se a imagem estivesse batendo como um coração. */
+    }
+    50% {
+        transform: scale(1.1);
+        filter: brightness(110%);
+        /* Aos 50% da animação, a imagem cresce para 110% do 
+            seu tamanho original (scale(1.1)),
+            e sua luminosidade é levemente aumentada para 110% (brightness(110%)). 
+            Isso ajuda a suavizar a transição
+            entre os estágios de crescimento e retorno ao tamanho normal, 
+            contribuindo para a fluidez do efeito pulsante. */
+    }
+}
+
+/*
+Essas configurações CSS criam efeitos visuais impactantes para 
+a galeria de imagens. A rotação 3D oferece uma transformação visual 
+dramática, enquanto o efeito de pulsar cria uma interação contínua 
+que pode chamar a atenção do usuário. Tais efeitos são úteis para destacar 
+elementos específicos em interfaces interativas, aumentando a engajamento e 
+a experiência visual do usuário.
+*/
+
+/*---------------------------*/
+
+
+/* Efeito de Zoom de Tela Inteira */
+#imagem4 img {
+
+    transition: transform 0.5s ease, position 0.5s ease;
+    /* 'transition: transform 0.5s ease, position 0.5s ease;' define 
+        uma transição suave para as propriedades 'transform' e 'position'.
+       Isso suaviza as mudanças na transformação e na posição da imagem ao 
+       longo de meio segundo, usando um efeito de 'ease' que começa devagar,
+       acelera no meio e termina devagar, criando uma transição visual agradável. */
+
+    cursor: pointer;
+    /* 'cursor: pointer;' muda o cursor do mouse para o ícone de ponteiro, 
+        indicando ao usuário que a imagem pode ser clicada ou interagida. */
+
+}
+
+#imagem4:hover img {
+
+    position: fixed;
+    /* 'position: fixed;' fixa a imagem em uma posição na tela. Isso 
+        significa que a imagem não se move ao rolar a página,
+        e ela sempre cobrirá o conteúdo abaixo dela enquanto o mouse 
+        estiver sobre a imagem. */
+
+    top: 0;
+    left: 0;
+    /* 'top: 0;' e 'left: 0;' posicionam a imagem no topo e 
+        no canto esquerdo da janela do navegador,
+        garantindo que ela ocupe toda a tela a partir desses pontos. */
+
+    width: 100vw;
+    /* 'width: 100vw;' define a largura da imagem para 100% da largura da 
+        viewport (janela visível do navegador).
+        'vw' significa viewport width. */
+
+    height: 100vh;
+    /* 'height: 100vh;' define a altura da imagem para 100% da altura da 
+        viewport (janela visível do navegador).
+        'vh' significa viewport height. */
+
+    object-fit: cover;
+    /* 'object-fit: cover;' faz com que a imagem cubra totalmente o espaço 
+        disponível sem distorcer sua proporção.
+        Isso pode resultar no corte de partes da imagem se suas dimensões 
+        originais não corresponderem ao aspecto da área de cobertura. */
+
+    z-index: 9999;
+    /* 'z-index: 9999;' coloca a imagem acima de todos os outros conteúdos da 
+        página que possuam um índice z-index menor.
+        Isso é útil para garantir que a imagem fique no topo de todos os 
+        outros elementos durante o efeito de zoom. */
+
+    transform: none;
+    /* 'transform: none;' remove qualquer transformação anterior aplicada à 
+        imagem. Isso é importante para garantir que
+        a imagem não seja transformada de outras maneiras enquanto está 
+        sendo ampliada para tela inteira. */
+
+}
+
+/*
+Esse código CSS cria um efeito de zoom de tela inteira muito eficaz ao 
+passar o mouse sobre a imagem, tornando-a uma experiência visual interativa e 
+envolvente para o usuário. Ao interagir com a imagem, ela se expande para 
+cobrir toda a tela, focalizando a atenção do usuário exclusivamente no 
+conteúdo da imagem.
+*/
+
+
+/*---------------------------*/
+
+
+/* Efeito de Rotação Tripla */
+#imagem5 img {
+
+    transition: transform 0.5s ease-out;
+    /* 'transition: transform 0.5s ease-out;' configura uma 
+        transição suave para a propriedade 'transform'
+        ao longo de 0.5 segundos. O 'ease-out' faz com que a 
+        transição comece rapidamente e então desacelere no final,
+        criando um efeito suave ao iniciar qualquer transformação. */
+
+    transform-origin: center;
+    /* 'transform-origin: center;' define o ponto de origem para 
+        as transformações de rotação. 
+       'center' especifica que a rotação deve ocorrer ao redor do centro 
+        da imagem. Isso assegura que a imagem
+        gire em torno de seu próprio centro, mantendo-a estabilizada 
+        visualmente no mesmo lugar enquanto roda. */
+}
+
+#imagem5:hover img {
+
+    animation: rotateTriple 2s forwards;
+    /* 'animation: rotateTriple 2s forwards;' aplica a animação 
+        definida pelas regras '@keyframes rotateTriple' à imagem.
+        A animação dura 2 segundos e a propriedade 'forwards' mantém a 
+        imagem no estado final da animação (100% dos keyframes)
+        após a conclusão da animação. */
+}
+
+@keyframes rotateTriple {
+
+    /* '@keyframes rotateTriple' define os quadros-chave 
+        para a animação de rotação. */
+    
+    0% {
+
+        transform: rotate(0deg);
+        /* Em 0%, a rotação começa no grau zero, que é a 
+        posição original da imagem sem rotação. */
+    }
+
+    75% {
+
+        transform: rotate(1080deg);
+        /* Em 75% do tempo de animação, a imagem gira 1080 graus. 
+            Isso equivale a três voltas completas (360deg * 3).
+            Esta rotação rápida cria um efeito dramático e visualmente cativante. */
+    }
+
+    100% {
+
+        transform: rotate(0deg);
+        /* Em 100%, a rotação retorna ao grau zero, trazendo a 
+            imagem de volta à sua orientação original.
+            Isso assegura que a imagem pareça a mesma antes e depois da 
+            animação, com um ciclo completo de rotação tripla. */
+
+    }
+}
+
+/*
+Este código CSS efetivamente cria um efeito de rotação tripla 
+visualmente impressionante quando o usuário passa o mouse sobre a 
+imagem, realçando-a com uma ação dinâmica que atrai atenção. As propriedades 
+de transição e animação são chave para produzir esse efeito fluido e contínuo, 
+tornando o elemento interativo e envolvente.
+*/
+
+
+/*---------------------------*/
+
+
+/* Efeito de Balanço Suave Aprimorado para Hover */
+#imagem6 img {
+
+    transform-origin: top center;
+    /* 'transform-origin: top center;' especifica o ponto ao redor 
+            do qual as transformações são realizadas.
+        Aqui, 'top center' significa que a imagem irá balançar a partir 
+            do topo e no centro horizontalmente.
+        Isso é ideal para efeitos de balanço, pois simula o efeito de 
+            algo pendurado que balança para frente e para trás. */
+
+    transition: transform 0.5s ease-in-out;
+    /* 'transition: transform 0.5s ease-in-out;' define uma transição 
+            suave para a propriedade de transformação.
+       O tempo de 0.5 segundos controla a velocidade da transição 
+            inicial e final, com 'ease-in-out' significando
+            que a transição começa e termina lentamente, mas é mais 
+            rápida no meio, proporcionando uma sensação natural de movimento. */
+
+}
+
+#imagem6:hover img {
+
+    animation: swingAprimoradoHover 2s ease-in-out forwards;
+    /* 'animation: swingAprimoradoHover 2s ease-in-out forwards;' 
+            aplica a animação definida em '@keyframes swingAprimoradoHover'.
+       A animação tem duração de 2 segundos com um 'ease-in-out', 
+            que suaviza o início e o fim do balanço,
+            e 'forwards' mantém a imagem no estado final da animação após a conclusão. */
+
+}
+
+@keyframes swingAprimoradoHover {
+
+    /* '@keyframes swingAprimoradoHover' define os quadros-chave 
+        para a animação de balanço. */
+
+    0%, 100% {
+
+        transform: rotate(0deg);
+        /* Nos pontos de início (0%) e fim (100%) da animação, a imagem 
+            retorna à posição original, sem rotação. */
+    
+    }
+    25% {
+
+        transform: rotate(15deg);
+        /* Aos 25%, a imagem é rotacionada para 15 graus. 
+            Isso é parte do balanço para um lado. */
+
+    }
+    50% {
+
+        transform: rotate(-15deg);
+        /* Aos 50%, a imagem balança para o lado oposto, a -15 graus. 
+            Isso ajuda a criar um efeito de pêndulo completo. */
+
+    }
+    75% {
+
+        transform: rotate(15deg);
+        /* Aos 75%, a imagem volta a balançar para o lado inicial, a 15 graus, 
+            completando o movimento de ida e volta. */
+
+    }
+
+}
+
+/*
+Este código cria um efeito visual de balanço que é atraente e envolvente, 
+fazendo com que a imagem pareça estar pendurada por um ponto fixo no topo e
+balançando de um lado para o outro quando o usuário passa o mouse sobre ela. 
+O uso cuidadoso da propriedade transform-origin é crucial para alcançar a
+aparência desejada, enquanto as transições e animações cuidadosamente temporizadas
+adicionam uma qualidade suave e realista ao movimento.
+*/
+
+/*---------------------------*/
+
+
+/* Efeito Holofote com Preto e Branco */
+#imagem7 {
+
+    overflow: hidden;
+    /* 'overflow: hidden;' impede que qualquer conteúdo que 
+        exceda os limites do elemento seja visível,
+        essencial para quando os pseudo-elementos ou imagens se 
+        transformam além do tamanho do contêiner. */
+
+    position: relative;
+    /* 'position: relative;' serve como referência para posicionar os 
+        pseudo-elementos de forma absoluta dentro deste contêiner. */
+}
+
+#imagem7 img {
+
+    transition: filter 0.5s ease, transform 0.5s ease;
+    /* 'transition' define uma transição suave para as propriedades 'filter' e 
+        'transform' ao longo de 0.5 segundos,
+        usando 'ease' para um início e final suaves da transição. */
+
+    filter: grayscale(100%);
+    /* 'filter: grayscale(100%);' aplica um filtro que transforma a imagem 
+        inteiramente em tons de cinza. */
+
+    transform: scale(1);
+    /* 'transform: scale(1);' mantém a imagem em seu tamanho original, preparada 
+        para qualquer transformação ao interagir. */
+
+}
+
+#imagem7:before {
+    content: "";
+    /* 'content: "";' é necessário para gerar o pseudo-elemento, mesmo 
+        que não haja conteúdo dentro dele. */
+
+    position: absolute;
+    /* 'position: absolute;' posiciona o pseudo-elemento em relação 
+        ao primeiro elemento pai posicionado, que é #imagem7 com 'position: relative;'. */
+
+        top: -100%;
+        /* Move o topo do pseudo-elemento para 100% acima 
+            da borda superior do elemento pai,
+            fazendo com que comece completamente fora da 
+            área visível acima da imagem. */
+
+        left: -100%;
+        /* Move o lado esquerdo do pseudo-elemento para 100% à 
+            esquerda da borda esquerda do elemento pai,
+            fazendo com que comece completamente fora da área 
+            visível à esquerda da imagem. */
+
+        width: 200%;
+        /* Define a largura do pseudo-elemento como 200% 
+            da largura do elemento pai,
+            garantindo que ele possa cobrir totalmente a imagem 
+            quando centralizado novamente durante a animação. */
+
+        height: 200%;
+        /* Define a altura do pseudo-elemento como 200% da 
+            altura do elemento pai,
+            garantindo que ele possa cobrir totalmente a imagem 
+            quando centralizado novamente durante a animação. */
+
+        /* Este conjunto de propriedades garante que o pseudo-elemento 
+            tenha tamanho suficiente para cobrir completamente a imagem
+            e possa se mover livremente sem deixar áreas descobertas 
+            durante as animações de transformação. */
+
+        /* Estilo de fundo do pseudo-elemento */
+        background: radial-gradient(circle, transparent 30%, black 70%);
+        /* Cria um gradiente radial que começa como transparente 
+            no centro (0% a 30% do raio) e
+            gradualmente se torna preto a partir de 30% até 70% do 
+            raio, criando um efeito de 'holofote'.
+            O centro transparente simula a luz focada, enquanto as 
+            bordas escuras criam um efeito de sombra, 
+            destacando a imagem sob este 'holofote'. */
+
+        /* Controle de camada */
+        z-index: 2;
+        /* 'z-index: 2' coloca o pseudo-elemento acima da 
+            imagem (assumindo que a imagem tenha um z-index menor ou não definido),
+            mas ainda permite que outros elementos com z-index superior a 2 
+            se sobreponham a este pseudo-elemento.
+            Isso é útil para manter a interatividade de elementos como 
+            menus ou modais que podem aparecer sobre a imagem. */
+
+        /* Transições visuais */
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        /* Aplica uma transição suave para as transformações 
+            e alterações de opacidade.
+            'ease' suaviza tanto a entrada quanto a saída da transição, 
+            fazendo com que o efeito de transformação e
+            de aparecimento/desaparecimento seja mais natural e visualmente agradável. */
+
+        /* Visibilidade inicial */
+        opacity: 0;
+        /* Define a opacidade inicial do pseudo-elemento como 0, 
+            tornando-o completamente invisível inicialmente.
+            Isso é essencial para que o efeito de 'aparecimento' ao 
+            passar o mouse seja percebido. */
+
+        /* Transformação inicial */
+        transform: scale(0);
+        /* Inicia o pseudo-elemento com uma transformação de 
+            escala de 0, o que significa que ele está escalado para o tamanho zero,
+            essencialmente tornando-o não visível no layout da página. 
+            Ele será escalado para 'scale(1)' durante a interação
+            para criar um efeito de emergência dinâmico. */
+
+}
+
+/* Efeitos aplicados à imagem quando o mouse passa sobre #imagem7 */
+#imagem7:hover img {
+
+    filter: grayscale(0%);
+    /* 'filter: grayscale(0%);' remove totalmente o
+             filtro de escala de cinza.
+       Isso faz com que a imagem recupere suas cores originais 
+            após estar inicialmente em tons de cinza,
+       destacando-a visualmente quando o usuário interage com ela. */
+
+    transform: scale(1.1);
+    /* 'transform: scale(1.1);' aumenta o tamanho da 
+            imagem para 110% do seu tamanho original.
+       Este leve aumento cria um efeito de zoom sutil que 
+            ajuda a destacar a imagem sob o efeito do holofote,
+       tornando-a mais proeminente em relação ao resto do conteúdo da página. */
+}
+
+/* Efeitos aplicados ao pseudo-elemento :before quando o
+     mouse passa sobre #imagem7 */
+#imagem7:hover:before {
+
+    opacity: 1;
+    /* 'opacity: 1;' muda a opacidade do pseudo-elemento 
+            de 0 para 1, tornando-o completamente visível.
+       Isso cria o efeito de um holofote sendo ativado, 
+            focando a atenção na imagem centralizada. */
+
+    transform: scale(1);
+    /* 'transform: scale(1);' aumenta o tamanho do pseudo-elemento 
+            de 0 (totalmente reduzido) para 1 (tamanho original).
+       Isso expande o gradiente radial para cobrir completamente a imagem, 
+            simbolizando a luz do holofote iluminando a área. */
+
+    animation: moveLight 5s infinite alternate ease-in-out;
+    /* 'animation: moveLight 5s infinite alternate ease-in-out;' 
+            define uma animação chamada moveLight,
+       que altera a posição e escala do pseudo-elemento ao longo 
+            de 5 segundos, repetindo infinitamente em um ciclo de 'ida e volta'.
+       - 'infinite' faz com que a animação continue repetindo indefinidamente.
+       - 'alternate' faz com que a animação inverta a direção a 
+            cada ciclo, criando um efeito de balanço.
+       - 'ease-in-out' suaviza os pontos de início e fim de cada 
+            ciclo, garantindo que a mudança de posição e escala seja fluida e natural.
+       Essa animação move o efeito de luz sobre a imagem, dando a 
+            impressão de um holofote em movimento,
+       o que aumenta a interatividade e o dinamismo visual da página. */
+}
+
+
+@keyframes moveLight {
+    /* Define os quadros-chave para a animação do pseudo-elemento, 
+        simulando o movimento de um holofote. */
+
+    0% {
+        transform: translate(0, 0) scale(1);
+        /* No início da animação (0%), o pseudo-elemento começa na 
+                posição original, sem qualquer deslocamento ou mudança de escala.
+           'translate(0, 0)' não move o elemento de sua posição original.
+           'scale(1)' mantém o elemento em seu tamanho normal. */
+    }
+    25% {
+        transform: translate(50%, 50%) scale(1.5);
+        /* Aos 25%, o pseudo-elemento é transladado para baixo e para a
+                direita em 50% da altura e largura do elemento pai,
+                e é aumentado em 50% do seu tamanho (scale(1.5)).
+           Isso cria a ilusão de que o feixe de luz está se movendo 
+                para baixo e para a direita enquanto expande seu alcance. */
+    }
+    50% {
+
+        transform: translate(100%, 0) scale(1);
+        /* Aos 50%, o pseudo-elemento é movido completamente para a 
+                direita, correspondendo a 100% da largura do elemento pai.
+           Ele retorna ao seu tamanho original (scale(1)), simulando o 
+                movimento lateral do feixe de luz. */
+
+    }
+    75% {
+
+        transform: translate(-50%, -50%) scale(1.5);
+        /* Aos 75%, o pseudo-elemento é movido para cima e para a 
+                esquerda, passando a 50% para fora do lado esquerdo e 
+                superior do elemento pai.
+           O tamanho é novamente aumentado para scale(1.5), o 
+                que ajuda a simular o feixe de luz retornando 
+                enquanto se expande. */
+
+    }
+    100% {
+
+        transform: translate(0, 0) scale(1);
+        /* No final da animação (100%), o pseudo-elemento retorna ao 
+                ponto de partida, sem deslocamento e com tamanho normal (scale(1)).
+           Isso garante uma transição suave e contínua quando a 
+                animação começa novamente, mantendo o efeito cíclico e fluido. */
+    }
+
+}
+
+/*---------------------------*/
+
+/* Efeito de Onda Luminosa */
+#imagem8 {
+
+    position: relative;
+    /* 'position: relative;' configura o contêiner da imagem para 
+            que possa ser o ponto de referência para posicionamento
+            absoluto de elementos internos, como o pseudo-elemento ::after 
+            que cria o efeito de luz. */
+
+    overflow: hidden;
+    /* 'overflow: hidden;' garante que qualquer parte do pseudo-elemento 
+            que se estenda além das bordas do contêiner
+            da imagem seja ocultada, mantendo o efeito dentro dos 
+            limites da imagem. */
+}
+
+#imagem8 img {
+    transition: transform 0.5s ease;
+    /* 'transition: transform 0.5s ease;' aplica uma transição 
+            suave para quaisquer transformações aplicadas à imagem.
+       'ease' faz com que a transição tenha um início e um fim suaves, 
+            tornando as mudanças mais naturais. */
+
+    display: block;
+    /* 'display: block;' faz com que a imagem seja tratada como um 
+            bloco, ocupando a largura total da linha e
+            permitindo que margens e paddings sejam aplicados consistentemente. */
+}
+
+#imagem8::after {
+    content: '';
+    /* 'content: "";' é necessário para gerar o pseudo-elemento ::after. 
+            Mesmo sem conteúdo real, ele precisa ser incluído. */
+
+    position: absolute;
+    /* 'position: absolute;' faz com que o pseudo-elemento seja 
+            posicionado absolutamente em relação ao seu contêiner mais próximo
+            com 'position: relative;', que é #imagem8 neste caso. */
+
+    top: 0;
+    left: -150%;
+    /* 'top: 0;' e 'left: -150%;' posicionam o pseudo-elemento no 
+            topo do contêiner e inicialmente fora da tela à esquerda. */
+
+    width: 100%;
+    height: 100%;
+    /* 'width: 100%;' e 'height: 100%;' fazem com que o pseudo-elemento 
+            cubra totalmente a área da imagem, garantindo
+            que o efeito de luz possa se estender por toda a imagem. */
+
+    background: rgba(255, 255, 255, 0.2);
+    /* 'background: rgba(255, 255, 255, 0.2);' define a cor do fundo 
+            para branco com 20% de opacidade, criando um efeito de luz suave. */
+
+    transform: skewX(-20deg);
+    /* 'transform: skewX(-20deg);' aplica uma inclinação ao longo do 
+            eixo X, distorcendo o pseudo-elemento para criar
+            um efeito de onda mais dinâmico à medida que ele se 
+            move sobre a imagem. */
+
+    transition: left 0.7s ease-in-out;
+    /* 'transition: left 0.7s ease-in-out;' controla a velocidade e o 
+            timing da animação do deslocamento 'left',
+            fazendo com que o pseudo-elemento se mova suavemente de 
+            um lado para o outro. 'ease-in-out' proporciona
+            uma aceleração no início e uma desaceleração no fim da animação. */
+}
+
+#imagem8:hover::after {
+
+    left: 150%;
+    /* Ao passar o mouse, 'left: 150%;' move o pseudo-elemento para a 
+            direita, fazendo com que ele deslize completamente
+            através da imagem e saia do outro lado. */
+
+    transition: left 0.7s ease-in-out;
+    /* A transição continua a ser 'left 0.7s ease-in-out', garantindo que a 
+            saída do pseudo-elemento seja tão suave quanto a entrada. */
+}
+
+
+/* ------------------------------- */
+
+
+/* Efeito de Giro Vertical Triplo */
+#imagem9 img {
+
+    transition: transform 0.5s ease;
+    /* 'transition: transform 0.5s ease;' define uma transição 
+            suave para todas as transformações aplicadas à imagem.
+       O tempo de duração é de 0.5 segundos, e o 'ease' garante 
+            que a velocidade da transição comece devagar,
+       acelere no meio e desacelere novamente ao final, proporcionando 
+            uma mudança mais natural e menos abrupta. */
+
+    transform-origin: center;
+    /* 'transform-origin: center;' define o ponto central da imagem 
+            como o eixo para todas as transformações.
+       Neste caso, significa que a rotação ocorrerá em torno 
+            do centro vertical e horizontal da imagem,
+       garantindo que a rotação seja simétrica e equilibrada. */
+}
+
+#imagem9:hover img {
+
+    animation: rotateVerticalTriple 2s forwards;
+    /* 'animation: rotateVerticalTriple 2s forwards;' aplica a 
+            animação chamada 'rotateVerticalTriple'.
+       A duração da animação é de 2 segundos, e 'forwards' mantém a 
+            imagem na posição final da animação após a sua conclusão.
+       Isso é importante para garantir que a imagem não salte de volta à 
+            sua posição original instantaneamente após o término da animação. */
+}
+
+@keyframes rotateVerticalTriple {
+    from {
+
+        transform: rotateX(0deg);
+        /* No início da animação ('from'), a imagem começa sem nenhuma rotação.
+           'rotateX(0deg)' significa que a imagem está na sua orientação 
+            vertical original, sem inclinação ao longo do eixo X. */
+    }
+    to {
+
+        transform: rotateX(1080deg);
+        /* No final da animação ('to'), a imagem completa três 
+            voltas completas (360deg * 3 = 1080deg).
+           'rotateX(1080deg)' faz a imagem girar verticalmente ao 
+           redor de seu eixo central, passando por três revoluções completas.
+           Isso cria um efeito dramático e dinâmico, atraindo atenção 
+           para a imagem ao passar o mouse sobre ela. */
+    
+    }
+}
+
+
+/* ------------------------------- */
+
+/* Efeito de Deslizar com Descrição Centralizada */
+.contenedor-imagem#imagem10 {
+
+    position: relative;
+    /* 'position: relative;' - Esta propriedade é essencial para 
+            posicionar absolutamente os elementos filhos (como a imagem e 
+            a descrição) dentro deste contêiner.
+       Isso significa que a posição dos elementos filhos será determinada 
+            em relação aos limites deste contêiner. */
+
+    width: 300px; /* Ajuste conforme o tamanho original da sua imagem */
+    /* Define a largura do contêiner da imagem. Essa largura é fixa e 
+            não se ajusta ao conteúdo dentro dela.
+       A largura precisa ser definida de acordo com o tamanho da imagem ou 
+            conforme desejado para a interface. */
+
+    height: 200px; /* Ajuste conforme o tamanho original da sua imagem */
+    /* Define a altura do contêiner da imagem. Similar à largura, esta é 
+            uma medida fixa e não se ajusta automaticamente.
+       Isso ajuda a manter um layout consistente, independentemente das 
+            transformações aplicadas aos elementos internos. */
+
+    overflow: hidden;
+    /* 'overflow: hidden;' - Impede que qualquer conteúdo que ultrapasse os 
+            limites deste contêiner seja visível.
+       Isso é crucial para criar o efeito de deslizar, onde a imagem e a 
+            descrição se movem para dentro ou para fora do contêiner. */
+
+    display: inline-block;
+    /* 'display: inline-block;' - Permite que o contêiner se comporte 
+            como um bloco (respeitando propriedades de largura e altura),
+       mas também seja alinhado em linha com outros elementos, como texto ou 
+            outros blocos. Isso é útil para layouts que requerem múltiplos 
+            itens lado a lado. */
+
+}
+
+/* Configuração da Imagem */
+
+#imagem10 img {
+    position: absolute;
+    /* 'position: absolute;' - Posiciona a imagem de 
+            forma absoluta dentro do contêiner. 
+       Com 'top: 0' e 'left: 0', a imagem sempre começará do 
+            canto superior esquerdo do contêiner. */
+
+    top: 0;
+    left: 0;
+    /* 'top: 0;' e 'left: 0;' - Estas propriedades ancoram a 
+            imagem no topo e à esquerda do contêiner, 
+       garantindo que ela cubra completamente o espaço 
+            designado desde o início da interação. */
+
+    width: 100%; /* Garante que a imagem cubra todo o contêiner */
+    /* 'width: 100%;' - Estica a imagem para cobrir a
+             largura total do contêiner.
+       Isso assegura que a imagem sempre preencha completamente a
+             largura do espaço disponível, independentemente das 
+             suas dimensões originais. */
+
+    height: 100%; /* Garante que a imagem cubra todo o contêiner */
+    /* 'height: 100%;' - Estica a imagem para cobrir a 
+            altura total do contêiner.
+       Isso assegura que a imagem sempre preencha completamente a 
+            altura do espaço disponível, mantendo o aspecto visual consistente. */
+
+    transition: transform 0.5s ease-in-out;
+    /* 'transition: transform 0.5s ease-in-out;' - Aplica uma transição 
+            suave para todas as transformações de escala ou de posição da imagem.
+       O 'ease-in-out' faz com que a transição tenha um início e um 
+            fim suaves, tornando a animação visualmente agradável e menos abrupta. */
+}
+
+
+/* Estilização da descrição oculta para #imagem10 */
+#imagem10 .descricao-oculta {
+
+    position: absolute;
+    /* 'position: absolute;' - Posiciona a descrição de forma 
+            absoluta dentro do contêiner de referência que tem 'position: relative;'.
+       Isso permite um controle preciso sobre onde a descrição será colocada. */
+
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    /* 'top: 50%;' e 'left: 50%;' - Estas propriedades posicionam o 
+        ponto de referência da descrição no centro exato do contêiner. */
+
+    transform: translate(-50%, -50%) translateX(-100%);
+    /* 'transform: translate(-50%, -50%) translateX(-100%);' - 
+            A primeira parte, 'translate(-50%, -50%)', ajusta a posição
+            para que o centro da descrição alinhe perfeitamente com o 
+            ponto central definido pelos top e left. 
+       A segunda parte, 'translateX(-100%)', inicialmente move a 
+            descrição totalmente para a esquerda, fora da tela,
+       preparando-a para deslizar para dentro do contêiner ao interagir. */
+
+    white-space: nowrap;
+    /* 'white-space: nowrap;' - Impede que o texto dentro da 
+            descrição seja quebrado em várias linhas, garantindo que toda a descrição
+       permaneça em uma única linha horizontal. */
+
+    padding: 20px;
+    /* 'padding: 20px;' - Adiciona espaço interno ao redor do 
+            conteúdo da descrição, melhorando a legibilidade e o aspecto visual. */
+
+    background-color: rgba(0, 0, 0, 0.7);
+    /* 'background-color: rgba(0, 0, 0, 0.7);' - Define a cor de 
+            fundo como preta com 70% de opacidade, tornando o texto mais legível
+            enquanto permite que parte da imagem abaixo ainda seja visível. */
+
+    color: white;
+    /* 'color: white;' - Define a cor do texto da descrição para branco, 
+            garantindo alto contraste contra o fundo escuro para boa visibilidade. */
+
+    font-size: 20px;
+    /* 'font-size: 20px;' - Especifica o tamanho do texto dentro da descrição, 
+            tornando-o suficientemente grande para ser facilmente legível. */
+
+    transition: transform 0.5s ease-in-out;
+    /* 'transition: transform 0.5s ease-in-out;' - Aplica uma 
+            transição suave para as transformações, 
+            garantindo que a animação de deslizar da descrição seja 
+            visualmente agradável. 'Ease-in-out' suaviza o início e o fim da transição. */
+
+    width: 100%; /* Ocupa a largura total do contêiner */
+    height: 100%; /* Ocupa a altura total do contêiner */
+    /* 'width: 100%;' e 'height: 100%;' - Estas propriedades fazem a 
+            descrição esticar para cobrir toda a largura e altura do contêiner,
+            criando uma cobertura completa da imagem quando a descrição é visível. */
+
+    display: flex;
+    /* 'display: flex;' - Utiliza o modelo de caixa flexível para 
+            facilitar o alinhamento do texto dentro da descrição. */
+
+    align-items: center; /* Alinha o texto verticalmente */
+    /* 'align-items: center;' - Centraliza o texto verticalmente dentro 
+            da descrição, parte do modelo flex. */
+
+    justify-content: center; /* Alinha o texto horizontalmente */
+    /* 'justify-content: center;' - Centraliza o texto horizontalmente 
+            dentro da descrição, garantindo que esteja perfeitamente centrado. */
+
+    text-align: center;
+    /* 'text-align: center;' - Assegura que o texto dentro da descrição 
+            esteja centralizado horizontalmente, útil para textos em múltiplas linhas. */
+
+    opacity: 0;
+    /* 'opacity: 0;' - Inicialmente torna a descrição completamente transparente, 
+            criando um efeito de surgimento quando o mouse passa por cima. */
+}
+
+
+/* CSS para o Movimento da Imagem ao Passar o Mouse */
+#imagem10:hover img {
+
+    transform: translateX(100%);
+    /* 'transform: translateX(100%);' - Esta propriedade move a imagem 
+            horizontalmente para a direita, 100% do seu próprio tamanho.
+       Isso significa que a imagem deslizará completamente para fora da vista 
+            do contêiner, movendo-se para fora da tela para a direita.
+       O efeito é útil para deslocar a imagem e dar espaço para a descrição 
+            aparecer sem obstrução visual. */
+}
+
+/* CSS para a Aparição da Descrição ao Passar o Mouse */
+#imagem10:hover .descricao-oculta {
+
+    transform: translate(-50%, -50%) translateX(0%);
+    /* 'transform: translate(-50%, -50%) translateX(0%);' - A primeira 
+            parte do transform, 'translate(-50%, -50%)', 
+       ajusta a descrição para que seu centro esteja exatamente no 
+            centro do contêiner. Isso é feito ao mover a descrição 
+            para cima e para a esquerda
+       pela metade de sua altura e largura, respectivamente.
+       A segunda parte, 'translateX(0%)', realinha a descrição para 
+            começar exatamente do centro do contêiner, anulando 
+            qualquer deslocamento horizontal
+       previamente aplicado (como o -100% inicial quando está fora 
+            da tela). Este ajuste garante que a descrição agora 
+            esteja centralizada e visível. */
+
+    opacity: 1;
+    /* 'opacity: 1;' - Aumenta a opacidade da descrição de 0 para 1, 
+            tornando-a completamente opaca e visível ao usuário.
+       Isso cria um contraste claro entre a descrição e a imagem, destacando a 
+            descrição enquanto a imagem se move para fora da tela.
+       A transição da opacidade é suave, graças à propriedade 'transition' 
+            definida anteriormente, oferecendo um efeito visualmente atraente
+       de surgimento gradual da descrição. */
+       
+}

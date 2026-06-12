@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- A declaração do tipo de documento. Informa ao 
+    navegador que este é um documento HTML5. -->
+
+<html lang="pt">
+<!-- A tag <html> define o início do documento HTML. O atributo 'lang' 
+    especifica o idioma do documento, que é português ('pt'). -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de estilo e 
+        títulos. Não é exibida diretamente na área de visualização da página. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres para UTF-8, que inclui a 
+        maioria dos caracteres de todos os idiomas escritos, garantindo que 
+        qualquer texto seja exibido corretamente. -->
+
+    <title>Efeitos Imagem</title>
+    <!-- Define o título da página, que é exibido na aba do navegador. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Link para uma folha de estilo externa chamada 'estilo.css'. 
+        Este arquivo contém as regras de estilo CSS para a página. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página, 
+        como texto, imagens, links, etc. -->
+
+    <!-- Repita esta estrutura para cada imagem, alterando o ID conforme necessário -->
+    <!-- Cada <div> aqui serve como um contêiner para uma imagem e sua descrição associada. -->
+    <div class="contenedor-imagem" id="imagem1">
+
+        <img src="img1.jpg" alt="Imagem 1">
+        <!-- A tag <img> é usada para incorporar uma imagem na página. 'src' 
+                    especifica o caminho do arquivo de imagem.
+             'alt' fornece uma descrição textual da imagem para acessibilidade e é 
+                    exibida se a imagem não puder ser carregada. -->
+
+        <div class="descricao-oculta">Imagem 1</div>
+        <!-- Uma <div> para texto que pode ser estilizado para aparecer 
+                    quando a imagem é focada ou com o mouse sobre, usando CSS 
+                    para criar um efeito de sobreposição. -->
+
+    </div>
+
+    <!-- Cada um desses blocos segue o mesmo padrão, mudando apenas o ID e as informações da imagem. -->
+    <div class="contenedor-imagem" id="imagem2"><img src="img2.jpg" alt="Imagem 2"><div class="descricao-oculta">Imagem 2</div></div>
+    <div class="contenedor-imagem" id="imagem3"><img src="img3.jpg" alt="Imagem 3"><div class="descricao-oculta">Imagem 3</div></div>
+    <div class="contenedor-imagem" id="imagem4"><img src="img4.jpg" alt="Imagem 4"><div class="descricao-oculta">Imagem 4</div></div>
+    <div class="contenedor-imagem" id="imagem5"><img src="img5.jpg" alt="Imagem 5"><div class="descricao-oculta">Imagem 5</div></div>
+    <div class="contenedor-imagem" id="imagem6"><img src="img6.jpg" alt="Imagem 6"><div class="descricao-oculta">Imagem 6</div></div>
+    <div class="contenedor-imagem" id="imagem7"><img src="img7.jpg" alt="Imagem 7"><div class="descricao-oculta">Imagem 7</div></div>
+    <div class="contenedor-imagem" id="imagem8"><img src="img8.jpg" alt="Imagem 8"><div class="descricao-oculta">Imagem 8</div></div>
+    <div class="contenedor-imagem" id="imagem9"><img src="img9.jpg" alt="Imagem 9"><div class="descricao-oculta">Imagem 9</div></div>
+    <div class="contenedor-imagem" id="imagem10"><img src="img10.jpg" alt="Imagem 10"><div class="descricao-oculta">Imagem 10</div></div>
+
+</body>
+</html>
+
+<!-- 
+Este código cria uma galeria de imagens onde cada imagem está dentro 
+de um <div> com uma ID única para identificação. Este formato é útil 
+para aplicar estilos específicos ou manipular os elementos via JavaScript ou CSS. 
+
+A descrição oculta dentro de cada <div> pode ser usada para adicionar efeitos 
+interativos, como mostrar a descrição quando o usuário passa o mouse sobre a imagem.
+-->
