@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento. Esta linha é essencial para 
+    garantir que o navegador interprete o documento como HTML5, que é a 
+    versão mais recente e suportada de HTML. A declaração <!DOCTYPE> não é 
+    uma tag HTML; ela é uma instrução para o navegador sobre a versão do HTML 
+    que o documento está usando. -->
+
+<html lang="pt-br">
+<!-- O elemento <html> é o elemento raiz de um documento HTML, significando que 
+    todos os outros elementos devem estar contidos dentro dele. O atributo 'lang' 
+    especifica o idioma principal do documento, que neste caso é Português do 
+    Brasil ('pt-br'). Isso ajuda os navegadores a aplicar regras de idioma 
+    específicas e pode ser usado por leitores de tela para fornecer a pronúncia correta. -->
+
+<head>
+    <!-- A tag <head> encapsula uma coleção de metadados sobre o documento. 
+        Metadados são dados sobre dados, que, neste caso, informam ao navegador e a 
+        outras tecnologias como processar e apresentar o conteúdo do site. A tag <head> 
+        não inclui nada que seja renderizado diretamente na página, com exceção do 
+        título (via a tag <title>). -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' de "UTF-8" especifica que o documento 
+        usa a codificação UTF-8, que inclui quase todos os caracteres e símbolos de 
+        todos os idiomas do mundo. Isso é crucial para a internacionalização e para 
+        garantir que todos os caracteres sejam exibidos corretamente no navegador. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, esta especificando a 'viewport' ou janela de visualização do 
+        navegador. O atributo 'content' define:
+         - 'width=device-width': A lagrura da janela de visualização deve ser igual à 
+                largura do dispositivo. Isso é importante para sites responsivos, pois 
+                garante que o site usará a largura real do dispositivo em vez de uma largura presumida.
+         - 'initial-scale=1.0': Define o nível inicial de zoom quando a página é 
+                carregada pela primeira vez. O valor '1.0' significa sem zoom, permitindo 
+                que o conteúdo seja exibido em seu tamanho original. Essas configurações 
+                ajudam a otimizar a experiência do usuário em dispositivos móveis. -->
+        
+    <title>Meu Currículo Profissional</title>
+    <!-- A tag <title> define o título do documento, que é mostrado na aba do 
+        navegador. Este título é também usado pelos motores de busca e pode ser 
+        utilizado para tabulações em ambientes de desktop. É importante para a 
+        SEO (Search Engine Optimization) e para a usabilidade, pois fornece aos 
+        usuários uma maneira rápida de identificar o conteúdo da aba. -->
+
+    <style>
+        /* Início da tag <style>, que é usada para incluir CSS diretamente no 
+            documento HTML. Qualquer CSS aqui escrito afetará diretamente os 
+            elementos da página, definindo a aparência visual do site. Utilizar CSS 
+            interno pode ser útil para estilos específicos de uma única página ou para 
+            pequenas quantidades de código. No entanto, para manutenção e performance, é 
+            geralmente melhor usar folhas de estilo externas. */
+
+        
+            body {
+                /* Início das regras de estilo para o elemento <body>, 
+                    que é o contêiner principal para todo o conteúdo visível da página. */
+                
+                font-family: Arial, sans-serif;
+                /* 'font-family': Define a família de fontes para o 
+                    texto dentro do corpo da página.
+                Arial: uma fonte sans-serif popular, escolhida como a primeira opção.
+                sans-serif: um tipo genérico de fonte que será usado se
+                    Arial não estiver disponível no sistema do usuário. */
+        
+                margin: 0;
+                /* 'margin': Define a margem externa do elemento <body>.
+                0: remove todas as margens externas do <body>, fazendo com 
+                    que o elemento se estenda até as bordas da janela do navegador. */
+        
+                padding: 0;
+                /* 'padding': Define o preenchimento interno do elemento <body>.
+                0: remove todo o preenchimento interno, permitindo que o 
+                    conteúdo dentro do <body> ocupe todo o espaço disponível até 
+                    as bordas do próprio <body>. */
+            }
+        
+            header {
+                /* Início das regras de estilo para o elemento <header>, 
+                    usado aqui como cabeçalho da página. */
+                
+                background-color: #391593;
+                /* 'background-color': Define a cor de fundo do cabeçalho.
+                #333: um código de cor hexadecimal para azul, 
+                    proporcionando um fundo sólido e discreto para o texto do cabeçalho. */
+                
+                color: white;
+                /* 'color': Define a cor do texto dentro do cabeçalho.
+                white: especifica que o texto será branco, criando um alto 
+                    contraste com o fundo cinza escuro para fácil leitura. */
+        
+                padding: 10px 20px;
+                /* 'padding': Define o preenchimento interno do cabeçalho.
+                10px 20px: aplica 10 pixels de preenchimento no topo e na 
+                    base, e 20 pixels de preenchimento nas laterais, centralizando o 
+                    conteúdo dentro do cabeçalho e oferecendo espaço suficiente 
+                    para uma apresentação clara. */
+        
+                text-align: center;
+                /* 'text-align': Define o alinhamento do texto dentro do cabeçalho.
+                center: alinha o texto ao centro do cabeçalho, tornando-o 
+                    visualmente equilibrado e facilmente localizável. */
+            }
+        
+            nav {
+                /* Início das regras de estilo para o elemento <nav>, que 
+                        contém a navegação principal da página. */
+                
+                background-color: #f4f4f4;
+                /* 'background-color': Define a cor de fundo da barra de navegação.
+                #f4f4f4: um código de cor hexadecimal para cinza muito claro, 
+                    que serve como um fundo sutil e neutro para os links de navegação. */
+        
+                padding: 10px 20px;
+                /* 'padding': Define o preenchimento interno da barra de navegação.
+                10px 20px: semelhante ao cabeçalho, proporciona espaço 
+                    suficiente ao redor do conteúdo para uma apresentação clara e 
+                    para manter os links de fácil acesso. */
+        
+                text-align: center;
+                /* 'text-align': Define o alinhamento dos links dentro da barra de navegação.
+                center: alinha os links ao centro, facilitando o acesso visual e 
+                    mantendo a consistência com o alinhamento do cabeçalho. */
+            }
+        
+            nav a {
+                /* Início das regras de estilo para os 
+                    elementos <a> (links) dentro de <nav>. */
+                
+                text-decoration: none;
+                /* 'text-decoration': Define a decoração do texto dos links.
+                none: remove qualquer decoração padrão, como sublinhado, 
+                    tornando os links visualmente mais limpos e menos distrativos. */
+        
+                color: #333;
+                /* 'color': Define a cor do texto dos links.
+                #333: cinza escuro, proporcionando um contraste moderado com o 
+                    fundo cinza claro, mantendo a legibilidade e a consistência 
+                    visual com o estilo do cabeçalho. */
+        
+                padding: 0 50px;
+                /* 'padding': Define o preenchimento ao redor do texto dentro dos links.
+                0 50px: não adiciona preenchimento vertical, mantendo o link 
+                    compacto, mas adiciona 50 pixels de preenchimento horizontal em 
+                    cada lado, separando visualmente cada link dos outros. */
+
+            }
+        
+            nav a:hover {
+                /* Início das regras de estilo para o estado ':hover' dos 
+                    elementos <a> dentro de <nav>, aplicado quando o mouse está sobre o link. */
+                
+                background-color: #0fa33c;
+                /* 'background-color': Define a cor de fundo dos links durante o estado de hover.
+                #ddd: um código de cor hexadecimal para verde, que destaca o 
+                    link sobre o qual o mouse está posicionado, indicando ao usuário 
+                    que o item é clicável. */
+        
+                border-radius: 5px;
+                /* 'border-radius': Define o raio das bordas arredondadas do link.
+                5px: arredonda as bordas do link, dando-lhe um aspecto mais suave e 
+                    moderno, o que pode melhorar a experiência visual do usuário. */
+            }
+        
+            section {
+                /* Início das regras de estilo para o elemento <section>, usado para 
+                    agrupar conteúdo tematicamente relacionado dentro da página. */
+                
+                padding: 20px;
+                /* 'padding': Define o preenchimento interno da seção.
+                20px: adiciona espaço ao redor do conteúdo dentro de cada seção, 
+                    criando uma área de respiro que torna o conteúdo mais legível e 
+                    esteticamente agradável. */
+
+            }
+        </style>    
+    
+</head>
+
+    <body>
+        <!-- Início do corpo do documento HTML. Contém 
+            todos os elementos visíveis na página. -->
+
+        <header>
+            <!-- Elemento <header> usado para conter o cabeçalho da 
+                página. Geralmente inclui títulos e outras informações introdutórias. -->
+
+            <h1>Roberta Alves de Souza</h1>
+            <!-- Elemento <h1> que define o título principal do cabeçalho. 
+                Aqui, o nome 'Roberta Alves de Souza' é destacado como o 
+                elemento mais importante na página, ajudando os mecanismos de 
+                busca e navegadores a entenderem o conteúdo principal. -->
+
+            <p>Desenvolvedora Web Full Stack</p>
+            <!-- Elemento <p> que adiciona um parágrafo no cabeçalho, 
+                descrevendo a profissão ou a especialidade da pessoa, neste 
+                caso, 'Desenvolvedora Web Full Stack'. -->
+
+        </header>
+
+        <nav>
+            <!-- Elemento <nav> usado para definir a navegação principal dentro 
+                da página. Contém links que permitem ao usuário navegar por diferentes 
+                partes do site ou documento. -->
+
+            <a href="#" onclick="mostrarPagina('inicio')">Início</a>
+            <!-- Elemento <a> que cria um link para a seção 'Início'. 
+                'href="#"' significa que o link é um placeholder, não levando a uma nova página.
+                'onclick="mostrarPagina('inicio')"' é um atributo que define uma 
+                ação de clique, chamando a função JavaScript 'mostrarPagina' com o 
+                argumento 'inicio' para carregar dinamicamente o conteúdo de Início. -->
+
+            <a href="#" onclick="mostrarPagina('experiencia')">Experiência</a>
+            <!-- Similar ao link anterior, mas chama a função 'mostrarPagina' com o 
+                argumento 'experiencia'. Isso muda o conteúdo dinâmico para mostrar a 
+                seção de experiência profissional de Roberta. -->
+
+            <a href="#" onclick="mostrarPagina('educacao')">Educação</a>
+            <!-- Link que, quando clicado, chama a função 'mostrarPagina' com o 
+                argumento 'educacao', alterando o conteúdo para mostrar 
+                informações educacionais. -->
+
+            <a href="#" onclick="mostrarPagina('habilidades')">Habilidades</a>
+            <!-- Link que ativa a função 'mostrarPagina' com 'habilidades' como 
+                argumento, destinado a mostrar as habilidades profissionais de 
+                Roberta na página. -->
+
+        </nav>
+
+        <section id="conteudo">
+            <!-- Elemento <section> com o atributo 'id' definido como 'conteudo'. 
+                Serve como um contêiner para o conteúdo que será carregado 
+                dinamicamente com base nos cliques nos links da navegação. 
+                Inicialmente vazio, seu conteúdo muda de acordo com as funções de 
+                JavaScript ativadas pelos links. -->
+                
+            <!-- Conteúdo das páginas será carregado aqui -->
+            <!-- Comentário que indica onde o conteúdo solicitado por meio da 
+                navegação será exibido. Útil para desenvolvedores e manutenção do código. -->
+
+        </section>
+
+    <script>
+        // Define uma função chamada 'mostrarPagina' que é responsável por 
+        // atualizar o conteúdo da seção com base na entrada do usuário.
+
+        function mostrarPagina(pagina) {
+            // Utiliza 'document.getElementById' para localizar um elemento no
+            //  HTML pelo seu ID, neste caso, 'conteudo'.
+
+            const secao = document.getElementById('conteudo');
+            // Inicializa uma variável 'conteudo' como uma string vazia, que será 
+            // usada para armazenar o HTML a ser injetado na página.
+
+            // Declaração de uma variável 'conteudo'. Essa variável é usada para 
+            // armazenar o HTML que será inserido na página.
+            let conteudo = '';
+
+            // Estrutura 'switch' começa aqui. Ela avalia o valor da variável 'pagina' e
+            // executa blocos de código diferentes com base em seu valor.
+            switch (pagina) {
+
+                // Caso 'inicio' da estrutura 'switch'.
+                // Este caso é acionado quando o valor de 'pagina' é igual a 'inicio'.
+                case 'inicio':
+
+                    // A variável 'conteudo' é preenchida com uma string que contém HTML.
+                    // Este HTML será injetado na página quando este caso for selecionado.
+                    conteudo = `
+
+                        <h2>Início</h2>
+                        <!-- O elemento <h2> cria um cabeçalho de segundo nível na página.
+                            Este cabeçalho é maior que um parágrafo, mas menor que o 
+                            título principal <h1>, servindo como um sub-título ou uma seção importante.
+                            Aqui, ele é usado para indicar o início da seção 'Início'. -->
+
+                        <p>Bem-vindo ao meu currículo profissional. Sou uma desenvolvedora web full stack com experiência em projetos de desenvolvimento web.</p>
+                        <!-- O primeiro elemento <p> define um parágrafo de texto.
+                            Este texto serve como uma introdução ou boas-vindas à seção, 
+                            dando uma visão geral rápida da profissional e seu campo de atuação.
+                            'Desenvolvedora web full stack' destaca a capacidade da pessoa de 
+                            trabalhar com todas as camadas de desenvolvimento web, tanto 
+                            front-end quanto back-end. -->
+
+                        <p>Estou sempre em busca de novos desafios e oportunidades para aprender e crescer profissionalmente.</p>
+                        <!-- O segundo elemento <p> adiciona outro parágrafo, enfocando a 
+                            motivação e a ética de trabalho da pessoa.
+                            Este parágrafo ajuda a transmitir uma imagem de dinamismo e 
+                            contínuo desenvolvimento profissional, características valorizadas 
+                            no campo da tecnologia. -->
+                    `;
+
+                    // 'break' é usado para sair da execução do 'switch' depois de 
+                    // executar o código para o caso 'inicio'.
+                    // Isso evita que o código de outros casos seja executado desnecessariamente 
+                    // após o caso 'inicio' ser tratado.
+                    break;
+
+
+                // Caso 'experiencia' dentro da estrutura 'switch'.
+                // Este caso é selecionado quando a variável 'pagina' 
+                // contém o valor 'experiencia'.
+                case 'experiencia':
+
+                    // A variável 'conteudo' é definida com uma string de HTML que 
+                    // será utilizada para atualizar dinamicamente a seção de conteúdo na página.
+                    conteudo = `
+                        <h2>Experiência Profissional</h2>
+                        <!-- Elemento <h2> usado como cabeçalho de segundo nível para 
+                            marcar o início da seção de Experiência Profissional.
+                            Este cabeçalho serve como um ponto de destaque visual para 
+                            indicar o tópico da seção, facilitando a leitura e a 
+                            navegação do usuário. -->
+
+                        <h3>Desenvolvedora Web Full Stack</h3>
+                        <!-- Elemento <h3> que representa um subcabeçalho dentro da seção. 
+                            Especifica o cargo ocupado, neste caso, 'Desenvolvedora Web Full Stack'.
+                            Este título destaca o nível de especialização e a área de 
+                            atuação dentro do campo do desenvolvimento web. -->
+
+                        <p>Empresa XYZ - 2018 até o presente</p>
+                        <!-- Elemento <p> contém informações sobre a duração do 
+                            emprego e o nome da empresa.
+                            Mostra a experiência de trabalho relevante da pessoa, 
+                            indicando a empresa e o período de tempo durante o qual o 
+                            trabalho foi realizado. -->
+
+                        <ul>
+                            <!-- Elemento <ul> define uma lista não ordenada usada para 
+                                listar detalhes específicos sobre a experiência profissional. -->
+
+                            <li>Desenvolvimento e manutenção de sistemas web utilizando tecnologias como HTML, CSS, JavaScript, Node.js e MongoDB.</li>
+                            <!-- Primeiro elemento <li> da lista. Descreve uma responsabilidade 
+                                chave, enfatizando o uso de tecnologias específicas em projetos de 
+                                desenvolvimento e manutenção. -->
+
+                            <li>Colaboração em equipe para o desenvolvimento de novos recursos e funcionalidades.</li>
+                            <!-- Segundo elemento <li> ressalta a habilidade de trabalho em 
+                                equipe e colaboração para criar novos recursos, uma competência 
+                                crucial em ambientes de desenvolvimento ágil. -->
+
+                            <li>Participação em reuniões de planejamento e revisão de código.</li>
+                            <!-- Terceiro elemento <li> ilustra o envolvimento em processos de 
+                                planejamento e qualidade de código, mostrando um compromisso 
+                                com a melhoria contínua e práticas de desenvolvimento estruturadas. -->
+                        </ul>
+                    `;
+
+                    // A instrução 'break' é usada para sair da execução do 'switch' após o 
+                    // conteúdo para 'experiencia' ser definido.
+                    // Isso impede que a execução continue para outros casos que não são aplicáveis.
+                    break;
+
+                // Caso 'educacao' dentro da estrutura 'switch'.
+                // Este caso é selecionado quando a variável 'pagina' contém o valor 'educacao'.
+                case 'educacao':
+
+                    // Define a variável 'conteudo' com uma string que contém o HTML
+                    // para atualizar a seção de conteúdo na página.
+                    conteudo = `
+
+                        <h2>Educação</h2>
+                        <!-- Elemento <h2> usado como cabeçalho de segundo nível para 
+                            marcar o início da seção de Educação.
+                            Este cabeçalho fornece um ponto de destaque visual, facilitando a 
+                            identificação do tema da seção para os usuários. -->
+
+                        <h3>Bacharelado em Ciência da Computação</h3>
+                        <!-- Elemento <h3> representa um subcabeçalho dentro da seção de educação. 
+                            Especifica o grau acadêmico obtido, neste caso, 'Bacharelado em 
+                            Ciência da Computação'.
+                            Este título destaca a área de formação acadêmica e o nível de 
+                            educação alcançado. -->
+
+                        <p>Universidade ABC - Conclusão em 2017</p>
+                        <!-- Elemento <p> contém informações sobre o local e o ano de 
+                            conclusão do grau acadêmico.
+                            Mostra onde a educação foi concluída e quando, fornecendo 
+                            detalhes cruciais que comprovam a formação acadêmica. -->
+
+                        <ul>
+                            <!-- Elemento <ul> define uma lista não ordenada usada para
+                                listar detalhes específicos sobre a educação recebida. -->
+
+                            <li>Principais disciplinas: Programação, Algoritmos e Estrutura de Dados, Banco de Dados, Redes de Computadores.</li>
+                            <!-- Primeiro elemento <li> da lista. Descreve as principais disciplinas estudadas.
+                                Essas disciplinas são fundamentais na área de Ciência da Computação e 
+                                destacam a base técnica do conhecimento adquirido. -->
+
+                            <li>Participação em projetos de pesquisa e extensão relacionados à área de desenvolvimento de software.</li>
+                            <!-- Segundo elemento <li> ressalta a participação em atividades 
+                                extracurriculares como projetos de pesquisa e extensão.
+                                Esta informação é importante para mostrar o engajamento além do 
+                                currículo formal, indicando uma aplicação prática do conhecimento 
+                                adquirido e um interesse ativo na área de estudo. -->
+
+                        </ul>
+                    `;
+
+                    // A instrução 'break' é usada para sair da execução do 'switch' após o 
+                    // conteúdo para 'educacao' ser definido.
+                    // Isso impede que a execução continue para outros casos que não são aplicáveis.
+                    break;
+
+                // Caso 'habilidades' dentro da estrutura 'switch'.
+                // Este caso é selecionado quando a variável 'pagina' contém o valor 'habilidades'.
+                case 'habilidades':
+
+                    // A variável 'conteudo' é atualizada com uma string de HTML que
+                    // detalha as habilidades específicas da pessoa.
+                    conteudo = `
+
+                        <h2>Habilidades</h2>
+                        <!-- Elemento <h2> usado como cabeçalho de segundo nível para
+                             indicar o início da seção de Habilidades.
+                            Este cabeçalho serve para destacar visualmente o tema da seção, 
+                            facilitando a navegação e compreensão do usuário. -->
+
+                        <ul>
+                            <!-- Elemento <ul> define uma lista não ordenada. Esta lista é 
+                                usada para enumerar as habilidades de forma clara e organizada. -->
+
+                            <li>HTML5, CSS3, JavaScript</li>
+                            <!-- Primeiro elemento <li> lista as habilidades fundamentais de 
+                                desenvolvimento front-end.
+                                Essas tecnologias são essenciais para a criação de interfaces de 
+                                usuário e são amplamente utilizadas na indústria de web development. -->
+
+                            <li>Node.js, Express.js</li>
+                            <!-- Segundo elemento <li> menciona habilidades de desenvolvimento 
+                                back-end com Node.js e Express.js.
+                                Node.js é uma plataforma de desenvolvimento em JavaScript no 
+                                lado do servidor, enquanto Express.js é um framework para 
+                                construir aplicações web. -->
+
+                            <li>React, Vue.js</li>
+                            <!-- Terceiro elemento <li> destaca conhecimentos em frameworks 
+                                JavaScript modernos para a construção de interfaces de usuário interativas.
+                                React e Vue.js são populares entre os desenvolvedores por 
+                                permitir a criação de aplicações ricas e responsivas. -->
+
+                            <li>MongoDB, MySQL</li>
+                            <!-- Quarto elemento <li> aborda habilidades em bancos de dados.
+                                MongoDB é um banco de dados NoSQL orientado a documentos, e 
+                                MySQL é um sistema de gerenciamento de banco de dados relacional. 
+                                Ambos são cruciais para o armazenamento e a manipulação de dados. -->
+
+                            <li>Git, GitHub</li>
+                            <!-- Quinto elemento <li> refere-se a ferramentas de controle de versão.
+                                Git é um sistema de controle de versão distribuído, e GitHub é 
+                                uma plataforma de hospedagem de código-fonte que utiliza Git. Essas 
+                                ferramentas são fundamentais para a colaboração e gerenciamento de 
+                                código em projetos de desenvolvimento. -->
+
+                            <li>Metodologias Ágeis (Scrum, Kanban)</li>
+                            <!-- Sexto elemento <li> lista as metodologias ágeis conhecidas pela pessoa.
+                                Scrum e Kanban são abordagens para a gestão de projetos de 
+                                software que enfatizam a flexibilidade, a colaboração em equipe, e a 
+                                entrega contínua de valor. -->
+
+                        </ul>
+                    `;
+
+                    // A instrução 'break' é usada para sair da execução do 'switch' após 
+                    // definir o conteúdo para 'habilidades'.
+                    // Isso evita que a execução continue desnecessariamente para outros casos.
+                    break;
+
+                // Caso 'default' da estrutura 'switch'.
+                // Este caso é executado se nenhuma das condições anteriores for atendida.
+                default:
+
+                    // Define a variável 'conteudo' com uma mensagem indicando que a página
+                    // solicitada não foi encontrada.
+                    conteudo = '<h2>Página não encontrada</h2><p>A página solicitada não existe.</p>';
+
+                    // Encerra a execução do bloco 'default' para evitar processamento adicional.
+                    break;
+
+            }
+
+            // Atualiza o conteúdo interno da seção de conteúdo no HTML com o novo 
+            // conteúdo gerado baseado na seleção do usuário.
+            secao.innerHTML = conteudo;
+        }
+    
+        // Carregar página inicial por padrão
+        mostrarPagina('inicio');
+        
+    </script>
+    
+
+</body>
+</html>
+
+<!--
+O código é um exemplo completo de uma página web 
+que utiliza HTML, CSS e JavaScript para criar um currículo online 
+interativo. Vou explicar cada seção e como elas trabalham juntas para 
+criar uma experiência dinâmica e responsiva:
+
+Estrutura HTML
+1. <!DOCTYPE html>
+
+Essa declaração define o documento como HTML5, que é a versão mais 
+recente e suportada de HTML. Isso ajuda o navegador a interpretar 
+corretamente o conteúdo da página.
+
+2. <html lang="pt-br">
+
+O elemento <html> é o elemento raiz de um documento HTML. O atributo 
+lang="pt-br" especifica que o idioma principal do documento é o português 
+do Brasil. Isso é importante para acessibilidade e SEO.
+
+Cabeçalho <head>
+3. Meta tags
+
+<meta charset="UTF-8"> especifica a codificação de caracteres UTF-8, 
+suportando uma ampla gama de caracteres e símbolos.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+configura a viewport para garantir que o layout seja ajustado de acordo 
+com o tamanho do dispositivo, o que é essencial para design responsivo.
+
+4. <title>Meu Currículo Profissional</title>
+
+Define o título da página, que aparece na aba do navegador. Isso é 
+útil para SEO e para que os usuários saibam qual página está aberta.
+
+Estilos Internos <style>
+
+5. Estilos CSS
+
+Define os estilos para os elementos da página. Por exemplo, o estilo 
+do <body>, <header>, <nav>, e links (`a`). Estes estilos controlam a 
+apresentação visual como cores de fundo, alinhamento de texto, 
+padding (preenchimento interno), e muito mais, contribuindo para a 
+aparência geral e a usabilidade do site.
+
+Corpo do Documento <body>
+
+6. <header>
+
+Contém informações introdutórias como o nome e a profissão da pessoa. 
+É usado para dar destaque às informações principais no topo da página.
+
+7. <nav>
+
+Fornece a navegação principal do site. Os links (representados pelas 
+tags <a>) permitem que o usuário navegue por diferentes seções do 
+currículo (Início, Experiência, Educação, Habilidades), que são 
+carregadas dinamicamente.
+
+8. <section id="conteudo">
+
+Este elemento atua como um contêiner para o conteúdo que é carregado 
+dinamicamente. Inicialmente, pode mostrar uma mensagem de carregamento ou 
+instrução, e seu conteúdo é substituído conforme as opções de navegação 
+são selecionadas pelos usuários.
+
+JavaScript
+
+9. Script para Manipulação do Conteúdo
+
+Um script JavaScript está definido no final do corpo para 
+manipular a navegação interativa:
+
+A função mostrarPagina(pagina) é chamada quando os links são 
+    clicados. Ela usa um switch para determinar qual conteúdo 
+    carregar baseado no parâmetro pagina.
+
+Cada caso no switch ('inicio', 'experiencia', 'educacao', 'habilidades') 
+    define o conteúdo HTML que será inserido no elemento <section id="conteudo">.
+
+Um caso 'default' é usado para manejar situações onde a página solicitada não é 
+    reconhecida, mostrando uma mensagem de erro.
+
+Funcionamento Dinâmico
+
+10. Carregamento Inicial da Página
+
+Após a definição da função mostrarPagina, ela é chamada com o 
+    argumento 'inicio' para preencher a seção de conteúdo assim que a 
+    página for carregada. Isso garante que haja conteúdo visível imediatamente, 
+    melhorando a experiência do usuário e evitando uma seção de conteúdo em branco.
+
+Resumo
+Este código combina estruturas HTML, estilos CSS e lógica JavaScript para criar 
+uma página de currículo profissional interativa. O design responsivo e a navegação 
+dinâmica permitem que a página funcione bem em diferentes dispositivos e tamanhos 
+de tela, enquanto oferece uma experiência de usuário suave e acessível.
+
+-->

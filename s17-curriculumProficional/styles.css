@@ -1,0 +1,461 @@
+body, html {
+    /* Esta regra se aplica aos elementos <body> e <html>. Ao 
+    definir estilos nestes elementos, você afeta a página 
+    inteira, já que <html> é a raiz de todo o documento e
+     <body> contém todo o conteúdo visível. */
+
+    height: 100%;
+    /* Define a altura desses elementos como 100% da altura 
+    da janela de visualização (viewport). Isso é útil para 
+    garantir que os elementos ocupem todo o espaço vertical 
+    disponível, especialmente útil em layouts flexíveis ou 
+    quando você deseja que um componente tenha pelo menos a a
+    ltura total da tela. */
+
+    margin: 0;
+    /* Define a margem exterior de <body> e <html> como 0. 
+    Margens são usadas para criar espaço em torno dos elementos, 
+    separando-os dos outros elementos. Ao definir para 0, remove-se 
+    qualquer espaço padrão que esses elementos teriam ao redor deles, 
+    permitindo que o conteúdo se estenda até as bordas da tela. */
+
+    padding: 10px;
+    /* Define o padding (espaço interno) de <body> e <html> para 10px. 
+    Padding aumenta o espaço entre o conteúdo de um elemento e suas 
+    bordas internas. Aqui, garante que o conteúdo não toque as bordas 
+    da janela do navegador, proporcionando um pequeno espaço ao redor 
+    de todo o conteúdo da página. */
+
+    font-family: 'Roboto', sans-serif;
+    /* Define a família de fontes para o texto da página. 'Roboto' é o 
+    nome da fonte, e 'sans-serif' é o fallback ou substituto. Se a fonte 
+    'Roboto' não estiver disponível, o navegador usará uma fonte sans-serif 
+    padrão. Sans-serif é um estilo de fonte que não possui pequenos 
+    traços (serifs) no final das letras, frequentemente usado por sua 
+    legibilidade em telas digitais. */
+
+    box-sizing: border-box;
+    /* Altera o modelo de caixa padrão para border-box. Com esta 
+    propriedade, a largura e a altura de um elemento incluem o padding e a 
+    borda, mas não a margem. Isso facilita o dimensionamento de elementos, 
+    pois ao definir uma largura ou altura, você não precisa se preocupar com o 
+    padding ou a borda aumentando o tamanho do elemento além do que 
+    você especificou. */
+
+    display: flex;
+    /* Define o modelo de layout para flexbox, que é um método para 
+    alinhar e distribuir espaço entre os itens de um contêiner (neste caso, 
+    <body> e <html>), mesmo quando seus tamanhos são desconhecidos ou 
+    dinâmicos. Flexbox facilita o desenvolvimento de layouts responsivos e 
+    complexos com menos código. */
+
+    justify-content: center;
+    /* Esta propriedade alinha os itens filhos (itens dentro de <body> e 
+    <html> se houver outros contêineres flex) horizontalmente e centraliza-os 
+    no meio do contêiner. É útil para centralizar conteúdo dentro de uma página. */
+
+    align-items: flex-start;
+    /* Alinha os itens filhos verticalmente ao topo do contêiner. Isso é 
+    usado quando você quer que o conteúdo comece do topo do contêiner e 
+    não esteja centralizado ou alinhado ao fundo. */
+
+    background: #f4f4f4;
+    /* Define a cor de fundo de <body> e <html>. '#f4f4f4' é uma cor 
+    cinza clara, que é suave para os olhos e serve como um bom fundo 
+    neutro para a maioria dos designs. */
+
+}
+
+
+.curriculo {
+    /* Esta regra CSS se aplica a qualquer elemento HTML que tenha a 
+        classe 'curriculo' atribuída a ele. A classe é usada para 
+        estilizar especificamente os elementos que representam o 
+        currículo de uma pessoa. */
+
+    display: flex;
+    /* Define o modelo de layout do contêiner para flexbox. Flexbox é 
+        um método de layout que permite o alinhamento fácil e a distribuição 
+        do espaço entre itens em um contêiner, mesmo quando seus tamanhos 
+        são desconhecidos ou dinâmicos. É particularmente útil para 
+        layouts responsivos. */
+
+    width: 80%;
+    /* Define a largura do elemento para 80% da largura do contêiner pai. 
+        Isso faz com que o elemento 'curriculo' ocupe a maior parte, mas 
+        não todo, do espaço horizontal disponível, permitindo algum espaço em 
+        torno das bordas do contêiner pai. */
+
+    min-height: 80vh;
+    /* Define a altura mínima do elemento para 80% da altura da janela de 
+        visualização (viewport height - vh). Isso garante que o currículo 
+        tenha uma presença substancial na tela, ocupando a maior parte da 
+        altura disponível, mas ajustando-se para ser um pouco menor do que a 
+        tela inteira se necessário. */
+
+    color: #333;
+    /* Define a cor do texto dentro do elemento 'curriculo' para um cinza 
+    escuro (#333). Esta cor é frequentemente escolhida por sua legibilidade e 
+    contraste moderado, que é agradável aos olhos contra fundos mais claros. */
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* Aplica uma sombra ao redor do elemento para criar uma sensação de 
+    profundidade, fazendo o currículo se destacar do resto da página. A 
+    sombra é sutil, usando preto com 10% de opacidade (rgba(0,0,0,0.1)), e 
+    se espalha ligeiramente para baixo e para os lados (4px para 
+    baixo, 8px de dispersão). */
+
+    margin-top: 10px;
+    /* Define a margem superior do elemento para 10 pixels. Isso empurra o 
+    currículo um pouco para baixo a partir do topo do seu contêiner pai ou 
+    do elemento anterior na página, criando um espaço visual que ajuda a 
+    separar visualmente as seções da página. */
+}
+
+
+.painel-esquerdo {
+    /* Esta regra CSS aplica-se a qualquer elemento HTML que tenha a 
+        classe 'painel-esquerdo' atribuída a ele. Esta classe é 
+        geralmente usada para estilizar um painel ou seção que está 
+        posicionado no lado esquerdo de um layout maior. */
+
+    background-color: #082e45;
+    /* Define a cor de fundo do elemento para um azul médio (#48a1d9). Essa 
+        cor vibrante pode ajudar a distinguir o painel esquerdo de outras 
+        seções da página, criando um contraste visual que facilita a 
+        navegação e a leitura. */
+
+    color: white;
+    /* Define a cor do texto dentro do elemento 'painel-esquerdo' para 
+        branco. O contraste do texto branco sobre o fundo azul é bastante 
+        alto, o que melhora a legibilidade e a acessibilidade visual. */
+
+    padding: 40px;
+    /* Aplica um espaço interno (padding) de 40 pixels em todos os lados do 
+        elemento. Isso significa que todo o conteúdo dentro do 'painel-esquerdo' 
+        terá um espaçamento de 40 pixels da borda do elemento, criando uma 
+        área respirável que torna o conteúdo mais fácil de interagir e 
+        visualmente agradável. */
+
+    width: 35%;
+    /* Define a largura do elemento para 35% da largura do contêiner pai. 
+        Essa proporção é escolhida para garantir que o painel esquerdo ocupe 
+        uma parte substancial, mas não dominante, do layout horizontal, 
+        equilibrando com outros elementos ou painéis que podem ocupar o 
+        resto do espaço. */
+}
+
+
+.painel-direito {
+    /* Esta regra CSS aplica-se a qualquer elemento HTML que tenha a 
+        classe 'painel-direito'. Esta classe é tipicamente usada 
+        para estilizar o painel ou seção que está posicionado no lado 
+        direito de um layout maior, complementando o 'painel-esquerdo'. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo do elemento para um cinza claro (#f0f0f0). 
+        Esta cor suave é frequentemente usada em designs para criar um 
+        ambiente visual calmo e neutro, facilitando a leitura e a 
+        visualização de outros elementos coloridos ou conteúdos. */
+
+    color: #333;
+    /* Define a cor do texto dentro do elemento 'painel-direito' para um 
+        cinza escuro (#333). Esta cor oferece um contraste suficiente 
+        contra o fundo cinza claro, o que ajuda na legibilidade e na 
+        acessibilidade visual. */
+
+    padding: 40px;
+    /* Aplica um espaço interno (padding) de 40 pixels em todos os 
+        lados do elemento. Isso cria uma área respirável ao redor do 
+        conteúdo dentro do 'painel-direito', aumentando a facilidade de 
+        leitura e interação com o conteúdo. */
+
+    width: 65%;
+    /* Define a largura do elemento para 65% da largura do contêiner 
+        pai. Esta proporção maior em comparação com o 'painel-esquerdo' 
+        sugere que este lado pode conter mais conteúdo ou detalhes mais 
+        extensos, mantendo um equilíbrio visual no layout geral. */
+
+}
+
+
+.perfil img {
+    /* Esta regra se aplica a elementos de imagem (<img>) dentro de 
+            qualquer elemento com a classe 'perfil'. É comum usar esta 
+            classe para estilizar imagens que representam fotos de perfil, 
+            como em uma página de currículo ou rede social. */
+
+    width: 100px;
+    /* Define a largura da imagem para 100 pixels. Este tamanho é adequado 
+            para exibir fotos de perfil que são claramente visíveis sem 
+            ocupar muito espaço na tela, mantendo o layout limpo e organizado. */
+
+    height: 100px;
+    /* Define a altura da imagem igual à largura, criando uma dimensão 
+            quadrada. Esta proporção é ideal para manter a integridade da 
+            forma da imagem, especialmente útil para fotos de perfil onde a 
+            proporção quadrada é comum. */
+
+    border-radius: 50%;
+    /* Aplica um raio de borda de 50%, transformando a imagem em uma forma 
+            circular. Esta propriedade é frequentemente usada para criar 
+            avatares ou fotos de perfil circulares, que são esteticamente 
+            agradáveis e modernas. */
+
+    margin-top: 90px;
+    /* Adiciona uma margem superior de 90 pixels. Esta margem cria um 
+            espaço significativo entre a imagem e os elementos acima dela, 
+            evitando que a imagem fique visualmente colada a outros conteúdos, o 
+            que melhora a apresentação geral do perfil. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels. Isso separa a imagem de 
+            outros conteúdos abaixo dela, ajudando a manter uma clara distinção 
+            visual entre diferentes seções de conteúdo dentro do perfil. */
+
+}
+
+
+.perfil h1 {
+    /* Esta regra se aplica ao elemento de cabeçalho (<h1>) dentro de 
+            qualquer elemento com a classe 'perfil'. O <h1> é geralmente 
+            usado para o nome da pessoa no perfil, destacando-o como o elemento 
+            mais importante na hierarquia de conteúdo. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte para 24 pixels. Este tamanho é suficientemente 
+            grande para chamar atenção para o nome da pessoa, tornando-o 
+            imediatamente visível ao abrir o perfil, mas sem sobrecarregar 
+            visualmente a área de exibição. */
+
+    margin: 0;
+    /* Remove todas as margens externas do elemento <h1>. Isso é útil para 
+            controlar o espaçamento ao redor do nome de forma mais precisa, 
+            evitando espaços inesperados que podem afetar o layout e a 
+            estética geral do perfil. */
+
+}
+
+
+.perfil p {
+    /* Esta regra se aplica a todos os elementos de parágrafo (<p>) 
+            dentro de qualquer elemento com a classe 'perfil'. Esses 
+            parágrafos geralmente contêm informações adicionais como o 
+            título profissional ou uma breve bio na seção de perfil 
+            de uma página. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para 18 pixels. Este tamanho é ideal 
+            para texto descritivo que precisa ser claramente legível, mas 
+            não tão grande quanto um título, mantendo o texto proporcionalmente 
+            equilibrado com outros elementos de texto como cabeçalhos. */
+
+    margin: 0;
+    /* Remove todas as margens externas do elemento, tanto do topo quanto 
+            dos lados. Isso ajuda a controlar o espaçamento ao redor do 
+            texto de forma mais precisa, evitando grandes lacunas indesejadas 
+            que podem distorcer o layout. */
+
+    margin-bottom: 20px;
+    /* Especificamente, adiciona uma margem inferior de 20 pixels. Esta 
+            margem separa o parágrafo de outros conteúdos que podem vir 
+            abaixo dele, garantindo que haja espaço suficiente para que o 
+            texto não pareça amontoado ou colado a outros elementos. */
+
+}
+
+
+.informacoes-contato h2, .habilidades h2, .experiencia h2, .educacao h2 {
+    /* Esta regra se aplica aos elementos de cabeçalho de nível dois (<h2>) 
+            dentro dos elementos que possuem as classes 'informacoes-contato', 
+            'habilidades', 'experiencia' e 'educacao'. Cada cabeçalho serve 
+            como um título para as respectivas seções, ajudando a organizar 
+            visualmente a informação e a criar uma hierarquia clara na página. */
+
+    font-size: 20px;
+    /* Define o tamanho da fonte para 20 pixels. Este tamanho é adequado para 
+            cabeçalhos secundários, garantindo que sejam destacados sem 
+            competir com o cabeçalho principal da seção. */
+
+    border-bottom: 2px solid white;
+    /* Adiciona uma borda inferior sólida branca de 2 pixels. Esta borda serve 
+            como um divisor visual, ajudando a separar o título das informações 
+            que seguem abaixo, criando uma clara distinção e melhorando a 
+            organização visual da seção. */
+
+    padding-bottom: 10px;
+    /* Adiciona um espaço interno (padding) de 10 pixels na parte inferior 
+            do cabeçalho. Isso cria um pequeno espaço entre o texto do 
+            cabeçalho e a borda, melhorando a estética e evitando que o 
+            texto pareça estar colado à borda. */
+
+    margin-top: 40px;
+    /* Define uma margem superior de 40 pixels. Esta margem ajuda a 
+            separar visualmente o cabeçalho das seções ou conteúdos que o 
+            precedem, garantindo que haja espaço suficiente para que a 
+            seção não pareça amontoada. */
+
+    display: flex;
+    /* Define o modelo de exibição para flexbox. Flexbox é usado aqui para 
+            facilitar o alinhamento dos itens dentro do cabeçalho, como ícones 
+            ou pequenos textos adicionais, proporcionando flexibilidade e 
+            controle sobre a disposição dos elementos. */
+
+    align-items: center;
+    /* Alinha os itens dentro do cabeçalho verticalmente ao centro. Isso é 
+            útil quando o cabeçalho contém elementos de diferentes alturas, 
+            como texto e ícones, garantindo que todos os itens estejam 
+            centralizados e coesos, proporcionando um visual limpo e ordenado. */
+
+}
+
+
+.informacoes-contato h2 i, .habilidades h2 i, .experiencia h2 i, .educacao h2 i {
+    /* Esta regra aplica-se aos elementos <i> (geralmente usados para ícones) 
+            dentro dos elementos <h2> nas classes 'informacoes-contato', 
+            'habilidades', 'experiencia' e 'educacao'. Ícones dentro dos 
+            cabeçalhos ajudam a visualizar o tipo de informação ou seção 
+            que o texto representa. */
+
+    margin-right: 10px;
+    /* Adiciona uma margem à direita de 10 pixels ao elemento <i>. Esta 
+            margem separa o ícone do texto do cabeçalho, proporcionando 
+            espaço suficiente para evitar que o texto e o ícone pareçam 
+            colados um ao outro, melhorando a legibilidade e a estética visual. */
+}
+
+
+.informacoes-contato ul, .habilidades ul {
+    /* Esta regra aplica-se a todos os elementos de lista não ordenada (<ul>) 
+            dentro dos elementos com as classes 'informacoes-contato' e 
+            'habilidades'. Listas nestas seções são comumente usadas para 
+            organizar informações de contato e habilidades de forma 
+            clara e ordenada. */
+
+    list-style-type: none;
+    /* Remove qualquer marcador padrão (como discos, círculos ou quadrados) 
+            que normalmente apareceriam antes dos itens de lista (<li>). Isso é 
+            usado para criar listas mais limpas e mais estilizadas que não 
+            requerem marcadores visuais tradicionais. */
+
+    padding: 0;
+    /* Remove o padding padrão do <ul>, que é o espaço dentro da lista que 
+            afeta onde os itens da lista começam horizontalmente. Isso garante 
+            que os itens da lista alinhem-se diretamente com outros conteúdos da 
+            seção ou com a borda do contêiner, mantendo um layout uniforme. */
+
+}
+
+
+.informacoes-contato li, .habilidades li {
+    /* Esta regra se aplica a todos os itens de lista (<li>) dentro das 
+            seções 'informacoes-contato' e 'habilidades'. Estes itens de 
+            lista contêm elementos específicos como detalhes de contato e 
+            habilidades listadas, respectivamente. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16 pixels, garantindo que o texto seja 
+            suficientemente grande para ser lido facilmente, mas não tão 
+            grande a ponto de parecer desproporcional ou de sobrecarregar o 
+            design da seção. */
+
+    line-height: 1.8;
+    /* Define a altura da linha como 1.8 vezes o tamanho da fonte. Esta 
+            propriedade melhora a legibilidade ao aumentar o espaço vertical 
+            entre linhas de texto, o que é especialmente útil em listas onde 
+            múltiplos itens podem ser lidos em sequência. */
+
+    margin-bottom: 10px;
+    /* Adiciona uma margem inferior de 10 pixels em cada item da lista. Isso 
+            separa visualmente cada item da lista do próximo, evitando que a 
+            lista pareça um bloco de texto contínuo e ajudando a definir claramente a 
+            separação entre os itens. */
+}
+
+
+.experiencia h2 {
+    /* Esta regra CSS se aplica aos elementos de cabeçalho de 
+            nível dois (<h2>) dentro de qualquer elemento com a 
+            classe 'experiencia'. Este cabeçalho geralmente serve 
+            como um título para a seção de experiência profissional 
+            de um currículo ou perfil. */
+
+    font-size: 20px;
+    /* Define o tamanho da fonte para 20 pixels. Este tamanho é 
+            ideal para títulos de seção, proporcionando uma clara 
+            hierarquia visual sem dominar a página. */
+
+    border-bottom: 2px solid #cccccc;
+    /* Adiciona uma borda inferior sólida de 2 pixels de espessura na 
+            cor cinza claro (#cccccc). Esta borda serve como um divisor 
+            visual, separando o título do conteúdo da seção abaixo, e 
+            ajuda a integrar o estilo do cabeçalho ao esquema de 
+            cores geral da página. */
+
+    padding-bottom: 10px;
+    /* Aplica 10 pixels de espaçamento interno (padding) na parte 
+            inferior do cabeçalho. Isso cria um espaço entre o texto do 
+            cabeçalho e a borda inferior, melhorando a estética e 
+            facilitando a leitura. */
+
+    margin-top: 40px;
+    /* Define uma margem superior de 40 pixels para o cabeçalho, 
+            criando espaço entre este e quaisquer elementos acima 
+            dele, garantindo que a seção não pareça apertada e 
+            mantendo o layout organizado. */
+
+    display: flex;
+    /* Define o modelo de exibição do cabeçalho para flexbox, o que 
+            facilita o alinhamento dos itens dentro do cabeçalho, como 
+            ícones ou outros elementos de texto. */
+
+    align-items: center;
+    /* Alinha os itens dentro do cabeçalho verticalmente ao centro. Isso 
+            garante que todos os elementos, independentemente de sua 
+            altura, sejam centralizados, criando uma aparência 
+            uniforme e equilibrada. */
+
+}
+
+
+.experiencia p {
+    /* Esta regra se aplica a todos os elementos de parágrafo (<p>) 
+            dentro da classe 'experiencia'. Parágrafos nesta seção 
+            contêm descrições de experiências profissionais passadas, 
+            responsabilidades de trabalho, etc. */
+
+    margin: 20px 0;
+    /* Define as margens superior e inferior para 20 pixels, mantendo as 
+            margens laterais como 0. Isso assegura um espaçamento vertical 
+            adequado entre parágrafos consecutivos e outros elementos, 
+            ajudando a manter o conteúdo claramente separado e 
+            fácil de seguir. */
+
+    line-height: 1.5;
+    /* Ajusta a altura da linha para 1.5 vezes o tamanho da fonte 
+            padrão do parágrafo. Este espaçamento entre linhas melhora a 
+            legibilidade, especialmente em blocos de texto mais densos, ao 
+            permitir que o olho distinga facilmente entre linhas de texto. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16 pixels, que é suficientemente 
+            grande para ser lido confortavelmente sem exigir esforço, 
+            adequado para descrições detalhadas. */
+
+}
+
+
+.fa-project-diagram, .fa-certificate, .fa-trophy {
+    /* Esta regra se aplica a elementos que usam as classes Font 
+            Awesome '.fa-project-diagram', '.fa-certificate', e '.fa-trophy'. 
+            Esses ícones são usados para adicionar contexto visual às 
+            seções de projetos, certificações e conquistas, respectivamente. */
+
+    margin-right: 10px;
+    /* Adiciona uma margem à direita de 10 pixels. Isso separa visualmente os 
+            ícones do texto associado, garantindo que eles não fiquem 
+            visualmente colados ao texto e facilitando a identificação de 
+            cada seção por meio dos ícones. */
+            
+}
+

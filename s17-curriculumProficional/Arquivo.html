@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- Declara que o documento é um HTML5, que é a versão 
+    mais recente do HTML. -->
+
+<html lang="pt">
+<!-- Abre o documento HTML e define o idioma do conteúdo do 
+    documento como português. -->
+
+<head>
+<!-- A tag <head> é usada para conter informações sobre o documento, 
+    como metadados, links para CSS e títulos. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para o documento como UTF-8, 
+        que suporta quase todos os caracteres e símbolos do mundo. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Assegura que o site será visualizado adequadamente em todos os 
+        dispositivos, ajustando a largura da página para a largura do 
+        dispositivo e definindo a escala inicial (zoom) para 1. -->
+
+    <title>Currículo de João Silva</title>
+    <!-- Define o título da página, que é o texto exibido na aba do navegador. 
+            Neste caso, é "Currículo de João Silva". -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Importa o Font Awesome, uma biblioteca de ícones, que permite o 
+            uso de ícones diversos no HTML através das classes CSS fornecidas. -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importa a fonte 'Roboto' do Google Fonts com dois pesos 
+        diferentes (400 e 700). 'display=swap' faz com que o texto seja 
+        exibido com uma fonte padrão até que a fonte externa seja carregada. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link para um arquivo CSS externo chamado 'styles.css', que contém 
+        estilos personalizados para a página. -->
+
+</head>
+<!-- Encerra a tag <head>. -->
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível de uma página web, 
+    como texto, imagens, links, etc. -->
+
+    <div class="curriculo">
+    <!-- Cria uma divisão ou seção na página web. A classe "curriculo" 
+        pode ser usada para aplicar estilos específicos a esta seção 
+        através do CSS. -->
+
+        <div class="painel-esquerdo">
+        <!-- Outra divisão que representa uma seção ou painel à esquerda 
+                dentro da divisão "curriculo". A classe "painel-esquerdo" é 
+                usada para estilização específica. -->
+
+            <div class="perfil">
+            <!-- Uma divisão que contém o perfil, para exibir 
+                    informações pessoais de um indivíduo. A classe "perfil" é 
+                    usada para aplicar estilos específicos a esta seção. -->
+
+                <img src="perfil.png" alt="João Silva">
+                <!-- Elemento de imagem que mostra uma foto. 'src' indica o 
+                    caminho do arquivo da imagem e 'alt' fornece texto alternativo 
+                    que descreve a imagem, útil para acessibilidade e quando a 
+                    imagem não pode ser carregada. -->
+
+                <h1>João Silva</h1>
+                <!-- Cabeçalho de nível 1 que exibe o nome "João Silva". É geralmente 
+                    usado para títulos ou nomes importantes na página. -->
+
+                <p>Diretor Executivo</p>
+                <!-- Parágrafo que descreve o título ou a posição ocupada pela pessoa, 
+                    neste caso, "Diretor Executivo". -->
+
+            </div>
+            <!-- Encerra a divisão "perfil". -->
+
+            <div class="informacoes-contato">
+            <!-- Cria uma divisão específica para informações de contato, 
+                utilizando a classe "informacoes-contato" para potencial 
+                estilização CSS. -->
+
+                <h2><i class="fas fa-phone-alt"></i> Contatos</h2>
+                <!-- Cabeçalho de nível 2 para a seção de contatos. Dentro do 
+                    cabeçalho, há um elemento <i> que utiliza uma classe do Font 
+                    Awesome ('fas fa-phone-alt') para exibir um ícone de telefone, 
+                    adicionando um elemento visual ao texto "Contatos". -->
+
+                <ul>
+                <!-- Inicia uma lista não ordenada, que é usada para agrupar itens 
+                    relacionados, neste caso, informações de contato. -->
+
+                    <li><i class="fas fa-envelope"></i> joao.silva@exemplo.com</li>
+                    <!-- O primeiro item da lista, que mostra um ícone de 
+                        envelope (também do Font Awesome) seguido pelo e-mail de 
+                        João Silva. Este formato ajuda a destacar visualmente o tipo 
+                        de informação fornecida. -->
+
+                    <li><i class="fas fa-phone"></i> +55 11 99999-9999</li>
+                    <!-- O segundo item da lista, que mostra um ícone de telefone 
+                        seguido pelo número de telefone. Assim como no primeiro item, o 
+                        ícone ajuda a identificar rapidamente o tipo de contato. -->
+
+                    <li><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123, São Paulo, SP</li>
+                    <!-- O terceiro item da lista, que apresenta um ícone de localização 
+                        seguido pelo endereço. Este padrão de ícone seguido por texto é 
+                        consistente em toda a lista, facilitando a navegação e a 
+                        compreensão do usuário. -->
+
+                </ul>
+                <!-- Encerra a lista não ordenada. -->
+
+            </div>
+            <!-- Encerra a divisão "informacoes-contato". -->
+
+            <div class="habilidades">
+            <!-- Cria uma divisão para listar habilidades, usando a 
+                classe "habilidades" que pode ser usada para aplicar 
+                estilos específicos através do CSS. -->
+
+                <h2><i class="fas fa-star"></i> Habilidades</h2>
+                <!-- Cabeçalho de nível 2 para a seção de habilidades. Inclui um 
+                    ícone de estrela (usando a classe do Font Awesome 'fas fa-star') 
+                    antes do texto "Habilidades", adicionando um elemento visual 
+                    que destaca o título da seção. -->
+
+                <ul>
+                <!-- Inicia uma lista não ordenada para relacionar as habilidades de 
+                    forma clara e organizada. -->
+
+                    <li>Gestão de equipe</li>
+                    <!-- O primeiro item da lista, que destaca a habilidade em 
+                        "Gestão de equipe". Listar habilidades dessa forma torna a 
+                        informação clara e fácil de ler. -->
+
+                    <li>Desenvolvimento estratégico</li>
+                    <!-- O segundo item da lista, mencionando "Desenvolvimento 
+                        estratégico" como uma habilidade, importante em contextos de 
+                        planejamento e execução de estratégias em negócios ou projetos. -->
+
+                    <li>Comunicação eficaz</li>
+                    <!-- O terceiro item da lista, "Comunicação eficaz", uma 
+                        habilidade crucial em quase todos os campos profissionais, 
+                        enfatizando a capacidade de comunicar ideias de maneira 
+                        clara e eficiente. -->
+
+                </ul>
+                <!-- Encerra a lista não ordenada. -->
+
+            </div>
+            <!-- Encerra a divisão "habilidades". -->
+
+        </div>
+        <!-- Encerra a divisão "painel-esquerdo" -->
+
+        <div class="painel-direito">
+        <!-- Esta 'div' (divisão) cria um bloco ou uma seção na página que pode 
+            ser estilizado separadamente dos outros elementos. A classe "painel-direito" 
+            sugere que esta divisão é o lado direito de uma estrutura maior, em 
+            conjunto com um "painel-esquerdo" correspondente. Esta classe pode ser 
+            usada no CSS para aplicar estilos como cor de fundo, margens, padding, etc.,
+             especificamente para esta parte do layout. -->
+
+            <div class="experiencia">
+            <!-- Outra 'div', que está aninhada dentro da 'div' anterior. Ela 
+                especifica uma seção dedicada às experiências profissionais do 
+                indivíduo cujo currículo está sendo apresentado. A classe "experiencia" 
+                será usada no CSS para definir a aparência dessa seção, como o tamanho da 
+                fonte, o estilo e a cor do texto. -->
+
+                <h2><i class="fas fa-briefcase"></i> Experiência</h2>
+                <!-- 'h2' indica um cabeçalho de nível 2, que é usado para títulos dentro 
+                    de uma página. Cabeçalhos ajudam na organização do conteúdo e são 
+                    importantes para SEO (Otimização para motores de busca) e acessibilidade. 
+                    O elemento '<i>' com a classe "fas fa-briefcase" usa a biblioteca Font 
+                    Awesome para exibir um ícone estilizado de uma maleta, que é comumente 
+                    associado a trabalho e carreira, ajudando visualmente a identificar o 
+                    tema da seção. -->
+
+                <p><strong>Empresa X</strong> - CEO<br>Jan 2010 - Presente</p>
+                <!-- Este 'p' representa um parágrafo, que é usado para texto corrido. 
+                    Aqui, ele detalha um cargo específico ocupado pela pessoa. A tag '<strong>' é 
+                    usada para fazer o nome "Empresa X" aparecer em negrito, destacando-o do 
+                    resto do texto, o que ajuda na leitura rápida. A tag '<br>' é usada para 
+                    inserir uma quebra de linha no texto, separando o título do cargo da sua 
+                    duração, para clareza visual. -->
+
+                <p>Descrição das atividades...</p>
+                <!-- Outro parágrafo que oferece um lugar para adicionar uma descrição 
+                    detalhada das responsabilidades e realizações no cargo mencionado acima. 
+                    O uso de mais detalhes aqui ajuda a pessoa que lê o currículo a entender 
+                    melhor o tipo de trabalho realizado e as habilidades demonstradas durante 
+                    esse período. -->
+
+        </div>
+        <!-- Fecha a 'div' com classe "experiencia", indicando o fim da seção de 
+                experiência profissional. -->
+
+        
+
+        <div class="educacao">
+        <!-- Esta 'div' cria uma seção dedicada à educação dentro do currículo. 
+            A classe "educacao" pode ser usada para aplicar estilos específicos 
+            através do CSS, como cores, fontes, e espaçamento, destacando 
+            essa seção como importante no layout geral. -->
+
+            <h2><i class="fas fa-university"></i> Educação</h2>
+            <!-- 'h2' é usado para um cabeçalho de nível 2, que é importante 
+                para a estrutura da página, ajudando na navegação e SEO. O ícone 
+                de uma universidade (usando a classe Font Awesome 'fas fa-university') 
+                é exibido antes do texto "Educação", associando visualmente o 
+                conteúdo da seção com instituições educacionais. -->
+
+            <p><strong>Universidade Y</strong> - Bacharelado em Administração de Empresas<br>2005 - 2009</p>
+            <!-- Este parágrafo detalha a educação formal adquirida. 'Universidade Y' 
+                está destacada em negrito (usando a tag '<strong>') para enfatizar o 
+                nome da instituição. A tag '<br>' é usada para uma quebra de linha, 
+                separando o grau obtido das datas de frequência, facilitando a 
+                leitura rápida e clara das informações. -->
+
+        </div>
+        <!-- Encerra a 'div' de educação, marcando o fim desta seção específica. -->
+
+        <div class="projetos">
+        <!-- Uma nova 'div' começa aqui para listar projetos significativos ou 
+                experiência em projeto. A classe "projetos" permite a aplicação 
+                de estilos CSS específicos, como alinhamento e cor, para 
+                diferenciar esta seção das outras. -->
+
+            <h2><i class="fas fa-project-diagram"></i> Projetos</h2>
+            <!-- Um cabeçalho de nível 2 para a seção de projetos. Inclui um 
+                ícone de diagrama de projeto (usando Font Awesome 'fas fa-project-diagram'), 
+                que visualmente sugere planejamento e execução de projetos, ajudando a 
+                identificar o tema da seção. -->
+
+            <p><strong>Projeto Alpha</strong> - Gerente de Projeto<br>2012 - Presente</p>
+            <!-- Este parágrafo descreve um projeto específico. 'Projeto Alpha' está 
+                em negrito para ressaltar o nome do projeto. A posição 'Gerente de 
+                Projeto' e as datas são separadas por uma quebra de linha ('<br>'), 
+                organizando a informação de forma clara. -->
+
+            <p>Descrição detalhada do projeto, resultados alcançados e impacto no negócio.</p>
+            <!-- Outro parágrafo fornece detalhes adicionais sobre o projeto, 
+                descrevendo o que foi feito, quais resultados foram alcançados e o 
+                impacto desses resultados. Esta informação ajuda a demonstrar 
+                competências e sucesso na gestão de projetos. -->
+
+        </div>
+        <!-- Fecha a 'div' dos projetos, delimitando o fim desta seção no documento. -->
+
+        <div class="certificacoes">
+        <!-- Esta 'div' cria uma seção dedicada às certificações 
+            profissionais do indivíduo. A classe "certificacoes" pode ser 
+            usada para aplicar estilos específicos por meio do CSS, 
+            diferenciando esta seção das demais no layout do currículo. -->
+
+            <h2><i class="fas fa-certificate"></i> Certificações</h2>
+            <!-- Um cabeçalho de nível 2 para a seção de certificações. Inclui 
+                um ícone de certificado (usando a classe Font Awesome 'fas fa-certificate'), 
+                que simboliza visualmente as qualificações e certificações formais, 
+                ajudando a identificar rapidamente o tema da seção. -->
+
+            <p><strong>Certificação PMP</strong> - Instituto de Gerenciamento de Projetos<br>Emitida em 2015</p>
+            <!-- Um parágrafo descrevendo uma certificação específica. 'Certificação PMP' 
+                está em negrito para destacar o título da certificação. Inclui o nome 
+                da instituição emissora e a data de emissão, separados por uma quebra 
+                de linha ('<br>'), para organizar claramente a informação e 
+                facilitar a leitura. -->
+
+            <p><strong>Certificação Six Sigma Black Belt</strong><br>Emitida em 2017</p>
+            <!-- Outro parágrafo para uma segunda certificação. Similar ao anterior, 
+                utiliza negrito para destacar o nome da certificação e uma quebra de 
+                linha para separar o nome da data de emissão, mantendo a 
+                consistência no formato de apresentação. -->
+
+        </div>
+        <!-- Encerra a 'div' das certificações, indicando o fim desta 
+            seção específica no documento. -->
+
+        <div class="conquistas">
+        <!-- Uma nova 'div' começa aqui, destinada a listar as conquistas 
+            profissionais significativas. A classe "conquistas" permite a 
+            aplicação de estilos específicos, como alinhamento e cor, para 
+            diferenciar esta seção no layout geral. -->
+
+            <h2><i class="fas fa-trophy"></i> Conquistas</h2>
+            <!-- Um cabeçalho de nível 2 para a seção de conquistas. Inclui um 
+                ícone de troféu (usando Font Awesome 'fas fa-trophy'), que é 
+                comumente associado a prêmios e realizações, ajudando a identificar 
+                visualmente o conteúdo da seção. -->
+
+            <p>Prêmio de CEO do Ano em 2018 pela Associação Comercial.</p>
+            <!-- Um parágrafo detalhando uma conquista específica, neste caso um 
+                prêmio recebido. Esta informação ajuda a destacar realizações 
+                importantes e contribui para uma imagem profissional de sucesso. -->
+
+            <p>Reconhecimento como Líder Inspirador em 2019 pela Revista Negócios.</p>
+            <!-- Outro parágrafo descrevendo uma conquista diferente, fornecendo 
+                detalhes sobre um reconhecimento recebido, o que adiciona valor ao 
+                perfil profissional ao mostrar uma variedade de habilidades 
+                reconhecidas externamente. -->
+
+        </div>
+        <!-- Fecha a 'div' das conquistas, delimitando o fim desta 
+                seção no documento. -->
+
+        </div>
+    </div>
+</body>
+</html>
