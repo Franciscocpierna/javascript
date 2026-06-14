@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- A linha acima define o tipo de documento como HTML5. Isso é crucial 
+    para que o navegador entenda que deve usar as regras da versão 
+    mais recente do HTML para interpretar corretamente o conteúdo da página. -->
+
+<html lang="pt-br">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang' especifica a 
+    língua do conteúdo do documento, neste caso, 'pt-br' que significa 
+    português do Brasil. Isso ajuda os navegadores a aplicar regras 
+    linguísticas específicas para acessibilidade ou para exibir o 
+    conteúdo corretamente. -->
+
+<head>
+<!-- A tag <head> contém metadados (dados sobre dados) que geralmente 
+    não são visíveis para os usuários, mas são usados pelos navegadores e 
+    por outras tecnologias web. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta tag <meta> define o conjunto de caracteres usado no 
+        documento como UTF-8, que inclui a maioria dos caracteres usados em 
+        humanos idiomas. Isso garante que qualquer texto no documento seja 
+        exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A tag <meta> com o atributo 'viewport' controla como a página é 
+        dimensionada e visualizada nos diferentes dispositivos. O conteúdo 
+        'width=device-width' faz com que a largura da página corresponda à 
+        largura da tela do dispositivo. 'initial-scale=1.0' define o nível 
+        inicial de zoom quando a página é carregada pela primeira vez. -->
+
+    <title>Álbum de Fotos Interativo</title>
+    <!-- A tag <title> define o título da página, que é mostrado na aba 
+        do navegador. Este título é também usado por motores de busca e pode 
+        ser importante para a SEO (Otimização para motores de busca). -->
+
+    
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Link para uma folha de estilo externa chamada 'estilo.css'. 
+         Este arquivo contém as regras de estilo CSS para a página. -->
+
+</head>
+<body>
+
+    <h2>Meu Álbum de Fotos</h2>
+    <!-- A tag <h2> é usada para títulos de segundo nível em um documento HTML. 
+        "Meu Álbum de Fotos" é o texto do título, que será exibido em um tamanho 
+        de fonte maior para destacar esta seção da página. -->
+
+    <label for="seletorArquivo" style="background-color: #052443; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+        Carregar Imagem
+    </label>
+    <!-- A tag <label> define um rótulo para o elemento de entrada do tipo arquivo (input). 
+        'for="seletorArquivo"': associa o rótulo ao elemento de entrada com o id 'seletorArquivo'.
+        O estilo inline define várias propriedades CSS:
+        'background-color: #1e90ff;': cor de fundo azul escuro para o rótulo.
+        'color: white;': cor do texto branco para contraste com o fundo.
+        'padding: 10px 20px;': espaçamento interno para tornar o rótulo mais legível e fácil de clicar.
+        'border-radius: 5px;': bordas arredondadas para uma estética suave.
+        'cursor: pointer;': muda o cursor para indicar que o rótulo é clicável. -->
+
+    <input type="file" id="seletorArquivo" multiple accept="image/*" style="display: none;">
+    <!-- A tag <input> com tipo 'file' permite aos usuários selecionar arquivos do dispositivo.
+        'id="seletorArquivo"': identifica unicamente este elemento na página.
+        'multiple': permite que múltiplos arquivos sejam selecionados simultaneamente.
+        'accept="image/*"': limita os arquivos aceitos a tipos de imagem.
+        'style="display: none;"': esconde o input real para que possamos usar 
+                um <label> estilizado para interação. -->
+
+    <div id="galeria"></div>
+    <!-- Um contêiner <div> com o id 'galeria', que será usado para exibir as 
+        imagens carregadas. Inicialmente está vazio e será preenchido 
+        dinamicamente via JavaScript. -->
+
+    <div id="modal" onclick="fecharModal()">
+        <!-- A <div> com id 'modal' representa uma janela modal que pode ser 
+                    usada para mostrar uma imagem em destaque ou opções adicionais.
+            'onclick="fecharModal()"': adiciona um manipulador de cliques que 
+                    chama a função 'fecharModal()' quando a área fora da imagem ou do 
+                    botão é clicada, fechando o modal. -->
+        
+        <button onclick="removerImagem(event)">Remover Imagem</button>
+        <!-- Um <button> dentro do modal para permitir a remoção da imagem.
+            'onclick="removerImagem(event)"': chama a função 'removerImagem()', 
+                    passando o evento de clique atual. Isso evita que o evento 
+                    se propague mais, o que fecharia o modal. -->
+        
+        <img src="" alt="">
+        <!-- Uma tag <img> para mostrar a imagem selecionada no modal.
+            'src=""': inicialmente vazio, será definido dinamicamente quando 
+                    uma imagem é clicada.
+            'alt="": um texto alternativo vazio que pode ser preenchido 
+                    dinamicamente para acessibilidade. -->
+        
+        <p class="descricao">Descrição da imagem</p>
+        <!-- Um parágrafo para exibir uma descrição da imagem, que pode ser 
+                    alterada dinamicamente via JavaScript conforme a 
+                    imagem selecionada. -->
+
+    </div>
+
+
+        <script src="configuracoes.js"></script>
+        <!-- A tag <script> é usada para incorporar ou referenciar um script 
+                        externo, neste caso, 'converter.js'.
+            'src' especifica o caminho para o arquivo de script. -->
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+body {
+    /* A regra CSS para o elemento 'body', que afeta todo o 
+        conteúdo dentro do corpo da página. */
+    
+    font-family: Arial, sans-serif;
+    /* 'font-family': Define a família de fontes do texto do 
+        corpo do documento. 'Arial' é uma escolha específica de 
+        fonte sans-serif, enquanto 'sans-serif' é uma família 
+        genérica de fontes que não possuem pequenos traços nas 
+        extremidades das letras, tornando-as ideais para visualização 
+        em telas devido à sua legibilidade. */
+
+}
+
+#galeria {
+    /* A regra CSS para o elemento identificado pelo id 'galeria'. 
+        Estas regras afetarão apenas o elemento HTML que possui o 
+        atributo 'id' com o valor 'galeria'. */
+
+    display: grid;
+    /* 'display: grid': Ativa o modelo de layout de grade para o 
+        elemento 'galeria', permitindo que o conteúdo interno seja 
+        organizado em um layout de grade, que é um método poderoso e 
+        flexível para criar designs complexos de forma intuitiva e eficiente. */
+    
+    grid-template-columns: repeat(3, 1fr);
+    /* 'grid-template-columns': Define como as colunas na grade devem ser 
+        criadas. 'repeat(3, 1fr)' significa criar três colunas de igual 
+        largura. '1fr' é uma fração do espaço disponível, onde cada coluna 
+        receberá um terço do espaço total, garantindo uma distribuição equitativa. */
+    
+    gap: 10px;
+    /* 'gap': Define o espaço entre as células da grade, especificando o 
+        espaçamento entre os elementos horizontal e verticalmente dentro do 
+        layout da grade. '10px' significa que cada célula terá um espaço de 10 
+        pixels em todas as direções, criando uma margem uniforme entre eles para 
+        uma melhor separação visual e um design mais limpo. */
+        
+}
+
+.imagem {
+    /* A classe .imagem é aplicada aos elementos que representam 
+        imagens dentro de uma galeria ou álbum de fotos. */
+
+    position: relative;
+    /* 'position: relative;': Esta propriedade posiciona o elemento de 
+        forma relativa ao seu lugar normal na página. Isso permite que 
+        você ajuste a posição do elemento (e de quaisquer elementos filhos 
+        absolutamente posicionados dentro dele) sem alterar o layout dos 
+        outros elementos. */
+
+    border: 1px solid #ddd;
+    /* 'border: 1px solid #ddd;': Define uma borda sólida de 1 pixel de 
+        espessura ao redor do elemento com a cor #ddd (um cinza claro). Isso 
+        ajuda a destacar visualmente o elemento na página. */
+
+    border-radius: 5px;
+    /* 'border-radius: 5px;': Arredonda os cantos da borda do elemento para 5 
+        pixels de raio, proporcionando uma aparência mais suave e moderna. */
+
+    overflow: hidden;
+    /* 'overflow: hidden;': Esconde qualquer parte do conteúdo do elemento que 
+        exceda seus limites definidos. Isso é útil quando as imagens dentro da 
+        div são maiores que ela, evitando que o conteúdo transborde. */
+
+    cursor: pointer;
+    /* 'cursor: pointer;': Muda o cursor do mouse para uma mãozinha quando ele 
+        passa sobre o elemento, indicando que o elemento é clicável. */
+
+    display: flex;
+    /* 'display: flex;': Estabelece um contexto de flexbox para este elemento. 
+        Flexbox é um modelo de layout que permite um alinhamento fácil de itens 
+        dentro de um contêiner, mesmo quando os tamanhos desses itens são 
+        desconhecidos ou dinâmicos. */
+
+    justify-content: center;
+    /* 'justify-content: center;': Alinha horizontalmente os itens 
+        filhos (dentro do flex container) ao centro. */
+
+    align-items: center;
+    /* 'align-items: center;': Alinha verticalmente os itens filhos (dentro 
+        do flex container) ao centro. */
+
+    flex-direction: column;
+    /* 'flex-direction: column;': Define a direção principal do flex container 
+        como coluna. Isso significa que os itens filhos serão empilhados verticalmente. 
+        Adicionado para colocar a descrição em cima da imagem dentro deste container. */
+
+}
+
+
+.imagem img {
+    /* Esta regra CSS se aplica a qualquer elemento <img> dentro de um 
+        elemento com a classe .imagem. */
+
+    width: 100%;
+    /* 'width: 100%;': Define a largura da imagem para ocupar 100% da largura do 
+        seu contêiner pai (neste caso, .imagem). Isso garante que a imagem se estenda 
+        para cobrir completamente o espaço horizontal disponível. */
+
+    height: 100%;
+    /* 'height: 100%;': Define a altura da imagem para ocupar 100% da altura do 
+        seu contêiner pai. Isso garante que a imagem preencha completamente o espaço 
+        vertical disponível. */
+
+    object-fit: cover;
+    /* 'object-fit: cover;': Garante que a imagem cubra completamente o espaço do 
+        seu contêiner enquanto mantém sua proporção de aspecto, cortando o excesso de 
+        imagem se necessário. Isso é útil para manter a estética das imagens sem 
+        distorcê-las, independentemente das dimensões do contêiner. */
+
+}
+
+#modal {
+
+    /* A regra CSS para o elemento com o id 'modal'. Esta regra 
+    afetará apenas o elemento HTML que possui o atributo 'id' com o 
+    valor 'modal'. Este elemento é geralmente usado como um contêiner 
+    para algo como uma janela modal ou uma sobreposição. */
+    
+    display: none;
+    /* 'display: none;': Inicialmente oculta o elemento 'modal' do 
+    layout da página. Isso significa que o modal não ocupa espaço na 
+    página até ser ativado (exibido). */
+    
+    position: fixed;
+    /* 'position: fixed;': Posiciona o modal em relação à janela do 
+    navegador, fazendo com que ele permaneça no mesmo lugar mesmo 
+    se a página for rolada. */
+    
+    z-index: 1000;
+    /* 'z-index: 1000;': Define a ordem de empilhamento do modal em 
+    relação a outros elementos posicionados. Um valor mais alto 
+    significa que o modal aparecerá sobre outros elementos com um 
+    z-index menor. */
+    
+    left: 0;
+    /* 'left: 0;': Posiciona o modal no extremo esquerdo da janela do navegador. */
+    
+    top: 0;
+    /* 'top: 0;': Posiciona o modal no topo da janela do navegador. */
+    
+    width: 100%;
+    /* 'width: 100%;': Faz o modal estender-se por toda a largura da 
+    janela do navegador. */
+    
+    height: 100%;
+    /* 'height: 100%;': Faz o modal estender-se por toda a altura da 
+    janela do navegador. */
+    
+    background-color: rgba(0, 0, 0, 0.8);
+    /* 'background-color: rgba(0, 0, 0, 0.8);': Define a cor de fundo do 
+    modal como preto com uma opacidade de 80% (0.8). Isso cria um 
+    efeito de escurecimento da área fora do modal, focando a atenção do 
+    usuário para o conteúdo do modal. */
+    
+    align-items: center;
+    /* 'align-items: center;': Alinha verticalmente os itens filhos (dentro 
+    do flex container) ao centro. Útil para centralizar o conteúdo dentro do 
+    modal verticalmente. */
+    
+    justify-content: center;
+    /* 'justify-content: center;': Alinha horizontalmente os itens 
+    filhos (dentro do flex container) ao centro. Útil para centralizar o 
+    conteúdo dentro do modal horizontalmente. */
+    
+    overflow: auto;
+    /* 'overflow: auto;': Permite a rolagem dentro do modal se o conteúdo 
+    exceder o tamanho do modal. Isso garante que todo o conteúdo do modal 
+    possa ser acessado, mesmo em telas menores ou se o conteúdo 
+    for muito grande. */
+    
+}
+    
+#modal img {
+    /* Esta regra CSS aplica-se a qualquer elemento <img> dentro de um 
+    elemento com o id 'modal'. */
+    
+    max-width: 80%;
+    /* 'max-width: 80%;': Restringe a largura máxima da imagem a 80% da 
+    largura do seu contêiner pai. Isso ajuda a garantir que a imagem não 
+    ocupe toda a largura do modal, deixando espaço ao redor para uma 
+    visualização estética. */
+    
+    max-height: 80%;
+    /* 'max-height: 80%;': Restringe a altura máxima da imagem a 80% da 
+    altura do seu contêiner pai. Assim como a largura, isso mantém a 
+    imagem dentro de uma proporção visualmente agradável, garantindo que 
+    ela não ocupe toda a altura do modal. */
+    
+    margin: auto;
+    /* 'margin: auto;': Centraliza a imagem dentro do modal, tanto 
+    vertical quanto horizontalmente. 'auto' ajusta automaticamente as 
+    margens para centrar a imagem. */
+    
+    display: block;
+    /* 'display: block;': Faz com que a imagem seja tratada como um bloco, o 
+    que significa que ela ocupará toda a largura disponível de sua linha no 
+    layout, permitindo o uso eficaz da propriedade 'margin: auto' para 
+    centralização. */
+    
+}
+
+#modal .descricao {
+    /* Esta regra CSS se aplica a elementos com a classe 'descricao' 
+    dentro de um elemento com o id 'modal'. Este é geralmente um 
+    elemento de texto que serve como legenda ou descrição para o 
+    conteúdo do modal. */
+    
+    color: white;
+    /* 'color: white;': Define a cor do texto para branco, garantindo 
+    que o texto seja legível contra um fundo escuro, que é comum em modais. */
+    
+    text-align: center;
+    /* 'text-align: center;': Alinha o texto ao centro do elemento. Isso é 
+    útil para centralizar a descrição dentro do modal, tornando-a mais 
+    harmoniosa e visualmente atraente. */
+    
+    margin-top: 10px;
+    /* 'margin-top: 10px;': Adiciona uma margem superior de 10 pixels, 
+    afastando a descrição do conteúdo acima dela no modal. Isso ajuda a 
+    criar um espaço visual claro entre o conteúdo do modal e a descrição. */
+    
+    position: absolute;
+    /* 'position: absolute;': Posiciona o elemento de forma absoluta em 
+    relação ao seu contêiner posicionado mais próximo (neste caso, #modal), 
+    o que permite um posicionamento preciso. */
+    
+    bottom: 10px;
+    /* 'bottom: 10px;': Posiciona a descrição 10 pixels acima do fundo do 
+    contêiner do modal. Isso é crucial para garantir que a descrição não 
+    fique encostada no fundo, mantendo um espaço consistente. */
+    
+    width: 100%;
+    /* 'width: 100%;': Faz a descrição ocupar toda a largura do contêiner 
+    modal. Essa propriedade é essencial para garantir que a descrição 
+    esteja alinhada uniformemente e ocupe todo o espaço horizontal disponível, 
+    facilitando a leitura e melhorando o layout. */
+    
+}
+    
+#modal button {
+    /* Esta regra se aplica a elementos <button> dentro de um 
+    elemento com o id 'modal'. Botões são usados para ações como 
+    fechar o modal ou realizar uma tarefa específica relacionada ao 
+    conteúdo do modal. */
+    
+    position: absolute;
+    /* 'position: absolute;': Posiciona o botão de forma absoluta dentro do 
+    contêiner do modal, permitindo que ele seja colocado precisamente 
+    dentro do modal, independentemente de outros conteúdos. */
+    
+    top: 10px;
+    /* 'top: 10px;': Posiciona o botão 10 pixels abaixo do topo do modal, 
+    criando um espaço uniforme em torno dele que ajuda a separá-lo 
+    visualmente do restante do conteúdo. */
+    
+    left: 10px;
+    /* 'left: 10px;': Posiciona o botão 10 pixels à esquerda do contêiner do
+     modal. Esta localização é frequentemente usada para botões de 
+     fechamento, pois é facilmente acessível e comumente esperado 
+     pelos usuários. */
+    
+    padding: 10px 20px;
+    /* 'padding: 10px 20px;': Define o preenchimento dentro do botão, 
+    com 10 pixels na vertical e 20 pixels na horizontal. Isso torna o 
+    botão mais fácil de clicar e visualmente mais atraente. */
+    
+    font-size: 16px;
+    /* 'font-size: 16px;': Define o tamanho da fonte do texto dentro do
+    botão para 16 pixels, garantindo que o texto seja grande o suficiente 
+    para ser lido facilmente sem ser excessivamente dominante. */
+    
+    background-color: #1e90ff;
+    /* 'background-color: #1e90ff;': Define a cor de fundo do botão para um 
+    azul escuro (#1e90ff). Esta cor não só proporciona um bom contraste com o 
+    texto branco, mas também dá ao botão uma aparência distinta e atraente. */
+    
+    color: white;
+    /* 'color: white;': Define a cor do texto dentro do botão para branco, 
+    garantindo alta legibilidade contra o fundo azul escuro. */
+    
+    border: none;
+    /* 'border: none;': Remove qualquer borda padrão do botão, criando uma 
+    aparência mais limpa e moderna. */
+    
+    border-radius: 5px;
+    /* 'border-radius: 5px;': Arredonda os cantos do botão, dando-lhe uma 
+    aparência mais suave e amigável. */
+    
+    cursor: pointer;
+    /* 'cursor: pointer;': Muda o cursor para uma mãozinha quando passa 
+    sobre o botão, indicando que o botão é clicável. Isso melhora a 
+    usabilidade, pois informa ao usuário que o elemento é interativo. */
+    
+}
