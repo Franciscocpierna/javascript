@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- Esta linha declara o tipo do documento como HTML5. É 
+    importante para ajudar o navegador a saber que tipo de HTML 
+    esperar e como renderizá-lo corretamente. -->
+
+<html lang="pt-br">
+<!-- A tag <html> é a raiz do documento HTML. Todos os outros 
+    elementos devem ser filhos desta tag. 
+     O atributo 'lang="pt-br"' especifica que o idioma principal 
+     do documento é o português do Brasil. Isso ajuda os navegadores a 
+     fornecer recursos de localização adequados, como correção 
+     ortográfica e acessibilidade. -->
+
+<head>
+    <!-- A tag <head> contém metadados, que são informações sobre os 
+        dados no documento. Esses metadados não são exibidos diretamente na 
+        página web, mas são usados pelo navegador e outros serviços web para 
+        processar a página corretamente. -->
+    
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define o conjunto de 
+        caracteres usado no documento como UTF-8, que suporta quase todos os 
+        caracteres e símbolos do mundo. Isso é importante para exibir 
+        corretamente o texto em vários idiomas e símbolos especiais. -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> que configura a visualização da página nos dispositivos móveis. 
+         'width=device-width' instrui o navegador a ajustar a largura da 
+         página à largura da tela do dispositivo.
+         'initial-scale=1.0' define o nível de zoom inicial quando a 
+         página é carregada pela primeira vez, garantindo que o texto e os 
+         elementos da página sejam legíveis. -->
+    
+    <title>Curso Avançado de Digitação</title>
+    <!-- A tag <title> define o título da página, que é mostrado na aba 
+        do navegador. Este título é útil para os usuários identificarem de 
+        que página se trata quando têm várias abas abertas. -->
+    
+        <link rel="stylesheet" href="estilos.css">
+    <!-- Link para uma folha de estilo externa chamada 'estilo.css'. 
+        Este arquivo contém as regras de estilo CSS para a página. -->
+
+</head>
+
+<!-- Abre a tag <body>, que é usada para encerrar todos os 
+    elementos que serão renderizados na página web, como 
+    texto, imagens, links, etc. -->
+<body>
+
+    <!-- Abre a tag <div> com o ID 'menu'. 'div' é um contêiner 
+        genérico para conteúdo de fluxo, que não possui significado 
+        semântico específico, mas é útil para agrupar elementos para 
+        fins de estilo ou script. O ID 'menu' é usado para identificar 
+        este elemento de forma única dentro do documento. -->
+    <div id="menu">
+
+        <!-- Inclui um cabeçalho de nível 3, <h3>, que é usado aqui 
+            para fornecer um título visível para a seção do menu, neste 
+            caso, 'Níveis de Digitação'. Cabeçalhos são importantes para a 
+            organização do conteúdo e acessibilidade. -->
+        <h3>Níveis de Digitação</h3>
+
+        <!-- Abre a tag <ul>, que define uma lista não ordenada. Este elemento é 
+            usado para agrupar itens que não requerem uma ordem numérica específica. -->
+        <ul>
+
+            <!-- Cada tag <li> define um item da lista. Neste contexto, cada 
+                item da lista contém um link que representa um nível diferente de digitação. -->
+            <li>
+
+                <!-- Abre a tag <a> que cria um hyperlink. Aqui, o atributo 'href="#"' 
+                    indica que o link é um placeholder, o que significa que não leva a 
+                    uma URL específica. O atributo 'onclick' é usado para chamar a função 
+                    JavaScript 'mudarNivel(1)' quando o link é clicado, alterando para o 'Nível 1'. -->
+                <a href="#" onclick="mudarNivel(1)">Nível 1</a>
+
+            </li>
+            <li>
+
+                <!-- Semelhante ao anterior, mas chamando 'mudarNivel(2)', que 
+                    altera para o 'Nível 2'. -->
+                <a href="#" onclick="mudarNivel(2)">Nível 2</a>
+
+            </li>
+            <li>
+                <!-- Chama 'mudarNivel(3)', alterando para o 'Nível 3'. -->
+                <a href="#" onclick="mudarNivel(3)">Nível 3</a>
+            </li>
+            <li>
+                <!-- Chama 'mudarNivel(4)', alterando para o 'Nível 4'. -->
+                <a href="#" onclick="mudarNivel(4)">Nível 4</a>
+            </li>
+            <li>
+                <!-- Chama 'mudarNivel(5)', que é o último nível, alterando para o 'Nível 5'. -->
+                <a href="#" onclick="mudarNivel(5)">Nível 5</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Abre uma <div> com o ID 'conteudo'. Este elemento atua como um 
+        contêiner para agrupar seções de conteúdo relacionadas, tornando 
+        mais fácil aplicar estilos específicos e manipular o conteúdo via 
+        scripts. O ID 'conteudo' identifica unicamente este bloco de 
+        conteúdo dentro da página. -->
+    <div id="conteudo">
+
+        <!-- Inclui um cabeçalho de nível 1, <h1>, que é usado aqui para 
+            fornecer um título principal para a seção, neste caso, 'Curso Avançado 
+            de Digitação'. Os cabeçalhos são cruciais para estruturar o conteúdo e 
+            melhorar a acessibilidade. -->
+        <h1>Curso Avançado de Digitação</h1>
+
+        <!-- Abre outra <div> com o ID 'texto'. Este elemento contém um 
+            texto de orientação ou descrição, 'Escolha um nível para começar.', que 
+            guia o usuário sobre o que fazer a seguir na interface. -->
+        <div id="texto">Escolha um nível para começar.</div>
+
+        <!-- Cria um campo de entrada de texto com o ID 'entrada'. O atributo 'type="text"' 
+                    especifica que o campo é para texto.
+            'autofocus' faz com que o campo ganhe foco automaticamente quando a 
+                    página é carregada, facilitando a interação do usuário.
+            'disabled' significa que o campo está desativado por padrão, impedindo a 
+                    entrada de texto até que seja habilitado por alguma ação do 
+                    usuário ou do programa. -->
+        <input type="text" id="entrada" autofocus disabled>
+
+        <!-- Abre outra <div> com o ID 'estatisticas'. Esta seção é usada para 
+                    mostrar contagens de desempenho do usuário, como 'Letras corretas' e
+                     'Letras erradas'.
+            Inclui <span>s com IDs 'contadorCerto' e 'contadorErrado' para mostrar os 
+                    contadores que podem ser dinamicamente atualizados via JavaScript. -->
+        <div id="estatisticas">Letras corretas: <span id="contadorCerto">0</span> | Letras erradas: <span id="contadorErrado">0</span></div>
+        
+        <!-- Similar à <div> anterior, esta <div> com o ID 'tempo' mostra o 
+                    tempo restante para o usuário completar a tarefa. Contém 
+                    um <span> com o ID 'contadorTempo', que inicialmente mostra 60 segundos, 
+                    também atualizável via JavaScript. -->
+        <div id="tempo">Tempo restante: <span id="contadorTempo">60</span>s</div>
+    </div>
+
+
+    <script src="gerenciador.js"></script>
+    
+</body>
+</html>

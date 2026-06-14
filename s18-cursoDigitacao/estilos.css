@@ -1,0 +1,249 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    /* Define estilos para os elementos <body> e <html>:
+       - 'margin: 0' e 'padding: 0' removem as margens e os 
+                preenchimentos padrão, fazendo com que os elementos da 
+                página ocupem toda a tela disponível.
+       - 'height: 100%' configura a altura desses elementos para 
+                ocuparem toda a altura disponível da janela do navegador.
+       - 'display: flex' habilita o layout flexível para esses elementos, 
+                permitindo um controle mais avançado sobre o alinhamento e a 
+                distribuição dos elementos filhos no espaço horizontal e vertical. */
+}
+
+#menu {
+    
+    /* Define a cor de fundo do elemento com o ID 'menu'. 
+    O valor '#333' representa um cinza muito escuro. 
+    Esta cor é escolhida para garantir que o texto (definido como 
+    branco mais adiante) se destaque para facilidade de leitura. */
+    background-color: #333;
+
+    /* Define a cor do texto dentro do elemento com o ID 'menu' como 
+    branco. O valor '#fff' é o código hexadecimal para branco. 
+    Isso é usado para criar um alto contraste com o fundo escuro, 
+    melhorando a legibilidade do texto. */
+    color: #fff;
+
+    /* Estabelece uma largura fixa de 200 pixels para o elemento 'menu'. 
+    Isso significa que o menu terá sempre 200 pixels de largura, 
+    independentemente do tamanho da janela do navegador ou do dispositivo. */
+    width: 200px;
+
+    /* Configura a altura do menu para corresponder a 100% da 
+    altura da janela de visualização (viewport). 
+    A unidade 'vh' (viewport height) é usada aqui, onde 100vh 
+    corresponde a 100% da altura da tela disponível. 
+    Isso garante que o menu se estenda verticalmente por toda a 
+    altura da janela do navegador. */
+    height: 100vh;
+
+    /* Adiciona um preenchimento de 20 pixels em todas as 
+    direções dentro do elemento 'menu'. 
+    O preenchimento é o espaço interno entre o conteúdo do 
+    elemento e sua borda. Isso ajuda a afastar o conteúdo das bordas do menu, 
+    tornando-o visualmente mais agradável e mais fácil de interagir. */
+    padding: 20px;
+
+    /* Altera o modelo de caixa padrão para 'border-box'. Isso 
+    significa que as propriedades de largura e altura do elemento incluirão 
+    o conteúdo, o preenchimento e a borda do elemento. Com 'border-box', a 
+    largura e a altura definidas (neste caso, 200px de largura e 100vh de altura)
+    incluem o preenchimento e quaisquer bordas aplicadas, evitando que o 
+    elemento cresça além dessas dimensões estabelecidas. */
+    box-sizing: border-box;
+
+    /* Permite que o conteúdo do menu seja rolável no eixo 
+    vertical (de cima para baixo) se o conteúdo exceder a altura do elemento. 
+    A propriedade 'overflow-y: auto' faz com que barras de 
+    rolagem sejam adicionadas automaticamente ao menu apenas se e quando necessário. 
+    Isso é útil para evitar que o menu se estenda além da altura da 
+    viewport, mantendo o design limpo e funcional. */
+    overflow-y: auto;
+
+}
+
+
+/* Seleciona todos os elementos <h3> dentro do 
+    elemento com ID 'menu'. */
+#menu h3 {
+
+    /* Define a margem superior do <h3> para 0, removendo 
+        qualquer espaço acima dele e permitindo que o cabeçalho 
+        fique alinhado ao topo do menu. */
+    margin-top: 0;
+
+}
+
+/* Seleciona todos os elementos <ul> dentro do 
+    elemento com ID 'menu'. */
+#menu ul {
+
+    /* Remove os marcadores padrão (pontos, círculos, 
+        etc.) dos itens da lista, criando uma apresentação mais 
+        limpa e adequada para um menu de navegação. */
+    list-style: none;
+
+    /* Define o preenchimento interno da lista para 0, alinhando os 
+        itens da lista à esquerda do menu sem espaço adicional. */
+    padding: 0;
+
+}
+
+/* Seleciona todos os elementos <a> (links) dentro dos itens de 
+    lista (<li>) que estão dentro de uma lista (<ul>) no menu. */
+#menu ul li a {
+
+    /* Define a cor do texto dos links para branco, garantindo 
+        boa visibilidade contra o fundo escuro do menu. */
+    color: #fff;
+
+    /* Remove o sublinhado padrão do texto dos links, proporcionando 
+        uma aparência mais limpa e menos distraída. */
+    text-decoration: none;
+
+    /* Adiciona um preenchimento vertical de 10 pixels acima e 
+        abaixo do texto do link, aumentando a área clicável, o que 
+        melhora a acessibilidade. */
+    padding: 10px 0;
+
+    /* Faz com que cada link ocupe toda a largura horizontal disponível 
+        dentro do item da lista, facilitando o clique por parte dos usuários. */
+    display: block;
+
+}
+
+
+/* Aplica estilos aos links dentro dos itens de lista quando o 
+    mouse está sobre eles (efeito hover). */
+#menu ul li a:hover {
+
+    /* Define a cor de fundo dos links quando o mouse passa 
+        sobre eles para um cinza médio (#555). 
+    Isso proporciona um feedback visual que o item de menu pode ser clicado. */
+    background-color: #555;
+
+}
+
+
+
+/* Seleciona o elemento com ID 'conteudo', utilizado para a 
+    área principal onde o conteúdo do site é exibido. */
+#conteudo {
+
+    /* Faz com que o elemento cresça para ocupar todo o 
+        espaço disponível em seu container flexível, além do 
+        necessário para acomodar seu conteúdo. */
+    flex-grow: 1;
+
+    /* Adiciona um preenchimento de 20 pixels em todos os lados 
+        do elemento, criando espaço entre o conteúdo e as bordas do elemento. */
+    padding: 20px;
+
+    /* Permite uma barra de rolagem vertical se o conteúdo 
+        exceder a altura do elemento. */
+    overflow-y: auto;
+
+}
+
+/* Seleciona o elemento com ID 'texto', geralmente usado para 
+    exibir texto ou conteúdo informativo dentro de 'conteudo'. */
+#texto {
+
+    /* Define o tamanho da fonte do texto para 24 pixels, tornando-o 
+        suficientemente grande para leitura fácil. */
+    font-size: 24px;
+
+    /* Estabelece uma margem de 20 pixels acima e abaixo do elemento, 
+    separando-o visualmente de outros elementos na página. */
+    margin: 20px 0;
+
+    /* Adiciona uma borda sólida de 1 pixel de espessura e cor cinza 
+    claro (#ddd) ao redor do elemento para destacá-lo visualmente. */
+    border: 1px solid #ddd;
+
+    /* Adiciona um preenchimento de 20 pixels em todos os lados do 
+    elemento, aumentando a distância entre o texto e as bordas do elemento. */
+    padding: 20px;
+
+    /* Aplica um raio de borda de 5 pixels, arredondando os cantos do 
+    elemento para uma aparência mais suave e moderna. */
+    border-radius: 5px;
+
+    /* Define a cor de fundo do elemento para um cinza muito claro (#f9f9f9), 
+        o que ajuda a destacar o texto sobre o fundo. */
+    background-color: #f9f9f9;
+
+}
+
+/* Seleciona o elemento com ID 'entrada', tipicamente usado para 
+    campos de entrada de texto onde os usuários podem digitar informações. */
+#entrada {
+
+    /* Define o tamanho da fonte para 18 pixels, que é adequado 
+        para leitura e entrada de dados. */
+    font-size: 18px;
+
+    /* Define a largura do campo de entrada para 80% da largura do 
+        seu elemento pai, permitindo que ele se ajuste dinamicamente a 
+        diferentes tamanhos de tela. */
+    width: 80%;
+
+    /* Adiciona um preenchimento de 10 pixels em todos os lados 
+        dentro do campo de entrada, melhorando a legibilidade ao 
+        separar o texto das bordas. */
+    padding: 10px;
+
+    /* Estabelece uma margem de 20 pixels acima e abaixo do campo, 
+        ajudando a separá-lo de outros elementos na página. */
+    margin: 20px 0;
+
+    /* Aplica um raio de borda de 5 pixels, suavizando os 
+        cantos do campo de entrada. */
+    border-radius: 5px;
+
+    /* Adiciona uma borda sólida de 1 pixel de espessura e cor 
+        azul (#200d8a) ao redor do campo, definindo claramente a 
+        área de entrada de texto. */
+    border: 1px solid #200d8a;
+
+}
+
+
+
+/* Seleciona os elementos com IDs 'estatisticas' e 'tempo', usados 
+    para exibir informações estatísticas e temporais, respectivamente. */
+#estatisticas, #tempo {
+
+    /* Define o tamanho da fonte para ambos os elementos em 18 pixels, 
+        mantendo a consistência visual e legibilidade. */
+    font-size: 18px;
+
+    /* Aplica uma margem de 10 pixels acima e abaixo de cada elemento, 
+        criando espaço entre estes e outros elementos na página. */
+    margin: 10px 0;
+
+}
+
+/* Classe 'certo' usada para destacar texto ou elementos 
+    que estão corretos ou completos. */
+.certo {
+
+    /* Define a cor do texto para verde, comumente usado 
+        para indicar sucesso ou correção. */
+    color: green;
+
+}
+
+/* Classe 'errado' usada para destacar erros ou incorreções no 
+    texto ou em outros elementos. */
+.errado {
+
+    /* Define a cor do texto para vermelho, frequentemente utilizado 
+        para sinalizar erro ou problemas que precisam de atenção. */
+    color: red;
+
+}
