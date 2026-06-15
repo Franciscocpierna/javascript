@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE informa ao navegador a 
+        versão do HTML que a página está usando. Neste 
+        caso, especifica HTML5, que é a versão mais atual e 
+        recomendada para novos documentos. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> inicia o documento HTML. O 
+            atributo 'lang="pt-BR"' especifica que o idioma 
+            principal do documento é o Português do Brasil, 
+            o que é útil para acessibilidade e SEO, ajudando os 
+            leitores de tela a pronunciar corretamente o conteúdo e 
+            os mecanismos de busca a entender o idioma da página. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de 
+            estilo, scripts e outras informações que não são 
+            exibidas diretamente na viewport do navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' 
+            especifica a codificação de caracteres para o 
+            documento HTML. UTF-8 inclui quase todos os caracteres 
+            de todos os idiomas humanos, garantindo que o texto 
+            seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, configurando o viewport para garantir 
+            que a página seja responsiva. 'width=device-width' faz 
+            com que a largura da página corresponda à largura do 
+            dispositivo, e 'initial-scale=1.0' estabelece o nível 
+            de zoom inicial quando a página é visitada pela primeira 
+            vez, garantindo acessibilidade e melhor visualização em 
+            dispositivos móveis. -->
+
+    <title>Imagem Detalhada</title>
+    <!-- A tag <title> define o título da página, que é exibido na 
+                aba do navegador. "Imagem Detalhada" dá ao usuário uma 
+                indicação clara do conteúdo da página. Esse título 
+                também é importante para SEO. -->
+
+    <link rel="stylesheet" type="text/css" href="estilo-imagem.css">
+    <!-- A tag <link> é usada aqui para conectar uma folha de estilo 
+                externa, 'estilo-imagem.css', ao documento. Isso permite 
+                que todas as regras de estilo definidas nessa folha de 
+                estilo sejam aplicadas à página. 'rel="stylesheet"' 
+                indica que o tipo de documento linkado é uma folha 
+                de estilo CSS. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da 
+                página que o usuário interage diretamente. -->
+
+    <main class="imagem-container">
+        <!-- A tag <main> serve como o contêiner principal para o 
+                    conteúdo principal da página, facilitando a 
+                    acessibilidade e ajudando os motores de busca a 
+                    entender a estrutura da página. A classe 'imagem-container' 
+                    pode ser usada para aplicar estilos específicos. -->
+
+        <img id="imagem" src="" alt="Detalhes visuais da imagem selecionada">
+        <!-- Elemento <img> para exibir a imagem. O atributo 'id' facilita a 
+                    referência a este elemento via JavaScript. O 'src' 
+                    está vazio inicialmente, pois será preenchido 
+                    dinamicamente com JavaScript baseado nos parâmetros 
+                    da URL. O atributo 'alt' fornece uma descrição textual 
+                    alternativa da imagem, que é crucial para 
+                    acessibilidade e SEO. -->
+
+        <figcaption id="descricao"></figcaption>
+        <!-- A tag <figcaption> fornece uma legenda ou descrição para a 
+                    imagem. O 'id' permite que esta descrição seja 
+                    atualizada dinamicamente com JavaScript. -->
+
+    </main>
+    <!-- Fim da tag <main>, que encapsula a imagem e 
+                sua descrição. -->
+
+    <script>
+        // Define a função 'obterParametrosURL' que extrai e 
+                    // decodifica os parâmetros da URL.
+
+        function obterParametrosURL() {
+
+            // Inicializa um objeto vazio para guardar os
+                        // parâmetros da URL de forma mais organizada.
+            let parametros = {};
+            
+            // Acessa a string de consulta da URL atual (excluindo o símbolo '?').
+            let partes = window.location.search.substring(1).split('&');
+            // 'window.location.search' retorna a parte da URL que
+                        // vem após o '?' incluindo o próprio '?'.
+            // 'substring(1)' remove o primeiro caractere, que é o '?'.
+            // 'split('&')' divide a string em um array,
+                        // usando '&' como delimitador.
+    
+            // Itera sobre cada item do array 'partes',
+                        // onde cada item é um par chave=valor.
+            for (let i = 0; i < partes.length; i++) {
+
+                // Divide cada item pelo '=' para separar a chave do valor.
+                let par = partes[i].split('=');
+                // 'split('=')' transforma a string "chave=valor" em
+                        // um array ['chave', 'valor'].
+    
+                // Decodifica ambos, chave e valor, de URI-component para string normal.
+                parametros[decodeURIComponent(par[0])] = decodeURIComponent(par[1]);
+                // 'decodeURIComponent' converte percent-encoding em
+                        // caracteres legíveis.
+                // Por exemplo, converte "%20" de volta para um
+                        // espaço em branco.
+                // Isso garante que caracteres especiais transmitidos
+                        // na URL sejam corretamente interpretados.
+
+            }
+            
+            // Retorna o objeto com todos os parâmetros decodificados.
+            return parametros;
+        }
+    
+        // Executa a função 'obterParametrosURL' e guarda os
+                // resultados no objeto 'parametros'.
+        let parametros = obterParametrosURL();
+        // Esta chamada captura os parâmetros da URL assim que o
+                // script é carregado e os organiza em um objeto acessível.
+    
+        // Acessa o elemento <img> pelo seu ID 'imagem' e define o
+                // atributo 'src' com o caminho da imagem obtido
+                // dos parâmetros da URL.
+        document.getElementById('imagem').src = parametros.imagem;
+        // 'document.getElementById' encontra um elemento
+                    // pelo seu ID no DOM.
+        // '.src' é uma propriedade de elementos <img> que define o
+                    // caminho da imagem a ser mostrada.
+        // 'parametros.imagem' acessa a propriedade 'imagem' do
+                    // objeto 'parametros' para obter o caminho da
+                    // imagem correspondente.
+    
+        // Acessa o elemento <figcaption> pelo seu ID 'descricao' e
+                    // atualiza seu conteúdo textual.
+        document.getElementById('descricao').textContent = parametros.descricao;
+        // '.textContent' altera ou retorna o conteúdo de texto de
+                    // um elemento, aqui usado para definir a
+                    // descrição da imagem.
+
+    </script>
+    <!-- Fim da tag script. O código JavaScript termina aqui,
+                    // encapsulado dentro da tag script, o que garante
+                    // que ele seja tratado pelo navegador como script e
+                    // não como texto comum. -->
+    
+    
+</body>
+<!-- Fim da tag body. Esta tag encerra todo o conteúdo visível da
+            // página. É essencial fechar esta tag corretamente para
+            // que o navegador entenda que todo o conteúdo HTML que
+            // deve ser renderizado foi concluído. -->
+
+</html>
+<!-- Fim da tag html. Esta tag encerra o documento HTML. Fechar
+            // esta tag corretamente é crucial para a validade do
+            // documento HTML, assegurando que os navegadores possam
+            // interpretar corretamente o início e o fim do
+            // conteúdo do documento. -->

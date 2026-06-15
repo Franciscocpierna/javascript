@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento para garantir 
+        que os navegadores entendam que é HTML5, o que 
+        influencia na renderização correta das páginas 
+        conforme as especificações mais recentes do HTML. -->
+
+<html lang="pt-BR">
+<!-- Abre a tag html definindo o idioma da página como 
+        Português do Brasil. Isso é útil para acessibilidade, 
+        ajudando leitores de tela a pronunciar corretamente o 
+        conteúdo e melhorando o SEO. -->
+
+<head>
+    <!-- Abre a seção head do documento HTML, que contém 
+            metadados (dados sobre dados) que geralmente não 
+            são visíveis para os usuários, mas são úteis 
+            para navegadores e mecanismos de pesquisa. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta tag meta define o conjunto de caracteres usado para o 
+            documento como UTF-8, que inclui quase todos os caracteres 
+            de todos os idiomas humanos, assegurando a correta 
+            exibição dos textos. Isso é essencial para evitar 
+            problemas de codificação que podem surgir ao exibir 
+            caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A tag meta viewport controla como um documento é mostrado 
+            nos navegadores móveis. 'width=device-width' define a 
+            largura da página para seguir a largura da tela do 
+            dispositivo. 'initial-scale=1.0' define o nível inicial de 
+            zoom quando a página é carregada pela primeira vez. 
+            Juntos, esses valores ajudam a garantir que a página 
+            seja acessível e legível em dispositivos móveis. -->
+
+    <title>Galeria de Imagens 3D</title>
+    <!-- Define o título do documento, que é mostrado na aba do 
+            navegador. Este título é importante para a experiência do 
+            usuário e SEO. 'Galeria de Imagens 3D' descreve sucintamente o 
+            conteúdo da página como uma galeria de imagens com efeito 3D. -->
+
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <!-- Esta linha vincula um arquivo CSS externo chamado 'estilo.css' à 
+            página. O atributo 'rel' especifica que o tipo de relação é 
+            uma folha de estilo, e o 'type' especifica que o tipo de 
+            arquivo é 'text/css'. O 'href' aponta para a localização do 
+            arquivo CSS que controla a apresentação visual da página. -->
+
+</head>
+<!-- Fecha a tag head. -->
+
+<body>
+    <!-- A tag body contém todo o conteúdo visível da página, 
+            como texto, imagens, vídeos e muito mais. Aqui começamos a 
+            definir o que o usuário final verá na tela. -->
+
+    <h1>Galeria de Imagens 3D</h1>
+    <!-- O elemento h1 é um cabeçalho de nível um, que geralmente é 
+            usado para o título principal da página. Isso é importante 
+            para a acessibilidade e SEO, pois fornece um resumo claro 
+            do conteúdo da página. -->
+
+    <div class="caixa">
+        <!-- Uma div com a classe 'caixa' que serve como container 
+                para as imagens. Este elemento agrupa visualmente os 
+                elementos de imagem em uma única unidade lógica e visual. -->
+
+        <!-- Primeiro carro: Carro Esportivo -->
+        <span style="--i:1;">
+
+            <!-- Imagem do carro esportivo. Quando clicada, chama a 
+                        função 'abrirImagem' com a URL da imagem e a 
+                        descrição do carro. -->
+            <img src="carro1.jpg" alt="Carro 1" onclick="abrirImagem('carro1.jpg', 'Este é um carro esportivo, conhecido por sua velocidade e design aerodinâmico.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de carro (Carro Esportivo). -->
+            <p>Carro Esportivo</p>
+
+        </span>
+
+        <!-- Segundo carro: SUV -->
+        <span style="--i:2;">
+
+            <!-- Imagem do SUV. Quando clicada, chama a função 'abrirImagem' 
+                        com a URL da imagem e a descrição do carro. -->
+            <img src="carro2.jpg" alt="Carro 2" onclick="abrirImagem('carro2.jpg', 'Este é um carro SUV, popular por seu espaço interno e capacidade off-road.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de carro (SUV). -->
+            <p>SUV</p>
+
+        </span>
+
+        <!-- Terceiro carro: Sedã -->
+        <span style="--i:3;">
+
+            <!-- Imagem do sedã. Quando clicada, chama a função 'abrirImagem' 
+                        com a URL da imagem e a descrição do carro. -->
+            <img src="carro3.jpg" alt="Carro 3" onclick="abrirImagem('carro3.jpg', 'Este é um carro sedã, conhecido por seu conforto e elegância.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de carro (Sedã). -->
+            <p>Sedã</p>
+
+        </span>
+
+        <!-- Quarto carro: Hatchback -->
+        <span style="--i:4;">
+
+            <!-- Imagem do hatchback. Quando clicada, chama a função 'abrirImagem' 
+                        com a URL da imagem e a descrição do carro. -->
+            <img src="carro4.jpg" alt="Carro 4" onclick="abrirImagem('carro4.jpg', 'Este é um carro hatchback, apreciado por sua praticidade e eficiência de combustível.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de carro (Hatchback). -->
+            <p>Hatchback</p>
+
+        </span>
+
+        <!-- Quinto carro: Conversível -->
+        <span style="--i:5;">
+
+            <!-- Imagem do conversível. Quando clicada, chama a função 'abrirImagem' 
+                        com a URL da imagem e a descrição do carro. -->
+            <img src="carro5.jpg" alt="Carro 5" onclick="abrirImagem('carro5.jpg', 'Este é um carro conversível, ideal para dirigir com a capota aberta em dias ensolarados.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de 
+                        carro (Conversível). -->
+            <p>Conversível</p>
+
+        </span>
+
+        <!-- Sexto carro: Carro Elétrico -->
+        <span style="--i:6;">
+
+            <!-- Imagem do carro elétrico. Quando clicada, chama a 
+                        função 'abrirImagem' com a URL da imagem e a 
+                        descrição do carro. -->
+            <img src="carro6.jpg" alt="Carro 6" onclick="abrirImagem('carro6.jpg', 'Este é um carro elétrico, conhecido por sua eficiência energética e baixa emissão de poluentes.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de 
+                        carro (Carro Elétrico). -->
+            <p>Carro Elétrico</p>
+
+        </span>
+
+        <!-- Sétimo carro: Carro Híbrido -->
+        <span style="--i:7;">
+
+            <!-- Imagem do carro híbrido. Quando clicada, chama a função 'abrirImagem' 
+                        com a URL da imagem e a descrição do carro. -->
+            <img src="carro7.jpg" alt="Carro 7" onclick="abrirImagem('carro7.jpg', 'Este é um carro híbrido, que combina motor a combustão e elétrico para melhor eficiência de combustível.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de 
+                        carro (Carro Híbrido). -->
+            <p>Carro Híbrido</p>
+
+        </span>
+
+        <!-- Oitavo carro: Carro de Luxo -->
+        <span style="--i:8;">
+
+            <!-- Imagem do carro de luxo. Quando clicada, chama a função 'abrirImagem' 
+                        com a URL da imagem e a descrição do carro. -->
+            <img src="carro8.jpg" alt="Carro 8" onclick="abrirImagem('carro8.jpg', 'Este é um carro de luxo, oferecendo o máximo em conforto e tecnologia avançada.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de 
+                        carro (Carro de Luxo). -->
+            <p>Carro de Luxo</p>
+
+        </span>
+
+        <!-- Nono carro: Esportivo Utilitário -->
+        <span style="--i:9;">
+
+            <!-- Imagem do esportivo utilitário. Quando clicada, chama a 
+                        função 'abrirImagem' com a URL da imagem e a 
+                        descrição do carro. -->
+            <img src="carro9.jpg" alt="Carro 9" onclick="abrirImagem('carro9.jpg', 'Este é um carro esportivo utilitário, combinando características de esportividade e capacidade de SUV.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de 
+                        carro (Esportivo Utilitário). -->
+            <p>Esportivo Utilitário</p>
+
+        </span>
+
+        <!-- Décimo carro: Carro Compacto -->
+        <span style="--i:10;">
+
+            <!-- Imagem do carro compacto. Quando clicada, chama a 
+                        função 'abrirImagem' com a URL da imagem e a 
+                        descrição do carro. -->
+            <img src="carro10.jpg" alt="Carro 10" onclick="abrirImagem('carro10.jpg', 'Este é um carro compacto, ideal para condução urbana e fácil estacionamento.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de 
+                        carro (Carro Compacto). -->
+            <p>Carro Compacto</p>
+
+        </span>
+
+        <!-- Décimo primeiro carro: Pickup -->
+        <span style="--i:11;">
+
+            <!-- Imagem da pickup. Quando clicada, chama a função 'abrirImagem' 
+                        com a URL da imagem e a descrição do carro. -->
+            <img src="carro11.jpg" alt="Carro 11" onclick="abrirImagem('carro11.jpg', 'Este é um carro pickup, conhecido por sua capacidade de carga e durabilidade.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo 
+                        de carro (Pickup). -->
+            <p>Pickup</p>
+
+        </span>
+
+        <!-- Décimo segundo carro: Carro Familiar -->
+        <span style="--i:12;">
+
+            <!-- Imagem do carro familiar. Quando clicada, chama a 
+                        função 'abrirImagem' com a URL da imagem e a 
+                        descrição do carro. -->
+            <img src="carro12.jpg" alt="Carro 12" onclick="abrirImagem('carro12.jpg', 'Este é um carro familiar, projetado para oferecer segurança e espaço para toda a família.')">
+            
+            <!-- Parágrafo contendo a descrição do tipo de 
+                        carro (Carro Familiar). -->
+            <p>Carro Familiar</p>
+
+        </span>
+
+            
+    </div>
+    <!-- Fim da div 'caixa'. Esta tag fecha a seção que contém 
+                todas as imagens e suas legendas, que são dispostas no 
+                carrossel 3D. É importante encerrar a divisão 
+                corretamente para manter a estrutura do HTML 
+                organizada e evitar erros de layout. -->
+
+
+    <script>
+        
+    
+        function abrirImagem(imagem, descricao) {
+            // Declaração da função 'abrirImagem'. Esta função é 
+                        // definida para ser chamada quando um usuário
+                        // interage clicando em uma imagem. Ela é
+                        // configurada para receber dois parâmetros:
+            //   1. 'imagem' - o caminho do arquivo da imagem
+                        // que será visualizada.
+            //   2. 'descricao' - uma descrição textual associada à imagem.
+            //   Esses parâmetros são usados para formar uma URL
+                        // dinâmica que aponta para uma página de
+                        // detalhes da imagem.
+    
+            let url = `imagem.html?imagem=${imagem}&descricao=${encodeURIComponent(descricao)}`;
+            //  Criação de uma variável 'url'. Esta variável é composta por:
+                 // - 'imagem.html' que é o arquivo para o qual a
+                        // requisição será feita.
+                 // - Parâmetros de consulta que passam a 'imagem' e
+                        // a 'descricao' como parte da URL.
+                 // O operador de template string (backticks ``) permite a
+                        // inclusão de expressões dentro da string.
+                 // 'encodeURIComponent' é uma função JavaScript que
+                        // codifica caracteres especiais na 'descricao'.
+                        // Isso garante que qualquer caracter especial não
+                        // quebre a URL e seja transmitido corretamente
+                        // como parte da requisição HTTP.
+    
+            window.open(url, '_blank');
+            // Chama o método 'window.open' com dois argumentos:
+                 // 1. 'url' - A URL formatada que foi criada na linha anterior.
+                 // 2. '_blank' - Uma string que instrui o navegador a
+                        // abrir a URL em uma nova aba (ou janela). Isso
+                        // permite que o usuário veja os detalhes da imagem
+                        // sem perder o contexto atual da galeria de imagens.
+        }
+        // Fim da função 'abrirImagem'.
+        
+    </script>
+    <!-- Fim da tag script. O código JavaScript termina aqui, encapsulado
+                // dentro da tag script, o que garante que ele seja
+                // tratado pelo navegador como script e não como texto comum. -->
+    
+    
+</body>
+<!-- Fim da tag body. Esta tag encerra todo o conteúdo visível
+            // da página. É essencial fechar esta tag corretamente
+            // para que o navegador entenda que todo o conteúdo HTML
+            // que deve ser renderizado foi concluído. -->
+
+</html>
+<!-- Fim da tag html. Esta tag encerra o documento HTML. Fechar
+            // esta tag corretamente é crucial para a validade do
+            // documento HTML, assegurando que os navegadores possam
+            // interpretar corretamente o início e o fim do
+            // conteúdo do documento. -->

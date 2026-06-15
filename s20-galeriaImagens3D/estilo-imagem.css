@@ -1,0 +1,170 @@
+body, html {
+
+    margin: 0;
+    /* Remove as margens padrão. Por padrão, os navegadores 
+            aplicam uma margem em torno do `<body>` e `<html>`, 
+            mas configurando para 0, eliminamos qualquer espaço 
+            extra ao redor dos elementos, permitindo que o 
+            conteúdo utilize toda a largura e altura da tela. */
+
+    padding: 0;
+    /* Remove o preenchimento (padding). Assim como as margens, o 
+            preenchimento padrão é eliminado, garantindo que o 
+            conteúdo possa se estender completamente até as 
+            bordas do navegador. */
+
+    height: 100%;
+    /* Define a altura do `<html>` e `<body>` para 100% do 
+            viewport. Isso é fundamental para que possamos usar 
+            flexbox para centralizar conteúdo verticalmente e 
+            garantir que o elemento de altura mínima cubra toda a 
+            altura disponível da janela de visualização. */
+
+    display: flex;
+    /* Estabelece um contexto de flexbox para os elementos `<html>` e
+            `<body>`. Flexbox é um modelo de layout que facilita o 
+            alinhamento e a distribuição de espaço entre itens em um 
+            contêiner, mesmo quando seus tamanhos são 
+            desconhecidos ou dinâmicos. */
+
+    justify-content: center;
+    /* Alinha os elementos filho horizontalmente ao centro. No 
+            contexto de flexbox, essa propriedade alinha todos os 
+            elementos filho (diretamente dentro de `<body>` 
+            e `<html>`) ao centro do eixo principal (neste caso, 
+            horizontalmente). */
+
+    align-items: center;
+    /* Alinha os elementos filho verticalmente ao centro. Esta 
+            propriedade trabalha no eixo perpendicular ao eixo 
+            principal definido pelo `display: flex`, o que 
+            significa que alinha os elementos filho ao centro 
+            do contêiner verticalmente. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo de ambos `<html>` e `<body>`. 
+            A cor `#f0f0f0` é um cinza claro, oferecendo um 
+            fundo neutro e suave que não cansa os olhos. */
+
+    font-family: 'Arial', sans-serif;
+    /* Define a família de fontes para a página. 'Arial' é 
+            especificada como a fonte principal, e 'sans-serif' 
+            como a alternativa, garantindo que, se 'Arial' não 
+            estiver disponível, uma fonte sans-serif genérica 
+            será usada. Arial é uma escolha comum por ser 
+            clara e legível. */
+
+}
+
+.imagem-container {
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do contêiner. O 
+            valor '0 4px 8px rgba(0, 0, 0, 0.1)' define uma 
+            sombra que não se desloca horizontalmente ('0'), 
+            desloca verticalmente por '4px', possui um 'blur' (desfoque) 
+            de '8px', e uma cor preta com transparência de 10% (rgba).
+            Isso adiciona profundidade e destaque visual ao 
+            contêiner, tornando-o mais atraente. */
+
+    text-align: center;
+    /* Alinha o texto dentro do contêiner ao centro. Essa 
+            propriedade é especialmente útil para alinhar texto ou 
+            qualquer elemento inline de forma a aparecer 
+            centralizado dentro do bloco. */
+
+    background-color: white;
+    /* Define a cor de fundo do contêiner como branco. O fundo 
+            branco cria um contraste claro para textos e outros 
+            elementos, melhorando a legibilidade e a estética 
+            geral da página. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do contêiner, com um raio de '8px'. 
+            Isso suaviza os cantos do contêiner, que de outra 
+            forma seriam pontiagudos, proporcionando um 
+            look mais moderno e agradável. */
+
+    padding: 20px;
+    /* Define o espaço interno (padding) do contêiner para '20px'. 
+            Isso significa que todo o conteúdo dentro do `.imagem-container` 
+            terá um espaço de '20px' entre ele e as bordas do 
+            contêiner, evitando que elementos grudem nas bordas, 
+            o que melhora a legibilidade e a apresentação. */
+
+    width: 80%;
+    /* Define a largura do contêiner para '80%' da largura de 
+            seu elemento contêiner pai. Essa largura relativa permite 
+            que o contêiner se ajuste de forma responsiva ao tamanho 
+            da tela, mantendo a proporção do layout geral. */
+
+    max-width: 900px;
+    /* Estabelece uma largura máxima de '900px' para o contêiner. 
+            Isso garante que, em telas maiores, o contêiner não se 
+            estenda além de '900px', o que ajuda a manter a 
+            estética do design e garante que o texto e outros 
+            elementos dentro do contêiner sejam fáceis de ler e 
+            esteticamente agradáveis. */
+
+    margin: auto;
+    /* Define a margem como 'auto'. Esta propriedade é 
+            frequentemente usada para centrar blocos horizontalmente 
+            dentro de seus contêineres pais. A definição de 'auto' 
+            para as margens esquerda e direta faz com que elas sejam 
+            iguais, centrando o contêiner na página horizontalmente. */
+
+}
+
+
+img {
+
+    max-width: 100%;
+    /* Define a largura máxima de todas as imagens como 100% do 
+            seu contêiner. Isso garante que as imagens nunca 
+            ultrapassem a largura do contêiner em que estão inseridas, 
+            permitindo uma responsividade ideal em dispositivos 
+            de diferentes tamanhos. */
+
+    height: auto;
+    /* Ajusta a altura das imagens para ser proporcional à largura, 
+            mantendo assim a relação de aspecto original. 'auto' 
+            significa que a altura da imagem será ajustada 
+            automaticamente de acordo com a largura. */
+
+    border-radius: 4px;
+    /* Aplica um raio de 4 pixels aos cantos da imagem, 
+            criando bordas arredondadas. Isso suaviza a 
+            aparência das imagens, tornando-as mais esteticamente 
+            agradáveis e integradas ao layout geral. */
+
+}
+
+
+figcaption {
+
+    margin-top: 15px;
+    /* Adiciona uma margem superior de 15 pixels. Isso 
+            separa visualmente a legenda da imagem ou do 
+            conteúdo acima dela, criando um espaço claro e 
+            evitando que o texto pareça amontoado. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333). Esta 
+            cor é escolhida por ser suave nos olhos, oferecendo um 
+            contraste adequado com fundos claros sem a dureza do 
+            preto puro. */
+
+    font-size: 26px;
+    /* Define o tamanho da fonte para 26 pixels, tornando o 
+            texto da legenda proeminente e fácil de ler, o que é 
+            importante para garantir que as informações da 
+            legenda sejam acessíveis. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10 pixels em todas as 
+            direções ao redor do texto dentro de `figcaption`. 
+            Isso cria um buffer entre o texto e as bordas do 
+            contêiner da legenda, melhorando a legibilidade e o 
+            aspecto visual. */
+            
+}

@@ -1,0 +1,292 @@
+body {
+
+    margin: 0;
+    /* Remove a margem padrão em torno do corpo do documento,
+            garantindo que o conteúdo se estenda até as
+            bordas do viewport. */
+
+    display: flex;
+    /* Estabelece um contexto flexível para o corpo do documento. 
+            Flexbox é um método de layout que permite o posicionamento de
+             elementos de forma mais eficiente e com melhor controle. */
+
+    flex-direction: column;
+    /* Define a direção principal do conteúdo dentro do contexto 
+            flexível como vertical (de cima para baixo). */
+
+    justify-content: center;
+    /* Alinha os itens flexíveis verticalmente ao centro do 
+            container (neste caso, o corpo do documento). */
+
+    align-items: center;
+    /* Alinha os itens flexíveis horizontalmente ao centro, 
+            garantindo que o conteúdo esteja centralizado tanto 
+            vertical quanto horizontalmente. */
+
+    height: 100vh;
+    /* Define a altura do corpo para ser 100% da altura da 
+            viewport do navegador, o que significa que o corpo 
+            se estenderá verticalmente para cobrir toda a 
+            altura visível da janela do navegador. */
+
+    background: #000;
+    /* Define a cor de fundo do corpo do documento 
+            como preto (#000). */
+
+    color: #fff;
+    /* Define a cor padrão do texto dentro do corpo como 
+            branco (#fff), o que garante um alto contraste 
+            com o fundo preto. */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto dentro do 
+            corpo como 'Arial', com um fallback para qualquer 
+            fonte sans-serif, caso 'Arial' não esteja disponível. */
+
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels na parte inferior de 
+                todos os elementos `h1` para separá-los de 
+                outros conteúdos abaixo deles. Isso ajuda a 
+                criar um espaço visualmente agradável entre 
+                seções de conteúdo. */
+
+    font-size: 2em;
+    /* Define o tamanho da fonte do elemento `h1` para ser 
+                duas vezes o tamanho do texto base do contexto 
+                atual. A unidade 'em' é relativa ao tamanho da 
+                fonte do elemento pai, ou ao tamanho padrão do 
+                texto se não houver tamanho definido pelo 
+                elemento pai. */
+
+}
+
+.caixa {
+
+    position: relative;
+    /* Define a posição do elemento como relativa. Isso permite 
+                que o posicionamento de elementos filhos absolutamente 
+                posicionados seja relativo a este elemento, não ao 
+                documento inteiro. Também permite ajustar a posição do 
+                elemento com propriedades top, right, bottom, e 
+                left que se referirão a sua posição inicial. */
+
+    width: 700px;
+    /* Define a largura do elemento com 700 pixels. Especificar 
+                uma largura fixa garante que o elemento mantenha um 
+                tamanho consistente independentemente do conteúdo 
+                interno ou do tamanho da viewport. */
+
+    height: 500px;
+    /* Define a altura do elemento com 500 pixels. Assim como a 
+                largura, especificar uma altura fixa assegura que o 
+                elemento mantenha um tamanho estável e predizível. */
+
+    transform-style: preserve-3d;
+    /* Define o estilo de transformação para preservar o 
+                contexto 3D dos elementos filhos. Isso é crucial 
+                para implementar transformações 3D em elementos 
+                dentro desta caixa, permitindo que eles mantenham 
+                uma perspectiva 3D ao invés de serem achatados. */
+
+    animation: girar 20s infinite linear;
+    /* Aplica uma animação chamada 'girar', que deve ser definida 
+                em outro lugar nas regras CSS. A animação dura 20 
+                segundos para cada ciclo, repete infinitamente ('infinite') e 
+                tem um ritmo constante ('linear'), o que significa que a 
+                velocidade da animação é a mesma do início ao fim. */
+
+    transform: rotateY(0deg);
+    /* Aplica uma transformação que rotaciona o elemento em 
+                torno do seu eixo Y (vertical) por 0 graus. Essa 
+                propriedade é muitas vezes utilizada para estabelecer um 
+                estado inicial antes de outras transformações serem 
+                aplicadas, como no caso de uma animação. */
+
+}
+
+
+.caixa span {
+
+    position: absolute;
+    /* Define a posição do elemento como absoluta. Isso 
+                permite que o elemento seja posicionado em relação ao 
+                seu contêiner mais próximo com posição não 
+                estática (neste caso, `.caixa` com `position: relative`). 
+                Isso é essencial para um posicionamento preciso 
+                dentro do contêiner. */
+
+    width: 240px;
+    /* Define a largura do elemento como 240 pixels. Especificar 
+                uma largura fixa assegura que o elemento mantenha 
+                um tamanho consistente. */
+
+    height: 240px;
+    /* A altura do elemento como 240 pixels. Especificar uma 
+                altura fixa assegura que o elemento mantenha um 
+                tamanho consistente. */
+
+    background: #fff;
+    /* Define a cor de fundo do elemento como branco. Isso destaca 
+                visualmente o elemento contra um possível fundo 
+                mais escuro da `.caixa`. */
+
+    display: flex;
+    /* Estabelece um contexto flexível para o elemento, o que 
+                facilita o alinhamento do conteúdo interno. */
+
+    flex-direction: column;
+    /* Organiza os itens flexíveis em uma direção de coluna (vertical). 
+                Isso é útil para empilhar elementos como texto e imagens 
+                verticalmente dentro do span. */
+
+    justify-content: center;
+    /* Alinha os itens flexíveis no centro do eixo principal (vertical, 
+                neste caso). Isso assegura que o conteúdo esteja 
+                centralizado verticalmente dentro do `span`. */
+
+    align-items: center;
+    /* Alinha os itens flexíveis no centro do eixo cruzado (horizontal, 
+                neste caso). Garante que o conteúdo esteja centralizado 
+                horizontalmente dentro do `span`. */
+
+    top: 50%;
+    /* Posiciona o topo do elemento no centro vertical do seu 
+                contêiner relativo. */
+
+    left: 50%;
+    /* Posiciona o lado esquerdo do elemento no centro 
+                horizontal do seu contêiner relativo. */
+
+    transform-origin: center center;
+    /* Define o ponto de origem para todas as transformações 
+                aplicadas ao elemento como o centro do próprio 
+                elemento. Isso é crucial para transformações que 
+                envolvem rotação ou escala. */
+
+    transform: translate(-50%, -50%) rotateY(calc(var(--i) * 30deg)) translateZ(500px);
+    /* Aplica múltiplas transformações ao elemento:
+       1. `translate(-50%, -50%)` - Move o elemento para 
+                    cima e para a esquerda por 50% de sua própria 
+                    altura e largura, respectivamente, efetivamente 
+                    centralizando-o no ponto especificado pelas 
+                    propriedades `top` e `left`.
+       2. `rotateY(calc(var(--i) * 30deg))` - Rotaciona o elemento 
+                    em torno do seu eixo Y, com o ângulo de rotação 
+                    dependendo de uma variável CSS `--i`.
+       3. `translateZ(500px)` - Move o elemento 500 pixels ao longo 
+                    do eixo Z (profundidade), o que é útil para efeitos 3D. */
+
+    transition: transform 2s;
+    /* Aplica uma transição suave a todas as transformações do 
+                    elemento ao longo de 2 segundos. Isso é útil 
+                    para animações ou mudanças de estado que envolvem 
+                    transformações, tornando a mudança visualmente 
+                    mais agradável. */
+
+    margin: 0;
+    /* Remove todas as margens do elemento. Isso é importante para 
+                    evitar qualquer deslocamento indesejado causado 
+                    por margens padrão. */
+
+    box-sizing: border-box;
+    /* Altera o modelo de dimensionamento padrão para `border-box`, 
+                    onde `width` e `height` incluem conteúdo, padding e 
+                    bordas do elemento, mas não a margem. Isso simplifica o 
+                    cálculo de tamanhos de elementos, especialmente útil 
+                    quando se usam paddings ou bordas. */
+
+    padding: 10px;
+    /* Aplica um padding interno de 10 pixels em todos os lados do 
+                    elemento. Isso garante um espaço entre o conteúdo 
+                    interno e as bordas do elemento, melhorando a 
+                    legibilidade e a estética. */
+
+    
+}
+
+
+.caixa span p {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do texto dentro do parágrafo 
+                    como 14 pixels. Este tamanho é frequentemente 
+                    usado para garantir legibilidade sem dominar 
+                    outros elementos visuais. */
+
+    color: #333;
+    /* Define a cor do texto como um cinza escuro (#333). Esta 
+                    cor oferece um contraste mais suave que o 
+                    preto puro, o que pode ser menos cansativo 
+                    para os olhos em fundos claros. */
+
+    text-align: center;
+    /* Alinha o texto ao centro do parágrafo. Isso é útil 
+                    para garantir que o texto dentro de cada span 
+                    esteja harmoniosamente centrado, mantendo a 
+                    estética do design. */
+
+    margin-top: 10px;
+    /* Adiciona uma margem de 10 pixels na parte superior do 
+                    parágrafo. Isso separa visualmente o texto da 
+                    imagem acima dele, ajudando a definir claramente 
+                    a área de texto dentro do layout. */
+
+}
+
+
+.caixa span img {
+
+    max-width: 100%;
+    /* Define a largura máxima da imagem como 100% de seu 
+                    contêiner. Isso garante que a imagem seja 
+                    responsiva e se ajuste ao tamanho do seu contêiner 
+                    sem ultrapassá-lo. */
+
+    max-height: 100%;
+    /* Define a altura máxima da imagem como 100% de seu contêiner. 
+                    Similar à largura máxima, isso ajuda a imagem a 
+                    manter-se proporcional e evitar que ela se estenda 
+                    além do espaço designado. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário passa o 
+                    mouse sobre a imagem, indicando que a imagem é 
+                    clicável. */
+
+    padding: 10px;
+    /* Aplica um padding de 10 pixels ao redor da imagem. Isso 
+                    cria um espaço entre a imagem e os outros 
+                    elementos ou bordas do contêiner, e pode ajudar a 
+                    destacar a imagem do fundo ou de outros 
+                    conteúdos próximos. */
+
+}
+
+
+@keyframes girar {
+
+    from {
+
+        transform: rotateY(0deg);
+        /* Define o estado inicial da animação. A transformação 
+                    começa com uma rotação ao redor do eixo Y de 0 
+                    graus, o que significa que a transformação começa 
+                    com o elemento na sua posição original sem rotação. */
+
+    }
+    to {
+
+        transform: rotateY(360deg);
+        /* Define o estado final da animação. A transformação 
+                    termina com uma rotação de 360 graus ao redor 
+                    do eixo Y, o que retorna o elemento à sua posição 
+                    original após um giro completo, criando um efeito 
+                    de rotação contínua. */
+
+    }
+
+}
