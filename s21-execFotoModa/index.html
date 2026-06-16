@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- A linha do DOCTYPE declara o tipo de documento HTML5. 
+        Essa declaração é necessária para ativar o modo de padrões 
+        nos navegadores, garantindo que a página seja renderizada 
+        usando as regras mais atuais de CSS e JavaScript conforme as 
+        especificações do HTML5. É a primeira linha do documento e 
+        informa ao navegador como interpretar o conteúdo. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> marca o início do documento HTML. O atributo 'lang="pt-BR"' 
+        especifica que o idioma principal do documento é o Português do 
+        Brasil. Isso ajuda os mecanismos de busca e as ferramentas de 
+        acessibilidade a processar o conteúdo de forma apropriada, 
+        assegurando que características linguísticas específicas sejam 
+        respeitadas e que o conteúdo seja indexado corretamente para 
+        usuários de fala portuguesa. -->
+
+<head>
+    <!-- A tag <head> contém metadados e links para recursos externos. 
+            Esses dados não são diretamente visíveis aos usuários, mas 
+            fornecem informações importantes sobre a página que afetam 
+            como ela é processada pelos navegadores. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define a 
+            codificação de caracteres para UTF-8, que suporta todos os 
+            caracteres universais conhecidos. Isso é essencial para 
+            garantir que qualquer caractere, especialmente acentuações e 
+            caracteres especiais encontrados em idiomas como o português, 
+            seja exibido corretamente nos navegadores. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, que configura a viewport da página para 
+            garantir responsividade. O conteúdo 'width=device-width' 
+            faz com que a largura da página corresponda à largura do 
+            dispositivo (em pixels), e 'initial-scale=1.0' estabelece o 
+            nível de zoom inicial quando a página é carregada pela primeira 
+            vez. Isso é crucial para proporcionar uma boa experiência de 
+            visualização em dispositivos móveis, assegurando que textos e 
+            imagens não sejam pequenos demais ou grandes demais para 
+            serem lidos ou vistos. -->
+
+    <title>Fotografia de Moda</title>
+    <!-- A tag <title> define o título da página, que é utilizado como o 
+            texto na aba do navegador. Esse título é importante para a 
+            experiência do usuário e para SEO, pois fornece um contexto 
+            sobre o conteúdo da página. "Fotografia de Moda" indica o tema 
+            da página, sendo útil tanto para os usuários quanto para os 
+            mecanismos de busca. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada para linkar uma folha de estilo CSS 
+            externa ao documento HTML. O atributo 'href' especifica o 
+            caminho para o arquivo CSS que contém os estilos que serão 
+            aplicados ao HTML. Isso permite a separação de conteúdo e 
+            design, facilitando manutenções e atualizações no estilo da 
+            página sem alterar o HTML diretamente. -->
+
+</head>
+<!-- A tag </head> marca o fim do cabeçalho do documento. -->
+
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo principal que é 
+            visível para os usuários quando visitam a página. -->
+
+    <div class="cabecalho">
+        <!-- <div> com a classe "cabecalho" serve como um cabeçalho para a 
+                página. Esta seção geralmente contém títulos e outras 
+                informações introdutórias sobre o conteúdo da página. -->
+        
+        <h1>EXERCÍCIO FOTOGRAFIA DE MODA</h1>
+        <!-- O elemento <h1> é usado para o título principal da página. 
+                Aqui, destaca-se o assunto "Fotografia de Moda". O uso 
+                de <h1> é importante para SEO, pois indica aos motores de 
+                busca o tópico principal da página. -->
+
+        <p>por Aula JavaScript, HTML e CSS</p>
+        <!-- Um parágrafo <p> identificando o autor ou criador do 
+                conteúdo da página.. -->
+
+    </div>
+
+    <div class="galeria-container">
+        <!-- Um contêiner <div> que serve como o componente principal 
+                    para organizar a galeria de imagens. 
+             "galeria-container" é usada especificamente para agrupar 
+                    todas as imagens relacionadas e facilitar a 
+                    aplicação de estilos CSS globais
+                    relacionados ao layout da galeria, como 
+                    alinhamento, espaçamento, e overflow. -->
+    
+        <div class="galeria">
+            <!-- A <div> classe "galeria" é o contêiner direto 
+                        para as imagens individuais. 
+                 Este contêiner atua com estilos de flexibilidade e 
+                        deslocamento para permitir uma experiência 
+                        visual atraente e interativa,
+                        adaptando-se a métodos de navegação como 
+                        carrossel ou rolagem horizontal. -->
+    
+            <!-- Cada "galeria-slide" é uma <div> que encapsula 
+                        uma única imagem, permitindo que cada imagem 
+                        seja tratada como um "slide" dentro da galeria. 
+                 Isso é útil para aplicar estilos específicos de 
+                        apresentação ou para integrar controles de 
+                        navegação específicos do slide. -->
+                <div class="galeria-slide"><img src="imagens/Imagem1.jpg" alt="Imagem 1" data-descricao="Cena de moda estilosa com uma modelo desfilando na passarela."></div>
+
+                <!-- <img> representa a imagem individual dentro de um slide. 
+                        O 'src' define o caminho do arquivo da imagem mostrada. 
+                        'alt' descreve o conteúdo da imagem, que é essencial 
+                                para acessibilidade, permitindo que softwares 
+                                de leitura de tela forneçam uma descrição sonora 
+                                para usuários com deficiência visual. 
+                        'data-descricao' contém uma descrição textual da 
+                                imagem, que pode ser usada por scripts para 
+                                exibir mais informações sobre a imagem 
+                                quando necessário. -->
+                <div class="galeria-slide"><img src="imagens/Imagem2.jpg" alt="Imagem 2" data-descricao="Cena de moda chique com uma modelo posando em um cenário urbano."></div>
+                <div class="galeria-slide"><img src="imagens/Imagem3.jpg" alt="Imagem 3" data-descricao="Moda glamourosa com uma modelo em um vestido de noite luxuoso. "></div>
+                <div class="galeria-slide"><img src="imagens/Imagem4.jpg" alt="Imagem 4" data-descricao="Moda dinâmica com uma modelo em um traje futurista."></div>
+                <div class="galeria-slide"><img src="imagens/Imagem5.jpg" alt="Imagem 5" data-descricao="Moda vibrante com uma modelo em um traje inspirado no estilo boêmio."></div>
+                <div class="galeria-slide"><img src="imagens/Imagem6.jpg" alt="Imagem 6" data-descricao="Moda minimalista com uma modelo em um traje monocromático."></div>
+                <div class="galeria-slide"><img src="imagens/Imagem7.jpg" alt="Imagem 7" data-descricao="Moda na praia com uma modelo em um traje de verão. "></div>
+                <div class="galeria-slide"><img src="imagens/Imagem8.jpg" alt="Imagem 8" data-descricao="Moda urbana com uma modelo em um traje de streetwear."></div>
+                <div class="galeria-slide"><img src="imagens/Imagem9.jpg" alt="Imagem 9" data-descricao="Moda luxuosa com uma modelo em um traje de alta costura."></div>
+                <div class="galeria-slide"><img src="imagens/Imagem10.jpg" alt="Imagem 10" data-descricao="Moda esportiva com uma modelo em roupas atléticas."></div>
+                
+        </div>
+    </div>
+    
+    <div class="imagem-descricao-container">
+        <!-- A tag <div> com a classe "imagem-descricao-container" 
+                atua como um contêiner para a imagem selecionada e 
+                sua descrição. Essa estruturação permite agrupar a 
+                imagem e sua descrição textual para facilitar a formatação e 
+                o controle com CSS e JavaScript. -->
+    
+        <img id="imagem-selecionada" src="" alt="Imagem selecionada">
+        <!-- O elemento <img> com id "imagem-selecionada" é usado para 
+                    exibir uma imagem grande escolhida quando o usuário 
+                    clica em uma das imagens da galeria. 
+             - 'src' está inicialmente vazio, pois a imagem será definida 
+                    dinamicamente via JavaScript baseada na imagem 
+                    clicada na galeria.
+             - 'alt' descreve a imagem para fins de acessibilidade, 
+                    importante para leitores de tela e quando a 
+                    imagem não pode ser carregada. -->
+    
+        <p id="descricao-imagem">Clique em uma imagem para ver a descrição aqui.</p>
+        <!-- Um elemento <p> com id "descricao-imagem" é utilizado para 
+                    exibir a descrição da imagem selecionada. 
+             - Inicialmente contém um texto de instrução, informando aos 
+                    usuários para clicarem em uma imagem da galeria 
+                    para ver mais detalhes aqui. 
+             - O texto será substituído dinamicamente pelo JavaScript 
+                    com a descrição da imagem clicada. -->
+
+    </div>
+    
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta 
+                para "script.js". 
+        - Este script é responsável por adicionar funcionalidades 
+                interativas à página, como a manipulação de eventos 
+                de clique nas imagens da galeria para atualizar a 
+                imagem grande e a descrição baseada na imagem 
+                que foi clicada.
+        - O arquivo 'script.js' deve conter todo o JavaScript 
+                necessário para capturar cliques, extrair informações 
+                associadas (como src e descrição) e atualizar os 
+                elementos correspondentes na página. -->
+
+</body>
+<!-- Fecha a tag <body>, indicando o fim do conteúdo 
+            principal do documento HTML. -->
+
+</html>
+<!-- Fecha a tag <html>, indicando o fim do documento HTML. Isso é 
+            necessário para validar corretamente a página em 
+            conformidade com os padrões da web. -->

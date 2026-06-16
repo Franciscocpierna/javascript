@@ -1,0 +1,359 @@
+/* Estilos globais para o corpo da página */
+body {
+
+    margin: 0; 
+    /* Remove a margem padrão do navegador. Isso permite que o 
+            conteúdo se estenda até as bordas da janela do 
+            navegador, maximizando o espaço de tela disponível. */
+
+    font-family: Arial, sans-serif; 
+    /* Define Arial como a fonte primária e sans-serif 
+            como a fonte secundária (fallback).
+       Arial é uma escolha popular devido à sua legibilidade e 
+            aparência neutra, adequada para muitos 
+            contextos de design.
+       'sans-serif' é uma família genérica que será usada 
+            caso Arial não esteja disponível. */
+
+    background-color: #333; 
+    /* Define a cor de fundo do corpo da página 
+            para um cinza escuro (#333).
+       Uma cor de fundo escura ajuda a criar um contraste 
+            elevado com o texto branco, melhorando a legibilidade e 
+            dando um visual elegante e moderno. */
+
+    color: #fff;
+    /* Define a cor do texto para branco (#fff).
+       Esta configuração garante que o texto se destaque 
+            claramente contra o fundo escuro, facilitando 
+            a leitura. */
+
+}
+
+/* Estilos para o cabeçalho da página */
+.cabecalho {
+
+    text-align: center;
+    /* Alinha o texto ao centro do elemento 'cabecalho'.
+       Isso é comumente usado em cabeçalhos para centralizar o 
+               título e quaisquer outros elementos de texto, 
+               proporcionando um visual balanceado e focalizado. */
+
+    padding: 20px;
+    /* Adiciona um espaçamento interno de 20px em todos os 
+               lados do elemento 'cabecalho'.
+       O padding aumenta a área de toque e visualmente separa o 
+               conteúdo do cabeçalho de outros elementos 
+               ao seu redor. */
+
+    background-color: #444;
+    /* Define a cor de fundo para um tom de cinza ligeiramente 
+               mais claro (#444) do que o corpo da página.
+       Este contraste sutil ajuda a diferenciar o cabeçalho do 
+               resto da página, marcando claramente a área 
+               de introdução. */
+
+}
+
+/* Estilos para o título principal dentro 
+         do cabeçalho */
+.cabecalho h1 {
+
+    margin: 0;
+    /* Remove qualquer margem padrão ao redor do elemento <h1>.
+       Isso ajuda a controlar melhor o layout sem espaço 
+               extra indesejado, permitindo um alinhamento 
+               preciso dentro do cabeçalho. */
+
+    font-size: 2em;
+    /* Define o tamanho da fonte para 2 vezes o tamanho do 
+               texto base da página.
+       'em' é uma unidade relativa que escala de acordo com o 
+               tamanho da fonte do elemento pai (ou o tamanho 
+               da fonte do corpo, se não especificado).
+       Isso faz com que o título seja proeminente e facilmente 
+               reconhecível como o elemento mais importante na 
+               visualização da página. */
+
+}
+
+.cabecalho p {
+
+    margin: 5px 0;
+    /* Define a margem superior e inferior do parágrafo 
+               para 5px, enquanto as margens laterais são 0.
+       Isso fornece um pequeno espaçamento vertical entre o 
+               título do cabeçalho e o parágrafo, sem afetar o 
+               alinhamento horizontal. */
+
+    font-size: 1.2em;
+    /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho 
+               da fonte base do elemento pai.
+       Esse aumento sutil na fonte ajuda a tornar o texto 
+               levemente mais proeminente, mantendo uma hierarquia 
+               visual clara em relação ao título principal. */
+
+}
+
+nav ul {
+
+    list-style: none;
+    /* Remove os marcadores padrão de lista (como discos ou 
+               números), criando uma lista mais limpa e 
+               adequada para menus de navegação. */
+
+    padding: 0;
+    /* Remove o preenchimento padrão da lista, ajudando a 
+               lista a alinhar-se corretamente dentro de seus 
+               contêineres ou conforme o estilo específico desejado. */
+
+    display: flex;
+    /* Define o modelo de caixa da lista para flexível, o que 
+               permite que os itens da lista sejam dispostos de 
+               forma linear e responsiva horizontalmente. */
+
+    justify-content: center;
+    /* Centraliza os itens da lista horizontalmente dentro do 
+               contêiner <nav>, proporcionando um alinhamento 
+               simétrico e centrado, ideal para cabeçalhos de 
+               sites ou barras de navegação. */
+
+    margin: 20px 0;
+    /* Define a margem superior e inferior como 20px e as 
+               margens laterais como 0, dando espaço vertical 
+               antes e depois da barra de navegação, mas mantendo o 
+               alinhamento lateral com outros conteúdos. */
+
+}
+
+
+nav ul li {
+
+    margin: 0 15px;
+    /* Aplica margem horizontal de 15px entre os itens da 
+               lista para espaçá-los uniformemente, facilitando a 
+               navegação e melhorando a estética. */
+
+}
+
+
+nav ul li a {
+
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links, resultando em um 
+               estilo mais limpo e menos distraído para os 
+               elementos de navegação. */
+
+    color: #ffd700;
+    /* Define a cor dos links como um amarelo dourado (#ffd700), o 
+               que oferece uma visualização destacada e atraente, 
+               além de garantir boa visibilidade contra o 
+               fundo escuro. */
+
+    font-size: 1.2em;
+    /* Ajusta o tamanho da fonte dos links para 1.2 vezes o 
+               tamanho da fonte base, tornando os links 
+               ligeiramente maiores e mais legíveis, 
+               facilitando a navegação. */
+
+}
+
+
+
+.galeria-container {
+
+    display: flex;
+    /* Estabelece um contexto de flexbox para este contêiner. 
+               Isso permite um layout flexível que facilita o 
+               alinhamento central dos elementos internos. */
+
+    justify-content: center;
+    /* Alinha todos os itens dentro do contêiner ao centro 
+               horizontalmente. Garante que o conteúdo da 
+               galeria seja centralizado dentro de sua área. */
+
+    align-items: center;
+    /* Alinha todos os itens dentro do contêiner ao centro 
+               verticalmente. Garante que o conteúdo da 
+               galeria esteja centrado verticalmente. */
+
+    padding: 20px;
+    /* Adiciona espaço dentro do contêiner, ao redor de 
+               seu conteúdo, melhorando a legibilidade e a 
+               estética do layout geral. */
+
+    overflow: hidden;
+    /* Esconde qualquer conteúdo que exceda o tamanho do 
+               contêiner. Útil para garantir que nada fora da 
+               área especificada seja mostrado, mantendo o 
+               layout limpo. */
+
+}
+
+
+.galeria {
+
+    display: flex;
+    /* Configura o contêiner da galeria para usar flexbox, o 
+               que permite um alinhamento eficiente dos 
+               slides da galeria lado a lado. */
+
+    overflow-x: auto;
+    /* Permite a rolagem horizontal da galeria, possibilitando ao 
+               usuário navegar entre os slides se eles excederem a 
+               largura do contêiner. */
+
+    width: 100%;
+    /* Define a largura da galeria para ocupar 100% do 
+               seu contêiner pai. Isso garante que a galeria se 
+               ajuste ao espaço disponível. */
+
+    max-width: 1200px;
+    /* Estabelece uma largura máxima para a galeria, garantindo 
+               que ela não se torne demasiadamente larga em 
+               monitores grandes, o que poderia afetar a 
+               estética e a funcionalidade. */
+
+    scroll-behavior: smooth;
+    /* Proporciona uma rolagem suave ao navegar entre os 
+               slides. Isso melhora a experiência do usuário ao 
+               fazer a transição entre as imagens. */
+
+}
+
+
+.galeria-slide {
+
+    min-width: 200px;
+    /* Define a largura mínima para cada slide dentro da 
+               galeria. Isso assegura que cada imagem tenha 
+               espaço suficiente para ser exibida de forma adequada, 
+               independentemente do número de slides. */
+
+    margin: 10px;
+    /* Adiciona uma margem em volta de cada slide, criando 
+               espaço entre eles e evitando um layout congestionado. */
+
+    border: 1px solid #444;
+    /* Adiciona uma borda sólida ao redor de cada slide, 
+               melhorando a definição de cada imagem 
+               dentro da galeria. */
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* Aplica uma sombra leve para elevar visualmente os 
+               slides da galeria, dando um efeito de 
+               profundidade e destacando cada imagem. */
+
+}
+
+
+.galeria-slide img {
+
+    width: 100%;
+    /* Define a largura da imagem para ocupar 100% do 
+               seu contêiner. Isso garante que a imagem se 
+               adapte completamente ao espaço disponível do slide. */
+
+    height: auto;
+    /* Mantém a altura da imagem proporcional à sua largura, 
+               preservando a relação de aspecto da imagem. */
+
+    display: block;
+    /* Garante que a imagem seja tratada como um bloco, 
+               ocupando uma linha inteira, o que é útil para 
+               evitar problemas de layout, como espaços 
+               indesejados ao redor das imagens. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da imagem, suavizando sua aparência 
+               geral e integrando-a melhor ao design suave da 
+               interface do usuário. */
+
+}
+
+
+.imagem-descricao-container {
+
+   font-size: 30px;
+   /* Aumenta o tamanho da fonte para 30px */
+
+    text-align: center;
+    /* Alinha o texto e qualquer outro conteúdo filho ao 
+               centro horizontalmente. 
+       Isso é útil para centrar a imagem e a descrição textual 
+               dentro do contêiner, oferecendo um layout 
+               equilibrado e visualmente atraente. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20px ao contêiner, 
+               separando-o visualmente de elementos acima 
+               dele no layout.
+       Isso ajuda a criar um espaço respirável ao redor do 
+               contêiner de descrição, melhorando a legibilidade e 
+               a apresentação geral. */
+
+}
+
+
+.imagem-descricao-container img {
+
+    max-width: 80%;
+    /* Define a largura máxima da imagem para 80% do 
+               contêiner pai. 
+       Isso garante que a imagem seja grande o suficiente 
+               para ser facilmente vista sem ocupar todo o 
+               espaço, deixando margens adequadas para estética. */
+
+    height: auto;
+    /* Mantém a altura da imagem proporcional à largura ajustada, 
+               preservando a relação de aspecto original da imagem.
+       Essa propriedade garante que a imagem não seja 
+               distorcida durante o redimensionamento. */
+
+    display: block;
+    /* Configura a imagem para se comportar como um bloco, 
+               ocupando a largura total de sua linha no layout.
+       Isso ajuda a imagem a alcançar qualquer alinhamento 
+               necessário sem interferência de outros 
+               elementos inline. */
+
+    margin: 0 auto;
+    /* Aplica margens automáticas aos lados esquerdo e 
+               direito da imagem, centrando-a horizontalmente 
+               dentro de seu contêiner.
+       O valor '0' para as margens superior e inferior mantém a 
+               imagem alinhada sem espaço extra vertical. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da imagem com um raio de 10px.
+       Isso suaviza os cantos da imagem, adicionando um 
+               elemento de design moderno e amigável. */
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    /* Aplica uma sombra abaixo da imagem para criar um 
+               efeito de profundidade. 
+       A sombra é definida para se espalhar 4px para 
+               baixo e 8px em blur com uma opacidade de 50%, 
+               realçando a imagem contra o fundo. */
+
+}
+
+
+.imagem-descricao-container p {
+
+    font-size: 1.2em;
+    /* Aumenta o tamanho da fonte para 1.2 vezes o 
+               tamanho do texto base, tornando a 
+               descrição mais legível e destacada,
+               ideal para detalhar informações importantes 
+               sobre a imagem visualizada. */
+
+    margin-top: 10px;
+    /* Define uma margem superior de 10px para o 
+               parágrafo de descrição, criando um 
+               espaçamento entre a imagem acima e o 
+               texto descritivo.
+       Isso ajuda a estabelecer uma clara separação 
+               visual entre a imagem e sua descrição. */
+
+}
