@@ -1,0 +1,254 @@
+/* estilo.css */
+/* Este é um comentário indicando que o arquivo é uma folha 
+  de estilo externa chamada estilo.css, usada para adicionar 
+  estilos visuais ao HTML. */
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Define a família de fontes do corpo do documento. A lista de fontes 
+            proporciona fallbacks se a primeira não estiver disponível:
+       'Segoe UI' é uma fonte comum em sistemas Windows, seguida por 
+            'Tahoma', 'Geneva', 'Verdana', e finalmente 'sans-serif' como genérico. */
+  
+    background-color: #f4f4f4;
+    /* Define a cor de fundo de toda a página como um cinza claro (#f4f4f4), que é 
+            suave para os olhos e melhora a legibilidade do conteúdo. */
+  
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todos os lados do corpo da página, 
+            criando um espaço entre o conteúdo da página e as bordas do navegador. */
+  
+    color: #34495e;
+    /* Define a cor padrão do texto para um azul-esverdeado escuro (#34495e), 
+            proporcionando contraste suficiente contra o fundo claro para
+             uma leitura confortável. */
+
+  }
+
+
+  h1 {
+    color: #2c3e50;
+    /* Define a cor do texto para os elementos <h1> como um azul ainda 
+            mais escuro (#2c3e50), destacando visualmente o título principal da página. */
+  
+    text-align: center;
+    /* Alinha o texto do título (<h1>) ao centro, garantindo que ele chame atenção e 
+            esteja centrado na página para uma apresentação mais formal ou destacada. */
+  
+    font-size: 24px; /* Aumentando o tamanho da fonte do título */
+    /* Aumenta o tamanho da fonte dos elementos <h1> para 24 pixels, tornando-os 
+            visualmente dominantes e fáceis de identificar como os cabeçalhos 
+            mais importantes da página. */
+  }
+
+
+  .filtro, .formulario, .total-contatos {
+    /* Esta regra se aplica a três diferentes classes de elementos: 
+            .filtro, .formulario, e .total-contatos.
+       Os seletores de classe são agrupados por vírgulas, significando 
+            que todos os estilos definidos aqui serão aplicados a todos os 
+            elementos que contêm qualquer uma dessas classes. */
+  
+    background-color: white;
+    /* Define a cor de fundo dos elementos como branco. Isso garante que o 
+            conteúdo nessas áreas seja fácil de ler e que se destaque do fundo 
+            da página, que pode ser de outra cor. */
+  
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todas as direções (topo, 
+            direita, fundo, esquerda) dentro dos elementos.
+       Isso cria espaço entre o conteúdo interno desses elementos e suas 
+            bordas, melhorando a legibilidade e a estética. */
+  
+    margin-bottom: 20px;
+    /* Define uma margem de 20 pixels na parte inferior de cada um dos elementos. 
+       Isso ajuda a separar visualmente cada seção uma da outra, evitando 
+            que os elementos pareçam amontoados. */
+  
+    border-radius: 8px;
+    /* Aplica bordas arredondadas de 8 pixels aos elementos, suavizando as 
+            bordas afiadas e proporcionando uma interface mais amigável e moderna. */
+  
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* Adiciona uma sombra ao redor dos elementos com um deslocamento 
+            horizontal de 0, deslocamento vertical de 4px, e um desfoque de 6px.
+       A cor da sombra é preta com uma transparência de 10% (rgba(0, 0, 0, 0.1)).
+       Essa sombra cria um efeito de elevação, fazendo com que os elementos 
+            pareçam flutuar ligeiramente acima do resto da página, aumentando a 
+            percepção de profundidade. */
+  
+    border: 1px solid #190964; /* Adicionando uma borda sutil */
+    /* Define uma borda sólida de 1 pixel ao redor dos elementos com a 
+            cor cinza claro (#ddd).
+       Esta borda sutil é suficiente para delimitar os contornos dos 
+            elementos sem ser visualmente intrusiva, mantendo o design 
+            limpo e profissional. */
+  }
+
+input[type="text"], input[type="email"], button {
+    /* Esta regra CSS aplica estilos a três tipos de elementos: 
+            inputs de texto, inputs de email e botões.
+       O uso de seletores de atributo (input[type="text"] e input[type="email"]) 
+            especifica que apenas inputs com esses tipos receberão esses estilos, 
+            diferenciando-os de outros tipos de input. */
+  
+    padding: 10px;
+    /* Aplica um preenchimento interno de 10 pixels em todas as direções dos 
+            elementos selecionados. Isso aumenta a área clicável e a legibilidade do 
+            conteúdo dentro dos inputs e botões, tornando-os mais confortáveis para 
+            interação do usuário. */
+  
+    margin-right: 5px;
+    /* Adiciona uma margem à direita de 5 pixels para cada elemento selecionado. 
+            Isso separa visualmente os inputs e botões uns dos outros quando estão 
+            alinhados horizontalmente, evitando que eles toquem uns nos outros. */
+  
+    border-radius: 5px;
+    /* Define o raio das bordas arredondadas para 5 pixels. Bordas arredondadas são 
+            esteticamente agradáveis e estão em conformidade com as práticas modernas de 
+            design de interface do usuário. */
+  
+    border: 1px solid #ccc;
+    /* Aplica uma borda sólida de 1 pixel com cor cinza claro (#ccc) em torno dos 
+            elementos. Isso define claramente os limites dos elementos, facilitando a 
+            identificação dos campos de entrada e áreas clicáveis dos botões. */
+  
+    font-size: 16px; /* Aumentando o tamanho da fonte dos inputs e botões */
+    /* Define o tamanho da fonte para 16 pixels para os inputs e botões. Isso assegura 
+            que o texto seja grande o suficiente para ser lido facilmente, melhorando a 
+            acessibilidade e a experiência do usuário. */
+  
+  }
+  
+
+  button {
+    /* Esta regra CSS aplica estilos adicionais especificamente aos elementos <button>. */
+  
+    background-color: #0a671c;
+    /* Define a cor de fundo dos botões para um verde vibrante (#0a671c). Esta cor 
+            chama atenção para os botões, incentivando a interação do usuário. */
+  
+    color: white;
+    /* Define a cor do texto dentro dos botões para branco, garantindo um alto contraste 
+            com o fundo azul, o que melhora a legibilidade e destaca visualmente o texto do botão. */
+  
+    cursor: pointer;
+    /* Altera o cursor para um ponteiro quando ele passa sobre o botão, indicando que o 
+            elemento é clicável. Isso é uma dica visual importante que informa aos usuários 
+            que eles podem interagir com o botão. */
+  
+    border: none;
+    /* Remove a borda do botão. Esta decisão de design pode ajudar a modernizar a 
+          aparência do botão, focando a atenção do usuário na ação em vez da estrutura do elemento. */
+  }
+
+  
+/* Estilo para o botão ao passar o mouse */
+button:hover {
+    /* Esta regra é um pseudo-seletor que se aplica a botões 
+          quando o cursor do mouse está sobre eles. */
+  
+    background-color: #072b43;
+    /* Altera a cor de fundo do botão para um azul mais 
+          escuro (#072b43) quando o mouse está sobre ele. 
+       Esta mudança visual serve como um feedback imediato para o 
+          usuário, indicando que o botão é interativo e está sob foco. */
+  }
+
+
+table {
+    /* Esta regra aplica-se a todos os elementos <table> na página, 
+          estabelecendo a base do design para as tabelas utilizadas. */
+  
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura do contêiner pai. 
+          Isso assegura que a tabela se estenda completamente de um lado ao outro 
+          do espaço disponível, maximizando o uso da área para exibir dados. */
+  
+    border-collapse: collapse;
+    /* Altera o comportamento padrão das bordas das células da tabela. 
+          Com 'border-collapse: collapse;', as bordas adjacentes das células se 
+          fundem em uma única borda, em vez de cada célula ter sua própria borda 
+          separada. Isso resulta em um visual mais limpo e contínuo para a 
+          tabela, eliminando espaços duplos entre as células que podem distrair 
+          ou confundir visualmente. */
+  
+    margin-top: 20px;
+    /* Adiciona uma margem de 20 pixels acima da tabela. Isso cria um espaço 
+          vertical entre a tabela e quaisquer elementos que estejam acima dela na 
+          página, ajudando a separar visualmente a tabela de outros conteúdos e 
+          melhorando a estruturação visual da página. */
+  
+    background-color: white;
+    /* Define a cor de fundo da tabela como branca. O fundo branco é ideal 
+          para tabelas porque oferece um contraste máximo com a maioria das cores 
+          de texto, o que facilita a leitura dos dados. Além disso, o fundo 
+          branco ajuda a destacar a tabela como um elemento distinto dentro do 
+          layout geral da página. */
+          
+  
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* Aplica uma sombra ao redor da tabela para criar um efeito 
+            visual de elevação. Os parâmetros da sombra são:
+       - Deslocamento horizontal de 0: a sombra é aplicada diretamente
+             abaixo do elemento sem deslocamento horizontal.
+       - Deslocamento vertical de 4px: levanta a sombra um pouco abaixo do 
+            elemento para dar a impressão de que a tabela está flutuando 
+            acima do resto do conteúdo.
+       - Desfoque de 6px: suaviza as bordas da sombra, tornando-a 
+            menos definida e mais natural.
+       - Cor rgba(0, 0, 0, 0.1): uma cor preta com 10% de opacidade, tornando a 
+            sombra sutil e não muito intrusiva, adequada para a maioria dos 
+            designs que buscam sofisticação sem excesso. */
+            
+  }  
+
+
+  th, td {
+    /* Esta regra se aplica a todos os elementos <th> (células de
+          cabeçalho) e <td> (células de dados) em tabelas. */
+  
+    padding: 15px; /* Aumentando o padding para mais espaço */
+    /* Define um preenchimento interno de 15 pixels em todas as 
+          direções dentro das células. Isso aumenta o espaço ao redor do 
+          texto, melhorando a legibilidade e dando uma aparência mais 
+          espaçosa e confortável para a leitura dos dados. */
+  
+    border: 1px solid #10a529;
+    /* Aplica uma borda sólida de 1 pixel com cor verde claro (#10a529) ao 
+          redor de cada célula. Essa borda ajuda a delimitar claramente os 
+          dados de cada célula, organizando visualmente a informação na tabela. */
+  
+    text-align: left;
+    /* Alinha o texto à esquerda dentro das células. Esta é a configuração 
+          padrão para a leitura de texto em muitos idiomas, facilitando a 
+          visualização e seguimento das informações. */
+  
+    font-size: 16px; /* Aumentando o tamanho da fonte da tabela */
+    /* Aumenta o tamanho da fonte para 16 pixels dentro das células, 
+          garantindo que o texto seja suficientemente grande para ser lido 
+          facilmente, melhorando a acessibilidade e conforto visual. */
+  
+  }
+
+
+  th {
+    /* Esta regra aplica-se especificamente aos elementos <th>, que são usados 
+        para as células de cabeçalho das tabelas. */
+  
+    background-color: #06333e;
+    /* Define a cor de fundo das células de cabeçalho para um cinza 
+        claro (#ecf0f1). Esta cor de fundo suave diferencia as células de 
+        cabeçalho das células de dados, ajudando a destacar a primeira 
+        linha da tabela como um guia visual para o usuário. */
+
+    color: white;
+    
+  }
+
+
+  
+  
+  
+  

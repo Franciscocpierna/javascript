@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- Esta declaração define o tipo de documento como HTML5. 
+    É essencial para garantir que o navegador interprete corretamente o 
+    conteúdo da página conforme as especificações mais recentes do HTML. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt"' 
+    especifica que o idioma principal do conteúdo do documento é português. 
+    Isso é útil para acessibilidade e motores de busca, pois define o 
+    contexto linguístico da página. -->
+
+<head>
+<!-- A tag <head> contém metadados sobre o documento, incluindo links 
+    para folhas de estilo, scripts e outras informações que não são diretamente 
+    exibidas na página web visível. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define o conjunto de 
+        caracteres usado no documento como UTF-8, que suporta a maioria dos 
+        conjuntos de caracteres usados em linguagens humanas. Isso é crucial 
+        para a exibição correta de texto, especialmente para idiomas que usam 
+        caracteres especiais. -->
+
+    <title>Agenda Profissional</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba 
+        do navegador. Esse título também é usado por motores de busca e 
+        quando a página é marcada como favorita. "Agenda Profissional" é um 
+        título que indica a funcionalidade da página como uma ferramenta de 
+        gerenciamento de contatos profissionais. -->
+
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <!-- A tag <link> é usada aqui para vincular uma folha de estilo externa ao documento. 
+        'rel="stylesheet"' indica que o documento vinculado é uma folha de estilo.
+        'type="text/css"' especifica que o tipo de dados do documento vinculado é CSS.
+        'href="estilo.css"' fornece o caminho para a folha de estilo que define a aparência da página. -->
+
+</head>
+<!-- A tag </head> marca o fim da seção head do documento HTML. -->
+
+<body>
+    <!-- A tag <body> encapsula o conteúdo visível da página web. 
+        Aqui, tudo o que for colocado será diretamente exibível no 
+        navegador do usuário. -->
+    
+    <h1>Agenda de Contatos</h1>
+    <!-- A tag <h1> é usada para o título principal da página. Neste caso, 
+        "Agenda de Contatos" serve como um cabeçalho de nível superior, 
+        indicando o propósito principal da página. Em termos de SEO (otimização 
+        para motores de busca) e acessibilidade, usar <h1> ajuda a estruturar o 
+        conteúdo de forma clara e lógica. -->
+    
+    
+    <!-- Filtro de Pesquisa -->
+    <!-- Este comentário indica que o bloco de código a seguir é 
+        usado para criar uma interface de filtro de pesquisa na página. -->
+    
+    <div class="filtro">
+      <!-- A tag <div> cria um contêiner para o campo de filtro de pesquisa. 
+          A classe 'filtro' pode ser usada para aplicar estilos específicos via CSS. -->
+    
+      <input type="text" id="filtro" placeholder="Filtrar contatos" onkeyup="filtrarContatos()">
+      <!-- A tag <input> cria um campo de entrada de texto onde os usuários podem digitar.
+           'type="text"' especifica que o campo aceita texto.
+           'id="filtro"' fornece um identificador único para o elemento, que pode 
+                ser usado para referência em scripts e estilos.
+           'placeholder="Filtrar contatos"' exibe um texto de ajuda dentro
+                do campo que desaparece quando o usuário começa a digitar. Serve 
+                como uma indicação do que o campo é destinado.
+           'onkeyup="filtrarContatos()"' é um atributo de evento que chama a 
+              função JavaScript 'filtrarContatos()' sempre que o usuário digita uma 
+              tecla, permitindo filtrar dinamicamente os contatos com 
+              base no texto inserido. -->
+    
+    </div>
+    
+    <!-- Formulário de Cadastro -->
+    <!-- Este comentário serve para identificar a seção seguinte como 
+        um formulário de cadastro. -->
+    
+    <div class="formulario">
+      <!-- A tag <div> aqui serve como um contêiner para os campos de 
+          entrada do formulário de cadastro. A classe 'formulario' pode 
+          ser usada para estilização específica. -->
+    
+      <input type="text" id="nome" placeholder="Nome">
+      <!-- Um campo de entrada para o nome do contato.
+           'id="nome"' é um identificador único para este 
+                campo, essencial para ser acessado via JavaScript.
+           'placeholder="Nome"' fornece uma dica sobre o que o 
+                usuário deve inserir neste campo. -->
+    
+      <input type="email" id="email" placeholder="E-mail">
+      <!-- Um campo de entrada para o e-mail do contato.
+           'type="email"' especifica que o campo deve validar o texto 
+                inserido como um endereço de e-mail, proporcionando uma 
+                validação automática de formato de e-mail.
+           'id="email"' é o identificador único para este campo.
+           'placeholder="E-mail"' serve como texto de ajuda para o usuário 
+                saber que tipo de informação é esperada. -->
+    
+      <input type="text" id="telefone" placeholder="Telefone">
+      <!-- Um campo de entrada para o telefone do contato.
+           'id="telefone"' fornece um identificador único.
+           'placeholder="Telefone"' mostra ao usuário que dados inserir aqui. -->
+    
+      <button onclick="adicionarContato()" cadastrar>Cadastrar</button>
+      <!-- Um botão que o usuário clica para submeter o f
+                ormulário e adicionar um contato.
+           'onclick="adicionarContato()"' é um manipulador de 
+                evento que chama a função 'adicionarContato()' quando o 
+                botão é clicado, o que deverá iniciar o processo de 
+                adição do contato aos registros.
+           O texto 'Cadastrar' no botão dá ao usuário a indicação do 
+                que acontecerá ao clicar. -->
+    
+    </div>
+    
+    
+    <!-- Total de Contatos -->
+    <!-- Este comentário indica que o bloco de código a seguir é destinado a 
+      mostrar o total de contatos registrados na agenda. -->
+    
+    <p id="totalContatos" class="total-contatos">
+        Total de Contatos: 0
+    </p>
+    <!-- A tag <p> cria um parágrafo no documento HTML. Este parágrafo é 
+              usado para exibir o número total de contatos.
+         'id="totalContatos"' fornece um identificador único para este 
+              elemento, permitindo que ele seja facilmente acessado e manipulado via JavaScript.
+         'class="total-contatos"' permite que o parágrafo seja estilizado 
+              de forma específica usando CSS.
+         'Total de Contatos: 0' é o conteúdo inicial exibido, mostrando que 
+              inicialmente não há contatos. Este valor pode ser atualizado 
+              dinamicamente por JavaScript à medida que contatos são 
+              adicionados ou removidos. -->
+    
+    <!-- Tabela de Contatos -->
+    <!-- Este comentário serve para indicar que a estrutura a seguir é 
+              uma tabela que lista os contatos. -->
+    
+    <table id="tabelaContatos">
+        <!-- A tag <table> é usada para criar uma tabela no HTML. 'id="tabelaContatos"' 
+              permite que a tabela seja identificada e manipulada programaticamente. -->
+    
+        <thead>
+            <!-- <thead> é usado para definir o cabeçalho de uma tabela. Ele agrupa 
+                    um ou mais <th> para formar a linha de cabeçalho. -->
+    
+            <tr>
+                <!-- <tr> define uma linha na tabela. Aqui, está sendo usada 
+                      para definir a linha de cabeçalho. -->
+    
+                <th>Nome</th>
+                <!-- <th> define uma célula de cabeçalho na tabela. 'Nome' é o 
+                      título da primeira coluna e indica que esta coluna mostrará 
+                      os nomes dos contatos. -->
+    
+                <th>E-mail</th>
+                <!-- Outra célula de cabeçalho para a coluna 'E-mail', indicando que 
+                      esta coluna mostrará os endereços de e-mail dos contatos. -->
+    
+                <th>Telefone</th>
+                <!-- Uma célula de cabeçalho para a coluna 'Telefone', onde 
+                      serão exibidos os números de telefone dos contatos. -->
+    
+                <th>Ações</th>
+                <!-- Uma célula de cabeçalho para a coluna 'Ações'. Esta coluna pode 
+                      incluir botões ou links para editar ou excluir contatos, 
+                      oferecendo interatividade ao usuário. -->
+    
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tbody> é usado para agrupar o conteúdo do corpo da tabela. 
+                    As linhas adicionadas dinamicamente com os dados dos contatos 
+                    serão inseridas aqui via JavaScript. -->
+        </tbody>
+    </table>
+    
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta para "script.js" 
+          vincula um arquivo JavaScript externo à página. Este script contem 
+          as funções necessárias para manipular a tabela e atualizar o total de 
+          contatos, além de outras lógicas interativas da página. -->
+    
+</body>
+</html>
+    
