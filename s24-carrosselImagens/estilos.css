@@ -1,0 +1,164 @@
+/* Estilos somente para as imagens dentro do carrossel */
+.imagens-carrossel img {
+
+    /* Define a largura da imagem para cobrir 100% do seu contêiner pai. 
+        Isso faz com que a imagem se estenda para ocupar toda a 
+        largura disponível. */
+    width: 100%; 
+
+    /* Define a altura das imagens para 400 pixels. Isso garante que 
+    todas as imagens tenham a mesma altura, proporcionando um layout uniforme. */
+    height: 400px; 
+
+    /* A propriedade object-fit com o valor 'cover' faz com que a 
+    imagem cubra completamente o espaço designado sem distorcer suas 
+    proporções. Se necessário, a imagem será cortada para se ajustar. */
+    object-fit: cover;
+    
+    /* Oculta todas as imagens por padrão. Esta propriedade é crucial para o 
+    funcionamento do carrossel, pois permite que JavaScript controle quais 
+    imagens são mostradas através de alterações dinâmicas no 
+    estilo de display. */
+    display: none; 
+
+}
+
+/* A imagem com classe .imagem-ativa será exibida */
+.imagem-ativa {
+
+    /* A propriedade 'display: block' faz com que a imagem 
+            seja mostrada na página.
+       Elementos com 'display: block' ocupam todo o espaço 
+            possível na largura do contêiner, com uma nova linha 
+            antes e depois do elemento.
+       A classe 'imagem-ativa' é utilizada pelo JavaScript para 
+            indicar qual imagem do carrossel está atualmente ativa e, 
+            portanto, deve ser visível. */
+    display: block;
+
+}
+
+/* Estilos para as miniaturas, assegurando que sempre sejam exibidas */
+.miniaturas img {
+
+    /* Define a largura das imagens de miniaturas como 'auto', o 
+            que significa que a largura será determinada pelas 
+            proporções naturais da imagem. */
+    width: auto;
+
+    /* A propriedade 'max-width' limita a largura máxima das miniaturas 
+            a 15% do seu contêiner pai. Isso ajuda a manter as miniaturas 
+            visualmente consistentes e proporcionais. */
+    max-width: 15%;
+
+    /* Define a altura das miniaturas para ser uma altura fixa de 60 pixels. 
+            Isso garante que todas as miniaturas tenham a mesma altura, 
+            mantendo a uniformidade no layout. */
+    height: 60px;
+
+    /* A propriedade 'object-fit: cover' ajusta a imagem de forma que 
+            preencha completamente o contêiner sem distorcer sua relação de 
+            aspecto. Se necessário, parte da imagem será cortada para 
+            caber no contêiner. */
+    object-fit: cover;
+
+    /* A propriedade 'display: inline-block' permite que as miniaturas 
+            sejam alinhadas em linha, como caracteres de texto, mas ainda 
+            mantém propriedades de bloco, como a capacidade de 
+            definir largura e altura. */
+    display: inline-block;
+
+    /* A propriedade 'cursor: pointer' muda o cursor do mouse para 
+            indicar que a imagem é clicável. Isso melhora a usabilidade, 
+            mostrando aos usuários que eles podem interagir com as miniaturas 
+            para mudar a imagem principal do carrossel. */
+    cursor: pointer;
+
+}
+
+
+.imagem-ativa {
+    /* Define que a imagem com a classe '.imagem-ativa' será visível na página. 
+       A propriedade 'display: block' faz com que a imagem ocupe toda a 
+            largura possível do contêiner pai, e se posicione em uma nova 
+            linha antes e depois dela. 
+       Isso é usado para mostrar apenas a imagem que está atualmente 
+            ativa no carrossel. */
+    display: block; 
+}
+
+.miniaturas {
+    
+    /* Aplica um layout flexível ao contêiner das miniaturas. O Flexbox é 
+            um método de layout que permite que os itens dentro do contêiner 
+            sejam alinhados e distribuídos de maneira eficiente e flexível. */
+    display: flex;
+
+    /* Alinha os itens (miniaturas) horizontalmente ao centro do contêiner. 
+            Isso centraliza as miniaturas na visualização, independentemente de 
+            quantas são ou do tamanho do contêiner. */
+    justify-content: center;
+
+    /* Cria um espaço de 10 pixels entre cada miniatura. 'gap' é uma 
+            propriedade do Flexbox que define o espaço entre os 
+            itens do contêiner. */
+    gap: 10px;
+
+    /* Aplica um padding (preenchimento interno) vertical de 10 pixels no 
+            topo e na base do contêiner das miniaturas, mas nenhum preenchimento 
+            horizontal (0 para esquerda e direita). Isso dá um pouco de espaço 
+            entre as bordas do contêiner e as miniaturas. */
+    padding: 10px 0;
+
+}
+
+
+
+.botao-anterior, .botao-proximo {
+    /* Aplica estilos aos botões 'Anterior' e 'Próximo'. */
+
+    /* Muda o cursor do mouse para indicar que o botão é clicável. */
+    cursor: pointer; 
+
+    /* A propriedade 'position: absolute' posiciona os botões de 
+            forma absoluta em relação ao seu contêiner pai mais 
+            próximo com posição não estática. */
+    position: absolute; 
+
+    /* Posiciona os botões verticalmente no meio do contêiner pai. */
+    top: 50%; 
+
+    /* Usa a transformação para mover os botões para cima pela metade de 
+            sua própria altura, centralizando-os verticalmente. */
+    transform: translateY(-50%); 
+
+    /* Define a cor de fundo dos botões como preta com 50% de 
+            transparência (RGBA - Red, Green, Blue, Alpha). */
+    background-color: rgba(0,0,0,0.5);
+    
+    /* Define a cor do texto dentro dos botões como branca. */
+    color: white; 
+
+    /* Remove a borda dos botões. */
+    border: none; 
+
+    /* Aplica um preenchimento interno aos botões, 10 pixels na 
+    vertical e 20 pixels na horizontal. */
+    padding: 10px 20px; 
+
+    /* Define o tamanho da fonte do texto dentro dos botões como 18 pixels. */
+    font-size: 18px; 
+
+}
+
+.botao-anterior {
+
+    /* Estilos específicos para o botão 'Anterior'. */
+    left: 0; /* Posiciona o botão 'Anterior' no lado esquerdo do contêiner pai. */
+}
+
+.botao-proximo {
+    
+    /* Estilos específicos para o botão 'Próximo'. */
+    right: 0; /* Posiciona o botão 'Próximo' no lado direito do contêiner pai. */
+}

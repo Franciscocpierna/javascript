@@ -1,0 +1,158 @@
+<!DOCTYPE html> 
+<!-- A linha acima declara o tipo de documento para os 
+    navegadores. Isso ajuda o navegador a saber que tipo de HTML 
+    está sendo usado (HTML5, neste caso). É importante para a 
+    compatibilidade e renderização correta da página. -->
+
+<html lang="pt">
+<!-- A tag <html> envolve todo o conteúdo da sua página HTML. O 
+    atributo 'lang' especifica o idioma do conteúdo do documento, que é 
+    português ('pt') neste caso. Isso é útil para acessibilidade e 
+    motores de busca. -->
+
+<head>
+    <!-- A tag <head> contém metadados (dados sobre dados) e outras 
+        informações como links para folhas de estilo e o título da página. 
+        Não é exibido diretamente na janela do navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta tag <meta> define o conjunto de caracteres que o 
+        documento HTML usará, que é UTF-8. UTF-8 inclui a maioria dos 
+        caracteres de todos os sistemas de escrita do mundo e é 
+        recomendado para a acessibilidade e SEO. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, que controla a visualização da 
+                página em dispositivos móveis. 
+         'width=device-width' faz com que a largura da página corresponda à 
+                largura da tela do dispositivo.
+         'initial-scale=1.0' define o nível de zoom inicial quando a página é 
+                carregada pela primeira vez. -->
+
+    <title>Carrossel Avançado</title>
+    <!-- A tag <title> define o título da página, que aparece na aba do 
+        navegador. Este título é útil para SEO e para usuários entenderem 
+        sobre o que é a página. -->
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- A tag <link> aqui é usada para incluir um arquivo de folha de 
+                estilo CSS externo, que é utilizado para definir o 
+                estilo visual da página.
+         'rel="stylesheet"' indica que o documento vinculado é 
+                uma folha de estilo.
+         'href="css/estilos.css"' especifica o caminho para o arquivo CSS 
+                que você deseja vincular. -->
+
+</head>
+<!-- Fim da tag <head>, tudo a partir deste ponto até a tag <body> não 
+        será visível diretamente na página. -->
+
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo da página que é visível para os 
+        usuários, como texto, imagens, links, etc. -->
+    
+    
+    <div class="carrossel">
+        <!-- A tag <div> cria um contêiner genérico para conteúdo de fluxo, 
+            que é usado para agrupar elementos. Neste caso, ela está sendo usada 
+            para agrupar todos os componentes do carrossel. A classe 'carrossel' 
+            pode ser usada para aplicar estilos específicos através do CSS. -->
+        
+            <div class="imagens-carrossel">
+            <!-- Outra <div>, que está agrupando todas as imagens grandes do 
+                carrossel. A classe 'imagens-carrossel' ajuda a aplicar estilos 
+                específicos a todas as imagens contidas dentro desta <div>. -->
+        
+                <img src="imagens/imagem1.jpg" alt="Imagem 1" class="imagem-ativa" onclick="abrirEmNovaAba('imagens/imagem1.jpg')">
+                <!-- A tag <img> é usada para incorporar uma imagem na página. 
+                        'src' especifica o caminho da imagem. 
+                        'alt' fornece um texto alternativo para a imagem, útil para 
+                            acessibilidade e SEO se a imagem não puder ser exibida.
+                        'class="imagem-ativa"' aplica estilos específicos à imagem que está 
+                            atualmente ativa no carrossel.
+                        'onclick' é um atributo de evento que executa JavaScript quando a 
+                            imagem é clicada, neste caso, a função 'abrirEmNovaAba()' que 
+                            abre a imagem em uma nova aba do navegador. -->
+        
+                <img src="imagens/imagem2.jpg" alt="Imagem 2" onclick="abrirEmNovaAba('imagens/imagem2.jpg')">
+                <!-- Similar à imagem anterior, mas aponta para uma imagem diferente e 
+                            abre uma segunda imagem quando clicada. -->
+        
+                <img src="imagens/imagem3.jpg" alt="Imagem 3" onclick="abrirEmNovaAba('imagens/imagem3.jpg')">
+                <!-- Similar às anteriores, mas para uma terceira imagem. -->
+
+                <img src="imagens/imagem4.jpg" alt="Imagem 4" onclick="abrirEmNovaAba('imagens/imagem4.jpg')">
+                <!-- Similar às anteriores, mas para uma quarta imagem. -->
+
+                <img src="imagens/imagem5.jpg" alt="Imagem 5" onclick="abrirEmNovaAba('imagens/imagem5.jpg')">
+                <!-- Similar às anteriores, mas para uma quinta imagem. -->
+        
+                <!-- Adicione mais imagens conforme necessário -->
+        
+            </div>  
+
+            
+        <div class="miniaturas">
+            <!-- Esta <div> contém miniaturas das imagens do carrossel. A classe 'miniaturas' 
+                        pode ser usada para aplicar estilos específicos às miniaturas através do CSS. -->
+        
+                <img src="imagens/imagem1.jpg" alt="Imagem 1" onclick="selecionarImagem(0)">
+                <!-- Cada miniatura é uma <img> menor que pode ser clicada para 
+                        selecionar uma imagem no carrossel.
+                        'onclick="selecionarImagem(0)"' chama uma função JavaScript que 
+                        muda a imagem do carrossel para a primeira imagem. -->
+        
+                <img src="imagens/imagem2.jpg" alt="Imagem 2" onclick="selecionarImagem(1)">
+                <!-- Similar à miniatura anterior, mas seleciona a segunda imagem do carrossel. -->
+        
+                <img src="imagens/imagem3.jpg" alt="Imagem 3" onclick="selecionarImagem(2)">
+                <!-- Similar às anteriores, mas para a terceira imagem. -->
+
+                <img src="imagens/imagem4.jpg" alt="Imagem 4" onclick="selecionarImagem(3)">
+                <!-- Similar às anteriores, mas para a quarta imagem. -->
+
+                <img src="imagens/imagem5.jpg" alt="Imagem 5" onclick="selecionarImagem(4)">
+                <!-- Similar às anteriores, mas para a quinta imagem. -->
+        
+                <!-- Adicione miniaturas para as imagens adicionais conforme necessário -->
+                
+            </div>
+            
+            <button class="botao-anterior" onclick="mover(-1)">Anterior</button>
+            <!-- <button> cria um botão clicável na página.
+                    'class="botao-anterior"' aplica estilos específicos ao botão.
+                    'onclick="mover(-1)"' chama a função JavaScript para mover o 
+                        carrossel para a imagem anterior. -->
+        
+            <button class="botao-proximo" onclick="mover(1)">Próximo</button>
+            <!-- Similar ao botão anterior, mas este move o carrossel para a próxima imagem. -->
+        
+        </div>
+        <!-- Fim da <div> que contém o carrossel completo. -->
+        
+
+        <script src="js/script.js"></script>
+        <!-- A tag <script> é usada para incluir um arquivo de script 
+                    JavaScript externo na página. 
+            'src' especifica o caminho para o arquivo JavaScript que você 
+                    deseja incluir, que neste caso é 'js/script.js'.
+            Esse script pode conter funções e lógica que adicionam 
+                    interatividade ao site, como lidar com cliques de botão, 
+                    alterar imagens no carrossel, etc.
+            Ao incluir o script desta maneira, ele será carregado e 
+                    executado pelo navegador quando a página for acessada. -->
+
+</body>
+<!-- Fim da tag <body>. Todo o conteúdo visível da página deve 
+            ser colocado dentro desta tag. 
+        A tag <body> é onde você coloca todo o conteúdo que os usuários 
+            interagem diretamente, incluindo texto, imagens, vídeos, 
+            formas, scripts e mais. -->
+
+</html>
+<!-- Fim da tag <html>. Esta tag encapsula todo o conteúdo da página 
+            HTML e deve ser fechada no final do documento. 
+        É importante garantir que todas as tags abertas sejam devidamente 
+            fechadas para manter a estrutura do documento clara e evitar erros 
+            de renderização no navegador. -->
