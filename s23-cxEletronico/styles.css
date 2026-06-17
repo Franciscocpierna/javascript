@@ -1,0 +1,215 @@
+body {
+    /* Define o estilo para o elemento 'body', que é o
+     corpo principal do documento HTML. */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto dentro do 
+            corpo do documento.
+       'Arial' é a fonte principal. Se não estiver disponível, o 
+            navegador usará qualquer fonte sans-serif genérica.
+       Fontes sans-serif são aquelas sem pequenos traços no final das 
+            letras, frequentemente usadas para uma leitura mais 
+            clara em telas digitais. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo do corpo do documento.
+       A cor '#f0f0f0' é um cinza claro, proporcionando um fundo 
+            suave que é fácil nos olhos, melhorando a legibilidade do conteúdo. */
+
+}
+
+.container {
+    /* Aplica estilos a qualquer elemento HTML que tenha a classe 'container'. */
+
+    max-width: 600px;
+    /* Define a largura máxima do contêiner como 600 pixels. 
+       Isso significa que o contêiner pode se expandir até
+             600 pixels, mas não mais que isso. */
+
+    margin: 50px auto;
+    /* Define a margem externa do contêiner.
+       '50px auto' configura a margem superior e inferior para 50 pixels, 
+            e as margens laterais são configuradas para 'auto'.
+       A configuração 'auto' para as margens laterais centraliza o 
+            contêiner horizontalmente dentro de seu elemento pai. */
+
+    padding: 20px;
+    /* Define a margem interna do contêiner para 20 pixels em todos os lados.
+       Isso cria um espaço entre o conteúdo interno do contêiner e suas bordas. */
+
+    border: 2px solid #333;
+    /* Define a borda do contêiner.
+       '2px solid #333' significa que a borda tem 2 pixels de 
+            espessura, é sólida e tem a cor #333 (um cinza muito escuro). */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da borda do contêiner.
+       '10px' é o raio do arco, determinando quão curvado é o canto. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do contêiner como branco (#fff). */
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao redor do contêiner.
+       '0px 0px 10px rgba(0, 0, 0, 0.1)' define a sombra sem 
+            deslocamento vertical ou horizontal, 
+       com um desfoque de 10 pixels, e uma cor preta com transparência 
+            de 10% (rgba(0, 0, 0, 0.1)). */
+}
+
+
+#atm-container, #deposito-container, #saque-container, #historico-container {
+    /* Aplica estilos a elementos específicos identificados pelos IDs fornecidos: 
+       'atm-container', 'deposito-container', 'saque-container', e 'historico-container'. 
+       Cada ID representa diferentes seções ou funcionalidades de uma aplicação web. */
+
+    display: none;
+    /* Define a propriedade 'display' para 'none' para todos esses elementos.
+       Quando 'display' é definido como 'none', o elemento não é 
+            exibido na página e não ocupa espaço no layout.
+       Isso é útil para esconder partes da interface que não devem 
+            ser visíveis ao carregar a página,
+       mas podem ser mostradas mais tarde em resposta a ações do usuário, 
+            como clicar em um botão ou completar um formulário. */
+
+}
+
+h2 {
+    /* Aplica estilos ao elemento HTML 'h2', geralmente 
+            usado para títulos de seção. */
+
+    font-size: 28px;
+    /* Define o tamanho da fonte do texto dentro do 'h2' para 28 pixels.
+       Isso torna o texto significativamente grande, destacando-o 
+            como um cabeçalho. */
+
+    margin-bottom: 20px;
+    /* Define a margem na parte inferior do elemento 'h2' para 20 pixels.
+       Isso adiciona espaço abaixo do título, separando-o 
+            visualmente do conteúdo que segue. */
+
+}
+
+
+input, button {
+    /* Aplica estilos aos elementos 'input' e 'button'.
+       Agrupar esses seletores significa que as seguintes regras se 
+            aplicam tanto aos campos de entrada quanto aos botões. */
+
+    margin: 10px 0;
+    /* Define as margens superior e inferior para 10 pixels e as 
+            margens laterais para 0.
+       Isso ajuda a espaçar uniformemente os campos de entrada e 
+            botões de outros elementos na vertical, 
+       enquanto mantém alinhamento horizontal com elementos adjacentes. */
+
+    padding: 10px;
+    /* Define a margem interna para 10 pixels em todas as 
+            direções dentro dos elementos 'input' e 'button'.
+       Isso aumenta a área de clique e melhora a legibilidade do
+            texto dentro desses elementos. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para 18 pixels tanto nos 
+            campos de entrada quanto nos botões.
+       Isso garante que o texto seja grande o suficiente 
+            para ser facilmente legível. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e 
+            cor cinza claro (#ccc) em torno dos elementos 'input' e 'button'.
+       Isso delimita claramente a área desses elementos, 
+            tornando-os mais distinguíveis. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos da borda dos elementos 'input' 
+            e 'button' com um raio de 5 pixels.
+       Isso suaviza as bordas, dando aos elementos uma 
+            aparência mais moderna e amigável. */
+}
+
+
+button {
+    /* Aplica estilos a todos os elementos 'button' na página HTML. */
+
+    cursor: pointer;
+    /* Muda o cursor para o ícone de 'pointer' (usualmente 
+            uma mãozinha) quando ele passa sobre o botão.
+       Isso indica que o elemento é clicável, melhorando a 
+            usabilidade ao informar visualmente ao usuário que o
+             botão pode ser pressionado. */
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo dos botões como verde (#4CAF50).
+       Essa cor é vívida e pode ajudar a destacar os botões como 
+            áreas de ação na interface do usuário. */
+
+    color: white;
+    /* Define a cor do texto dentro dos botões como branco.
+       O contraste entre o fundo verde e o texto branco melhora a 
+            legibilidade e o apelo visual. */
+
+    border: none;
+    /* Remove a borda do botão.
+       Definir 'border: none' torna os botões mais limpos 
+            visualmente, focando na cor e no texto. */
+
+}
+
+
+button:hover {
+    /* Aplica estilos ao elemento 'button' quando o 
+            mouse está sobre ele (estado hover). */
+
+    background-color: #110ec3;
+    /* Muda a cor de fundo do botão para um tom de azul um 
+            pouco mais escuro (#110ec3) quando o mouse está sobre ele.
+       Essa mudança sutil de cor serve como um feedback visual 
+            para o usuário, indicando que o botão é interativo e a 
+            ação de clicar está sendo considerada. */
+
+}
+
+
+#historico-text {
+    /* Aplica estilos especificamente ao elemento HTML 
+            com o ID 'historico-text'.
+       Este elemento é tipicamente um campo de texto, como 
+            um textarea, usado para exibir informações históricas 
+            na interface do usuário. */
+
+    margin-bottom: 10px;
+    /* Define a margem na parte inferior do elemento para 10 pixels.
+       Isso adiciona um espaço abaixo do elemento, separando-o visualmente 
+            de outros conteúdos que podem estar abaixo dele. */
+
+    padding: 10px;
+    /* Define a margem interna do elemento para 10 pixels em todas as direções.
+       Isso cria espaço entre o conteúdo interno do elemento e as 
+            suas bordas, tornando o conteúdo mais fácil de ler. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte do texto dentro do elemento para 16 pixels.
+       Esse tamanho é geralmente confortável para leitura em 
+            dispositivos digitais, equilibrando clareza e 
+            eficiência de espaço. */
+
+    resize: none;
+    /* Desativa a capacidade de redimensionar o elemento.
+       Isso é comumente usado em textareas para evitar que o 
+            usuário mude o tamanho definido pelo design da interface. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida com 1 pixel de espessura ao redor do elemento.
+       A cor da borda é um cinza claro (#ccc), que é sutil e 
+            geralmente se harmoniza bem com a maioria dos designs 
+            de interface. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos da borda do elemento com um raio de 5 pixels.
+       Isso suaviza a aparência do elemento, fazendo com que se 
+            integre melhor a interfaces modernas que preferem 
+            bordas arredondadas. */
+            
+}
+

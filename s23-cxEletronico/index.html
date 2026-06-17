@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- Define o tipo do documento como HTML5, garantindo que o 
+    navegador processe o arquivo como tal -->
+
+<html lang="pt-BR">
+<!-- Abre a tag HTML, definindo o idioma do documento 
+    como Português do Brasil -->
+
+<head>
+<!-- Inicia a seção head, que contém metadados e links p
+    ara scripts e CSS -->
+
+    <meta charset="UTF-8">
+    <!-- Especifica a codificação de caracteres usada no 
+        documento (UTF-8), que inclui a maioria dos caracteres de 
+        vários idiomas -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a área de visualização para ser igual à largura do 
+        dispositivo e o nível de zoom inicial ao carregar a página para 1.0 -->
+
+    <title>Caixa Eletrônico</title>
+    <!-- Define o título do documento, que aparece na 
+        aba do navegador -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link para a folha de estilos externa, que define o 
+        estilo visual do documento -->
+
+</head>
+<!-- Fecha a tag head -->
+
+<body>
+    <!-- Inicia a tag body que contém todo o conteúdo 
+            visível da página web -->
+    
+    <div class="container">
+    <!-- Cria um contêiner div que agrupa elementos; 'class' é 
+            usada para especificar que este div pertence à 
+            classe 'container', o que permite aplicar estilos 
+            específicos definidos no CSS -->
+
+        <h2>Caixa Eletrônico</h2>
+        <!-- Adiciona um cabeçalho de nível dois (h2) que 
+            exibe o texto 'Caixa Eletrônico' -->
+
+        <div id="login-container">
+        <!-- Cria outro contêiner div especificamente para o f
+            ormulário de login; 'id' atribui um identificador único 
+            chamado 'login-container', que pode ser usado para 
+            referenciar e estilizar este div especificamente -->
+
+            <input type="text" id="usuario" placeholder="Usuário">
+            <!-- Adiciona um campo de entrada para texto onde os 
+                        usuários podem digitar seu nome de usuário. 
+                    'placeholder' fornece um texto de preenchimento 
+                        que desaparece quando o usuário começa a digitar -->
+
+            <input type="password" id="senha" placeholder="Senha">
+            <!-- Adiciona um campo de entrada que oculta o texto digitado para senha, 
+                    garantindo que a entrada seja confidencial enquanto é digitada -->
+
+            <button onclick="login()">Entrar</button>
+            <!-- Cria um botão que, quando clicado, executa a função JavaScript 'login()', 
+                    permitindo ao usuário tentar acessar sua conta -->
+
+            <button onclick="registrar()">Registrar</button>
+            <!-- Cria outro botão que, quando clicado, executa a 
+                    função JavaScript 'registrar()',
+                    permitindo a novos usuários criar uma conta -->
+
+        </div>
+        <!-- Fecha a div com id 'login-container' -->
+        
+        <div id="atm-container" style="display: none;">
+        <!-- Inicia um contêiner div com o identificador 'atm-container'. 
+                A propriedade 'style="display: none;"' garante que 
+                    este div não seja visível na carga inicial da página, 
+                    só aparecendo sob certas condições controladas por JavaScript -->
+        
+            <h3>Bem-vindo, <span id="nome-usuario"></span></h3>
+            <!-- Adiciona um cabeçalho de nível três (h3) que 
+                        dá boas-vindas ao usuário. 
+                    Dentro deste cabeçalho, há uma tag span 
+                        com id 'nome-usuario', 
+                    onde o JavaScript pode inserir dinamicamente o 
+                        nome do usuário logado -->
+        
+            <p>Conta: <span id="conta"></span></p>
+            <!-- Cria um parágrafo que mostra o número da conta do usuário.
+                    O número da conta é exibido dentro de uma tag span com id 'conta',
+                    permitindo que seu conteúdo seja atualizado 
+                        dinamicamente por JavaScript -->
+        
+            <p>Saldo: R$ <span id="saldo"></span></p>
+            <!-- Cria um parágrafo para mostrar o saldo atual do usuário.
+                    O saldo é exibido em uma tag span com id 'saldo',
+                    e o JavaScript pode atualizar esse valor conforme 
+                        as transações são realizadas -->
+        
+            <button onclick="exibirDeposito()">Depositar</button>
+            <!-- Cria um botão que, quando clicado, chama a 
+                        função JavaScript 'exibirDeposito()'.
+                    Esta função pode alterar a visibilidade de elementos 
+                        na página para mostrar a interface de depósito -->
+        
+            <button onclick="exibirSaque()">Sacar</button>
+            <!-- Cria um botão que, quando clicado, chama a 
+                        função JavaScript 'exibirSaque()'.
+                    Semelhante ao botão de depósito, altera a visibilidade dos 
+                        elementos para permitir ao usuário realizar um saque -->
+        
+            <button onclick="exibirHistorico()">Histórico de Transações</button>
+            <!-- Cria um botão que, quando clicado, chama a 
+                        função JavaScript 'exibirHistorico()'.
+                    Essa função mostra uma lista das transações passadas 
+                        do usuário, mudando a visibilidade dos elementos 
+                        para exibir essa informação -->
+        
+            <button onclick="logout()">Sair</button>
+            <!-- Cria um botão que, quando clicado, executa a 
+                        função JavaScript 'logout()'.
+                    Esta função pode fazer várias coisas, como limpar 
+                        dados do usuário e mostrar a tela de login novamente -->
+        
+        </div>
+        <!-- Fecha a div com id 'atm-container' -->
+
+        <div id="deposito-container" style="display: none;">
+        <!-- Inicia um contêiner div com o identificador 
+                    'deposito-container'.
+                A propriedade 'style="display: none;"' significa 
+                    que este contêiner está oculto por padrão 
+                e só será exibido através de uma ação, geralmente 
+                    um script JavaScript -->
+        
+            <h3>Depósito</h3>
+            <!-- Adiciona um cabeçalho de nível três (h3) que 
+                    indica a funcionalidade desta seção, que é para depósitos -->
+        
+            <input type="number" id="valor-deposito" placeholder="Valor a depositar">
+            <!-- Cria um campo de entrada para números onde os usuários 
+                        podem digitar o valor que desejam depositar.
+                    O 'type="number"' restringe a entrada a apenas números, 
+                        facilitando a validação.
+                    O atributo 'placeholder' fornece um texto de exemplo 
+                        dentro do campo, que desaparece quando o usuário 
+                        começa a digitar -->
+        
+            <button onclick="depositar()">Depositar</button>
+            <!-- Cria um botão que, quando clicado, executa a 
+                        função JavaScript 'depositar()'.
+                    Esta função é responsável por processar o valor 
+                        inserido pelo usuário como um depósito na conta -->
+        
+            <button onclick="exibirCaixaEletronico()">Cancelar</button>
+            <!-- Cria um botão que, quando clicado, executa a 
+                        função JavaScript 'exibirCaixaEletronico()'.
+                    Esta função geralmente altera a visibilidade de 
+                        contêineres na interface, voltando para a tela 
+                        principal do caixa eletrônico,
+                    permitindo ao usuário cancelar a operação de 
+                        depósito e retornar às outras opções -->
+        
+        </div>
+        <!-- Fecha a div com id 'deposito-container' -->
+            
+        <div id="saque-container" style="display: none;">
+        <!-- Cria um contêiner div com o identificador 'saque-container'.
+                O estilo 'display: none;' especifica que este contêiner 
+                    está oculto inicialmente e só será exibido por 
+                    uma ação JavaScript -->
+        
+            <h3>Saque</h3>
+            <!-- Adiciona um cabeçalho de nível três (h3) com o 
+                    texto "Saque", que serve como título para esta 
+                    seção da interface do usuário -->
+        
+            <input type="number" id="valor-saque" placeholder="Valor a sacar">
+            <!-- Insere um campo de entrada do tipo número para o 
+                        usuário digitar o valor que deseja sacar.
+                    O atributo 'placeholder' fornece um texto de exemplo 
+                        dentro do campo ("Valor a sacar"), que desaparece 
+                        quando o usuário começa a digitar -->
+        
+            <button onclick="sacar()">Sacar</button>
+            <!-- Cria um botão com a ação 'onclick' que chama a 
+                        função JavaScript 'sacar()'.
+                    Esta função é responsável por validar e processar o 
+                        saque do valor digitado pelo usuário -->
+        
+            <button onclick="exibirCaixaEletronico()">Cancelar</button>
+            <!-- Adiciona outro botão que, quando clicado, executa a 
+                        função JavaScript 'exibirCaixaEletronico()'.
+                    Essa função geralmente muda a visibilidade dos elementos 
+                        na página, retornando o usuário para a tela 
+                        principal do caixa eletrônico,
+                        permitindo ao usuário cancelar a operação de saque e 
+                        retornar às outras funcionalidades -->
+        
+        </div>
+        <!-- Fecha a div com id 'saque-container' -->
+            
+        <div id="historico-container" style="display: none;">
+        <!-- Inicia um contêiner div com o identificador 'historico-container'.
+                O atributo 'style="display: none;"' indica que 
+                    este contêiner é inicialmente oculto e será 
+                    exibido somente por meio de uma função JavaScript -->
+        
+            <h3>Histórico de Transações</h3>
+            <!-- Adiciona um cabeçalho de nível três (h3) para dar um 
+                    título à seção, neste caso, "Histórico de Transações",
+                    o que orienta o usuário sobre o conteúdo apresentado 
+                    nesta parte da interface -->
+        
+            <textarea id="historico-text" rows="10" cols="40" readonly></textarea>
+            <!-- Cria uma área de texto (textarea) com o identificador 'historico-text'.
+                    Os atributos 'rows="10"' e 'cols="40"' definem o tamanho 
+                            da área de texto, com 10 linhas e 40 colunas.
+                    O atributo 'readonly' garante que o conteúdo não 
+                            possa ser editado pelo usuário, sendo apenas para leitura,
+                    utilizado aqui para exibir o histórico de transações de 
+                            maneira segura e inalterável -->
+        
+            <button onclick="exibirCaixaEletronico()">Voltar</button>
+            <!-- Insere um botão que, ao ser clicado, executa a 
+                        função JavaScript 'exibirCaixaEletronico()'.
+                    Esta função tipicamente altera a visibilidade dos 
+                        elementos na interface, permitindo ao usuário 
+                        voltar à tela principal do caixa eletrônico,
+                        oferecendo uma maneira fácil e intuitiva de 
+                        retornar sem realizar alterações -->
+        
+        </div>
+        <!-- Fecha a div com id 'historico-container' -->
+        
+        </div>
+        <!-- Fecha a div externa 'container', que agrupava todos os 
+                    elementos de interface específicos (login, 
+                    operações, histórico) -->
+        
+        <script src="script.js"></script>
+        <!-- Inclui o arquivo JavaScript 'script.js' no documento HTML.
+                 Este script contém as funções necessárias para a 
+                        interatividade da página, como login, registro, 
+                        depósito, saque, e visualização do histórico.
+                 O atributo 'src' especifica o caminho para o arquivo 
+                        JavaScript que é carregado e executado pelo navegador -->
+            
+</body>
+</html>

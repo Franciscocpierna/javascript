@@ -2,7 +2,7 @@
          // executar a função quando todo o conteúdo
          // DOM (Document Object Model) for carregado.
 document.addEventListener('DOMContentLoaded', () => {
-    /* Este ouvinte de evento garante que o script só será
+    /* Este ouvinte de evento garante que o script só seráF
             executado depois que todo o HTML da página for 
             completamente carregado, evitando erros que ocorrem 
             quando o JavaScript tenta acessar elementos que 
