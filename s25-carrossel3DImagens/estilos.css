@@ -1,0 +1,382 @@
+:root {
+
+    --prev-next-opacity: 0.7; 
+    /* Define uma variável CSS chamada '--prev-next-opacity' 
+                no escopo global (disponível em todo o documento). 
+       Esta variável armazena um valor de opacidade de 0.7, que 
+                pode ser usado em vários lugares no CSS para manter 
+                a consistência e facilitar ajustes futuros. */
+
+}
+
+body {
+
+    display: flex;
+    /* Configura o modelo de caixa do <body> para flexível, o 
+                que permite usar flexbox para alinhar e distribuir 
+                os elementos filhos dentro do <body>. */
+
+    flex-direction: column;
+    /* Define a direção do flexbox como 'column', o que faz 
+                com que os elementos filhos do <body> sejam 
+                empilhados verticalmente. */
+
+    justify-content: center;
+    /* Alinha os elementos filhos do <body> ao centro do 
+                eixo principal (neste caso, verticalmente, 
+                porque o 'flex-direction' é 'column'). */
+
+    align-items: center;
+    /* Alinha os elementos filhos do <body> ao centro do 
+                eixo transversal (neste caso, horizontalmente). */
+
+    height: 100vh;
+    /* Define a altura do <body> para ser 100% do 'viewport height' (altura 
+                da janela de visualização), 
+                garantindo que o <body> ocupe 
+                toda a altura da tela visível. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo do <body> para um 
+                cinza claro (#f0f0f0). */
+
+    margin: 0;
+    /* Remove todas as margens externas do <body>, 
+                garantindo que não haja espaço extra ao 
+                redor dos elementos na página. */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do <body> para 'Arial', 
+                com um fallback genérico para qualquer fonte 'sans-serif',
+                garantindo uma tipografia limpa e moderna para o texto. */
+
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Define a margem inferior do cabeçalho <h1> 
+                para 20 pixels. Isso adiciona um espaço 
+                entre o <h1> e qualquer elemento que o siga, 
+                ajudando a separar visualmente o título do 
+                conteúdo abaixo dele. */
+
+}
+
+
+.carrossel-container {
+
+    position: relative;
+    /* Define a posição do contêiner do carrossel como 
+                relativa. Isso permite posicionar elementos 
+                filhos (como os botões de navegação e slides) 
+                em relação a este contêiner. */
+
+    width: 80%;
+    /* Estabelece a largura do contêiner do carrossel 
+                como 80% da largura do elemento pai, tornando-o 
+                responsivo e adaptável ao tamanho da tela. */
+
+    max-width: 1000px;
+    /* Define uma largura máxima de 1000px para o contêiner do 
+                carrossel para garantir que ele não fique 
+                demasiadamente grande em telas muito largas. */
+
+    height: 500px;
+    /* Fixa a altura do contêiner do carrossel em 500px para 
+                manter uma altura consistente, independente do 
+                conteúdo ou do tamanho da tela. */
+
+    perspective: 1000px;
+    /* Aplica uma perspectiva de 1000px para os elementos 3D 
+                dentro do contêiner. Isso afeta a profundidade 
+                percebida dos elementos 3D quando são 
+                transformados. */
+
+    overflow: hidden;
+    /* Oculta qualquer parte dos elementos filhos que 
+                ultrapassem os limites do contêiner, essencial 
+                para um carrossel onde os slides se movem para 
+                dentro e fora do contêiner visível. */
+
+}
+
+.carrossel {
+
+    width: 100%;
+    /* Define a largura do carrossel para ocupar 100% da 
+                largura de seu contêiner, garantindo que ele 
+                se estenda totalmente dentro do espaço disponível. */
+
+    height: 100%;
+    /* Define a altura do carrossel para ocupar 100% da 
+                altura de seu contêiner, garantindo uma 
+                cobertura completa na vertical. */
+
+    position: relative;
+    /* Configura a posição do carrossel como relativa, 
+                permitindo o posicionamento absoluto de 
+                seus slides filhos em relação a ele. */
+
+    transform-style: preserve-3d;
+    /* Garante que as transformações 3D nos slides filhos 
+                sejam preservadas, permitindo que eles 
+                mantenham uma perspectiva 3D real em 
+                relação ao contêiner do carrossel. */
+
+    /* Move o carrossel 200 pixels para trás ao longo 
+                do eixo Z (profundidade), afastando-o visualmente 
+                do usuário e criando espaço para efeitos 3D nos slides. */
+    transform: translateZ(-200px); /* Ajuste da profundidade */
+    
+}
+
+.slide {
+
+    position: absolute;
+    /* Posiciona cada slide de maneira absoluta dentro 
+                do carrossel, permitindo que eles se 
+                sobreponham e se desloquem livremente 
+                conforme necessário. */
+
+    width: 50%;
+    /* Define a largura de cada slide para 50% da largura 
+                total do carrossel, o que ajuda a controlar o 
+                tamanho e o posicionamento dos slides dentro 
+                do carrossel. */
+
+    height: 80%;
+    /* Define a altura de cada slide para 80% da altura 
+                total do carrossel, centralizando-os verticalmente 
+                com espaço acima e abaixo. */
+
+    left: 50%;
+    /* Posiciona o centro dos slides horizontalmente no 
+                centro do carrossel. */
+
+    top: 10%;
+    /* Posiciona o topo dos slides a 10% do topo do carrossel, 
+                ajudando a centralizá-los verticalmente dentro 
+                do contêiner. */
+
+    transition: transform 1s, opacity 1s;
+    /* Aplica uma transição suave para as propriedades 
+                'transform' e 'opacity' durante 1 segundo, 
+                garantindo que as mudanças de estado (como mover 
+                ou focar um slide) sejam visualmente suaves. */
+
+}
+
+
+.slide a {
+
+    display: block;
+    /* Define o elemento <a> para ser um bloco, o que 
+                faz com que ocupe a largura total disponível 
+                do seu contêiner pai. Isso é útil para garantir 
+                que o link preencha todo o slide, tornando toda a 
+                área clicável. */
+
+    width: 100%;
+    /* Ajusta a largura do link para cobrir 100% da largura 
+                do seu contêiner pai (neste caso, o slide). Isso 
+                garante que o link se estenda por toda a 
+                largura do slide. */
+
+    height: 100%;
+    /* Ajusta a altura do link para cobrir 100% da altura do 
+                seu contêiner pai, fazendo com que o link ocupe 
+                todo o espaço vertical do slide. */
+
+}
+
+.slide img {
+
+    width: 100%;
+    /* Define a largura da imagem para ocupar 100% da largura 
+                do seu contêiner (o elemento <a> neste caso), 
+                garantindo que a imagem cubra completamente a 
+                largura do slide. */
+
+    height: 100%;
+    /* Define a altura da imagem para ocupar 100% da altura do 
+                seu contêiner, garantindo que a imagem preencha 
+                completamente o slide verticalmente. */
+
+    object-fit: cover;
+    /* Ajusta o modo como a imagem é ajustada dentro de seu 
+                contêiner, garantindo que a imagem cubra 
+                completamente o espaço disponível sem ser 
+                distorcida, recortando o excesso se necessário. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da imagem com um raio de 10px, 
+                dando um aspecto mais suave e esteticamente 
+                agradável ao slide. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor da imagem para criar um 
+                efeito de elevação, melhorando a percepção 
+                visual de profundidade. A sombra tem um deslocamento 
+                de 4px para baixo e uma extensão de 8px, com 
+                uma cor preta transparente (10% de opacidade). */
+
+}
+
+.slide .info {
+
+    position: absolute;
+    /* Posiciona o bloco de informações absolutamente dentro 
+                do slide, permitindo que ele seja colocado em 
+                qualquer local dentro do slide sem afetar o 
+                layout de outros elementos. */
+
+    bottom: 10px;
+    /* Posiciona o bloco de informações a 10px do fundo do 
+                slide, criando um pequeno deslocamento que 
+                separa visualmente as informações da borda 
+                inferior do slide. */
+
+    left: 10px;
+    /* Posiciona o bloco de informações a 10px da borda 
+                esquerda do slide, alinhando-o de forma a 
+                criar uma margem consistente. */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Define a cor de fundo do bloco de informações para 
+                preto com 50% de opacidade, o que permite que o 
+                texto sobreposto se destaque enquanto ainda 
+                mostra um pouco da imagem de fundo. */
+
+    color: #fff;
+    /* Define a cor do texto dentro do bloco de informações 
+                para branco, garantindo alto contraste com o 
+                fundo escuro para legibilidade. */
+
+    padding: 10px;
+    /* Aplica um preenchimento de 10px ao redor do conteúdo 
+                interno do bloco de informações, proporcionando 
+                espaço suficiente entre o texto e as bordas do bloco. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do bloco de informações com um 
+                raio de 5px, suavizando sua aparência visual e 
+                integrando-o harmoniosamente ao design 
+                geral do slide. */
+
+}
+
+
+.slide.active {
+
+    transform: translateX(-50%) translateZ(200px);
+    /* Aplica transformações para centralizar o slide 
+                ativo horizontalmente e trazê-lo 200px 
+                para frente no eixo Z, destacando-o 
+                visualmente dos outros slides. */
+
+    opacity: 1;
+    /* Define a opacidade do slide ativo como 1, tornando-o 
+                totalmente opaco e claramente visível em 
+                comparação com os slides inativos. */
+                
+}
+
+.slide.prev {
+
+    transform: translateX(-150%) translateZ(100px);
+    /* Desloca o slide anterior 150% para a esquerda do 
+                centro e traz 100px para frente no eixo Z. 
+                Isso o posiciona parcialmente fora da visão 
+                principal e ligeiramente atrás do slide ativo. */
+
+    opacity: var(--prev-next-opacity);
+    /* Define a opacidade do slide anterior com base 
+                na variável CSS `--prev-next-opacity`, 
+                que foi definida anteriormente como 0.7, 
+                tornando-o menos opaco que o slide ativo. */
+
+}
+
+.slide.next {
+
+    transform: translateX(50%) translateZ(100px);
+    /* Desloca o slide seguinte 50% para a direita do 
+                centro e também o traz 100px para frente no 
+                eixo Z, similar ao slide anterior, mas do 
+                lado oposto. */
+
+    opacity: var(--prev-next-opacity);
+    /* Similar ao slide anterior, a opacidade é definida 
+                pela mesma variável CSS, garantindo 
+                consistência visual entre os slides 
+                que não estão ativos. */
+
+}
+
+button {
+
+    position: absolute;
+    /* Posiciona os botões de navegação de forma absoluta 
+                dentro de seu contêiner, permitindo que sejam 
+                posicionados em relação aos limites do 
+                contêiner do carrossel. */
+
+    top: 50%;
+    /* Posiciona os botões na metade da altura do 
+                contêiner para alinhá-los verticalmente ao centro. */
+
+    transform: translateY(-50%);
+    /* Ajusta o posicionamento vertical dos botões para 
+                que o centro de cada botão alinhe exatamente 
+                com o centro vertical do carrossel, 
+                compensando a metade da altura do botão. */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Define a cor de fundo dos botões para preto com 50% 
+                de opacidade, permitindo uma visibilidade 
+                parcial do conteúdo atrás dos botões. */
+
+    color: #fff;
+    /* Define a cor do texto dentro dos botões para branco, 
+                garantindo contraste suficiente com o fundo 
+                escuro para legibilidade. */
+
+    border: none;
+    /* Remove qualquer borda dos botões para um design 
+                mais limpo e moderno. */
+
+    padding: 10px;
+    /* Aplica um preenchimento interno de 10px aos botões 
+                para aumentar a área clicável e melhorar 
+                a estética. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando hover sobre 
+                os botões, indicando ao usuário que eles 
+                são interativos. */
+
+    z-index: 1;
+    /* Define o índice Z dos botões como 1, assegurando 
+                que eles fiquem acima de outros elementos no 
+                mesmo contexto de empilhamento. */
+
+}
+
+button.anterior {
+
+    left: 10px;
+    /* Posiciona o botão 'anterior' 10px à esquerda do 
+                lado esquerdo do contêiner do carrossel, 
+                tornando-o acessível para navegação. */
+
+}
+
+button.proximo {
+
+    right: 10px;
+    /* Posiciona o botão 'próximo' 10px à direita do 
+                lado direito do contêiner do carrossel, 
+                também para fácil acesso à navegação. */
+                
+}

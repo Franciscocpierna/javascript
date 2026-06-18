@@ -1,0 +1,264 @@
+<!DOCTYPE html> 
+<!-- Declaração do tipo de documento como HTML5, 
+            que é a versão mais atual do HTML. 
+     Isso ajuda o navegador a renderizar a página 
+            corretamente seguindo as normas estabelecidas 
+            para HTML5. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> é a raiz do documento HTML. O atributo 'lang' 
+            especifica o idioma principal do documento, 
+     que é 'pt-BR' (português do Brasil), orientando os 
+            navegadores e as ferramentas de SEO sobre o 
+            idioma do conteúdo da página. -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre os dados) 
+            que geralmente não são exibidos diretamente 
+            na página web. 
+     Isso inclui links para estilos, scripts e outras 
+            informações úteis como meta tags. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com o atributo 'charset' define o conjunto 
+                de caracteres usado no documento, neste caso, UTF-8. 
+         UTF-8 inclui a maioria dos caracteres de todos os 
+                sistemas de escrita do mundo e é a codificação 
+                recomendada para web, 
+         assegurando que todos os caracteres sejam 
+                exibidos corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A meta tag 'viewport' controla a área de 
+                visualização disponível para o navegador. 
+         O 'content' define a largura da viewport para seguir a 
+                largura do dispositivo (width=device-width) e 
+                estabelece.
+         a escala inicial (initial-scale=1.0), o que significa 
+                que a página será exibida em uma escala de 100% 
+                no dispositivo. 
+         Isso é crucial para tornar páginas responsivas, 
+                adaptáveis ao tamanho do dispositivo. -->
+
+    <title>Carrossel 3D</title>
+    <!-- A tag <title> define o título da página, que é 
+                mostrado na aba do navegador. 
+         Aqui, está definido como 'Carrossel 3D', que 
+                descreve o conteúdo ou a funcionalidade 
+                principal da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> com o atributo 'rel' definido 
+                como 'stylesheet' é usada para vincular um 
+                arquivo CSS externo à página. 
+         O atributo 'href' especifica o caminho para o 
+                arquivo CSS que contém os estilos que 
+                serão aplicados à página, 
+         neste caso, 'estilos.css'. Isso permite que a 
+                apresentação visual do documento HTML seja 
+                personalizada e melhorada. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo da página 
+                que é visível para o usuário, como 
+                texto, imagens, links, etc. 
+         É o recipiente para todos os elementos visíveis 
+                de uma página web. -->
+    
+        <h1>Carrossel 3D de Imagens</h1>
+        <!-- A tag <h1> define um cabeçalho de nível um, 
+                    que geralmente é usado para o título 
+                    principal da página. 
+             Aqui, ele anuncia o conteúdo da página como "Carrossel 
+                    3D de Imagens", servindo como uma introdução 
+                    clara e direta ao que o usuário pode esperar. -->
+    
+        <div class="carrossel-container">
+        <!-- Um <div> com a classe "carrossel-container" serve 
+                    como um contêiner para o carrossel de imagens. 
+             A classe ajuda a aplicar estilos CSS específicos e a 
+                    agrupar elementos relacionados, facilitando a 
+                    manipulação com CSS e JavaScript. -->
+    
+            <button class="anterior">&#10094;</button>
+            <!-- Um <button> com a classe "anterior" permite aos 
+                        usuários navegar para a imagem anterior 
+                        no carrossel. 
+                 O conteúdo '&#10094;' representa uma seta 
+                        esquerda, indicando visualmente a ação 
+                        de voltar. -->
+    
+            <div class="carrossel">
+            <!-- Outro <div> com a classe "carrossel" que atua 
+                        como o contêiner principal para os slides 
+                        individuais do carrossel. 
+                 Esta classe pode ser usada para aplicar estilos e 
+                        animações específicas às imagens dentro 
+                        do carrossel. -->
+    
+                <div class="slide">
+                <!-- Um <div> com a classe "slide" representa um 
+                            único slide dentro do carrossel. 
+                     Esta classe é crucial para aplicar estilos e 
+                            manipulações específicas, como animações de 
+                            transição entre os slides. -->
+    
+                    <a href="Imagem1.jpg" target="_blank">
+                    <!-- A tag <a> cria um hiperlink que, quando 
+                                clicado, abre a imagem em uma nova aba do 
+                                navegador ('target="_blank"'). 
+                         O atributo 'href' especifica o caminho para a imagem. -->
+    
+                        <img src="Imagem1.jpg" alt="Imagem 1">
+                        <!-- A tag <img> é usada para incorporar uma 
+                                imagem na página. 
+                             'src' define o caminho da imagem, e 'alt' 
+                                    fornece um texto alternativo que descreve a 
+                                    imagem, útil para acessibilidade e SEO. -->
+    
+                    </a>
+                    <div class="info">
+                    <!-- Um <div> com a classe "info" contém informações 
+                                adicionais sobre a imagem, como título e descrição. 
+                         Isso ajuda a fornecer contexto sobre o que a 
+                                imagem representa. -->
+    
+                        <h2>Leão</h2>
+                        <!-- A tag <h2> é usada para um cabeçalho de 
+                                    segundo nível, que neste caso dá um 
+                                    título à imagem ou slide atual. -->
+    
+                        <p>Rei na Floresta</p>
+                        <!-- A tag <p> define um parágrafo, usado aqui 
+                                    para fornecer uma descrição mais 
+                                    detalhada do slide ou imagem em questão. -->
+
+                    </div>
+                </div>
+                
+                <div class="slide">
+                <!-- Este <div> é outro "slide" no carrossel, 
+                            seguindo a mesma estrutura do anterior para 
+                            manter consistência e funcionalidade repetitiva. -->
+    
+                    <a href="Imagem2.jpg" target="_blank">
+                    <!-- Semelhante ao anterior, cria um hiperlink que 
+                            abre a imagem em uma nova aba. -->
+    
+                        <img src="Imagem2.jpg" alt="Imagem 2">
+                        <!-- Incorpora outra imagem com texto alternativo 
+                                específico para essa imagem. -->
+    
+                    </a>
+                    <div class="info">
+                    <!-- Contêiner para informações sobre a imagem, 
+                                como no slide anterior. -->
+    
+                        <h2>Foca</h2>
+                        <!-- Cabeçalho de segundo nível para o título da imagem. -->
+    
+                        <p>Gostam de brincar.</p>
+                        <!-- Parágrafo para descrição da imagem, oferecendo 
+                                detalhes relevantes ao usuário. -->
+                                
+                    </div>
+                </div>
+    
+            <div class="slide">
+            <!-- Um <div> com a classe "slide" representa mais um 
+                        slide individual no carrossel. Cada "slide" 
+                        contém uma única imagem e informações associadas. -->
+
+                <a href="Imagem3.jpg" target="_blank">
+                <!-- A tag <a> cria um link que, quando clicado, abre a 
+                            imagem especificada (Imagem3.jpg) em uma nova 
+                            aba do navegador, graças ao atributo 'target="_blank"'. -->
+
+                    <img src="Imagem3.jpg" alt="Imagem 3">
+                    <!-- A tag <img> incorpora a imagem na página, 
+                            especificando seu caminho com o atributo 'src' e 
+                            fornecendo um texto alternativo 'alt', que 
+                            descreve a imagem para acessibilidade e SEO. -->
+
+                </a>
+
+                <div class="info">
+                <!-- Um <div> com a classe "info" serve como um 
+                            contêiner para o título e a descrição da 
+                            imagem, melhorando a estruturação e apresentação 
+                            das informações. -->
+
+                    <h2>Casa de Campo</h2>
+                    <!-- A tag <h2> define um cabeçalho de segundo nível 
+                                para o título da imagem, ajudando a organizar e 
+                                destacar o conteúdo textual na página. -->
+
+                    <p>Bom para descansar.</p>
+                    <!-- A tag <p> define um parágrafo que contém a 
+                                descrição da imagem, proporcionando mais 
+                                contexto e detalhes sobre o que a imagem 
+                                representa. -->
+
+                </div>
+            </div>
+
+            <div class="slide">
+            <!-- Repete a estrutura de "slide" para outra imagem, mantendo a 
+                        consistência na apresentação de slides no carrossel. -->
+
+                <a href="Imagem4.jpg" target="_blank">
+                <!-- Similar à tag <a> anterior, cria um link para abrir a 
+                            Imagem4.jpg em uma nova aba, proporcionando uma 
+                            visualização isolada da imagem. -->
+
+                    <img src="Imagem4.jpg" alt="Imagem 4">
+                    <!-- Incorpora a imagem usando a tag <img>, com seu 
+                            caminho especificado e texto alternativo para 
+                            descrição. -->
+
+                </a>
+
+                <div class="info">
+                <!-- Contêiner para o título e descrição da imagem, 
+                            seguindo o padrão usado nos slides anteriores. -->
+
+                    <h2>Peixe</h2>
+                    <!-- Define o título da imagem com um cabeçalho de 
+                                segundo nível, que ajuda na hierarquização do 
+                                conteúdo textual. -->
+
+                    <p>São lindos e vivem no rio ou mar.</p>
+                    <!-- Define um parágrafo para a descrição, detalhando 
+                                elementos ou contextos relacionados à imagem. -->
+
+                </div>
+            </div>
+        </div>
+        <!-- Fecha o <div> principal do carrossel, encapsulando 
+                    todos os slides. -->
+
+        <button class="proximo">&#10095;</button>
+        <!-- Um <button> com a classe "proximo" que, quando clicado, 
+                    avança o carrossel para o próximo slide. O conteúdo '&#10095;' 
+                    é uma seta direita, indicando a direção do movimento 
+                    ao usuário. -->
+
+    </div>
+    <!-- Fecha o <div> "carrossel-container", que encapsula todo o 
+                carrossel, incluindo botões de navegação e slides. -->
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' vincula um arquivo 
+                JavaScript externo, 'script.js', ao HTML. Este script 
+                contém a lógica para manipular o comportamento 
+                interativo do carrossel, como navegação e animações. -->
+
+</body>
+<!-- Fecha a tag <body>, que contém todo o conteúdo 
+            visível ao usuário na página. -->
+
+</html>
+<!-- Fecha a tag <html>, que encapsula todo o 
+            documento HTML. -->
