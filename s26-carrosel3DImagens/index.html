@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- Esta linha é a declaração do tipo de 
+          documento (DOCTYPE). Ela é uma instrução para o 
+          navegador web sobre qual versão do HTML a 
+          página está escrita. 
+     Neste caso, indica HTML5, a versão mais recente e 
+               amplamente suportada, assegurando que a 
+               página seja processada corretamente. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> é a raiz do documento HTML. O atributo 'lang' 
+               especifica o idioma do documento, que é Português 
+               do Brasil ('pt-BR') neste caso.
+     Isso é importante para acessibilidade, ferramentas de SEO, e 
+               navegadores, para entenderem o idioma principal do 
+               conteúdo da página. -->
+
+<head>
+<!-- A tag <head> contém metadados sobre o documento HTML, 
+               que não são exibidos diretamente na página web.
+     Estes metadados incluem links para folhas de estilo, scripts, 
+               e outras informações essenciais como o título da 
+               página e a codificação de caracteres. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com o atributo 'charset' define o conjunto de 
+               caracteres para o documento HTML. 'UTF-8' é um 
+               padrão de codificação de caracteres que inclui 
+               quase todos os caracteres e símbolos do mundo, 
+               garantindo que qualquer texto seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta meta tag ajuda a controlar a dimensão e a 
+               escala da viewport. O atributo 'content' 
+               com 'width=device-width' instrui o navegador a 
+               ajustar a largura da página à largura do 
+               dispositivo de visualização, o que é crucial para 
+               designs responsivos. 
+          'initial-scale=1.0' define o nível de zoom inicial 
+                    quando a página é carregada pela primeira vez. -->
+
+    <title>Carrossel 3D</title>
+    <!-- A tag <title> define o título da página, que é 
+                    exibido na aba do navegador. Este título é 
+                    também usado por motores de busca e quando a 
+                    página é favoritada.
+         "Carrossel 3D" descreve o conteúdo ou a funcionalidade 
+                    principal da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é utilizada aqui para vincular uma 
+                    folha de estilo externa ao documento HTML. 
+          O atributo 'rel' especifica o relacionamento entre o 
+                    documento HTML e o recurso vinculado,
+                    neste caso, uma folha de estilo ('stylesheet'). 
+          'href' especifica o caminho para o arquivo CSS 
+                    que estilizará a página. -->
+
+</head>
+
+<body>
+<!-- A tag <body> contém todo o conteúdo principal que é 
+               visível aos usuários na página web. -->
+
+    <h1>Carrossel 3D de Imagens</h1>
+    <!-- A tag <h1> é utilizada para o título principal da 
+               página, neste caso, "Carrossel 3D de Imagens". 
+         É importante para SEO (Search Engine Optimization) pois 
+               indica aos motores de busca o tema principal 
+               da página. -->
+
+    <div class="carrossel-container">
+    <!-- A tag <div> com a classe 'carrossel-container' serve 
+               como o contêiner principal para o carrossel de imagens. 
+         Essa divisão encapsula todos os componentes do 
+               carrossel, incluindo botões de navegação e 
+               os slides. -->
+
+        <button class="anterior">&#10094;</button>
+        <!-- Um <button> com a classe 'anterior' é utilizado 
+                    para permitir ao usuário navegar para o 
+                    slide anterior. 
+             O conteúdo '&#10094;' representa uma seta para a 
+                    esquerda, indicando visualmente a ação de voltar. -->
+
+        <div class="carrossel">
+        <!-- A tag <div> com a classe 'carrossel' atua como o 
+                    contêiner específico que hospeda os slides 
+                    individuais do carrossel. -->
+
+            <!-- Cada <div> com a classe 'slide' contém um 
+                         único elemento <a> que encapsula uma <img>. 
+                 Estas são as imagens individuais do carrossel. 
+                 Cada link (<a>) tem o atributo 'target="_blank"', 
+                         o que faz com que a imagem seja aberta em 
+                         uma nova aba do navegador quando clicada. 
+                 O atributo 'href' contém o caminho para cada imagem. -->
+            <div class="slide"><a href="imagens/Imagem1.jpg" target="_blank"><img src="imagens/Imagem1.jpg" alt="Imagem 1"></a></div>
+            <div class="slide"><a href="imagens/Imagem2.jpg" target="_blank"><img src="imagens/Imagem2.jpg" alt="Imagem 2"></a></div>
+            <div class="slide"><a href="imagens/Imagem3.jpg" target="_blank"><img src="imagens/Imagem3.jpg" alt="Imagem 3"></a></div>
+            <div class="slide"><a href="imagens/Imagem4.jpg" target="_blank"><img src="imagens/Imagem4.jpg" alt="Imagem 4"></a></div>
+            <div class="slide"><a href="imagens/Imagem5.jpg" target="_blank"><img src="imagens/Imagem5.jpg" alt="Imagem 5"></a></div>
+            <div class="slide"><a href="imagens/Imagem6.jpg" target="_blank"><img src="imagens/Imagem6.jpg" alt="Imagem 6"></a></div>
+            <div class="slide"><a href="imagens/Imagem7.jpg" target="_blank"><img src="imagens/Imagem7.jpg" alt="Imagem 7"></a></div>
+            <div class="slide"><a href="imagens/Imagem8.jpg" target="_blank"><img src="imagens/Imagem8.jpg" alt="Imagem 8"></a></div>
+            <div class="slide"><a href="imagens/Imagem9.jpg" target="_blank"><img src="imagens/Imagem9.jpg" alt="Imagem 9"></a></div>
+            <div class="slide"><a href="imagens/Imagem10.jpg" target="_blank"><img src="imagens/Imagem10.jpg" alt="Imagem 10"></a></div>
+
+        </div>
+
+        <button class="proximo">&#10095;</button>
+        <!-- Um <button> com a classe 'proximo' é utilizado para 
+                    permitir ao usuário navegar para o próximo slide.
+             O conteúdo '&#10095;' representa uma seta para a direita, 
+                    indicando visualmente a ação de avançar. -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' apontando 
+                    para 'script.js' vincula um arquivo JavaScript 
+                    externo ao HTML.
+         Este script contém a lógica para o funcionamento 
+                    interativo do carrossel de imagens, 
+                    manipulando eventos e transições. -->
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+body {
+
+    display: flex;
+    /* Define o display para flexível, permitindo o uso de Flexbox, 
+            que é um método para alinhar e distribuir espaço entre 
+            itens em um contêiner, mesmo quando seus tamanhos 
+            são desconhecidos. */
+
+    flex-direction: column;
+    /* Estabelece a direção principal do eixo como vertical (de 
+            cima para baixo), pois o padrão é horizontal. */
+
+    justify-content: center;
+    /* Alinha os itens flexíveis ao centro no eixo principal, 
+            neste caso, verticalmente. */
+
+    align-items: center;
+    /* Alinha os itens flexíveis ao centro no eixo transversal, 
+            neste caso, horizontalmente. */
+
+    height: 100vh;
+    /* Define a altura do corpo para 100% da altura da janela de 
+            visualização do navegador (viewport height), garantindo 
+            que o corpo preencha toda a altura da tela do usuário. */
+
+    background-color: #333;
+    /* Define a cor de fundo do corpo da página como um 
+            cinza escuro (#333). */
+
+    color: #fff;
+    /* Define a cor do texto para branco, o que garante alto 
+            contraste com o fundo escuro. */
+
+    margin: 0;
+    /* Remove qualquer margem exterior, assegurando que não 
+            haja espaço extra em torno dos elementos no 
+            início da página. */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para Arial, com um fallback 
+            para qualquer fonte sans-serif se Arial não 
+            estiver disponível. */
+
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem na parte inferior do título 
+            principal (h1) para criar espaço entre o título e 
+            o conteúdo abaixo dele, evitando que os elementos 
+            fiquem visualmente agrupados demais. */
+            
+}
+
+
+.carrossel-container {
+
+    position: relative;
+    /* Estabelece a posição como relativa, permitindo que 
+            elementos filhos posicionados absolutamente se 
+            baseiem na posição deste contêiner. */
+
+    width: 80%;
+    /* Define a largura do contêiner do carrossel para 80% da 
+            largura do elemento pai, que é o corpo da página. */
+
+    max-width: 1200px;
+    /* Estabelece uma largura máxima para o contêiner para 
+            garantir que não se torne excessivamente largo em 
+            telas grandes. */
+
+    height: 400px;
+    /* Define uma altura fixa de 400px para o contêiner 
+            do carrossel. */
+
+    perspective: 2000px;
+    /* Aplica uma perspectiva de 2000px para os elementos 
+            filhos 3D dentro do contêiner. Isso afeta como os 
+            elementos 3D são visualizados em termos de profundidade. */
+
+    display: flex;
+    /* Usa Flexbox para facilitar o alinhamento dos 
+            elementos dentro do contêiner. */
+
+    justify-content: center;
+    /* Centraliza os itens flexíveis (neste caso, os slides do 
+            carrossel) horizontalmente dentro do contêiner. */
+
+    align-items: center;
+    /* Centraliza os itens flexíveis verticalmente dentro do 
+            contêiner, garantindo que o carrossel seja 
+            alinhado tanto vertical quanto horizontalmente. */
+
+}
+
+.carrossel {
+
+    width: 100%;
+    /* Define a largura do carrossel para ocupar 100% da 
+            largura do contêiner pai, o `.carrossel-container`. */
+
+    height: 100%;
+    /* Define a altura do carrossel para ocupar 100% da 
+            altura do contêiner pai. */
+
+    position: relative;
+    /* Define a posição como relativa, permitindo o 
+            posicionamento absoluto de elementos filhos (como `.slide`) 
+            em relação a este contêiner. */
+
+    transform-style: preserve-3d;
+    /* Garante que as transformações 3D dos elementos filhos 
+            sejam renderizadas em um espaço tridimensional, 
+            mantendo a perspectiva. */
+
+    transform: translateZ(-800px) rotateY(0deg);
+    /* Aplica uma transformação para mover o carrossel 800px 
+            para trás no eixo Z, criando profundidade, e 
+            inicia sem rotação no eixo Y. */
+
+    transition: transform 1s;
+    /* Define uma transição suave de 1 segundo para transformações, 
+            tornando os movimentos de rotação e translação 
+            visualmente agradáveis. */
+
+    display: flex;
+    /* Utiliza Flexbox para facilitar o alinhamento dos 
+            elementos filhos (slides). */
+
+    justify-content: center;
+    /* Alinha os itens filhos (slides) no centro do carrossel 
+            no eixo horizontal. */
+
+    align-items: center;
+    /* Alinha os itens filhos (slides) no centro do carrossel 
+            no eixo vertical. */
+
+}
+
+.slide {
+
+    width: 300px;
+    /* Define a largura fixa de cada slide para 300px. */
+
+    height: 300px;
+    /* Define a altura fixa de cada slide para 300px. */
+
+    background-color: #ccc;
+    /* Define a cor de fundo de cada slide para cinza 
+            claro (#ccc), o que ajuda a diferenciar os 
+            slides visualmente. */
+
+    position: absolute;
+    /* Posiciona cada slide de forma absoluta dentro do 
+            contêiner `.carrossel`, permitindo sobreposição e 
+            arranjo livre no espaço 3D. */
+
+    border: 1px solid #333;
+    /* Adiciona uma borda sólida de 1px na cor cinza escuro (#333) 
+            para destacar os limites de cada slide. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra abaixo de cada slide, adicionando 
+            profundidade e contraste visual ao design. */
+
+    transition: transform 0.5s ease;
+    /* Define uma transição suave de 0.5 segundo para 
+            transformações, permitindo mudanças visuais 
+            agradáveis ao mover ou focar slides. */
+
+}
+
+.slide a {
+
+    display: block;
+    /* Define o elemento <a> como um bloco, ocupando 
+            todo o espaço disponível dentro do `.slide`, 
+            tornando toda a área do slide clicável. */
+
+    width: 100%;
+    /* Define a largura do link para cobrir 100% da largura do 
+            seu contêiner, garantindo que todo o slide 
+            seja clicável. */
+
+    height: 100%;
+    /* Define a altura do link para cobrir 100% da altura do 
+            seu contêiner, garantindo que toda a área do 
+            slide seja clicável. */
+
+}
+
+
+.slide img {
+
+    width: 100%;
+    /* Define a largura da imagem para ocupar 100% da 
+            largura de seu contêiner, neste caso, o slide, 
+            garantindo que a imagem cubra todo o espaço 
+            disponível. */
+
+    height: 100%;
+    /* Define a altura da imagem para ocupar 100% da altura de 
+            seu contêiner, assegurando que a imagem preencha 
+            completamente o slide verticalmente. */
+
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir o espaço disponível sem 
+            distorcer suas proporções. Qualquer excesso de 
+            imagem é cortado para garantir que o contêiner 
+            seja totalmente preenchido. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da imagem com um raio de 10px, 
+            suavizando as bordas e melhorando a estética 
+            do carrossel. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Aplica uma sombra ao redor da imagem, criando um 
+            efeito visual de profundidade e destacando a 
+            imagem no contexto do slide. A sombra tem uma 
+            opacidade de 50%, o que a torna relativamente 
+            visível e eficaz para adicionar contraste. */
+
+}
+
+button {
+    
+    position: absolute;
+    /* Posiciona os botões de forma absoluta, o que permite 
+                que sejam colocados em locais específicos 
+                dentro de seu contêiner pai, neste caso, 
+                o `.carrossel-container`. */
+
+    top: 50%;
+    /* Posiciona os botões no meio do contêiner na vertical. */
+
+    transform: translateY(-50%);
+    /* Ajusta a posição vertical dos botões para que o 
+                centro deles alinhe exatamente com o centro 
+                vertical do contêiner, compensando a metade de 
+                sua altura. Isso garante que eles fiquem 
+                centralizados verticalmente. */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Define a cor de fundo dos botões para preto com 50% 
+                de transparência, permitindo uma visibilidade 
+                parcial do conteúdo atrás dos botões e 
+                mantendo a estética geral. */
+
+    color: #fff;
+    /* Define a cor do texto dentro dos botões para branco, 
+                garantindo um contraste adequado para 
+                fácil leitura. */
+
+    border: none;
+    /* Remove qualquer borda dos botões, proporcionando um 
+                visual mais limpo e moderno. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento interno de 10px em todas as 
+                direções dentro dos botões, aumentando a área de 
+                clique e melhorando a usabilidade. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando hover sobre os 
+                botões, indicando que são interativos. */
+
+    z-index: 100;
+    /* Define um índice z elevado para os botões para garantir 
+                que eles fiquem acima de outros elementos no 
+                contexto de empilhamento. */
+
+}
+
+button.anterior {
+
+    left: 0;
+    /* Posiciona o botão 'anterior' na extremidade esquerda 
+                do contêiner do carrossel, facilitando a 
+                interação para navegar aos slides anteriores. */
+
+}
+
+button.proximo {
+
+    right: 0;
+    /* Posiciona o botão 'próximo' na extremidade direita do 
+                contêiner do carrossel, tornando acessível a 
+                navegação para os próximos slides. */
+                
+}
