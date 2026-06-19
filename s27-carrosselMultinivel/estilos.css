@@ -1,0 +1,237 @@
+body {
+
+    display: flex;
+    /* Define o modelo de caixa do corpo da página 
+            para 'flex', permitindo o uso de Flexbox para 
+            alinhar e distribuir os elementos filhos de 
+            forma mais eficiente e responsiva. */
+
+    justify-content: center;
+    /* Alinha os elementos filhos do corpo (neste caso, o 
+            carrossel-container) horizontalmente ao centro do 
+            contêiner do corpo. */
+
+    align-items: center;
+    /* Alinha os elementos filhos do corpo verticalmente ao 
+            centro, garantindo que o carrossel esteja centralizado 
+            tanto horizontal quanto verticalmente na página. */
+
+    height: 100vh;
+    /* Define a altura do corpo para ser 100% da altura da 
+            janela de visualização (viewport), garantindo que o 
+            conteúdo principal ocupe toda a altura visível da 
+            tela, criando uma experiência de visualização 
+            de tela cheia. */
+
+    background-color: #f0f0f0;
+    /* Aplica uma cor de fundo cinza claro (#f0f0f0) ao corpo 
+            da página, proporcionando um contraste suave que não 
+            distrai dos elementos de conteúdo, como o carrossel 
+            de imagens. */
+
+    margin: 0;
+    /* Remove todas as margens externas do corpo, garantindo que 
+            não haja espaços indesejados em torno dos elementos 
+            da página. */
+            
+}
+
+.carrossel-container {
+
+    position: relative;
+    /* Configura o posicionamento do contêiner do carrossel 
+            como 'relative', o que permite posicionar 
+            absolutamente outros elementos (como botões) 
+            dentro deste contêiner, relativos a ele. */
+
+    width: 80%;
+    /* Define a largura do contêiner do carrossel para 80% da 
+            largura do seu contêiner pai, o que ajuda a manter o 
+            carrossel proporcionalmente ajustado ao tamanho da 
+            tela ou janela de visualização. */
+
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que ultrapasse os limites do 
+            contêiner do carrossel, garantindo que apenas os 
+            itens dentro do viewport visível sejam mostrados, 
+            criando um efeito limpo e controlado de exibição dos slides. */
+
+}
+
+
+.carrossel {
+
+    display: flex;
+    /* Utiliza Flexbox no carrossel para alinhar e distribuir 
+            seus elementos filhos (os slides) horizontalmente. Isso 
+            facilita o controle dos slides como um grupo contínuo, 
+            que pode ser transformado e animado. */
+
+    transition: transform 0.5s ease-in-out;
+    /* Aplica uma transição suave às transformações de estilo 'transform' 
+            aplicadas ao carrossel. Duração de 0.5 segundos com um 
+            efeito 'ease-in-out' proporciona uma aceleração e 
+            desaceleração suaves, tornando as mudanças de estado 
+            visualmente agradáveis e menos abruptas. */
+
+}
+
+.nivel {
+
+    display: flex;
+    /* Estabelece o modelo de caixa flexível para o 
+            contêiner '.nivel', permitindo o uso de Flexbox 
+            para gerenciar a disposição dos elementos filhos (itens). */
+
+    flex-direction: column;
+    /* Define a direção principal do Flexbox como vertical (coluna), 
+            fazendo com que os itens dentro deste contêiner sejam 
+            organizados verticalmente. */
+
+    justify-content: space-around;
+    /* Distribui espaço ao redor de cada item dentro do 
+            contêiner, proporcionando um espaçamento uniforme 
+            entre os elementos filhos, tanto acima quanto abaixo 
+            de cada item. */
+
+    min-width: 100%;
+    /* Garante que a largura mínima do contêiner '.nivel' seja 
+            de pelo menos 100% da largura do seu contêiner pai, 
+            assegurando que cada nível ocupe toda a largura 
+            disponível. */
+
+    box-sizing: border-box;
+    /* Altera o modelo de dimensionamento de caixa para 'border-box', 
+            que inclui 'padding' e 'border' dentro da largura e 
+            altura especificadas do elemento, facilitando o 
+            controle preciso do layout. */
+
+}
+
+
+.item {
+
+    display: flex;
+    /* Utiliza Flexbox dentro do item para facilitar o 
+            alinhamento do conteúdo (imagens), permitindo 
+            controle mais fino sobre a posição do conteúdo interno. */
+
+    justify-content: center;
+    /* Centraliza os filhos (imagens) horizontalmente 
+            dentro do item. */
+
+    align-items: center;
+    /* Centraliza os filhos (imagens) verticalmente 
+            dentro do item, garantindo que a imagem esteja 
+            alinhada tanto vertical quanto horizontalmente. */
+
+    height: 400px;
+    /* Define a altura fixa para cada item em 200 pixels, 
+            garantindo que todos os itens tenham a mesma 
+            altura para uma aparência uniforme. */
+
+
+    margin: 10px;
+    /* Aplica uma margem de 10 pixels em todos os lados do 
+            item, separando visualmente cada item dos 
+            seus vizinhos. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do item com um raio de 10 
+            pixels, suavizando as bordas para um 
+            design mais estético. */
+
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que ultrapasse os limites 
+            do item, como uma imagem que seja maior que o 
+            espaço disponível, mantendo o design limpo e ordenado. */
+
+}
+
+
+.item img {
+
+    width: 1900px;
+    /* Define a largura da imagem para cobrir 1900px da 
+            largura de seu contêiner (item), garantindo 
+            que a imagem se estenda para preencher todo o 
+            espaço horizontal disponível. */
+
+    height: auto;
+    /* Define a altura da imagem para ser automaticamente 
+            ajustada, mantendo as proporções originais da 
+            imagem para evitar distorção. */
+
+
+}
+
+button {
+
+    position: absolute;
+    /* Posiciona o botão de forma absoluta dentro de 
+            seu contêiner mais próximo com posição não 
+            estática, permitindo que ele seja colocado 
+            precisamente no layout sem afetar o fluxo 
+            normal dos documentos. */
+
+    top: 50%;
+    /* Posiciona o botão verticalmente no meio do 
+            contêiner, com base na parte superior do mesmo. */
+
+    transform: translateY(-50%);
+    /* Desloca o botão para cima pela metade de sua própria 
+            altura para centralizá-lo verticalmente. Esta 
+            técnica é comum para alinhar perfeitamente 
+            elementos no centro. */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Define a cor de fundo do botão com uma cor preta 
+            translúcida (50% de opacidade), que adiciona um 
+            estilo sutil e permite que elementos por trás 
+            do botão sejam parcialmente visíveis. */
+
+    color: #fff;
+    /* Define a cor do texto dentro do botão como branco, 
+            garantindo uma leitura fácil contra o fundo escuro. */
+
+    border: none;
+    /* Remove qualquer borda do botão para um design 
+            mais limpo e moderno. */
+
+    padding: 10px;
+    /* Aplica 10 pixels de preenchimento em todas as 
+            direções dentro do botão, aumentando a área de 
+            clique e melhorando a estética. */
+
+    cursor: pointer;
+    /* Muda o cursor para indicar um ponteiro quando o mouse 
+            passa sobre o botão, sinalizando ao usuário que o 
+            elemento é clicável. */
+
+    z-index: 1;
+    /* Define a pilha de ordem do botão (seu contexto de 
+            empilhamento) para 1, garantindo que ele seja 
+            colocado acima de outros elementos  
+            sobrepostos dentro do mesmo contêiner. */
+
+}
+
+button.anterior {
+
+    left: 10px;
+    /* Posiciona especificamente o botão 'anterior' 10 
+            pixels à esquerda do contêiner do carrossel, 
+            tornando-o visível no lado esquerdo e facilmente 
+            acessível para a navegação para trás. */
+
+}
+
+button.proximo {
+
+    right: 10px;
+    /* Posiciona especificamente o botão 'próximo' 10 
+            pixels à direita do contêiner do carrossel, 
+            colocando-o visivelmente no lado direito e 
+            facilitando a navegação para frente. */
+            
+}

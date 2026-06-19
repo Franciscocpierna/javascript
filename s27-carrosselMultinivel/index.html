@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- Esta linha é a declaração do tipo de documento (DOCTYPE). 
+          Ela é crucial porque informa ao navegador que a 
+          versão do HTML utilizada é o HTML5. Isso garante 
+          que o navegador utilize as regras corretas de 
+          parsing e renderização do HTML5, proporcionando 
+          compatibilidade e funcionalidades modernas. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> define o elemento raiz de um documento HTML, 
+               encapsulando todos os conteúdos da página. 
+     O atributo 'lang' especifica o idioma principal do 
+               documento. Aqui, 'pt-BR' indica que o idioma é 
+               o Português do Brasil. 
+     Definir o idioma ajuda os motores de busca e tecnologias 
+               assistivas a operar com a página corretamente, 
+               além de melhorar a acessibilidade. -->
+
+<head>
+<!-- A tag <head> contém metadados que não são exibidos 
+               diretamente na página. Esses dados incluem 
+               scripts, estilos, links para outros 
+               documentos, entre outros. 
+     Eles são fundamentais para a comunicação de informações 
+               sobre o documento para o navegador e para 
+               outros serviços web. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com atributo 'charset' define o 
+                    conjunto de caracteres utilizado no documento. 
+          'UTF-8' é um conjunto de caracteres universal que 
+                    inclui praticamente todos os caracteres e 
+                    símbolos de todos os idiomas escritos, 
+                    garantindo assim que qualquer texto seja 
+                    exibido corretamente, independentemente do idioma. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta meta tag é vital para a responsividade em 
+                    dispositivos móveis. O 'content' define 
+                    configurações importantes:
+         - 'width=device-width' instrui o navegador a igualar a 
+                    largura da página à largura da tela do 
+                    dispositivo, o que é crucial para dispositivos 
+                    com diferentes tamanhos de tela.
+         - 'initial-scale=1.0' define o nível de zoom inicial 
+                    quando a página é carregada pela primeira vez, 
+                    garantindo que o conteúdo não seja ampliado ou 
+                    reduzido inesperadamente. -->
+
+    <title>Carrossel Multinível com Imagens</title>
+    <!-- A tag <title> define o título do documento, que é 
+                    exibido na aba do navegador. É uma prática 
+                    de SEO essencial, pois ajuda a definir o 
+                    conteúdo da página nos resultados de busca e 
+                    influencia diretamente a experiência do usuário. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para incorporar um arquivo CSS 
+                    externo. O atributo 'rel' especifica o 
+                    tipo de relação que o documento HTML tem 
+                    com o recurso referenciado, neste caso, uma 
+                    folha de estilo ('estilos'). 
+         'href' especifica o caminho para o arquivo CSS que contém 
+                    os estilos que serão aplicados ao HTML, 
+                    influenciando diretamente a apresentação visual da página. -->
+
+</head>
+
+<body>
+<!-- A tag <body> contém todo o conteúdo principal 
+               visível aos usuários na página web. -->
+
+    
+    <div class="carrossel-container">
+    <!-- A classe 'carrossel-container' define um contêiner 
+               para o carrossel, delimitando a área onde os 
+               elementos do carrossel serão exibidos e interagidos. -->
+
+        <button class="anterior">&#10094;</button>
+        <!-- Um botão com a classe 'anterior' permite ao 
+                    usuário navegar para o grupo de 
+                    imagens anterior no carrossel. 
+             O conteúdo '&#10094;' é um caractere HTML que 
+                    representa uma seta apontando para a esquerda, 
+                    indicando visualmente que o botão move o 
+                    carrossel para trás. -->
+
+        <div class="carrossel">
+        <!-- A classe 'carrossel' é aplicada ao contêiner que 
+                    diretamente envolve todos os níveis de 
+                    itens do carrossel, permitindo a aplicação de 
+                    estilos e comportamentos específicos para a 
+                    animação e disposição dos slides. -->
+
+            <div class="nivel">
+            <!-- Cada 'nivel' contém um conjunto de 'item', 
+                         organizando o carrossel em grupos 
+                         verticais de imagens. 
+                 Isso permite múltiplas camadas ou 'níveis' de 
+                         navegação dentro do carrossel. -->
+
+                <!-- Cada 'item' dentro do 'nivel' representa um 
+                              slot individual no carrossel que 
+                              contém uma imagem e um link. 
+                     O uso de 'target="_blank"' nos links garante que 
+                              cada imagem clicada seja aberta em uma 
+                              nova aba do navegador. -->
+                <div class="item"><a href="https://www.udemy.com/course/python-rpa-e-excel-aprenda-automatizar-processos-e-planilhas/?referralCode=75F06FB2C5443C0A1FBF" target="_blank"><img src="Imagem1.jpg" alt="Imagem 1"></a></div>
+                <div class="item"><a href="https://www.udemy.com/course/python-rpa-e-excel-aprenda-automatizar-processos-e-planilhas/?referralCode=75F06FB2C5443C0A1FBF" target="_blank"><img src="Imagem2.jpg" alt="Imagem 2"></a></div>
+                
+            </div>
+
+            <!-- Repete a estrutura de 'nivel' para agrupar diferentes 
+                         conjuntos de imagens, permitindo uma organização 
+                         clara e facilitando a navegação. -->
+            <div class="nivel">
+                <div class="item"><a href="https://www.udemy.com/course/python-rpa-e-excel-aprenda-automatizar-processos-e-planilhas/?referralCode=75F06FB2C5443C0A1FBF" target="_blank"><img src="Imagem3.jpg" alt="Imagem 3"></a></div>
+                <div class="item"><a href="https://senna.com/" target="_blank"><img src="Imagem4.jpg" alt="Imagem 4"></a></div>
+            </div>
+            <div class="nivel">
+                <div class="item"><a href="https://www.udemy.com/course/python-rpa-e-excel-aprenda-automatizar-processos-e-planilhas/?referralCode=75F06FB2C5443C0A1FBF" target="_blank"><img src="Imagem5.jpg" alt="Imagem 5"></a></div>
+                <div class="item"><a href="https://www.udemy.com/course/python-rpa-e-excel-aprenda-automatizar-processos-e-planilhas/?referralCode=75F06FB2C5443C0A1FBF" target="_blank"><img src="Imagem6.jpg" alt="Imagem 6"></a></div>
+            </div>
+        </div>
+
+        <button class="proximo">&#10095;</button>
+        <!-- Um botão com a classe 'proximo' permite ao usuário 
+                    navegar para o grupo de imagens seguinte no carrossel. 
+             O conteúdo '&#10095;' é um caractere HTML que representa 
+                    uma seta apontando para a direita, indicando 
+                    visualmente que o botão move o carrossel para frente. -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' aponta para o 
+                    arquivo 'script.js', que contém o JavaScript 
+                    necessário para implementar a funcionalidade 
+                    interativa do carrossel, como a animação e a 
+                    resposta aos cliques dos botões. -->
+                    
+</body>
+</html>
