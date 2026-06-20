@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Especifica que este documento é um documento HTML5, 
+        ajudando o navegador a entender e renderizar 
+        corretamente a página de acordo com os padrões 
+        mais recentes. -->
+
+<html lang="pt-BR">
+<!-- Define o idioma do documento como português do Brasil. 
+        Essencial para acessibilidade e para ferramentas 
+        de SEO reconhecerem o idioma do conteúdo. -->
+
+<head>
+<!-- Abre a seção de cabeçalho do documento HTML, onde são 
+        colocados metadados, links para folhas de estilo e 
+        scripts que não são exibidos diretamente na página. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Garante que a página seja exibida de forma 
+            adequada em diferentes dispositivos, ajustando a 
+            largura da página para a largura do dispositivo e 
+            definindo a escala inicial de zoom como 1 -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres para UTF-8, que 
+            suporta um amplo conjunto de caracteres de vários 
+            idiomas, garantindo que todos os caracteres sejam 
+            exibidos corretamente. -->
+
+    <title>Visualizador de Imagens</title>
+    <!-- Define o título da página, que aparece na aba do 
+            navegador. 'Visualizador de Imagens' indica a 
+            função ou o conteúdo principal da página. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link para uma folha de estilo externa chamada 'styles.css'. 
+            Esta folha de estilo contém as regras CSS que definem a 
+            aparência dos elementos HTML na página. -->
+
+</head>
+<!-- Fecha a tag <head>, indicando o fim da seção de 
+            cabeçalho do documento. -->
+
+
+<body>
+<!-- Início do corpo do documento HTML, onde todo o 
+            conteúdo visível da página é incluído. -->
+
+    <div class="container">
+    <!-- Div principal que atua como container para os outros 
+            elementos, facilitando a estilização e organização 
+            do layout. -->
+
+        <div id="lista-imagens" class="lista-imagens"></div>
+        <!-- Div vazia destinada a ser preenchida dinamicamente com 
+                imagens via JavaScript. O id 'lista-imagens' 
+                permite manipulação específica via script. -->
+
+        <div class="visualizacao">
+        <!-- Container para a exibição de uma imagem em tamanho 
+                maior. Serve como uma área de destaque para a 
+                imagem selecionada. -->
+
+            <img id="imagem-grande" src="imagens/imagem1.jpg" alt="Imagem Grande">
+            <!-- Imagem inicialmente exibida em grande formato. 
+                O atributo 'src' aponta para o caminho da imagem. 'alt' 
+                        descreve o conteúdo da imagem para acessibilidade e 
+                        quando a imagem não pode ser carregada. -->
+
+        </div>
+
+        <div id="zoom-container" class="zoom-container">
+        <!-- Container destinado a mostrar um zoom da imagem 
+                    selecionada, inicialmente oculto e exibido 
+                    mediante interação do usuário. -->
+
+            <img id="imagem-zoom" src="imagens/imagem1.jpg" alt="Imagem Zoom">
+            <!-- Imagem no zoom container. Funciona de forma 
+                    semelhante à imagem grande, mas é destinada a mostrar 
+                    detalhes quando o usuário interage com a imagem grande. -->
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- Referência ao arquivo JavaScript externo que contém a 
+            lógica para adicionar interatividade ao visualizador de 
+            imagens, como carregar imagens dinamicamente e 
+            implementar o recurso de zoom. -->
+
+</body>
+<!-- Fim do corpo do documento HTML, concluindo a 
+            parte visível da página. -->
+
+</html>
+<!-- Fecha a tag HTML, indicando o fim do documento HTML. -->

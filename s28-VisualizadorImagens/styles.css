@@ -1,0 +1,317 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do texto como Arial, 
+            com fallback para qualquer fonte sans-serif 
+            disponível, proporcionando uma aparência 
+            limpa e moderna. */
+
+    background-color: #f5f5f5;
+    /* Define a cor de fundo de todo o corpo do documento 
+            como um cinza claro (#f5f5f5), oferecendo um 
+            contraste suave que não cansa a vista. */
+
+    margin: 0;
+    /* Remove a margem padrão do corpo do documento, 
+            garantindo que os elementos estejam alinhados 
+            diretamente às bordas do navegador. */
+
+    padding: 0;
+    /* Remove o preenchimento padrão do corpo do documento, 
+            ajudando a manter o layout consistente 
+            e alinhado. */
+
+}
+
+.container {
+
+    display: flex;
+    /* Estabelece um contexto de flexbox para este 
+            container, permitindo um layout flexível e 
+            responsivo dos elementos filhos. */
+
+    align-items: flex-start;
+    /* Alinha os elementos filhos deste container ao 
+            topo, proporcionando um alinhamento vertical 
+            inicial consistente. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20px em todos os 
+            lados dentro do container, criando espaço 
+            entre o conteúdo interno e as bordas do 
+            container. */
+
+    max-width: 100%;
+    /* Define a largura máxima do container como 100%, 
+            assegurando que ele não exceda a largura 
+            da viewport. */
+
+    margin: 0 auto;
+    /* Centraliza o container na horizontal dentro 
+            da viewport, combinando margem zero no topo e 
+            na base com margem automática nos lados. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do container como branco, 
+            criando um contraste eficaz com a cor de 
+            fundo mais escura do corpo. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida de 1px com a cor 
+            cinza claro (#ddd) ao redor do container, 
+            delimitando claramente o espaço. */
+
+    border-radius: 10px;
+    /* Arredonda as bordas do container com um 
+            raio de 10px, suavizando a aparência 
+            geral e melhorando a estética. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra sutil ao redor do container, 
+            usando uma cor preta com 10% de opacidade, 
+            criando uma sensação de profundidade. */
+
+    position: relative;
+    /* Define a posição do container como relativa, 
+            permitindo que elementos posicionados de 
+            forma absoluta dentro dele se baseiem em 
+            sua localização. */
+
+}
+
+.lista-imagens {
+
+    display: flex;
+    /* Estabelece um contexto de flexbox para este 
+            container, o que permite um melhor controle 
+            sobre o layout dos elementos internos (imagens). */
+
+    flex-direction: column;
+    /* Define a direção dos elementos filho como vertical (coluna), 
+            fazendo com que as imagens se organizem de 
+            cima para baixo. */
+
+    margin-right: 20px;
+    /* Adiciona uma margem à direita do container de imagens, 
+            criando um espaço entre este e outros elementos ou 
+            containers adjacentes. */
+
+    max-height: 550px;
+    /* Limita a altura máxima do container de imagens a 550px, 
+            suficiente para acomodar várias imagens sem que o 
+            container se expanda além do desejado. */
+
+    overflow-y: auto;
+    /* Permite a criação de uma barra de rolagem vertical 
+            dentro do container, caso o conteúdo exceda a 
+            altura máxima definida. */
+
+}
+
+.lista-imagens img {
+
+    width: 200px;
+    /* Define a largura fixa de cada imagem em 200px, 
+            garantindo uniformidade no tamanho das 
+            imagens exibidas. */
+
+    height: auto;
+    /* Define a altura das imagens como automática, 
+            permitindo que se ajustem proporcionalmente à 
+            largura fixa sem distorção. */
+
+    margin-bottom: 10px;
+    /* Adiciona uma margem na parte inferior de cada imagem, 
+            separando-as umas das outras dentro do container. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando passa sobre uma 
+            imagem, indicando que a imagem é clicável. */
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda de 1px com cor cinza claro (#ddd) ao 
+            redor de cada imagem, melhorando a distinção 
+            visual de cada item. */
+
+    border-radius: 5px;
+    /* Suaviza os cantos das imagens com um raio de 5px, 
+            proporcionando um visual mais amigável e 
+            menos rígido. */
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra sutil ao redor de cada imagem, 
+            criando uma sensação de profundidade e 
+            destacando as imagens sobre o fundo. */
+
+    transition: transform 0.2s;
+    /* Aplica um efeito de transição suave de 0.2 segundos 
+            na transformação das imagens, usada para animar o 
+            aumento de escala no hover (veja regra 
+            adicional abaixo). */
+
+}
+
+
+.lista-imagens img:hover {
+
+    transform: scale(1.1);
+    /* Aplica um aumento de escala de 10% à imagem 
+            quando o mouse passa sobre ela, criando um 
+            efeito de zoom leve para destacar a imagem 
+            sob o cursor. */
+
+    border: 1px solid #04264b;
+    /* Altera a cor da borda para um azul 
+            brilhante (#04264b) no hover, adicionando 
+            um destaque visual que indica interatividade. */
+
+}
+
+.visualizacao {
+
+    position: relative;
+    /* Define a posição do container de visualização 
+            como relativa, o que permite posicionar 
+            elementos filhos absolutamente em relação a 
+            ele, se necessário. */
+
+    width: 600px;
+    /* Estabelece uma largura fixa de 600px para o 
+            container de visualização, proporcionando 
+            espaço suficiente para mostrar imagens 
+            em detalhe. */
+
+    height: 600px;
+    /* Define uma altura fixa de 600px, garantindo que 
+            todas as imagens exibidas tenham um espaço 
+            vertical consistente. */
+
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que ultrapasse as 
+            dimensões definidas do container, essencial 
+            para manter a limpeza visual quando imagens 
+            maiores são dimensionadas para caber. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda de 1px com cor cinza claro (#ddd) 
+            ao redor do container de visualização, ajudando a 
+            definir claramente sua área na interface. */
+
+    border-radius: 10px;
+    /* Aplica um raio de 10px às bordas do container, 
+            suavizando as bordas e melhorando a estética geral. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Cria uma sombra de caixa com leve opacidade ao 
+            redor do container para aprimorar a percepção 
+            de profundidade e destacar o container 
+            sobre o fundo. */
+
+}
+
+.visualizacao img {
+
+    width: 100%;
+    /* Define a largura da imagem para ocupar 100% da 
+            largura do container, garantindo que a 
+            imagem se estenda por toda a largura 
+            disponível. */
+
+    height: 100%;
+    /* Define a altura da imagem para ocupar 100% da 
+            altura do container, assegurando que a 
+            imagem preencha completamente o espaço 
+            vertical disponível. */
+
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir a área de 
+            visualização designada sem distorcer suas 
+            proporções. Isso pode significar que partes 
+            da imagem sejam cortadas se suas dimensões 
+            originais não correspondam às do container. */
+
+}
+
+.zoom-container {
+
+    display: none;
+    /* Define que o contêiner de zoom inicialmente 
+            não será exibido. É mostrado dinamicamente 
+            através de JavaScript quando necessário. */
+
+    position: absolute;
+    /* Posiciona o contêiner de forma absoluta, o que 
+            permite que ele seja colocado precisamente na 
+            página, independentemente dos outros elementos. */
+
+    top: 0;
+    /* Posiciona o contêiner no topo do seu contêiner 
+            relativo, que é o primeiro ancestral posicionado 
+            de forma não estática. */
+
+    left: 880px;
+    /* Posiciona o contêiner de zoom a 880 pixels da 
+            margem esquerda do seu contêiner relativo, 
+            geralmente para ficar à direita de outros 
+            elementos. */
+
+    width: 1000px;
+    /* Define a largura do contêiner de zoom como 1000 
+            pixels, oferecendo amplo espaço para exibir 
+            detalhes da imagem ampliada. */
+
+    height: 1000px;
+    /* Define a altura do contêiner de zoom também 
+            como 1000 pixels, mantendo uma forma quadrada 
+            que é útil para visualizar imagens de 
+            maneira uniforme. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda de 1 pixel com cor cinza 
+            claro (#ddd) ao redor do contêiner, delimitando 
+            claramente sua área na interface. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do contêiner como branco, 
+            garantindo que qualquer espaço não preenchido 
+            pela imagem tenha uma cor neutra que não distraia. */
+
+    overflow: hidden;
+    /* Esconde qualquer conteúdo que ultrapasse as 
+            dimensões do contêiner, essencial para quando a 
+            imagem zoomada for maior que o contêiner. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Cria uma sombra ao redor do contêiner para dar um 
+            efeito de profundidade, fazendo com que pareça 
+            elevado em relação ao resto da página. */
+
+    z-index: 1000;
+    /* Define a pilha de ordem do contêiner como 1000, 
+            garantindo que ele apareça sobre outros elementos 
+            da página que possam ter z-index menor. */
+
+}
+
+.zoom-container img {
+
+    position: absolute;
+    /* A imagem dentro do contêiner de zoom também é 
+            posicionada de forma absoluta, permitindo 
+            ajustes finos de sua posição dentro do contêiner. */
+
+    width: 100%;
+    /* Estende a largura da imagem para preencher 
+            completamente a largura do contêiner de zoom. */
+
+    height: 100%;
+    /* Estende a altura da imagem para preencher 
+            completamente a altura do contêiner de zoom. */
+
+    object-fit: cover;
+    /* Garante que a imagem cubra completamente o espaço 
+            disponível, podendo cortar partes da imagem 
+            para que ela preencha o espaço sem distorções. */
+            
+
+}
