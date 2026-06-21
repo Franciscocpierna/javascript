@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- A linha acima define o tipo do documento como HTML5,
+     que é a versão mais recente do HTML. -->
+
+<html lang="pt">
+<!-- Esta tag <html> começa o documento HTML. O atributo 'lang="pt"' 
+    especifica que a língua principal do documento é o português. -->
+
+<head>
+<!-- A tag <head> contém metadados, que são informações sobre o documento, 
+    mas que não são exibidos diretamente na página da web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define o conjunto de 
+        caracteres usado no documento como UTF-8, que inclui a maioria dos 
+        caracteres de todos os sistemas de escrita humanos. Isso ajuda a 
+        garantir que o texto apareça corretamente independentemente do 
+        dispositivo ou do navegador. -->
+
+    <title>Semáforo</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba do 
+    navegador. Aqui, ele está definido como "Semáforo". -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Link para uma folha de estilo externa chamada 'estilo.css'. 
+        Este arquivo contém as regras de estilo CSS para a página. -->
+
+</head>
+<!-- Fecha a tag <head>, que contém os metadados e estilos da página. -->
+
+
+<body>
+<!-- A tag <body> engloba todo o conteúdo visível da página. -->
+
+    <h1 class="titulo">Simulador de Semáforo</h1>
+    <!-- Define um cabeçalho de primeiro nível (<h1>) que aparece como o 
+        título principal da página. A classe 'titulo' é usada para aplicar 
+        estilos específicos definidos no CSS. -->
+
+    <div class="semaforo">
+    <!-- Cria um contêiner <div> para o semáforo, utilizando a 
+            classe 'semaforo' para aplicar estilos específicos. -->
+
+    <div class="vermelho"></div>
+    <!-- Adiciona uma <div> dentro do semáforo, representando a luz 
+            vermelha. A classe 'vermelho' será usada para aplicar estilos 
+            específicos e a classe 'ativo' pode ser adicionada dinamicamente 
+            via JavaScript para acender a luz. -->
+
+    <div class="amarelo"></div>
+    <!-- Adiciona uma <div> dentro do semáforo, representando a luz 
+            amarela. A classe 'amarelo' funciona como a luz vermelha, com a 
+            possibilidade de adicionar a classe 'ativo' para acender. -->
+
+    <div class="verde"></div>
+    <!-- Adiciona uma <div> dentro do semáforo, representando a luz verde. 
+            A classe 'verde' é usada semelhantemente às outras, permitindo a 
+            adição da classe 'ativo' para iluminar a luz. -->
+
+    </div>
+
+
+    <p class="legenda">Este é um exemplo de semáforo funcional. Clique nos círculos para trocar as luzes.</p>
+    <!-- Cria um parágrafo (<p>) que serve como uma legenda ou descrição para a funcionalidade do 
+            semáforo na página.
+        A classe 'legenda' é usada para aplicar os estilos específicos definidos no CSS, 
+            como margem, tamanho da fonte e cor.
+        O texto dentro do parágrafo explica brevemente o que o semáforo faz ("um exemplo de 
+            semáforo funcional") e instrui o usuário sobre como interagir com ele ("Clique nos 
+            círculos para trocar as luzes"). -->
+
+    <script src="semaforo.js"></script>
+    <!-- Inclui um arquivo JavaScript externo chamado 'semaforo.js' usando a tag <script>.
+        O atributo 'src' especifica o caminho para o arquivo JavaScript que contém o código 
+            necessário para adicionar funcionalidade ao semáforo.
+        Este script pode manipular as interações do usuário, como clicar nas luzes do 
+            semáforo para trocar as cores ativas. -->
+
+</body>
+<!-- Fecha a tag <body>, que encapsulou todo o conteúdo visível da página. -->
+
+</html>
+<!-- Fecha a tag <html> que começou no início do documento. Isso marca o 
+    fim do documento HTML. -->
+

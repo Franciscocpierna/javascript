@@ -1,0 +1,167 @@
+/* Início das regras de estilo CSS, que definem a aparência da página. */
+
+body {
+
+    display: flex;
+    /* Define o tipo de display como flexível, permitindo usar Flexbox, 
+    que é uma maneira eficiente de distribuir, alinhar e organizar itens dentro de 
+    um contêiner, mesmo quando seus tamanhos são desconhecidos ou dinâmicos. */
+    
+    justify-content: center;
+    /* Alinha os itens horizontalmente no centro do contêiner 'body'. */
+    
+    align-items: center;
+    /* Alinha os itens verticalmente no centro do contêiner 'body'. */
+    
+    flex-direction: column;
+    /* Define a direção principal do conteúdo como coluna (vertical), ao 
+    contrário do padrão que é linha (horizontal). */
+    
+    min-height: 100vh;
+    /* Define a altura mínima do elemento 'body' como 100vh (viewport height - 
+    altura da janela de visualização), o que garante que o 'body' ocupe pelo 
+    menos toda a altura da tela visível. */
+    
+    background-color: #ffffff;
+    /* Define a cor de fundo do 'body' como branco. */
+    
+    margin: 0;
+    /* Remove as margens padrão do 'body', fazendo com que ele ocupe toda a 
+    largura e altura disponíveis na janela do navegador. */
+    
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do texto como Arial, e se Arial não estiver 
+    disponível, usa qualquer fonte sans-serif disponível. */
+
+  }
+
+
+  .titulo {
+
+    margin-bottom: 20px;
+    /* Define uma margem abaixo do título de 20 pixels, criando um 
+        espaço entre o título e o que estiver abaixo dele, ajudando a 
+        separar visualmente os elementos na página. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do título como 24 pixels, fazendo com 
+        que ele apareça maior e mais destacado em relação ao texto normal. */
+
+    color: #333;
+    /* Define a cor do texto do título como um cinza escuro (#333), que é 
+        mais suave que o preto puro e geralmente considerado mais fácil de ler. */
+
+}
+
+.semaforo {
+
+    width: 120px;
+    /* Define a largura do semáforo como 120 pixels. Isso garante que o semáforo 
+        tenha uma largura fixa, independente do conteúdo dentro dele. */
+
+    background-color: #333;
+    /* Define a cor de fundo do semáforo como um cinza escuro (#333), o que ajuda os 
+        elementos internos (como as luzes) a se destacarem visualmente. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno de 20 pixels em todos os lados do semáforo. 
+        Isso aumenta o espaço entre a borda externa do semáforo e os elementos internos, 
+        dando uma aparência mais robusta. */
+
+    border: 6px solid #666;
+    /* Adiciona uma borda sólida com 6 pixels de espessura ao redor do semáforo, 
+        usando uma cor cinza médio (#666). Isso simula a estrutura física de uma 
+        caixa de semáforo real. */
+
+    border-radius: 20px;
+    /* Arredonda os cantos da borda do semáforo com um raio de 20 pixels. Isso 
+        suaviza as bordas retas e dá ao semáforo uma aparência mais moderna e
+        menos angular. */
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* Aplica uma sombra ao redor do semáforo para criar um efeito tridimensional (3D). 
+        A sombra é preta com transparência de 50% (como indicado por rgba(0,0,0,0.5)), e 
+        espalha-se até 10 pixels, dando a ilusão de que o semáforo está elevado acima do 
+        fundo da página. */
+
+}
+
+.semaforo div {
+
+    width: 100px;
+    /* Define a largura de cada luz do semáforo como 100 pixels, 
+      garantindo que todas tenham o mesmo tamanho. */
+
+    height: 100px;
+    /* Define a altura de cada luz do semáforo como 100 pixels, fazendo 
+      com que sejam círculos perfeitos quando combinados com o 'border-radius' de 50%. */
+
+    margin: 10px auto;
+    /* Centraliza cada luz do semáforo horizontalmente dentro do seu 
+      contêiner. '10px' adiciona uma margem superior e inferior de 10 pixels 
+      para separação entre as luzes. */
+
+    border-radius: 50%;
+    /* Arredonda as bordas das luzes do semáforo para formar um círculo 
+      completo, já que o 'width' e 'height' são iguais. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo inicial de cada luz como branco, imitando a 
+      aparência de luzes apagadas. */
+
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+    /* Adiciona uma sombra interna para criar uma sensação de 
+      profundidade, fazendo as luzes parecerem mais realistas e 
+      embutidas na caixa do semáforo. */
+
+    transition: background-color 0.5s;
+    /* Aplica uma transição suave de 0.5 segundos para mudanças na cor 
+      de fundo, tornando o efeito de mudança de cor das luzes mais 
+      visualmente agradável. */
+
+}
+
+.vermelho.ativo {
+
+    background-color: #ff0000;
+    /* Altera a cor de fundo da luz vermelha para vermelho (#ff0000) 
+      quando a classe 'ativo' é aplicada, indicando que a luz vermelha 
+      está ligada. */
+
+}
+
+.amarelo.ativo {
+
+    background-color: #ffff00;
+    /* Altera a cor de fundo da luz amarela para amarelo (#ffff00) quando a 
+      classe 'ativo' é aplicada, indicando que a luz amarela está ligada. */
+
+}
+
+.verde.ativo {
+
+    background-color: #00ff00;
+    /* Altera a cor de fundo da luz verde para verde (#00ff00) quando a 
+      classe 'ativo' é aplicada, indicando que a luz verde está ligada. */
+
+}
+
+
+.legenda {
+    
+    margin-top: 20px;
+    /* Define uma margem no topo de 20 pixels. Isso separa a legenda do 
+        elemento acima dela, criando um espaço visual para uma leitura 
+        clara e descontraída. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte da legenda como 16 pixels, que é um 
+        tamanho confortável para leitura em a maioria dos dispositivos e 
+        situações. */
+
+    color: #666;
+    /* Define a cor do texto da legenda para um cinza médio (#666). Essa 
+        cor é suave para os olhos, proporcionando um contraste moderado que é 
+        fácil de ler sem ser tão duro quanto o preto. */
+
+}
