@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE informa ao navegador a versão do 
+      HTML que a página está usando. Neste caso, especifica 
+      HTML5, a versão mais recente. -->
+
+<html lang="pt">
+<!-- A tag <html> é a raiz do documento HTML. O atributo 'lang="pt"' 
+      especifica que o idioma principal do documento é o português. -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre dados) que não 
+      são exibidos diretamente na página web, mas são usados pelo navegador. -->
+
+      <meta charset="UTF-8">
+      <!-- A tag <meta> com o atributo charset="UTF-8" especifica a codificação 
+            de caracteres usada no documento, que é UTF-8. Esta codificação inclui a 
+            maioria dos caracteres de todos os idiomas do mundo, garantindo que o 
+            texto seja exibido corretamente. -->
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Outra tag <meta>, desta vez configurando a viewport (área de 
+            visualização) da página. 
+      'width=device-width' faz a largura da página igualar a largura do 
+            dispositivo (útil para dispositivos móveis), e 'initial-scale=1.0' 
+            define o nível de zoom inicial quando a página é carregada. -->
+
+      <title>Quiz sobre Animais</title>
+      <!-- A tag <title> define o título da página, que é mostrado na aba do 
+            navegador. Este título é também usado por mecanismos de busca e 
+            quando a página é marcada como favorita. -->
+
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+      <!-- A tag <link> é usada aqui para incluir uma folha de estilo externa. 
+            Esta particularmente importa a fonte 'Roboto' do Google Fonts, nas 
+            espessuras 400 e 500. 'display=swap' faz com que o texto seja exibido 
+            com uma fonte de reserva até que 'Roboto' seja baixada, o que melhora o 
+            desempenho de carregamento percebido. -->
+
+
+      <link rel="stylesheet" href="estilos.css">
+      <!-- Link para uma folha de estilo externa chamada 'estilos.css'. 
+            Este arquivo contém as regras de estilo CSS para a página. -->
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Inicia uma <div> com a classe 'container'. Este é o elemento 
+                contêiner principal que agrupa todos os componentes do quiz. 
+            O estilo da classe 'container' geralmente inclui formatação para 
+                centralizar, adicionar sombras, e definir largura e margens 
+                para o conteúdo principal. -->
+
+        <div id="pergunta" class="pergunta"></div>
+        <!-- Elemento <div> com ID 'pergunta' e classe 'pergunta', usado para 
+                exibir a pergunta atual do quiz. 
+            A classe 'pergunta' controla a estilização, como tamanho 
+                da fonte e margem. -->
+
+        <div id="opcoes" class="opcoes"></div>
+        <!-- Elemento <div> com ID 'opcoes' e classe 'opcoes', onde as opções de 
+                resposta serão inseridas dinamicamente via JavaScript. 
+            A classe 'opcoes' pode ser usada para estilizar as opções, como a 
+                formatação dos botões de escolha ou espaçamento. -->
+
+        <button id="submeter">Submeter Resposta</button>
+        <!-- Elemento <button> com ID 'submeter', usado para submeter a 
+                resposta selecionada pelo usuário. 
+            Este botão iniciará a verificação da resposta através de um evento 
+                de clique que é configurado no JavaScript. -->
+
+        <div id="resultado"></div>
+        <!-- Elemento <div> com ID 'resultado', utilizado para exibir o 
+                resultado do quiz, como a pontuação final ou mensagens de feedback.
+            A estilização pode ser controlada para destacar essa informação, 
+                dependendo do resultado do usuário no quiz. -->
+
+    </div>
+
+    <script src="quiz.js"></script>
+    <!-- A tag <script> com o atributo src apontando para 'quiz.js'. 
+                Este script contém a lógica do quiz, 
+            incluindo a criação de perguntas, a captura de respostas, e a 
+                exibição dos resultados. É carregado no final do documento 
+                para garantir que todos os elementos HTML sejam carregados 
+                antes da execução do script. -->
+
+</body>
+</html>
+    

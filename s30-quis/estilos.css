@@ -1,0 +1,170 @@
+body {
+    /* Seleciona o elemento <body> que envolve 
+        todo o conteúdo visível da página. */
+
+    font-family: 'Roboto', sans-serif;
+    /* Define a família de fontes para o corpo do documento 
+        como 'Roboto', com um fallback para qualquer sans-serif 
+        caso 'Roboto' não esteja disponível. */
+
+    margin: 40px;
+    /* Aplica uma margem de 40 pixels em todos os lados do corpo do 
+        documento, criando espaço entre o conteúdo e as bordas da 
+        janela do navegador. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo do corpo do documento como um cinza 
+        claro (#f0f0f0), proporcionando um fundo suave que é 
+        fácil nos olhos. */
+
+}
+
+.container {
+    /* Seleciona todos os elementos com a classe 'container'. Essa 
+        classe é usada para envolver seções específicas de 
+        conteúdo, como o quiz. */
+
+    max-width: 600px;
+    /* Define a largura máxima para o elemento 'container' como 600 
+        pixels. Isso ajuda a evitar que o conteúdo fique muito 
+        esticado em telas maiores. */
+
+    margin: auto;
+    /* Define as margens laterais para 'auto', o que centraliza o 
+        'container' horizontalmente dentro de seu elemento pai. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do elemento 'container' como branco (#ffffff), 
+        proporcionando um contraste claro com o texto e outros 
+        elementos dentro dele. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todas as direções 
+        dentro do 'container', aumentando o espaço entre o conteúdo e 
+        as bordas do elemento. */
+
+    border-radius: 10px;
+    /* Aplica um raio de borda de 10 pixels nos cantos do 'container', 
+        suavizando-os para uma aparência mais amigável e menos rígida. */
+
+    box-shadow: 0 2px 4px rgba(0,0,0,0.9);
+    /* Aplica uma sombra leve abaixo do 'container'. A sombra se 
+        move 0 pixels para a direita e 2 pixels para baixo do 'container', 
+        com um desfoque de 4 pixels e uma cor preta com 90% de 
+        opacidade (rgba(0,0,0,0.9)), criando uma sensação de profundidade. */
+
+}
+
+.pergunta {
+  /* Seleciona todos os elementos com a classe 'pergunta'. */
+
+  font-size: 24px;
+  /* Define o tamanho da fonte para 24 pixels, garantindo que o 
+        texto da pergunta seja grande e claro o suficiente para 
+        ser facilmente lido. */
+
+  margin-bottom: 20px;
+  /* Aplica uma margem de 20 pixels na parte inferior do elemento. 
+        Isso ajuda a separar visualmente a pergunta das opções de 
+        resposta abaixo dela. */
+
+}
+
+.opcoes label {
+  /* Seleciona todos os elementos <label> dentro de elementos 
+        com a classe 'opcoes'. */
+
+  display: block;
+  /* Faz com que cada <label> se comporte como um bloco, ocupando a 
+        largura total de seu elemento pai. Isso garante que cada opção 
+        de resposta esteja em sua própria linha. */
+
+  margin: 10px 0;
+  /* Aplica uma margem de 10 pixels acima e abaixo de cada <label>, 
+        separando visualmente cada opção de resposta. */
+
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando está sobre os <label>, 
+        indicando que eles são clicáveis. */
+
+}
+
+.opcoes input[type="radio"] {
+  /* Seleciona todos os elementos <input> do tipo 'radio' 
+        dentro de elementos com a classe 'opcoes'. */
+
+  margin-right: 10px;
+  /* Aplica uma margem de 10 pixels à direita de cada <input> tipo 
+        'radio'. Isso adiciona espaço entre o botão de opção e o 
+        texto da opção, melhorando a legibilidade e a estética. */
+        
+}
+
+button {
+    /* Seleciona todos os elementos <button>. */
+
+    display: block;
+    /* Define o botão para ser um bloco, o que significa 
+          que ele ocupará a largura total do seu contêiner pai, a 
+          menos que a largura seja definida de outra forma. */
+
+    width: 100%;
+    /* Ajusta a largura do botão para cobrir 100% da largura do seu 
+          contêiner pai, estendendo-se totalmente de um lado ao outro. */
+
+    padding: 10px;
+    /* Adiciona 10 pixels de preenchimento dentro do botão em todas as 
+          direções, aumentando a área clicável e melhorando a estética. */
+
+    margin-top: 20px;
+    /* Aplica uma margem de 20 pixels apenas na parte superior do botão, 
+          criando espaço entre ele e qualquer conteúdo acima. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte do texto dentro do botão para 18 pixels, 
+          fazendo com que seja facilmente legível. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para branco, oferecendo um 
+          contraste alto com o fundo azul, melhorando a legibilidade. */
+
+    background-color: #007bff;
+    /* Define a cor de fundo do botão para um azul brilhante (#007bff), 
+          tornando-o visualmente distinto e atraente. */
+
+    border: none;
+    /* Remove qualquer borda do botão, mantendo um design 
+          limpo e moderno. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um raio de 5 pixels, 
+          suavizando a aparência geral. */
+
+    cursor: pointer;
+    /* Altera o cursor para um ponteiro quando ele está sobre o 
+          botão, indicando que o botão é clicável. */
+
+}
+
+button:hover {
+    /* Seleciona o estado de hover do botão, ativado quando o 
+          usuário passa o mouse sobre ele. */
+
+    background-color: #032141;
+    /* Muda a cor de fundo do botão para um azul mais escuro (#032141) 
+          durante o hover, fornecendo um feedback visual imediato. */
+
+}
+
+#resultado {
+    /* Seleciona o elemento com o ID 'resultado'. */
+
+    font-size: 22px;
+    /* Define o tamanho da fonte para 22 pixels, tornando o texto grande 
+          o suficiente para ser destacado como um elemento importante na página. */
+
+    margin-top: 20px;
+    /* Aplica uma margem de 20 pixels apenas na parte superior do elemento, 
+          criando espaço entre ele e qualquer conteúdo acima. */
+
+}
