@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- Esta linha é uma declaração do tipo de documento (DOCTYPE). 
+    Ela informa ao navegador que a página deve ser interpretada 
+    como HTML5, que é a versão mais moderna e suportada de HTML. Esta 
+    declaração é importante para garantir que o navegador processe a 
+    página corretamente, utilizando as funcionalidades e padrões 
+    mais recentes do HTML. -->
+
+<html lang="pt">
+<!-- A tag <html> marca o início do documento HTML. O atributo 'lang="pt"' 
+    especifica que o idioma principal da página é o português. Definir o 
+    idioma ajuda os navegadores a fornecerem funcionalidades de localização, 
+    como correção ortográfica, e também melhora a acessibilidade. -->
+
+<head>
+<!-- A tag <head> é usada para incluir informações sobre a página que 
+    geralmente não são visíveis diretamente na interface do usuário. Isso 
+    inclui metadados, links para folhas de estilo, scripts e outras 
+    instruções para o navegador. -->
+
+      <meta charset="UTF-8">
+      <!-- A tag <meta> com o atributo 'charset="UTF-8"' define o conjunto de 
+      caracteres para UTF-8, que suporta quase todos os caracteres e símbolos de 
+      qualquer idioma. Isso é crucial para garantir que o texto seja exibido 
+      corretamente, sem erros de codificação. -->
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Outra tag <meta>, que define a 'viewport' ou área visível da página web. 
+      O atributo 'content="width=device-width, initial-scale=1.0"' assegura que a 
+      largura da página corresponda à largura do dispositivo (ajustando-se 
+      automaticamente a diferentes tamanhos de tela, como tablets e smartphones) e 
+      que a escala inicial de zoom seja 1.0 (sem zoom ao carregar a página). Este é 
+      um aspecto crucial do design responsivo, que visa proporcionar uma boa 
+      experiência de visualização em diversos dispositivos. -->
+
+      <title>Contador Regressivo para Eventos</title>
+      <!-- A tag <title> define o título da página, que é exibido na aba do 
+      navegador. Isso ajuda os usuários a identificar o conteúdo da página e 
+      também é utilizado pelos mecanismos de busca para os resultados das 
+      pesquisas. O título aqui indica que a página contém um contador 
+      regressivo para eventos. -->
+
+      <!-- A tag <style> é utilizada para incluir CSS (Cascading Style Sheets) 
+      diretamente no documento HTML. CSS é usado para definir a apresentação, o 
+      formato e o layout da página. -->
+
+
+      <link rel="stylesheet" href="estilos.css">
+      <!-- Link para uma folha de estilo externa chamada 'estilo.css'. 
+            Este arquivo contém as regras de estilo CSS para a página. -->
+
+</head>
+
+<body>
+
+    <!-- Divisão principal que contém o contador regressivo. A classe 
+          'contador' pode ser usada para estilizar esta divisão e 
+          seus elementos filhos com CSS. -->
+    <div class="contador">
+
+    <!-- Divisão para os dias restantes até o evento. O 'id' é único 
+          para cada elemento e é usado para identificar e manipular o 
+          conteúdo com JavaScript. -->
+    <div id="dias">
+
+        <!-- Elemento <span> que exibe o número de dias. A classe 'number' 
+            pode ser usada para estilizar especificamente os números 
+            dentro do contador. -->
+        <span class="number">00</span>
+
+        <!-- Elemento <span> que exibe a unidade de tempo, neste caso, 
+                    'Dias'. Isso ajuda os usuários a entender o que o 
+                    número representa. -->
+        <span>Dias</span>
+
+    </div>
+    
+    <!-- Divisão para as horas restantes. Similar à divisão dos 
+                dias, mas focada nas horas. -->
+    <div id="horas">
+
+        <!-- Elemento <span> para o número de horas, estilizado com a 
+                    mesma classe 'number' para manter a consistência visual. -->
+        <span class="number">00</span>
+
+        <!-- Elemento <span> que descreve a unidade, 'Horas', 
+                    fornecendo contexto para o número exibido. -->
+        <span>Horas</span>
+
+    </div>
+    
+    <!-- Divisão para os minutos restantes. Segue o mesmo padrão das
+                divisões anteriores para dias e horas. -->
+    <div id="minutos">
+
+        <!-- Elemento <span> para o número de minutos. A classe 'number' é 
+                    usada aqui também para aplicar estilos específicos. -->
+        <span class="number">00</span>
+
+        <!-- Elemento <span> com o texto 'Minutos', clarificando a 
+                    unidade de medida ao lado do número. -->
+        <span>Minutos</span>
+
+    </div>
+    
+    <!-- Divisão para os segundos restantes. Esta divisão completa o 
+                conjunto de unidades de tempo do contador regressivo. -->
+    <div id="segundos">
+
+        <!-- Elemento <span> mostrando o número de segundos, também 
+                    utilizando a classe 'number' para estilização consistente. -->
+        <span class="number">00</span>
+
+        <!-- Elemento <span> que indica que esta unidade representa 'Segundos', 
+                    ajudando os usuários a identificar rapidamente a 
+                    informação mostrada. -->
+        <span>Segundos</span>
+
+    </div>
+    </div>
+
+
+    <script src="configuracoes.js"></script>
+  <!-- A tag <script> é usada para incorporar ou referenciar um script 
+                  externo, neste caso, 'configuracoes.js'.
+      'src' especifica o caminho para o arquivo de script. -->
+
+</body>
+<!-- Fecha a tag <body>, indicando o fim do conteúdo visível da página. -->
+
+</html>
+<!-- Fecha a tag <html>, indicando o fim do documento HTML. -->
+

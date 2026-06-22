@@ -1,0 +1,206 @@
+body {
+
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* A propriedade 'font-family' define as fontes que serão 
+          usadas para o texto no corpo da página. A lista de fontes 
+          oferece alternativas caso a primeira não esteja disponível 
+          no sistema do usuário. 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana' s
+          ão tipos de fontes sans-serif, que são geralmente mais 
+          legíveis em telas. */
+  
+    display: flex;
+    /* A propriedade 'display' com valor 'flex' ativa o layout flexível 
+          para o corpo da página. Flexbox é um método de layout que permite 
+          espaçar e alinhar elementos de forma eficiente, mesmo quando 
+          seus tamanhos são desconhecidos ou dinâmicos. */
+  
+    justify-content: center;
+    /* Esta propriedade alinha os elementos filhos horizontalmente e no 
+          centro do container (neste caso, o <body>). */
+  
+    align-items: center;
+    /* Esta propriedade alinha os elementos filhos verticalmente e no 
+          centro do container. */
+  
+    height: 100vh;
+    /* Define a altura do <body> como 100vh (viewport height), o que 
+          significa 100% da altura da tela do dispositivo. Isso é 
+          usado para fazer o conteúdo centralizar completamente na 
+          tela, ocupando toda a altura visível. */
+  
+    background-color: #1a1a2e;
+    /* Define a cor de fundo do corpo da página. '#1a1a2e' é um tom 
+          de azul escuro, que fornece um contraste visual com cores 
+          mais claras usadas no texto ou em outros elementos. */
+  
+    color: #e94560;
+    /* Define a cor padrão do texto no corpo da página. '#e94560' é 
+          um tom de vermelho/rosa, que se destaca contra o fundo 
+          escuro, melhorando a legibilidade e atração visual. */
+  
+}
+
+.contador {
+
+    display: flex;
+    /* Define o modelo de caixa do elemento para flexível. Isso permite o 
+            uso de propriedades flex para organizar os itens filhos (se houver) 
+            dentro deste elemento. É ideal para alinhar e distribuir o espaço 
+            entre itens de forma eficiente. */
+
+    text-align: center;
+    /* Alinha o texto dentro dos elementos filhos do `.contador` ao centro 
+            horizontalmente. Isso é útil para centrar o conteúdo textual dentro de 
+            cada filho do contêiner `.contador`, especialmente se eles são blocos 
+            ou itens flexíveis. */
+
+    background: #16213e;
+    /* Define a cor de fundo do elemento `.contador`. O valor `#16213e` é uma cor 
+            azul escura, que estabelece um tema visual atraente e coerente com o 
+            restante do design da página. */
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    /* Aplica uma sombra ao redor do elemento `.contador`. Esta propriedade cria 
+            um efeito visual de elevação, fazendo com que o contêiner pareça estar 
+            flutuando acima do resto da página. A sombra é definida para ter um 
+            deslocamento de 0 no eixo X, 10px no eixo Y, um desfoque de 40px, e uma 
+            cor preta com 20% de opacidade (`rgba(0, 0, 0, 0.2)`). */
+
+    border-radius: 15px;
+    /* Arredonda os cantos do contêiner `.contador`. Um `border-radius` de 15px 
+            suaviza as bordas do elemento, tornando o design mais amigável e moderno. 
+            Bordas arredondadas são frequentemente usadas em elementos de UI para 
+            melhorar a estética e a sensação de suavidade. */
+
+    overflow: hidden;
+    /* Define o comportamento de como o conteúdo que excede as dimensões do 
+            contêiner `.contador` é tratado. Ao definir `overflow: hidden`, qualquer 
+            conteúdo que ultrapasse os limites do contêiner será cortado, mantendo o 
+            design limpo e contido dentro dos limites estabelecidos. */
+
+}
+
+.contador div {
+
+    padding: 20px 30px;
+    /* Define o espaço interno (padding) dentro de cada 
+            divisão (<div>) dentro de `.contador`. 
+        20px na vertical (topo e fundo) e 30px na 
+            horizontal (esquerda e direita). 
+        Isso garante que o conteúdo dentro de cada <div> tenha 
+            espaço suficiente ao redor, 
+        melhorando a legibilidade e a apresentação visual. */
+
+    flex-grow: 1;
+    /* Esta propriedade faz com que cada <div> dentro 
+            de `.contador` cresça para ocupar 
+        igualmente o espaço disponível no contêiner flexível. 
+            Se todos os filhos têm flex-grow definido para 1, 
+        eles crescerão igualmente e ocuparão a mesma fração do 
+            espaço disponível no contêiner. */
+
+    background: #0f3460;
+    /* Define a cor de fundo para cada <div> dentro de `.contador`. 
+        O valor `#0f3460` é um azul profundo, proporcionando um 
+            contraste forte com o texto branco,
+        ajudando assim na legibilidade e no impacto visual. */
+
+    color: #fff;
+    /* Define a cor do texto dentro de cada <div> 
+            para branco (`#fff`). 
+        O alto contraste entre o fundo escuro e o texto claro 
+            melhora a legibilidade e destaca o conteúdo. */
+
+    position: relative;
+    /* Define a posição de cada <div> como relativa. Isso 
+            não muda a posição por si só,
+        mas permite que elementos posicionados absolutamente 
+            dentro dos <div>s sejam colocados 
+        relativamente a estes contêineres. É útil para posicionamento 
+            de elementos adicionais dentro de cada <div>. */
+
+}
+
+.contador div:not(:last-child) {
+
+    border-right: 10px solid #1a1a2e;
+    /* Adiciona uma borda à direita a cada <div> dentro de `.contador`, 
+            exceto para o último <div>. 
+        A borda tem 10px de largura, é sólida e tem cor `#1a1a2e`, 
+            um azul muito escuro, quase preto.
+        Isso serve para visualmente separar os elementos <div> uns 
+            dos outros, mantendo uma estética coesa e organizada 
+            para o contador. */
+
+}
+
+/* Estilos para os elementos <span> dentro dos <div> com a 
+classe .contador. */
+.contador span {
+
+    display: block;
+    /* Define o elemento <span> para se comportar como um 
+            bloco, ocupando toda a largura possível na linha e 
+            permitindo propriedades de margem e preenchimento em 
+            todos os lados. */
+
+    margin-top: 8px;
+    /* Adiciona uma margem no topo de 8px, criando um espaço entre 
+            este elemento e outros elementos ou conteúdo acima dele, 
+            ajudando a separar visualmente e organizar o conteúdo 
+            dentro de .contador. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte do texto dentro do <span> para 16px, 
+            tornando o texto claro e legível. */
+
+    color: #ffffff;
+    /* Define a cor do texto para um tom de Branco, 
+            que se destaca contra o fundo mais escuro, melhorando a 
+            visibilidade e o impacto visual. */
+
+}
+
+/* A regra @keyframes define a sequência de animação chamada 'fade'. 
+Esta sequência controla as mudanças de estilos ao longo do 
+tempo para elementos que utilizam esta animação. A animação 
+'fade' é especificamente projetada para alterar a opacidade 
+de um elemento. */
+@keyframes fade {
+
+    from {
+        opacity: 0;
+        /* 'from' marca o início da animação. Opacidade é uma propriedade 
+            CSS que define a transparência de um elemento.
+            Opacidade 0 significa que o elemento é totalmente transparente no 
+            início da animação. */
+    }
+    to {
+        opacity: 1;
+        /* 'to' marca o final da animação. Opacidade 1 significa que o 
+            elemento é totalmente opaco ao final da animação.
+            Esta mudança gradual da opacidade de 0 a 1 faz com que o 
+            elemento apareça suavemente na tela. */
+    }
+
+}
+
+
+/* A classe '.fade-in' é usada para aplicar a animação 'fade' a 
+        qualquer elemento HTML ao qual esta classe é adicionada. */
+.fade-in {
+    
+    animation: fade 0.5s;
+    /* A propriedade 'animation' é usada para vincular a animação 
+            definida pelos @keyframes à classe. Aqui, ela especifica que:
+        - 'fade' é o nome da animação que deve ser aplicada.
+        - '0.5s' é a duração da animação, indicando que a transição de 
+            opacidade de 0 para 1 deve ocorrer ao longo de meio segundo.
+        
+        Esta propriedade única controla quando e como a animação 'fade' é 
+            executada, tornando-a um poderoso meio de adicionar interatividade 
+            visual sem a necessidade de scripts. */
+
+}
+    
