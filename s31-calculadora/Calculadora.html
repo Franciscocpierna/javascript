@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!-- Declaração DOCTYPE para HTML5. Indica ao navegador que este 
+    documento deve ser interpretado como um documento HTML5, que é a 
+    versão mais recente do HTML, garantindo melhor compatibilidade e recursos. -->
+
+<html lang="pt-br">
+<!-- Tag de abertura <html> que define a raiz do documento HTML. O 
+    atributo 'lang' especifica que o idioma principal do documento é o 
+    português do Brasil. Isso é útil para acessibilidade, SEO e para 
+    navegadores que executam a hifenização automática e outros recursos de idioma. -->
+
+<head>
+    <!-- A tag <head> contém informações sobre o documento que não são 
+        exibidas diretamente na página web, como metadados, links para 
+        folhas de estilo e scripts. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com o atributo 'charset' definido como 'UTF-8'. Isso 
+        especifica a codificação de caracteres usada para o documento, 
+        garantindo que qualquer caractere em qualquer idioma possa ser 
+        exibido corretamente. UTF-8 é a codificação de caracteres mais usada na web. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra meta tag, desta vez definindo as configurações de 
+        visualização para dispositivos móveis. 
+    'width=device-width' instrui o navegador a definir a largura da 
+        página igual à largura da tela do dispositivo. 
+    'initial-scale=1.0' define o nível inicial de zoom quando a página é 
+        carregada pela primeira vez, garantindo que a página seja exibida em 
+        escala 1:1 sem zoom inicial. -->
+
+    <title>Calculadora</title>
+    <!-- A tag <title> define o título da página, que é mostrado na aba do 
+        navegador. Este título é também importante para SEO e para usuários que 
+        marcam páginas em seus navegadores. -->
+    
+        <link rel="stylesheet" href="estilos.css">
+        <!-- Link para uma folha de estilo externa chamada 'estilos.css'. 
+              Este arquivo contém as regras de estilo CSS para a página. -->
+
+</head>
+
+
+<body>
+
+    <div class="calculadora">
+        <!-- Início da seção da calculadora. Esta div contém todos os 
+            elementos relacionados à calculadora. -->
+    
+        <h2>Calculadora Simples</h2>
+        <!-- Um título indicando que esta é uma calculadora simples. -->
+    
+        <input type="text" id="visor" disabled>
+        <!-- Um input de texto usado como visor da calculadora. 
+            A propriedade 'disabled' impede a edição direta do visor pelo usuário. -->
+    
+        <div class="linha">
+            <!-- Início de uma linha de botões. Cada linha contém quatro botões. -->
+        
+            <input type="button" value="7" onclick="adicionarNoVisor('7')">
+            <!-- Um botão com o valor '7'. Quando clicado, 
+                adiciona '7' ao visor da calculadora. -->
+        
+            <input type="button" value="8" onclick="adicionarNoVisor('8')">
+            <!-- Um botão com o valor '8'. Quando clicado, 
+                adiciona '8' ao visor da calculadora. -->
+        
+            <input type="button" value="9" onclick="adicionarNoVisor('9')">
+            <!-- Um botão com o valor '9'. Quando clicado, 
+                adiciona '9' ao visor da calculadora. -->
+        
+            <input type="button" value="/" onclick="adicionarNoVisor('/')">
+            <!-- Um botão com o símbolo '/'. Quando clicado, 
+                adiciona '/' ao visor da calculadora. -->
+                
+        </div>
+        <!-- Fim da linha de botões. -->
+        
+             
+        <!-- Início de uma linha de botões. A classe 'linha' é usada para 
+                agrupar visualmente os botões em uma linha horizontal. -->
+        <div class="linha">
+
+                <!-- Botão com o número '4'. Ao clicar neste botão, o 
+                        número '4' é adicionado ao visor da calculadora. -->
+                <input type="button" value="4" onclick="adicionarNoVisor('4')">
+
+                <!-- Botão com o número '5'. Ao clicar, adiciona o 
+                        número '5' ao visor da calculadora. -->
+                <input type="button" value="5" onclick="adicionarNoVisor('5')">
+
+                <!-- Botão com o número '6'. Clicar neste botão adiciona o
+                         número '6' ao visor. -->
+                <input type="button" value="6" onclick="adicionarNoVisor('6')">
+
+                <!-- Botão com o símbolo de multiplicação '*'. Ao 
+                        clicar, adiciona o símbolo '*' ao visor para 
+                        operações de multiplicação. -->
+                <input type="button" value="*" onclick="adicionarNoVisor('*')">
+        </div>
+
+        <!-- Segunda linha de botões para os números '1', '2', '3' e 
+                o operador de subtração '-'. -->
+        <div class="linha">
+
+                <!-- Botão com o número '1'. Adiciona '1' ao visor 
+                        da calculadora quando clicado. -->
+                <input type="button" value="1" onclick="adicionarNoVisor('1')">
+
+                <!-- Botão com o número '2', funciona da mesma forma, 
+                        adicionando '2' ao visor. -->
+                <input type="button" value="2" onclick="adicionarNoVisor('2')">
+
+                <!-- Botão com o número '3'. Adiciona '3' ao visor ao ser clicado. -->
+                <input type="button" value="3" onclick="adicionarNoVisor('3')">
+
+                <!-- Botão com o símbolo de subtração '-'. Insere o 
+                                operador '-' no visor para realizar 
+                                operações de subtração. -->
+                <input type="button" value="-" onclick="adicionarNoVisor('-')">
+
+        </div>
+
+        <!-- Terceira linha contém o número '0', ponto decimal '.', igual '=' 
+                para calcular a expressão, e o operador de adição '+'. -->
+        <div class="linha">
+
+                <!-- Botão com o número '0'. Ao clicar, o número '0' é 
+                        inserido no visor. -->
+                <input type="button" value="0" onclick="adicionarNoVisor('0')">
+
+                <!-- Botão com o ponto decimal '.'. Usado para adicionar um 
+                        ponto decimal ao visor, permitindo números decimais. -->
+                <input type="button" value="." onclick="adicionarNoVisor('.')">
+
+                <!-- Botão com o símbolo de igual '='. Quando clicado, calcula o 
+                        resultado da expressão inserida no visor. -->
+                <input type="button" value="=" onclick="calcular()">
+
+                <!-- Botão com o operador de adição '+'. Adiciona o símbolo '+' ao 
+                        visor para operações de soma. -->
+                <input type="button" value="+" onclick="adicionarNoVisor('+')">
+
+        </div>
+
+        <!-- Linha final contendo um único botão para limpar o 
+                visor da calculadora. -->
+        <div class="linha">
+
+                <!-- Botão 'C' para limpar o visor. Ao ser clicado, 
+                        remove todos os caracteres do visor. -->
+                <input type="button" value="C" onclick="limparVisor()">
+
+        </div>
+
+    </div>
+
+    <script src="funcionalidades.js"></script>
+    <!-- A tag <script> com o atributo src apontando para 'funcionalidades.js'. 
+                Este script contém a lógica da calculadora. É carregado no 
+                final do documento 
+                para garantir que todos os elementos HTML sejam carregados 
+                antes da execução do script. -->
+</body>
+</html>

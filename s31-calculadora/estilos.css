@@ -1,0 +1,305 @@
+body {
+
+    /* A tag <body> define o corpo do documento HTML. É o 
+            contêiner para todos os elementos de conteúdo, como 
+            texto, hiperlinks, imagens, tabelas, listas e muitos
+            outros tipos de dados. 
+    Todo o conteúdo visível da página web deve ser colocado 
+            dentro desta tag. 
+    Aqui, aplicamos estilos CSS que afetarão todo o conteúdo 
+            dentro do <body>, garantindo uma aparência consistente. */
+
+    font-family: Arial, sans-serif;
+    /* Esta propriedade CSS especifica a família de fontes que deve ser 
+            usada para o texto dentro do <body>. 'Arial' é uma fonte sans-serif 
+            muito comum e amplamente suportada. 
+    Caso 'Arial' não esteja disponível, o navegador usará qualquer fonte 
+            sans-serif padrão disponível. Sans-serif é uma categoria de 
+            fontes que não têm "serifs", pequenos traços nos fins das letras. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo da página. '#f4f4f4' é um cinza 
+            muito claro, proporcionando um fundo suave que não cansa os 
+            olhos, ideal para interfaces que requerem atenção prolongada, 
+            como uma calculadora. */
+
+    margin: 0;
+    /* Remove todas as margens externas do <body>. Margens são espaços 
+            entre os bordos do elemento e outros elementos ou o limite do documento. 
+    Zerar as margens ajuda a controlar o layout com mais precisão, evitando 
+            espaços indesejados ao redor do conteúdo principal da página. */
+
+    padding: 0;
+    /* Remove todos os preenchimentos internos do <body>. Preenchimentos 
+            são espaços entre o conteúdo de um elemento e seus bordos internos. 
+    Zerar os preenchimentos garante que o conteúdo possa se estender 
+            completamente até os bordos do <body>, sem espaço extra. */
+
+    display: flex;
+    /* Aplica o modelo de caixa flexível ao <body>, facilitando o alinhamento e 
+            a distribuição dos elementos filhos de forma eficiente e com layout responsivo. 
+    Flexbox é um método de layout que oferece controle sobre o alinhamento, 
+            direção, ordem e tamanho dos elementos dentro de um contêiner. */
+
+    justify-content: center;
+    /* Esta propriedade alinha os elementos filhos do <body> 
+            horizontalmente ao centro do contêiner. 
+    É parte do modelo de layout Flexbox e ajuda a centralizar o conteúdo 
+            principal horizontalmente de maneira simples e eficaz. */
+
+    align-items: center;
+    /* Alinha os elementos filhos do <body> verticalmente ao centro do contêiner. 
+    Também parte do Flexbox, esta propriedade é crucial para centralizar 
+            conteúdo verticalmente, especialmente útil em layouts de página 
+            única ou em centros de login, formulários ou páginas de entrada. */
+
+    height: 100vh;
+    /* Define a altura do <body> para ser 100% da altura da janela de 
+            visualização (viewport), garantindo que o <body> estenda-se 
+            verticalmente para ocupar toda a tela. 
+    'vh' é uma unidade relativa ao viewport, onde 100vh corresponde a 100% da 
+            altura da tela. Isso é útil para criar layouts que cobrem toda a tela 
+            sem necessidade de rolagem vertical. */
+
+}
+
+.calculadora {
+    /* Seleciona todos os elementos que possuem a classe 'calculadora'. 
+    Esta classe é geralmente aplicada a contêineres que precisam 
+            de um estilo distinto. */
+
+    width: 300px;
+    /* Define a largura da calculadora para 300 pixels, garantindo que 
+            todos os elementos dentro deste contêiner tenham um espaço 
+            definido e uniforme para serem exibidos corretamente. */
+
+    background-color: #fff;
+    /* Define a cor de fundo da calculadora para branco (#fff). O branco é 
+            uma escolha comum para fundos porque cria um contraste limpo e 
+            claro com elementos de texto e botões coloridos ou escuros. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida com 1 pixel de espessura ao redor da 
+            calculadora, com a cor cinza claro (#ccc). Esta borda ajuda a 
+            delinear o contêiner da calculadora, separando-o visualmente do 
+            restante da página. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner da calculadora com um raio de 10 pixels. 
+            Bordas arredondadas são frequentemente usadas em design de interface do 
+            usuário para suavizar a aparência dos elementos e torná-los visualmente 
+            mais amigáveis. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor da calculadora para criar uma sensação de 
+            profundidade, fazendo-a parecer elevada sobre o fundo. A sombra é 
+            sutil, com um desfoque de 10 pixels e uma cor preta com 10% de 
+            opacidade (rgba(0, 0, 0, 0.1)). */
+
+    padding: 20px;
+    /* Define um preenchimento interno de 20 pixels em todos os lados dentro 
+            da calculadora. Este espaço extra dentro do contêiner ajuda a separar 
+            visualmente os elementos internos da borda do contêiner, tornando a 
+            interface mais clara e mais fácil de usar. */
+
+    box-sizing: border-box;
+    /* Altera o modelo de box-sizing para 'border-box', o que faz com que as 
+            propriedades de largura e altura incluam o conteúdo, o preenchimento e 
+            a borda, mas não a margem. Isso simplifica o cálculo de tamanhos de 
+            elementos e evita que a largura total exceda o esperado devido ao 
+            preenchimento ou à borda. */
+
+}
+
+
+.calculadora h2 {
+    /* Seleciona todos os elementos <h2> dentro de qualquer 
+            elemento com a classe 'calculadora'. 
+    Isso permite aplicar estilos específicos ao título da calculadora, 
+            diferenciando-o de outros títulos <h2> na página. */
+
+    margin-top: 0;
+    /* Remove a margem superior do elemento <h2>. Normalmente, os 
+            navegadores aplicam uma margem padrão aos títulos, 
+    mas essa regra força o título a ter 0 de margem na parte superior, 
+            permitindo um controle mais fino sobre o layout e o espaçamento ao 
+            redor do título dentro da calculadora. */
+
+    text-align: center;
+    /* Centraliza o texto do <h2> horizontalmente dentro de seu contêiner. 
+            Isso é útil para garantir que o título da calculadora esteja alinhado de 
+            forma apropriada e atraente, 
+    refletindo um design centrado que é comum em interfaces de usuário focadas em 
+            elementos específicos como calculadoras. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do título para 24 pixels. Esse tamanho é 
+            geralmente grande o suficiente para ser claramente visível como um cabeçalho, 
+    mas não tão grande que domine a interface da calculadora. Essa propriedade 
+            assegura que o título seja visualmente distinto dos outros 
+            textos na interface. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333). Essa cor é 
+            uma escolha comum para textos, pois oferece excelente legibilidade 
+    sem ser tão dura quanto o preto puro, especialmente em fundos claros ou 
+            brancos como é o caso do fundo da calculadora. */
+
+}
+
+
+.calculadora input[type="text"] {
+    /* Seleciona todos os elementos <input> do tipo "text" que 
+            estão dentro de um elemento com a classe 'calculadora'. 
+    Essa especificidade garante que os estilos aplicados aqui não 
+            afetem outros elementos <input> fora da calculadora. */
+
+    width: 100%;
+    /* Define a largura do elemento <input> para cobrir 100% da 
+            largura do seu contêiner pai. 
+    Isso faz com que o campo de texto se ajuste ao espaço disponível 
+            dentro da calculadora, maximizando a usabilidade e mantendo a 
+            consistência visual. */
+
+    margin-bottom: 10px;
+    /* Aplica uma margem de 10 pixels apenas na parte 
+            inferior do elemento <input>. 
+    Isso ajuda a criar um espaço visual entre o campo de texto e 
+            qualquer elemento que esteja abaixo dele, melhorando a 
+            separação e a legibilidade. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10 pixels em todas as 
+            direções dentro do elemento <input>. 
+    Este espaço extra dentro do campo de texto aumenta a facilidade de 
+            interação do usuário ao digitar, tornando o texto mais fácil de ler. */
+
+    font-size: 20px;
+    /* Define o tamanho da fonte para 20 pixels. Esse tamanho de fonte é 
+            grande o suficiente para garantir que o texto seja legível, 
+    o que é crucial para campos onde os usuários precisam inserir ou 
+            verificar informações. */
+
+    border: 1px solid #ccc;
+    /* Aplica uma borda sólida com 1 pixel de espessura ao redor do 
+            elemento <input>, usando uma cor cinza claro (#ccc). 
+    Isso não apenas destaca visualmente o campo de entrada, mas também 
+            ajuda a definir claramente os limites do campo no contexto da 
+            interface da calculadora. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do elemento <input> com um raio de 5 pixels. 
+            Bordas arredondadas são uma escolha de design comum para 
+            suavizar a interface gráfica, 
+            tornando-a visualmente mais amigável e menos rígida. */
+
+    box-sizing: border-box;
+    /* Altera o modelo de box-sizing para 'border-box', que faz com 
+            que as propriedades de largura e altura do elemento <input> 
+    incluam o conteúdo, o preenchimento e a borda, mas não a margem. 
+            Isso simplifica o cálculo de tamanhos de elementos e evita que a 
+            largura total exceda o esperado devido ao preenchimento ou à borda. */
+
+}
+
+.calculadora input[type="button"] {
+    /* Seleciona todos os elementos <input> do tipo "button" que 
+            estão dentro de um elemento com a classe 'calculadora'. 
+    Esta regra específica assegura que os estilos se apliquem somente 
+            aos botões da calculadora, não afetando outros botões fora dela. */
+
+    width: 50px;
+    /* Define a largura dos botões para 50 pixels. Esse tamanho fixo 
+            garante que todos os botões tenham a mesma largura, 
+    proporcionando um layout uniforme e fácil de usar na interface da calculadora. */
+
+    height: 50px;
+    /* Define a altura dos botões para 50 pixels. Essa altura, junto com a 
+            largura, faz com que os botões sejam grandes o suficiente 
+            para serem facilmente clicáveis, o que é importante em dispositivos 
+            com telas sensíveis ao toque. */
+
+    margin: 5px;
+    /* Aplica uma margem de 5 pixels em todos os lados dos botões. Isso 
+            cria um pequeno espaço entre cada botão, 
+            ajudando a evitar cliques acidentais e melhorando a estética 
+            geral da disposição dos botões. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte dentro dos botões para 18 pixels. Este 
+            tamanho facilita a leitura dos números e símbolos nos botões, 
+            tornando a interface mais acessível, especialmente para 
+            usuários com visão limitada. */
+
+    border: none;
+    /* Remove qualquer borda dos botões. Isso dá aos botões um visual 
+            mais limpo e moderno, focando a atenção do 
+            usuário nos símbolos ou números 
+            dentro dos botões em vez de suas bordas. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos dos botões com um raio de 5 pixels. As 
+            bordas arredondadas são visualmente mais agradáveis e 
+            alinhadas com as tendências modernas de design de 
+            interface do usuário. */
+
+    cursor: pointer;
+    /* Altera o cursor para um ponteiro quando ele está sobre um dos 
+            botões. Isso é uma indicação visual de que o elemento é clicável, 
+            melhorando a usabilidade ao fornecer feedback imediato ao 
+            usuário sobre a natureza interativa do elemento. */
+
+    background-color: #188f25;
+    /* Define a cor de fundo dos botões para um verde (#188f25). 
+            Essa cor é suave e reduz o cansaço visual, ao mesmo tempo que 
+            oferece contraste suficiente com o texto branco ou escuro, 
+            assegurando que os números e símbolos sejam fáceis de ver. */
+
+    color: #fff;
+
+}
+
+.calculadora input[type="button"]:hover {
+    /* Seleciona o estado de hover (quando o mouse está sobre o 
+            elemento) de todos os elementos <input> do tipo "button" 
+            dentro da classe 'calculadora'. 
+    Esta pseudo-classe é usada para definir uma interação visual 
+            específica que ocorre apenas quando o usuário passa o mouse 
+            sobre um dos botões da calculadora. */
+
+    background-color: #230864;
+    /* Muda a cor de fundo dos botões para um azul mais escuro (#230864) 
+            quando o mouse está sobre eles. 
+    Isso fornece um feedback visual imediato, indicando ao usuário que o 
+            botão é interativo e está sob o cursor. 
+    A mudança de cor aumenta a usabilidade ao fazer com que o botão pareça 
+            mais "clicável" e ao destacar o elemento com o qual o usuário 
+            está prestes a interagir. */
+
+}
+
+.calculadora .linha {
+    /* Seleciona todos os elementos com a classe 'linha' que estão 
+            dentro de um elemento com a classe 'calculadora'. 
+    Esta classe é geralmente aplicada a contêineres que agrupam uma 
+            linha de botões ou inputs, organizando-os em uma única 
+            linha horizontal. */
+
+    display: flex;
+    /* Aplica o modelo de caixa flexível ao elemento, permitindo um 
+            layout mais flexível e responsivo dos elementos filhos (neste 
+            caso, botões ou outros controles). 
+    Flexbox facilita o alinhamento e a distribuição dos filhos dentro 
+            do contêiner de linha. */
+
+    justify-content: space-between;
+    /* Esta propriedade define como os elementos filhos dentro do 
+            contêiner de linha são distribuídos ao longo do eixo 
+            principal (horizontal neste contexto). 
+    'space-between' distribui o espaço restante igualmente entre os 
+            elementos, resultando em um espaçamento uniforme entre 
+            cada elemento filho, mas sem espaço extra nas extremidades. 
+    Isso garante que todos os botões sejam alinhados de maneira ordenada e 
+            visualmente equilibrada dentro da calculadora. */
+            
+}
