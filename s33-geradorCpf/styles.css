@@ -1,0 +1,204 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o corpo da página. 
+            'Arial' é especificado como a fonte primária, 
+            seguida por 'sans-serif', uma família genérica, 
+            como fallback. Isso garante que se 'Arial' não estiver 
+            disponível, qualquer fonte sans-serif será usada. Fontes 
+            sans-serif são populares para leitura na tela 
+            devido à sua clareza e simplicidade. */
+
+    margin: 0;
+    /* Remove todas as margens externas do elemento <body>. 
+            Margens são o espaço entre o conteúdo de um 
+            elemento e os elementos ao redor. Ao definir 'margin: 0', 
+            todos os espaços ao redor do <body> são 
+            removidos, permitindo que o conteúdo se estenda até as 
+            bordas da janela do navegador. */
+
+    padding: 0;
+    /* Remove todos os preenchimentos internos do elemento <body>. 
+            Preenchimento é o espaço entre o 
+            conteúdo de um elemento e sua borda interna. Ao definir 
+            'padding: 0', é garantido que não haja espaço 
+            extra dentro do <body>, permitindo que o conteúdo utilize 
+            todo o espaço disponível desde as bordas. */
+
+    background-color: #f2f2f2;
+    /* Define a cor de fundo para o corpo da página. O código 
+            de cor '#f2f2f2' é um cinza claro, 
+            oferecendo um fundo suave que não cansa os olhos, sendo 
+            ideal para melhorar a legibilidade e 
+            proporcionando um contraste suave com a maioria das 
+            cores de texto. */
+
+}  
+
+
+.container {
+
+    max-width: 600px;
+    /* Define a largura máxima do contêiner para 600px. Isso 
+          significa que o elemento pode crescer até 600px de largura,
+          mas não mais que isso, ajudando a manter o conteúdo legível e
+          bem formatado, especialmente em dispositivos maiores. */
+
+    margin: 50px auto;
+    /* Define as margens verticais para 50px e as margens 
+          horizontais para automático. 
+      Isso centraliza o contêiner horizontalmente dentro de 
+          seu contêiner pai e adiciona espaço acima e abaixo dele,
+          separando visualmente o contêiner de outros elementos. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20px em todos os lados dentro do 
+          contêiner. Isso cria espaço entre o conteúdo do contêiner
+          e suas bordas, melhorando a legibilidade e a estética ao 
+          evitar que o texto ou outros elementos toquem diretamente as bordas. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do contêiner para branco (#fff). O branco é 
+          uma cor de fundo neutra que aumenta o contraste com
+          a maioria das cores de texto, melhorando a legibilidade e 
+          proporcionando uma aparência limpa e profissional. */
+
+    border-radius: 8px;
+    /* Arredonda as bordas do contêiner com um raio de 8px. Bordas 
+          arredondadas são mais esteticamente agradáveis e modernas,
+          reduzindo a rigidez visual dos elementos na página. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do contêiner. 
+          O valor '0 0 10px rgba(0, 0, 0, 0.1)' cria uma sombra sutil, 
+          com um desfoque de 10px e uma cor preta com 10% de 
+          opacidade. Isso ajuda a elevar visualmente o contêiner 
+          acima do plano de fundo,
+          adicionando profundidade ao design. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto do cabeçalho ao centro do elemento. Esta 
+            propriedade é útil para destacar o título e assegurar que 
+            ele chame atenção, sendo frequentemente usado em cabeçalhos 
+            principais para criar um ponto focal visual na página. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333). Esta é uma 
+            escolha de cor sóbria que oferece excelente contraste em 
+            fundos claros sem ser tão duro quanto o preto puro, facilitando a 
+            leitura e suavizando a aparência visual do texto. */
+
+}
+
+.cpf-container {
+
+    display: flex;
+    /* Configura o contêiner CPF para usar o modelo de caixa 
+            flexível. Flexbox é um método de layout que facilita o 
+            alinhamento e a distribuição de espaço entre itens dentro de 
+            um contêiner, mesmo quando seus tamanhos são 
+            desconhecidos ou dinâmicos. */
+
+    align-items: center;
+    /* Alinha verticalmente todos os itens dentro do `.cpf-container` 
+            ao centro. Isso garante que todos os elementos (como input e 
+            botões) estejam alinhados centralmente, proporcionando uma 
+            apresentação visual uniforme e esteticamente agradável. */
+
+}
+
+
+input[type="text"] {
+
+    flex: 1;
+    /* Faz com que o input de texto ocupe todo o espaço disponível em 
+            seu contêiner, exceto o espaço ocupado por outros elementos. 
+            Esta propriedade é útil em layouts flexíveis para garantir 
+            que o campo de entrada aproveite o máximo de espaço possível. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10px em todas as direções dentro do 
+            campo de entrada, aumentando a área de clique e melhorando a 
+            experiência de interação do usuário, além de tornar o texto 
+            dentro do input mais legível. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16px, o que ajuda a garantir que o 
+            texto seja facilmente legível para a maioria dos usuários. 
+            Tamanhos de fonte maiores são frequentemente usados em 
+            interfaces focadas na facilidade de uso e acessibilidade. */
+
+    border: 1px solid #ccc;
+    /* Aplica uma borda sólida com 1px de espessura ao redor do campo 
+            de entrada, usando uma cor cinza clara (#ccc). Isso não 
+            apenas ajuda a definir os limites do campo de entrada, mas 
+            também adiciona um aspecto visual discreto que melhora a 
+            estética geral. */
+
+    border-radius: 5px 0 0 5px;
+    /* Arredonda as bordas do lado superior esquerdo e inferior 
+            esquerdo do campo de entrada com um raio de 5px. Esta 
+            propriedade cria um efeito visual suave e é frequentemente 
+            usada para campos de entrada que serão colocados ao lado de 
+            botões ou outros elementos, como é comum em designs de formulários. */
+
+}
+
+
+button {
+
+    padding: 10px 20px;
+    /* Define o preenchimento interno do botão. 10px na vertical (topo e 
+            fundo) e 20px na horizontal (esquerda e direita).
+       Isso assegura que o conteúdo dentro do botão tenha espaço suficiente 
+            ao redor, tornando-o mais fácil de clicar e visualmente agradável. */
+            
+
+    font-size: 16px;
+    /* Estabelece o tamanho da fonte do texto dentro do botão como 16px, 
+            garantindo que o texto seja suficientemente grande e legível. */
+
+    background-color: #007bff;
+    /* Define a cor de fundo do botão para um azul brilhante (#007bff). Esta 
+            cor é vibrante e chama atenção, ideal para elementos de ação como botões. */
+
+    color: #fff;
+    /* Define a cor do texto dentro do botão para branco (#fff), criando um 
+            alto contraste com o fundo azul, o que melhora a legibilidade. */
+
+    border: none;
+    /* Remove qualquer borda do botão, criando um design mais limpo e moderno. */
+
+    border-radius: 0 5px 5px 0;
+    /* Arredonda apenas as bordas direitas do botão (superior direita e 
+            inferior direita) com um raio de 5px.
+       Isso é útil quando o botão está ao lado de outros elementos, como 
+            um campo de entrada, criando uma aparência de continuidade. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando ele está sobre o botão, 
+            indicando que o elemento é clicável. */
+
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave para a mudança de cor de fundo, 
+            que ocorre ao longo de 0.3 segundos.
+       Isso melhora a resposta visual ao interagir com o botão, tornando a 
+            interface mais dinâmica e agradável ao usuário. */
+
+}
+
+button:hover {
+
+    background-color: #02264b;
+    /* Define uma nova cor de fundo (#02264b, um azul mais escuro) 
+            para o botão quando o mouse está sobre ele.
+       Essa mudança de cor no estado "hover" é uma prática comum 
+            para indicar interatividade,
+            mostrando que o botão responde ao cursor do usuário. */
+
+}
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE informa ao navegador a versão 
+          do HTML que a página está usando. 
+     Neste caso, o documento é HTML5, a versão mais 
+          moderna e recomendada para novos projetos. 
+     Essa linha é crucial para garantir que o navegador 
+          processe a página corretamente. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> marca o início do documento HTML. 
+     O atributo 'lang="pt-BR"' especifica que o idioma principal 
+          da página é o português do Brasil.
+     Isso ajuda os mecanismos de busca e as tecnologias assistivas a 
+          entenderem o idioma do conteúdo, 
+     o que pode melhorar a acessibilidade e o SEO (otimização 
+          para motores de busca). -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de estilo e 
+          scripts que não são exibidos diretamente na parte visível da página.
+     É uma seção usada principalmente para incluir informações 
+          sobre o documento e referências a recursos externos. -->
+
+  <meta charset="UTF-8">
+  <!-- A tag <meta> com o atributo 'charset="UTF-8"' define a 
+          codificação de caracteres para a página.
+       UTF-8 é uma codificação de caracteres universal que inclui 
+          praticamente todos os caracteres e símbolos usados globalmente.
+       Isso é importante para exibir corretamente o texto, 
+          independentemente do idioma. -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Esta meta tag configura a viewport para controlar o 
+          layout em dispositivos móveis.
+       'width=device-width' faz a largura da página corresponder à 
+          largura da tela do dispositivo,
+       e 'initial-scale=1.0' define o nível de zoom inicial 
+          quando a página é carregada.
+       Essas configurações ajudam a garantir que o site seja 
+          visualmente acessível em dispositivos móveis. -->
+
+  <title>Gerador de CPF</title>
+  <!-- A tag <title> define o título da página, que é 
+          exibido na aba do navegador.
+       Isso é útil para a experiência do usuário e SEO, pois dá 
+            aos visitantes e aos mecanismos de busca uma ideia 
+            rápida do conteúdo da página.
+       Aqui, indica que a página é um "Gerador de CPF". -->
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- A tag <link> é usada aqui para incluir uma folha de 
+            estilo externa, denominada 'styles.css'.
+       O atributo 'rel="stylesheet"' especifica que o tipo de 
+            documento vinculado é uma folha de estilo CSS.
+       'href="styles.css"' define o caminho para o arquivo CSS que 
+            contém os estilos que serão aplicados à página.
+       Isso ajuda a separar o conteúdo e a apresentação, mantendo o 
+            HTML mais limpo e mais fácil de manter. -->
+
+</head>
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível da página 
+            web que os usuários interagem diretamente. -->
+
+    <div class="container">
+    <!-- Divisão principal que serve como um contêiner para o 
+            conteúdo relacionado ao gerador de CPF. 
+        A classe 'container' é usada para aplicar estilos específicos 
+            definidos na folha de estilo externa, como largura, margem, 
+            padding, entre outros. -->
+
+    <h1>Gerador de CPF</h1>
+    <!-- Cabeçalho principal da página. O elemento <h1> é usado 
+            para o título mais importante da página,
+            que neste caso é "Gerador de CPF". Usar <h1> ajuda os 
+            mecanismos de busca e tecnologias assistivas a entenderem o 
+            propósito principal da página. -->
+
+    <div class="cpf-container">
+    <!-- Uma sub-divisão que agrupa elementos específicos para a 
+            funcionalidade de geração de CPF. 
+        A classe 'cpf-container' pode ser usada para estilizar 
+            essa seção de maneira específica, organizando visualmente o 
+            espaço onde o CPF é exibido e o botão de ação. -->
+
+        <input type="text" id="cpf" placeholder="CPF gerado" readonly>
+        <!-- Campo de entrada de texto onde o CPF gerado é exibido.
+            - type="text" define que o campo é para entrada de texto.
+            - id="cpf" é um identificador único para manipulações 
+                    específicas no JavaScript ou CSS.
+            - placeholder="CPF gerado" fornece um texto de exemplo dentro do 
+                    campo que desaparece quando o usuário interage.
+            - readonly impede que o usuário edite o conteúdo do campo, 
+                    garantindo que apenas o CPF gerado pelo sistema 
+                    seja exibido. -->
+
+        <button id="gerar-cpf">Gerar CPF</button>
+        <!-- Botão que, quando clicado, dispara a geração de um CPF.
+            - id="gerar-cpf" é usado para identificar unicamente este 
+                    botão, permitindo que interações específicas 
+                    sejam definidas no JavaScript. -->
+
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Inclui o arquivo JavaScript externo 'script.js' que contém a 
+                lógica para gerar o CPF e interagir com os elementos da página.
+        - src="script.js" especifica o caminho para o arquivo JavaScript que é 
+                executado quando a página é carregada. Este script ativa a 
+                funcionalidade do botão e a geração do CPF. -->
+
+</body>
+<!-- Fecha a tag <body>, indicando o fim do conteúdo 
+        principal da página. -->
+
+</html>
+<!-- Fecha a tag <html>, marcando o fim do documento HTML. -->
+
+  
