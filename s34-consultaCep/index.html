@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- A linha acima define o tipo do documento como HTML5, 
+    que é a versão mais recente do HTML. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang' 
+    especifica o idioma do conteúdo do documento, neste 
+    caso, 'pt-BR' para português do Brasil. -->
+
+<head>
+    <!-- A tag <head> contém metadados (dados sobre dados) que 
+        não são exibidos diretamente na página web, mas são 
+        importantes para o navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define o conjunto 
+        de caracteres usado no documento, neste caso, UTF-8, que 
+        inclui a maioria dos caracteres de todos os idiomas escritos e 
+        é uma boa prática para evitar problemas de exibição de texto. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, desta vez configurando a 'viewport' (área 
+        de visualização) da página. 'width=device-width' faz a largura da 
+        página seguir a largura da tela do dispositivo, e 'initial-scale=1.0' 
+        define o nível inicial de zoom quando a página é carregada pela 
+        primeira vez. Essas configurações ajudam a garantir que o site 
+        seja responsivo, ou seja, se ajuste bem em dispositivos móveis. -->
+
+    <title>Consulta de Endereço por CEP</title>
+    <!-- A tag <title> define o título da página, que é mostrado na aba 
+        do navegador. Este título também é usado por motores de busca e 
+        quando a página é favoritada. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> é usada aqui para vincular um arquivo de folha de 
+        estilo CSS externo ao documento HTML. 'rel="stylesheet"' indica 
+        que o tipo de documento vinculado é uma folha de estilo e 'href="styles.css"' 
+        especifica o caminho para o arquivo CSS que será aplicado 
+        para estilizar a página. -->
+
+</head>
+<!-- A tag </head> indica o fim da seção head do documento HTML. -->
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo da página que é 
+        visível para o usuário, como texto, imagens, links, etc. -->
+
+    <div class="container">
+        <!-- A tag <div> é um contêiner genérico para conteúdo 
+            de fluxo, que por si só não representa nada, mas pode 
+            ser estilizado com CSS ou manipulado com JavaScript. 
+            A classe "container" é geralmente usada para definir um 
+            estilo específico que centraliza o conteúdo e limita sua 
+            largura dentro da página, facilitando o design responsivo. -->
+
+        <h1>Consulta de Endereço por CEP</h1>
+        <!-- A tag <h1> representa um cabeçalho de nível um, o mais 
+            importante na hierarquia de títulos de uma página. 
+            Usado aqui para dar título à função principal da 
+            página, que é a consulta de endereço por CEP. -->
+
+        <div class="caixa-busca">
+            <!-- Outra <div>, desta vez com a classe "caixa-busca", 
+                que pode ser estilizada especificamente para conter 
+                elementos de formulário de busca. -->
+
+            <input type="text" id="campo-cep" placeholder="Digite o CEP" aria-label="Digite o CEP">
+            <!-- A tag <input> é usada para criar um elemento 
+                    interativo para o usuário inserir dados. 
+            'type="text"' define o tipo de entrada como texto.
+            'id="campo-cep"' é um identificador único para o elemento, 
+                    que pode ser referenciado em JavaScript e CSS.
+            'placeholder="Digite o CEP"' fornece um texto de exemplo que 
+                    desaparece quando o campo é focado.
+            'aria-label="Digite o CEP"' melhora a acessibilidade, fornecendo 
+                    uma descrição dos leitores de tela, indicando o que 
+                    deve ser inserido no campo. -->
+
+            <button id="botao-buscar">Buscar</button>
+            <!-- A tag <button> cria um botão clicável. Neste caso, ele é 
+                    usado para submeter a consulta de CEP.
+            'id="botao-buscar"' identifica o botão unicamente, permitindo 
+                    mais controle com JavaScript ou CSS. -->
+
+        </div>
+
+        <div id="resultado" class="resultado">
+            <!-- Uma <div> destinada a exibir os resultados da busca, 
+                    identificada por 'id="resultado"' para manipulações 
+                    específicas via JavaScript e 'class="resultado"' para 
+                    aplicação de estilos. -->
+            <!-- Resultados da consulta serão exibidos aqui -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> é usada para incluir um arquivo JavaScript 
+                externo através do atributo 'src'. 
+    'script.js' contém o código que lida com a busca de CEP e atualização 
+                da página com os resultados recebidos. Este script controla o 
+                comportamento do formulário e a apresentação dos resultados. -->
+
+</body>
+</html>
+<!-- As tags </body> e </html> marcam o fim do conteúdo visível da página e o 
+            fim do documento HTML, respectivamente. -->

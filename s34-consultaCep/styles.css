@@ -1,0 +1,230 @@
+/* Aplica regras a todos os elementos no documento */
+* {
+
+    /* Remove todas as margens externas dos elementos */
+    margin: 0;
+  
+    /* Remove todo o preenchimento interno dos elementos */
+    padding: 0;
+  
+    /* Define como o tamanho do elemento é calculado, 
+    incluindo bordas e preenchimento no tamanho total */
+    box-sizing: border-box;
+  
+    /* Define a família de fontes padrão para todos os elementos */
+    font-family: Arial, sans-serif;
+  
+  }
+
+/* Aplica regras aos elementos <body> e <html> */
+body, html {
+
+    /* Estabelece que a altura de <body> e <html>
+     seja igual a 100% da altura da janela do navegador */
+    height: 100%;
+  
+    /* Utiliza Flexbox para criar um layout flexível 
+    que pode ajustar o conteúdo automaticamente */
+    display: flex;
+  
+    /* Alinha os elementos filhos de <body> 
+    e <html> horizontalmente ao centro */
+    justify-content: center;
+  
+    /* Alinha os elementos filhos de <body> 
+    e <html> verticalmente ao centro */
+    align-items: center;
+  
+    /* Define a cor de fundo de <body> e <html> como azul */
+    background-color: #007bff;
+
+  }
+
+
+/* Define estilos para elementos com a classe "container" */
+.container {
+
+    /* Define a largura do elemento para ocupar 100% da 
+            largura do seu contêiner pai. */
+    width: 100%;
+    
+    /* Define uma largura máxima para o elemento, garantindo 
+            que ele não ultrapasse 800 pixels. 
+       Isso é útil para garantir que o layout não fique 
+            muito largo em telas grandes. */
+    max-width: 800px;
+    
+    /* Define a cor de fundo do elemento para branco (#ffffff). */
+    background-color: #ffffff;
+    
+    /* Adiciona um preenchimento interno de 20 pixels 
+            em todos os lados do elemento.
+       Isso cria espaço entre o conteúdo interno e 
+            as bordas do contêiner. */
+    padding: 20px;
+    
+    /* Define o raio da borda do elemento para 8 pixels.
+       Isso arredonda os cantos do contêiner, dando um 
+            aspecto mais suavizado. */
+    border-radius: 8px;
+    
+    /* Aplica uma sombra abaixo do contêiner. 
+       0 4px 6px são as configurações de deslocamento e 
+            desfoque da sombra,
+       rgba(0, 0, 0, 0.1) define a cor da sombra como preta 
+            com 10% de opacidade. */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Centraliza o texto dentro do contêiner. Isso alinha o 
+            texto ao centro horizontalmente. */
+    text-align: center;
+  
+  }
+
+
+/* Estilos aplicados à tag <h1> */
+h1 {
+
+    /* Define a cor do texto como preto (#000000). */
+    color: #000000;
+    
+       
+    /* Arredonda os cantos do elemento com um raio 
+          de 8 pixels, suavizando as bordas. */
+    border-radius: 8px;
+    
+    /* Adiciona uma margem abaixo do elemento de 20 pixels, 
+       criando espaço entre o <h1> e o que estiver abaixo dele. */
+    margin-bottom: 20px;
+    
+  }
+
+/* Estilos aplicados a elementos com a classe "caixa-busca" */
+.caixa-busca {
+
+  /* Define o layout deste elemento para Flexbox, o que 
+      facilita o alinhamento dos itens filhos horizontalmente. */
+  display: flex;
+  
+  /* Centraliza os itens filhos horizontalmente dentro 
+      do elemento flexível. */
+  justify-content: center;
+  
+  /* Define um espaço de 10 pixels entre cada item filho 
+      dentro do elemento flexível. */
+  gap: 10px;
+  
+  /* Adiciona uma margem abaixo do elemento de 40 pixels, 
+     criando espaço entre a "caixa-busca" e o que estiver abaixo dela. */
+  margin-bottom: 40px;
+
+}
+  
+
+/* Estilos aplicados a todos os elementos <input> do tipo texto */
+input[type="text"] {
+
+  /* Define a largura do input como 70% da largura 
+        do seu contêiner pai. */
+  width: 70%;
+  
+  /* Adiciona um preenchimento de 10 pixels em todos os 
+        lados do input para melhorar a legibilidade e a estética. */
+  padding: 10px;
+  
+  /* Arredonda os cantos do input com um raio de 5 pixels 
+        para um visual mais suave e moderno. */
+  border-radius: 5px;
+  
+  /* Aplica uma borda sólida com 2 pixels de espessura e cor cinza claro (#ccc),
+     ajudando a definir claramente os limites do campo de entrada. */
+  border: 2px solid #ccc;
+  
+  /* Define o tamanho da fonte do texto digitado no input para 20 pixels,
+     tornando-o facilmente legível para os usuários. */
+  font-size: 20px;
+
+}
+
+
+/* Estilos aplicados a todos os elementos <button> */
+button {
+
+  /* Adiciona um preenchimento de 10 pixels na parte 
+          superior e inferior e 20 pixels nos lados,
+          garantindo um espaço adequado dentro do botão para o texto. */
+  padding: 10px 20px;
+  
+  /* Define a cor de fundo do botão para amarelo (#ffc107),
+     o que faz com que ele se destaque na página como um 
+     elemento interativo importante. */
+  background-color: #ffc107; /* Botão amarelo para destaque */
+  
+  /* Define a cor do texto dentro do botão para um cinza escuro (#333),
+     garantindo um bom contraste com o fundo amarelo. */
+  color: #333;
+  
+  /* Remove qualquer borda do botão, optando por 
+      um design limpo e moderno. */
+  border: none;
+  
+  /* Arredonda os cantos do botão com um raio de 5 
+      pixels para um toque final estético. */
+  border-radius: 5px;
+  
+  /* Muda o cursor para uma mão quando o usuário passa o mouse sobre o botão,
+     indicando que o elemento é clicável. */
+  cursor: pointer;
+
+}
+
+/* Estilos aplicados ao estado hover de todos os
+          elementos <button> */
+button:hover {
+
+  /* Altera a cor de fundo do botão para um tom de azul 
+          mais escuro (#210766) quando o mouse está sobre ele.
+     Isso fornece um feedback visual imediato ao usuário, 
+          indicando que o botão é interativo. */
+  background-color: #210766;
+
+  /* cor da fonte como branco */
+  color: #ffffff;
+
+}
+
+
+/* Estilos aplicados a elementos com a classe "resultado" */
+.resultado {
+
+  /* Define a cor de fundo para um cinza muito claro (#f8f9fa), 
+          que ajuda a diferenciar a área de resultados
+          do restante da interface, proporcionando uma leitura 
+          visual clara dos resultados apresentados. */
+  background-color: #f8f9fa; /* Fundo claro para resultados */
+  
+  /* Adiciona um preenchimento de 10 pixels em todos os 
+          lados dentro do contêiner de resultados,
+          criando espaço entre o conteúdo interno e as 
+          bordas do contêiner. */
+  padding: 10px;
+  
+  /* Arredonda os cantos do contêiner de resultados com um 
+          raio de 5 pixels, suavizando a aparência visual. */
+  border-radius: 5px;
+  
+  /* Define a largura do contêiner de resultados para
+          ocupar 100% da largura do seu contêiner pai,
+          assegurando que ele se estenda completamente na 
+          área disponível horizontalmente. */
+  width: 100%;
+  
+  /* Ajusta o tamanho da fonte do texto dentro do contêiner 
+          de resultados para 20 pixels,
+          garantindo que os dados sejam grandes o suficiente 
+          para serem lidos confortavelmente. */
+  font-size: 20px;
+  
+}
+
+
