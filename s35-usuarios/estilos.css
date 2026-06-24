@@ -1,0 +1,98 @@
+body {
+
+    font-family: Arial, sans-serif; 
+    /* Define a família de fontes para o texto. "Arial" é a 
+            fonte principal; "sans-serif" é a fonte alternativa 
+            se "Arial" não estiver disponível. */
+    
+    margin: 20px;                    
+    /* Aplica uma margem de 20 pixels em todos os lados do 
+            corpo da página (topo, direita, fundo, esquerda), 
+            criando espaço entre a borda da página e o conteúdo. */
+    
+    padding: 20px;                   
+    /* Aplica um preenchimento de 20 pixels em todos os lados dentro do 
+            corpo da página, aumentando o espaço entre o conteúdo e 
+            as bordas internas do corpo. */
+    
+    background-color: #f7f7f7;
+    /* Define a cor de fundo do corpo da página como cinza claro (#f7f7f7), 
+
+    proporcionando um plano de fundo neutro para o conteúdo. */
+
+}
+
+#informacoes {
+
+    white-space: pre-wrap; 
+    /* Mantém a formatação de espaços e quebras de linha no 
+            conteúdo, útil para exibir texto formatado como 
+            JSON de forma legível. */
+    
+    background-color: #fffc61;
+    /* Define a cor de fundo como um cinza claro, proporcionando 
+            contraste suave sem ser muito brilhante. */
+    
+    padding: 10px;
+    /* Aplica um preenchimento de 10 pixels em todos os lados dentro do 
+            elemento, aumentando o espaço entre o conteúdo e as bordas internas. */
+    
+    border-radius: 5px;
+    /* Arredonda os cantos do elemento com um raio de 5 pixels, dando 
+            um visual mais suave e menos blocado. */
+    
+    font-size: 16px;
+    /* Define o tamanho da fonte do texto dentro do elemento para 16 
+            pixels, garantindo que o texto seja legível. */
+    
+    color: #333333;
+    /* Define a cor do texto para um cinza escuro (#333), que é 
+            fácil de ler contra o fundo claro. */
+
+}
+
+button {
+
+    padding: 10px 20px; 
+    /* Define o preenchimento interno do botão. 10px na parte 
+            superior e inferior, 20px nos lados esquerdo e direito, 
+            criando um espaço confortável ao redor do texto do botão. */
+    
+    font-size: 16px;
+    /* Define o tamanho da fonte do texto dentro do botão para 16 
+            pixels, garantindo que o texto seja grande o suficiente 
+            para ser lido facilmente. */
+    
+    background-color: #4CAF50;
+    /* Define a cor de fundo do botão para um verde vívido (#4CAF50), 
+            tornando-o visualmente distinto e fácil de identificar. */
+    
+    color: white;
+    /* Define a cor do texto para branco, garantindo alto contraste 
+            com o fundo verde, melhorando a legibilidade. */
+    
+    border: none;
+    /* Remove a borda do botão, dando-lhe um design mais limpo e moderno. */
+    
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um raio de 5 pixels, 
+            suavizando o design e tornando-o visualmente mais agradável. */
+    
+    cursor: pointer;
+    /* Altera o cursor para um ponteiro quando o usuário passa o mouse 
+            sobre o botão, indicando que o botão é clicável. */
+
+}
+
+button:hover {
+
+    background-color: #1b0763;
+    /* Muda a cor de fundo do botão para um azul um pouco 
+            mais escuro (#1b0763) quando o mouse está sobre ele, 
+            fornecendo um feedback visual imediato ao usuário de que o 
+            botão é interativo. */
+
+    /* Cor fonte branco*/
+    color: #ffffff;
+            
+}

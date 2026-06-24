@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- A linha acima define o tipo de documento como HTML5. 
+        É essencial para garantir que os navegadores 
+        interpretem corretamente o conteúdo da página. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang' 
+        especifica o idioma do conteúdo da página, que neste 
+        caso é português ('pt'). -->
+
+<head>
+    <!-- A tag <head> contém metadados (dados sobre dados) que não 
+        são exibidos diretamente na página web, mas são importantes 
+        para o navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define o conjunto de 
+        caracteres usado no documento. 'UTF-8' é um conjunto de 
+        caracteres universal que inclui quase todos os caracteres de 
+        todos os idiomas humanos, garantindo que o texto seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, que configura a visualização da página para ser 
+        responsiva. O 'width=device-width' instrui o navegador a igualar a 
+        largura da página à largura da tela do dispositivo. 'initial-scale=1.0' 
+        define o nível de zoom inicial quando a página é carregada pela 
+        primeira vez. -->
+
+    <title>Captura de IP e Informações do Usuário</title>
+    <!-- A tag <title> define o título da página, que aparece na aba do 
+        navegador. Este título é também usado pelos motores de busca. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para vincular um arquivo de folha de 
+        estilo CSS externo, que neste caso é 'estilos.css'. Isso 
+        permite estilizar a página. O atributo 'href' especifica o 
+        caminho para o arquivo CSS. -->
+
+</head>
+
+
+<body>
+    <!-- A tag <body> contém o conteúdo da página que é 
+        visível para os usuários. -->
+
+    <h1>Informações do Usuário</h1>
+    <!-- A tag <h1> é usada para o cabeçalho principal da 
+        página. Os cabeçalhos são usados para estruturar o 
+        conteúdo, e <h1> é o nível mais alto, geralmente 
+        usado para o título principal. -->
+
+    <button onclick="obterInformacoesUsuario()">Obter Informações</button>
+    <!-- A tag <button> cria um botão na página. O atributo 'onclick' 
+        define o que acontece quando o botão é clicado. Neste caso, 
+        ele chama a função JavaScript 'obterInformacoesUsuario()', 
+        que está definida no arquivo JavaScript externo. -->
+
+    <pre id="informacoes"></pre>
+    <!-- A tag <pre> é usada para exibir texto pré-formatado. 
+        Neste caso, será usada para mostrar as informações do 
+        usuário capturadas pelo JavaScript. O atributo 'id' com o 
+        valor 'informacoes' permite que o JavaScript identifique 
+        facilmente este elemento para adicionar texto a ele. -->
+
+    <script src="informacoes_usuario.js"></script>
+    <!-- A tag <script> com o atributo 'src' é usada para incluir um 
+        arquivo JavaScript externo. Este script contém o código que 
+        executa a funcionalidade de capturar e exibir as informações 
+        do usuário. -->
+        
+</body>
+</html>
