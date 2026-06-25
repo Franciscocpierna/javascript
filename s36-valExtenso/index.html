@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- A linha acima declara o tipo de documento como HTML5, 
+    que é a versão atual do HTML. -->
+
+<html lang="pt-br">
+<!-- A tag <html> define o início do documento HTML. O atributo 'lang' 
+    especifica a língua do documento, neste caso, Português 
+    do Brasil (pt-br). -->
+
+<head>
+    <!-- A tag <head> contém metadados (informações sobre os dados) 
+        que não são exibidos diretamente na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define a codificação de 
+        caracteres usada pelo documento HTML, neste caso, UTF-8, que 
+        inclui a maioria dos caracteres de todos os idiomas escritos. -->
+
+    <title>Valor por Extenso</title>
+    <!-- A tag <title> define o título da página, que aparece na aba do navegador. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para vincular uma folha de 
+                estilos externa ao documento HTML. 
+         'rel' especifica o relacionamento entre o documento atual e o 
+                recurso vinculado, neste caso, uma folha de estilos.
+         'href' especifica o caminho para a folha de estilos. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo da página que é 
+        visível para o usuário. -->
+
+    <div class="container">
+        <!-- A tag <div> é usada para agrupar conteúdo, facilitando o 
+                estilo ou script do grupo como uma unidade. 
+             O atributo 'class' é usado para especificar que o div pertence à 
+                classe 'container', que pode ser usada para estilização 
+                específica definida na folha de estilos. -->
+
+        <h1>Converta Número para Reais por Extenso</h1>
+        <!-- A tag <h1> define um cabeçalho de nível um, que é geralmente 
+                usado para o título principal ou mais importante da página. -->
+
+        <input type="number" id="numeroInput" placeholder="Insira um número" step="0.01">
+        <!-- A tag <input> é usada para criar um elemento de entrada de dados. 
+             'type="number"' especifica que a entrada deve ser um número.
+             'id' fornece um identificador único para o elemento, que pode ser 
+                    usado para referenciá-lo em scripts.
+             'placeholder' fornece um texto de dica que descreve a expectativa de 
+                    entrada no campo de entrada.
+             'step' define o intervalo de números válidos que podem ser 
+                    inseridos, neste caso, permitindo valores decimais até duas casas. -->
+
+        <button onclick="converterParaExtenso()">Converter</button>
+        <!-- A tag <button> cria um botão clicável. 
+             'onclick' é um atributo de evento que especifica que a 
+                    função JavaScript 'converterParaExtenso()' deve ser 
+                    executada quando o botão é clicado. -->
+
+        <p id="resultado"></p>
+        <!-- A tag <p> é usada para definir um parágrafo.
+             'id' fornece um identificador único para o parágrafo, permitindo 
+                    que seu conteúdo seja manipulado dinamicamente via JavaScript. -->
+
+    </div>
+
+    <script src="converter.js"></script>
+    <!-- A tag <script> é usada para incorporar ou referenciar um script 
+                    externo, neste caso, 'converter.js'.
+         'src' especifica o caminho para o arquivo de script. -->
+         
+</body>
+</html>

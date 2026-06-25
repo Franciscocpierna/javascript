@@ -1,0 +1,192 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* 'font-family' define a família da fonte usada para o 
+                texto dentro do elemento <body>.
+       Aqui, 'Arial' é a fonte principal, e 'sans-serif' é a fonte de fallback.
+       'Sans-serif' é um tipo de fonte que não tem pequenos traços 
+                no final das letras, o que oferece um visual mais limpo e moderno. */
+
+    background-color: #3cc3ec;
+    /* 'background-color' define a cor de fundo do elemento <body>.
+       '#3cc3ec' é um código hexadecimal que representa uma cor azul 
+                clara. */
+
+    margin: 0;
+    /* 'margin' define a margem externa do elemento <body>, que é o
+                espaço ao redor do elemento.
+       '0' remove todas as margens externas, fazendo com que o <body> ocupe 
+                toda a largura e altura disponíveis na janela do navegador. */
+
+    padding: 20px;
+    /* 'padding' define a margem interna do elemento <body>, que é o 
+                espaço entre o conteúdo do elemento e suas bordas.
+       '20px' aplica um espaço de 20 pixels em todos os lados dentro 
+                do <body>, proporcionando um espaço entre o conteúdo e 
+                as bordas do navegador. */
+
+    display: flex;
+    /* 'display: flex' define o modelo de caixa do <body> para flexível, 
+                que é um modelo de layout usado para permitir que os itens 
+                dentro do <body> sejam alinhados e distribuídos de forma 
+                mais eficiente e com layouts responsivos. */
+
+    justify-content: center;
+    /* 'justify-content: center' alinha horizontalmente os itens 
+                filhos (elementos dentro do <body>) ao centro.
+       Essa propriedade só funciona porque 'display' está definido como 'flex'. */
+
+    align-items: center;
+    /* 'align-items: center' alinha verticalmente os itens filhos ao centro.
+       Assim como 'justify-content', esta propriedade também depende 
+                do 'display: flex' para funcionar. */
+
+    height: 100vh;
+    /* 'height' define a altura do elemento <body>.
+       '100vh' significa 100% da altura da janela de visualização (viewport), 
+                garantindo que o <body> ocupe toda a altura visível da 
+                tela do dispositivo. */
+
+}
+
+.container {
+
+    background: white;
+    /* 'background' define a cor de fundo do elemento que 
+                tem a classe 'container'.
+       Aqui, o valor 'white' especifica que a cor de fundo 
+                será branca. */
+
+    padding: 20px;
+    /* 'padding' define a margem interna do elemento. Isso é o espaço 
+                entre o conteúdo interno do elemento e suas bordas.
+       '20px' aplica um espaço uniforme de 20 pixels em todas as 
+                direções (topo, direita, base, esquerda) dentro do elemento. */
+
+    border-radius: 8px;
+    /* 'border-radius' arredonda os cantos do elemento.
+       '8px' significa que os cantos do elemento serão arredondados com um 
+                raio de 8 pixels, dando ao elemento uma aparência mais 
+                suave e menos quadrada. */
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* 'box-shadow' adiciona uma sombra ao redor do elemento.
+       - O primeiro valor '0' é o deslocamento horizontal da sombra.
+       - O segundo valor '4px' é o deslocamento vertical.
+       - O terceiro valor '8px' é o raio do desfoque da sombra.
+       - 'rgba(0,0,0,0.1)' define a cor da sombra. Aqui, a cor é 
+                preta ('rgb(0,0,0)') com uma opacidade de 10% ('0.1'), 
+                tornando a sombra sutil. */
+
+    text-align: center;
+    /* 'text-align: center' alinha o texto dentro do elemento ao centro.
+       Isso significa que todo o texto dentro do elemento com a 
+                classe 'container' será centralizado horizontalmente. */
+
+}
+
+input, button {
+
+    padding: 10px;
+    /* 'padding' define a margem interna dos elementos, que é o 
+                espaço entre o conteúdo interno e as bordas do elemento.
+       '10px' aplica um espaço uniforme de 10 pixels em todas as direções 
+                dentro dos elementos `input` e `button`. 
+       Isso faz com que o conteúdo interno desses elementos (texto do botão 
+                ou texto dentro do campo de entrada) tenha um espaço adicional 
+                ao redor, tornando-os mais fáceis de ler e clicar. */
+
+    margin-top: 10px;
+    /* 'margin-top' define a margem superior para os 
+                elementos `input` e `button`.
+       '10px' coloca uma separação de 10 pixels entre o topo desses 
+                elementos e quaisquer elementos acima deles.
+       Isso ajuda a espaçar verticalmente os controles de forma 
+                uniforme na interface do usuário. */
+
+    border-radius: 5px;
+    /* 'border-radius' arredonda os cantos dos elementos.
+       '5px' significa que os cantos dos elementos `input` e `button` 
+                serão arredondados com um raio de 5 pixels,
+       o que dá a esses elementos uma aparência mais suave e moderna. */
+
+    border: 1px solid #ccc;
+    /* 'border' define a borda dos elementos.
+       - '1px' define a espessura da borda como um pixel.
+       - 'solid' define o estilo da borda como sólido (sem interrupções ou traços).
+       - '#ccc' (cinza claro) define a cor da borda. Esta cor é sutil e 
+                é comumente usada em designs para dar um contorno discreto que 
+                se destaca contra uma variedade de fundos sem ser muito dominante. */
+
+    outline: none;
+    /* 'outline' define o contorno que aparece ao redor de elementos interativos 
+                quando são focados (por exemplo, quando um usuário clica ou usa a 
+                tecla Tab para navegar até um elemento).
+       'none' remove completamente esse contorno.
+       Atenção: remover o contorno pode impactar a acessibilidade, pois ele 
+                indica visualmente o foco. É recomendável proporcionar uma 
+                alternativa visual clara para usuários que dependem dessa 
+                indicação para navegar. */
+
+}
+
+button {
+
+    cursor: pointer;
+    /* 'cursor: pointer' altera a forma do cursor do mouse para um 
+                ponteiro (típico ícone de mão), que é comumente usado 
+                para indicar que um elemento é clicável. 
+       Isso melhora a usabilidade, pois os usuários podem identificar 
+                visualmente que o elemento é interativo. */
+
+    background-color: #007bff;
+    /* 'background-color' define a cor de fundo do botão.
+       '#007bff' é um azul claro vibrante, o que dá ao botão uma 
+                aparência distinta e atraente, facilitando sua identificação 
+                como um elemento clicável. */
+
+    color: white;
+    /* 'color' define a cor do texto dentro do botão.
+       'white' faz com que o texto dentro do botão seja branco, criando 
+                um alto contraste com o fundo azul para uma legibilidade excelente. */
+
+    border: none;
+    /* 'border: none' remove a borda do botão.
+       Isso limpa visualmente o elemento, permitindo que o design do fundo e 
+                da cor do texto se destaque sem distrações adicionais de uma borda. */
+}
+
+button:hover {
+
+    background-color: #032040;
+    /* 'background-color' no pseudoclasse ':hover' muda a cor de fundo do 
+                botão quando o mouse está sobre ele.
+       '#032040' é um azul mais escuro que o original, o que proporciona um 
+                feedback visual imediato ao usuário, indicando que o botão é interativo. 
+       Mudar a cor no hover é uma prática comum para melhorar a experiência do 
+                usuário, tornando a interface mais responsiva e intuitiva. */
+
+    color: white;
+    /* 'color' define a cor do texto dentro do botão.
+        'white' faz com que o texto dentro do botão seja branco, criando 
+                um alto contraste com o fundo azul para uma legibilidade excelente. */
+
+}
+
+#resultado {
+
+    margin-top: 20px;
+    /* 'margin-top' adiciona uma margem no topo do elemento com o ID 'resultado'.
+       '20px' coloca uma distância de 20 pixels entre o topo do 
+                elemento 'resultado' e qualquer conteúdo acima dele, 
+                ajudando a separar visualmente o resultado de outros 
+                elementos na página. */
+
+    font-size: 20px;
+    /* 'font-size' define o tamanho da fonte do texto dentro do elemento 'resultado'.
+       '20px' aumenta o tamanho do texto para 20 pixels, o que melhora a 
+                legibilidade do resultado exibido, tornando-o mais fácil 
+                de ler à primeira vista. */
+                
+}
+
