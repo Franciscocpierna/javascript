@@ -1,0 +1,286 @@
+body, html {
+
+    width: 100%;
+    /* Define a largura do <body> e do <html> para ocupar 100% da 
+            largura da viewport (área visível da janela do navegador). Isso 
+            ajuda a garantir que não haja espaços à esquerda ou à 
+            direita do conteúdo. */
+
+    height: 100%;
+    /* Define a altura do <body> e do <html> para ocupar 100% da altura 
+            da viewport. Isso é útil para criar layouts que ocupam toda a 
+            tela, independentemente do tamanho do dispositivo. */
+
+    margin: 0;
+    /* Remove as margens padrão do <body> e do <html>. Navegadores 
+            geralmente adicionam uma margem por padrão, e zerá-la 
+            aqui ajuda a controlar melhor o layout. */
+
+    padding: 0;
+    /* Remove o preenchimento interno (padding) padrão do <body> e 
+            do <html>, permitindo que o conteúdo se estenda até 
+            as bordas da tela. */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto. 'Arial' é a fonte 
+            primária, e 'sans-serif' é a fonte de backup. 
+       Sans-serif é uma categoria de fontes que não têm "serifs" 
+            (pequenas linhas ou embelezamentos adicionais no 
+            fim das letras). */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo do <body> e do <html>. O valor '#f0f0f0' é 
+            um cinza claro, fornecendo um fundo neutro e suave 
+            para o conteúdo. */
+
+    display: flex;
+    /* Ativa o Flexbox, um método de layout que permite um espaço 
+            de distribuição mais eficiente e alinhamento de itens em 
+            um contêiner, mesmo quando seu tamanho é desconhecido. */
+
+    flex-direction: column;
+    /* Define a direção principal do flexbox como 'column', fazendo 
+            com que os filhos do contêiner se organizem verticalmente 
+            (em coluna), de cima para baixo. */
+
+    align-items: center;
+    /* Alinha os itens filhos ao centro do contêiner na direção 
+            transversal (neste caso, horizontalmente), o que é útil para 
+            centrar conteúdo dentro de um contêiner flex. */
+
+    justify-content: start;
+    /* Alinha os itens filhos ao início do contêiner na direção 
+            principal (neste caso, verticalmente), fazendo com que 
+            eles se agrupem no topo do contêiner. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto do cabeçalho h1 ao centro do contêiner. 
+            Isso é útil para títulos e cabeçalhos para garantir 
+            que eles sejam visivelmente destacados no centro da página. */
+
+    color: #333;
+    /* Define a cor do texto do cabeçalho h1. '#333' é um cinza 
+            muito escuro, proporcionando um contraste suficiente 
+            contra fundos claros sem ser tão duro quanto o preto puro. */
+
+    margin: 20px 0;
+    /* Define a margem ao redor do cabeçalho h1. '20px 0' significa 
+            que o cabeçalho tem uma margem superior e inferior de 20 
+            pixels, mas sem margens laterais (esquerda e direita), 
+            ajudando a criar um espaço vertical ao redor do título 
+            sem afetar o alinhamento horizontal. */
+
+}
+
+
+#container-editor {
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do contêiner do editor. 
+    
+    Os valores são:
+       - 0 0 10px: deslocamento horizontal, deslocamento vertical, e 
+            o raio do desfoque, respectivamente.
+       - rgba(0, 0, 0, 0.1): a cor da sombra, que é preta ('rgb(0, 0, 0)') 
+            com uma transparência de 10% ('0.1'), dando um efeito 
+            sutil que não sobrecarrega visualmente. */
+
+    width: 80%;
+    /* Define a largura do contêiner do editor para 80% da largura 
+            do seu contêiner pai. Isso ajuda a garantir que o editor 
+            seja responsivamente ajustado ao tamanho da janela 
+            do navegador. */
+
+    max-width: 800px;
+    /* Estabelece uma largura máxima de 800 pixels para o contêiner 
+            do editor. Isso significa que, mesmo em telas mais largas, o 
+            editor não excederá 800 pixels de largura,
+       ajudando a manter a legibilidade e a estética do conteúdo. */
+
+    margin-bottom: 20px;
+    /* Define uma margem na parte inferior do contêiner do editor de 20 
+            pixels. Isso cria um espaço entre o contêiner do editor e 
+            qualquer conteúdo que venha abaixo dele,
+       ajudando a separar visualmente as diferentes seções da página. */
+
+}
+
+.barra-ferramentas {
+
+    display: flex;
+    /* Define o modelo de caixa para 'flexbox', permitindo um 
+            layout flexível que facilita o alinhamento e a distribuição 
+            dos itens filhos dentro do contêiner. */
+
+    flex-wrap: wrap;
+    /* Permite que os itens filhos da 'barra-ferramentas' se envolvam em 
+            linhas múltiplas, conforme necessário, ao invés de tentar 
+            encaixá-los todos em uma única linha. 
+       Isso é útil para responsividade e para manter a usabilidade em 
+            diferentes tamanhos de tela. */
+
+    justify-content: space-around;
+    /* Distribui o espaço em torno de cada item dentro da 'barra-ferramentas'. 
+            Cada item terá um espaço igual em ambos os lados, garantindo uma 
+            distribuição uniforme e um layout esteticamente agradável. */
+
+    padding: 10px;
+    /* Aplica um preenchimento interno de 10 pixels em todos os lados 
+            da 'barra-ferramentas'. Isso cria um espaço entre os bordos do 
+            contêiner e os itens dentro dele, aumentando a legibilidade e 
+            atração visual. */
+
+    background-color: #fff;
+    /* Define a cor de fundo da 'barra-ferramentas' para branco ('#fff'). 
+            Isso ajuda os itens dentro dela a se destacarem visualmente. */
+
+    border-bottom: 1px solid #ccc;
+    /* Adiciona uma borda sólida na parte inferior da 'barra-ferramentas' 
+            com 1 pixel de espessura e cor cinza claro ('#ccc'). 
+       Esta borda ajuda a separar visualmente a barra de ferramentas do 
+       conteúdo abaixo dela, organizando melhor a interface. */
+
+}
+
+
+
+.barra-ferramentas > * {
+
+    margin: 5px;
+    /* Aplica uma margem externa de 5 pixels em todos os lados de 
+            cada item dentro da 'barra-ferramentas' (todos os 
+            elementos filhos diretos). 
+       Isso garante que haja um espaço consistente entre os itens, 
+            evitando que eles fiquem visualmente amontoados. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para 18 pixels para todos os 
+            elementos filhos diretos da 'barra-ferramentas'. 
+       Isso aumenta a legibilidade dos textos e labels dentro da 
+            barra de ferramentas, tornando-os mais fáceis de 
+            ler e acessar. */
+
+}
+
+.editor {
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do elemento com a classe 
+            `.editor` para branco (#ffffff). 
+       Isso proporciona um fundo limpo e claro para o conteúdo 
+            de texto, melhorando a legibilidade. */
+
+    border: none;
+    /* Remove qualquer borda que possa estar padrão no elemento. Isso 
+            garante que o editor tenha uma aparência limpa e 
+            minimalista, sem interrupções visuais causadas por bordas. */
+
+    min-height: 300px;
+    /* Estabelece uma altura mínima de 300 pixels para o editor. Isso 
+            garante que o editor tenha uma presença visual substancial 
+            na página, mesmo que inicialmente não contenha muito conteúdo. */
+
+    width: 100vw;
+    /* Define a largura do editor para 100vw (viewport width), garantindo 
+            que ele ocupe 100% da largura da tela visível. */
+
+    overflow-y: auto;
+    /* Controla o comportamento de rolagem vertical (overflow-y) do 
+            conteúdo dentro do editor. 
+       'auto' significa que barras de rolagem serão adicionadas 
+            automaticamente se o conteúdo exceder a altura do contêiner. 
+            Isso evita que o conteúdo transborde visualmente fora do editor. */
+
+    padding: 10px;
+    /* Aplica um preenchimento interno de 10 pixels em todas as 
+            direções dentro do editor. Isso cria um espaço entre o 
+            texto e as bordas do editor, tornando o conteúdo mais 
+            agradável e fácil de ler. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16 pixels para o texto 
+            dentro do editor. Este é um tamanho confortável para 
+            leitura, não muito pequeno nem excessivamente grande, 
+            adequado para a maioria dos dispositivos e resoluções. */
+
+}
+
+.barra-ferramentas button, 
+.barra-ferramentas select, 
+.barra-ferramentas input[type="color"], 
+.barra-ferramentas input[type="file"] {
+
+    cursor: pointer;
+    /* Muda o cursor do mouse para um ponteiro quando está sobre 
+                qualquer botão, select ou input (do tipo color ou 
+                file) dentro da '.barra-ferramentas'.
+       Isso indica ao usuário que o item é clicável, melhorando a 
+                usabilidade. */
+
+    padding: 8px 12px;
+    /* Aplica um preenchimento interno de 8 pixels na parte 
+                superior e inferior e 12 pixels nos lados esquerdo e 
+                direito destes elementos.
+       Isso torna os botões, selects e inputs mais fáceis de clicar e 
+                visualmente mais agradáveis, evitando que o conteúdo 
+                pareça amontoado. */
+
+    background-color: #f7f7f7;
+    /* Define a cor de fundo desses elementos para um cinza 
+                muito claro (#f7f7f7).
+       Essa cor sutil ajuda a diferenciar visualmente esses 
+                elementos interativos do resto da interface, sem ser 
+                muito intrusiva. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e cor 
+                cinza claro (#ddd) ao redor desses elementos.
+       A borda ajuda a definir os limites dos elementos dentro da 
+                interface e contribui para a separação visual 
+                dos componentes. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos desses elementos com um raio de 4 pixels.
+       Cantos arredondados são geralmente mais agradáveis 
+                esteticamente e são uma prática comum em 
+                design de interfaces para suavizar a aparência geral. */
+            
+}
+
+#entrada-imagem {
+
+    opacity: 0;
+    /* Define a opacidade do elemento para 0, tornando-o completamente 
+                transparente e, portanto, invisível na página.
+       Isso é usado frequentemente para ocultar elementos visuais que 
+                ainda precisam estar presentes no documento para uma 
+                funcionalidade específica. */
+
+    position: absolute;
+    /* A propriedade 'position: absolute' posiciona o elemento em 
+                relação ao seu contêiner de posicionamento mais 
+                próximo (o primeiro ancestral que também tem uma 
+                propriedade de posição diferente de 'static').
+       Um elemento com posição absoluta é removido do fluxo normal do 
+                documento e nenhum espaço é criado para o elemento na 
+                página. Isso significa que ele não afeta a posição de 
+                outros elementos. */
+
+    z-index: -1;
+    /* A propriedade 'z-index' controla a ordem de empilhamento dos 
+                elementos posicionados (que têm uma posição diferente de 'static').
+       Um 'z-index' de -1 coloca o elemento abaixo de outros elementos na 
+                página, o que é útil quando você quer que outros 
+                elementos se sobreponham a ele.
+       Essa configuração garante que o campo de entrada de arquivo 
+                esteja acessível para interação (como cliques) mas não 
+                visível visualmente, permitindo que outros elementos 
+                como botões fiquem visíveis acima dele. */
+
+}
+
+

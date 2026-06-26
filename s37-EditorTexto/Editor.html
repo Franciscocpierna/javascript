@@ -1,0 +1,281 @@
+<!DOCTYPE html> 
+<!-- A linha acima declara o tipo de documento como HTML5. 
+    Isso ajuda o navegador a entender que a versão do HTML 
+    utilizada é a HTML5, que é a mais recente. -->
+
+<html lang="pt-br">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt-br"' 
+    especifica que o idioma principal do documento é o português 
+    do Brasil, o que é importante para acessibilidade 
+    e SEO (otimização para motores de busca). -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre os dados) e 
+    links para scripts e folhas de estilo. Essa seção não é 
+    exibida diretamente na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define o 
+        conjunto de caracteres usado no documento como UTF-8, que 
+        inclui quase todos os caracteres de todos os idiomas 
+        do mundo. Isso garante que qualquer texto seja 
+        exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, desta vez configurando a 
+                "viewport" (área de visualização) da página. 
+         - 'width=device-width' diz ao navegador para definir a 
+                largura da área de visualização seguindo a 
+                largura da tela do dispositivo.
+         - 'initial-scale=1.0' estabelece o nível de zoom inicial 
+                quando a página é carregada pela primeira vez. Isso é 
+                importante para sites responsivos que se ajustam a 
+                diferentes tamanhos de tela. -->
+
+    <title>Editor de Texto</title>
+    <!-- A tag <title> define o título da página, que é exibido 
+            na aba do navegador. Este título também é usado por 
+            motores de busca e quando a página é marcada 
+            como favorito. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- A tag <link> é usada aqui para conectar uma 
+                folha de estilo CSS externa ao documento HTML. 
+         - 'rel="stylesheet"' indica que o tipo de documento 
+                vinculado é uma folha de estilo.
+         - 'href="estilo.css"' especifica o caminho para o arquivo CSS 
+                que contém os estilos que serão aplicados ao HTML. 
+                Este arquivo controla a aparência da página. -->
+
+</head>
+
+<body>
+<!-- A tag <body> representa o corpo do documento HTML, e é onde 
+            todo o conteúdo visível da página é colocado. Tudo o 
+            que você quer que apareça na página web deve estar 
+            dentro desta tag. -->
+
+    <h1>Meu Editor de Texto</h1>
+    <!-- A tag <h1> é usada para definir o título principal da página. 
+         - 'h1' representa um cabeçalho de nível 1, que é 
+                geralmente o mais importante e geralmente o 
+                maior na página.
+         - Este título também é importante para SEO e acessibilidade, 
+                pois define o contexto e o tópico principal da página. -->
+
+    <div id="container-editor">
+    <!-- A tag <div> é usada para agrupar elementos e aplicar estilos 
+                CSS ou realizar certas tarefas com JavaScript.
+         - O atributo 'id' é um identificador único no documento que 
+                pode ser usado para referenciar o elemento usando CSS 
+                para estilos ou JavaScript para manipulação.
+         - 'id="container-editor"' define que este <div> é um container 
+                específico para o editor de texto, que pode ser 
+                estilizado ou referenciado especificamente. -->
+
+        <div class="barra-ferramentas">
+        <!-- Outro <div>, usado aqui para agrupar os elementos que 
+                    compõem a barra de ferramentas do editor de texto.
+             - 'class' é outro atributo usado para especificar uma classe de 
+                    elementos, útil para definir estilos CSS ou 
+                    seletivamente selecionar e manipular grupos de 
+                    elementos via JavaScript.
+             - 'class="barra-ferramentas"' indica que este <div> contém 
+                    os controles como botões e seletores que representam as 
+                    ferramentas do editor. -->
+
+            <div class="linha-ferramentas">
+            <!-- Este <div> serve como um contêiner para uma linha de 
+                    ferramentas específicas dentro da barra de ferramentas, 
+                    organizando visualmente os controles em uma linha.
+                 - 'class="linha-ferramentas"' pode ser usado para aplicar 
+                    estilos específicos a esta linha de ferramentas, como 
+                    alinhamento, espaçamento e outros estilos CSS. -->
+
+                <button id="botao-negrito"><strong>N</strong></button>
+                <!-- A tag <button> é usada para criar um botão clicável.
+                     - 'id="botao-negrito"' dá um identificador único a 
+                            este botão, que pode ser usado para adicionar 
+                            funcionalidades específicas com JavaScript, 
+                            como aplicar o estilo de negrito ao texto.
+                     - O conteúdo entre as tags <strong> faz com que o 
+                            texto dentro do botão seja em negrito, indicando 
+                            visualmente que este botão aplica o 
+                            estilo de negrito. -->
+
+                <button id="botao-italico"><em>I</em></button>
+                <!-- Similar ao botão anterior, mas este aplica o estilo itálico.
+                     - 'id="botao-italico"' permite manipulação via JavaScript.
+                     - <em> é usado para enfatizar o texto (usualmente 
+                            representado como itálico), indicando que 
+                            este botão aplica estilo itálico ao texto. -->
+
+                <button id="botao-sublinhado">U</button>
+                <!-- Este botão é para aplicar sublinhado ao texto.
+                     - 'id="botao-sublinhado"' permite que este botão 
+                            seja identificado unicamente para scripts 
+                            ou estilos.
+                     - O texto 'U' indica visualmente que este botão 
+                            aplica um sublinhado. -->
+
+                <select id="seletor-tamanho-fonte">
+                <!-- A tag <select> cria uma caixa de seleção, que permite 
+                            ao usuário escolher uma opção de uma lista suspensa.
+                     - 'id="seletor-tamanho-fonte"' identifica esta caixa 
+                            de seleção como o controlador para o tamanho da 
+                            fonte no editor.
+                     - Esta caixa de seleção é preenchida com <option>, que 
+                            são as opções que o usuário pode selecionar. -->
+
+                    <option value="10">10</option>
+                    <!-- A tag <option> define uma opção que pode ser selecionada.
+                         - 'value="10"' define o valor enviado quando esta 
+                            opção é selecionada. Este valor pode ser usado 
+                            para definir o tamanho da fonte do texto no editor. -->
+
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="24">24</option>
+                    <option value="28">28</option>
+                    <option value="32">32</option>
+                    <option value="36">36</option>
+                    
+                </select>
+
+                <select id="seletor-tipo-fonte">
+                <!-- A tag <select> é usada para criar uma lista 
+                            suspensa, permitindo que o usuário escolha 
+                            entre múltiplas opções.
+                    - O atributo 'id' define um identificador único para o 
+                            elemento, chamado "seletor-tipo-fonte". Este ID 
+                            pode ser usado para referenciar o elemento em 
+                            scripts (como JavaScript) e estilos (CSS).
+                    - Este seletor específico é usado para permitir que o 
+                            usuário escolha o tipo de fonte do texto no editor
+                            de texto. -->
+
+                    <option value="Arial">Arial</option>
+                    <!-- A tag <option> define uma opção individual dentro 
+                            do seletor (<select>).
+                        - O atributo 'value' define o valor que será enviado 
+                            quando esta opção for selecionada. Aqui, o valor é "Arial".
+                        - O texto "Arial" entre as tags <option> é o que o 
+                            usuário vê na lista suspensa, permitindo-lhes 
+                            escolher a fonte Arial para o texto. -->
+
+                    <option value="Verdana">Verdana</option>
+                    <!-- Segunda opção no seletor de tipo de fonte.
+                        - 'value="Verdana"' significa que se esta opção for 
+                            escolhida, o valor "Verdana" será usado (por um 
+                                script JavaScript) para mudar o tipo de fonte 
+                                do texto no editor.
+                        - "Verdana" é o texto visível que o usuário pode selecionar. -->
+
+                    <option value="Times New Roman">Times New Roman</option>
+                    <!-- Terceira opção no seletor.
+                        - 'value="Times New Roman"' estabelece que este 
+                                valor será usado quando a opção for selecionada, 
+                                aplicando a fonte Times New Roman ao texto no editor.
+                        - O texto "Times New Roman" é o que é exibido para o 
+                                usuário, permitindo a escolha dessa fonte específica. -->
+                </select>
+
+            </div>
+            <div class="linha-ferramentas">
+            <!-- A tag <div> é usada para agrupar elementos. Aqui, ela 
+                        agrupa uma linha de ferramentas na interface do 
+                        editor de texto.
+                - 'class="linha-ferramentas"' é uma classe que pode ser 
+                        usada para aplicar estilos CSS específicos a esta 
+                        linha de ferramentas, como alinhamento e espaçamento. -->
+
+                <input type="color" id="seletor-cor">
+                <!-- A tag <input> com o tipo 'color' permite aos usuários 
+                        escolher uma cor de uma paleta de cores.
+                    - 'id="seletor-cor"' define um identificador único para 
+                        este campo de entrada, que pode ser usado para interação 
+                        com JavaScript ou aplicação de estilos CSS específicos.
+                    - Este seletor de cores pode ser usado para alterar a cor 
+                        do texto ou outros elementos no editor de texto. -->
+
+                <button id="botao-alinhar-esquerda">Esquerda</button>
+                <!-- <button> cria um botão clicável.
+                    - 'id="botao-alinhar-esquerda"' identifica este botão 
+                        que, quando clicado, pode ser configurado para 
+                        alinhar o texto à esquerda.
+                    - O texto "Esquerda" indica visualmente a função do botão. -->
+
+                <button id="botao-alinhar-centro">Centro</button>
+                <!-- Similar ao botão anterior, mas este é para 
+                        alinhar o texto ao centro.
+                    - 'id="botao-alinhar-centro"' identifica este botão 
+                        para uso em scripts e estilos. -->
+
+                <button id="botao-alinhar-direita">Direita</button>
+                <!-- Este botão alinha o texto à direita.
+                    - 'id="botao-alinhar-direita"' permite identificar e 
+                        manipular este botão com JavaScript ou CSS. -->
+
+                <button id="botao-inserir-marcadores">Marcadores</button>
+                <!-- Botão para inserir marcadores em uma lista.
+                    - 'id="botao-inserir-marcadores"' é usado para 
+                        adicionar funcionalidade de listas com marcadores ao 
+                        texto no editor. -->
+
+                <button id="botao-inserir-numeracao">Numeração</button>
+                <!-- Botão para adicionar numeração em uma lista.
+                    - 'id="botao-inserir-numeracao"' identifica o botão 
+                        que, quando clicado, adiciona números ao início 
+                        das linhas em uma lista no editor. -->
+
+                <button id="botao-inserir-imagem">Inserir Imagem</button>
+                <!-- Botão para iniciar o processo de inserção de uma imagem.
+                    - 'id="botao-inserir-imagem"' é usado para acionar a 
+                        abertura do campo de entrada de arquivo quando clicado. -->
+
+                <input type="file" id="entrada-imagem" style="display:none" onchange="inserirImagem(event)"/>
+                <!-- <input type="file"> permite que os usuários escolham 
+                        um arquivo do seu dispositivo.
+                    - 'id="entrada-imagem"' identifica este campo 
+                        de entrada de arquivo.
+                    - 'style="display:none"' esconde o campo de entrada, 
+                        que é acionado pelo botão "Inserir Imagem".
+                    - 'onchange="inserirImagem(event)"' é um manipulador de
+                        eventos que chama a função `inserirImagem` quando um 
+                        arquivo é selecionado. -->
+
+                <button id="botao-exportar">Exportar</button>
+                <!-- Botão para exportar o conteúdo do editor.
+                    - 'id="botao-exportar"' identifica o botão que, 
+                        quando clicado, pode ser usado para salvar ou 
+                        exportar o conteúdo editado para um arquivo, 
+                        usando JavaScript para processar essa ação. -->
+
+            </div>
+
+        <div class="editor" contenteditable="true" id="editor">
+        <!-- <div> configurado como um editor de texto.
+            - 'class="editor"' pode ser usado para aplicar estilos específicos.
+            - 'contenteditable="true"' torna o conteúdo da <div> 
+                    editável, permitindo que os usuários digitem e 
+                    formatem texto diretamente.
+            - 'id="editor"' fornece um identificador único para 
+                    este elemento, que pode ser referenciado em 
+                    scripts e estilos. -->
+            Digite seu texto aqui...
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> é usada para incluir um arquivo JavaScript externo.
+            - 'src="script.js"' especifica o caminho para o 
+                    arquivo JavaScript que contém a lógica de 
+                    interação do editor, como responder a cliques 
+                    em botões e aplicar formatações. -->
+
+</body>
+</html>
+
