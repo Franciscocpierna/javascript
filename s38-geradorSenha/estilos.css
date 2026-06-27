@@ -1,0 +1,208 @@
+body {
+    /* A regra se aplica ao elemento <body>, que é o 
+          contêiner para todos os elementos visíveis na página. */
+  
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto dentro do <body>. 
+          'Arial' é o nome da fonte primária.
+       Se 'Arial' não estiver disponível, o navegador usará 
+          qualquer fonte sans-serif disponível como fallback. */
+  
+    margin: 0;
+    /* Define a margem externa do <body> para 0. Margens são 
+            usadas para criar espaço ao redor dos elementos,
+            fora das bordas definidas. Aqui, está sendo removido 
+            qualquer espaço extra ao redor do <body>. */
+  
+    padding: 0;
+    /* Define o preenchimento interno do <body> para 0. O 
+            preenchimento é o espaço entre o conteúdo do elemento
+            e sua borda. Removendo o preenchimento, o conteúdo 
+            do <body> se estenderá até as bordas do elemento. */
+  
+    background-color: #f2f2f2;
+    /* Define a cor de fundo do <body>. O valor #f2f2f2 é um cinza 
+            claro, proporcionando um fundo suave para a página. */
+  
+  }
+
+.container {
+  /* A regra se aplica a qualquer elemento HTML que tenha a 
+          classe 'container'. Esta classe é geralmente usada para 
+          envolver e centralizar conteúdo na página. */
+
+  max-width: 600px;
+  /* Define a largura máxima do container como 600 pixels. Isso 
+          significa que o elemento pode crescer até 600 pixels de 
+          largura, mas não mais que isso, mantendo-o responsivo e 
+          adequado para layouts mais estreitos. */
+
+  margin: 50px auto;
+  /* Define a margem vertical (topo e base) do elemento para 50 
+          pixels e a margem horizontal (esquerda e direita) 
+          para automático ('auto').
+     Isso centraliza o elemento horizontalmente dentro de seu 
+          contêiner pai, enquanto fornece um pouco de espaço 
+          acima e abaixo dele. */
+
+  padding: 20px;
+  /* Define um preenchimento de 20 pixels em todos os lados do 
+          elemento. O preenchimento é o espaço entre o conteúdo do 
+          elemento e suas bordas, aumentando a legibilidade ao 
+          afastar o conteúdo das bordas. */
+
+  background-color: #fff;
+  /* Define a cor de fundo do elemento para branco (#fff). 
+          Isso fornece um fundo claro para o conteúdo dentro 
+          do '.container', melhorando o contraste e a legibilidade. */
+
+  border-radius: 8px;
+  /* Aplica um raio de borda de 8 pixels a todos os cantos do 
+          elemento, criando bordas arredondadas. Isso suaviza o 
+          design do container, tornando-o visualmente mais agradável. */
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Adiciona uma sombra ao redor do elemento. '0 0 10px' define a 
+          posição horizontal e vertical da sombra como 0 (significando 
+          que a sombra está diretamente abaixo do elemento), e o 
+          desfoque da sombra como 10 pixels.
+     'rgba(0, 0, 0, 0.1)' define a cor da sombra como preto com 10% de 
+          opacidade, criando um efeito suave e sutil que 
+          eleva visualmente o elemento da página. */
+
+}
+
+
+h1 {
+  /* Esta regra se aplica a todos os elementos <h1> no 
+          documento HTML. <h1> é usado geralmente para o 
+          título principal de uma página ou seção. */
+
+  text-align: center;
+  /* Alinha o texto dentro do elemento <h1> ao centro. Isso é 
+          útil para títulos ou cabeçalhos que devem se 
+          destacar na página. */
+
+  color: #333;
+  /* Define a cor do texto para um cinza escuro (#333). Esta cor é 
+          suave para os olhos e oferece contraste suficiente 
+          em fundos claros. */
+
+}
+
+.opcoes {
+  /* A regra se aplica a todos os elementos com a classe 'opcoes'. 
+          Esta classe pode ser usada para agrupar várias opções ou 
+          controles de entrada, como checkboxes ou campos de número. */
+
+  margin-bottom: 20px;
+  /* Adiciona uma margem na parte inferior do elemento. Isso cria um 
+          espaço de 20 pixels entre o elemento 'opcoes' e qualquer 
+          conteúdo que venha a seguir, ajudando a separar visualmente 
+          grupos de controles ou seções. */
+
+}
+
+
+label {
+  /* Esta regra se aplica a todos os elementos <label> no 
+          documento. <label> é usado para definir rótulos para 
+          elementos de entrada (input), proporcionando melhor 
+          acessibilidade e usabilidade. */
+
+  margin-right: 10px;
+  /* Adiciona uma margem à direita do elemento <label>. Isso 
+          afasta o rótulo do controle de entrada ao qual está 
+          associado, clareando a interface do usuário e 
+          facilitando a leitura. */
+
+}
+
+input[type="number"],
+input[type="checkbox"] {
+  /* Esta regra se aplica a todos os elementos <input> do 
+          tipo 'number' e 'checkbox'. 
+     Os inputs do tipo 'number' permitem que os usuários 
+          insiram um número. 
+     Os inputs do tipo 'checkbox' permitem que os usuários 
+          selecionem ou desmarquem uma única opção. */
+
+  margin-bottom: 10px;
+  /* Define uma margem na parte inferior de cada <input>. Isso 
+          separa visualmente cada campo de entrada, evitando que os 
+          elementos pareçam muito aglomerados e melhorando a 
+          experiência do usuário. */
+
+}
+
+
+button {
+  /* Esta regra se aplica a todos os elementos <button> 
+          no documento HTML. 
+     Os botões são usados para interações do usuário, como 
+          enviar formulários ou acionar eventos. */
+
+  padding: 8px 20px;
+  /* Define o preenchimento interno do botão. '8px' no 
+          topo e na base, '20px' nas laterais.
+     Isso torna o botão maior e mais fácil de clicar. */
+
+  background-color: #007bff;
+  /* Define a cor de fundo do botão para um azul brilhante (#007bff), 
+          que é visualmente atraente e destaca o botão na página. */
+
+  color: #fff;
+  /* Define a cor do texto dentro do botão para branco (#fff), 
+        garantindo alto contraste com o fundo azul para uma leitura fácil. */
+
+  border: none;
+  /* Remove qualquer borda do botão, dando-lhe um 
+        design mais limpo e moderno. */
+
+  border-radius: 5px;
+  /* Arredonda os cantos do botão com um raio de 5px, 
+        suavizando a aparência geral do botão e tornando-o 
+        visualmente mais amigável. */
+
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando ele está sobre o 
+        botão, indicando que o botão é clicável. */
+
+}
+
+button:hover {
+  /* Esta regra se aplica ao estado hover do botão, que é 
+        ativado quando o usuário passa o mouse sobre ele. */
+
+  background-color: #0056b3;
+  /* Muda a cor de fundo do botão para um azul mais escuro (#0056b3) 
+        quando o mouse está sobre ele, fornecendo feedback visual que o 
+        botão é interativo. */
+
+}
+
+.senha {
+  /* A regra se aplica a todos os elementos com a classe 'senha'. 
+        Essa classe pode ser usada para estilizar a apresentação de 
+        senhas ou textos importantes. */
+
+  text-align: center;
+  /* Alinha o texto ao centro do elemento, geralmente usado para 
+        garantir que o conteúdo seja o foco visual principal 
+        dentro de sua área. */
+
+  font-size: 20px;
+  /* Define o tamanho da fonte para 20px, tornando o texto maior e 
+        mais legível, adequado para exibir informações importantes 
+        como senhas. */
+
+  font-weight: bold;
+  /* Torna o texto em negrito, o que ajuda a destacá-lo ainda 
+        mais no layout da página. */
+
+  margin-top: 20px;
+  /* Adiciona uma margem no topo do elemento, criando espaço 
+        entre este e outros elementos acima dele, evitando que o 
+        conteúdo pareça muito apertado. */
+    
+}

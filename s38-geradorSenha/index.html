@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento. Indica que 
+    este é um documento HTML5. -->
+
+<html lang="pt-BR">
+<!-- Elemento raiz de um documento HTML, com atributo 'lang' 
+    definido como Português do Brasil (pt-BR). -->
+
+<head>
+<!-- A tag <head> contém metadados e links para scripts ou 
+    folhas de estilo. Esses elementos não são diretamente visíveis na página. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para o documento 
+        como UTF-8, que inclui quase todos os caracteres de 
+        todos os idiomas humanos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta a área de visualização para a largura do dispositivo e 
+        define o nível de zoom inicial quando a página é carregada 
+        pela primeira vez. -->
+
+    <title>Gerador de Senhas Seguras</title>
+    <!-- Define o título da página, que é exibido na aba do navegador. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Link para uma folha de estilo externa chamada 'estilos.css', que 
+        contém os estilos CSS para estilizar a página. -->
+
+</head>
+<!-- Fim da tag <head>, onde todos os elementos dentro dela são 
+        metadados ou links para scripts/estilos externos. -->
+
+<body>
+<!-- A tag <body> contém todo o conteúdo que é visível na 
+    página web, como texto, imagens, links, etc. -->
+
+  <div class="container">
+  <!-- <div> é um contêiner genérico usado para agrupar 
+        elementos. A classe 'container' é frequentemente usada para 
+        estilizar e centralizar o conteúdo da página. -->
+
+    <h1>Gerador de Senhas Seguras</h1>
+    <!-- A tag <h1> representa um cabeçalho de nível mais alto, 
+          usado aqui como o título principal da página. -->
+
+    <div class="opcoes">
+    <!-- Outra <div> para agrupar elementos relacionados às opções do 
+          gerador de senhas. A classe 'opcoes' pode ser usada para 
+          aplicar estilos específicos. -->
+
+      <label for="comprimento">Comprimento da Senha:</label>
+      <!-- <label> define um rótulo para o <input> abaixo. O 
+            atributo 'for' deve corresponder ao 'id' do <input> para 
+            que quando o usuário clique no rótulo, o foco seja 
+            direcionado para o <input> correspondente. -->
+
+      <input type="number" id="comprimento" min="6" value="12"><br>
+      <!-- <input type="number"> permite ao usuário inserir um 
+              número. 'id' identifica o <input>, 'min' define o 
+              valor mínimo e 'value' o valor inicial. -->
+
+      <input type="checkbox" id="incluir-maiusculas" checked>
+      <!-- <input type="checkbox"> cria uma caixa de seleção. 'checked' 
+              significa que a caixa está marcada por padrão. -->
+
+      <label for="incluir-maiusculas">Incluir Letras Maiúsculas</label><br>
+      <!-- Rótulo para a caixa de seleção. Associado ao <input> 
+              acima pelo atributo 'for'. -->
+
+      <input type="checkbox" id="incluir-especiais" checked>
+      <!-- Outra caixa de seleção para incluir caracteres especiais na senha. -->
+
+      <label for="incluir-especiais">Incluir Caracteres Especiais</label><br>
+      <!-- Rótulo para a caixa de seleção de caracteres especiais. -->
+
+      <input type="checkbox" id="incluir-numeros" checked>
+      <!-- Caixa de seleção para incluir números na senha. -->
+
+      <label for="incluir-numeros">Incluir Números</label><br>
+      <!-- Rótulo para a caixa de seleção de números. -->
+
+      <button id="gerar">Gerar Senha</button>
+      <!-- <button> cria um botão que o usuário pode clicar para 
+            realizar uma ação, que neste caso é gerar uma senha. -->
+
+    </div>
+    <!-- Fim da <div> que contém as opções do gerador de senhas. -->
+
+    <div id="senha" class="senha"></div>
+    <!-- <div> vazia usada para exibir a senha gerada. 'id' para 
+            identificação única e 'class' para estilização. -->
+
+  </div>
+  <!-- Fim da <div> principal que contém todo o conteúdo relevante. -->
+
+  <script src="script.js"></script>
+  <!-- A tag <script> com o atributo 'src' que referencia um 
+            arquivo externo de JavaScript. Este script controla a 
+            lógica para gerar a senha. -->
+
+</body>
+<!-- Fim da tag <body>, que contém todos os elementos 
+        visíveis ao usuário na página. -->
+
+</html>
+<!-- Fim do documento HTML, marcando o fechamento 
+        da tag <html> aberta no início. -->
+
