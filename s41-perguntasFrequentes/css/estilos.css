@@ -1,0 +1,154 @@
+body {
+        
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto dentro do 
+            elemento <body>. 'Arial' é o nome da fonte específica, 
+            e 'sans-serif' é o tipo genérico de fonte.
+       Se 'Arial' não estiver disponível, o navegador usará 
+            qualquer outra fonte sans-serif disponível. Sans-serif 
+            refere-se a fontes sem "serifas" (pequenos traços ou 
+            linhas que podem aparecer no fim das letras em algumas fontes). */
+
+    line-height: 1.6;
+    /* Define a altura da linha do texto dentro do <body>. '1.6' é 
+            um múltiplo do tamanho da fonte padrão,
+       o que significa que a altura da linha será 60% maior do 
+            que o tamanho padrão da fonte.
+       Isso ajuda a melhorar a legibilidade do texto, espaçando as 
+            linhas de texto de forma mais solta. */
+
+    margin: 20px;
+    /* Define uma margem em todos os quatro lados do elemento <body>. '20px' 
+            adiciona 20 pixels de espaço entre a borda do conteúdo do <body> 
+            e os elementos fora dele.
+       Isso ajuda a criar um espaço visual ao redor do conteúdo principal 
+            da página, evitando que o texto fique muito próximo às 
+            bordas do navegador. */
+
+}
+
+.container-faq {
+
+    width: 90%;
+    /* Define a largura do contêiner para 90% da largura do elemento 
+            pai (que é o <body>).
+       Isso significa que o contêiner usará 90% do espaço disponível 
+            horizontalmente, deixando 10% (5% de cada lado) como espaço vazio. */
+
+    max-width: 800px;
+    /* Define uma largura máxima para o contêiner de 800 pixels. Isso 
+            significa que mesmo se 90% da largura do elemento pai for 
+            maior que 800 pixels,
+       o contêiner não se estenderá além de 800 pixels. Essa 
+            propriedade é útil para garantir que o conteúdo não 
+            fique muito esticado em telas maiores. */
+
+    margin: auto;
+    /* Define as margens superior e inferior como 'auto', o que, 
+            quando combinado com uma largura específica, centraliza 
+            horizontalmente o contêiner dentro do seu elemento pai.
+       'auto' calcula automaticamente o mesmo espaço à esquerda e à 
+            direita do contêiner, alinhando-o assim ao centro. */
+
+}
+
+.item-faq {
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo dos elementos com a classe .item-faq. 
+            O valor #f4f4f4 é um cinza claro, que ajuda a diferenciar o 
+            item de outras seções da página. */
+
+    margin-bottom: 10px;
+    /* Aplica uma margem apenas na parte inferior de cada item-faq. 
+            Essa margem de 10 pixels cria um espaço entre itens 
+            consecutivos de perguntas frequentes, ajudando na 
+            organização visual e na separação dos itens. */
+
+    padding: 10px 20px;
+    /* Define o preenchimento interno do elemento. '10px' no topo e 
+            na base e '20px' nos lados esquerdos e direitos. Isso 
+            aumenta a área clicável e melhora a legibilidade ao 
+            afastar o texto das bordas do elemento. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário passa o 
+            mouse sobre os elementos .item-faq. Isso indica que o 
+            item é clicável, melhorando a usabilidade ao sugerir que o 
+            elemento possui uma interação disponível. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do elemento com um raio de 5 pixels. Isso 
+            suaviza as bordas do contêiner e oferece um design mais 
+            moderno e agradável visualmente. */
+
+}
+
+
+.item-faq:hover {
+
+    background-color: #e8de82;
+    /* Define uma nova cor de fundo (#e8de82, um amarelo 
+            que #f4f4f4) quando o mouse está sobre um elemento .item-faq.
+       Esta mudança de cor no estado 'hover' (quando o cursor está 
+            sobre o elemento) fornece um feedback visual imediato ao 
+            usuário, indicando que o item pode ser interagido. */
+
+}
+
+.pergunta {
+
+    margin: 0;
+    /* Remove todas as margens do elemento com a classe .pergunta. 
+            Normalmente, elementos como <h1>, <h2>, etc., têm margens 
+            padrão que os separam de outros elementos na página.
+       Zerar as margens ajuda a controlar o layout mais precisamente, 
+            especialmente quando se quer alinhar textos de forma mais 
+            compacta dentro de seus contêineres. */
+            
+}
+
+
+.resposta {
+
+    display: none;
+    /* A propriedade 'display: none' é usada para ocultar 
+            completamente o elemento da página. Quando aplicada, o 
+            elemento não ocupa espaço visual no layout, como se
+             não existisse.
+       Isso é usado aqui para inicialmente esconder as respostas no FAQ 
+            até que sejam especificamente reveladas pelo usuário. */
+
+    margin-top: 10px;
+    /* Aplica uma margem superior de 10 pixels aos elementos com a 
+            classe .resposta. Isso cria um espaço entre a pergunta 
+            correspondente e a resposta, melhorando a legibilidade e a 
+            estética visual da seção quando a resposta é exibida. */
+
+}
+
+.escondido {
+
+    display: none;
+    /* A classe .escondido também utiliza 'display: none', funcionando de 
+            maneira idêntica à classe .resposta descrita acima.
+       Pode ser usada de forma mais genérica para ocultar qualquer 
+            elemento em que esta classe seja aplicada, não apenas as 
+            respostas do FAQ. */
+
+}
+
+.mostrar {
+
+    display: block;
+    /* A propriedade 'display: block' faz com que o elemento seja 
+            exibido como um bloco, ocupando a largura total de seu 
+            contêiner pai, com quebras de linha antes e depois.
+       Esta classe é usada para alterar o estado de visibilidade de 
+            elementos previamente ocultos (como as respostas no FAQ) 
+            para que sejam visíveis na página.
+       A classe .mostrar é geralmente adicionada dinamicamente via 
+            JavaScript quando um usuário interage com um elemento que 
+            requer a revelação de conteúdo oculto. */
+            
+}

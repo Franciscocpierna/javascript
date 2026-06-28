@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!-- Esta linha é a declaração do DOCTYPE. Ela informa ao 
+            navegador que versão do HTML está sendo usada. 
+     No caso, <!DOCTYPE html> indica que o documento está usando HTML5, a 
+            versão mais recente e recomendada do HTML. -->
+
+<html lang="pt">
+<!-- A tag <html> marca o início do documento HTML. 
+     O atributo 'lang="pt"' especifica que o idioma principal do 
+            conteúdo do documento é o português. 
+     Isso ajuda os navegadores a aplicar as configurações de 
+            idioma corretas e também é importante para acessibilidade e 
+            SEO (otimização para motores de busca). -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre os dados) e 
+            links para scripts e folhas de estilo. 
+     Não é exibida diretamente na janela do navegador, mas fornece 
+            informações essenciais sobre o documento HTML. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta tag <meta> define o conjunto de caracteres usado no documento. 
+         'charset="UTF-8"' cobre praticamente todos os caracteres 
+            de todos os idiomas, tornando-o universal. 
+         Isso garante que o texto seja exibido corretamente, 
+            independentemente do idioma. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, que configura a viewport do navegador 
+                para controlar como o documento é exibido em 
+                dispositivos móveis. 
+         'width=device-width' faz a largura da página igualar a 
+                largura da tela do dispositivo, o que é ideal 
+                para responsividade.
+         'initial-scale=1.0' define o nível inicial de zoom 
+                quando a página é carregada pela primeira vez, 
+                garantindo que a escala seja 1:1. -->
+
+    <title>Página de Perguntas Frequentes (FAQ)</title>
+    <!-- A tag <title> define o título da página, que é 
+                exibido na aba do navegador. 
+         Este título é importante para a usabilidade e SEO, pois 
+                informa aos usuários e aos motores de busca o 
+                conteúdo da página. -->
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- A tag <link> é usada aqui para conectar uma folha 
+                de estilo externa ao documento HTML. 
+         'rel="stylesheet"' indica que o tipo de documento 
+                vinculado é uma folha de estilo CSS.
+         'href="css/estilos.css"' especifica o caminho para o 
+                arquivo CSS que contém os estilos que serão 
+                aplicados ao HTML. -->
+
+</head>
+<!-- Fim da tag <head>, indicando que todos os metadados e 
+                links para recursos externos foram definidos. -->
+
+
+<body>
+<!-- A tag <body> marca o início do corpo do documento HTML, 
+                onde todo o conteúdo visível da página é inserido, 
+                como texto, imagens, vídeos, jogos, campos de 
+                entrada audíveis, etc. -->
+
+
+    <div class="container-faq">
+    <!-- A tag <div> é utilizada para agrupar conteúdo e elementos 
+                em blocos, facilitando a estilização e a manipulação 
+                com CSS e JavaScript.
+        A classe "container-faq" é um nome de classe customizado 
+                que pode ser usado para aplicar estilos específicos a 
+                este contêiner em uma folha de estilo CSS. -->
+
+        <h1>Perguntas Frequentes (FAQ)</h1>
+        <!-- A tag <h1> define um cabeçalho de nível 1, que é 
+                geralmente usado para o título mais importante da 
+                página, frequentemente o principal título.
+            Neste caso, ele contém o texto "Perguntas Frequentes (FAQ)", 
+                indicando que esta seção da página tratará de 
+                perguntas frequentes. -->
+
+        <div class="item-faq" onclick="alternarResposta(this)">
+        <!-- Outra tag <div>, que é utilizada aqui para encapsular 
+                uma pergunta individual dentro da seção de FAQ.
+            A classe "item-faq" é usada para estilizar 
+                este elemento com CSS.
+            O atributo 'onclick' é um manipulador de evento JavaScript 
+                que, quando este elemento é clicado, chama a 
+                função 'alternarResposta(this)'. 
+            'this' refere-se ao próprio elemento <div>, que é passado 
+                para a função para que ela possa manipular 
+                especificamente este item. -->
+
+            <h2 class="pergunta">Como posso entrar em contato com o suporte?</h2>
+            <!-- A tag <h2> define um cabeçalho de nível 2, usado aqui 
+                        para a pergunta específica dentro do item do FAQ.
+                A classe "pergunta" pode ser usada para estilizar 
+                        especificamente as perguntas dentro dos itens de FAQ. -->
+
+            <p class="resposta escondido">Você pode entrar em contato com o nosso suporte através do email suporte@exemplo.com.</p>
+            <!-- A tag <p> é utilizada para parágrafos de texto. Aqui, 
+                        contém a resposta à pergunta feita no <h2> acima.
+                A classe "resposta" indica que este texto é uma 
+                        resposta dentro do item do FAQ.
+                A classe "escondido" é usada para 
+                        inicialmente esconder esta resposta no carregamento 
+                        da página, para ser mostrada apenas quando o usuário 
+                        clicar na pergunta, conforme manipulado pelo script 
+                        JavaScript mencionado anteriormente. -->
+
+        </div>
+        <!-- Fim da <div> que encapsula a pergunta e resposta do FAQ, 
+                    indicando o fim deste item específico dentro do 
+                    contêiner geral do FAQ. -->
+
+        
+        <div class="item-faq" onclick="alternarResposta(this)">
+        <!-- Esta tag <div> é utilizada para criar um bloco de conteúdo, 
+                    neste caso, um item individual de perguntas frequentes (FAQ).
+            A classe "item-faq" é um identificador que pode ser 
+                    referenciado em CSS para aplicar estilos específicos ou 
+                    em JavaScript para funcionalidades específicas.
+            O atributo 'onclick' adiciona um manipulador de evento que 
+                    chama a função JavaScript 'alternarResposta(this)' 
+                    quando o usuário clica neste <div>.
+            'this' é uma referência ao próprio elemento <div>, permitindo que a 
+                    função JavaScript manipule diretamente este elemento. -->
+
+            <h2 class="pergunta">Existem descontos para compras em grande quantidade?</h2>
+            <!-- A tag <h2> é usada para definir um cabeçalho de nível 2, que 
+                    serve como a pergunta dentro deste item do FAQ.
+                A classe "pergunta" é usada para identificar e estilizar todas as 
+                    perguntas do FAQ de maneira uniforme através do CSS. -->
+
+            <p class="resposta escondido">Sim, oferecemos descontos para pedidos em grande volume. Entre em contato para mais detalhes.</p>
+            <!-- A tag <p> é usada aqui para o texto da resposta à 
+                    pergunta feita no <h2> acima.
+                A classe "resposta" designa que este parágrafo é uma 
+                    resposta dentro do item do FAQ.
+                A classe "escondido" sugere que este elemento <p> é 
+                    inicialmente oculto na página e será exibido quando o 
+                    usuário interagir com a pergunta (clicar nela), de acordo 
+                    com a função 'alternarResposta' definida no JavaScript. -->
+
+        </div>
+        <!-- Fim da <div> que encapsula um item de FAQ, indicando o 
+                    encerramento deste bloco específico de pergunta e resposta. -->
+
+        
+        <div class="item-faq" onclick="alternarResposta(this)">
+        <!-- A tag <div> é usada para definir um contêiner genérico no 
+                    HTML, que não tem significado específico por si só, 
+                    mas é útil para agrupar elementos.
+            A classe "item-faq" atribuída a este <div> serve para 
+                    aplicar estilos específicos definidos no CSS, adequando 
+                    visualmente este bloco ao contexto de uma seção de FAQ.
+            O atributo 'onclick' adiciona um manipulador de evento que a
+                    tiva uma função JavaScript quando o usuário clica neste 
+                    elemento. A função 'alternarResposta(this)' é chamada, 
+                    passando 'this' (que representa o próprio <div> clicado) 
+                    como argumento. Isso permite que a função identifique e 
+                    altere o estado de visibilidade da resposta associada a 
+                    esta pergunta. -->
+
+            <h2 class="pergunta">Quais são as formas de pagamento aceitas?</h2>
+            <!-- A tag <h2> cria um cabeçalho de segundo nível no documento, 
+                    que é visualmente menor que <h1> mas ainda destaca a 
+                    pergunta dentro do item do FAQ.
+                A classe "pergunta" é usada para identificar este elemento 
+                    como uma pergunta dentro do item do FAQ, o que permite 
+                    aplicar estilos específicos através do CSS para todas as 
+                    perguntas da seção, mantendo uma consistência visual. -->
+
+            <p class="resposta escondido">Aceitamos pagamentos via cartão de crédito, boleto bancário e PIX.</p>
+            <!-- A tag <p> é usada para parágrafos, aqui encapsulando a 
+                    resposta à pergunta feita acima no <h2>.
+                A classe "resposta" indica que este texto é uma resposta 
+                    dentro do contexto do FAQ.
+                A classe "escondido" inicialmente oculta este parágrafo no 
+                    carregamento da página. Esta classe é provavelmente 
+                    alternada pela função JavaScript mencionada no 
+                    atributo 'onclick', que deve alternar esta classe com 
+                    outra, como "mostrar", para fazer a resposta aparecer 
+                    quando o usuário clica na pergunta. -->
+                    
+        </div>
+        <!-- Fim da <div> que encapsula um item do FAQ, marcando o término 
+                    deste bloco específico de pergunta e resposta. Este 
+                    padrão se repete para outras perguntas e respostas na 
+                    seção de FAQ. -->
+
+        
+        <div class="item-faq" onclick="alternarResposta(this)">
+        <!-- A tag <div> é usada para criar um bloco de conteúdo 
+                    dentro do HTML, aqui especificamente para um item de 
+                    perguntas frequentes.
+            A classe "item-faq" ajuda a aplicar estilos CSS específicos 
+                    para este bloco.
+            O atributo 'onclick' atribui um evento que ativa a função 
+                    JavaScript 'alternarResposta(this)', que manipula a 
+                    visibilidade da resposta ao ser clicada, passando 'this' 
+                    como referência ao próprio elemento <div>. -->
+
+            <h2 class="pergunta">Quanto tempo leva para o produto ser entregue?</h2>
+            <!-- A tag <h2> é usada para títulos de nível dois, aqui 
+                    indicando a pergunta feita no FAQ.
+                A classe "pergunta" é utilizada para estilizar visualmente a 
+                    pergunta de forma consistente com outras perguntas no FAQ. -->
+
+            <p class="resposta escondido">O tempo de entrega varia de acordo com a localização, mas geralmente leva de 3 a 5 dias úteis.</p>
+            <!-- A tag <p> encapsula a resposta para a pergunta acima.
+                As classes "resposta" e "escondido" são usadas para controlar a 
+                    exibição da resposta: inicialmente escondida ('escondido') e 
+                    tornada visível mediante clique ('mostrar' pode ser a classe 
+                    alternada em JavaScript). -->
+
+        </div>
+
+        
+        <div class="item-faq" onclick="alternarResposta(this)">
+        <!-- Repete o uso de <div> com a mesma estrutura do item 
+                    anterior para manter a consistência visual e funcional.
+            O evento 'onclick' continua chamando a mesma função, 
+                    garantindo que a interação seja uniforme em todos 
+                    os itens do FAQ. -->
+
+            <h2 class="pergunta">Como posso rastrear meu pedido?</h2>
+            <!-- <h2> para a segunda pergunta do FAQ. Utiliza a mesma 
+                    classe "pergunta" para manter o estilo consistente. -->
+
+            <p class="resposta escondido">Você receberá um código de rastreamento por email assim que seu pedido for enviado.</p>
+            <!-- <p> para a resposta, seguindo o mesmo padrão das 
+                    classes "resposta" e "escondido" para manipulação do 
+                    estilo e visibilidade. -->
+
+        </div>
+
+        
+        <div class="item-faq" onclick="alternarResposta(this)">
+        <!-- Continuação do padrão estabelecido, com a tag <div> 
+                    agrupando a pergunta e a resposta, e o evento 'onclick' 
+                    vinculado à mesma função JavaScript. -->
+
+            <h2 class="pergunta">É possível realizar trocas ou devoluções?</h2>
+            <!-- <h2> para mais uma pergunta, usando a classe "pergunta" 
+                    para manter o estilo visual coerente com os outros itens do FAQ. -->
+
+            <p class="resposta escondido">Sim, aceitamos trocas e devoluções dentro de 30 dias após a compra, conforme nossa política de devolução.</p>
+            <!-- <p> contém a resposta, com a resposta inicialmente oculta 
+                    pelo uso da classe "escondido", aguardando interação do 
+                    usuário para ser exibida. -->
+                    
+        </div>
+
+        
+        <div class="item-faq" onclick="alternarResposta(this)">
+        <!-- A tag <div> cria um bloco de conteúdo interativo. A 
+                    classe 'item-faq' pode ser usada para estilização 
+                    específica via CSS.
+            O atributo 'onclick' chama a função JavaScript 'alternarResposta(this)', 
+                    que alterna a visibilidade da resposta ao ser clicada. -->
+
+            <h2 class="pergunta">Os produtos possuem garantia?</h2>
+            <!-- A tag <h2> define a pergunta feita. A classe 'pergunta' é 
+                    utilizada para aplicar estilos CSS específicos às perguntas 
+                    dentro dos itens do FAQ. -->
+
+            <p class="resposta escondido">Sim, todos os nossos produtos possuem garantia de 12 meses contra defeitos de fabricação.</p>
+            <!-- A tag <p> contém a resposta, inicialmente oculta pelo uso 
+                    da classe 'escondido'. Esta classe é alternada com 'mostrar' 
+                    pela função JavaScript para exibir a resposta quando a 
+                    pergunta é clicada. -->
+
+        </div>
+
+        
+        <div class="item-faq" onclick="alternarResposta(this)">
+        <!-- Repete o uso de <div> com a mesma estrutura do primeiro item, 
+                    garantindo uniformidade no design e funcionalidade. -->
+
+            <h2 class="pergunta">Como posso cancelar minha compra?</h2>
+            <!-- <h2> para outra pergunta do FAQ. A mesma classe 'pergunta' é 
+                    usada para manter a consistência visual com outros itens. -->
+
+            <p class="resposta escondido">Para cancelar sua compra, entre em contato com o suporte dentro de 24 horas após o pedido.</p>
+            <!-- <p> contém a resposta, usando a classe 'escondido' para 
+                    esconder o conteúdo inicialmente, que é revelado ao 
+                    clicar na pergunta. -->
+
+        </div>
+
+        
+        <div class="item-faq" onclick="alternarResposta(this)">
+        <!-- Continua o padrão de <div> com a mesma funcionalidade 'onclick' 
+                    para manter a interatividade nos itens de FAQ. -->
+
+            <h2 class="pergunta">Posso alterar o endereço de entrega após finalizar o pedido?</h2>
+            <!-- <h2> identifica mais uma pergunta frequente, utilizando a 
+                    mesma classe 'pergunta' para garantir uniformidade. -->
+
+            <p class="resposta escondido">Alterações no endereço de entrega podem ser feitas até 12 horas após a realização do pedido.</p>
+            <!-- <p> encapsula a resposta, também escondida inicialmente pela 
+                    classe 'escondido', que é alterada para 'mostrar' com a 
+                    interação do usuário. -->
+
+        </div>
+
+        
+        <div class="item-faq" onclick="alternarResposta(this)">
+        <!-- Mantém a estrutura consistente de <div> para itens do FAQ, 
+                    com funcionalidade 'onclick' para a interação dinâmica. -->
+
+            <h2 class="pergunta">O site é seguro para fazer compras?</h2>
+            <!-- <h2> serve para mais uma pergunta, usando a classe 'pergunta' 
+                    para aplicar o mesmo estilo que as outras perguntas. -->
+
+            <p class="resposta escondido">Sim, utilizamos tecnologia SSL para garantir a segurança dos seus dados e das transações.</p>
+            <!-- <p> oferece a resposta, que permanece oculta até que a 
+                    pergunta seja clicada, usando a classe 'escondido' que 
+                    será alternada com 'mostrar'. -->
+
+        </div>
+
+    </div>
+    <!-- Esta é a tag de fechamento </div> correspondente ao último 
+                bloco de conteúdo (possivelmente um <div class="item-faq"> 
+                ou um contêiner maior).
+        Ela sinaliza o fim de um bloco de elementos HTML que foram agrupados 
+                para fins de formatação ou funcionalidade. 
+        É importante fechar corretamente todas as tags <div> para manter a 
+                estrutura clara e evitar erros de layout no navegador. -->
+
+    <script src="js/script.js"></script>
+    <!-- A tag <script> é usada para incluir um arquivo JavaScript 
+                externo dentro do documento HTML.
+        O atributo 'src' especifica o caminho para o arquivo 
+                JavaScript que é 'js/script.js'. Este arquivo contém 
+                código JavaScript que é usado para manipular 
+                elementos dentro da página, como as interações nos itens do FAQ.
+        A inclusão deste script permite que a página execute funções 
+                interativas, como abrir e fechar respostas de perguntas 
+                frequentes ao clicar, entre outras funcionalidades dinâmicas. -->
+
+</body>
+<!-- Esta é a tag de fechamento </body>, que indica o fim do 
+        corpo do documento HTML.
+     -->
+
+</html>
+<!-- Esta é a tag de fechamento </html> que marca o fim 
+        do documento HTML.
+     -->
