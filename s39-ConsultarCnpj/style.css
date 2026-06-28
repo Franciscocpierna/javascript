@@ -1,0 +1,218 @@
+body {
+    /* Define o estilo para o corpo (body) da página. 
+       Todas as regras dentro deste bloco serão 
+            aplicadas ao elemento body. */
+
+    font-family: 'Arial', sans-serif;
+    /* Define a fonte principal do texto como 'Arial'. 
+       Se 'Arial' não estiver disponível, será usado qualquer 
+            fonte sans-serif (sem serifa) disponível no sistema. */
+
+    margin: 0;
+    /* Remove qualquer margem padrão ao redor do corpo da página. 
+       Por padrão, os navegadores adicionam uma pequena 
+            margem, mas aqui estamos definindo para 0. */
+
+    padding: 0;
+    /* Remove qualquer preenchimento (padding) padrão 
+            dentro do corpo da página. 
+       Similar ao margin, mas aplicado dentro do elemento. */
+
+    display: flex;
+    /* Define o corpo da página como um contêiner flexível. 
+       O Flexbox é uma técnica de layout que facilita a 
+            distribuição do espaço entre os itens em um contêiner. */
+
+    flex-direction: column;
+    /* Define a direção do layout flexível como coluna. 
+       Isso faz com que os elementos filhos do body sejam 
+            dispostos verticalmente, um abaixo do outro. */
+
+    align-items: center;
+    /* Centraliza os itens filhos do body horizontalmente. 
+       Cada elemento dentro do body será alinhado ao 
+            centro na direção horizontal. */
+
+    height: 100vh;
+    /* Define a altura do corpo da página como 100% da 
+            altura da janela de visualização (viewport height). 
+       Isso garante que o corpo ocupe toda a altura 
+            visível do navegador. */
+
+    background-color: #eceff1;
+    /* Define a cor de fundo do corpo da página como 
+            #eceff1, um tom claro de cinza. 
+       Isso aplica um fundo uniforme a toda a página. */
+
+}
+
+.container {
+    /* Define o estilo para qualquer elemento HTML que 
+            tenha a classe "container". 
+       Classes são usadas para aplicar estilos específicos a 
+            múltiplos elementos. */
+
+    width: 90%;
+    /* Define a largura da "container" como 90% da 
+            largura do contêiner pai. 
+       Isso faz com que a "container" ocupe 90% da 
+            largura disponível, mantendo alguma margem ao redor. */
+
+    max-width: 800px;
+    /* Define a largura máxima da "container" como 800 pixels. 
+       Isso impede que a "container" fique maior que 800px, 
+            mesmo que a largura de 90% permita mais espaço. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno de 20 pixels em 
+            todos os lados da "container". 
+       Isso cria espaço interno ao redor do conteúdo 
+            dentro da "container". */
+
+    background-color: #fff;
+    /* Define a cor de fundo da "container" como branco (#fff). 
+       Isso faz com que o fundo da "container" seja branco, 
+            contrastando com o fundo da página. */
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao redor da "container". 
+       Os valores especificam a posição horizontal (0), a 
+            posição vertical (4px), o desfoque (6px), e a 
+            cor (rgba(0, 0, 0, 0.1)).
+       Isso cria um efeito de sombra suave, dando a 
+            ilusão de elevação. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos da "container" com um raio de 8 pixels. 
+       Isso suaviza os cantos da "container", dando um 
+            visual mais moderno e agradável. */
+
+    text-align: center;
+    /* Centraliza o texto e outros elementos dentro da "container". 
+       Todo o conteúdo dentro da "container" será 
+            alinhado ao centro horizontalmente. */
+
+}
+
+
+#formulario {
+    /* Define o estilo para o elemento HTML com o 
+            ID "formulario". 
+       IDs são únicos dentro de uma página e usados 
+            para aplicar estilos ou manipulá-los via JavaScript. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels ao "formulario". 
+       Isso cria um espaço abaixo do formulário, 
+            separando-o dos elementos seguintes. */
+
+}
+
+input[type="text"], button {
+    /* Define o estilo para os elementos de entrada de 
+            texto (input) e botão (button).
+       O seletor "input[type="text"]" aplica o estilo 
+            apenas a campos de entrada de texto. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento interno de 10 pixels ao 
+            redor do conteúdo do input e do botão.
+       Isso cria espaço interno, tornando os elementos
+             mais espaçados e fáceis de interagir. */
+
+    margin: 5px;
+    /* Adiciona uma margem de 5 pixels ao redor dos inputs e botões. 
+       Isso cria espaço externo, separando-os de 
+            outros elementos ao redor. */
+
+    border: 2px solid #ddd;
+    /* Define uma borda sólida de 2 pixels com a 
+            cor #ddd (um cinza claro) ao redor 
+            dos inputs e botões.
+       Isso contorna os elementos, melhorando a 
+            visibilidade das suas bordas. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos dos inputs e botões 
+            com um raio de 4 pixels. 
+       Isso suaviza os cantos, dando um visual mais 
+            moderno e agradável. */
+
+}
+
+button {
+    /* Define o estilo específico para os 
+            elementos botão (button). */
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo dos botões como #4CAF50 (um tom de verde). 
+       Isso dá aos botões uma aparência distinta e atraente. */
+
+    color: white;
+    /* Define a cor do texto dentro dos botões como branco. 
+       Isso contrasta bem com o fundo verde, tornando o 
+            texto legível. */
+
+    cursor: pointer;
+    /* Altera o cursor do mouse para um ponteiro (mãozinha) 
+            quando passa sobre os botões. 
+       Isso indica que os botões são interativos e 
+            podem ser clicados. */
+
+}
+
+button:hover {
+    /* Define o estilo para os botões quando o 
+            usuário passa o mouse sobre eles (hover). 
+       Isso cria um efeito de feedback visual para a 
+            interação do usuário. */
+
+    background-color: #0a320c;
+    /* Altera a cor de fundo dos botões para #0a320c (um 
+            verde ligeiramente mais escuro). 
+       Isso realça os botões quando o usuário passa o mouse 
+            sobre eles, indicando interatividade. */
+
+}
+
+#resultado {
+    /* Define o estilo para o elemento HTML com o ID "resultado". 
+       IDs são únicos dentro de uma página e usados para 
+            aplicar estilos específicos ou manipulá-los 
+            via JavaScript. */
+
+    text-align: left;
+    /* Alinha o texto dentro do elemento "resultado" à esquerda. 
+       Isso garante que todo o texto exibido no resultado 
+            seja alinhado ao lado esquerdo. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno de 20 pixels ao 
+            redor do conteúdo do "resultado". 
+       Isso cria espaço interno, tornando o conteúdo mais 
+            espaçado e agradável de ler. */
+
+    background-color: #dee591;
+    /* Define a cor de fundo do "resultado" como #f6f6f6 (um 
+            cinza muito claro). 
+       Isso dá um fundo distinto ao elemento, destacando-o 
+            do restante da página. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos do "resultado" com um raio de 4 pixels. 
+       Isso suaviza os cantos, dando um visual mais 
+            moderno e agradável. */
+
+    overflow-y: auto;
+    /* Adiciona uma barra de rolagem vertical (overflow-y) 
+            ao "resultado" se o conteúdo ultrapassar a 
+            altura máxima definida. 
+       Isso permite que o usuário role para ver todo o 
+            conteúdo sem que ele transborde para fora do elemento. */
+
+    max-height: 400px;
+    /* Define a altura máxima do "resultado" como 400 pixels. 
+       Se o conteúdo exceder essa altura, uma barra de rolagem 
+            será exibida para permitir a visualização completa. */
+
+}

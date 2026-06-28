@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- Esta linha define o tipo de documento como HTML5, 
+            que é a versão mais recente do HTML. 
+     Ela informa ao navegador que ele deve interpretar o 
+            conteúdo da página como HTML5. -->
+
+<html lang="pt">
+<!-- Esta linha inicia o elemento HTML e define o 
+            idioma da página como português (pt).
+     O atributo "lang" ajuda os navegadores e leitores de 
+            tela a entenderem o idioma da página. -->
+
+<head>
+    <!-- Esta seção é o cabeçalho do documento HTML. Ela 
+                contém metadados (informações sobre os dados) 
+                e links para arquivos externos, como folhas 
+                de estilo e scripts. 
+         O conteúdo desta seção não é exibido 
+                diretamente na página. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta linha define a codificação de caracteres 
+                do documento como UTF-8. 
+         UTF-8 é um padrão de codificação que suporta todos 
+                os caracteres e símbolos comuns no mundo, 
+         permitindo que a página exiba caracteres de 
+                várias línguas corretamente. -->
+
+    <title>Consulta CNPJ</title>
+    <!-- Esta linha define o título da página, que 
+                será exibido na aba do navegador 
+         ou na barra de título da janela. Neste caso, o 
+                título é "Consulta CNPJ". -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Esta linha inclui um arquivo de folha de 
+                estilos (CSS) externo chamado "style.css". 
+         O CSS (Cascading Style Sheets) é usado para definir o 
+                estilo e o layout da página HTML, 
+         incluindo cores, fontes, espaçamento e 
+                posicionamento dos elementos. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <!-- Esta linha inclui a biblioteca jsPDF, que é usada 
+                para gerar arquivos PDF a partir do conteúdo da página.
+         A URL aponta para a versão 2.3.1 da biblioteca jsPDF 
+                hospedada no CDN (Content Delivery Network) 
+                chamado cdnjs. 
+         Incluir bibliotecas via CDN permite carregar o 
+                código diretamente de servidores externos, 
+                reduzindo o tempo de carregamento e a 
+                carga no servidor de origem. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- Esta linha inclui a biblioteca xlsx, que é usada 
+                para gerar e manipular arquivos Excel (XLSX) a 
+                partir do conteúdo da página.
+         A URL aponta para a versão 0.17.0 da biblioteca xlsx 
+                hospedada no CDN da cdnjs. 
+         Usar bibliotecas externas facilita a adição de 
+                funcionalidades complexas ao site sem ter que 
+                escrever todo o código do zero. -->
+
+</head>
+<!-- Esta linha fecha a seção de cabeçalho do 
+            documento HTML. -->
+
+
+<body>
+    <!-- Esta linha inicia o corpo do documento HTML. 
+         Tudo que estiver dentro da tag <body> será 
+                exibido na página web. -->
+
+    <div class="container">
+        <!-- Esta linha cria uma div (divisão) com a classe "container". 
+             A classe "container" geralmente é usada para 
+             centralizar e dar estilo ao conteúdo da página, 
+             mantendo o layout organizado. -->
+
+        <h1>Consulta CNPJ</h1>
+        <!-- Esta linha cria um cabeçalho de nível 1 (h1)
+                     com o texto "Consulta CNPJ". 
+             O h1 é normalmente usado para o título principal da 
+                    página, sendo o texto maior e em negrito. -->
+
+        <div id="formulario">
+            <!-- Esta linha cria uma div com o identificador (id) "formulario". 
+                 IDs são únicos dentro de uma página e são usados 
+                        para aplicar estilos CSS específicos 
+                        ou para manipulação via JavaScript. -->
+
+            <input type="text" id="cnpj" placeholder="Digite o CNPJ" required>
+            <!-- Esta linha cria um campo de entrada de texto (input) 
+                        onde o usuário pode digitar o CNPJ. 
+                 O atributo "id" é "cnpj", permitindo que o campo 
+                        seja identificado e manipulado por JavaScript. 
+                 O atributo "placeholder" exibe um texto dentro do campo, 
+                        orientando o usuário a digitar o CNPJ. 
+                 O atributo "required" indica que este campo é obrigatório e 
+                        deve ser preenchido antes de enviar o formulário. -->
+
+            <button onclick="buscarCNPJ()">Buscar</button>
+            <!-- Esta linha cria um botão com o texto "Buscar". 
+                 Quando o botão é clicado, ele executa a função 
+                        JavaScript "buscarCNPJ()". 
+                 O atributo "onclick" define o código JavaScript a 
+                        ser executado quando o botão é clicado. -->
+
+        </div>
+
+        <div id="resultado">
+            <!-- Esta linha cria uma div com o identificador "resultado". 
+                 Esta área será usada para exibir os resultados da busca de CNPJ. 
+                 Comentário HTML indica que os resultados serão exibidos aqui. -->
+        </div>
+
+        <button onclick="exportarParaPDF()">Exportar para PDF</button>
+        <!-- Esta linha cria um botão com o texto "Exportar para PDF". 
+             Quando o botão é clicado, ele executa a função 
+                    JavaScript "exportarParaPDF()". -->
+
+        <button onclick="exportarParaExcel()">Exportar para Excel</button>
+        <!-- Esta linha cria um botão com o texto "Exportar para Excel". 
+             Quando o botão é clicado, ele executa a função 
+                    JavaScript "exportarParaExcel()". -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Esta linha inclui um arquivo JavaScript externo 
+                chamado "script.js". 
+         Este arquivo contém o código JavaScript que implementa as 
+                funções "buscarCNPJ()", "exportarParaPDF()" 
+                e "exportarParaExcel()". 
+         O código JavaScript é executado no navegador, 
+                permitindo a interação dinâmica com a página. -->
+
+</body>
+</html>

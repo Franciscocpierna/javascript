@@ -1,0 +1,182 @@
+body {
+    /* Seleciona o elemento <body> que contém todo o 
+            conteúdo visível da página. */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto dentro do <body>.
+       Arial é a fonte principal, e sans-serif é a fonte 
+            de fallback caso Arial não esteja disponível.
+       Isso garante que o texto seja exibido em uma 
+            fonte sem serifa, que é limpa e moderna. */
+
+}
+
+.container {
+    /* Seleciona qualquer elemento com a classe "container".
+       As classes são definidas com um ponto (.) antes do 
+            nome e podem ser aplicadas a vários elementos. */
+
+    max-width: 600px;
+    /* Define a largura máxima do elemento como 600 pixels.
+       Isso significa que o contêiner não ficará maior 
+            que 600px, mesmo que a janela do navegador seja maior. */
+
+    margin: 50px auto;
+    /* Define a margem do elemento.
+       50px de margem na parte superior e inferior (vertical).
+       'auto' define margens automáticas na esquerda e 
+            direita (horizontal), centralizando o contêiner na página. */
+
+    padding: 20px;
+    /* Adiciona um espaçamento interno de 20 pixels ao 
+            redor do conteúdo dentro do contêiner.
+       Padding é o espaço entre o conteúdo e a borda do contêiner. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda de 1 pixel ao redor do contêiner.
+       A borda é sólida (solid) e a cor é um cinza claro (#ccc). */
+
+    border-radius: 5px;
+    /* Adiciona cantos arredondados de 5 pixels à borda do contêiner.
+       Isso dá ao contêiner uma aparência mais suave e moderna. */
+
+}
+
+
+h1 {
+    /* Seleciona o elemento <h1>, que é usado para o 
+            título principal da página.
+       O <h1> é geralmente o título mais importante e 
+            mais visível em uma página. */
+
+    text-align: center;
+    /* Alinha o texto dentro do <h1> ao centro.
+       Isso faz com que o título fique centralizado 
+            horizontalmente dentro de seu contêiner. */
+
+}
+
+textarea {
+    /* Seleciona o elemento <textarea>, que é uma área de 
+            texto onde os usuários podem digitar várias linhas de texto. */
+
+    width: 100%;
+    /* Define a largura do <textarea> como 100% da largura do contêiner pai.
+       Isso significa que o <textarea> ocupará toda a largura 
+            disponível dentro do seu contêiner. */
+
+    height: 100px;
+    /* Define a altura do <textarea> como 100 pixels.
+       Isso determina o espaço vertical disponível para o 
+            texto dentro do <textarea>. */
+
+    margin-bottom: 10px;
+    /* Adiciona uma margem inferior de 10 pixels ao <textarea>.
+       Isso cria um espaço de 10 pixels abaixo do <textarea>, 
+            separando-o dos elementos seguintes. */
+
+    padding: 5px;
+    /* Adiciona um espaçamento interno de 5 pixels ao 
+            redor do conteúdo dentro do <textarea>.
+       Padding é o espaço entre o conteúdo (o texto) e a 
+            borda do <textarea>. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda de 1 pixel ao redor do <textarea>.
+       A borda é sólida (solid) e a cor é um cinza claro (#ccc). */
+
+    border-radius: 5px;
+    /* Adiciona cantos arredondados de 5 pixels à borda do <textarea>.
+       Isso dá ao <textarea> uma aparência mais suave e moderna. */
+
+}
+
+select, button {    
+    /* Seleciona tanto o elemento <select> quanto o elemento <button>.
+       As regras de estilo definidas aqui serão aplicadas a 
+            ambos os tipos de elementos. */
+
+    margin-bottom: 10px;
+    /* Adiciona uma margem inferior de 10 pixels aos elementos <select> e <button>.
+       Isso cria um espaço de 10 pixels abaixo desses elementos, 
+            separando-os dos elementos seguintes. */
+
+    padding: 5px;
+    /* Adiciona um espaçamento interno de 5 pixels ao redor do 
+            conteúdo dentro dos elementos <select> e <button>.
+       Padding é o espaço entre o conteúdo e a borda dos elementos. */
+
+    border-radius: 5px;
+    /* Adiciona cantos arredondados de 5 pixels às bordas dos 
+            elementos <select> e <button>.
+       Isso dá a esses elementos uma aparência mais suave e moderna. */
+}
+
+button {
+    /* Seleciona especificamente o elemento <button>, que é 
+            um botão clicável na página. */
+
+    background-color: #007bff;
+    /* Define a cor de fundo do botão como azul (#007bff).
+       Essa cor será aplicada a toda a área de fundo do botão. */
+
+    color: #fff;
+    /* Define a cor do texto dentro do botão como branco (#fff).
+       Isso garante que o texto do botão contraste bem com a 
+            cor de fundo azul. */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão.
+       Isso garante que o botão tenha um visual limpo sem 
+            bordas adicionais. */
+
+    cursor: pointer;
+    /* Define o cursor do mouse como um ponteiro (pointer) 
+            quando passar sobre o botão.
+       Isso indica aos usuários que o elemento é clicável. */
+
+}
+
+
+button:hover {
+    /* Seleciona o elemento <button> quando o mouse passa 
+            sobre ele (hover).
+       A pseudoclasse :hover aplica estilos ao elemento quando o 
+            usuário o está "sobrevoando" com o cursor do mouse. */
+
+    background-color: #07274a;
+    /* Muda a cor de fundo do botão para um azul mais escuro (#07274a) 
+            quando o cursor do mouse está sobre ele.
+       Isso cria um efeito de destaque visual, indicando que o botão é 
+            interativo e pronto para ser clicado. */
+       
+}
+
+#resultado {
+    /* Seleciona o elemento com id "resultado".
+       IDs são identificadores únicos que começam com um "#" e 
+            devem ser exclusivos dentro de um documento HTML.
+       O id "resultado" é usado para a div que exibirá o 
+            texto traduzido. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels ao 
+            elemento "resultado".
+       Isso cria um espaço de 20 pixels acima do elemento, 
+            separando-o dos elementos acima dele. */
+
+    padding: 10px;
+    /* Adiciona um espaçamento interno de 10 pixels ao redor 
+            do conteúdo dentro do elemento "resultado".
+       Padding é o espaço entre o conteúdo (texto traduzido) e 
+            a borda do elemento. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda de 1 pixel ao redor do elemento "resultado".
+       A borda é sólida (solid) e a cor é um cinza claro (#ccc). */
+
+    border-radius: 5px;
+    /* Adiciona cantos arredondados de 5 pixels à borda do elemento "resultado".
+       Isso dá ao elemento uma aparência mais suave e moderna. */
+
+}

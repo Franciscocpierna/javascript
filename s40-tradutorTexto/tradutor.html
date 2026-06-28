@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento: 
+     <!DOCTYPE html> é usada para informar ao navegador 
+               que este documento está escrito em HTML5. -->
+
+<html lang="pt-BR">
+<!-- Abertura da tag <html> que define o início de um documento HTML.
+     O atributo 'lang="pt-BR"' define o idioma principal do
+                documento como Português do Brasil, 
+     ajudando navegadores e mecanismos de busca a 
+               entenderem o conteúdo. -->
+
+<head>
+    <!-- Abertura da tag <head> que contém metadados sobre o 
+               documento, como título, links para estilos, etc. -->
+    
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres do documento como UTF-8, 
+         que é uma codificação padrão para representar a 
+               maioria dos caracteres usados na web.
+         Isso garante que caracteres especiais e acentos 
+               sejam exibidos corretamente. -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a configuração da viewport para melhorar a 
+               exibição em dispositivos móveis.
+         'width=device-width' ajusta a largura da página para a 
+               largura da tela do dispositivo.
+         'initial-scale=1.0' define o nível inicial de zoom 
+               quando a página é carregada pela primeira vez. -->
+    
+    <title>Tradutor de Texto</title>
+    <!-- Define o título da página, que será exibido na aba do 
+               navegador e usado pelos mecanismos de busca. -->
+    
+    <link rel="stylesheet" href="styles.css">
+    <!-- Vincula um arquivo CSS externo para estilizar a página.
+         'href="styles.css"' especifica o caminho para o arquivo CSS. -->
+
+</head>
+
+
+<body>
+    <!-- Abertura da tag <body>, que contém todo o conteúdo 
+                    visível da página da web.
+         Tudo o que está dentro desta tag será exibido no navegador. -->
+    
+    <div class="container">
+        <!-- Criação de uma div (divisão de página) com a classe 'container'.
+             Esta div serve como um contêiner para agrupar e 
+                    estilizar o conteúdo central da página.
+             A classe 'container' será usada para aplicar 
+                    estilos CSS específicos a esta seção. -->
+        
+        <h1>Tradutor de Texto</h1>
+        <!-- Criação de um cabeçalho de nível 1 (<h1>), que é 
+                    o título principal da página.
+             "Tradutor de Texto" é o texto exibido neste cabeçalho. 
+             Títulos <h1> são geralmente usados para os títulos 
+                    mais importantes na hierarquia de conteúdo. -->
+        
+        <textarea id="textoOrigem" placeholder="Insira o texto a ser traduzido..."></textarea>
+        <!-- Criação de uma área de texto (textarea) onde os 
+                    usuários podem digitar várias linhas de texto.
+             'id="textoOrigem"' é um identificador único que permite a 
+                    manipulação deste elemento via JavaScript.
+             'placeholder="Insira o texto a ser traduzido..."' é um 
+                    texto sugestivo que aparece dentro do textarea 
+             quando ele está vazio, informando ao usuário o 
+                    que deve ser inserido. -->
+        
+        <select id="idiomaOrigem">
+            <!-- Criação de um menu suspenso (select) para o 
+                         usuário escolher o idioma de origem do texto.
+                 'id="idiomaOrigem"' é um identificador único que 
+                         permite a manipulação deste elemento via JavaScript. -->
+            
+            <option value="pt">Português</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'pt' (abreviação de Português).
+                 "Português" é o texto que será exibido ao usuário. -->
+            
+            <option value="en">Inglês</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'en' (abreviação de Inglês).
+                 "Inglês" é o texto que será exibido ao usuário. -->
+            
+            <option value="es">Espanhol</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'es' (abreviação de Espanhol).
+                 "Espanhol" é o texto que será exibido ao usuário. -->
+            
+            <option value="fr">Francês</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'fr' (abreviação de Francês).
+                 "Francês" é o texto que será exibido ao usuário. -->
+            
+            <option value="de">Alemão</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'de' (abreviação de Alemão).
+                 "Alemão" é o texto que será exibido ao usuário. -->
+            
+            <option value="it">Italiano</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'it' (abreviação de Italiano).
+                 "Italiano" é o texto que será exibido ao usuário. -->
+            
+            <option value="ja">Japonês</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'ja' (abreviação de Japonês).
+                 "Japonês" é o texto que será exibido ao usuário. -->
+            
+            <option value="ko">Coreano</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'ko' (abreviação de Coreano).
+                 "Coreano" é o texto que será exibido ao usuário. -->
+            
+            <option value="ru">Russo</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'ru' (abreviação de Russo).
+                 "Russo" é o texto que será exibido ao usuário. -->
+            
+            <option value="zh-CN">Chinês (Simplificado)</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'zh-CN' (abreviação de Chinês Simplificado).
+                 "Chinês (Simplificado)" é o texto que será exibido ao usuário. -->
+            
+            <!-- Adicione mais opções de idiomas conforme necessário. 
+                 Para adicionar novos idiomas, basta incluir novas 
+                         tags <option> com os valores e textos apropriados. -->
+
+        </select>
+        
+        <select id="idiomaDestino">
+            <!-- Criação de um menu suspenso (select) para o 
+                         usuário escolher o idioma de destino da tradução.
+                 'id="idiomaDestino"' é um identificador único que 
+                         permite a manipulação deste elemento via JavaScript. -->
+            
+            <option value="en">Inglês</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'en' (abreviação de Inglês).
+                 "Inglês" é o texto que será exibido ao usuário. -->
+            
+            <option value="es">Espanhol</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'es' (abreviação de Espanhol).
+                 "Espanhol" é o texto que será exibido ao usuário. -->
+            
+            <option value="fr">Francês</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'fr' (abreviação de Francês).
+                 "Francês" é o texto que será exibido ao usuário. -->
+            
+            <option value="de">Alemão</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'de' (abreviação de Alemão).
+                 "Alemão" é o texto que será exibido ao usuário. -->
+            
+            <option value="it">Italiano</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'it' (abreviação de Italiano).
+                 "Italiano" é o texto que será exibido ao usuário. -->
+            
+            <option value="ja">Japonês</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'ja' (abreviação de Japonês).
+                 "Japonês" é o texto que será exibido ao usuário. -->
+            
+            <option value="ko">Coreano</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'ko' (abreviação de Coreano).
+                 "Coreano" é o texto que será exibido ao usuário. -->
+            
+            <option value="ru">Russo</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'ru' (abreviação de Russo).
+                 "Russo" é o texto que será exibido ao usuário. -->
+            
+            <option value="zh-CN">Chinês (Simplificado)</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'zh-CN' (abreviação de Chinês Simplificado).
+                 "Chinês (Simplificado)" é o texto que será exibido ao usuário. -->
+            
+            <option value="pt">Português</option>
+            <!-- Criação de uma opção no menu suspenso com o 
+                         valor 'pt' (abreviação de Português).
+                 "Português" é o texto que será exibido ao usuário. -->
+
+            <!-- Adicione mais opções de idiomas conforme necessário. 
+                 Para adicionar novos idiomas, basta incluir 
+                         novas tags <option> com os valores e 
+                         textos apropriados. -->
+
+        </select>
+        
+        <button id="btnTraduzir">Traduzir</button>
+        <!-- Criação de um botão com o texto "Traduzir".
+             'id="btnTraduzir"' é um identificador único que 
+                    permite a manipulação deste elemento via JavaScript.
+             Ao clicar neste botão, será acionada a função de 
+                    tradução definida no arquivo JavaScript. -->
+        
+        <div id="resultado"></div>
+        <!-- Criação de uma div para exibir o resultado da tradução.
+             'id="resultado"' é um identificador único que 
+                    permite a manipulação deste elemento via JavaScript.
+             O texto traduzido será inserido dentro desta 
+                    div pelo JavaScript. -->
+
+    </div>
+    
+    <script src="script.js"></script>
+    <!-- Vinculação de um arquivo JavaScript externo para 
+               adicionar funcionalidades à página.
+         'src="script.js"' especifica o caminho para o 
+               arquivo JavaScript.
+         Este arquivo conterá o código que fará a tradução do 
+               texto quando o botão for clicado. -->
+               
+</body>
+</html>
