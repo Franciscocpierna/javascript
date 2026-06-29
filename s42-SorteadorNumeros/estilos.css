@@ -1,0 +1,321 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+    /* Define a família de fontes para o texto dentro do 
+                <body>. 'Arial' é a fonte principal 
+                e 'sans-serif' é a fonte de fallback.
+       'sans-serif' é uma categoria de fontes que não 
+                tem "serifs" (pequenos traços ou linhas 
+                anexadas ao final das letras). */
+
+    background-color: #8bdcff;
+    /* Define a cor de fundo do corpo da página. O código 
+                hexadecimal #8bdcff é uma tonalidade clara 
+                de azul celeste. */
+
+    color: #ffffff;
+    /* Define a cor padrão do texto dentro do <body>. #ffffff 
+                representa a cor branca. Isso significa que 
+                qualquer texto sem uma cor especificamente 
+                definida será branco. */
+
+    display: flex;
+    /* Estabelece um container flexível para o layout 
+                do <body>. O Flexbox é um modelo de layout que 
+                permite espaçar e alinhar itens de forma eficiente, 
+                mesmo quando seus tamanhos são desconhecidos ou dinâmicos. */
+
+    justify-content: center;
+    /* Alinha os itens filho (neste caso, possíveis elementos 
+                dentro de <body>) horizontalmente ao centro do 
+                container flexível. */
+
+    align-items: center;
+    /* Alinha os itens filho verticalmente ao centro do 
+                container flexível. Com essa propriedade 
+                junto com 'justify-content: center', todos os 
+                itens serão centralizados tanto vertical 
+                quanto horizontalmente. */
+
+    height: 100vh;
+    /* Define a altura do <body> para 100vh, onde 'vh' é 
+                uma unidade relativa que representa 1% da altura 
+                da viewport (área visível da janela do navegador). 
+       Isso garante que o <body> ocupará toda a altura da viewport. */
+
+    margin: 0;
+    /* Remove todas as margens externas do <body>, fazendo com 
+                que ele preencha totalmente a largura disponível 
+                da viewport, sem espaços extras nas bordas. */
+
+}
+
+.container {
+
+    background-color: #fffee6;
+    /* Define a cor de fundo do elemento com a classe "container". 
+                A cor #fffee6 é um amarelo muito claro, quase creme. */
+
+    padding: 40px;
+    /* Aplica um preenchimento (espaço interno) de 40 pixels em 
+                todos os lados dentro do container, 
+                afastando o conteúdo interno das bordas do elemento. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da borda do container para um 
+                raio de 10 pixels, dando ao elemento um visual 
+                mais suavizado e menos angular. */
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Adiciona uma sombra ao container. Os primeiros dois 
+                valores 0 0 representam os deslocamentos 
+                horizontal e vertical da sombra, respectivamente,
+                enquanto 20px é o raio do desfoque da sombra. 
+       O 'rgba(0, 0, 0, 0.5)' define a cor da 
+                sombra como preta com 50% de transparência. */
+
+    text-align: center;
+    /* Alinha o texto e outros elementos inline dentro do 
+                container ao centro horizontalmente. */
+
+    width: 450px;
+    /* Define a largura do container para 450 pixels, criando 
+                uma largura fixa para o elemento independentemente 
+                do tamanho da viewport. */
+
+}
+
+h1 {
+
+    margin-bottom: 30px;
+    /* Aplica uma margem de 30 pixels abaixo do cabeçalho <h1>, 
+                criando um espaço entre o cabeçalho e 
+                quaisquer elementos abaixo dele. */
+
+    font-size: 28px;
+    /* Define o tamanho da fonte do <h1> para 28 pixels, 
+                tornando o texto maior e mais destacado como um 
+                cabeçalho principal. */
+
+    color: #000000;
+    /* Define a cor do texto do <h1> para preto (#000000). 
+                Isso garante que o título seja facilmente 
+                visível contra um fundo mais claro. */
+
+}
+
+
+.input-group {
+
+    margin-bottom: 20px;
+    /* Aplica uma margem de 20 pixels abaixo de cada elemento 
+                com a classe "input-group". Isso separa 
+                visualmente grupos de entrada 
+                uns dos outros, ajudando a organizar o 
+                formulário de forma mais clara e espaçada. */
+
+}
+
+label {
+
+    display: block;
+    /* Configura o elemento <label> como um bloco, o que 
+                significa que ele ocupará toda a largura 
+                disponível e quebrará a linha antes e depois dele, 
+                ajudando a separar visualmente o rótulo de 
+                outros elementos. */
+
+    margin-bottom: 10px;
+    /* Aplica uma margem de 10 pixels abaixo do rótulo, criando 
+                espaço entre o rótulo e o elemento abaixo dele, 
+                melhorando a legibilidade. */
+
+    font-size: 20px;
+    /* Define o tamanho da fonte do rótulo para 20 pixels, 
+                tornando-o facilmente legível. */
+
+    color: #000000;
+    /* Define a cor do texto do rótulo para preto, garantindo 
+                alta visibilidade contra fundos claros. */
+
+}
+
+input {
+
+    width: 100%;
+    /* Define a largura do campo de entrada para 100% da largura do 
+                seu elemento pai, garantindo que ele se estenda 
+                para ocupar todo o espaço disponível. */
+
+    padding: 12px;
+    /* Aplica um preenchimento interno de 12 pixels em todos os 
+                lados do campo de entrada, proporcionando espaço 
+                suficiente dentro do campo para uma entrada de 
+                texto confortável. */
+
+    border: none;
+    /* Remove qualquer borda padrão do campo de entrada, 
+                permitindo um design mais limpo e moderno. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do campo de entrada com um raio 
+                de 5 pixels, proporcionando um visual mais 
+                suave e moderno. */
+
+    font-size: 30px;
+    /* Define o tamanho da fonte dentro do campo de 
+                entrada para 30 pixels, o que é consideravelmente 
+                grande, garantindo facilidade de leitura. */
+
+    margin-bottom: 10px;
+    /* Aplica uma margem de 10 pixels abaixo do campo de 
+                entrada, ajudando a separar visualmente de 
+                outros elementos na página. */
+
+    background-color: #3a3a3a;
+    /* Define a cor de fundo do campo de entrada para um 
+                cinza escuro (#3a3a3a), que contrasta com o 
+                texto branco. */
+
+    color: #ffffff;
+    /* Define a cor do texto dentro do campo de entrada para 
+                branco, garantindo que o texto seja facilmente 
+                visível contra o fundo escuro. */
+
+}
+
+button {
+
+    padding: 15px 30px;
+    /* Define o preenchimento interno do botão, 15 pixels 
+                verticalmente e 30 pixels horizontalmente, 
+                tornando-o grande e fácil de clicar. */
+
+    background-color: #007bff;
+    /* Define a cor de fundo do botão para um azul 
+                brilhante (#007bff), tornando-o visualmente 
+                atraente e fácil de identificar na página. */
+
+    color: #ffffff;
+    /* Define a cor do texto dentro do botão para branco, 
+                criando um forte contraste com o fundo azul 
+                para alta legibilidade. */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão, criando um 
+                design mais limpo e mais moderno. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um raio de 5 pixels, 
+                alinhando-se com o design moderno e suave de 
+                outros elementos de formulário. */
+
+    cursor: pointer;
+    /* Altera o cursor para um ponteiro quando sobrevoa o 
+                botão, indicando visualmente que o 
+                botão é clicável. */
+
+    font-size: 20px;
+    /* Define o tamanho da fonte dentro do botão 
+                para 20 pixels, garantindo que o texto 
+                seja fácil de ler. */
+
+    width: 100%;
+    /* Faz o botão estender-se para ocupar 100% da largura 
+                do elemento pai, garantindo que seja 
+                grande e fácil de clicar. */
+
+    margin-top: 20px;
+    /* Aplica uma margem superior de 20 pixels ao botão, 
+                separando-o visualmente dos elementos 
+                acima dele. */
+
+}
+
+
+button:hover {
+
+    background-color: #058e05;
+    /* Altera a cor de fundo do botão quando o mouse está 
+                sobre ele para um verde (#058e05). 
+       Isso proporciona um feedback visual ao usuário, 
+                indicando que o botão é interativo e que o 
+                cursor está sobre ele. */
+
+}
+
+#resultado {
+
+    margin-top: 30px;
+    /* Aplica uma margem superior de 30 pixels ao elemento 
+                com o ID "resultado", criando espaço entre 
+                ele e os elementos acima, 
+                ajudando a separar visualmente o conteúdo. */
+
+}
+
+#contador {
+
+    font-size: 100px;
+    /* Define o tamanho da fonte para 100 pixels, tornando o 
+                texto grande e facilmente visível, adequado 
+                para um contador visual impactante. */
+
+    font-weight: bold;
+    /* Aplica o estilo de fonte negrito, enfatizando 
+                ainda mais o texto do contador. */
+
+    margin: 0;
+    /* Remove todas as margens ao redor do elemento, 
+                ajudando a controlar o layout sem espaços 
+                adicionais indesejados. */
+
+    opacity: 0;
+    /* Inicialmente, define a opacidade do elemento para 0, 
+                tornando-o completamente transparente e 
+                invisível ao carregar a página. */
+
+    transition: opacity 0.5s;
+    /* Aplica uma transição à propriedade de opacidade, 
+                especificando que qualquer mudança de opacidade 
+                deve ocorrer suavemente ao longo de 0,5 segundos. 
+       Isso é usado para efeitos visuais, como fazer o 
+                contador aparecer ou desaparecer suavemente. */
+
+    color: #000000;
+    /* Define a cor do texto para preto, garantindo que, 
+                quando visível, seja altamente legível contra a 
+                maioria dos fundos claros. */
+
+}
+
+
+#numeroSorteado {
+
+    font-size: 60px;
+    /* Define o tamanho da fonte para 60 pixels, grande o 
+                suficiente para destacar o número sorteado. */
+
+    font-weight: bold;
+    /* Aplica o estilo de fonte negrito, aumentando a 
+                importância visual do número sorteado. */
+
+    color: #28a745;
+    /* Define a cor do texto para um verde vívido (#28a745), 
+                destacando o número sorteado e diferenciando-o 
+                de outros textos na página. */
+
+    margin-top: 20px;
+    /* Aplica uma margem superior de 20 pixels, separando 
+                visualmente este elemento do que está acima dele. */
+
+    opacity: 0;
+    /* Define a opacidade inicial como 0, tornando o elemento 
+                completamente invisível inicialmente. */
+
+    transition: opacity 0.5s;
+    /* Permite que a opacidade do elemento mude suavemente ao 
+                longo de 0,5 segundos, criando um efeito visual 
+                atraente ao revelar o número sorteado. */
+
+}

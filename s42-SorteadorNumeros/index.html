@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<!-- Define o tipo de documento como HTML5, indicando 
+            ao navegador como interpretar o conteúdo da página -->
+
+<html lang="pt-BR">
+<!-- Abre a tag HTML, que envolve todo o conteúdo da 
+            página. O atributo 'lang' define o idioma 
+            principal da página como português do Brasil, 
+            ajudando os navegadores e mecanismos de busca a 
+            entender o idioma do conteúdo -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de 
+            estilo e scripts que não são exibidos diretamente 
+            na página, mas são essenciais para a configuração e 
+            comportamento da página -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres usado para o texto 
+                na página como UTF-8, que inclui quase todos os 
+                caracteres de todos os idiomas humanos, garantindo 
+                que qualquer texto seja corretamente exibido e 
+                evitando problemas com caracteres especiais -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta meta tag assegura que a página será exibida de 
+                forma adequada em dispositivos móveis, definindo a 
+                largura da viewport (área de visualização) para a 
+                largura do dispositivo e iniciando o zoom em 1.0, o 
+                que significa que o zoom inicial não altera o 
+                tamanho dos elementos na página -->
+
+    <title>Sorteador de Números</title>
+    <!-- Define o título da página, que é mostrado na aba do 
+                navegador. Este título é útil para o usuário 
+                identificar sobre o que é a página -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Link para uma folha de estilo externa chamada 'estilos.css'. 
+                Esta linha diz ao navegador para carregar e aplicar as 
+                regras de estilo CSS definidas no arquivo 'estilos.css' 
+                aos elementos da página HTML -->
+
+</head>
+<!-- Fecha a tag <head>, indicando que todos os metadados 
+                necessários foram incluídos -->
+
+<body>
+<!-- A tag <body> envolve todo o conteúdo visível de uma 
+            página web. É aqui que você coloca tudo que é 
+            exibido diretamente no navegador. -->
+
+    <div class="container">
+    <!-- Uma <div> com a classe "container". As divs são usadas 
+                para agrupar conteúdo, e a classe "container" 
+                é usada para estilização específica, como 
+                definir largura e centralização. -->
+
+        <h1>Sorteador de Números</h1>
+        <!-- A tag <h1> define um cabeçalho de nível 1, que é 
+            o título mais importante na página. Aqui, ele anuncia o 
+            propósito da página: um sorteador de números. -->
+
+        <div class="input-group">
+        <!-- Outra <div>, desta vez com a classe "input-group". Essa 
+                classe é usada para agrupar um rótulo (<label>) e um 
+                    campo de entrada (<input>), facilitando a 
+                    estilização e o alinhamento. -->
+
+            <label for="numeroMinimo">Número Mínimo:</label>
+            <!-- A tag <label> define um rótulo para o campo de 
+                    entrada <input> abaixo. O atributo 'for' associa o 
+                    rótulo ao input pelo id do input, melhorando a 
+                    acessibilidade e permitindo clicar no rótulo 
+                    para focar o input. -->
+
+            <input type="number" id="numeroMinimo">
+            <!-- <input> define um campo de entrada onde os 
+                        usuários podem inserir dados. 'type="number"' 
+                        especifica que apenas números podem ser 
+                        inseridos. O 'id' é usado para associar o 
+                        campo com o seu <label>. -->
+
+        </div>
+
+        <div class="input-group">
+        <!-- Outra <div> com a classe "input-group", usada para 
+                        agrupar outro rótulo e campo de entrada. -->
+
+            <label for="numeroMaximo">Número Máximo:</label>
+            <!-- Um <label> para o próximo <input>, especificando que 
+                        este é para o "Número Máximo". A associação 
+                        via 'for' facilita a usabilidade. -->
+
+            <input type="number" id="numeroMaximo">
+            <!-- Outro campo <input> para inserção de números, desta 
+                        vez para o número máximo que pode ser sorteado. -->
+
+        </div>
+        
+        <button onclick="sortearNumero()">Sortear</button>
+        <!-- Um botão com um evento 'onclick' que chama a 
+                        função 'sortearNumero()'. Este botão é usado 
+                        pelo usuário para iniciar o sorteio de um número. -->
+
+        <div id="resultado">
+        <!-- Uma <div> para mostrar os resultados do sorteio. O 
+                        uso do 'id' facilita a referência a 
+                        esta div no CSS e JavaScript. -->
+
+            <p id="contador">5</p>
+            <!-- Um parágrafo com 'id="contador"', inicialmente 
+                        mostrando o número 5. Este elemento pode ser 
+                        usado para mostrar uma contagem regressiva ou 
+                        outro valor dinâmico via JavaScript. -->
+
+            <p id="numeroSorteado"></p>
+            <!-- Um parágrafo onde o número sorteado será exibido 
+                        após a execução do sorteio. Inicialmente vazio, 
+                        seu conteúdo será atualizado dinamicamente 
+                        pelo JavaScript. -->
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' que inclui um 
+                    arquivo JavaScript externo chamado 'script.js'. 
+                    Este script contém a lógica de funcionamento do 
+                    sorteador de números. -->
+
+</body>
+</html>
+<!-- As tags </body> e </html> fecham respectivamente o corpo e o 
+            documento HTML, indicando o fim da estrutura da página. -->
