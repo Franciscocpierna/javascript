@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!-- A linha acima define o tipo de documento como HTML5. 
+     O DOCTYPE é uma declaração (não uma tag) que informa 
+               ao navegador a versão do HTML que a página deve seguir.
+     É importante para garantir que o navegador processe a
+                página corretamente. -->
+
+<html lang="pt-BR">
+<!-- Esta linha abre a tag html e define o atributo 
+               lang como 'pt-BR', que especifica que o 
+               idioma principal 
+     da página é o português do Brasil. Isso ajuda os 
+               motores de busca e as tecnologias assistivas a 
+               determinar o idioma do conteúdo da página. -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre os 
+               dados) que não são exibidos diretamente na página web,
+     mas são processados pelo navegador. Inclui elementos 
+               como títulos, links para CSS, scripts, e outras 
+               metainformações como a codificação de caracteres e 
+               a viewport. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta tag meta define o conjunto de caracteres 
+               utilizado na página como UTF-8, que inclui a maioria 
+               dos caracteres de todos os idiomas escritos, 
+               proporcionando suporte internacional. 
+         É crucial para a correta exibição de caracteres 
+               especiais e acentos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag meta configura a viewport (área de 
+               visualização) da página para dispositivos móveis.
+         O atributo 'width=device-width' instrui o navegador 
+               para definir a largura da viewport
+               para seguir a largura da tela do dispositivo.
+         O 'initial-scale=1.0' define o nível inicial de 
+               zoom quando a página é carregada pela primeira vez. -->
+
+    <title>Conferidor de Jogos da Mega Sena</title>
+    <!-- A tag <title> define o título da página, que é 
+               exibido na aba do navegador.
+         Este título também é utilizado por motores de 
+               busca e quando a página é adicionada aos favoritos. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para conectar um arquivo 
+               de folha de estilo CSS externo à página.
+         O atributo 'rel' especifica o relacionamento entre o 
+               documento atual e o recurso vinculado,
+               que neste caso é uma 'stylesheet'.
+         O atributo 'href' especifica o caminho para o 
+               arquivo CSS que define o estilo da página. -->
+
+</head>
+<!-- Esta linha fecha a tag <head>, indicando que todos os 
+               metadados necessários foram fornecidos. -->
+
+
+<body>
+<!-- A tag <body> define o corpo do documento HTML. 
+     É dentro da <body> que todos os componentes visíveis da 
+               página web (como cabeçalhos, parágrafos, imagens, 
+               hiperlinks, tabelas, listas, etc.) são inseridos. -->
+
+    <div class="container">
+    <!-- Esta <div> atua como um contêiner para outros 
+               elementos HTML. A classe 'container' é frequentemente 
+               usada em CSS para definir estilos específicos, como 
+               largura, margem e alinhamento. -->
+
+        <header>
+        <!-- A tag <header> é usada para definir o cabeçalho de 
+                    uma página ou de uma seção da página. Geralmente 
+                    contém elementos introdutórios ou navegacionais. -->
+
+            <img src="mega-sena.jpg" alt="Mega Sena" class="cabecalho-imagem">
+            <!-- A tag <img> é utilizada para inserir uma imagem na página. 
+                 O atributo 'src' especifica o caminho para a imagem.
+                 O atributo 'alt' fornece um texto alternativo para a 
+                         imagem, que é exibido se a imagem não puder ser 
+                         carregada e também é útil para acessibilidade.
+                 A classe 'cabecalho-imagem' pode ser usada para aplicar 
+                         estilos CSS específicos à imagem. -->
+
+        </header>
+        <!-- Esta linha fecha a tag <header>. -->
+
+        <h1>Conferidor de Jogos da Mega Sena</h1>
+        <!-- A tag <h1> é usada para o título principal da 
+                    página. Ela tem grande importância para 
+                    SEO (Search Engine Optimization), pois indica aos 
+                    motores de busca o tópico principal da página. -->
+
+        <button id="abrirModalCadastroBtn">Cadastrar Jogo</button>
+        <!-- Esta tag <button> cria um botão na página. 
+             O atributo 'id' é usado para identificar o botão de 
+                    forma única no documento, permitindo manipulá-lo 
+                    com CSS e JavaScript.
+             O texto entre as tags define o que será exibido no botão. -->
+
+        <button id="abrirModalSurpresinhaBtn">Surpresinha</button>
+        <!-- Outro botão que, semelhante ao anterior, pode ser 
+                    identificado e estilizado ou manipulado. 
+               O texto 'Surpresinha' indica a ação que ele 
+                    desencadeará. -->
+
+        <div id="modalCadastro" class="modal">
+        <!-- Uma <div> que será usada como 
+                    uma janela modal para cadastro de jogos. 
+             O 'id' permite acessar e manipular este 
+                    elemento com JavaScript.
+             A classe 'modal' é usada para aplicar estilos 
+                    definidos no CSS que controlam como a modal 
+                    aparece e se comporta. -->
+
+            <div class="modal-conteudo">
+            <!-- Esta <div> contém o conteúdo da janela modal. 
+                 A classe 'modal-conteudo' é usada para aplicar 
+                         estilos específicos ao conteúdo da modal, 
+                         como padding, background, etc. -->
+
+                <span class="fechar">&times;</span>
+                <!-- Um <span> que serve como botão de 
+                         fechamento da modal. 
+                     O caractere '&times;' representa visualmente um 'X'.
+                     A classe 'fechar' pode ser usada para estilizar 
+                         este elemento, como posicionamento, fonte, etc. -->
+
+                <h2>Cadastrar Jogo</h2>
+                <!-- A tag <h2> define um cabeçalho secundário 
+                         dentro da modal. 
+                     Isso ajuda a estruturar o conteúdo e é 
+                         importante para acessibilidade e SEO. -->
+
+                <form id="formularioJogo">
+                <!-- A tag <form> é usada para criar um formulário HTML 
+                              para entrada do usuário.
+                     O 'id' permite que o formulário seja identificado de 
+                              forma única, facilitando sua manipulação via 
+                              JavaScript ou estilização via CSS. -->
+
+                    <label for="quantidadeNumeros">Quantidade de Números:</label>
+                    <!-- A tag <label> define um rótulo para o 
+                              elemento de entrada de formulário.
+                         O atributo 'for' deve corresponder ao 'id' do 
+                              elemento de entrada que esta etiqueta 
+                              descreve, melhorando a acessibilidade. -->
+
+                    <input type="number" id="quantidadeNumeros" min="6" max="20" value="6" required>
+                    <!-- A tag <input> é usada para criar um elemento de entrada. 
+                         O tipo 'number' restringe a entrada a números. 
+                         O 'id' corresponde ao 'for' do <label> associado.
+                         Os atributos 'min' e 'max' definem o intervalo 
+                              de valores aceitáveis.
+                         O valor 'value' é o valor inicial do campo.
+                         O atributo 'required' torna este campo obrigatório 
+                              para enviar o formulário. -->
+
+                    <div id="numerosCampos">
+                    <!-- Uma <div> destinada a conter campos adicionais, 
+                              adicionados dinamicamente com JavaScript. 
+                         O 'id' permite manipulação fácil via JavaScript. -->
+                        <!-- Campos de número gerados dinamicamente -->
+
+                    </div>
+
+                    <button type="submit">Salvar Jogo</button>
+                    <!-- Um botão de submissão para o formulário. 
+                         O tipo 'submit' indica que, ao ser pressionado, 
+                              ele enviará os dados do formulário. -->
+
+                </form>
+                <!-- Esta linha fecha a tag <form>. -->
+
+            </div>
+            <!-- Esta linha fecha a tag <div> para 'modal-conteudo'. -->
+
+        </div>
+        <!-- Esta linha fecha a tag <div> para 'modalCadastro'. -->
+
+
+        <div id="modalSurpresinha" class="modal">
+            <!-- <div> que serve como modal para a funcionalidade "Surpresinha". 
+                    O 'id' permite identificar e manipular essa 
+                         modal especificamente com JavaScript.
+                    A classe 'modal' é usada para aplicar estilos 
+                         de modal definidos no CSS. -->
+            
+                <div class="modal-conteudo">
+                <!-- <div> interna que contém o conteúdo da modal.
+                        A classe 'modal-conteudo' é usada para estilizar 
+                              especificamente o conteúdo dentro da modal,
+                              como o fundo, margens, padding, entre outros. -->
+            
+                    <span class="fechar">&times;</span>
+                    <!-- <span> utilizado como botão de fechar a modal.
+                            O caractere '&times;' é comumente usado para 
+                                   representar um ícone de fechar.
+                            A classe 'fechar' é usada para estilizar este 
+                                   botão, incluindo coisas como cor, tamanho da 
+                                   fonte e comportamento no hover. -->
+            
+                    <h2>Surpresinha</h2>
+                    <!-- <h2> que serve como título para a seção da modal, 
+                                   indicando que esta é a funcionalidade "Surpresinha". -->
+            
+                    <label for="quantidadeNumerosSurpresinha">Quantidade de Números:</label>
+                    <!-- <label> que define o rótulo para o campo de 
+                                   entrada abaixo. O 'for' associa o rótulo ao 
+                                   campo de entrada correspondente pelo 'id'. -->
+            
+                    <input type="number" id="quantidadeNumerosSurpresinha" min="6" max="20" value="6" required>
+                    <!-- <input> do tipo número para definir a quantidade 
+                                   de números para a "Surpresinha".
+                            O 'id' permite o vínculo com o <label>.
+                            Os atributos 'min' e 'max' definem o número mínimo e 
+                                   máximo de números que podem ser escolhidos.
+                            O valor inicial é '6' e o campo é obrigatório (required). -->
+            
+                    <p id="jogoSurpresinha"></p>
+                    <!-- <p> para exibir os números gerados pela "Surpresinha".
+                            O 'id' permite que os números sejam injetados 
+                                   dinamicamente via JavaScript. -->
+            
+                    <button id="salvarSurpresinhaBtn">Salvar Jogo</button>
+                    <!-- <button> para salvar os números gerados pela "Surpresinha".
+                            O 'id' permite manipular o botão com JavaScript 
+                                   para adicionar funcionalidade. -->
+
+                </div>
+            </div>
+            
+            <div class="secao-conferir">
+            <!-- <div> que agrupa os elementos utilizados para conferir os 
+                              números digitados pelo usuário.
+                    A classe 'secao-conferir' pode ser estilizada para 
+                              formatar visualmente esta seção. -->
+            
+                <label for="confereNum1">Número 1:</label>
+                <!-- <label> e <input> para o usuário digitar o 
+                              primeiro número a ser conferido. 
+                        O 'for' conecta o <label> ao <input> correspondente pelo 'id'. -->
+            
+                <input type="number" id="confereNum1" min="1" max="60">
+                <!-- <input> para entrada do primeiro número. 'min' 
+                              e 'max' definem o intervalo de números válidos. -->
+            
+                <!-- As próximas linhas seguem um padrão similar para os 
+                              números de 2 a 6, permitindo ao usuário inserir 
+                              até seis números para conferência. -->
+                <label for="confereNum2">Número 2:</label>
+                <input type="number" id="confereNum2" min="1" max="60">
+                <label for="confereNum3">Número 3:</label>
+                <input type="number" id="confereNum3" min="1" max="60">
+                <label for="confereNum4">Número 4:</label>
+                <input type="number" id="confereNum4" min="1" max="60">
+                <label for="confereNum5">Número 5:</label>
+                <input type="number" id="confereNum5" min="1" max="60">
+                <label for="confereNum6">Número 6:</label>
+                <input type="number" id="confereNum6" min="1" max="60">
+                <button id="botaoConferir">Conferir</button>
+                <!-- <button> que, quando clicado, aciona a função para 
+                              conferir os números inseridos. O 'id' permite a 
+                              manipulação via JavaScript. -->
+
+            </div>
+            
+            <ul id="listaJogos"></ul>
+            <!-- <ul> para listar os jogos salvos. 
+                    O 'id' permite que os jogos sejam dinamicamente
+                              listados via JavaScript, adicionando 
+                              elementos <li> conforme necessário. -->
+            
+            </div>
+            <!-- Esta linha fecha a <div> class 'container' que 
+                         encapsula todos os elementos acima, fornecendo um 
+                         contêiner para estilização e layout. -->
+            
+        <script src="script.js"></script>
+        <!-- A tag <script> com o atributo 'src' que vincula um 
+                    arquivo JavaScript externo. Este script controla a 
+                    lógica interativa da página, como abrir modais, 
+                    salvar jogos, conferir números, etc. -->
+
+</body>
+<!-- Esta linha fecha a tag <body>. -->
+
+</html>
+<!-- Esta linha fecha a tag <html>, finalizando o documento HTML. -->
