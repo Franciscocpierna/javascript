@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!-- Essa linha informa ao navegador que 
+        este documento é um documento HTML5. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> é a raiz do documento HTML. O 
+            atributo 'lang' especifica a linguagem do 
+            conteúdo do documento, neste caso, Português do Brasil. -->
+
+<head>
+<!-- A tag <head> contém metadados/informações 
+            sobre o documento HTML. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define o 
+                conjunto de caracteres usado no documento, 
+                que é 'UTF-8'. Isso ajuda a exibir 
+                corretamente caracteres especiais e acentos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, que controla a área de 
+            visualização do navegador. 
+    'width=device-width' faz com que a largura da 
+            página siga a largura da tela do dispositivo.
+    'initial-scale=1.0' define o nível inicial de 
+            zoom quando a página é carregada pela primeira vez. -->
+
+    <title>Conferidor de Jogos da Lotofácil</title>
+    <!-- A tag <title> define o título da página, 
+            que aparece na aba do navegador. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para incluir um 
+            arquivo CSS externo que controla a aparência da página. 
+    O atributo 'rel' especifica o relacionamento entre o 
+            documento atual e o arquivo vinculado, neste 
+            caso, um arquivo de folha de estilo. 
+    O atributo 'href' especifica o caminho para o arquivo CSS. -->
+
+</head>
+<!-- Fim da tag <head>. -->
+
+
+
+<body>
+<!-- A tag <body> define o corpo do documento HTML, onde 
+            todo o conteúdo visível da página é colocado. -->
+
+    <div class="container">
+    <!-- A tag <div> é usada para agrupar elementos, facilitando a 
+            estilização e manipulação com CSS e JavaScript. 
+    'class' é um atributo que especifica uma ou mais classes 
+            para o elemento, que podem ser usadas pelo CSS para 
+            aplicar estilos específicos. -->
+
+        <header>
+        <!-- A tag <header> é usada para representar um 
+                    cabeçalho de uma seção ou página. -->
+
+            <img src="lotofacil.jpg" alt="Lotofácil" class="cabecalho-imagem">
+            <!-- A tag <img> é usada para incorporar uma imagem na página.
+            'src' (source) define o caminho para a imagem.
+            'alt' (alternative) fornece um texto alternativo 
+                    para a imagem se ela não puder ser exibida.
+            'class' aqui é usada para aplicar estilos específicos 
+                    definidos no CSS para a imagem. -->
+
+        </header>
+        <!-- Fim da tag <header>. -->
+
+        <h1>Exercício Conferidor de Jogos da Lotofácil</h1>
+        <!-- A tag <h1> é usada para o título mais 
+                    importante da página (geralmente o 
+                    título principal). 
+        Os navegadores geralmente exibem o <h1> em um 
+                    tamanho de fonte grande por padrão. -->
+
+        <button id="abrirModalCadastroBtn">Cadastrar Jogo</button>
+        <!-- A tag <button> define um botão clicável.
+        'id' é um identificador único para o botão, que 
+                pode ser usado para referenciá-lo no CSS ou JavaScript.
+        O texto entre as tags <button> é o que é exibido no botão. -->
+
+        <button id="abrirModalSurpresinhaBtn">Surpresinha</button>
+        <!-- Outro <button> com um ID único para diferentes 
+                ações em JavaScript. -->
+
+        <div id="modalCadastro" class="modal">
+        <!-- Uma <div> que será usada como um modal (janela pop-up) 
+                para cadastro de jogos.
+        'id' é usado para identificação única, enquanto 'class' 
+                para aplicar estilos comuns a todos os modais. -->
+
+            <div class="modal-conteudo">
+            <!-- Div interna para conteúdo específico do modal. -->
+
+                <span class="fechar">&times;</span>
+                <!-- <span> é usado aqui para criar um botão 
+                        de fechar (×) no modal.
+                'class' é usada para aplicar estilos específicos 
+                        como posição e estilo do cursor. -->
+
+                <h2>Cadastrar Jogo</h2>
+                <!-- <h2> representa um subtítulo dentro do modal, 
+                        menos importante que <h1> mas ainda significativo. -->
+
+                <form id="formularioJogo">
+                <!-- A tag <form> é usada para criar um 
+                            formulário HTML para entrada do usuário.
+                'id' permite que o formulário seja identificado 
+                            unicamente dentro do documento. -->
+
+                    <label for="quantidadeNumeros">Quantidade de Números:</label>
+                    <!-- <label> define uma etiqueta para um elemento <input>.
+                    'for' associa a etiqueta a um elemento <input> 
+                            específico (identificado pelo id). -->
+
+                    <input type="number" id="quantidadeNumeros" min="15" max="20" value="15" required>
+                    <!-- <input> é usado para receber dados do usuário.
+                    'type="number"' especifica que deve aceitar apenas números.
+                    'id' é um identificador único.
+                    'min' e 'max' definem o valor mínimo e máximo aceitável.
+                    'value' define um valor inicial.
+                    'required' indica que o campo deve ser preenchido 
+                            antes que o formulário possa ser enviado. -->
+
+                    <div id="numerosCampos">
+                        <!-- Uma <div> para conter campos de números que 
+                                serão gerados dinamicamente com JavaScript. -->
+
+                    </div>
+                    <!-- Fim da div que conterá campos adicionais. -->
+
+                    <button type="submit">Salvar Jogo</button>
+                    <!-- Botão para submeter o formulário. 'type="submit"' 
+                            indica que ele enviará os dados do formulário. -->
+                    
+                </form>
+                <!-- Fim do formulário. -->
+
+            </div>
+            <!-- Fim do conteúdo do modal. -->
+
+        </div>
+        <!-- Fim do modal de cadastro. -->
+
+
+        <div id="modalSurpresinha" class="modal">
+        <!-- A tag <div> aqui cria um contêiner que será usado 
+                    como uma janela modal (pop-up).
+            'id' atribui um identificador único "modalSurpresinha" 
+                    para referências específicas via CSS ou JavaScript.
+            'class="modal"' aplica estilos predefinidos para modais, 
+                    como posicionamento, tamanho, etc. -->
+
+            <div class="modal-conteudo">
+            <!-- Esta <div> é usada para conter todos os elementos 
+                        internos do modal, ajudando na organização e na estilização.
+                'class="modal-conteudo"' é usada para aplicar estilos 
+                        específicos ao conteúdo dentro do modal, como 
+                        padding, background, etc. -->
+
+                <span class="fechar">&times;</span>
+                <!-- A tag <span> é usada aqui para criar um botão de 
+                            fechar o modal. O símbolo '&times;' representa um "X".
+                    'class="fechar"' é usada para estilizar o botão de 
+                            fechar, como posicionamento no canto e 
+                            estilos de hover. -->
+
+                <h2>Surpresinha</h2>
+                <!-- A tag <h2> define um cabeçalho para esta seção do 
+                            modal, dando um título que indica a 
+                            funcionalidade "Surpresinha". -->
+
+                <label for="quantidadeNumerosSurpresinha">Quantidade de Números:</label>
+                <!-- A tag <label> é usada para definir uma etiqueta para o 
+                            campo de entrada abaixo.
+                    'for="quantidadeNumerosSurpresinha"' associa este label 
+                            ao input correspondente, melhorando a acessibilidade. -->
+
+                <input type="number" id="quantidadeNumerosSurpresinha" min="15" max="20" value="15" required>
+                <!-- A tag <input> cria um campo para entrada de dados.
+                    'type="number"' define que o campo aceitará apenas números.
+                    'id="quantidadeNumerosSurpresinha"' fornece um 
+                            identificador único para referência no JavaScript ou CSS.
+                    'min="15"' e 'max="20"' definem o intervalo de 
+                            valores aceitáveis, de 15 a 20.
+                    'value="15"' estabelece um valor inicial para o campo.
+                    'required' significa que o campo deve ser preenchido 
+                            antes de enviar o formulário. -->
+
+                <p id="jogoSurpresinha"></p>
+                <!-- A tag <p> é usada para definir um parágrafo, que 
+                            neste caso, será usado para mostrar os números 
+                            escolhidos automaticamente pela "Surpresinha".
+                    'id="jogoSurpresinha"' permite manipular ou atualizar o 
+                            conteúdo deste parágrafo via JavaScript. -->
+
+                <button id="salvarSurpresinhaBtn">Salvar Jogo</button>
+                <!-- A tag <button> cria um botão que os usuários podem 
+                            clicar para salvar o jogo gerado automaticamente.
+                    'id="salvarSurpresinhaBtn"' é um identificador único 
+                            que permite adicionar funcionalidades específicas 
+                            via JavaScript, como adicionar o jogo à lista 
+                            de jogos salvos. -->
+
+            </div>
+            <!-- Fim da <div> que contém o conteúdo do modal. -->
+                
+        </div>
+        <!-- Fim do <div> modal que contém a funcionalidade "Surpresinha". -->
+
+
+        <div class="secao-conferir">
+        <!-- A tag <div> é usada aqui para agrupar uma seção 
+                    específica da página, dedicada a conferir 
+                    os números do jogo.
+            'class="secao-conferir"' é um atributo que aplica 
+                    estilos predefinidos para esta seção, como 
+                    margens, padding e cor de fundo. -->
+
+            <!-- Primeira linha -->
+            <div class="conferir-linha">
+            <!-- Esta <div> agrupa uma linha de inputs e labels, 
+                        facilitando o alinhamento e a organização.
+                'class="conferir-linha"' aplica estilos específicos 
+                        para esta linha, como exibição flexível e 
+                        justificação dos itens. -->
+
+                <label for="confereNum1">Número 1:</label>
+                <!-- <label> define uma etiqueta para o campo de 
+                            entrada abaixo.
+                    'for="confereNum1"' associa o label ao input 
+                            com id "confereNum1", o que melhora a acessibilidade. -->
+
+                <input type="number" id="confereNum1" min="1" max="25">
+                <!-- <input> cria um campo para entrada de dados numéricos.
+                    'type="number"' especifica que o campo aceitará apenas números.
+                    'id="confereNum1"' fornece um identificador único, 
+                            facilitando referências no CSS ou JavaScript.
+                    'min="1" max="25"' define o intervalo de valores 
+                            aceitáveis, de 1 a 25. -->
+
+                <label for="confereNum2">Número 2:</label>
+                <!-- Segue a mesma lógica do primeiro label, 
+                            associado ao segundo número. -->
+
+                <input type="number" id="confereNum2" min="1" max="25">
+                <!-- Segue a mesma lógica do primeiro input, 
+                            destinado ao segundo número. -->
+
+                <label for="confereNum3">Número 3:</label>
+                <!-- Label para o terceiro número. -->
+
+                <input type="number" id="confereNum3" min="1" max="25">
+                <!-- Input para o terceiro número. -->
+
+                <label for="confereNum4">Número 4:</label>
+                <!-- Label para o quarto número. -->
+
+                <input type="number" id="confereNum4" min="1" max="25">
+                <!-- Input para o quarto número. -->
+
+                <label for="confereNum5">Número 5:</label>
+                <!-- Label para o quinto número. -->
+
+                <input type="number" id="confereNum5" min="1" max="25">
+                <!-- Input para o quinto número. -->
+            </div>
+            <!-- Fim da primeira linha de inputs e labels. -->
+
+            <!-- Segunda linha -->
+            <div class="conferir-linha">
+            <!-- Esta <div> segue o mesmo padrão da anterior, 
+                        mas para os próximos cinco números. -->
+
+                <label for="confereNum6">Número 6:</label>
+                <!-- Label para o sexto número. -->
+
+                <input type="number" id="confereNum6" min="1" max="25">
+                <!-- Input para o sexto número. -->
+
+                <label for="confereNum7">Número 7:</label>
+                <!-- Label para o sétimo número. -->
+
+                <input type="number" id="confereNum7" min="1" max="25">
+                <!-- Input para o sétimo número. -->
+
+                <label for="confereNum8">Número 8:</label>
+                <!-- Label para o oitavo número. -->
+
+                <input type="number" id="confereNum8" min="1" max="25">
+                <!-- Input para o oitavo número. -->
+
+                <label for="confereNum9">Número 9:</label>
+                <!-- Label para o nono número. -->
+
+                <input type="number" id="confereNum9" min="1" max="25">
+                <!-- Input para o nono número. -->
+
+                <label for="confereNum10">Número 10:</label>
+                <!-- Label para o décimo número. -->
+
+                <input type="number" id="confereNum10" min="1" max="25">
+                <!-- Input para o décimo número. -->
+            </div>
+            <!-- Fim da segunda linha de inputs e labels. -->
+
+            <!-- Terceira linha -->
+            <div class="conferir-linha">
+                <!-- Esta <div> agrupa a terceira linha de campos de 
+                            entrada e rótulos. A classe "conferir-linha" 
+                            aplica estilos para alinhamento e espaçamento. -->
+                
+                    <label for="confereNum11">Número 11:</label>
+                    <!-- <label> associa este rótulo ao campo de
+                                 entrada correspondente (input) para o 
+                                 número 11. 'for' especifica o ID do input 
+                                 relacionado, melhorando a acessibilidade. -->
+                
+                    <input type="number" id="confereNum11" min="1" max="25">
+                    <!-- <input> define um campo para entrada de número. 
+                                Aceita valores de 1 a 25, como definido 
+                                pelos atributos 'min' e 'max'. O 'id' 
+                                permite referência específica via CSS ou JavaScript. -->
+                
+                    <label for="confereNum12">Número 12:</label>
+                    <!-- Segue o mesmo padrão para o número 12. -->
+                
+                    <input type="number" id="confereNum12" min="1" max="25">
+                    <!-- Campo de entrada para o número 12. -->
+                
+                    <label for="confereNum13">Número 13:</label>
+                    <!-- Rótulo para o campo de entrada do número 13. -->
+                
+                    <input type="number" id="confereNum13" min="1" max="25">
+                    <!-- Campo de entrada para o número 13. -->
+                
+                    <label for="confereNum14">Número 14:</label>
+                    <!-- Rótulo para o campo de entrada do número 14. -->
+                
+                    <input type="number" id="confereNum14" min="1" max="25">
+                    <!-- Campo de entrada para o número 14. -->
+                
+                    <label for="confereNum15">Número 15:</label>
+                    <!-- Rótulo para o campo de entrada do número 15. -->
+                
+                    <input type="number" id="confereNum15" min="1" max="25">
+                    <!-- Campo de entrada para o número 15. -->
+
+                </div>
+                <!-- Fim da terceira linha de campos de entrada e rótulos. -->
+
+            </div>
+            <!-- Fim da <div> que contém todas as seções de 
+                        conferência de números. -->
+        
+            <button id="botaoConferir">Conferir</button>
+            <!-- <button> define um botão clicável que, quando 
+                        acionado, inicia a verificação dos números 
+                        inseridos. 'id' permite que este botão seja 
+                        especificamente referenciado e manipulado 
+                        em JavaScript. -->
+                
+
+        <ul id="listaJogos"></ul>
+        <!-- <ul> define uma lista não ordenada que será usada 
+                    para exibir jogos salvos ou resultados de 
+                    conferência. 'id' permite manipulação via 
+                    JavaScript para adicionar dinamicamente itens à lista. -->
+                
+    </div>
+    <!-- Fim do container principal. -->
+
+    <script src="script.js"></script>
+    <!-- A tag <script> inclui um arquivo JavaScript externo que 
+                contém a lógica de interação para a página. 'src' 
+                especifica o caminho do arquivo de script. -->
+
+</body>
+<!-- Fim da tag <body>, que encerra todo o conteúdo 
+        visível da página. -->
+
+</html>
+<!-- Fim da tag <html> que encerra o documento HTML. -->

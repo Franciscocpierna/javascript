@@ -1,0 +1,549 @@
+/* estilos.css */
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família da fonte para todo o 
+            conteúdo dentro da tag <body>. 
+       Arial é uma fonte sem serifa, com 'sans-serif' 
+            como fallback se Arial não estiver disponível. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo de toda a página para um 
+            cinza claro (#f4f4f4). */
+
+    margin: 0;
+    /* Remove todas as margens padrão do <body>, fazendo 
+            com que o conteúdo se estenda até as 
+            bordas do navegador. */
+
+    padding: 0;
+    /* Remove todo o preenchimento padrão do <body>, 
+            garantindo que não haja espaço extra dentro 
+            das bordas do conteúdo principal. */
+
+    display: flex;
+    /* Estabelece um contexto de layout flexível para o <body>. 
+       Isso ajuda a alinhar e distribuir o espaço entre os 
+            itens filhos de maneira mais eficiente. */
+
+    justify-content: center;
+    /* Alinha os itens filhos (containers) horizontalmente 
+            ao centro do <body>. */
+
+    align-items: center;
+    /* Alinha os itens filhos (containers) verticalmente 
+            ao centro do <body>. */
+
+    height: 100vh;
+    /* Define a altura do <body> para ser igual a 100% da 
+            altura da viewport (tela visível do navegador). 
+       Isso é útil para garantir que o <body> preencha 
+            toda a tela verticalmente. */
+
+}
+
+.container {
+
+    text-align: center;
+    /* Alinha todo o texto dentro do contêiner ao centro. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do contêiner para branco. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20 pixels em todas as 
+            direções dentro do contêiner, criando espaço 
+            entre o conteúdo e as bordas do contêiner. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner, com cada canto 
+            tendo um raio de 10 pixels. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do contêiner. A sombra é 
+            posicionada centralmente (0px horizontal, 0px vertical),
+            com um desfoque de 10px e uma cor preta 
+            com 10% de opacidade (rgba(0, 0, 0, 0.1)). */
+
+    width: 80%;
+    /* Define a largura do contêiner para ser 80% da 
+            largura de seu contêiner pai (neste caso, o <body>). */
+
+    max-width: 1200px;
+    /* Estabelece uma largura máxima para o contêiner, 
+            garantindo que ele não exceda 1200 pixels, 
+       mesmo que 80% da largura do pai seja maior. */
+
+    margin-top: 20px; /* Adiciona um espaço no topo */
+    /* Define uma margem superior de 20 pixels para o 
+            contêiner, criando um espaço entre ele e 
+            quaisquer elementos acima. */
+
+}
+
+
+header {
+
+    margin-bottom: 20px;
+    /* Define uma margem abaixo do cabeçalho, criando 
+            espaço entre o cabeçalho e qualquer 
+            conteúdo que venha a seguir. */
+
+    overflow: hidden;
+    /* Impede que qualquer conteúdo dentro do <header> que 
+            seja maior que ele possa ser visto fora 
+            de seus limites. 
+       Isso pode ser útil para evitar que elementos 
+            desbordem visualmente o espaço designado. */
+
+}
+
+.cabecalho-imagem {
+
+    width: 100%;
+    /* Define a largura da imagem para ocupar 100% da 
+            largura do seu contêiner parente (neste 
+            caso, o <header>). */
+
+    height: auto;
+    /* A altura da imagem é ajustada automaticamente 
+            para manter a proporção da imagem enquanto a 
+            largura é alterada. */
+
+    display: block;
+    /* Muda o display da imagem de inline (padrão para 
+            imagens) para block, o que permite que ela 
+            respeite as propriedades de margem e preenchimento. */
+
+    object-position: center; /* Centraliza a imagem no contêiner */
+    /* Ajusta a posição da imagem dentro do seu quadro de 
+            visualização, garantindo que ela esteja 
+            centralizada horizontalmente. */
+
+}
+
+
+h1 {
+
+    font-size: 2em;
+    /* Define o tamanho da fonte do <h1> para 2 vezes o 
+            tamanho da fonte base do documento ou do 
+            elemento pai. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem abaixo do <h1>, criando 
+            espaço entre o título e o conteúdo que vem a seguir. */
+
+}
+
+button {
+
+    padding: 10px 20px;
+    /* Adiciona preenchimento dentro do botão, 10px na 
+            vertical e 20px na horizontal, tornando o 
+            botão mais fácil de clicar e visualmente mais agradável. */
+
+    margin: 10px;
+    /* Adiciona uma margem em torno do botão, separando-o de 
+            outros elementos ao redor. */
+
+    cursor: pointer;
+    /* Muda o cursor para o estilo de ponteiro quando o 
+            mouse está sobre o botão, indicando que ele é clicável. */
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo do botão para um verde específico. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para branco, 
+            garantindo que o texto seja legível contra o 
+            fundo verde. */
+
+    border: none;
+    /* Remove qualquer borda padrão que possa ser 
+            aplicada ao botão pelo navegador. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão, com um raio de 5px, 
+            para um visual mais suave e moderno. */
+
+    font-size: 1em;
+    /* Define o tamanho da fonte dentro do botão para ser o 
+            mesmo que o tamanho da fonte base do documento 
+            ou do elemento pai. */
+
+}
+
+button:hover {
+
+    background-color: #bb3094;
+    /* Altera a cor de fundo do botão quando o mouse 
+            está sobre ele, dando uma resposta visual 
+            que indica interatividade.
+       A cor é um tom de verde ligeiramente mais 
+            escuro do que o padrão. */
+
+}
+
+.modal {
+
+    display: none;
+    /* Oculta o modal por padrão. Utilizado para 
+            mostrar o modal apenas quando necessário 
+            através de JavaScript. */
+
+    position: fixed;
+    /* Posiciona o modal de forma fixa em relação à 
+            janela do navegador, fazendo com que ele 
+            fique visível independentemente do scroll 
+            na página. */
+
+    z-index: 1;
+    /* Define a ordem de empilhamento do modal. Um valor 
+            de 1 garante que ele fique acima de outros 
+            elementos normais da página, mas abaixo de 
+            itens com z-index mais alto. */
+
+    left: 0;
+    /* Posiciona a borda esquerda do modal no início da 
+            janela do navegador (ao longo do eixo horizontal). */
+
+    top: 0;
+    /* Posiciona o topo do modal no início da janela do 
+            navegador (ao longo do eixo vertical). */
+
+    width: 100%;
+    /* Faz o modal estender-se por toda a largura da 
+            janela do navegador. */
+
+    height: 100%;
+    /* Faz o modal estender-se por toda a altura da 
+            janela do navegador. */
+
+    overflow: auto;
+    /* Permite a rolagem dentro do modal se o conteúdo 
+            exceder a altura do modal. */
+
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Define a cor de fundo do modal. Usa uma cor 
+            preta com 40% de opacidade, criando um 
+            efeito de sombreamento para destacar o 
+            modal sobre o conteúdo da página. */
+
+}
+
+.modal-conteudo {
+
+    background-color: #fff;
+    /* Define a cor de fundo do conteúdo do modal 
+            para branco. */
+
+    margin: 5% auto;
+    /* Centraliza o modal horizontalmente e adiciona 
+            uma margem superior e inferior de 5%. */
+
+    padding: 20px;
+    /* Adiciona espaço dentro do contêiner do conteúdo 
+            do modal, separando o conteúdo das bordas. */
+
+    border: 1px solid #888;
+    /* Adiciona uma borda sólida ao redor do conteúdo do 
+            modal com a cor cinza escuro (#888) e largura de 1px. */
+
+    width: 90%;
+    /* Define a largura do conteúdo do modal para 90% do 
+            seu contêiner parente (o modal). */
+
+    max-width: 1300px;
+    /* Define uma largura máxima para o conteúdo do modal, 
+            garantindo que não se torne demasiadamente largo em 
+            telas grandes. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do conteúdo do modal para uma 
+            aparência mais suave com raio de 10px. */
+
+    font-size: 1.2em;
+    /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho 
+            padrão do texto, tornando o texto dentro do 
+            modal ligeiramente maior e mais legível. */
+
+}
+
+
+.fechar {
+
+    color: #aaa;
+    /* Define a cor do botão de fechar para cinza claro (#aaa). */
+
+    float: right;
+    /* Posiciona o botão de fechar à direita dentro do seu 
+            contêiner, permitindo que ele flutue para a 
+            direita dos outros conteúdos. */
+
+    font-size: 28px;
+    /* Define um tamanho grande de fonte para o botão de 
+            fechar, tornando-o mais visível e fácil de clicar. */
+
+    font-weight: bold;
+    /* Torna o texto do botão de fechar mais grosso, 
+            destacando-o ainda mais. */
+
+}
+
+
+.fechar:hover,
+.fechar:focus {
+
+    color: black;
+    /* Altera a cor do texto do botão de fechar para preto 
+            quando o mouse está sobre ele (hover) ou quando 
+            está focado (focus). */
+
+    text-decoration: none;
+    /* Remove qualquer decoração de texto, como sublinhado, 
+            que poderia ser aplicada por padrão ao focar ou passar o mouse. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro, indicando que o 
+            elemento é clicável. */
+
+}
+
+input[type="number"] {
+
+    width: 60px;
+    /* Define a largura dos campos de entrada de 
+            número para 60 pixels. */
+
+    margin: 5px;
+    /* Aplica uma margem de 5 pixels em todos os lados do 
+            input, ajudando a separá-lo de outros elementos. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10 pixels dentro do input, 
+            fazendo com que o texto não fique muito próximo das bordas. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e 
+            cor cinza claro (#ccc) ao redor do input. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do input com um raio de 5 
+            pixels para uma estética mais suave. */
+
+    font-size: 1em;
+    /* Define o tamanho da fonte dentro do input para ser o 
+            mesmo que o tamanho padrão de fonte do elemento pai. */
+
+}
+
+input[type="number"]:focus {
+
+    border-color: #4CAF50;
+    /* Altera a cor da borda para um verde vibrante (#4CAF50) 
+            quando o input está focado. */
+
+    outline: none;
+    /* Remove o contorno que alguns navegadores adicionam ao 
+            focar em elementos, para uma aparência mais limpa. */
+
+}
+
+.secao-conferir {
+
+    margin: 20px 0;
+    /* Aplica uma margem de 20 pixels acima e abaixo da 
+            seção, separando-a visualmente de outros conteúdos. */
+
+    background-color: #f3ffd7;
+    /* Define um verde claro como cor de fundo da seção de conferência. */
+
+    padding: 20px;
+    /* Adiciona 20 pixels de preenchimento em todas as 
+            direções dentro da seção, criando espaço entre o 
+            conteúdo e as bordas da seção. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da seção com um raio de 10 pixels. */
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida de 1 pixel de espessura e cor 
+            cinza muito claro (#ddd) ao redor da seção. */
+
+    max-height: 200px;
+    /* Define uma altura máxima para a seção de 200 pixels. */
+
+    overflow-y: auto;
+    /* Permite a rolagem vertical dentro da seção se o 
+            conteúdo exceder a altura máxima definida. */
+
+}
+
+.conferir-linha {
+
+    display: flex;
+    /* Usa o modelo de layout flexível para alinhar os 
+            elementos da linha horizontalmente. */
+
+    justify-content: center;
+    /* Centraliza os elementos horizontalmente dentro da linha. */
+
+    margin-bottom: 10px;
+    /* Aplica uma margem inferior de 10 pixels para cada 
+            linha, criando espaço entre as linhas consecutivas. */
+
+}
+
+.conferir-linha label {
+
+    margin-right: 10px;
+    /* Aplica uma margem à direita de cada rótulo dentro das 
+            linhas de conferência, separando-os visualmente 
+            dos inputs aos quais estão associados. */
+
+}
+
+
+ul {
+
+    list-style-type: none;
+    /* Remove os marcadores padrão (bolinhas, números, etc.) de 
+            uma lista não ordenada (<ul>), que são usados 
+            geralmente para indicar itens de lista. */
+
+    padding: 0;
+    /* Define o preenchimento interno da lista para 0, 
+            removendo qualquer espaço entre a borda da lista e 
+            seus itens, o que é útil para alinhar a lista com 
+            outros elementos da página. */
+
+}
+
+li {
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10 pixels em todas as 
+            direções dentro de cada item da lista (<li>), 
+            aumentando o espaço entre o conteúdo do item e 
+            sua borda. */
+
+    background-color: #fff;
+    /* Define a cor de fundo de cada item da lista para 
+            branco, destacando os itens contra possíveis 
+            cores de fundo mais escuras da página. */
+
+    margin: 10px 0;
+    /* Aplica uma margem vertical de 10 pixels acima e 
+            abaixo de cada item da lista, separando-os 
+            visualmente uns dos outros sem alterar o 
+            espaçamento lateral. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida de 1 pixel de espessura e 
+            cor cinza claro (#ddd) ao redor de cada item, 
+            contribuindo para uma divisão clara entre os itens. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos de cada item da lista com um 
+            raio de 5 pixels, proporcionando uma aparência 
+            mais suave e moderna. */
+
+    display: flex;
+    /* Define o modelo de caixa flexível para cada item da 
+            lista, permitindo um layout interno mais flexível e 
+            alinhamento de elementos dentro do item. */
+
+    justify-content: space-between;
+    /* Distribui o espaço entre os elementos internos de 
+            cada item da lista de maneira que eles sejam 
+            alinhados uniformemente nos extremos (início e fim) do item. */
+
+    align-items: center;
+    /* Centraliza verticalmente os elementos dentro de cada 
+            item da lista, garantindo que todos os elementos 
+            internos estejam alinhados ao centro da altura do item. */
+
+}
+
+li span {
+
+    margin-right: 10px;
+    /* Aplica uma margem à direita para cada <span> dentro de 
+            um item da lista, separando-o visualmente dos outros 
+            elementos próximos dentro do mesmo item. */
+
+    font-size: 1.2em;
+    /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho da 
+            fonte base, tornando o texto dentro do <span> ligeiramente 
+            maior e mais destacado para facilitar a leitura. */
+
+}
+
+
+.correto {
+
+    background-color: rgb(33, 6, 112);
+    /* Define a cor de fundo para um azul escuro profundo 
+            usando valores RGB. Especificamente, RGB(33, 6, 112) 
+            resulta em um azul quase roxo. */
+
+    color: white;
+    /* Define a cor do texto para branco, garantindo alta 
+            legibilidade contra o fundo escuro. */
+
+    border-radius: 3px;
+    /* Arredonda os cantos do elemento com um raio de 3 pixels, 
+            suavizando as bordas para um design mais moderno. */
+
+    padding: 3px;
+    /* Aplica um preenchimento interno de 3 pixels em todas as 
+            direções, aumentando o espaço entre o conteúdo do 
+            elemento e suas bordas. */
+
+}
+
+.todos-certos {
+
+    background-color: green;
+    /* Define a cor de fundo para verde, tradicionalmente 
+            usada para indicar sucesso ou conclusão correta. */
+
+    color: white;
+    /* Define a cor do texto para branco, criando um contraste 
+            claro com o fundo verde para fácil leitura. */
+
+}
+
+.acertos-medianos {
+
+    background-color: #f7e1a0;
+    /* Define a cor de fundo para um amarelo claro (#f7e1a0), 
+            uma cor intermediária que pode indicar uma 
+            performance mediana ou resultados mistos. */
+
+}
+
+.poucos-acertos {
+
+    background-color: #f7a0a0;
+    /* Define a cor de fundo para um vermelho claro (#f7a0a0), 
+            frequentemente usado para indicar resultados 
+            insatisfatórios ou alertas. */
+
+}
+
+#listaJogos {
+
+    max-height: 300px;
+    /* Define uma altura máxima de 300 pixels para o 
+            contêiner que hospeda a lista de jogos, ajudando a 
+            manter a interface do usuário ordenada e gerenciável. */
+
+    overflow-y: auto;
+    /* Permite a rolagem vertical dentro do contêiner se o 
+            conteúdo exceder 300 pixels de altura. 
+       Isso assegura que todo o conteúdo seja acessível sem 
+            estender excessivamente a página. */
+       
+}
