@@ -1,0 +1,253 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do corpo do documento 
+            para Arial, que é uma fonte sans-serif. Este 
+            tipo de fonte é geralmente considerado mais 
+            legível e moderno, sendo uma escolha comum 
+            para conteúdo de texto na web. */
+
+    padding: 40px 20px;
+    /* Aplica um preenchimento de 40 pixels no topo e 
+            na parte inferior do corpo, e 20 pixels nos 
+            lados. Isso garante que o conteúdo dentro 
+            do <body> não toque diretamente nas bordas 
+            da janela do navegador, melhorando a 
+            legibilidade e a estética geral. */
+
+}
+
+.banner {
+
+    position: fixed;
+    /* A propriedade position fixa o elemento .banner 
+            numa posição específica na janela do navegador. 
+            Isso significa que ele permanecerá visível na 
+            mesma posição, mesmo quando a página for rolada. */
+
+    width: 80%;
+    /* Define a largura do banner para 80% da largura da 
+            janela do navegador ou do contêiner pai, fazendo 
+            com que o tamanho do banner seja responsivo e 
+            se adapte a diferentes tamanhos de tela. */
+
+    background-color: #f2f2f2;
+    /* Seta a cor de fundo do banner para um cinza 
+            claro (#f2f2f2), que é uma escolha sutil e 
+            moderna, oferecendo um contraste leve sem 
+            distrair do conteúdo principal. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todas as 
+            direções dentro do banner, criando espaço 
+            entre o conteúdo do banner e suas bordas, 
+            tornando o conteúdo mais fácil de ler. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao banner, dando-lhe uma 
+            sensação de profundidade e elevação sobre 
+            outros conteúdos da página. A sombra projetada é 
+            sutil, utilizando preto com 10% de opacidade. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do banner, o que ajuda a 
+            chamar a atenção para as mensagens centrais e 
+            torna o layout mais atraente. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do banner com um raio de 10 
+            pixels. Isso suaviza o design do banner, o 
+            que pode tornar a interface do usuário 
+            visualmente mais amigável. */
+
+    cursor: pointer;
+    /* Altera o cursor para um ponteiro quando ele 
+            passa sobre o banner, indicando que o 
+            banner é um elemento interativo, geralmente 
+            associado a uma ação de clique. */
+
+}
+
+
+.banner img {
+
+    width: 100%;
+    /* Ajusta a largura da imagem para ocupar 100% do 
+            espaço disponível dentro do seu elemento 
+            pai (.banner). Isso garante que a imagem se 
+            estique para cobrir a largura completa do banner. */
+
+    height: auto;
+    /* Define a altura da imagem como 'auto', o que 
+            significa que a altura será ajustada 
+            proporcionalmente à largura, mantendo a 
+            relação de aspecto da imagem original. */
+
+    border-radius: 5px;
+    /* Aplica um raio de 5 pixels às bordas da imagem, 
+            arredondando-as ligeiramente para suavizar o 
+            design e tornar a interface mais amigável. */
+
+    margin-bottom: 10px;
+    /* Adiciona uma margem inferior de 10 pixels abaixo da 
+            imagem, criando um espaço entre a imagem e 
+            qualquer conteúdo que a siga no banner. */
+
+}
+
+h1, h2 {
+
+    color: #333;
+    /* Define a cor do texto para ambos os cabeçalhos h1 e h2 
+            como um cinza escuro (#333), que oferece excelente
+             legibilidade e contrasta bem com fundos claros. */
+
+}
+
+
+p {
+
+    color: #555;
+    /* A cor do texto para todos os parágrafos é definida 
+            como um cinza médio (#555), que é suave aos 
+            olhos enquanto mantém a legibilidade suficiente. */
+
+}
+
+
+.botaoFechar, #botaoFecharPrincipal {
+
+    padding: 10px 20px;
+    /* Define o preenchimento dentro do botão, com 10 
+            pixels na vertical e 20 pixels na horizontal, 
+            fazendo com que o botão seja grande o suficiente 
+            para ser facilmente clicável e visualmente destacado. */
+
+    font-size: 16px;
+    /* Ajusta o tamanho da fonte para 16 pixels, o que é 
+            adequado para a maioria dos dispositivos e 
+            melhora a legibilidade do texto no botão. */
+
+    background-color: #7e0e17;
+    /* Define a cor de fundo dos botões como um vermelho 
+            vivo (#7e0e17), criando uma aparência atraente e 
+            chamativa, que indica uma ação de 'fechar' ou 
+            cancelar. */
+
+    color: white;
+    /* O texto dentro dos botões é branco, proporcionando um 
+            alto contraste com o fundo vermelho, o que é 
+            essencial para a legibilidade e o impacto visual. */
+
+    border: none;
+    /* Remove qualquer borda do botão, dando-lhe um 
+            design mais limpo e moderno. */
+
+    border-radius: 5px;
+    /* Suaviza as bordas do botão com um raio de 5 pixels, 
+            alinhando-se com o estilo arredondado geral 
+            usado em outros elementos. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando sobrevoado, 
+            indicando que o botão é clicável. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, separando o 
+            botão de outros conteúdos acima dele, o que ajuda a 
+            definir sua área clicável de forma clara. */
+
+}
+
+
+.botaoFechar:hover, #botaoFecharPrincipal:hover {
+
+    background-color: #e84118;
+    /* Modifica a cor de fundo dos botões .botaoFechar e 
+            #botaoFecharPrincipal quando o mouse está sobre 
+            eles para um tom de vermelho escuro (#e84118), 
+            oferecendo um feedback visual que indica 
+            interatividade e enfatizando a ação de "fechar" 
+            ou "cancelar". */
+
+}
+
+#bannerPrincipal {
+
+    top: 10%; 
+    left: 10%;
+    /* Posiciona o #bannerPrincipal fixamente na tela 
+            com um espaço de 10% do topo e 10% da margem 
+            esquerda, garantindo que o banner esteja visível, 
+            mas não obstrua completamente a visão de outros 
+            conteúdos importantes da página. */
+
+}
+
+#bannerAnimado1, #bannerAnimado2 {
+
+    animation: deslizar-para-dentro 3s ease-in-out infinite alternate;
+    /* Aplica uma animação chamada 'deslizar-para-dentro' aos 
+            banners #bannerAnimado1 e #bannerAnimado2. Esta 
+            animação dura 3 segundos e usa uma função de 
+            timing 'ease-in-out' para um movimento suave de 
+            entrada e saída, repetindo-se infinitamente e 
+            alternando a direção a cada ciclo para criar um 
+            efeito dinâmico visualmente atraente. */
+
+    bottom: 20px;
+    /* Posiciona os banners animados a 20px do fundo da 
+            janela do navegador, contribuindo para uma 
+            localização consistente que permite que o conteúdo 
+            principal da página seja visualizado sem 
+            grandes obstruções. */
+
+}
+
+#bannerAnimado1 {
+
+    left: 10%;
+    /* Especificamente para o #bannerAnimado1, define que 
+            ele deve estar fixo 10% a partir da margem 
+            esquerda da tela, estabelecendo sua posição 
+            horizontal de uma maneira que harmonize com a 
+            estrutura geral da página. */
+
+}
+
+#bannerAnimado2 {
+
+    right: 10%;
+    /* Para o #bannerAnimado2, este é fixado 10% a partir da 
+            margem direita da tela, criando um equilíbrio 
+            visual ao posicioná-lo de forma simétrica ao 
+            #bannerAnimado1, mas do lado oposto. */
+
+}
+
+@keyframes deslizar-para-dentro {
+
+    from {
+
+        transform: translateY(100%);
+        /* Define o ponto de partida da animação. 
+                'translateY(100%)' significa que o banner 
+                começa completamente deslocado para baixo, 
+                fora da área visível da tela, como se 
+                estivesse deslizando para dentro do 
+                campo de visão. */
+
+    }
+
+    to {
+
+        transform: translateY(0);
+        /* Define o ponto final da animação. 'translateY(0)' 
+                significa que o banner termina em sua posição 
+                normal, completamente visível e alinhado 
+                com seu ponto de fixação especificado por 
+                outras regras CSS. */
+
+    }
+    
+}

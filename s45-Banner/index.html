@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- Essa declaração define que este documento é um 
+            documento HTML5, o que ajuda os navegadores a 
+            interpretar e exibir corretamente o conteúdo 
+            de acordo com os padrões modernos da web. -->
+
+<html lang="pt">
+<!-- Abre a tag HTML especificando que o idioma principal do 
+            conteúdo da página é o português. Isso é importante 
+            para acessibilidade e SEO (Search Engine Optimization). -->
+
+<head>
+<!-- A tag <head> contém informações (metadados) sobre o 
+            documento HTML, como estilo, scripts e dados gerais 
+            de configuração que não são exibidos diretamente 
+            na parte visual da página. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres UTF-8 para a página, o 
+            que suporta a maioria dos caracteres usados em diversos 
+            idiomas. Isso garante que o texto apareça corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define as configurações de visualização para 
+            diferentes dispositivos, garantindo que a 
+            página seja responsiva. 
+        'width=device-width' faz com que a largura da
+             página seja igual à largura do dispositivo. 
+        'initial-scale=1.0' estabelece o nível de zoom 
+            inicial quando a página é carregada pela 
+            primeira vez. -->
+
+    <title>Página com Banners</title>
+    <!-- Define o título da página, que é exibido na 
+            aba do navegador. 'Página com Banners' dá 
+            uma ideia geral do conteúdo ou propósito 
+            da página. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Link para o arquivo de CSS externo chamado 'estilo.css'. 
+            Este arquivo contém as regras de estilo que 
+            definem a aparência da página. -->
+
+</head>
+<!-- Fecha a tag <head>. Todo o conteúdo dentro 
+            desta tag define as configurações da cabeça 
+            do documento, incluindo links para scripts e 
+            folhas de estilo, mas não inclui nenhum 
+            conteúdo visualmente apresentável. -->
+
+<body>
+<!-- Abre o corpo do documento HTML, onde todo o 
+            conteúdo visível da página é colocado. -->
+
+    <h2>Explore Nosso Site</h2>
+    <!-- Título secundário que serve como chamada inicial 
+            para os visitantes do site, convidando-os a 
+            explorar os recursos oferecidos. -->
+
+    <p>Descubra todos os recursos que oferecemos e aproveite ao máximo sua visita!</p>
+    <!-- Parágrafo de introdução que complementa o título 
+            acima, reforçando a mensagem de exploração e 
+            aproveitamento dos recursos do site. -->
+
+    <div id="bannerPrincipal" class="banner">
+    <!-- Divisão que contém o primeiro banner promocional, 
+                identificado por um ID único para manipulação 
+                específica, e classificado com uma classe 
+                comum a outros banners para estilização consistente. -->
+
+        <h1>Bem-vindo ao Nosso Site!</h1>
+        <!-- Título principal dentro do banner, dando as 
+                boas-vindas aos visitantes e criando um 
+                ponto focal visual. -->
+
+        <p>Participe de nossas incríveis promoções.</p>
+        <!-- Texto persuasivo que incentiva os visitantes a 
+                participar das promoções oferecidas no site. -->
+
+        <button id="botaoFecharPrincipal">Fechar</button>
+        <!-- Botão para fechar o banner. O ID único permite 
+                manipulação específica via JavaScript, como 
+                definido no arquivo de script vinculado. -->
+
+    </div>
+
+    <div class="banner" id="bannerAnimado1">
+    <!-- Outro banner promocional com animação, identificado 
+                por um ID único e com a mesma classe dos 
+                outros banners para estilização consistente. -->
+
+        <img src="imagem-exemplo.jpg" alt="Promoção" class="imagemBanner">
+        <!-- Imagem ilustrativa do banner, acompanhada de 
+                texto alternativo que descreve a imagem para 
+                melhor acessibilidade e SEO. -->
+
+        <p>Descubra Mais!</p>
+        <!-- Chamada para ação dentro do banner, convidando o 
+                visitante a explorar mais sobre as promoções. -->
+
+        <button class="botaoFechar">Fechar</button>
+        <!-- Botão para fechar o banner, com classe comum a 
+                outros botões semelhantes para permitir uma 
+                manipulação coletiva via JavaScript. -->
+
+    </div>
+
+    <div class="banner" id="bannerAnimado2">
+    <!-- Terceiro banner, semelhante aos anteriores, com 
+                elementos visuais e de interação consistentes, 
+                também com animação. -->
+
+        <img src="imagem-exemplo.jpg" alt="Novidades" class="imagemBanner">
+        <!-- Imagem promocional com texto alternativo que 
+                informa sobre o conteúdo da imagem, importante 
+                para acessibilidade e SEO. -->
+
+        <p>Não Perca Nossas Novidades!</p>
+        <!-- Frase de impacto para capturar a atenção do 
+                usuário e incentivá-lo a se manter atualizado 
+                com o conteúdo do site. -->
+
+        <button class="botaoFechar">Fechar</button>
+        <!-- Botão para fechar o banner, facilitando o controle do 
+                usuário sobre os elementos visuais na página. -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Inclusão do arquivo JavaScript que contém scripts 
+                para adicionar dinâmica à página, como 
+                fechar banners e reagir a cliques. -->
+
+</body>
+<!-- Fecha a tag <body>, encerrando todos os 
+            conteúdos visíveis da página. -->
+            
+</html>
+<!-- Fecha a tag <html>, marcando o fim do documento HTML. -->
