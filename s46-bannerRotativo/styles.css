@@ -1,0 +1,938 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do corpo do documento 
+                para Arial, uma fonte sans-serif. Arial é uma 
+                escolha popular devido à sua legibilidade e 
+                aparência limpa em diferentes resoluções de tela. */
+
+    margin: 0;
+    /* Remove todas as margens externas do elemento <body>, 
+                garantindo que não haja espaço extra em volta dos 
+                elementos internos da página, o que é útil para um 
+                controle de layout mais preciso. */
+
+    padding: 0;
+    /* Remove todo o preenchimento interno do elemento <body>, 
+                assegurando que os elementos dentro de <body> 
+                alinhem diretamente nas bordas da janela do navegador. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo da página para um cinza muito 
+                claro (#f4f4f4), proporcionando um fundo suave que não 
+                cansa os olhos e melhora a legibilidade do conteúdo. */
+
+    position: relative;
+    /* Define a posição do <body> como relativa, o que permite 
+                posicionar elementos filhos (como pop-ups ou elementos 
+                flutuantes) com relação à posição do próprio <body>. */
+                
+}
+
+header {
+
+    background-color: #055f57;
+    /* Define a cor de fundo do cabeçalho para um tom de 
+                verde-azulado (#00a699), uma cor vibrante que 
+                pode ajudar a estabelecer uma identidade visual 
+                forte e atrair a atenção dos usuários. */
+
+    color: white;
+    /* Define a cor do texto dentro do cabeçalho para branco, 
+                criando um alto contraste com o fundo verde-azulado, 
+                o que melhora a visibilidade e a legibilidade dos textos. */
+
+    display: flex;
+    /* Utiliza Flexbox para organizar os elementos dentro do cabeçalho. 
+                Flexbox é um modelo de layout que facilita a disposição 
+                de elementos em uma linha ou coluna, proporcionando 
+                alinhamento e distribuição flexível de espaço 
+                entre os itens. */
+
+    justify-content: space-between;
+    /* Distribui o espaço entre os elementos dentro do cabeçalho, 
+                posicionando o primeiro elemento no início e o 
+                último elemento no final, com espaçamento máximo 
+                entre eles. Isso é útil para separar o logotipo e o 
+                menu de navegação nos extremos do cabeçalho. */
+
+    align-items: center;
+    /* Alinha todos os elementos dentro do cabeçalho verticalmente 
+                ao centro, garantindo que eles tenham uma aparência 
+                uniforme e estejam alinhados independentemente 
+                de suas alturas. */
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento de 10px na parte superior e inferior 
+                e 20px nos lados do cabeçalho. Isso adiciona espaço 
+                dentro do cabeçalho, separando visualmente o 
+                conteúdo das bordas e melhorando a estética geral. */
+
+}
+
+
+.logo {
+
+    display: flex;
+    /* A propriedade 'display: flex' torna o container '.logo' um 
+                flex container, habilitando o uso de Flexbox para 
+                alinhar e distribuir espaçamento entre elementos-filho 
+                de forma eficiente. Isso facilita o alinhamento vertical e 
+                horizontal de maneira simples e responsiva. */
+
+    align-items: center;
+    /* 'align-items: center' alinha verticalmente todos os 
+                elementos-filho (neste caso, a imagem e o texto do logo) 
+                ao centro, garantindo que o logo e o texto estejam 
+                centralizados um em relação ao outro, proporcionando 
+                um design harmonioso. */
+                
+}
+
+.logo img {
+
+    height: 50px;
+    /* Define a altura da imagem do logo para 50 pixels, 
+                garantindo que o logo mantenha uma dimensão 
+                consistente em toda a navegação do site. */
+
+    margin-right: 10px;
+    /* Aplica uma margem direita de 10 pixels à imagem do 
+                logo, criando um espaço entre o logo e o texto 
+                adjacente, o que melhora a legibilidade e a 
+                estética visual do cabeçalho. */
+
+}
+
+nav ul {
+
+    list-style: none;
+    /* Remove os marcadores padrão de lista, como discos ou 
+                números, para um design mais limpo e profissional, 
+                típico em menus de navegação. */
+
+    padding: 0;
+    /* Remove o preenchimento interno do elemento 'ul', que é o 
+                container principal para os links de navegação, para 
+                que o alinhamento e o espaçamento possam ser 
+                controlados mais precisamente. */
+
+    display: flex;
+    /* Torna a lista um flex container, permitindo que os 
+                elementos da lista (links) sejam dispostos em uma 
+                única linha horizontal, aproveitando as propriedades 
+                flexíveis para ajustar o layout de maneira responsiva e 
+                estética. */
+
+    gap: 20px;
+    /* Define um espaço de 20 pixels entre cada item da lista, 
+                substituindo a necessidade de margens individuais e 
+                ajudando a manter um espaçamento uniforme entre os 
+                links de navegação. */
+
+}
+
+nav ul li a {
+
+    color: white;
+    /* Define a cor do texto dos links como branco, criando um 
+                alto contraste com o fundo escuro do cabeçalho e 
+                melhorando a visibilidade e a legibilidade dos links. */
+
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links, resultando em um 
+                visual mais limpo e mais adequado para designs de 
+                interface de usuário modernos. Este estilo é comum em 
+                cabeçalhos de sites para evitar a aparência de texto de 
+                hipertexto tradicional e enfatizar a integração 
+                estética do texto no design geral. */
+
+}
+
+.banner-responsivo {
+
+    background-color: #00a699;
+    /* Seta a cor de fundo do banner responsivo para um verde-azulado (#00a699), 
+                criando uma aparência vibrante e chamativa que 
+                captura a atenção dos visitantes. */
+
+    color: white;
+    /* Define a cor do texto dentro do banner para branco, 
+                garantindo alto contraste com o fundo verde-azulado 
+                para excelente legibilidade. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do banner, ajudando a focalizar a 
+                atenção do usuário no conteúdo e garantindo uma 
+                apresentação uniforme em todos os dispositivos. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20px ao redor do conteúdo 
+                interno do banner, criando espaço entre o texto e 
+                as bordas do banner e melhorando a experiência visual. */
+
+    margin: 0;
+    /* Remove as margens externas do banner, garantindo que ele 
+                se estenda completamente de lado a lado sem 
+                espaço extra nas bordas. */
+
+    border-radius: 10px;
+    /* Arredonda as bordas do banner com um raio de 10px, 
+                suavizando o design geral e dando um toque 
+                mais moderno e amigável. */
+
+    width: 100%;
+    /* Define a largura do banner para 100%, garantindo que 
+                ele ocupe toda a largura da viewport. */
+
+    position: fixed;
+    /* Posiciona o banner de forma fixa, fazendo com que ele 
+                permaneça visível no topo da página mesmo ao 
+                rolar a tela para baixo. */
+
+    top: 0;
+    /* Posiciona o banner no topo da viewport. */
+
+    left: 0;
+    /* Alinea o banner à esquerda da viewport. */
+
+    z-index: 1002;
+    /* Estabelece a pilha de ordem do elemento em um valor 
+                alto para garantir que ele fique sobre outros 
+                elementos da página que possam ter z-index menor. */
+
+}
+
+.banner-responsivo .conteudo-banner {
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário passa o 
+                mouse sobre o conteúdo do banner, indicando que é 
+                clicável e interativo. */
+
+}
+
+.banner-responsivo .conteudo-banner h2 {
+
+    margin: 0;
+    /* Remove a margem do cabeçalho h2 dentro do conteúdo do 
+                banner para evitar espaçamento extra e manter a 
+                compactação do layout. */
+
+    font-size: 2em;
+    /* Aumenta o tamanho da fonte do cabeçalho h2 para 2em, 
+                tornando-o proeminente e fácil de ler, o que ajuda a 
+                transmitir a mensagem chave do banner de forma eficaz. */
+
+}
+
+.banner-responsivo .conteudo-banner p {
+
+    margin: 10px 0 0;
+    /* Define a margem superior do parágrafo para 10px 
+                enquanto remove as margens lateral e inferior, 
+                criando um espaçamento vertical adequado entre o 
+                título e o texto sem adicionar espaçamento 
+                desnecessário nas laterais. */
+
+    font-size: 1.2em;
+    /* Define o tamanho da fonte dos parágrafos para 1.2em, 
+                garantindo que o texto seja legível mas não tão 
+                dominante quanto o cabeçalho, mantendo uma 
+                hierarquia visual clara. */
+
+}
+
+
+.fechar-banner-responsivo {
+
+    position: absolute;
+    /* Posiciona o botão de fechamento de forma absoluta, o 
+                que permite que ele seja colocado em relação ao 
+                seu container mais próximo posicionado de forma não 
+                estática (neste caso,  o `.banner-responsivo`). */
+
+    top: 10px;
+    /* Posiciona o botão 10 pixels abaixo do topo de seu container, 
+                garantindo que ele seja facilmente acessível sem 
+                interferir demais no conteúdo central do banner. */
+
+    right: 120px; /* Ajuste para trazer o botão mais para a esquerda */
+    /* Coloca o botão 120 pixels à esquerda do lado direito 
+                de seu container, um ajuste específico para 
+                alinhar visualmente o botão conforme o design desejado. */
+
+    background-color: #ff0000; /* Cor visível */
+    /* Define a cor de fundo do botão para um vermelho brilhante (#ff0000), 
+                garantindo que ele se destaque sobre outros elementos e 
+                chame a atenção para a ação de fechamento. */
+
+    border: none;
+    /* Remove qualquer borda do botão, favorecendo um design 
+                mais limpo e moderno. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para branco, criando 
+                um contraste alto com o fundo vermelho, o que facilita a 
+                leitura e o reconhecimento do símbolo de fechamento (✖). */
+
+    padding: 5px 10px;
+    /* Aplica um preenchimento interno no botão para torná-lo mais 
+                fácil de clicar e visualmente agradável. 5 pixels na 
+                vertical e 10 pixels na horizontal oferecem espaço 
+                suficiente para interação sem serem 
+                excessivamente grandes. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando hover sobre o botão, 
+                indicando que o elemento é clicável. */
+
+    border-radius: 50%;
+    /* Arredonda as bordas do botão para formar um círculo completo, 
+                tornando o design mais amigável e esteticamente agradável. */
+
+    font-size: 1.2em;
+    /* Aumenta o tamanho da fonte do símbolo dentro do botão para 1.2 
+                vezes o tamanho do texto normal, assegurando que o 
+                ícone de fechamento seja claramente visível. */
+
+}
+
+
+.container-carousel {
+
+    position: fixed;
+    /* Fixa o container do carousel na página, permitindo que 
+                ele permaneça visível independentemente do 
+                scrolling da página. */
+
+    top: 120px;
+    /* Posiciona o container 120 pixels abaixo do topo da janela do 
+                navegador, garantindo que ele esteja visível mas não 
+                interfira com outros elementos fixos, como um 
+                banner ou cabeçalho. */
+
+    left: 50%;
+    /* Posiciona o eixo horizontal do container no 
+                centro da página. */
+
+    transform: translateX(-50%);
+    /* Corrige o posicionamento horizontal do container ajustando-o 
+                para trás pela metade de sua própria largura, 
+                centrando-o efetivamente. */
+
+    width: 80%;
+    /* Define a largura do container para 80% da largura da 
+                viewport, proporcionando um design responsivo que 
+                se adapta a diferentes tamanhos de tela. */
+
+    max-width: 800px;
+    /* Estabelece uma largura máxima de 800 pixels para o 
+                container, assegurando que ele não fique 
+                desproporcionalmente grande em telas maiores. */
+
+    z-index: 1001;
+    /* Coloca o container do carousel acima de outros elementos na 
+                página com z-index menor, mas abaixo de elementos 
+                como banners modais que podem ter um z-index 
+                ainda maior. */
+
+    background-color: transparent;
+    /* Define a cor de fundo do container para transparente, o 
+                que permite que o design de fundo da página ou 
+                outros elementos por trás dele sejam visíveis. */
+
+}
+
+
+.carousel {
+
+    position: relative;
+    /* Configura a posição do elemento carousel como relativa. 
+                Isso permite que os elementos posicionados 
+                absolutamente dentro dele, como botões de 
+                navegação, sejam alinhados em relação a 
+                este container. */
+
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que ultrapasse os limites 
+                definidos do container do carousel. Isso é 
+                essencial para criar a ilusão de elementos 
+                deslizantes que entram e saem do campo de 
+                visão sem afetar o layout externo. */
+
+    width: 100%;
+    /* Estabelece a largura do carousel como 100% do seu 
+                container pai, fazendo com que ele ocupe toda a 
+                largura disponível. Isso é importante para garantir 
+                que o carousel se ajuste responsivamente a 
+                diferentes tamanhos de tela. */
+
+    border-radius: 10px;
+    /* Aplica um raio de 10 pixels nas bordas do carousel, 
+                conferindo um aspecto mais suave e esteticamente 
+                agradável. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao redor do carousel, elevando-o 
+                visualmente em relação ao fundo e melhorando a 
+                percepção de profundidade. A sombra é sutil, 
+                usando uma transparência baixa para não 
+                sobrecarregar visualmente. */
+
+}
+
+.carousel-interno {
+
+    display: flex;
+    /* Utiliza Flexbox para o layout dos itens dentro do 
+                carousel, alinhando-os horizontalmente. Isso 
+                permite que os slides sejam exibidos em uma 
+                única linha e deslizem suavemente durante a 
+                transição. */
+
+    transition: transform 0.5s ease-in-out;
+    /* Aplica uma animação de transição no carousel quando a 
+                propriedade 'transform' é alterada. A duração é 
+                de 0.5 segundos e utiliza uma função 'ease-in-out' 
+                para uma aceleração e desaceleração suaves, 
+                criando uma sensação natural de movimento. */
+
+}
+
+.item-carousel {
+
+    min-width: 100%;
+    /* Define a largura mínima de cada item do carousel 
+                como 100%, garantindo que cada item ocupe 
+                completamente a largura do container do carousel. 
+                Isso é crucial para garantir que cada slide seja 
+                visualizado corretamente sem sobreposição. */
+
+    cursor: pointer;
+    /* Muda o cursor para indicar que os itens do carousel 
+                são interativos, normalmente indicando que 
+                algum evento de clique está associado. */
+
+    transition: opacity 0.5s ease-in-out;
+    /* Define uma transição suave para a propriedade de 
+                opacidade, utilizada quando os itens entram ou 
+                saem da visualização ativa, permitindo que as 
+                mudanças de visibilidade ocorram de maneira elegante. */
+
+}
+
+.item-carousel img {
+
+    width: 100%;
+    /* Estabelece que as imagens dentro dos itens do 
+                carousel ocupem 100% da largura do item, 
+                garantindo que as imagens sejam redimensionadas 
+                para preencher o espaço disponível. */
+
+    border-radius: 10px;
+    /* Aplica bordas arredondadas às imagens. */
+
+}
+
+
+.controle-carousel {
+
+    position: absolute;
+    /* Posiciona os botões de controle ('anterior' e 'próximo') 
+                em relação ao container mais próximo com
+                 posição não estática, no caso, o carousel, para 
+                 um posicionamento preciso dentro dele. */
+
+    top: 50%;
+    /* Posiciona os botões no meio vertical do carousel. */
+
+    transform: translateY(-50%);
+    /* Ajusta a posição do botão para cima em 50% da sua 
+                altura, centralizando-o verticalmente em relação 
+                ao carousel. Isso garante que o botão esteja 
+                alinhado exatamente no meio do container 
+                verticalmente. */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Define a cor de fundo dos botões com uma cor preta 
+                semi-transparente, permitindo uma visualização 
+                parcial do conteúdo por trás deles, o que 
+                adiciona um toque de estilo sem obscurecer 
+                completamente o conteúdo. */
+
+    border: none;
+    /* Remove as bordas do botão, proporcionando um visual 
+                mais limpo e moderno. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão como branco, 
+                criando um contraste alto com o fundo escuro para 
+                melhor legibilidade. */
+
+    padding: 10px;
+    /* Aplica um preenchimento ao redor do conteúdo do botão, 
+                aumentando sua área de clique e melhorando a 
+                acessibilidade. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando hover sobre o 
+                botão, indicando que é um elemento interativo. */
+
+    z-index: 2;
+    /* Configura um z-index para garantir que os botões de 
+                controle apareçam acima de outros elementos 
+                dentro do mesmo contexto de empilhamento. */
+
+}
+
+.controle-carousel.anterior {
+
+    left: 10px;
+    /* Posiciona o botão 'anterior' a 10 pixels da borda 
+                esquerda do carousel, facilitando o acesso e 
+                mantendo-o visivelmente separado de 
+                outros conteúdos. */
+
+}
+
+.controle-carousel.proximo {
+
+    right: 10px;
+    /* Posiciona o botão 'próximo' a 10 pixels da borda 
+                direita do carousel, coerente com a localização 
+                do botão 'anterior' mas do lado oposto. */
+
+}
+
+.fechar-carousel {
+
+    position: absolute;
+    /* Posiciona o botão de fechar em relação ao container 
+                mais próximo com posição não estática, o que 
+                geralmente é o próprio carousel. */
+
+    top: 10px;
+    /* Coloca o botão de fechar 10 pixels abaixo do topo do 
+                carousel, tornando-o facilmente acessível e visível. */
+
+    right: 10px;
+    /* Posiciona o botão de fechar 10 pixels afastado da borda 
+                direita do carousel, facilitando o acesso e 
+                mantendo a estética alinhada com 
+                outros controles. */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Utiliza um fundo semi-transparente semelhante aos 
+                outros botões de controle, mantendo a 
+                consistência de design e permitindo uma 
+                visibilidade parcial do conteúdo por trás. */
+
+    border: none;
+    /* Elimina as bordas do botão para um visual mais clean. */
+
+    color: white;
+    /* Usa a cor branca para o texto ou ícone dentro do botão, 
+                garantindo que o símbolo de fechamento seja 
+                facilmente reconhecível contra o fundo escuro. */
+
+    padding: 5px 10px;
+    /* Aplica um preenchimento menor em relação aos outros 
+                botões, adequado ao tamanho geralmente menor 
+                do botão de fechar. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando hover sobre o 
+                botão, reforçando a sua funcionalidade interativa. */
+
+    z-index: 2; /* Define o z-index para assegurar que o 
+                botão de fechar fique visível acima de outros 
+                conteúdos do carousel. */
+
+}
+
+.sobre-pets {
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20px em todas as 
+                direções internas do elemento, criando 
+                espaço entre o conteúdo e as bordas do 
+                container para uma melhor legibilidade e 
+                estética visual. */
+
+    background-color: white;
+    /* Define a cor de fundo do container para branco, 
+                proporcionando uma tela limpa que destaca o 
+                conteúdo colorido ou texto sobre ela. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do container com um raio de 10px, 
+                suavizando a aparência geral e contribuindo 
+                para um design moderno e amigável. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra sutil ao redor do container, 
+                melhorando sua proeminência na página e adicionando 
+                profundidade visual, tornando o design mais 
+                dinâmico e interessante. */
+
+    z-index: 0;
+    /* Estabelece a posição do stack do elemento no 
+                contexto 3D da página, aqui sendo definido 
+                como 0, o que geralmente é o padrão, mas é 
+                útil para controle explícito quando se 
+                trabalha com elementos sobrepostos. */
+
+    margin-top: 20px; 
+    /* Adiciona uma margem no topo do container para 
+                separá-lo de elementos acima dele, neste caso, 
+                garantindo um espaço visual após banners ou 
+                outros conteúdos que possam estar acima 
+                na página. */
+                
+}
+
+
+.conteudo-principal {
+
+    width: 100%;
+    /* Define a largura do conteúdo para 100% do seu 
+                container pai, garantindo que ocupe todo 
+                o espaço horizontal disponível. */
+
+    max-width: 1200px;
+    /* Limita a largura máxima do conteúdo a 1200px, 
+                garantindo que o texto e outros elementos 
+                não se tornem demasiadamente estendidos em 
+                monitores muito largos, o que poderia 
+                prejudicar a legibilidade. */
+
+    margin: 0 auto;
+    /* Centraliza o conteúdo horizontalmente dentro de 
+                seu container, combinando margens automáticas 
+                em ambos os lados. */
+
+    margin-top: 10px;
+    /* Adiciona uma pequena margem no topo apenas para 
+                criar um espaço visual entre o conteúdo e 
+                qualquer elemento diretamente acima dele, 
+                neste caso, possivelmente um título ou 
+                cabeçalho dentro da mesma seção. */
+
+}
+
+
+footer {
+
+    background-color: #00a699;
+    /* Define a cor de fundo do rodapé para um verde-azulado 
+                vibrante (#00a699), criando um contraste estético 
+                com outras seções e unificando o design do site 
+                com o cabeçalho. */
+
+    color: white;
+    /* Define a cor do texto dentro do rodapé para branco, 
+                garantindo legibilidade contra o fundo colorido e 
+                mantendo a consistência do esquema de cores. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do rodapé, o que é ideal para 
+                disposições simples e para garantir que qualquer 
+                conteúdo seja facilmente visível e 
+                esteticamente agradável. */
+
+    padding: 10px 0;
+    /* Aplica um preenchimento vertical de 10px no topo e 
+                na base do rodapé, criando espaço entre o 
+                texto e as bordas do rodapé, melhorando a 
+                experiência visual. */
+
+}
+
+
+footer a {
+
+    color: white;
+    /* Mantém a cor dos links dentro do rodapé como branco, 
+                respeitando o esquema de cores e melhorando a 
+                visibilidade e coesão visual. */
+
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links para um visual mais 
+                limpo e moderno, particularmente importante em 
+                designs minimalistas ou onde a clareza visual 
+                é primordial. */
+
+}
+
+
+.banner-animado {
+
+    position: fixed;
+    /* Fixa o banner no viewport, permitindo que ele 
+                permaneça visível mesmo quando o usuário 
+                rola a página. Essa propriedade é crucial 
+                para elementos que devem estar 
+                sempre acessíveis. */
+
+    bottom: 20px;
+    /* Posiciona o banner a 20 pixels do fundo do 
+                viewport, garantindo um espaçamento adequado 
+                da borda inferior e tornando-o visível sem 
+                obstruir totalmente o conteúdo. */
+
+    left: 50%;
+    /* Posiciona o banner no centro horizontal do viewport, 
+                iniciando o alinhamento do meio do elemento 
+                com o meio do viewport. */
+
+    transform: translateX(-50%);
+    /* Corrige o posicionamento do banner movendo-o horizontalmente 
+                para a esquerda em 50% de sua própria largura, 
+                garantindo que ele esteja verdadeiramente 
+                centrado em relação ao viewport. */
+
+    z-index: 1003;
+    /* Define a posição do banner na pilha de elementos 
+                sobrepostos, garantindo que ele fique acima de 
+                outros elementos com z-index menor. Este valor 
+                alto assegura que o banner não seja coberto 
+                por outros conteúdos. */
+
+    display: flex;
+    /* Aplica Flexbox ao banner, uma ferramenta poderosa para 
+                alinhar e distribuir espaços entre os itens 
+                dentro dele de forma eficiente. */
+
+    align-items: center;
+    /* Centraliza verticalmente os itens dentro do banner, o 
+                que é útil para garantir que todos os elementos 
+                internos estejam alinhados ao centro verticalmente. */
+
+    justify-content: center;
+    /* Centraliza horizontalmente os itens dentro do banner, ideal 
+                para alinhar conteúdo como texto e imagens no 
+                centro do banner. */
+
+    background-color: white;
+    /* Define a cor de fundo do banner para branco, oferecendo um 
+                fundo claro que destaca qualquer conteúdo 
+                colorido ou imagens nele. */
+
+    border-radius: 10px;
+    /* Arredonda as bordas do banner para suavizar sua 
+                aparência geral, criando um estilo mais amigável e 
+                atraente. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra suave ao redor do banner para adicionar 
+                profundidade, melhorando o contraste visual com o 
+                fundo e elevando a percepção visual do elemento. */
+
+    padding: 10px;
+    /* Aplica preenchimento em todas as direções dentro do 
+                banner, criando espaço adicional ao redor do 
+                conteúdo interno para uma apresentação mais 
+                clara e distinta. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando sobrevoado, 
+                indicando que o banner é um elemento interativo, 
+                geralmente associado a uma ação de clique. */
+
+}
+
+
+.banner-animado img {
+
+    width: 100px;
+    /* Define a largura da imagem dentro do banner para 100 
+                pixels, assegurando que o tamanho da imagem 
+                seja adequado e não domine o design do banner. */
+
+    height: 100px;
+    /* Define a altura da imagem para ser igual à largura, 
+                mantendo a proporção e garantindo uma apresentação 
+                uniforme. */
+
+    animation: bounce 2s infinite;
+    /* Aplica uma animação chamada 'bounce' à imagem, que dura 2 
+                segundos e se repete infinitamente, criando um 
+                efeito dinâmico de pulo ou salto que aumenta a 
+                atenção do usuário ao banner. */
+
+}
+
+
+.fechar-banner-animado {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Define a cor de fundo do botão de fechar como um 
+                preto semi-transparente, criando um efeito de 
+                sobreposição suave que ainda permite visibilidade 
+                do conteúdo por trás. */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão, contribuindo para 
+                um design mais limpo e moderno. */
+
+    color: white;
+    /* Define a cor do texto (ou ícone, no caso de uso de fontes 
+                de ícone) dentro do botão como branco, garantindo 
+                alto contraste contra o fundo escuro e melhorando a 
+                visibilidade e legibilidade. */
+
+    padding: 5px 10px;
+    /* Aplica um preenchimento de 5px verticalmente e 10px 
+                horizontalmente dentro do botão, aumentando a 
+                área de clique e melhorando a usabilidade. */
+
+    cursor: pointer;
+    /* Altera o cursor para um ponteiro quando o usuário passa o 
+                mouse sobre o botão, indicando claramente que o 
+                botão é clicável. */
+
+    margin-left: 10px;
+    /* Adiciona uma margem à esquerda de 10px, separando o botão 
+                de fechar dos outros elementos ou conteúdo adjacente, 
+                ajudando a evitar cliques acidentais e melhorando a 
+                estética geral. */
+
+    border-radius: 50%;
+    /* Configura o raio da borda do botão para 50%, efetivamente 
+                transformando-o em uma forma circular, que é comum 
+                para botões de fechar e proporciona uma estética 
+                visualmente agradável. */
+
+}
+
+
+@keyframes bounce {
+
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+        /* Nos keyframes 0%, 20%, 50%, 80% e 100%, a transformação 
+                translateY é definida como 0, o que significa que a 
+                imagem ou elemento está na sua posição 
+                vertical original. */
+
+    }
+
+    40% {
+
+        transform: translateY(-30px);
+        /* No keyframe 40%, a transformação translateY move o 
+                elemento 30 pixels para cima, criando um 
+                efeito de "salto". */
+
+    }
+
+    60% {
+
+        transform: translateY(-15px);
+        /* No keyframe 60%, o elemento é movido para 15 pixels 
+                acima da posição original, fazendo com que o 
+                movimento pareça um 'salto' que está retornando à 
+                posição inicial, mas ainda não completamente, o 
+                que contribui para o aspecto dinâmico e animado. */
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .container-carousel, .banner-responsivo, .sobre-pets {
+
+        width: 90%;
+        /* Reduz a largura desses containers para 90% da largura 
+                da viewport em dispositivos com telas de 
+                até 768px, oferecendo um pouco de espaço nas 
+                laterais e evitando que o conteúdo fique 
+                muito compactado. */
+
+    }
+
+    .conteudo-principal {
+
+        width: 100%;
+        /* Garante que o conteúdo principal ocupe 100% da 
+                largura do container em dispositivos menores, 
+                maximizando o espaço disponível para o 
+                texto e imagens. */
+
+    }
+
+    .banner-animado img {
+
+        width: 75px;
+        height: 75px;
+        /* Redimensiona as imagens nos banners animados para 75px 
+                    por 75px, mantendo a proporção e ajustando o 
+                    tamanho para melhor adequação em telas menores. */
+
+    }
+
+    nav ul {
+
+        flex-direction: column;
+        /* Altera a disposição dos itens de navegação para 
+                    uma coluna, empilhando os links verticalmente, o 
+                    que melhora a usabilidade em telas menores onde o 
+                    espaço horizontal é limitado. */
+
+        align-items: center;
+        /* Centraliza os itens da lista de navegação horizontalmente 
+                    dentro do container, alinhando os textos dos 
+                    links para uma apresentação mais organizada e 
+                    esteticamente agradável. */
+
+    }
+
+    nav ul li {
+
+        margin-bottom: 10px;
+        /* Adiciona uma margem inferior a cada item da lista de 
+                    navegação, criando espaço entre os links e 
+                    evitando que eles fiquem visualmente comprimidos, o 
+                    que facilita a interação em telas sensíveis ao toque. */
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .logo img {
+
+        height: 40px;
+        /* Reduz a altura do logo para 40px, ajustando o 
+                    tamanho para não sobrecarregar visualmente a 
+                    interface em dispositivos com telas 
+                    muito pequenas. */
+
+    }
+
+    .banner-responsivo .conteudo-banner h2 {
+
+        font-size: 1.5em;
+        /* Diminui o tamanho da fonte do título dentro dos 
+                    banners responsivos para 1.5em, adaptando o 
+                    texto para ser legível sem ocupar espaço demais. */
+
+    }
+
+    .banner-responsivo .conteudo-banner p {
+
+        font-size: 1em;
+        /* Reduz o tamanho da fonte dos parágrafos para 1em, 
+                    equilibrando a legibilidade com o espaço 
+                    disponível, garantindo que o texto não fique 
+                    demasiadamente pequeno ou grande demais 
+                    para a tela. */
+
+    }
+
+}

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!-- A linha acima declara que este documento usa HTML5, 
+        que é a versão mais recente do HTML. A declaração DOCTYPE é 
+        essencial para ativar o modo de padrões nos navegadores 
+        web, garantindo que o layout da página seja processado de 
+        acordo com as especificações do HTML5. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang' 
+            especifica o idioma do conteúdo do documento. 'pt-BR' 
+            indica que o idioma é português do Brasil, o que ajuda os 
+            mecanismos de busca e as tecnologias assistivas a 
+            identificar o idioma dos conteúdos, melhorando a 
+            SEO e a acessibilidade. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de 
+                estilo, scripts e outras informações que não são 
+                diretamente exibidas na parte visível da página. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com atributo 'charset' define a codificação de 
+                caracteres para o documento. 'UTF-8' é uma codificação 
+                de caracteres Unicode que inclui quase todos os 
+                caracteres e símbolos existentes no mundo, garantindo 
+                que qualquer texto possa ser exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta meta tag 'viewport' é crucial para a responsividade de 
+                um site. 'width=device-width' instrui o navegador a 
+                definir a largura da viewport igual à largura do 
+                dispositivo. 'initial-scale=1.0' estabelece o nível 
+                de zoom inicial quando a página é acessada, garantindo 
+                que o conteúdo não seja ampliado ou reduzido inesperadamente. -->
+
+    <title>Meu Amor Pet</title>
+    <!-- A tag <title> define o título da página, que é exibido na 
+                aba do navegador. Esse título é também usado pelos 
+                mecanismos de busca e pode influenciar o SEO. Neste 
+                caso, "Meu Amor Pet" sugere que o site é relacionado a 
+                pets, o que é útil para usuários e mecanismos de busca. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> aqui é usada para incluir uma folha de 
+                estilos externa, chamada 'styles.css'. Esta folha 
+                de estilo contém regras CSS que ajudam a definir o 
+                layout e o design da página. A separação de conteúdo (HTML) e 
+                apresentação (CSS) facilita a manutenção e 
+                atualização do site. -->
+
+</thead>
+<!-- Fecha a tag <head>, indicando que todos os metadados, links e 
+                scripts necessários foram incluídos. -->
+
+
+<body>
+<!-- A tag <body> envolve todo o conteúdo principal que será 
+                exibido aos usuários na página web. -->
+
+    <header>
+    <!-- A tag <header> é usada para definir o cabeçalho da página, 
+                uma área comum para incluir elementos que identificam o 
+                site e fornecem navegação. -->
+
+        <div class="logo">
+        <!-- Um container 'div' com a classe 'logo', que agrupa o 
+                    logotipo e o título do site, fortalecendo a 
+                    identidade visual. -->
+
+            <img src="cachorro.jpg" alt="Meu Amor Pet">
+            <!-- Um elemento <img> que mostra uma imagem, 
+                    um logotipo. O atributo 'src' aponta para o 
+                    arquivo de imagem, enquanto 'alt' fornece uma 
+                    descrição alternativa que melhora a acessibilidade e é 
+                    exibida se a imagem não carregar. -->
+
+            <h1>Meu Amor Pet</h1>
+            <!-- Um cabeçalho <h1> que contém o nome do site. Este é um 
+                        importante elemento de SEO, pois indica aos motores 
+                        de busca o tópico principal da página. -->
+
+        </div>
+
+        <nav>
+        <!-- A tag <nav> é utilizada para definir a área de navegação 
+                        principal do site, contendo links que facilitam o 
+                        acesso a outras seções do site. -->
+
+            <ul>
+            <!-- A tag <ul> define uma lista não ordenada, usada aqui 
+                        para agrupar os itens de navegação. -->
+
+                <li><a href="#inicio">Início</a></li>
+                <!-- Cada item de lista (<li>) contém um link (<a>), que 
+                        quando clicado, leva o usuário para uma seção 
+                        específica da página. O atributo 'href' contém um 
+                        identificador de âncora que faz referência a 
+                        partes da página. -->
+
+                <li><a href="#servicos">Serviços</a></li>
+                <!-- Outro item de navegação que aponta para a seção 
+                        de serviços do site. -->
+
+                <li><a href="#parceiros">Parceiros</a></li>
+                <!-- Link para a seção de parceiros, importante para 
+                        usuários que buscam informações sobre colaborações 
+                        do negócio. -->
+
+                <li><a href="#perdidos">Perdidos</a></li>
+                <!-- Este link pode levar a uma parte do site dedicada a 
+                        animais perdidos, uma funcionalidade valiosa para 
+                        um site focado em pets. -->
+
+                <li><a href="#contato">Contato</a></li>
+                <!-- Fornece um meio rápido de acesso à seção de contato, 
+                        onde os usuários podem encontrar formas de se 
+                        comunicar com os responsáveis pelo site. -->
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner-responsivo" id="banner-responsivo">
+    <!-- Um 'div' que atua como um banner responsivo. Devido ao seu 
+                design e funcionalidades,  é um elemento importante para 
+                chamar a atenção do usuário para promoções ou avisos. -->
+
+        <div class="conteudo-banner" onclick="abrirGoogle()">
+        <!-- Um container dentro do banner que, quando clicado, executa 
+                    uma função 'abrirGoogle()',  destinada a direcionar o 
+                    usuário para um site externo ou realizar uma busca 
+                    relacionada ao conteúdo do banner. -->
+
+            <h2>Bem-vindo ao Meu Amor Pet</h2>
+            <!-- Um cabeçalho <h2> que fornece uma saudação ou mensagem de 
+                        boas-vindas aos visitantes do site. -->
+
+            <p>Cuide bem dos seus pets, eles merecem o melhor!</p>
+            <!-- Um parágrafo com uma mensagem encorajadora sobre o 
+                        cuidado com os pets, reforçando o propósito e 
+                        o foco do site. -->
+
+        </div>
+
+        <button class="fechar-banner-responsivo" onclick="fecharBannerResponsivo(event)">✖</button>
+        <!-- Um botão para fechar o banner. Este botão inclui um 
+                    manipulador de evento 'onclick' que executa 'fecharBannerResponsivo()', 
+                    uma função que  oculta o banner da visualização do 
+                    usuário, melhorando a experiência ao permitir que 
+                    eles escolham não ver o banner. -->
+
+    </div>
+
+
+    <div class="container-carousel">
+        <!-- 'container-carousel' é uma div que funciona como o 
+                    envoltório principal para o carousel, definindo 
+                    um espaço dedicado no layout da página para as 
+                    imagens rotativas. -->
+    
+        <div class="carousel">
+            <!-- 'carousel' é a div que encapsula diretamente os 
+                        elementos de navegação e os slides de imagens, 
+                        funcionando como o container do mecanismo 
+                        de carousel. -->
+    
+            <div class="carousel-interno">
+                <!-- 'carousel-interno' é uma div onde os itens 
+                            individuais do carousel (slides) são 
+                            organizados. Esta camada facilita a 
+                            aplicação de transformações e transições 
+                            para animar os slides. -->
+    
+                <div class="item-carousel ativo" onclick="abrirLink('https://www.udemy.com/course/excel-basico-ao-avancado-aprenda-a-automatizar-12-planilhas/?referralCode=477073AE57D910FB2391')">
+                    <!-- Cada 'item-carousel' representa um slide 
+                                    único dentro do carousel. 
+                         A classe 'ativo' indica que este slide é 
+                                    o atualmente visível.
+                         A função 'onclick' atribuída aqui, 'abrirLink', 
+                                    direciona o usuário para uma URL quando a 
+                                    imagem é clicada, aumentando a interatividade. -->
+
+                    <img src="img1.jpg" alt="Imagem 1">
+                    <!-- Elemento 'img' exibe a imagem do slide. O atributo 'src' 
+                                    especifica o caminho da imagem, e 'alt' 
+                                    fornece uma descrição textual alternativa 
+                                    para acessibilidade. -->
+
+                </div>
+    
+                <div class="item-carousel" onclick="abrirLink('https://www.udemy.com/course/python-rpa-e-excel-aprenda-automatizar-processos-e-planilhas/?referralCode=75F06FB2C5443C0A1FBF')">
+                    <!-- Outro slide do carousel, sem a classe 'ativo', 
+                                indicando que não é o slide atualmente destacado. -->
+
+                    <img src="img2.jpg" alt="Imagem 2">
+                    <!-- A imagem e o link associado mudam conforme o 
+                                conteúdo específico deste slide. -->
+
+                </div>
+    
+                <div class="item-carousel" onclick="abrirLink('https://www.udemy.com/course/algoritmos-e-logica-de-programacao-visualg-c-e-qt-creator/?referralCode=3D37392361EEA1BFB488')">
+                    <!-- Mais um slide, configurado de maneira semelhante aos 
+                                outros, com seu próprio conteúdo e link interativo. -->
+                    <img src="img3.jpg" alt="Imagem 3">
+
+                </div>
+            </div>
+    
+            <!-- Botões de controle são fornecidos para navegar entre os slides. -->
+            <button class="controle-carousel anterior" onclick="slideAnterior()">
+                ❮
+                <!-- Este botão permite ao usuário navegar para o slide 
+                            anterior. 'slideAnterior' é uma função JavaScript 
+                            que ajusta o slide visível. -->
+
+            </button>
+    
+            <button class="controle-carousel proximo" onclick="slideProximo()">
+                ❯
+                <!-- Similarmente, este botão permite navegar para o 
+                            próximo slide. 'slideProximo' manipula qual 
+                            slide é exibido. -->
+
+            </button>
+    
+            <button class="fechar-carousel" onclick="fecharCarousel()">
+                ✖
+                <!-- Um botão para fechar o carousel, melhorando a 
+                            usabilidade ao permitir que os usuários 
+                            terminem a visualização dos slides quando 
+                            desejarem. 'fecharCarousel' é uma função que 
+                            altera a propriedade 'display' do carousel 
+                            para 'none'. -->
+                            
+            </button>
+        </div>
+    </div>
+    
+
+    <main class="sobre-pets" id="sobre-pets">
+        <!-- A tag <main> é usada para envolver o conteúdo principal da 
+                        página, indicando que tudo dentro dela é o foco 
+                        principal do documento. A classe 'sobre-pets' e 
+                        o id 'sobre-pets' são usados para estilização 
+                        específica e funcionalidades de script. -->
+    
+        <div class="conteudo-principal">
+            <!-- 'conteudo-principal' é uma div que organiza o conteúdo 
+                        dentro da seção principal, facilitando a aplicação 
+                        de estilos e scripts específicos. -->
+    
+            <h2>Cuidando dos Nossos Amigos Peludos nas Ondas de Calor</h2>
+            <!-- Um cabeçalho <h2> que fornece um título atraente e 
+                        informativo para a seção, destacando o tópico 
+                        tratado: cuidados com pets em ondas de calor. -->
+    
+            <p>12 de novembro de 2024</p>
+            <!-- Um parágrafo que indica a data, adicionando um contexto 
+                        temporal ao conteúdo, o que pode ser importante 
+                        para a relevância das informações apresentadas. -->
+    
+            <p>O verão é sinônimo de alegria e sol a pino, mas as altas temperaturas trazem desafios especiais para nossos amigos de quatro patas, sejam eles os bichinhos confortáveis em nossas casas ou aqueles que enfrentam o calor nas ruas. Nossa responsabilidade e compaixão pelos animais nos chamam para agir, especialmente nos dias mais quentes. Aqui vão algumas dicas para manter todos os pets seguros e confortáveis, independente de onde eles estejam.</p>
+            <!-- Este parágrafo introduz o assunto da seção, explicando os 
+                        riscos que as altas temperaturas do verão representam 
+                        para os pets. Ele estabelece um tom de cuidado e 
+                        responsabilidade, incentivando a ação dos donos 
+                        de animais. -->
+    
+            <h3>Hidratação: Sua e Deles</h3>
+            <!-- Um subcabeçalho <h3> que destaca a importância da 
+                        hidratação, tanto para humanos quanto para pets, 
+                        abordando um ponto específico de cuidado 
+                        durante o calor. -->
+    
+            <p>No calor, a hidratação é tão importante para os animais quanto é para nós. Para os pets em casa, mantenha sempre disponível água fresca e limpa. E para os amigos peludos da rua, que tal deixar potes de água em locais acessíveis? E não esqueça, colocar água em recipientes mais baixos facilita para animais de menor porte e outros bichinhos sedentos.</p>
+            <!-- Detalha ações práticas que podem ser tomadas para 
+                        garantir a hidratação adequada dos pets, oferecendo 
+                        dicas úteis que podem ser implementadas facilmente 
+                        pelos donos de animais. -->
+    
+            <img src="dog.jpg" alt="Cão feliz no parque">
+            <!-- Uma imagem de um cão feliz no parque serve como um 
+                        elemento visual para ilustrar o conteúdo positivo 
+                        de cuidar bem dos pets. O atributo 'alt' descreve a 
+                        imagem, melhorando a acessibilidade e fornecendo 
+                        contexto textual que é útil quando a imagem não 
+                        pode ser exibida. -->
+
+        </div>
+    </main>
+    
+    
+    <footer>
+        <!-- A tag <footer> é utilizada para definir o rodapé da 
+                        página, uma seção geralmente reservada para 
+                        informações de contato, direitos autorais, ou 
+                        links para documentos legais. -->
+        <p>Entre em contato conosco: <a href="mailto:contato@meusite.com.br">contato@meusite.com.br</a></p>
+        <!-- Este parágrafo fornece um meio de contato direto através 
+                        de um link de email. 
+             Usar 'mailto:' no href permite aos usuários clicar no link 
+                        para abrir diretamente um cliente de email com o 
+                        endereço preenchido, facilitando o envio de mensagens. -->
+
+    </footer>
+    
+
+    <div class="banner-animado" id="banner-animado" onclick="abrirGoogle()">
+        <!-- 'div' define um banner animado com classe e id específicos 
+                        para estilização e manipulação via JavaScript. 
+             A função 'onclick' atribuída aqui, 'abrirGoogle', 
+                        abre uma nova aba ou janela no navegador para 
+                        uma URL específica quando o banner é clicado, 
+                        adicionando uma função interativa ao banner. -->
+
+        <img src="animacao.gif" alt="Banner Animado">
+        <!-- A imagem dentro do banner, neste caso um GIF animado, 
+                        serve como um elemento visual chamativo. 
+             O atributo 'alt' fornece uma descrição textual da imagem, 
+                        que é essencial para acessibilidade e SEO. -->
+
+        <button class="fechar-banner-animado" onclick="fecharBannerAnimado(event)">✖</button>
+        <!-- Um botão para fechar o banner animado. 
+             Inclui um evento 'onclick' que aciona a função 'fecharBannerAnimado', 
+                        passando o evento como argumento para parar a 
+                        propagação e ocultar este banner. -->
+
+    </div>
+    
+    
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' referenciando 'script.js', 
+                    indica onde o JavaScript que controla a 
+                    dinâmica do site está localizado. 
+        Este script pode incluir funcionalidades para manipular os 
+                    elementos da página, como banners e carrosséis, e 
+                    adicionar mais interatividade ao site. -->
+
+</body>
+<!-- Fecha a tag <body>, finalizando a definição de todo o 
+            conteúdo visível da página. -->
+
+</html>
+<!-- Fecha a tag <html>, marcando o fim do documento HTML. Todos 
+            os elementos devem estar contidos entre a abertura e 
+            o fechamento desta tag. -->
