@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento, especifica 
+          que este arquivo é HTML5 -->
+
+<html lang="pt-br">
+<!-- Abre a tag HTML e define o idioma do conteúdo do 
+          documento como português do Brasil -->
+
+<head>
+<!-- Abre a tag head, que contém metadados, links para 
+          scripts e folhas de estilo -->
+  
+  <meta charset="UTF-8">
+  <!-- Define a codificação de caracteres para UTF-8, suportando 
+          um vasto conjunto de caracteres para múltiplos idiomas -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura a visualização para escalonar corretamente em 
+          dispositivos de diferentes tamanhos, ajustando a largura 
+          da página para a largura do dispositivo e iniciando 
+          com o zoom padrão -->
+  
+  <title>Exemplos de Pop-ups</title>
+  <!-- Define o título do documento que aparecerá na 
+          aba do navegador -->
+  
+  <link rel="stylesheet" href="estilos.css">
+  <!-- Link para a folha de estilos externa que contém os 
+          estilos CSS para estilizar o documento -->
+
+</head>
+<!-- Fecha a tag head -->
+
+
+<body>
+  <!-- Abre a tag body, que contém todo o conteúdo principal 
+          que será exibido na página web -->
+    
+    <h1>Exemplos de Pop-ups</h1>
+    <!-- Define um cabeçalho de primeiro nível (h1), que 
+            geralmente é usado para o título principal da página -->
+    
+    <div class="botoes">
+    <!-- Abre uma divisão (div) com a classe 'botoes', usada 
+              para agrupar elementos visualmente e aplicar 
+              estilos específicos via CSS -->
+      
+      <button id="botaoModal">Abrir Modal Pop-up</button>
+      <!-- Define um botão com id 'botaoModal', que ao 
+                ser clicado, pode abrir uma janela modal pop-up -->
+      
+      <button id="botaoAlerta">Mostrar Alerta</button>
+      <!-- Define um botão com id 'botaoAlerta', usado 
+                para mostrar uma janela de alerta quando clicado -->
+      
+      <button id="botaoTooltip" class="tooltip">Mostrar Tooltip<span class="tooltipTexto">Texto do Tooltip</span></button>
+      <!-- Define um botão com id 'botaoTooltip' e classe 'tooltip', 
+                usado para mostrar um tooltip; um texto explicativo 
+                adicional é fornecido dentro de um span com 
+                classe 'tooltipTexto' -->
+      
+      <button id="botaoNotificacao">Mostrar Notificação</button>
+      <!-- Define um botão com id 'botaoNotificacao', que quando 
+                clicado, pode exibir uma notificação na página -->
+      
+      <button id="botaoLightbox">Abrir Lightbox</button>
+      <!-- Define um botão com id 'botaoLightbox', usado para abrir 
+                uma lightbox, geralmente uma janela que exibe imagens 
+                ou vídeos em uma visualização ampliada sobre o 
+                conteúdo da página -->
+      
+      <button id="botaoMenuContexto">Mostrar Menu de Contexto</button>
+      <!-- Define um botão com id 'botaoMenuContexto', usado para 
+                exibir um menu de contexto personalizado quando clicado -->
+      
+      <button id="botaoConfirmacao">Mostrar Confirmação</button>
+      <!-- Define um botão com id 'botaoConfirmacao', que ao ser 
+                clicado, pode abrir uma janela pedindo confirmação 
+                do usuário -->
+      
+      <button id="botaoEntradaTexto">Mostrar Entrada de Texto</button>
+      <!-- Define um botão com id 'botaoEntradaTexto', usado para 
+                abrir uma janela que permite ao usuário inserir texto -->
+    
+    </div>
+    <!-- Fecha a divisão 'botoes' -->
+  
+
+    <!-- Modal Pop-up -->
+    <!-- Comentário explicativo indicando que o código a 
+                seguir implementa um modal pop-up -->
+    <div id="meuModal" class="modal">
+      <!-- Abre uma div com id 'meuModal' e classe 'modal'; é o 
+                contêiner principal do modal, inicialmente oculto, e 
+                será exibido quando o usuário acionar uma ação específica -->
+        
+        <div class="modal-conteudo">
+        <!-- Abre uma div com classe 'modal-conteudo', que contém os 
+                  elementos internos do modal, como texto e botões -->
+          
+          <span class="fechar">&times;</span>
+          <!-- Inclui um elemento span com classe 'fechar', que 
+                    contém o caractere '×'. Este span é usado como 
+                    botão de fechamento do modal -->
+          
+          <p>Este é um modal pop-up!</p>
+          <!-- Parágrafo contendo uma mensagem indicativa de 
+                    que esta seção é um modal pop-up -->
+        
+        </div>
+        <!-- Fecha a div 'modal-conteudo' -->
+      
+      </div>
+      <!-- Fecha a div 'meuModal' -->
+
+
+    <!-- Tooltip Pop-up -->
+    <!-- Tooltip já incluído no botão -->
+
+    <!-- Notification Pop-up -->
+    <!-- Comentário indicando que o código a seguir implementa 
+              um pop-up de notificação -->
+    <div id="notificacao" class="notificacao">
+        <!-- Abre uma div com id 'notificacao' e classe 'notificacao'; é 
+                  o contêiner do pop-up de notificação -->
+        
+        <span class="botaoFechar" onclick="this.parentElement.style.display='none';">&times;</span>
+        <!-- Define um botão de fechar para o pop-up de notificação. 
+                  Quando clicado, o estilo 'display' do elemento 
+                  pai (a div de notificação) é alterado para 'none', 
+                  ocultando o pop-up -->
+            
+            Esta é uma notificação!
+            <!-- Texto exibido dentro do pop-up de notificação -->
+    
+    </div>
+    <!-- Fecha a div 'notificacao' -->
+
+    <!-- Lightbox Pop-up -->
+    <!-- Comentário indicando que o código a seguir 
+            implementa um pop-up de lightbox -->
+    <div id="lightbox" class="lightbox">
+    <!-- Abre uma div com id 'lightbox' e classe 'lightbox'; é 
+            o contêiner do lightbox, usado principalmente para 
+            exibir conteúdo de mídia como imagens de forma 
+            destacada sobre o resto da página -->
+        
+        <span class="fechar">&times;</span>
+        <!-- Inclui um elemento span com classe 'fechar', 
+                  utilizado como botão de fechamento do lightbox -->
+        
+        <img class="lightbox-conteudo" id="imagemLightbox">
+        <!-- Define um elemento img com classe 'lightbox-conteudo' 
+                  e id 'imagemLightbox', onde a imagem a ser 
+                  exibida no lightbox será carregada -->
+        
+        <div id="legenda"></div>
+        <!-- Div vazia com id 'legenda', destinada a conter a 
+                  legenda da imagem exibida no lightbox -->
+    
+    </div>
+    <!-- Fecha a div 'lightbox' -->
+    
+    <img src="img.jpg" id="imagem" style="display:none;" onclick="abrirLightbox(this);" alt="Exemplo de imagem">
+    <!-- Define uma imagem oculta na página, que quando clicada, 
+                aciona a função 'abrirLightbox(this)', passando a 
+                própria imagem como argumento para ser exibida 
+                no lightbox -->
+
+
+    <!-- Context Menu Pop-up -->
+
+    <!-- Comentário indicando que o código a seguir implementa um 
+                menu de contexto personalizado -->
+    <div id="menuContexto" class="menu-contexto">
+    <!-- Abre uma div com id 'menuContexto' e classe 'menu-contexto'; é 
+                o contêiner do menu de contexto, geralmente oculto e 
+                exibido apenas em resposta a uma interação específica, 
+                como um clique direito -->
+      
+      <ul>
+      <!-- Lista não ordenada para agrupar as opções 
+                do menu de contexto -->
+          
+          <li onclick="acao1()">Ação 1</li>
+          <!-- Item de lista que, ao ser clicado, chama a função 'acao1()', 
+                  executando uma ação específica -->
+          
+          <li onclick="acao2()">Ação 2</li>
+          <!-- Item de lista que, ao ser clicado, chama a função 'acao2()', 
+                  executando uma ação específica -->
+          
+          <li onclick="acao3()">Ação 3</li>
+          <!-- Item de lista que, ao ser clicado, chama a função 'acao3()', 
+                  executando uma ação específica -->
+      
+      </ul>
+    </div>
+    <!-- Fecha a div 'menuContexto' -->
+    
+    <!-- Confirmação Pop-up -->
+    <!-- Comentário indicando que o código a seguir implementa um 
+            pop-up de confirmação -->
+    <div id="confirmacao" class="confirmacao">
+    <!-- Abre uma div com id 'confirmacao' e classe 'confirmacao'; é 
+            o contêiner do pop-up de confirmação, geralmente usado 
+            para solicitar a confirmação do usuário antes de 
+            realizar uma ação importante -->
+      
+      <div class="confirmacao-conteudo">
+      <!-- Div que contém o conteúdo real do pop-up de confirmação -->
+        
+        <span class="fechar">&times;</span>
+        <!-- Inclui um botão de fechar no formato de '×' que, 
+                quando clicado, oculta o pop-up de confirmação -->
+        
+        <p>Você tem certeza?</p>
+        <!-- Parágrafo contendo a mensagem de confirmação -->
+        
+        <button id="botaoSim">Sim</button>
+        <!-- Botão que, ao ser clicado, pode representar a aceitação 
+                do usuário à confirmação proposta -->
+        
+        <button id="botaoNao">Não</button>
+        <!-- Botão que, ao ser clicado, pode representar a 
+                negação do usuário à confirmação proposta -->
+      
+      </div>
+    </div>
+    <!-- Fecha a div 'confirmacao' -->
+  
+
+    <!-- Entrada de Texto Pop-up -->
+    <!-- Comentário indicativo de que o código a seguir 
+              trata da implementação de um pop-up de entrada de texto -->
+    <div id="entradaTexto" class="entrada-texto">
+    <!-- Abre uma div com id 'entradaTexto' e classe 'entrada-texto'; é 
+              o contêiner principal do pop-up de entrada de texto, 
+              geralmente oculto até ser ativado por uma ação do usuário -->
+        
+        <div class="entrada-texto-conteudo">
+        <!-- Div interna que contém os elementos específicos do 
+                  pop-up de entrada de texto -->
+            
+            <span class="fechar">&times;</span>
+            <!-- Inclui um elemento span com classe 'fechar', 
+                      utilizado como botão de fechamento do pop-up, 
+                      contendo o caractere '×' -->
+            
+            <p>Digite algo:</p>
+            <!-- Parágrafo que fornece instrução ao usuário sobre 
+                      o que fazer, neste caso, digitar algo no 
+                      campo de texto -->
+            
+            <input type="text" id="textoEntrada">
+            <!-- Campo de entrada de texto onde os usuários 
+                      podem digitar informações -->
+            
+            <button id="botaoEnviar">Enviar</button>
+            <!-- Botão com id 'botaoEnviar', utilizado para 
+                      submeter o texto digitado pelo usuário -->
+        
+        </div>
+        <!-- Fecha a div 'entrada-texto-conteudo' -->
+      
+      </div>
+      <!-- Fecha a div 'entradaTexto' -->
+    
+    <script src="scripts.js"></script>
+    <!-- Linha que inclui o arquivo de script externo 'scripts.js', 
+              que contém o JavaScript necessário para manipular as 
+              interações e comportamentos dos elementos da página -->
+  
+</body>
+</html>

@@ -1,0 +1,1020 @@
+body {
+
+  font-family: 'Helvetica Neue', Arial, sans-serif; 
+  /* Define a família da fonte do corpo do documento. 
+    'Helvetica Neue' é a primeira escolha por ser uma 
+          fonte limpa e profissional, seguida por Arial e 
+          sans-serif como alternativas. */
+  
+  background-color: #f4f4f9;
+  /* Define a cor de fundo do corpo do documento como um 
+          cinza muito claro, proporcionando uma 
+          aparência limpa e neutra. */
+  
+  margin: 0;
+  /* Remove todas as margens externas do corpo do 
+          documento, garantindo que o conteúdo estenda 
+          até as bordas do navegador. */
+  
+  padding: 20px;
+  /* Adiciona um espaçamento interno de 20 pixels em 
+          todas as direções dentro do corpo do documento, 
+          criando espaço entre o conteúdo e as bordas 
+          do navegador. */
+  
+  color: #333;
+  /* Define a cor padrão do texto para um cinza escuro, 
+          melhorando a legibilidade em fundos claros. */
+  
+  font-size: 18px;
+  /* Aumenta o tamanho padrão da fonte para 18 pixels 
+          para melhorar a legibilidade e acessibilidade. */
+
+}
+
+h1 {
+
+  text-align: center;
+  /* Centraliza o texto do elemento h1 horizontalmente, 
+          geralmente usado para títulos e cabeçalhos 
+          principais. */
+  
+  margin-bottom: 40px;
+  /* Define uma margem inferior de 40 pixels abaixo dos 
+          elementos h1 para separá-los visualmente do 
+          conteúdo que segue. */
+  
+  color: #333;
+  /* Define a cor do texto dos elementos h1 para o mesmo 
+          cinza escuro do corpo, mantendo a consistência 
+          da cor do texto em toda a página. */
+  
+  font-size: 3em;
+  /* Define o tamanho da fonte dos elementos h1 para 3 
+          vezes o tamanho da fonte base, o que destaca o 
+          título principal e atrai a atenção do usuário. */
+
+}
+
+
+.botoes {
+
+  display: flex;
+  /* Define o display como flex, permitindo o uso flexível 
+          de alinhamento e distribuição de itens dentro 
+          deste contêiner. */
+  
+  flex-wrap: wrap;
+  /* Permite que os itens dentro do contêiner flexível 
+          sejam envolvidos em múltiplas linhas conforme 
+          necessário, dependendo do espaço disponível. */
+  
+  justify-content: space-around;
+  /* Distribui o espaço restante uniformemente entre os 
+          botões, garantindo que haja um espaço consistente 
+          em torno de cada botão. */
+  
+  gap: 20px;
+  /* Define um espaço de 20 pixels entre cada botão 
+          no contêiner flexível. */
+  
+  width: 900px;
+  /* Define a largura do contêiner de botões para 900 pixels. */
+  
+  height: 100px;
+  /* Define a altura do contêiner de botões para 100 pixels. */
+  
+  margin: 0 auto;
+  /* Centraliza o contêiner na página horizontalmente e 
+          remove a margem vertical. */
+  
+  padding: 20px;
+  /* Adiciona um espaçamento interno de 20 pixels em todas 
+          as direções dentro do contêiner de botões. */
+
+}
+
+.botoes button {
+
+  background: #108478;
+  /* Define a cor de fundo dos botões para um tom 
+          de verde-azulado. */
+  
+  color: white;
+  /* Define a cor do texto dos botões para branco, 
+          garantindo uma boa legibilidade contra o 
+          fundo escuro. */
+  
+  border: none;
+  /* Remove qualquer borda dos botões para um visual 
+          mais limpo e moderno. */
+  
+  padding: 20px 40px;
+  /* Aumenta o espaçamento interno dos botões para 20 pixels 
+          verticalmente e 40 pixels horizontalmente, 
+          melhorando a ergonomia e a visibilidade do texto. */
+  
+  text-align: center;
+  /* Centraliza o texto dentro dos botões. */
+  
+  text-decoration: none;
+  /* Remove qualquer decoração de texto (como sublinhado) 
+          que possa ser herdada. */
+  
+  font-size: 32px;
+  /* Aumenta o tamanho da fonte para 32 pixels para fazer os 
+          textos dos botões mais visíveis e acessíveis. */
+  
+  margin: 10px;
+  /* Define a margem em torno de cada botão para 10 pixels, 
+          garantindo espaço suficiente entre eles para evitar a 
+          sobreposição e melhorar a estética. */
+  
+  width: 900px;
+  /* Define a largura de cada botão para 900 pixels, 
+          garantindo que eles preencham o contêiner. */
+  
+  height: 100px;
+  /* Define a altura de cada botão para 100 pixels, oferecendo 
+          uma grande área de toque para interação. */
+  
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando sobrevoado, 
+          indicando que o botão é clicável. */
+  
+  border-radius: 10px;
+  /* Arredonda as bordas dos botões com um raio de 10 
+          pixels para um visual mais suave e moderno. */
+  
+  transition: background 0.3s, box-shadow 0.3s;
+  /* Adiciona animações suaves para mudanças de fundo e 
+          sombra, melhorando a interatividade visual ao 
+          interagir com os botões. */
+  
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  /* Aplica uma sombra sutil abaixo dos botões para dar 
+          uma sensação de elevação e profundidade. */
+
+}
+
+.botoes button:hover {
+
+  background: #1cac40;
+  /* Muda a cor de fundo para um verde mais claro quando o 
+          mouse está sobre o botão, aumentando a resposta 
+          visual ao hover. */
+  
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+  /* Intensifica a sombra sob o botão no hover, aumentando o 
+          efeito de elevação para uma resposta visual mais 
+          dinâmica. */
+
+}
+
+.botoes button:focus {
+
+  outline: none;
+  /* Remove o contorno padrão que os navegadores 
+          aplicam ao focar elementos interativos, 
+          para um controle mais fino sobre a estética. */
+  
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.5);
+  /* Adiciona um contorno azul claro ao redor do botão 
+          quando focado, proporcionando uma indicação visual 
+          clara do foco enquanto mantém o design limpo. */
+
+}
+
+/* Estilos para o modal */
+.modal {
+
+  display: none;
+  /* O modal está oculto por padrão, só será exibido 
+          mediante uma ação específica (geralmente um 
+          clique de botão). */
+  
+  position: fixed;
+  /* A posição fixa é usada para manter o modal no 
+          lugar, independente da rolagem da página. */
+  
+  z-index: 10;
+  /* Define a pilha de ordem do modal acima de outros 
+          conteúdos da página (que têm um z-index menor). */
+  
+  left: 0;
+  top: 0;
+  /* Posiciona o modal exatamente no topo e à 
+          esquerda da página. */
+  
+  width: 100%;
+  height: 100%;
+  /* O modal cobre toda a tela ao definir largura e 
+          altura como 100%. */
+  
+  overflow: auto;
+  /* Permite a rolagem dentro do modal se o 
+          conteúdo exceder a altura da tela. */
+  
+  background-color: rgba(0,0,0,0.6);
+  /* Fundo semitransparente escurecido para reduzir a 
+          visibilidade do conteúdo abaixo do modal, 
+          ajudando a focar a atenção no próprio modal. */
+
+}
+
+.modal-conteudo {
+
+  background-color: #fefefe;
+  /* Fundo branco para o conteúdo do modal, garantindo 
+          que o conteúdo seja claramente visível. */
+  
+  margin: 5% auto;
+  /* Centraliza o modal na tela verticalmente e 
+          horizontalmente com uma margem superior e 
+          inferior de 5% e margem lateral automática. */
+  
+  padding: 50px;
+  /* Espaço interno de 50px em todas as direções dentro do 
+          modal para não aglomerar o conteúdo nos limites do modal. */
+  
+  border: none;
+  /* Remove qualquer borda do modal para um design mais 
+          limpo e moderno. */
+  
+  width: 70%;
+  /* Define a largura do conteúdo do modal como 70% da 
+          largura da tela para não ocupar toda a tela, 
+          mantendo o foco no conteúdo. */
+  
+  max-width: 900px;
+  /* Impõe um limite máximo de largura para garantir que o 
+          modal não se torne muito largo em telas grandes. */
+  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* Aplica sombra ao redor do modal para dar uma sensação 
+          de elevação sobre o restante da página. */
+  
+  border-radius: 10px;
+  /* Borda arredondada para suavizar as bordas do modal e 
+          proporcionar uma estética mais amigável. */
+  
+  text-align: center;
+  /* Centraliza o texto dentro do modal para garantir que o 
+          conteúdo esteja alinhado de maneira uniforme 
+          e centrada. */
+  
+  font-size: 1.5em;
+  /* Aumenta o tamanho da fonte dentro do modal para 
+          melhorar a legibilidade e destacar a 
+          importância do conteúdo. */
+
+}
+
+.fechar {
+
+  color: #aaa;
+  /* Cor cinza clara para o ícone de fechar, fazendo com 
+          que se destaque sobre o fundo branco, mas 
+          não de maneira muito agressiva. */
+  
+  float: right;
+  /* Posiciona o ícone de fechar no canto superior 
+          direito do modal. */
+  
+  font-size: 32px;
+  /* Aumenta o tamanho do ícone de fechar para 
+          torná-lo facilmente clicável. */
+  
+  font-weight: bold;
+  /* Torna o ícone de fechar em negrito para 
+          destacar sua importância. */
+  
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando hover 
+          sobre o ícone de fechar, indicando que 
+          ele é interativo. */
+
+}
+
+.fechar:hover,
+.fechar:focus {
+
+  color: black;
+  /* Muda a cor do ícone de fechar para preto ao 
+          passar o mouse ou focar, proporcionando um 
+          feedback visual imediato ao usuário. */
+  
+  text-decoration: none;
+  /* Remove qualquer decoração de texto para manter o 
+          ícone de fechar limpo e distinto. */
+
+}
+
+/* Estilos para o tooltip */
+.tooltip {
+
+  position: relative;
+  /* Define a posição do tooltip como relativa para 
+          permitir que o texto do tooltip (tooltipTexto) seja 
+          posicionado absolutamente em relação a este contêiner. */
+  
+  display: inline-block;
+  /* Muda o display do elemento para inline-block, permitindo 
+          que ele tenha uma largura e altura, mas ainda assim 
+          flua com outros elementos inline. */
+  
+  border-bottom: 1px dotted black;
+  /* Adiciona uma borda pontilhada na parte inferior do 
+          tooltip para indicar que há informações adicionais 
+          disponíveis ao passar o mouse. */
+  
+  font-size: 1.2em;
+  /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho 
+          padrão do texto ao redor, destacando o elemento 
+          tooltip. */
+
+}
+
+.tooltip .tooltipTexto {
+
+  visibility: hidden;
+  /* Inicialmente oculta o texto do tooltip para que ele 
+          não apareça até que o usuário passe o mouse 
+          sobre o elemento tooltip. */
+  
+  width: 180px;
+  /* Define uma largura fixa para o texto do tooltip para 
+          manter a consistência do tamanho, independentemente do 
+          conteúdo interno. */
+  
+  background-color: black;
+  /* Define a cor de fundo do texto do tooltip para 
+          preto, garantindo que o texto branco se destaque. */
+  
+  color: #fff;
+  /* Define a cor do texto dentro do tooltip para branco, 
+          proporcionando um alto contraste contra o fundo preto. */
+  
+  text-align: center;
+  /* Centraliza o texto dentro do tooltip para melhorar a 
+          legibilidade e a estética. */
+  
+  border-radius: 6px;
+  /* Aplica bordas arredondadas ao tooltip para um 
+          design mais suave e moderno. */
+  
+  padding: 10px 0;
+  /* Adiciona padding vertical dentro do tooltip para dar 
+          espaço ao redor do texto sem alterar a 
+          largura definida. */
+  
+  position: absolute;
+  /* Posiciona o texto do tooltip de forma absoluta em 
+          relação ao seu contêiner parente (tooltip), 
+          permitindo que ele sobreponha outros conteúdos 
+          conforme necessário. */
+  
+  z-index: 1;
+  /* Define o nível de stack do tooltip para garantir que ele 
+          sobreponha outros elementos posicionados de 
+          forma não explícita. */
+  
+  bottom: 150%;
+  /* Posiciona o tooltip 150% abaixo do topo do elemento tooltip, 
+          fazendo com que ele apareça abaixo do elemento pai. */
+  
+  left: 50%;
+  /* Alinha o centro do tooltip com o centro do elemento pai. */
+  
+  margin-left: -90px;
+  /* Desloca o tooltip 90px para a esquerda do centro, 
+          centralizando-o efetivamente em relação ao elemento pai. */
+  
+  opacity: 0;
+  /* Define a opacidade inicial do tooltip como 0 para torná-lo 
+          completamente transparente até que seja ativado. */
+  
+  transition: opacity 0.3s;
+  /* Aplica uma transição suave na propriedade de opacidade 
+          para animar a entrada e saída do tooltip. */
+  
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  /* Adiciona uma sombra leve ao redor do tooltip para destacá-lo 
+          visualmente do conteúdo de fundo. */
+
+}
+
+
+/* Estilos para exibição do texto do tooltip quando o 
+          mouse está sobre ele */
+.tooltip:hover .tooltipTexto {
+
+  visibility: visible;
+  /* Torna o texto do tooltip visível quando o usuário 
+          passa o mouse sobre o elemento tooltip. */
+  
+  opacity: 1;
+  /* Altera a opacidade do texto do tooltip para 1, tornando-o 
+          totalmente opaco e claramente visível ao usuário. */
+
+}
+
+/* Estilos para a notificação */
+.notificacao {
+
+  display: none;
+  /* Inicialmente, a notificação é ocultada e não é exibida até 
+          ser ativada por um evento específico no JavaScript. */
+  
+  background-color: #555;
+  /* Define a cor de fundo da notificação para um cinza escuro, o 
+          que ajuda o texto branco a se destacar. */
+  
+  color: white;
+  /* Define a cor do texto para branco, garantindo que ele 
+          seja legível contra o fundo cinza escuro. */
+  
+  text-align: center;
+  /* Centraliza o texto dentro da notificação para melhorar a 
+          legibilidade e a apresentação. */
+  
+  border-radius: 5px;
+  /* Aplica bordas arredondadas para suavizar as bordas da 
+          notificação e dar um visual mais amigável e moderno. */
+  
+  position: fixed;
+  /* Usa a posição fixa para manter a notificação em uma 
+          posição específica na janela de visualização, 
+          independente da rolagem da página. */
+  
+  z-index: 1;
+  /* Define a ordem de empilhamento para garantir que a 
+          notificação apareça acima de outros conteúdos que 
+          não tenham um z-index definido. */
+  
+  bottom: 30px;
+  /* Posiciona a notificação a 30 pixels da parte inferior 
+          da janela de visualização. */
+  
+  right: 30px;
+  /* Posiciona a notificação a 30 pixels da parte direita da 
+          janela de visualização. */
+  
+  padding: 20px;
+  /* Adiciona um espaçamento interno de 20 pixels em todas 
+          as direções dentro da notificação para evitar que o 
+          texto fique muito próximo das bordas. */
+  
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Adiciona uma sombra leve ao redor da notificação para 
+          dar uma sensação de elevação e destacá-la visualmente 
+          do fundo da página. */
+  
+  font-size: 1.5em;
+  /* Aumenta o tamanho da fonte para 1.5 vezes o tamanho padrão 
+          do texto, tornando a notificação mais visível e legível. */
+
+}
+
+.notificacao.mostrar {
+
+  display: block;
+  /* Altera a propriedade de exibição para 'block' quando a 
+          notificação deve ser mostrada, tornando-a visível 
+          na página. */
+
+}
+
+/* Estilos para o lightbox */
+.lightbox {
+
+  display: none;
+  /* O lightbox é inicialmente oculto e será exibido apenas 
+          quando ativado por uma ação específica, como um clique. */
+  
+  position: fixed;
+  /* A posição fixa garante que o lightbox seja posicionado em 
+          relação à janela do navegador, permanecendo visível 
+          mesmo durante a rolagem da página. */
+  
+  z-index: 10;
+  /* Define a ordem de empilhamento do lightbox para garantir 
+          que ele fique acima de outros elementos na página. */
+  
+  padding-top: 60px;
+  /* Adiciona um espaçamento na parte superior do lightbox para 
+          evitar que o conteúdo fique muito próximo ao topo da página. */
+  
+  left: 0;
+  top: 0;
+  /* Posiciona o lightbox no topo esquerdo da janela do 
+          navegador, cobrindo toda a tela. */
+  
+  width: 100%;
+  height: 100%;
+  /* Estende o lightbox para cobrir toda a largura e 
+          altura da janela do navegador. */
+  
+  overflow: auto;
+  /* Permite rolagem dentro do lightbox se o conteúdo 
+          exceder a altura da tela. */
+  
+  background-color: rgba(0,0,0,0.9);
+  /* Usa uma cor de fundo preta com opacidade de 90% para 
+          obscurecer a tela atrás do lightbox, focando a 
+          atenção no conteúdo dentro do lightbox. */
+
+}
+
+.lightbox-conteudo {
+
+  margin: auto;
+  /* Centraliza o conteúdo do lightbox horizontal e 
+          verticalmente dentro do lightbox. */
+  
+  display: block;
+  /* Garante que o conteúdo do lightbox seja tratado como um 
+          bloco, ocupando toda a largura disponível dentro 
+          do seu contêiner. */
+  
+  width: 80%;
+  /* Define a largura do conteúdo do lightbox para 80% da 
+          largura total do lightbox, deixando espaço nas laterais. */
+  
+  max-width: 900px;
+  /* Estabelece uma largura máxima para o conteúdo do lightbox 
+          para evitar que ele fique muito largo em telas grandes. */
+  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* Aplica uma sombra ao redor do conteúdo do lightbox para 
+          elevá-lo visualmente e destacá-lo contra o 
+          fundo escurecido. */
+  
+  border-radius: 10px;
+  /* Arredonda os cantos do conteúdo do lightbox para suavizar 
+          sua aparência e integrá-lo melhor ao design geral 
+          da página. */
+
+}
+
+#legenda {
+
+  text-align: center;
+  /* Centraliza o texto da legenda dentro do elemento. */
+  
+  color: #ccc;
+  /* Define a cor do texto para um cinza claro, oferecendo 
+          contraste suficiente contra um fundo potencialmente 
+          escuro, mas de forma sutil. */
+  
+  padding: 10px;
+  /* Adiciona espaço interno ao redor do texto da 
+          legenda para separá-lo de outros conteúdos 
+          visuais. */
+  
+  font-size: 1.5em;
+  /* Aumenta o tamanho da fonte da legenda para 1.5 vezes o 
+          tamanho normal do texto, tornando-a mais legível e 
+          destacada. */
+
+}
+
+
+/* Estilos para o menu de contexto */
+.menu-contexto {
+
+  display: none;
+  /* O menu de contexto é inicialmente oculto e só é 
+          exibido mediante uma ação específica, como 
+          um clique direito. */
+
+  position: absolute;
+  /* Posicionamento absoluto permite que o menu de 
+          contexto seja posicionado em relação ao seu 
+          contêiner mais próximo com posição não estática. */
+
+  z-index: 1000;
+  /* Um z-index alto assegura que o menu de contexto 
+          apareça acima de outros elementos na página. */
+
+  width: 250px;
+  /* Define uma largura fixa para o menu de contexto, 
+          proporcionando espaço suficiente para acomodar 
+          os itens do menu. */
+
+  background-color: #fff;
+  /* Define a cor de fundo do menu de contexto para 
+          branco, garantindo que os itens sejam 
+          claramente visíveis. */
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* Aplica uma sombra ao redor do menu para dar uma 
+          sensação de elevação e destacá-lo visualmente do 
+          restante do conteúdo da página. */
+
+  border-radius: 5px;
+  /* Arredonda as bordas do menu de contexto para um 
+          visual mais suave e moderno. */
+
+  padding: 15px 0;
+  /* Aplica um padding vertical para garantir que os 
+          itens do menu não estejam muito próximos das 
+          bordas superior e inferior. */
+
+}
+
+.menu-contexto ul {
+
+  list-style: none;
+  /* Remove os marcadores de lista, já que não são 
+          necessários em um menu de contexto. */
+
+  padding: 0;
+  /* Remove o padding padrão da lista para garantir 
+          que os itens do menu usem eficientemente o 
+          espaço horizontal disponível. */
+
+  margin: 0;
+  /* Remove as margens padrão da lista para evitar 
+          espaços indesejados em torno dos itens do menu. */
+
+}
+
+.menu-contexto ul li {
+
+  padding: 20px;
+  /* Adiciona um padding substancial em torno de cada 
+          item da lista para aumentar a área clicável e 
+          melhorar a usabilidade. */
+
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando sobrevoado, 
+          indicando que cada item é clicável. */
+
+  transition: background-color 0.3s;
+  /* Adiciona uma transição suave para mudanças de cor 
+          de fundo, melhorando a resposta visual ao 
+          interagir com os itens do menu. */
+
+  font-size: 1.5em;
+  /* Aumenta o tamanho da fonte para tornar os textos 
+          dos itens do menu mais legíveis e acessíveis. */
+
+}
+
+.menu-contexto ul li:hover {
+
+  background-color: #eee;
+  /* Muda a cor de fundo dos itens do menu quando o 
+          mouse passa sobre eles, fornecendo um 
+          feedback visual imediato. */
+
+}
+
+/* Estilos para a janela de confirmação */
+.confirmacao {
+
+  display: none;
+  /* A janela de confirmação é inicialmente 
+          ocultada e só é exibida mediante uma ação 
+          específica (como uma solicitação de 
+          confirmação). */
+  
+  position: fixed;
+  /* A posição fixa garante que a janela de 
+          confirmação seja posicionada em relação à 
+          janela do navegador, cobrindo todo o conteúdo 
+          abaixo dela, independentemente da rolagem da página. */
+  
+  z-index: 10;
+  /* Um z-index alto para garantir que a janela de 
+          confirmação apareça acima de outros 
+          elementos da página. */
+  
+  left: 0;
+  top: 0;
+  /* Posiciona a janela de confirmação exatamente no 
+          topo e à esquerda da página, cobrindo a 
+          tela inteira. */
+  
+  width: 100%;
+  height: 100%;
+  /* Estas propriedades fazem a janela de confirmação 
+          cobrir toda a tela, criando uma área de foco 
+          para a ação do usuário. */
+  
+  overflow: auto;
+  /* Permite a rolagem dentro da janela de confirmação 
+          se o conteúdo exceder a altura da tela. */
+  
+  background-color: rgba(0,0,0,0.6);
+  /* Utiliza uma cor de fundo preta com opacidade de 60%, 
+          obscurecendo o conteúdo da página abaixo e 
+          focando a atenção do usuário na janela de 
+          confirmação. */
+
+}
+
+.confirmacao-conteudo {
+
+  background-color: #fefefe;
+  /* Define a cor de fundo do conteúdo da janela de 
+          confirmação para branco, garantindo que o 
+          conteúdo seja claramente visível. */
+  
+  margin: 5% auto;
+  /* Centraliza o conteúdo da janela de confirmação 
+          vertical e horizontalmente, com uma margem 
+          superior e inferior de 5% e margem lateral 
+          automática. */
+  
+  padding: 50px;
+  /* Espaço interno de 50px em todas as direções dentro 
+          do conteúdo da janela de confirmação para evitar 
+          que o texto e outros elementos fiquem muito 
+          próximos das bordas. */
+  
+  border: none;
+  /* Remove qualquer borda do conteúdo da janela de 
+          confirmação para um visual mais limpo e moderno. */
+  
+  width: 70%;
+  /* Define a largura do conteúdo da janela de confirmação 
+          para 70% da largura total da tela, proporcionando 
+          foco sem cobrir a tela inteira. */
+  
+  max-width: 900px;
+  /* Limita a largura máxima do conteúdo da janela de 
+          confirmação para evitar que ele se torne 
+          muito largo em telas grandes. */
+  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* Aplica uma sombra ao redor do conteúdo da janela de 
+          confirmação para dar uma sensação de elevação e 
+          destacá-lo visualmente do fundo. */
+  
+  border-radius: 10px;
+  /* Aplica bordas arredondadas ao conteúdo da janela de 
+          confirmação para um design mais suave e moderno. */
+  
+  text-align: center;
+  /* Centraliza o texto dentro do conteúdo da janela de 
+          confirmação para melhorar a legibilidade e a 
+          apresentação. */
+  
+  font-size: 1.5em;
+  /* Aumenta o tamanho da fonte para 1.5 vezes o tamanho 
+          normal do texto, tornando a janela de confirmação 
+          mais legível e acessível. */
+
+}
+
+
+/* Estilos para os botões dentro do conteúdo de confirmação */
+.confirmacao-conteudo button {
+  background: linear-gradient(135deg, #6EC1E4, #3498db);
+  /* Define um gradiente de fundo começando de um 
+          azul claro (#6EC1E4) a um azul mais escuro (#3498db), 
+          criando um efeito visual atraente. */
+
+  color: white;
+  /* Define a cor do texto dos botões para branco, 
+          garantindo alta legibilidade contra o fundo colorido. */
+
+  border: none;
+  /* Remove a borda do botão para um design mais limpo e integrado. */
+
+  padding: 15px 30px;
+  /* Aumenta o padding do botão para 15 pixels na 
+          vertical e 30 pixels na horizontal, melhorando a 
+          ergonomia e tornando o botão mais fácil de clicar. */
+
+  margin: 10px;
+  /* Adiciona uma margem de 10 pixels ao redor de cada 
+          botão para garantir que eles não fiquem muito 
+          próximos um do outro. */
+
+  font-size: 1.2em;
+  /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho 
+          do texto normal, melhorando a visibilidade do 
+          texto no botão. */
+
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando o usuário passa o 
+          mouse sobre o botão, indicando que o elemento é clicável. */
+
+  border-radius: 5px;
+  /* Aplica bordas arredondadas de 5 pixels ao botão para 
+          suavizar o design e torná-lo mais amigável. */
+
+  transition: background 0.3s, box-shadow 0.3s;
+  /* Adiciona uma transição suave tanto para o fundo quanto 
+          para a sombra do botão, melhorando a interação 
+          visual quando o estado do botão muda. */
+
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  /* Aplica uma sombra leve ao botão para criar um efeito 
+          de elevação, aumentando o destaque visual do botão. */
+
+}
+
+.confirmacao-conteudo button:hover {
+  background: linear-gradient(135deg, #3498db, #6EC1E4);
+  /* Inverte o gradiente de fundo do botão ao passar o 
+          mouse, adicionando um feedback dinâmico e visual 
+          para a interação do usuário. */
+
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+  /* Intensifica a sombra quando o botão é hoverizado, 
+          aumentando o contraste e destacando ainda mais o botão. */
+
+}
+
+
+/* Estilos para a entrada de texto */
+.entrada-texto {
+
+  display: none;
+  /* A entrada de texto é inicialmente oculta e só aparece 
+          mediante ação específica, similar ao comportamento 
+          de um modal. */
+
+  position: fixed;
+  /* A posição fixa garante que a entrada de texto seja 
+          posicionada em relação à janela do navegador, e 
+          não à página, independentemente da rolagem. */
+
+  z-index: 10;
+  /* Um z-index de 10 garante que a entrada de texto apareça 
+          acima de outros elementos na página, mas abaixo de 
+          outros possíveis overlays. */
+
+  left: 0;
+  top: 0;
+  /* Posiciona a entrada de texto no topo esquerdo da 
+          página, cobrindo toda a tela quando exibida. */
+
+  width: 100%;
+  height: 100%;
+  /* A entrada de texto cobre toda a largura e altura da 
+          janela do navegador, criando um fundo completo 
+          para o usuário focar. */
+
+  overflow: auto;
+  /* Permite a rolagem dentro da entrada de texto se o 
+          conteúdo exceder a altura da tela, garantindo 
+          que todo o conteúdo seja acessível. */
+
+  background-color: rgba(0,0,0,0.6);
+  /* Utiliza um fundo preto semitransparente (60% de opacidade) 
+          para obscurecer o conteúdo da página abaixo, concentrando a 
+          atenção do usuário na entrada de texto. */
+
+}
+
+
+/* Estilos para o conteúdo do popup de entrada de texto */
+.entrada-texto-conteudo {
+
+  background-color: #fefefe;
+  /* Define a cor de fundo como branco quase puro, criando um 
+          contraste nítido com o texto e outros elementos. */
+  
+  margin: 5% auto;
+  /* Ajusta as margens verticalmente para 5% do tamanho da 
+          tela, centralizando horizontalmente o conteúdo dentro 
+          da área do popup. */
+  
+  padding: 50px;
+  /* Ajusta um espaçamento interno generoso para evitar que o 
+          conteúdo encoste diretamente nas bordas do popup. */
+  
+  border: none;
+  /* Remove qualquer borda predefinida, proporcionando um 
+          design mais limpo e integrado ao restante do layout. */
+  
+  width: 70%;
+  /* Define a largura do conteúdo do popup para 70% da largura 
+          total da área visível, focando a atenção do usuário 
+          no centro. */
+  
+  max-width: 900px;
+  /* Limita a largura máxima do conteúdo a 900px, garantindo 
+          que não se torne demasiadamente largo em telas grandes. */
+  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* Adiciona uma sombra suave ao redor do popup para destacá-lo 
+          contra o fundo da página, criando uma sensação de profundidade. */
+  
+  border-radius: 10px;
+  /* Arredonda as bordas do popup para suavizar sua aparência e 
+          torná-lo visualmente mais agradável. */
+  
+  text-align: center;
+  /* Centraliza o texto dentro do popup, alinhando qualquer 
+          texto ou botão dentro dele ao centro. */
+  
+  font-size: 1.5em;
+  /* Aumenta o tamanho da fonte para 1.5 vezes o tamanho 
+          normal, melhorando a legibilidade do texto dentro do popup. */
+
+}
+
+/* Estilos para o campo de entrada de texto dentro do popup */
+.entrada-texto-conteudo input[type="text"] {
+
+  width: 80%;
+  /* Define a largura do campo de texto para 80% da largura 
+          do container, proporcionando um bom equilíbrio 
+          entre a largura e o espaço disponível. */
+  
+  padding: 15px;
+  /* Aplica um padding de 15px em todas as direções dentro do 
+          campo de entrada, aumentando a área de interação e 
+          melhorando a experiência do usuário. */
+  
+  margin: 20px 0;
+  /* Define a margem superior e inferior do campo de 
+          entrada para 20px, separando-o visualmente de 
+          outros elementos dentro do popup. */
+  
+  font-size: 1.2em;
+  /* Aumenta o tamanho da fonte dentro do campo de 
+          entrada para 1.2 vezes o tamanho normal, 
+          facilitando a leitura do texto digitado. */
+  
+  border-radius: 5px;
+  /* Arredonda as bordas do campo de entrada, em 
+          concordância com o design geral do popup, 
+          para uma aparência consistente e suave. */
+  
+  border: 1px solid #ccc;
+  /* Adiciona uma borda sutil ao campo de entrada com 
+          uma cor cinza claro (#ccc), definindo claramente 
+          os limites do campo. */
+
+}
+
+
+/* Estilos para o botão dentro do conteúdo 
+          de entrada de texto */
+.entrada-texto-conteudo button {
+
+  background: linear-gradient(135deg, #6EC1E4, #0d3149);
+  /* Define um gradiente de fundo que começa com um azul 
+          claro (#6EC1E4) e transita para um azul mais escuro (#0d3149), 
+          criando um efeito visual dinâmico e atraente. */
+
+  color: white;
+  /* Define a cor do texto do botão como branco para 
+          garantir alta legibilidade contra o fundo colorido. */
+
+  border: none;
+  /* Remove a borda do botão para um visual mais limpo e integrado. */
+
+  padding: 15px 30px;
+  /* Define um padding generoso (15px vertical e 30px 
+          horizontal) para melhorar a ergonomia e tornar o 
+          botão mais fácil de clicar. */
+
+  margin: 10px;
+  /* Aplica uma margem de 10px ao redor do botão para evitar 
+          que ele toque diretamente outros elementos ou 
+          as bordas do contêiner. */
+
+  font-size: 1.2em;
+  /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho 
+          normal do texto, facilitando a leitura e 
+          destacando o botão. */
+
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando o usuário 
+          passa o mouse sobre o botão, indicando interatividade. */
+
+  border-radius: 5px;
+  /* Arredonda as bordas do botão para suavizar sua 
+          aparência e torná-lo esteticamente mais agradável. */
+
+  transition: background 0.3s, box-shadow 0.3s;
+  /* Aplica uma transição suave nas propriedades de fundo e 
+          sombra do botão, melhorando a experiência visual 
+          durante as interações do usuário. */
+
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  /* Adiciona uma sombra sutil ao redor do botão para criar um 
+          efeito de elevação e destacar o botão no layout. */
+
+}
+
+.entrada-texto-conteudo button:hover {
+
+  background: linear-gradient(135deg, #3498db, #6EC1E4);
+  /* Inverte o gradiente de fundo do botão ao passar o 
+          mouse, oferecendo um feedback visual instantâneo e dinâmico. */
+
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+  /* Intensifica a sombra quando o botão é hoverizado, 
+          aumentando o efeito de elevação e tornando o botão 
+          mais proeminente. */
+          
+}
