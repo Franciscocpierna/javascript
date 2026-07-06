@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE é essencial para informar ao 
+            navegador que este documento segue o padrão HTML5, 
+            garantindo que as funcionalidades HTML5 sejam 
+            interpretadas e executadas corretamente. -->
+
+<html lang="pt-br">
+<!-- A tag <html> serve como a raiz do documento HTML e o 
+            atributo 'lang="pt-br"' especifica que o idioma 
+            principal do conteúdo é o português do Brasil. Isso é 
+            importante para acessibilidade e para otimização de 
+            mecanismos de busca (SEO), ajudando na correta 
+            indexação do conteúdo. -->
+
+<head>
+    <!-- A tag <head> contém informações meta sobre o 
+                documento, incluindo links para folhas de 
+                estilo, scripts e outras dependências que não 
+                são diretamente visíveis na página. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com charset="UTF-8" especifica a codificação 
+                de caracteres usada no documento, suportando 
+                quase todos os caracteres de todos os idiomas. 
+                Isso garante a exibição correta de qualquer 
+                texto no navegador. -->
+
+    <title>Efeito de Zoom</title>
+    <!-- A tag <title> define o título da página, que 
+                aparece na aba do navegador. Este título é 
+                também utilizado pelos motores de busca e 
+                afeta a SEO, sendo um fator importante na 
+                forma como os usuários percebem o conteúdo 
+                da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- O elemento <link> com o atributo rel="stylesheet" 
+                refere-se a uma folha de estilos externa 
+                chamada 'estilos.css'. Este arquivo CSS 
+                contém as regras de estilo que definem a 
+                aparência de elementos na página, incluindo o 
+                layout, cores e animações. -->
+
+</head>
+<!-- Finaliza a seção <head>, que prepara o documento 
+            com todas as informações necessárias antes de 
+            carregar o conteúdo visível. -->
+
+<body>
+    <!-- A tag <body> engloba todo o conteúdo principal 
+                que será exibido aos usuários no navegador. -->
+
+    <div class="scroller-zoom">
+    <!-- Uma <div> que atua como o container principal para o 
+                scroller com efeito de zoom. A classe 'scroller-zoom' é 
+                utilizada para aplicar estilos CSS e possíveis 
+                scripts que manipulem seu comportamento 
+                visual e de interação. -->
+
+        <div class="conteudo-zoom">Este é um scroller de texto com efeito de zoom! Aproveite o visual!</div>
+        <!-- Dentro do container principal, há uma segunda <div> 
+                    que contém diretamente o texto que será animado 
+                    com o efeito de zoom. A classe 'conteudo-zoom' 
+                    define as propriedades CSS que controlam a 
+                    animação, como tamanho de fonte, 
+                    transições e transformações. -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo src="script.js" vincula um 
+                arquivo JavaScript externo ao documento. Este 
+                script pode incluir funções responsáveis por 
+                iniciar, pausar ou modificar dinamicamente a 
+                animação de zoom, além de tratar interações do 
+                usuário com o scroller. -->
+
+</body>
+<!-- Encerra a tag <body>, finalizando a área de conteúdo 
+            que os usuários interagem diretamente. -->
+
+</html>
+<!-- Fecha a tag <html>, marcando o fim do documento HTML. -->

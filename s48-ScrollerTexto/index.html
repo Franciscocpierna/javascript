@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- Essa linha informa ao navegador que este é um 
+        documento HTML5. O DOCTYPE é necessário para ativar o 
+        modo de padrões de conformidade, assegurando que o 
+        conteúdo seja interpretado de forma correta. -->
+
+<html lang="pt-br">
+<!-- Abre a tag HTML e define o idioma do documento como 
+        Português do Brasil. Isso ajuda os navegadores e as 
+        ferramentas de SEO a entenderem o idioma principal da 
+        página, o que é importante para acessibilidade e 
+        indexação correta pela busca. -->
+
+<head>
+<!-- Abre a tag HEAD, que contém metadados (dados sobre dados) que 
+            geralmente não são exibidos diretamente na página web. 
+            Esses dados incluem scripts, instruções de estilo, 
+            metainformações, etc. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag META com o atributo charset define o conjunto de 
+            caracteres para o documento HTML. UTF-8 é um padrão de 
+            codificação de caracteres que inclui quase todos os 
+            caracteres de todos os idiomas do mundo, proporcionando uma 
+            boa interoperabilidade internacional. -->
+
+    <title>Exemplos de Efeitos</title>
+    <!-- A tag TITLE define o título do documento, que é mostrado na 
+            aba do navegador. É uma informação crucial para SEO e 
+            usabilidade, ajudando os usuários a identificar o 
+            conteúdo da aba. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Esta linha liga um arquivo CSS externo, chamado estilos.css, 
+                ao documento HTML. Este arquivo contém os estilos 
+                que serão aplicados ao documento HTML. O atributo 'rel' 
+                especifica o relacionamento entre o documento HTML e 
+                o arquivo vinculado. Neste caso, é uma folha 
+                de estilo. -->
+
+</head>
+<!-- Fecha a tag HEAD. Todo o conteúdo dentro de <head> é processado 
+                pelo navegador, mas não é exibido diretamente 
+                na página web. -->
+
+<body>
+<!-- A tag BODY contém todo o conteúdo visível da página web, 
+                como texto, imagens, links, etc. É aqui que você 
+                coloca tudo o que os usuários irão interagir 
+                diretamente. -->
+
+    <div class="container">
+    <!-- Divisão com a classe 'container', geralmente usada para 
+                centralizar o conteúdo da página e dar um controle 
+                mais fácil sobre o layout através do CSS. -->
+
+        <h1>Exemplos de Efeitos Visuais</h1>
+        <!-- A tag H1 define um cabeçalho, que é geralmente o 
+                    título mais importante na página. Os motores de 
+                    busca utilizam esses cabeçalhos para entender 
+                    melhor o conteúdo principal da página, impactando SEO. -->
+
+        <div class="botoes">
+        <!-- Divisão com a classe 'botoes', contendo um conjunto de 
+                    botões. Esta classe pode ser usada para aplicar 
+                    estilos específicos aos botões dentro dela 
+                    através do CSS. -->
+
+            <button onclick="abrirPagina('fade.html')">Efeito de Fade</button>
+            <!-- Botão que, quando clicado, aciona a função 'abrirPagina' 
+                        com 'fade.html' como argumento, redirecionando o 
+                        navegador para a página 'fade.html'. O texto no 
+                        botão é 'Efeito de Fade'. -->
+
+            <button onclick="abrirPagina('bounce.html')">Efeito de Bounce</button>
+            <!-- Botão que inicia a função 'abrirPagina' redirecionando 
+                        para 'bounce.html'. O texto no botão 
+                        é 'Efeito de Bounce'. -->
+
+            <button onclick="abrirPagina('zoom.html')">Efeito de Zoom</button>
+            <!-- Botão que, ao ser clicado, executa a função 'abrirPagina' 
+                        e carrega 'zoom.html'. O texto no 
+                        botão é 'Efeito de Zoom'. -->
+
+            <button onclick="abrirPagina('rotate.html')">Efeito de Rotação</button>
+            <!-- Botão que chama 'abrirPagina' com 'rotate.html' como 
+                        parâmetro, carregando essa página. O texto no 
+                        botão é 'Efeito de Rotação'. -->
+
+            <button onclick="abrirPagina('image.html')">Imagem e Texto</button>
+            <!-- Botão que quando clicado, aciona a função 'abrirPagina' 
+                        direcionando para 'image.html'. O texto no botão 
+                        explica o conteúdo a ser visto: 'Imagem e Texto'. -->
+
+            <button onclick="abrirPagina('led.html')">Efeito de LED</button>
+            <!-- Botão que dispara a função 'abrirPagina' redirecionando 
+                        para 'led.html'. O texto no botão é 'Efeito de LED'. -->
+
+        </div>
+    </div>
+    <script>
+    /* Início da tag SCRIPT, que é usada para embutir ou referenciar 
+                        código JavaScript executável diretamente no HTML. 
+                        Todo código dentro desta tag é tratado como 
+                        JavaScript pelo navegador. */
+    
+        function abrirPagina(pagina) {
+         /* Declaração da função 'abrirPagina'. A função recebe um 
+                        parâmetro 'pagina', que se espera ser uma string 
+                        representando o caminho para outra página HTML. 
+                        As funções são blocos de código que realizam uma 
+                        tarefa específica e podem ser chamadas sempre 
+                        que necessário. */
+    
+            window.location.href = pagina;
+             /* A linha de código dentro da função modifica a 
+                        propriedade 'href' do objeto 'location', que é 
+                        parte do objeto 'window'. 'window' é um objeto 
+                        global que representa a janela do navegador.
+                A propriedade 'location.href' pode ser usada para 
+                        obter ou definir a URL atual da janela. Aqui, 
+                        ela é definida para o valor do parâmetro 'pagina', 
+                        causando um redirecionamento da janela do navegador 
+                        para a nova URL especificada. Isso muda a página 
+                        atual para a página especificada pelo 
+                        argumento 'pagina'. */
+        }
+         /* Encerramento da função 'abrirPagina'. */
+    
+    </script>
+    <!-- Fim da tag SCRIPT. -->
+        
+</body>
+</html>
+<!-- Fim da tag BODY e do documento HTML. -->

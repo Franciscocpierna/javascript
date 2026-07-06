@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE define o tipo de documento 
+            como HTML5. Essa linha é essencial para 
+            garantir que o navegador interprete e renderize o 
+            conteúdo da página de acordo com os padrões 
+            modernos do HTML5. -->
+
+<html lang="pt-br">
+<!-- A tag <html> abre o documento HTML e o atributo 'lang="pt-br"' 
+            especifica que o idioma do documento é português 
+            do Brasil. Isso ajuda na acessibilidade, SEO e 
+            garante que funcionalidades de idioma específicas, 
+            como a formatação de datas e números, sejam 
+            corretamente aplicadas pelo navegador. -->
+
+<head>
+    <!-- A tag <head> contém metadados e links para scripts ou 
+            folhas de estilo. Essa seção não é visível 
+            diretamente na interface do usuário. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com o atributo charset="UTF-8" define a 
+                codificação de caracteres universal para o 
+                documento, suportando quase todos os caracteres e 
+                símbolos de todos os idiomas, garantindo que 
+                qualquer texto seja exibido corretamente. -->
+
+    <title>Imagem e Texto</title>
+    <!-- A tag <title> define o título da página, que é 
+                exibido na aba do navegador. Esse título é 
+                importante para a experiência do usuário e SEO, 
+                pois fornece um contexto sobre o conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada para incluir uma folha de estilos 
+                externa, especificada pelo atributo href. 
+                Neste caso, 'estilos.css' contém as regras CSS 
+                que definem a aparência da página. -->
+
+</head>
+<!-- Fim da tag <head>. -->
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo principal da 
+                página que é visível para os usuários. -->
+
+    <div class="scroller-image">
+    <!-- Uma <div> com a classe 'scroller-image'. Essa classe 
+                é usada no CSS para aplicar estilos e 
+                comportamentos específicos ao scroller de imagem, 
+                como definições de tamanho, overflow, etc. -->
+
+        <div class="conteudo-image">
+        <!-- Outra <div> interna que contém efetivamente o 
+                    conteúdo do scroller. A classe 'conteudo-image' é 
+                    usada para especificar estilos e animações 
+                    para o conteúdo que contém imagem e texto. -->
+
+            <img src="carro.jpg" alt="Descrição da imagem">
+            <!-- A tag <img> é usada para incluir uma imagem no 
+                    documento. O atributo 'src' especifica o 
+                    caminho do arquivo de imagem, e 'alt' 
+                    fornece uma descrição alternativa da imagem, 
+                    essencial para acessibilidade e quando a 
+                    imagem não pode ser carregada. -->
+
+            <span>Este é um scroller de texto com imagem! Fantástico!</span>
+            <!-- Um <span> contém texto adicional, proporcionando 
+                        informações ou complementando a imagem. -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' inclui um arquivo 
+                JavaScript externo. 'script.js' é utilizado para 
+                adicionar funcionalidades dinâmicas ao scroller, 
+                como iniciar a animação, responder a eventos do 
+                usuário, etc. -->
+
+</body>
+<!-- Fim da tag <body>. -->
+
+</html>
+<!-- Fim do documento HTML. Toda a estrutura do 
+            documento está completa. -->

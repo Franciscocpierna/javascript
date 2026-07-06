@@ -1,0 +1,903 @@
+body {
+
+    background-color: #fff; 
+    /* Fundo branco */
+
+    color: #222;
+    /* Define a cor de texto geral para um cinza 
+                escuro, aumentando o contraste com o 
+                fundo branco */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para Arial, que é 
+                sans-serif, dando um look limpo e 
+                moderno ao texto */
+
+    display: flex;
+    /* Define o modelo de layout para Flexbox, o que 
+                facilita a organização dos itens internos de 
+                maneira eficiente e flexível */
+
+    justify-content: center;
+    /* Alinha os itens filho horizontalmente ao centro, 
+                funcionando aqui porque o 'display' foi 
+                definido como 'flex' */
+
+    align-items: center;
+    /* Alinha os itens filho verticalmente ao centro, 
+                isso também depende do 'display: flex' 
+                definido anteriormente */
+
+    height: 100vh;
+    /* Define a altura do <body> para ser 100% da 
+                altura da janela de visualização do navegador */
+
+    margin: 0;
+    /* Remove a margem padrão ao redor do <body>, permitindo 
+                que o conteúdo utilize todo o espaço da janela */
+
+}
+
+.container {
+
+    text-align: center;
+    /* Centraliza o texto dentro de elementos que são 
+                descendentes do elemento com a classe .container */
+                
+}
+
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem na parte inferior do cabeçalho 
+                para separá-lo de outros conteúdos abaixo dele */
+
+    font-size: 36px;
+    /* Define o tamanho da fonte do cabeçalho, fazendo com 
+                que seja maior e mais visível */
+
+    color: #222;
+    /* Define a cor do texto do cabeçalho para um cinza escuro, 
+                proporcionando um bom contraste com um 
+                fundo claro */
+
+}
+
+.botoes {
+
+    display: flex;
+    /* Usa Flexbox para organizar os botões dentro deste 
+                contêiner, proporcionando um layout 
+                mais adaptável */
+
+    flex-direction: column;
+    /* Define a orientação dos itens flexíveis como 
+                vertical, empilhando os botões 
+                verticalmente */
+
+    align-items: center;
+    /* Centraliza os botões na direção transversal (horizontal 
+                neste caso), dentro de seu contêiner */
+
+    gap: 15px;
+    /* Adiciona um espaço de 15px entre cada botão 
+                dentro do contêiner */
+
+}
+
+button {
+
+    display: block;
+    /* Faz com que cada botão se comporte como um bloco, 
+                ocupando uma linha inteira, mas personalizado 
+                para ajustar largura */
+
+    width: 750px;
+    /* Define a largura específica de cada botão para 750px, 
+                garantindo que todos os botões sejam 
+                largos e visíveis */
+
+    height: 130px;
+    /* Define a altura de cada botão para 130px, tornando-os 
+                mais fáceis de clicar especialmente em 
+                dispositivos touch */
+
+    padding: 15px 30px;
+    /* Adiciona um preenchimento dentro de cada botão para 
+                tornar o texto mais distante das bordas e 
+                mais confortável de visualizar */
+
+    background-color: #444;
+    /* Define a cor de fundo dos botões para um cinza 
+                escuro (#444), o que destaca os botões 
+                no layout geral */
+
+    color: #fff;
+    /* Define a cor do texto dentro dos botões para 
+                branco, criando um alto contraste com o 
+                fundo escuro */
+
+    border: none;
+    /* Remove qualquer borda padrão que poderia estar 
+                presente, criando um visual mais limpo */
+
+    cursor: pointer;
+    /* Muda o cursor para indicar que o elemento é 
+                clicável, melhorando a usabilidade */
+
+    font-size: 50px;
+    /* Define um tamanho de fonte maior para o texto 
+                dentro dos botões, tornando-os mais 
+                fáceis de ler */
+
+    text-align: center;
+    /* Centraliza o texto dentro dos botões, garantindo 
+                que o texto esteja bem alinhado horizontalmente */
+
+    line-height: 20px;
+    /* Define a altura da linha do texto dentro dos botões, o 
+                que pode afetar a maneira como o texto é 
+                visualmente posicionado verticalmente */
+
+}
+
+
+button:hover {
+
+    background-color: #e0f44b;
+    /* Muda a cor de fundo do botão para um amarelo vivo quando o 
+                mouse está sobre ele, aumentando a 
+                interatividade visual */
+
+    color: #000;
+    /* Muda a cor do texto para preto durante o estado hover, 
+                mantendo o contraste com a nova cor de fundo */
+
+}
+
+/* Estilos específicos para os exemplos */
+
+/* Scroller com Efeito de Fade */
+.scroller-fade {
+
+    width: 100%;
+    /* Define a largura do scroller para 100% da largura do 
+                elemento pai, ajudando-o a ocupar toda a 
+                largura disponível */
+
+    overflow: hidden;
+    /* Esconde qualquer conteúdo que ultrapasse o 
+                tamanho do elemento, essencial para a 
+                estética do scroller */
+
+    height: 300px;
+    /* Define uma altura fixa para o scroller, garantindo 
+                que todos os elementos dentro dele sejam 
+                cortados apropriadamente */
+
+    position: relative;
+    /* Posicionamento relativo usado como referência para 
+                posicionar absolutamente elementos internos 
+                como 'conteudo-fade' */
+
+    background-color: #000;
+    /* Define a cor de fundo do scroller para preto, 
+                proporcionando um fundo distinto para o 
+                texto claro */
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* Aplica uma sombra sutil ao scroller, adicionando 
+                profundidade e ajudando o scroller a se 
+                destacar do resto do conteúdo */
+
+    display: flex;
+    /* Utiliza Flexbox para alinhar facilmente itens 
+                dentro do scroller, neste caso, 
+                centralizando verticalmente */
+
+    align-items: center;
+    /* Alinha itens verticalmente ao centro dentro do 
+                scroller, centralizando o conteúdo 
+                verticalmente */
+
+}
+
+.conteudo-fade {
+
+    position: absolute;
+    /* Posiciona absolutamente o conteúdo dentro do 
+                scroller, permitindo que ele deslize 
+                independentemente do scroller */
+
+    white-space: nowrap;
+    /* Impede a quebra de linha do texto dentro do 
+                scroller, essencial para o efeito de 
+                deslizamento contínuo */
+
+    font-size: 100px;
+    /* Define um tamanho de fonte muito grande para o 
+                texto, garantindo que ele seja legível e 
+                tenha impacto visual */
+
+    color: #fff;
+    /* Define a cor do texto para branco, criando um 
+                alto contraste com o fundo escuro para 
+                legibilidade */
+
+    padding: 10px 20px;
+    /* Adiciona um espaçamento interno ao redor do 
+                texto, aumentando a legibilidade e a 
+                estética geral */
+
+    animation: deslizar-fade 15s linear infinite;
+    /* Aplica uma animação chamada 'deslizar-fade', que 
+                desliza o texto horizontalmente ao longo 
+                de 15 segundos de forma linear e infinita */
+
+}
+
+
+@keyframes deslizar-fade {
+
+    0% {
+
+        transform: translateX(100%);
+        /* No início da animação, posiciona o 
+                conteúdo 100% para a direita do ponto de 
+                partida, tornando-o inicialmente invisível à 
+                direita da tela. */
+
+        opacity: 0;
+        /* Configura a opacidade para 0, tornando o conteúdo 
+                completamente transparente no início da animação. */
+
+    }
+
+    10% {
+
+        opacity: 1;
+        /* Aumenta a opacidade para 1 em 10% do tempo de 
+                animação, tornando o conteúdo totalmente visível. */
+
+    }
+
+    90% {
+
+        opacity: 1;
+        /* Mantém a opacidade em 1 até 90% do tempo de 
+                animação, garantindo que o conteúdo permaneça 
+                visível durante a maior parte da animação. */
+
+    }
+
+    100% {
+
+        transform: translateX(-100%);
+        /* No final da animação, desloca o conteúdo para 100% à 
+                esquerda, fazendo-o sair completamente da tela. */
+
+        opacity: 0;
+        /* Reduz a opacidade para 0 novamente, tornando o 
+                conteúdo completamente transparente no 
+                final da animação. */
+
+    }
+}
+
+
+/* Scroller com Efeito de Bounce */
+.scroller-bounce {
+
+    width: 100%;
+    /* Define a largura do contêiner do scroller 
+                para 100% da largura do elemento pai, 
+                garantindo que ele ocupe toda a 
+                largura disponível. */
+
+    overflow: hidden;
+    /* Configura o scroller para esconder qualquer 
+                conteúdo que ultrapasse o seu tamanho 
+                especificado, essencial para manter o 
+                conteúdo controlado dentro do scroller. */
+
+    height: 400px;
+    /* Define a altura do scroller para 400px, proporcionando 
+                espaço suficiente para o efeito de quique ser 
+                observado sem cortes. */
+
+    position: relative;
+    /* Define a posição como relativa, o que permite que 
+                qualquer posicionamento absoluto de elementos 
+                filhos seja relativo a este contêiner. */
+
+    background-color: #000;
+    /* Configura a cor de fundo do scroller para preto, 
+                proporcionando um forte contraste com 
+                elementos de conteúdo claro. */
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* Aplica uma sombra sutil ao scroller para adicionar 
+                profundidade e destaque visual. */
+
+    display: flex;
+    /* Utiliza Flexbox para facilitar o alinhamento dos 
+                itens dentro do scroller. */
+
+    align-items: center;
+    /* Alinha os itens no centro verticalmente dentro do 
+                scroller, garantindo que o conteúdo esteja 
+                centrado independentemente do tamanho. */
+
+}
+
+
+.conteudo-bounce {
+
+    position: absolute;
+    /* Posiciona o elemento de forma absoluta dentro de seu 
+                contêiner mais próximo com posição não estática, 
+                permitindo que ele se mova livremente dentro 
+                do scroller-bounce. */
+
+    white-space: nowrap;
+    /* Impede que o texto dentro deste elemento quebre em 
+                várias linhas, garantindo que o texto permaneça em 
+                uma única linha horizontal. */
+
+    font-size: 100px;
+    /* Define um tamanho de fonte grande, tornando o texto 
+                claramente visível e impactante. */
+
+    color: #fff;
+    /* Define a cor do texto para branco, criando um alto 
+                contraste com um fundo escuro para 
+                facilitar a leitura. */
+
+    padding: 10px 20px;
+    /* Adiciona espaço dentro do elemento ao redor do texto, 
+                melhorando a legibilidade e a estética 
+                geral do design. */
+
+    animation: deslizar-bounce 10s ease-in-out infinite;
+    /* Aplica uma animação chamada 'deslizar-bounce'. 
+                A animação ocorre durante 10 segundos com um 
+                efeito 'ease-in-out' (aceleração no início e 
+                no fim) e se repete infinitamente. */
+
+}
+
+@keyframes deslizar-bounce {
+
+    0% {
+
+        transform: translateX(100%);
+        /* No início da animação, move o elemento 100% para a 
+                direita de sua posição original, fazendo com 
+                que comece fora da tela à direita. */
+                
+    }
+
+    25% {
+
+        transform: translateX(75%) translateY(-50px);
+        /* Em 25% da animação, move o elemento para 75% da 
+                direita para a esquerda e simultaneamente 
+                move 50px para cima, criando um efeito de "salto". */
+
+    }
+
+    50% {
+
+        transform: translateX(50%) translateY(0);
+        /* Em 50% do tempo, o elemento é trazido para o 
+                centro horizontalmente (50% para a esquerda 
+                do início) e retorna ao alinhamento 
+                vertical inicial. */
+
+    }
+
+    75% {
+
+        transform: translateX(25%) translateY(-50px);
+        /* Em 75% da animação, o elemento é ainda mais 
+                deslocado para a esquerda (25% para a direita 
+                do ponto de partida) e novamente move 50px para 
+                cima, reforçando o efeito de "salto". */
+
+    }
+
+    100% {
+
+        transform: translateX(-100%);
+        /* No final da animação, o elemento é completamente 
+                movido para a esquerda, saindo da tela, 
+                passando 100% de sua largura original 
+                para a esquerda. */
+
+    }
+}
+
+/* Scroller com Efeito de Zoom */
+.scroller-zoom {
+
+    width: 100%;
+    /* Ajusta a largura do scroller para ocupar 100% 
+                da largura do contêiner pai. */
+
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que ultrapasse o limite do 
+                scroller, essencial para manter um design limpo. */
+
+    height: 800px;
+    /* Define uma altura fixa para o scroller, o suficiente 
+                para mostrar claramente o conteúdo e permitir um 
+                bom espaço para o efeito de zoom. */
+
+    position: relative;
+    /* Configura o scroller para ter posição relativa, que é 
+                a base para o posicionamento absoluto dos 
+                elementos internos. */
+
+    background-color: #000;
+    /* Aplica uma cor de fundo preta ao scroller, garantindo um 
+                alto contraste com o conteúdo de cor clara. */
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* Adiciona uma sombra leve para estilizar e elevar 
+                visualmente o scroller acima de outros conteúdos. */
+
+    display: flex;
+    /* Utiliza Flexbox para gerenciar o layout dos 
+                elementos internos, permitindo alinhamentos 
+                mais simples e designs responsivos. */
+
+    align-items: center;
+    /* Alinha o conteúdo dentro do scroller verticalmente ao 
+                centro, melhorando a estética geral. */
+
+}
+
+.conteudo-zoom {
+
+    position: absolute;
+    /* Posiciona o conteúdo de forma absoluta dentro do 
+                scroller, permitindo que ele se mova livre 
+                de restrições do contêiner pai. */
+
+    white-space: nowrap;
+    /* Evita quebra de linha do conteúdo, essencial para 
+                manter o texto contínuo e legível durante o 
+                efeito de zoom. */
+
+    font-size: 50px;
+    /* Define o tamanho da fonte do conteúdo, garantindo que 
+                seja grande o suficiente para leitura em zoom. */
+
+    color: #fff;
+    /* Define a cor do texto para branco, garantindo 
+                excelente legibilidade contra o fundo escuro. */
+
+    padding: 10px 20px;
+    /* Adiciona preenchimento ao redor do conteúdo para 
+                espaço extra, evitando que o texto toque 
+                diretamente nas bordas do scroller. */
+
+    animation: deslizar-zoom 15s linear infinite;
+    /* Define uma animação de 15 segundos que se repete 
+                infinitamente, com um movimento suave (linear) 
+                para simular o deslizamento e zoom. */
+
+}
+
+@keyframes deslizar-zoom {
+
+    0% {
+
+        transform: translateX(100%) scale(1);
+        /* Inicia com o conteúdo 100% à direita da 
+                sua posição normal, em escala normal (1). */
+
+    }
+
+    50% {
+
+        transform: translateX(0%) scale(2);
+        /* Atinge o centro do scroller e aumenta o zoom para o 
+                dobro do tamanho original (escala 2), criando um 
+                destaque visual no meio da animação. */
+
+    }
+
+    100% {
+
+        transform: translateX(-100%) scale(1);
+        /* Move o conteúdo para 100% à esquerda da sua 
+                posição normal e retorna à escala normal, 
+                fazendo com que saia completamente da 
+                tela à esquerda. */
+
+    }
+}
+
+/* Scroller com Efeito de LED */
+.scroller-led {
+    
+    width: 100%;
+    /* Estabelece a largura do scroller para preencher 100% 
+                da largura do container pai, o que maximiza a 
+                área de exibição do scroller. */
+
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que exceda as dimensões do 
+                scroller, essencial para manter o controle 
+                sobre a aparência visual, especialmente 
+                em animações. */
+
+    height: 300px;
+    /* Define a altura do scroller para 300px, o suficiente 
+                para acomodar o texto e proporcionar uma 
+                boa visibilidade. */
+
+    position: relative;
+    /* Configura a posição como relativa, o que é importante 
+                para posicionar corretamente elementos 
+                absolutamente posicionados dentro 
+                deste container. */
+
+    background: url('fundo_led.jpg') repeat;
+    /* Define o fundo do scroller como uma imagem de LED, 
+                repetindo-a para cobrir toda a área do 
+                elemento. Isso ajuda a criar um efeito 
+                visual de painel de LED. */
+
+    display: flex;
+    /* Usa o Flexbox para gerenciar o layout dos 
+                elementos dentro do scroller, possibilitando um 
+                alinhamento mais fácil e flexível do conteúdo. */
+
+    align-items: center;
+    /* Alinha o conteúdo verticalmente ao centro do scroller, 
+                garantindo que qualquer texto ou elemento 
+                esteja centralizado na altura. */
+
+    justify-content: center;
+    /* Alinha o conteúdo horizontalmente ao centro, o que é 
+                crucial para que o texto apareça no meio 
+                do scroller. */
+
+}
+
+.conteudo-led {
+
+    font-size: 100px;
+    /* Define um tamanho de fonte grande, 100px, tornando o 
+                texto grande o suficiente para ser visto 
+                claramente e impactante visualmente. */
+
+    color: #ffffff;
+    /* Configura a cor do texto para branco, oferecendo um 
+                alto contraste com a imagem de fundo e outros 
+                elementos visuais, melhorando a legibilidade. */
+
+    text-shadow: 
+        0 0 5px #ff0000;
+    /* Adiciona uma sombra de texto vermelha, que simula o 
+                brilho de um display de LED, ampliando o 
+                efeito visual de tecnologia de luz LED. */
+
+    animation: deslizar-led 20s linear infinite, piscar 1s step-start infinite;
+    /* Combina duas animações: uma que desliza o texto 
+                através do scroller em 20 segundos de forma 
+                contínua e linear, e outra que faz o texto 
+                piscar a cada segundo. Isso cria um dinamismo 
+                visual característico de displays de LED. */
+
+}
+
+
+@keyframes deslizar-led {
+
+    0% {
+
+        transform: translateX(100%);
+        /* No início da animação, o elemento começa 100% para a 
+                direita do seu ponto de partida visível, 
+                essencialmente fora da tela à direita. */
+
+    }
+
+    100% {
+
+        transform: translateX(-100%);
+        /* No final da animação, o elemento se move 100% para a 
+                esquerda do seu ponto de partida original, movendo-se 
+                completamente fora da tela à esquerda. */
+
+    }
+}
+/* Esta animação cria um efeito de deslizamento contínuo de um 
+            lado ao outro, simulando um display LED em movimento. */
+
+
+@keyframes piscar {
+
+    0%, 49% {
+
+        opacity: 1;
+        /* De 0% a 49% da duração da animação, o elemento 
+                permanece totalmente visível (opacidade 1), 
+                criando a impressão de que está constantemente ligado. */
+
+    }
+
+    50%, 100% {
+
+        opacity: 0;
+        /* De 50% a 100% da duração da animação, o elemento se 
+                torna completamente invisível (opacidade 0), 
+                criando um efeito de "piscar". */
+
+    }
+}
+/* Esta animação de piscar faz com que o texto ou elemento 
+                alternem entre visível e invisível, simbolizando o 
+                intermitente piscar de um display de LED, frequentemente 
+                usado para chamar a atenção ou indicar algo importante. */
+
+
+/* Scroller com Efeito de Rotação */
+.scroller-rotate {
+
+    width: 100%;
+    /* Define a largura do contêiner do scroller para 
+                ocupar 100% da largura disponível no 
+                contêiner pai, assegurando que ele se 
+                estenda por toda a largura da tela ou do 
+                contêiner pai. */
+
+    overflow: hidden;
+    /* Oculta qualquer conteúdo que ultrapasse os limites 
+                deste contêiner, crucial para manter o scroller 
+                limpo e evitar a visualização de elementos que 
+                se movem para fora da área definida. */
+
+    height: 800px;
+    /* Estabelece uma altura fixa de 800px para o scroller, 
+                proporcionando espaço suficiente verticalmente para 
+                visualizar o conteúdo enquanto ele roda e move-se 
+                horizontalmente. */
+
+    position: relative;
+    /* Define a posição do scroller como relativa, permitindo 
+                posicionar absolutamente elementos internos em 
+                relação a este contêiner. */
+
+    background-color: #000;
+    /* Configura a cor de fundo do scroller para preto, 
+                oferecendo um forte contraste com o conteúdo de 
+                cor clara (texto branco), realçando a 
+                visibilidade do efeito de rotação. */
+
+    display: flex;
+    /* Utiliza Flexbox para alinhar itens dentro do scroller, 
+                facilitando o alinhamento vertical e horizontal 
+                do conteúdo. */
+
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente dentro do 
+                scroller, garantindo que o conteúdo esteja 
+                alinhado ao centro da altura do scroller. */
+
+    justify-content: flex-start;
+    /* Alinha o conteúdo ao início do contêiner do 
+                scroller (lado direito), assegurando que a 
+                animação comece fora da visualização à direita. */
+
+}
+
+.conteudo-rotate {
+
+    position: absolute;
+    /* Posiciona o conteúdo de forma absoluta dentro do 
+                scroller, permitindo que ele se mova 
+                livremente conforme as especificações da 
+                animação, sem ser restrito pelo layout 
+                do contêiner. */
+
+    white-space: nowrap;
+    /* Evita que o texto dentro do conteúdo quebre em 
+                várias linhas, mantendo tudo em uma única 
+                linha contínua; crucial para manter a 
+                coesão visual durante a rotação e o 
+                movimento horizontal. */
+
+    font-size: 50px;
+    /* Define o tamanho da fonte do conteúdo para 50px, 
+                tornando-o suficientemente grande para 
+                ser lido claramente à medida que se 
+                move e roda. */
+
+    color: #fff;
+    /* Define a cor do texto para branco, criando um 
+                contraste alto com o fundo preto para 
+                melhorar a legibilidade. */
+
+    padding: 10px 20px;
+    /* Adiciona preenchimento ao redor do texto para 
+                evitar que ele toque diretamente as bordas 
+                do scroller, melhorando a estética e a 
+                legibilidade. */
+
+    left: 100%;
+    /* Posiciona inicialmente o conteúdo fora da tela à 
+                direita (100% para a direita da borda 
+                esquerda do contêiner), garantindo que 
+                ele comece fora de vista e entre na 
+                tela suavemente. */
+
+    animation: deslizar-rotate 20s linear infinite;
+    /* Aplica a animação chamada 'deslizar-rotate' com 
+                duração de 20 segundos, ocorrendo de 
+                maneira linear e repetindo infinitamente, 
+                para um efeito contínuo de rotação e 
+                deslocamento horizontal. */
+
+}
+
+@keyframes deslizar-rotate {
+
+    0% {
+
+        transform: translateX(0) rotate(0deg);
+        /* Inicia com o conteúdo alinhado à borda 
+                direita, dentro do campo de visão, 
+                pronto para entrar. */
+
+    }
+
+    50% {
+
+        transform: translateX(-150%) rotate(720deg);
+        /* Movimenta o conteúdo para a esquerda (150% da 
+                largura do próprio conteúdo) e realiza duas 
+                voltas completas, posicionando o texto mais 
+                ao centro durante este ponto da animação. */
+
+    }
+
+    100% {
+
+        transform: translateX(-450%) rotate(1440deg);
+        /* Continua o movimento para a esquerda (500% da 
+                largura do conteúdo) e completa quatro voltas 
+                totais, garantindo que o conteúdo saia 
+                completamente da tela à esquerda ao 
+                final da animação. */
+
+    }
+}
+
+/* Scroller com Imagem e Texto */
+.scroller-image {
+
+    width: 100%;
+    /* Define a largura do scroller para 100% da 
+                largura do container pai, o que permite 
+                que ocupe toda a largura disponível. */
+
+    overflow: hidden;
+    /* Mantém qualquer conteúdo que ultrapasse os limites 
+                do scroller oculto, essencial para uma 
+                aparência limpa e controlada. */
+
+    height: 300px;
+    /* Define a altura do scroller para 300px, o 
+                suficiente para acomodar imagens e 
+                texto de forma adequada. */
+
+    position: relative;
+    /* Configura o scroller para ter posição relativa, o 
+                que serve de referência para os elementos 
+                posicionados de forma absoluta dentro dele. */
+
+    background-color: #000;
+    /* Define a cor de fundo do scroller para preto, 
+                criando um fundo sólido que aumenta o 
+                contraste para o conteúdo claro. */
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* Adiciona uma sombra sutil ao redor do scroller 
+                para dar profundidade e destacá-lo 
+                visualmente do resto do conteúdo. */
+
+    display: flex;
+    /* Usa Flexbox para gerenciar o layout dos 
+                elementos dentro do scroller, simplificando o 
+                alinhamento vertical. */
+
+    align-items: center;
+    /* Alinha os conteúdos internos verticalmente ao 
+                centro, assegurando que tanto texto 
+                quanto imagem estejam alinhados. */
+
+}
+
+.conteudo-image {
+
+    position: absolute;
+    /* Posiciona o conteúdo de forma absoluta dentro do 
+                scroller, permitindo movimentação livre 
+                dentro do espaço definido. */
+
+    white-space: nowrap;
+    /* Impede que o conteúdo (texto ou imagem) quebre em 
+                várias linhas, essencial para a consistência 
+                do deslizamento horizontal. */
+
+    font-size: 50px;
+    /* Define um tamanho de fonte grande para o texto, 
+                garantindo visibilidade e impacto visual. */
+                
+    color: #fff;
+    /* Configura a cor do texto para branco, promovendo alto 
+                contraste com o fundo escuro. */
+
+    padding: 10px 20px;
+    /* Aplica preenchimento em torno do conteúdo, 
+                aumentando a área de toque e 
+                melhorando a legibilidade. */
+
+    display: flex;
+    /* Utiliza Flexbox dentro do conteúdo para alinhar 
+                elementos como texto e imagens lado a lado. */
+
+    align-items: center;
+    /* Garante que tanto o texto quanto as imagens 
+                estejam alinhados verticalmente ao 
+                centro dentro do próprio conteúdo. */
+
+    animation: deslizar-image 15s linear infinite;
+    /* Aplica uma animação que move o conteúdo 
+                horizontalmente de um lado ao outro do 
+                scroller de forma contínua e suave. */
+
+}
+
+.conteudo-image img {
+
+    height: 100px; /* Define a altura da imagem para 100px, 
+                garantindo que ela se ajuste bem dentro do 
+                scroller sem sobrepor o texto. */
+
+    margin-right: 20px;
+    /* Adiciona uma margem à direita da imagem, 
+                criando espaço entre a imagem e o texto 
+                seguinte, evitando que os elementos 
+                fiquem visualmente comprimidos. */
+
+}
+
+@keyframes deslizar-image {
+
+    0% {
+
+        transform: translateX(calc(0% + 100vw));
+        /* Inicia a animação movendo o conteúdo de modo 
+                que comece completamente fora da tela à 
+                direita. O valor '100vw' representa 100% da 
+                largura da viewport, garantindo que o 
+                elemento inicie fora da área visível. */
+
+    }
+
+    100% {
+
+        transform: translateX(calc(-50% - 50vw));
+        /* Finaliza a animação empurrando o conteúdo para 
+                além da largura da viewport para a esquerda. 
+                Essa transformação garante que ele saia 
+                completamente da área de visualização. */
+                
+    }
+}
