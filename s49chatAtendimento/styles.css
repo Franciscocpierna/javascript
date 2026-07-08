@@ -1,0 +1,471 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do corpo da página 
+                como Arial. Se Arial não estiver disponível,
+                será usada uma fonte sans-serif genérica. Essa 
+                propriedade garante que o texto seja 
+                legível e visualmente agradável. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo de toda a página como um cinza 
+                claro (#f0f0f0), que é suave para os olhos e 
+                proporciona um contraste adequado com o conteúdo 
+                da página, facilitando a leitura. */
+
+    margin: 0;
+    /* Remove as margens padrão do corpo da página, fazendo 
+                com que o conteúdo se estenda até as 
+                bordas do navegador, maximizando o espaço de 
+                tela disponível. */
+
+    height: 100vh;
+    /* Define a altura do corpo da página para ser igual à 
+                100% da altura da janela de visualização (viewport).
+       Isso garante que a página ocupe toda a altura da 
+                tela do dispositivo, independente do 
+                seu tamanho. */
+
+}
+
+#chatbot {
+
+    position: fixed;
+    /* Configura o posicionamento do chatbot como fixo, 
+                o que significa que ele ficará fixo na tela
+                e não se moverá junto com o scroll da página. 
+                Isso é essencial para que o chatbot esteja 
+                sempre acessível ao usuário. */
+
+    bottom: 20px;
+    /* Posiciona o chatbot a 20 pixels do fundo da 
+                janela do navegador. Isso dá um pequeno 
+                espaçamento e garante que o chatbot não 
+                fique exatamente colado na borda inferior 
+                da tela. */
+
+    right: 20px;
+    /* Posiciona o chatbot a 20 pixels do lado direito da 
+                janela do navegador, similar ao 
+                posicionamento inferior, criando um alinhamento 
+                visual e mantendo-o facilmente acessível. */
+
+    width: 300px;
+    /* Define a largura do chatbot para 300 pixels, 
+                garantindo que ele tenha espaço suficiente 
+                para exibir conteúdo, mas sem ocupar 
+                muito espaço na tela. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida de 1 pixel ao redor do 
+                chatbot, com uma cor cinza claro (#ccc). 
+                Isso define claramente os limites do chatbot e 
+                melhora sua visibilidade contra variados 
+                fundos de página. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da borda do chatbot com um 
+                raio de 10 pixels, proporcionando um 
+                design mais suave e moderno, que é visualmente 
+                mais agradável do que cantos pontiagudos. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do chatbot como branco (#fff), 
+                garantindo que o conteúdo interno 
+                seja fácil de ler e que haja um forte 
+                contraste com a maioria dos elementos de fundo. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do chatbot, dando um 
+                efeito de elevação, o que ajuda a 
+                distinguir o chatbot do resto do conteúdo 
+                da página, aumentando a sua presença visual. */
+
+    overflow: hidden;
+    /* Previne que qualquer conteúdo interno que exceda os 
+                limites do chatbot seja mostrado, 
+                mantendo o design limpo e organizado. */
+
+    display: flex;
+    /* Utiliza Flexbox para definir a disposição dos 
+                elementos internos do chatbot, o que 
+                facilita a organização e alinhamento 
+                dos componentes de interface. */
+
+    flex-direction: column;
+    /* Define a direção principal do Flexbox como coluna, 
+                o que significa que os elementos internos 
+                serão organizados verticalmente, um 
+                abaixo do outro, dentro do chatbot. */
+
+}
+
+
+#chat-header {
+
+    background-color: #4CAF50;
+    /* Configura a cor de fundo do cabeçalho do chatbot para um 
+                verde vibrante (#4CAF50), proporcionando um 
+                destaque visual e conferindo um tema 
+                de design atraente. */
+    
+    color: white;
+    /* Define a cor do texto dentro do cabeçalho como 
+                branco, criando um alto contraste 
+                com o fundo verde para facilitar a leitura. */
+    
+    padding: 10px;
+    /* Aplica um espaçamento interno de 10 pixels em 
+                todas as direções dentro do cabeçalho, o que 
+                aumenta o espaço ao redor do conteúdo e 
+                melhora a legibilidade. */
+    
+    display: flex;
+    /* Utiliza o modelo Flexbox para o layout interno do 
+                cabeçalho, permitindo um controle mais eficiente 
+                do alinhamento e do espaçamento entre os 
+                elementos contidos nele. */
+    
+    justify-content: space-between;
+    /* Distribui o espaço entre os elementos dentro do 
+                cabeçalho de modo que eles sejam alinhados um à 
+                esquerda e outro à direita, otimizando o 
+                uso do espaço. */
+    
+    align-items: center;
+    /* Alinha todos os itens internos ao centro verticalmente, 
+                garantindo que eles estejam centrados 
+                independentemente de suas alturas individuais. */
+    
+    border-bottom: 1px solid #ccc;
+    /* Adiciona uma borda sólida na parte inferior do 
+                cabeçalho com 1 pixel de espessura e cor 
+                cinza claro (#ccc), marcando uma separação 
+                visual clara entre o cabeçalho e o 
+                conteúdo abaixo. */
+
+}
+
+#chat-header button {
+
+    background: none;
+    /* Remove qualquer fundo padrão dos botões dentro do 
+                cabeçalho, tornando-os transparentes e 
+                mais integrados ao design do cabeçalho. */
+    
+    border: none;
+    /* Elimina as bordas dos botões, mantendo a interface 
+                limpa e evitando estilos visuais desnecessários 
+                que poderiam conflitar com o design geral. */
+    
+    color: white;
+    /* Assegura que a cor do texto dos botões seja branca, 
+                mantendo a consistência com a cor do texto do 
+                cabeçalho e garantindo a visibilidade contra o 
+                fundo verde. */
+    
+    font-size: 1.2em;
+    /* Aumenta o tamanho do texto nos botões para 1.2 vezes o 
+                tamanho padrão do texto herdado, tornando-os 
+                mais fáceis de ler e mais acessíveis. */
+    
+    cursor: pointer;
+    /* Muda o cursor para o indicador de ponteiro quando passa 
+                sobre os botões, melhorando a usabilidade ao 
+                informar visualmente que os botões são interativos. */
+
+}
+
+#chat-intro {
+
+    padding: 10px;
+    /* Aplica um espaçamento interno de 10 pixels, assim 
+                como no cabeçalho, proporcionando consistência 
+                de design e conforto visual. */
+    
+    display: flex;
+    /* Estabelece Flexbox também para o container de introdução, 
+                favorecendo um layout responsivo e fluido para os 
+                elementos internos. */
+    
+    flex-direction: column;
+    /* Define a direção do layout Flexbox para coluna, 
+                orientando os elementos internos a se 
+                organizarem verticalmente. */
+    
+    align-items: center;
+    /* Centraliza todos os elementos dentro do container de 
+                introdução no eixo transversal, o que é ideal 
+                para alinhar centralmente em layouts de 
+                coluna única. */
+
+}
+
+#chat-window {
+
+    display: flex;
+    /* Define o modelo de caixa flexível (Flexbox) para o 
+                container da janela de chat, permitindo controle 
+                avançado sobre o alinhamento e distribuição dos 
+                elementos internos. */
+
+    flex-direction: column;
+    /* Estabelece a organização dos elementos filho em uma 
+                direção de coluna, ou seja, os elementos são 
+                empilhados verticalmente. */
+
+    height: 300px;
+    /* Define a altura do container da janela de chat para 300 
+                pixels, garantindo que não ocupe demasiado 
+                espaço na tela e mantenha um tamanho manejável. */
+
+    overflow-y: auto;
+    /* Habilita a barra de rolagem vertical quando o conteúdo 
+                excede a altura do container. Isso é essencial 
+                para uma experiência de usuário agradável ao 
+                manter a interface do chat navegável. */
+
+    padding: 10px;
+    /* Adiciona um espaçamento de 10 pixels em todas as 
+                direções dentro do container da janela de chat, 
+                proporcionando espaço ao redor do conteúdo para 
+                melhor legibilidade e estética. */
+
+    flex-grow: 1;
+    /* Permite que a janela de chat cresça para ocupar todo o 
+                espaço disponível no container pai, se necessário, 
+                o que ajuda a preencher o espaço de forma 
+                eficaz e responsiva. */
+
+}
+
+
+#chat-output {
+
+    display: flex;
+    /* Usa Flexbox para gerenciar os elementos de saída de 
+                chat, que são mensagens dentro deste container. */
+
+    flex-direction: column;
+    /* Mantém a organização dos elementos de mensagem em 
+                uma coluna, empilhando mensagens uma sobre a 
+                outra verticalmente. */
+
+    flex-grow: 1;
+    /* Permite que este container de saída expanda para 
+                preencher qualquer espaço disponível no seu 
+                container pai, garantindo que o espaço seja 
+                utilizado eficientemente e as mensagens 
+                preencham a janela de chat. */
+
+}
+
+
+#input-container {
+
+    display: flex;
+    /* Configura Flexbox no container do campo de entrada de 
+                mensagem, o que facilita o alinhamento e a 
+                disposição dos elementos internos, como o 
+                campo de entrada e o botão de envio. */
+
+}
+
+#entrada-usuario {
+
+    flex-grow: 1;
+    /* Permite que o campo de entrada de mensagem cresça e 
+                ocupe o máximo de espaço possível dentro de 
+                seu container, garantindo que o usuário tenha 
+                bastante espaço para digitar mensagens. */
+
+    padding: 10px;
+    /* Adiciona um espaçamento interno de 10 pixels ao redor do 
+                texto dentro do campo de entrada, melhorando a 
+                visibilidade e a facilidade de interação. */
+
+    border: none;
+    /* Remove qualquer borda do campo de entrada, criando uma 
+                aparência mais limpa e integrada ao design 
+                geral do chatbot. */
+
+}
+
+
+#botao-enviar {
+
+    padding: 10px;
+    /* Define um espaçamento interno de 10 pixels em todas as 
+                direções dentro do botão, melhorando a acessibilidade e 
+                conforto no clique, além de aumentar a área clicável. */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão, resultando em uma 
+                aparência mais limpa e simplificada que combina 
+                melhor com o estilo geral do chatbot. */
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo do botão para um verde vibrante (#4CAF50), 
+                alinhado com a paleta de cores do cabeçalho do chat, 
+                criando uma interface coerente e visualmente atraente. */
+
+    color: #fff;
+    /* A cor do texto dentro do botão é definida como 
+                branco (#fff), criando um alto contraste com o 
+                fundo verde para facilitar a leitura. */
+
+    cursor: pointer;
+    /* Muda o cursor para a forma de ponteiro quando hover 
+                sobre o botão, indicando que o elemento é 
+                clicável e melhorando a experiência do usuário. */
+
+}
+
+#botao-enviar:hover {
+
+    background-color: #45a049;
+    /* Sutil alteração da cor de fundo para um verde 
+                ligeiramente mais escuro (#45a049) quando o 
+                mouse está sobre o botão, fornecendo um 
+                feedback visual de interatividade. */
+                
+}
+
+
+.message {
+
+    margin: 5px 0;
+    /* Define as margens verticalmente para 5 pixels 
+                acima e abaixo de cada mensagem, separando 
+                visualmente as mensagens dentro da 
+                janela de chat. */
+
+    padding: 10px;
+    /* Adiciona 10 pixels de espaçamento interno em 
+                todas as direções dentro de cada elemento de 
+                mensagem, melhorando a legibilidade do 
+                texto contido. */
+
+    border-radius: 5px;
+    /* Aplica um raio de 5 pixels para arredondar os 
+                cantos dos elementos de mensagem, suavizando a 
+                aparência geral e tornando o design mais 
+                amigável e moderno. */
+
+}
+
+
+.user-message {
+
+    background-color: #e1ffc7;
+    /* Define a cor de fundo para mensagens enviadas pelo 
+                usuário para um verde claro (#e1ffc7), 
+                ajudando a distinguir visualmente essas 
+                mensagens das mensagens do bot. */
+
+    align-self: flex-end;
+    /* Alinha as mensagens do usuário ao final do 
+                container flexível (à direita), agrupando 
+                visualmente as mensagens do mesmo 
+                remetente e melhorando a organização 
+                do diálogo. */
+
+}
+
+
+.bot-message {
+
+    background-color: #d1d1d1;
+    /* Define a cor de fundo das mensagens do bot 
+                para um cinza claro (#d1d1d1), o que 
+                ajuda a diferenciar visualmente as 
+                mensagens do bot das mensagens do 
+                usuário. */
+
+    align-self: flex-start;
+    /* Alinha as mensagens do bot ao início do container 
+                flexível (à esquerda), facilitando a 
+                identificação do remetente da mensagem 
+                como o bot, seguindo um layout tradicional 
+                de chat. */
+
+}
+
+
+#cursos-botoes {
+
+    display: flex;
+    /* Utiliza Flexbox para gerenciar o layout dos botões 
+                de cursos, proporcionando um alinhamento 
+                eficiente e adaptativo dos elementos dentro 
+                do container. */
+
+    justify-content: space-around;
+    /* Distribui espaço uniformemente em torno de cada 
+                botão dentro do container, garantindo que 
+                cada botão tenha espaço adequado ao redor, 
+                evitando aglomeração e melhorando a estética. */
+
+    margin-top: 10px;
+    /* Adiciona uma margem superior de 10 pixels ao 
+                container dos botões, separando-o visualmente 
+                de outros conteúdos acima dele, como a 
+                janela de chat. */
+
+}
+
+
+.botao-curso {
+
+    padding: 10px;
+    /* Adiciona um espaçamento interno de 10 pixels em 
+                todas as direções dentro de cada botão, 
+                aumentando a área de clique e melhorando a 
+                usabilidade. */
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo dos botões de cursos para um 
+                verde vibrante (#4CAF50), mantendo a coerência 
+                com a paleta de cores do design geral do chatbot. */
+
+    color: white;
+    /* Estabelece a cor do texto dentro dos botões como 
+                branco, criando um contraste elevado para 
+                facilitar a leitura e destacar o texto. */
+
+    border: none;
+    /* Remove as bordas dos botões, promovendo um design 
+                mais limpo e moderno. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos dos botões com um raio de 5 pixels, 
+                suavizando a apresentação visual e tornando-os 
+                esteticamente agradáveis. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário passa o 
+                mouse sobre os botões, indicando que são 
+                clicáveis e interativos. */
+
+    text-decoration: none;
+    /* Remove qualquer decoração de texto padrão, como 
+                sublinhados, garantindo que o texto apareça 
+                claramente e sem distrações. */
+
+    display: inline-block;
+    /* Aplica o modelo de caixa de bloqueio em linha aos botões, 
+                permitindo que eles se comportem como elementos em 
+                linha, mas aceitando todas as propriedades 
+                de bloqueio. */
+
+}
+
+.botao-curso:hover {
+
+    background-color: #45a049;
+    /* Altera a cor de fundo do botão para um verde um 
+                pouco mais escuro (#45a049) quando o mouse 
+                está sobre ele, proporcionando um feedback 
+                visual de que o botão está sendo interagido. */
+                
+}

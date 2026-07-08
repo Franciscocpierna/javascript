@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5. Essa 
+            declaração é essencial para ativar o 
+            modo de padrões do navegador,
+            garantindo que a página seja interpretada 
+            conforme as especificações HTML5. -->
+
+<html lang="pt-BR">
+<!-- 1. <html>: Este é o elemento raiz de qualquer 
+            página HTML. Todo o conteúdo de uma página deve 
+            estar contido dentro deste elemento.
+    2. lang="pt-BR": Este atributo define o idioma 
+            principal do conteúdo da página como Português 
+            do Brasil. Isso é importante para acessibilidade,
+            ferramentas de SEO e navegadores que executam 
+            traduções automáticas. -->
+
+<head>
+<!-- O elemento <head> contém metadados sobre o documento HTML. 
+            Esses metadados não são exibidos diretamente na página web,
+            mas são essenciais para definições de configuração, 
+            links para recursos externos e outras informações 
+            sobre o documento. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres do documento HTML 
+            como UTF-8, que inclui a maioria dos caracteres 
+            usados em diferentes idiomas.
+    Isso é importante para garantir que todos os caracteres 
+            especiais, acentos e símbolos sejam exibidos 
+            corretamente pelo navegador. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Essencial para tornar o site responsivo. Esse metadado 
+                instrui o navegador a controlar a escala da 
+                página de acordo com o dispositivo.
+    - width=device-width: Ajusta a largura da página 
+                para corresponder à largura do dispositivo de exibição.
+    - initial-scale=1.0: Define o nível de zoom inicial 
+                quando a página é carregada pela primeira vez. -->
+
+    <title>Chatbot de Atendimento</title>
+    <!-- Define o título da página, que é exibido na aba do 
+                navegador. Este título também é usado por 
+                mecanismos de busca e quando a página é 
+                marcada como favorito. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link para um arquivo CSS externo chamado "styles.css". 
+     Este link permite que o documento HTML carregue e aplique 
+                os estilos definidos no arquivo CSS.
+    Os estilos definem a aparência visual da página, 
+                como cores, fontes e layout. -->
+</head>
+
+<body>
+<!-- O elemento <body> contém todo o conteúdo da página 
+                que é visível para o usuário, como texto, 
+                imagens, links, formulários e outros 
+                elementos de interface. -->
+
+    <div id="chatbot">
+    <!-- Define um contêiner <div> com o id "chatbot". 
+        Este é o contêiner principal do chatbot, que engloba 
+                todos os outros elementos relacionados à 
+                interface do chatbot. -->
+
+        <div id="chat-header">
+        <!-- Define um contêiner <div> para o cabeçalho do 
+                    chatbot, identificado por "chat-header". 
+                    Este contêiner inclui o título e os 
+                    botões de controle. -->
+
+            <span id="chat-title">Chatbot de Atendimento</span>
+            <!-- Utiliza a tag <span> para definir o título do 
+                        chatbot, facilitando a estilização 
+                        específica através de CSS. -->
+
+            <button id="minimize-button">_</button>
+            <!-- Botão para minimizar a janela do chatbot. Utiliza 
+                        um ID único para ser referenciado e manipulado 
+                        por scripts de JavaScript. -->
+
+            <button id="close-button">X</button>
+            <!-- Botão para fechar a janela do chatbot. Assim como o 
+                        botão de minimizar, possui um ID único para 
+                        manipulação via JavaScript. -->
+        </div>
+
+        <div id="chat-intro">
+        <!-- Define um contêiner <div> para a introdução do 
+                        chatbot, onde o usuário é solicitado a 
+                        inserir seu nome antes de iniciar o chat. -->
+
+            <p>Por favor, insira seu nome para começar:</p>
+            <!-- Elemento <p> que contém uma mensagem instrutiva 
+                        para o usuário. -->
+
+            <input type="text" id="nome-usuario" placeholder="Digite seu nome...">
+            <!-- Campo de entrada para o usuário digitar seu 
+                        nome. O atributo "placeholder" fornece um 
+                        texto de exemplo dentro do campo. -->
+
+            <button id="iniciar-chat">Iniciar Chat</button>
+            <!-- Botão para iniciar o chat após a inserção do nome. 
+                        Quando clicado, dispara funcionalidades 
+                        definidas no arquivo JavaScript. -->
+        </div>
+
+        <div id="chat-window" style="display: none;">
+        <!-- Define o contêiner principal da janela de chat, 
+                        inicialmente oculto (display: none). 
+                        Será mostrado após o início do chat. -->
+
+            <div id="chat-output"></div>
+            <!-- Contêiner onde as mensagens do chat serão exibidas. -->
+
+            <div id="input-container">
+            <!-- Define um contêiner para o campo de entrada de 
+                        mensagens e o botão de envio. -->
+
+                <input type="text" id="entrada-usuario" placeholder="Digite sua mensagem...">
+                <!-- Campo de entrada para o usuário digitar 
+                        suas mensagens. -->
+
+                <button id="botao-enviar">Enviar</button>
+                <!-- Botão para enviar a mensagem digitada pelo 
+                        usuário. A funcionalidade de envio é 
+                        controlada pelo JavaScript. -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Inclui o arquivo JavaScript "script.js", que 
+                contém a lógica e os manipuladores de eventos 
+                necessários para o funcionamento do chatbot. -->
+</body>
+</html>
