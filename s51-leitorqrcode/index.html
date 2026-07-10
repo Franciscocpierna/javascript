@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- A linha <!DOCTYPE html> é uma declaração (não uma tag) 
+        que informa ao navegador a versão do HTML que a 
+        página está escrita. Neste caso, especifica HTML5. 
+        Esta declaração é necessária para ativar o modo de 
+        padrões completos do navegador, garantindo que o HTML 
+        seja interpretado de acordo com as especificações do HTML5. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> é o elemento raiz de um documento HTML, 
+            contendo todos os outros elementos (exceto o <!DOCTYPE>). 
+            O atributo 'lang' especifica o idioma do conteúdo do 
+            documento, que é Português do Brasil (pt-BR) neste caso. 
+            Isso é útil para acessibilidade, SEO e navegadores que 
+            podem oferecer tradução automática de páginas. -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre os dados) que 
+            não são exibidos diretamente na página web, mas são usados 
+            pelo navegador para processar a página. Inclui links para 
+            scripts, instruções de estilo, metadados e outras informações. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define o conjunto de 
+                caracteres usado no documento, que é 'UTF-8' neste caso. UTF-8 é 
+                um padrão de codificação de caracteres que inclui quase 
+                todos os caracteres de todos os idiomas do mundo, garantindo 
+                que o texto seja exibido corretamente independentemente do 
+                idioma ou plataforma. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> que controla a janela de visualização (viewport) 
+                do navegador. O 'content' desta tag é definido para 
+                garantir que a largura da janela de visualização seja 
+                igual à largura do dispositivo (width=device-width) e 
+                que o nível de zoom inicial seja 1 (initial-scale=1.0). 
+                Isso é crucial para otimizar sua página para dispositivos 
+                móveis, garantindo que a página seja exibida de forma 
+                adequada em diferentes tamanhos de tela. -->
+
+    <title>Leitor de QR Code</title>
+    <!-- A tag <title> define o título da página, que é mostrado na 
+                aba do navegador e é usado pelos motores de busca. Aqui, o 
+                título é 'Leitor de QR Code', que descreve a funcionalidade 
+                principal da página web. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para vincular uma folha de estilo 
+                externa, especificada pelo atributo 'href'. Este link 
+                aponta para o arquivo 'estilos.css', que contém as 
+                definições de estilo CSS para a página. O 'rel' 
+                atributo especifica o relacionamento entre o documento 
+                atual e o recurso vinculado, que neste caso é uma 
+                folha de estilo ('stylesheet'). -->
+
+</head>
+<!-- Fim da tag <head>, indicando que todos os metadados 
+                necessários foram incluídos. -->
+
+
+<body>
+<!-- A tag <body> marca o início do corpo do documento HTML, que 
+                contém todo o conteúdo visível da página como texto, 
+                hiperlinks, imagens, tabelas, etc. -->
+
+    <div class="container">
+    <!-- A tag <div> com a classe 'container' serve como um contêiner 
+                para agrupar elementos relacionados. Aqui, agrupa todos os 
+                elementos da interface do leitor de QR Code. As propriedades 
+                de estilo são definidas pela classe para padronizar a 
+                aparência e o layout. -->
+
+        <h1>Leitor de QR Code</h1>
+        <!-- A tag <h1> define o cabeçalho principal da página. É usado 
+                    para descrever o tópico ou propósito da página, neste caso, 
+                    indicando que a página é um 'Leitor de QR Code'. Os 
+                    cabeçalhos também são importantes para SEO (Search 
+                    Engine Optimization). -->
+
+        <label for="selecionarArquivo" class="botao-upload">Selecionar Arquivo</label>
+        <!-- A tag <label> associa-se ao elemento <input> por meio do 
+                    atributo 'for', que deve corresponder ao 'id' do <input>. 
+                    Isso melhora a acessibilidade, permitindo que os usuários 
+                    cliquem no rótulo para ativar o controle de entrada. 
+                    A classe 'botao-upload' é usada para aplicar estilos 
+                    específicos. -->
+
+        <input type="file" id="selecionarArquivo" accept="image/*" style="display:none;">
+        <!-- A tag <input> do tipo 'file' permite que os usuários escolham um 
+                    ou mais arquivos de seus dispositivos de armazenamento para 
+                    serem carregados ou processados. O atributo 'accept' 
+                    limita os tipos de arquivos que podem ser selecionados 
+                    para qualquer tipo de imagem. O estilo 'display:none;' 
+                    esconde o <input> real e utiliza um <label> para 
+                    interação visual. -->
+
+        <canvas id="canvas" style="display:none;"></canvas>
+        <!-- A tag <canvas> é usada para desenhar gráficos via scripting. 
+                    Aqui, é utilizada para processar a imagem do QR Code. Está 
+                    oculta inicialmente com 'display:none;' até que 
+                    seja necessário. -->
+
+        <div id="resultado"></div>
+        <!-- Uma <div> com o id 'resultado' é usada para exibir o resultado 
+                    do processamento do QR Code. Inicialmente, não tem conteúdo 
+                    até que um QR Code seja lido e processado. -->
+
+    </div>
+    <!-- Fim da <div> 'container'. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <!-- Inclui o script jsQR, uma biblioteca JavaScript para decodificação 
+                de QR Codes. O script é carregado do CDN, garantindo alta 
+                disponibilidade e desempenho. -->
+
+    <script src="script.js"></script>
+    <!-- Referencia um arquivo JavaScript externo chamado 'script.js', 
+                que contém a lógica específica para o funcionamento da 
+                página de leitura de QR Code. Este script manipula a 
+                interação do usuário e a lógica de processamento do QR Code. -->
+
+</body>
+<!-- Fim da tag <body>, que encerra o conteúdo visível da página. -->
+
+</html>
+<!-- Fim da tag <html>, que encerra o documento HTML. -->

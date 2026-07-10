@@ -1,0 +1,187 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define as famílias de fontes do corpo do documento 
+                para Arial como a primeira escolha e sans-serif 
+                como fallback. Arial é uma fonte sem serifa, 
+                amplamente disponível e legível, enquanto sans-serif é 
+                um genérico para qualquer fonte sem serifa caso o 
+                Arial não esteja disponível. */
+
+    display: flex;
+    /* Aplica o modelo de layout Flexbox ao corpo do documento. 
+                O Flexbox é um método de layout que permite espaçar e 
+                alinhar itens de forma eficiente, mesmo em tamanhos 
+                de container dinâmicos. */
+
+    justify-content: center;
+    /* Alinha os itens filhos do body (neste caso, a <div> 
+                container) horizontalmente ao centro do elemento 
+                pai (body), proporcionando um alinhamento centralizado 
+                no eixo principal. */
+
+    align-items: center;
+    /* Alinha os itens filhos do body verticalmente ao centro do 
+                elemento pai. Isso garante que o conteúdo dentro de <body> 
+                esteja centralizado tanto vertical quanto horizontalmente. */
+
+    height: 100vh;
+    /* Define a altura do <body> para ser 100vh (viewport height), o 
+                que significa 100% da altura da janela de visualização. 
+                Isso ajuda a garantir que o conteúdo ocupe toda a 
+                altura visível da tela, criando uma experiência de 
+                tela cheia. */
+
+    background-color: #e0f7fa;
+    /* Define a cor de fundo do corpo do documento para um azul 
+                claro (#e0f7fa). Isso fornece um plano de fundo suave 
+                que não distrai, aprimorando a legibilidade e a 
+                estética geral da página. */
+
+    margin: 0;
+    /* Remove todas as margens externas do <body>, garantindo que 
+                não haja espaço extra entre as bordas do navegador e o 
+                conteúdo da página, maximizando o uso do espaço disponível. */
+
+}
+
+
+.container {
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do elemento com a classe 'container' 
+                para branco (#ffffff). A escolha do branco proporciona um 
+                fundo limpo e neutro que não distrai, favorecendo a 
+                visibilidade de outros elementos dentro do container. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todas as direções 
+                dentro do container. Isso cria espaço entre o conteúdo 
+                interno e as bordas do container, melhorando a 
+                legibilidade e a estética visual do conteúdo. */
+
+    border-radius: 10px;
+    /* Arredonda as bordas do container com um raio de 10 pixels. 
+                Este efeito suaviza as bordas retas padrão do 
+                container, dando-lhe uma aparência mais suave e moderna. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Aplica uma sombra ao redor do container. O valor '0 0 10px 
+                rgba(0, 0, 0, 0.5)' significa que a sombra não tem 
+                deslocamento horizontal ou vertical, tem um desfoque 
+                de 10 pixels, e uma cor preta com 50% de transparência. 
+                Isso cria um efeito de profundidade, destacando o 
+                container do resto da página. */
+
+    text-align: center;
+    /* Alinha o texto e, por extensão, todos os elementos inline 
+                dentro do container, ao centro. Isso é particularmente 
+                útil para centralizar cabeçalhos, botões e outros 
+                controles dentro do container. */
+
+    max-width: 800px;
+    /* Define a largura máxima do container como 800 pixels. 
+                Isso significa que o container não pode se estender 
+                além de 800 pixels, independentemente do tamanho da 
+                tela, o que ajuda a manter a legibilidade em 
+                telas maiores. */
+
+    width: 100%;
+    /* Define a largura do container para ser 100% do seu 
+                elemento pai. Isso garante que o container se 
+                adapte à largura do espaço disponível, até o 
+                máximo definido pela propriedade 'max-width'. */
+
+}
+
+
+h1 {
+
+    color: #00796b;
+    /* Define a cor do texto para os elementos <h1> como um 
+                tom específico de verde azulado (#00796b). 
+                Esta cor pode ajudar a estabelecer uma 
+                identidade visual consistente para a página e é 
+                suficientemente escura para garantir boa 
+                legibilidade contra um fundo claro. */
+
+}
+
+
+.botao-upload {
+
+    display: inline-block;
+    /* Altera o método de exibição do elemento para 'inline-block', 
+                o que permite que o elemento tenha propriedades de 
+                bloco (como padding e width), mas seja disposto na 
+                linha como um elemento inline. Isso é útil para 
+                permitir que os elementos se alinhem em uma linha 
+                enquanto mantêm propriedades de dimensionamento 
+                de bloco. */
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento interno de 10 pixels verticalmente 
+                e 20 pixels horizontalmente ao elemento. 
+                Este espaçamento interno faz com que o botão 
+                seja mais fácil de clicar e visualmente mais atraente. */
+
+    border: 1px solid #00796b;
+    /* Adiciona uma borda sólida de 1 pixel ao redor do 
+                elemento com a mesma cor verde azulado definida 
+                anteriormente. Isso não apenas ajuda a definir os 
+                limites do botão, mas também contribui para a 
+                consistência visual. */
+
+    border-radius: 5px;
+    /* Arredonda as bordas do elemento com um raio de 5 pixels, 
+                suavizando as bordas para um visual mais 
+                moderno e amigável. */
+
+    cursor: pointer;
+    /* Muda o cursor para o estilo 'pointer' quando o usuário 
+                passa o mouse sobre o elemento, indicando que o 
+                elemento é clicável. */
+
+    background-color: #00796b;
+    /* Define a cor de fundo do elemento para o mesmo verde 
+                azulado usado na borda e no texto do <h1>, 
+                mantendo a consistência de design. */
+
+    color: #ffffff;
+    /* Define a cor do texto dentro do elemento para branco (#ffffff), 
+                garantindo alto contraste com o fundo verde azulado 
+                para excelente legibilidade. */
+
+    margin: 20px 0;
+    /* Aplica uma margem de 20 pixels acima e abaixo do elemento, 
+                ajudando a separá-lo de outros conteúdos na página e 
+                melhorando o layout geral. */
+
+}
+
+
+#resultado {
+
+    margin-top: 20px;
+    /* Define a margem superior do elemento com o ID 'resultado' 
+                como 20 pixels. Isso cria um espaço entre o 
+                elemento 'resultado' e quaisquer elementos que 
+                estejam acima dele na página, ajudando a separar 
+                visualmente o conteúdo e a melhorar o layout geral. */
+
+    font-size: 48px;
+    /* Estabelece o tamanho da fonte para os textos dentro do 
+                elemento 'resultado' como 48 pixels. Esse tamanho 
+                grande torna o texto altamente visível e legível, 
+                adequado para exibir informações importantes como o 
+                resultado da leitura de um QR Code. */
+
+    color: #004d40;
+    /* Define a cor do texto para um tom escuro de verde (#004d40). 
+                Esta cor não apenas se harmoniza com a paleta de 
+                cores geral do site, mas também oferece excelente 
+                contraste contra um fundo claro, melhorando a 
+                acessibilidade e a legibilidade. */
+                
+
+}
