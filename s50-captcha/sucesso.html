@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- A declaração do tipo de documento (DOCTYPE) é um 
+            pré-requisito para todos os documentos HTML. 
+    Ela deve ser a primeira linha do documento e não 
+            está contida dentro de uma tag HTML. 
+    Esta declaração não é uma tag HTML; é uma instrução 
+            para o navegador web sobre a versão do HTML 
+            que a página está escrita.
+    `<!DOCTYPE html>` especifica que o documento está usando HTML5. -->
+
+<html lang="pt-br">
+<!-- A tag `<html>` é o elemento raiz de um documento HTML, ou 
+            seja, todos os outros elementos devem estar 
+            contidos dentro dela.
+    O atributo `lang="pt-br"` especifica que o idioma principal 
+            do documento é o Português do Brasil.
+    Esse atributo ajuda os mecanismos de busca a entenderem o 
+            idioma do conteúdo e também é útil para leitores 
+            de tela e outras ferramentas de acessibilidade. -->
+
+<head>
+    <!--  A tag `<head>` contém informações sobre o documento HTML 
+                que não são exibidas diretamente na página web.
+        Isso inclui elementos como metadados, links para CSS 
+                externos, favicons, scripts e outras informações 
+                que o navegador precisa saber antes de renderizar a página. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag `<meta>` especifica a codificação de caracteres 
+                usada no documento HTML.
+        O atributo `charset="UTF-8"` define a codificação de 
+                caracteres Unicode para o documento, suportando 
+                quase todos os caracteres e símbolos de todos 
+                os idiomas do mundo.
+        Isso garante que qualquer texto seja corretamente 
+                exibido, independentemente do idioma. -->
+
+    <title>Verificação de CAPTCHA Bem-Sucedida</title>
+    <!--  A tag `<title>` define o título do documento, que é 
+                mostrado na aba do navegador.
+        É um elemento essencial para SEO (Search Engine Optimization) e 
+                UX (User Experience), pois fornece aos usuários e 
+                aos motores de busca uma rápida compreensão do 
+                conteúdo da página.
+        Neste caso, o título informa que a verificação 
+                de CAPTCHA foi bem-sucedida. -->
+
+    <style>
+    /* A tag `<style>` é usada para incluir CSS diretamente 
+                dentro do documento HTML.
+        As regras CSS inseridas aqui serão aplicadas 
+                apenas a este documento HTML.
+        Este método pode ser útil para estilos que são 
+                únicos para uma única página e não precisam 
+                ser compartilhados entre várias páginas. */
+
+        body {
+
+            font-family: 'Arial', sans-serif; 
+            /* Define 'Arial' como a fonte padrão do texto 
+                    no corpo do documento. 
+            Se 'Arial' não estiver disponível, qualquer 
+                    fonte sans-serif será usada como alternativa. 
+            Arial é uma escolha comum por ser legível e profissional. */
+
+            background-color: #f4f4f4; 
+            /* Define a cor de fundo do corpo do documento 
+                    como um cinza muito claro (#f4f4f4).
+            Esta cor de fundo suave é confortável para os olhos e 
+                    proporciona um bom contraste com o texto 
+                    de cor mais escura. */
+
+            color: #333; 
+            /* Estabelece a cor padrão do texto dentro do 
+                    corpo como cinza escuro (#333).
+            Essa cor de texto fornece um contraste adequado com o 
+                    fundo claro, facilitando a leitura. */
+
+            display: flex; 
+            /* Ativa o modelo de layout flexível para o corpo do documento.
+            O layout flexível é útil para alinhar facilmente os 
+                    elementos internos na página, tanto horizontal 
+                    quanto verticalmente. */
+
+            justify-content: center; 
+            /* Alinha todos os elementos-filhos do corpo 
+                    horizontalmente ao centro.
+            Isso é parte do sistema de flexbox, que organiza os 
+                    elementos de forma eficiente. */
+
+            align-items: center; 
+            /* Alinha todos os elementos-filhos do corpo 
+                    verticalmente ao centro.
+            Também faz parte do sistema de flexbox, ajudando a 
+                    criar interfaces centradas verticalmente sem 
+                    esforço adicional. */
+
+            height: 100vh; 
+            /* Define a altura do corpo para ser 100% da 
+                    altura da viewport (vh - viewport height).
+            Isso garante que o corpo ocupe toda a altura da 
+                    janela do navegador, criando uma interface 
+                    de tela inteira. */
+
+            margin: 0; 
+            /* Remove todas as margens externas do elemento 'body'.
+            Os navegadores geralmente adicionam uma margem padrão, 
+                    e removê-la ajuda a controlar melhor o layout e 
+                    a utilizar todo o espaço disponível. */
+
+        }
+
+        .container {
+
+            text-align: center; 
+            /* Configura o alinhamento de todo o texto dentro 
+                    do container para o centro. 
+            Isso é útil para manter a consistência e a estética 
+                    visual, especialmente em interfaces centradas. */
+
+            background-color: white; 
+            /* Define a cor de fundo do container para branco. 
+            O fundo branco é uma escolha padrão para muitos designs, 
+                    pois fornece uma base neutra e clara 
+                    para outros elementos. */
+
+            padding: 40px; 
+            /* Aplica um preenchimento de 40 pixels em todos os 
+                    lados dentro do container.
+            Isso cria um espaço entre os bordos do container e seu 
+                    conteúdo, melhorando a legibilidade e a 
+                    apresentação visual. */
+
+            border-radius: 10px; 
+            /* Arredonda as bordas do container com um raio de 10 pixels. 
+            Borda arredondada suaviza o design visual do container, 
+                    tornando-o mais amigável e moderno. */
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            /* Adiciona uma sombra sutil ao container. Os valores 
+                    representam, respectivamente, o deslocamento 
+                    horizontal e vertical da sombra, 
+            o raio do desfoque, e a cor da sombra em RGBA (aqui, 
+                    preta com 10% de opacidade).
+            Isso confere um efeito de profundidade, destacando o 
+                    container do resto da página. */
+
+            width: 80%; 
+            /* Define a largura do container para ser 80% da 
+                    largura do seu elemento pai.
+            Isso garante que o container mantenha uma boa 
+                    proporção na página, adaptando-se a diferentes 
+                    tamanhos de tela. */
+
+            max-width: 600px; 
+            /* Estabelece uma largura máxima de 600 pixels 
+                    para o container.
+            Essa propriedade assegura que o container não 
+                    fique excessivamente largo em telas grandes, 
+                    mantendo a legibilidade e a estética. */
+
+        }
+
+        h1 {
+            color: #4CAF50; 
+            /* Define a cor do texto dos elementos `<h1>` 
+                    para um verde vívido (#4CAF50).
+            Esta cor pode ser usada para chamar atenção e indicar 
+                    sucesso, ideal para uma mensagem de confirmação 
+                    como a de um CAPTCHA bem-sucedido. */
+
+            margin-bottom: 20px; 
+            /* Configura uma margem na parte inferior de 20 
+                    pixels para os elementos `<h1>`.
+            Isso cria um espaço entre o título e o conteúdo que 
+                    segue, evitando que os elementos fiquem 
+                    visualmente comprimidos. */
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- A tag `<body>` encerra todo o conteúdo que será 
+                exibido na parte visível da página. É onde 
+                você coloca todos os elementos que os 
+                usuários interagem diretamente. -->
+
+    <div class="container">
+    <!-- A tag `<div>` é um container genérico para conteúdo 
+                de fluxo, que não representa nada por si só.
+    A classe "container" é utilizada para aplicar estilos 
+                específicos definidos no CSS, como alinhamento 
+                central, padding, e outros para encapsular os 
+                elementos de conteúdo. -->
+
+        <h1>Verificação de CAPTCHA Bem-Sucedida!</h1>
+        <!-- A tag `<h1>` define o cabeçalho mais importante 
+                da página. Neste caso, informa ao usuário que a 
+                verificação de CAPTCHA foi bem-sucedida.
+        O uso de `<h1>` também contribui para a acessibilidade 
+                e SEO, ajudando os motores de busca a entenderem o 
+                conteúdo principal da página. -->
+
+        <p>Parabéns, você completou o CAPTCHA corretamente.</p>
+        <!-- A tag `<p>` é usada para parágrafos de texto. 
+            Aqui, ela contém uma mensagem de felicitações ao 
+                    usuário por ter completado o CAPTCHA corretamente.
+        Essa mensagem serve para fornecer um feedback 
+                    positivo e encorajador ao usuário. -->
+
+    </div>
+</body>
+</html>
+<!-- O fechamento das tags `</body>` e `</html>` marca o 
+            fim do documento HTML. 
+A tag `</body>` encerra todo o conteúdo da página, enquanto a 
+            tag `</html>` marca o fim do documento HTML, garantindo 
+            que todos os elementos estejam adequadamente aninhados e fechados. -->

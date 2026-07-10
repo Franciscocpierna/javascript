@@ -1,0 +1,214 @@
+html, body {
+
+    height: 100%; 
+    /* Define a altura dos elementos html e body como 100% 
+            da altura da viewport (área visível do navegador). */
+
+    margin: 0; 
+    /* Remove qualquer margem externa dos elementos html e 
+            body, fazendo com que eles toquem as bordas da 
+            janela do navegador. */
+
+    padding: 0; 
+    /* Elimina qualquer preenchimento interno nos elementos html e 
+            body, permitindo que o conteúdo se estenda até 
+            as bordas. */
+
+    display: flex; 
+    /* Aplica o modelo de layout flexível, o que permite um 
+            alinhamento fácil e eficiente dos itens contidos 
+            nestes elementos. */
+
+    justify-content: center; 
+    /* Centraliza o conteúdo horizontalmente dentro dos 
+            elementos html e body, funcionando porque o display 
+            foi definido como flex. */
+
+    align-items: center; 
+    /* Centraliza o conteúdo verticalmente dentro dos 
+            elementos html e body, também decorrente do uso do 
+            layout flexível. */
+
+    background-color: #eff990; 
+    /* Configura a cor de fundo do html e do body como 
+            cinza claro, usando o código hexadecimal #eff990. */
+
+    font-family: Arial, sans-serif; 
+    /* Define a família de fontes padrão para Arial. Se Arial não 
+            estiver disponível, usa qualquer fonte sans-serif 
+            disponível. */
+
+}
+
+#container-captcha {
+
+    display: flex; 
+    /* Utiliza o layout flexível para o container do captcha, 
+            facilitando o alinhamento dos elementos internos. */
+
+    flex-direction: column; 
+    /* Define a direção principal do eixo do flexbox como vertical, o 
+            que empilha os elementos filhos verticalmente. */
+
+    justify-content: center; 
+    /* Centraliza os elementos filhos verticalmente dentro do 
+            container, já que a direção do flex é uma coluna. */
+
+    align-items: center; 
+    /* Centraliza os elementos filhos horizontalmente dentro do 
+            container, devido à propriedade de display flex. */
+
+    padding: 20px; 
+    /* Aplica um preenchimento de 20 pixels em todos os lados 
+            dentro do container, criando espaço entre a borda do 
+            container e seus elementos internos. */
+
+    border-radius: 8px; 
+    /* Arredonda os cantos do container com um raio de 8 pixels, 
+            proporcionando bordas suavemente curvadas. */
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    /* Adiciona uma sombra abaixo do container para criar uma 
+            sensação de profundidade, usando uma cor preta com 
+            transparência. */
+
+    background: white; 
+    /* Define a cor de fundo do container como branco, 
+            contrastando com a cor de fundo geral da página. */
+
+    width: 90%; 
+    /* Define a largura do container como 90% do seu elemento 
+            pai, o que ajuda a manter o layout responsivo. */
+
+    max-width: 500px; 
+    /* Estabelece uma largura máxima para o container de 500 pixels 
+            para evitar que ele fique demasiadamente largo em 
+            telas grandes. */
+
+    box-sizing: border-box; 
+    /* Inclui o preenchimento e a borda no cálculo da largura e 
+            altura do elemento, assegurando que o tamanho final do 
+            container não exceda os 90% ou 500px definidos. */
+
+}
+
+#canvas-captcha {
+
+    width: 100%; 
+    /* Configura a largura do elemento canvas para ocupar 100% 
+            da largura do seu container. Isso garante que ele 
+            se ajuste dinamicamente ao tamanho do container. */
+
+    height: auto; 
+    /* Ajusta a altura do canvas para ser automaticamente 
+            determinada pelo conteúdo e proporção do canvas. */
+
+    max-height: 100px; 
+    /* Define uma altura máxima para o canvas de 100 pixels para 
+            prevenir qualquer distorção de imagem que possa ocorrer se 
+            o canvas se tornar muito alto. */
+
+    margin-bottom: 10px; 
+    /* Adiciona uma margem na parte inferior do canvas de 10 pixels 
+            para criar espaço entre o canvas e o elemento seguinte. */
+
+}
+
+#entrada-captcha {
+
+    width: 100%; 
+    /* Define a largura do campo de entrada para 100%, fazendo com 
+            que ocupe toda a largura do container. */
+
+    padding: 10px; 
+    /* Define um preenchimento de 10 pixels em todas as 
+            direções dentro do campo de entrada, aumentando a área 
+            clicável e melhorando a legibilidade do texto. */
+
+    margin-top: 10px; 
+    /* Adiciona uma margem acima do campo de entrada de 10 pixels 
+            para separá-lo do elemento acima. */
+
+    margin-bottom: 10px; 
+    /* Insere uma margem abaixo do campo de entrada de 10 pixels 
+            para espaço antes do próximo elemento (geralmente 
+            um botão). */
+
+    font-size: 16px; 
+    /* Ajusta o tamanho da fonte do texto dentro do campo de 
+            entrada para 16 pixels para facilitar a leitura. */
+
+    border: 2px solid #ccc; 
+    /* Adiciona uma borda sólida com 2 pixels de espessura e uma 
+            cor cinza claro (#ccc), delimitando claramente o 
+            campo de entrada. */
+
+    border-radius: 4px; 
+    /* Aplica um raio de 4 pixels nas bordas do campo de entrada, 
+            criando cantos arredondados para um design mais 
+            amigável e moderno. */
+
+    box-sizing: border-box; 
+    /* Inclui a borda e o preenchimento no cálculo total da 
+            largura e altura do campo de entrada, assegurando 
+            que o elemento não se torne maior que os 100% definidos. */
+
+}
+
+button {
+
+    width: 100%; 
+    /* Define a largura do botão para 100% do seu container, 
+            permitindo que ocupe toda a largura disponível. */
+
+    padding: 10px; 
+    /* Adiciona um preenchimento de 10 pixels em todas as direções do 
+            botão, aumentando a área de toque e conforto ao pressionar. */
+
+    margin-top: 10px; 
+    /* Configura uma margem acima do botão de 10 pixels para 
+            criar uma separação visual do campo de entrada acima. */
+
+    font-size: 16px; 
+    /* Estabelece o tamanho da fonte dentro do botão em 16 pixels, 
+            mantendo a consistência visual com o campo de entrada. */
+
+    cursor: pointer; 
+    /* Muda o cursor para um ponteiro quando o mouse passa 
+            sobre o botão, indicando que o botão é clicável. */
+
+    background-color: #007bff; 
+    /* Define a cor de fundo do botão para um azul (#007bff), 
+            criando um visual atraente e chamativo. */
+
+    color: white; 
+    /* Define a cor do texto do botão para branco, oferecendo 
+            alto contraste contra o fundo azul, facilitando a 
+            leitura. */
+
+    border: none; 
+    /* Remove qualquer borda do botão, dando-lhe um visual 
+            mais limpo e moderno. */
+
+    border-radius: 5px; 
+    /* Aplica um raio de 5 pixels nas bordas do botão para 
+            suavizar os cantos, contribuindo para um design 
+            mais amigável. */
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    /* Adiciona uma sombra leve abaixo do botão para criar um 
+            efeito visual de elevação, aumentando a percepção 
+            de interatividade. */
+
+}
+
+
+button:hover {
+
+    background-color: #0056b3; 
+    /* Altera a cor de fundo do botão para um azul mais 
+            escuro (#0056b3) quando o mouse é posicionado 
+            sobre ele, oferecendo um feedback visual imediato 
+            de interatividade. */
+
+}

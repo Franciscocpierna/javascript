@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<!-- Esta linha declara o tipo de documento para o 
+        navegador. A diretiva `<!DOCTYPE html>` especifica 
+        que este documento é HTML5. 
+    É essencial para garantir que o navegador interprete e 
+        renderize a página conforme os padrões da web atual. -->
+
+<html lang="pt-br">
+<!-- A tag `<html>` é o elemento raiz de uma página HTML, 
+        encapsulando todos os outros elementos HTML.
+    O atributo `lang="pt-br"` especifica o idioma 
+            principal da página como Português do Brasil.
+    Isso ajuda os mecanismos de busca e as tecnologias 
+            assistivas a entenderem o idioma da página,
+            o que melhora a acessibilidade e a SEO (otimização 
+            para motores de busca).-->
+
+<head>
+<!-- A tag `<head>` contém metadados (informações sobre os 
+            dados) e é a parte que não é exibida diretamente 
+            na janela do navegador.
+    Inclui elementos como links para CSS, scripts, 
+            meta informações e outros.-->
+
+    <meta charset="UTF-8">
+    <!-- A tag `<meta charset="UTF-8">` define a codificação de 
+                caracteres para o documento HTML.
+        UTF-8 é uma codificação de caracteres universal 
+                que inclui praticamente todos os caracteres e 
+                símbolos de todos os idiomas do mundo.
+        Isso garante que qualquer texto seja corretamente 
+                exibido e evita problemas de caracteres estranhos ou 
+                corrompidos no conteúdo da página.-->
+
+    <title>CAPTCHA Simples</title>
+    <!-- A tag `<title>` especifica o título da página, 
+                que é exibido na aba do navegador.
+        Este título é um elemento crucial para SEO, pois dá 
+                aos mecanismos de busca uma rápida visão 
+                geral do conteúdo da página.
+        Também é importante para a experiência do usuário, 
+                fornecendo uma indicação do conteúdo da aba. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- A tag `<link>` aqui é usada para conectar um arquivo CSS 
+                externo, que contém os estilos que definem a 
+                aparência da página.
+        O atributo `rel="stylesheet"` indica que o tipo de 
+                documento vinculado é uma folha de estilo.
+        `href="style.css"` especifica o caminho para o arquivo CSS 
+                que será aplicado a esta página HTML.
+        Isso permite que o design e o conteúdo sejam mantidos 
+                separadamente, promovendo a reutilização e a 
+                manutenção mais fácil do CSS. -->
+
+</head>
+<!-- Final do cabeçalho -->
+
+<body>
+<!-- A tag `<body>` contém o conteúdo visível da página HTML.
+    É onde todos os elementos visuais como cabeçalhos, 
+            parágrafos, imagens, hiperlinks, tabelas, etc., 
+            são incluídos.
+    O conteúdo dentro do `<body>` é o que os usuários 
+            interagem diretamente ao visitar a página web. -->
+
+    <div id="container-captcha">
+    <!-- A tag `<div>` é utilizada para agrupar elementos. Aqui, 
+                serve como um contêiner para todos os 
+                elementos relacionados ao CAPTCHA.
+        O atributo `id="container-captcha"` atribui um 
+                identificador único a este `<div>`, permitindo que 
+                ele seja especificamente estilizado e manipulado 
+                com CSS e JavaScript. -->
+
+        <canvas id="canvas-captcha" width="550" height="200"></canvas>
+        <!-- A tag `<canvas>` é utilizada para desenhar gráficos 
+                    via scripting (geralmente JavaScript).
+            Aqui, `id="canvas-captcha"` define um identificador 
+                    único para o canvas, que será usado no script 
+                    para gerar o CAPTCHA.
+            Os atributos `width="550"` e `height="200"` definem a 
+                    largura e a altura do canvas, respectivamente. -->
+
+        <input type="text" id="entrada-captcha" placeholder="Digite o texto contido na imagem">
+        <!-- A tag `<input>` define um campo de entrada onde os 
+                    usuários podem inserir dados.
+            `type="text"` especifica que a entrada deve ser um campo de texto.
+            `id="entrada-captcha"` fornece um identificador único 
+                    para o campo de entrada, usado em scripts.
+            `placeholder="Digite o texto contido na imagem"` exibe 
+                    uma mensagem no campo de entrada antes de qualquer 
+                    entrada ser feita, guiando o usuário sobre o que inserir. -->
+
+        <button onclick="verificarCaptcha()">Verificar</button>
+        <!-- A tag `<button>` cria um botão clicável.
+            `onclick="verificarCaptcha()"` é um atributo de 
+                    evento que chama a função `verificarCaptcha()` 
+                    quando o botão é clicado.
+            Este botão é usado para submeter o texto inserido pelo 
+                    usuário e verificar se corresponde ao texto 
+                    do CAPTCHA gerado. -->
+
+        <p id="status"></p>
+        <!-- A tag `<p>` é usada para texto de parágrafo. Aqui, 
+                    serve como um elemento para mostrar mensagens 
+                    de status (como erro ou sucesso).
+            `id="status"` fornece um identificador único para 
+                    este parágrafo, que pode ser usado para manipular 
+                    dinamicamente o conteúdo e o estilo deste elemento 
+                    via JavaScript, como alterar a mensagem e a cor 
+                    com base no sucesso ou falha da verificação do CAPTCHA. -->
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag `<script>` é usada para incorporar ou fazer 
+                referência a um código JavaScript externo.
+        `src="script.js"` especifica o caminho para o arquivo JavaScript 
+                externo que contém a lógica para gerar e verificar o CAPTCHA.
+        Este script é crucial para a funcionalidade interativa da página, 
+                pois manipula os elementos do DOM com base nas ações do usuário. -->
+</body>
+</html>
+<!-- Final do documento HTML -->
