@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- A declaração <!DOCTYPE html> especifica que este 
+            documento deve ser interpretado como HTML5. 
+    É importante para garantir que o navegador processe o 
+            documento usando o modo de padrões do HTML5, o que 
+            ajuda na compatibilidade e no desempenho da renderização. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> é a raiz do documento HTML. O atributo 'lang="pt-BR"' 
+            especifica que o idioma principal do conteúdo do documento é o 
+            Português do Brasil, o que é importante para acessibilidade, 
+            SEO e para ferramentas de tradução automática. -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de estilo, scripts e 
+            outras informações que não são exibidas diretamente na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com atributo 'charset="UTF-8"' especifica a 
+                codificação de caracteres usada no documento. UTF-8 é 
+                uma codificação de caracteres Unicode que inclui 
+                praticamente todos os caracteres de todos os idiomas 
+                do mundo, garantindo assim a correta exibição do texto. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> que configura a janela de visualização para 
+                dispositivos móveis. 
+        O conteúdo 'width=device-width' faz 
+                com que a largura da página seja igual à largura da 
+                tela do dispositivo de visualização, e 
+        'initial-scale=1.0' estabelece o nível de zoom inicial 
+                quando a página é primeiro carregada pelo navegador. 
+                Isso é crucial para assegurar uma experiência de 
+                visualização otimizada em dispositivos móveis. -->
+
+    <title>Projeto Parallax Horizontal - Frutas</title>
+    <!-- A tag <title> define o título da página, que é exibido 
+                na aba do navegador. O título é também usado por 
+                motores de busca e quando a página é adicionada aos 
+                favoritos, servindo como uma referência rápida ao 
+                conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada para vincular recursos externos, 
+                como CSS, ao documento HTML. 
+        O atributo 'href="estilos.css"' especifica o caminho para a 
+                folha de estilo que contém os estilos CSS usados para 
+                formatar a página web. O 'rel="stylesheet"' indica que o 
+                recurso vinculado é uma folha de estilo. -->
+
+</head>
+<!-- Fim da tag <head>, indicando que todos os metadados 
+                necessários foram incluídos. -->
+
+
+<body>
+<!-- A tag <body> define o corpo do documento HTML, que contém todo o 
+                conteúdo visível da página como texto, imagens, 
+                hiperlinks, tabelas, etc. -->
+
+    <header>
+    <!-- A tag <header> é usada para definir um cabeçalho para uma 
+                parte do documento. No contexto de uma página web, é 
+                frequentemente usada para conter títulos, logotipos e 
+                menus de navegação, representando a área introdutória 
+                ou navegacional do site. -->
+
+        <h1>Projeto Parallax Horizontal - Frutas</h1>
+        <!-- A tag <h1> define o título principal da página. Usar <h1> 
+                    ajuda na estruturação semântica do conteúdo e é 
+                    importante para técnicas de SEO, pois indica aos 
+                    mecanismos de busca o tópico principal da página. -->
+
+        <nav>
+        <!-- A tag <nav> é utilizada para definir uma seção de 
+                    navegação dentro do documento, o que indica que o 
+                    conteúdo dentro dela proporciona links de navegação 
+                    principal. Isso é útil tanto para os usuários quanto 
+                    para os motores de busca entenderem a estrutura do site. -->
+
+            <ul>
+            <!-- A tag <ul> define uma lista não ordenada, usada aqui 
+                        para agrupar os itens de navegação. Isso ajuda na 
+                        organização do conteúdo e na estilização dos links 
+                        de navegação como uma lista coerente. -->
+
+                <li><a href="#maca">Maçã</a></li>
+                <!-- Cada tag <li> define um item da lista. Dentro de 
+                            cada <li>, há uma tag <a>, que cria um hiperlink. 
+                    O atributo 'href' do link é usado para apontar para um ID 
+                            específico na página, neste caso, '#maca', o que 
+                            indica que o link leva a uma seção da página que 
+                            tem o ID 'maca'. -->
+
+                <li><a href="#banana">Banana</a></li>
+                <!-- Semelhante ao item anterior, este link aponta para a 
+                            seção 'banana' da página. -->
+
+                <li><a href="#laranja">Laranja</a></li>
+                <!-- Este link aponta para a seção 'laranja' da página, 
+                            permitindo a navegação rápida para essa parte 
+                            específica do conteúdo. -->
+
+            </ul>
+            <!-- Fim da lista não ordenada. -->
+
+        </nav>
+        <!-- Fim da seção de navegação. -->
+
+    </header>
+    <!-- Fim do cabeçalho da página. -->
+
+
+    <div class="container">
+    <!-- A tag <div> com a classe "container" serve como um contêiner 
+                    principal para agrupar várias seções da página. 
+        Esta classe geralmente é usada para aplicar estilos consistentes 
+                    de layout e alinhamento ao seu conteúdo interior. -->
+
+        <section class="parallax parallax1" id="maca">
+        <!-- A tag <section> define uma seção temática do documento, 
+                    neste caso, dedicada à maçã. As classes "parallax" 
+                    e "parallax1" são usadas para aplicar estilos específicos e 
+                    efeitos de parallax a esta seção, e o id "maca" permite a 
+                    ligação direta via URL ou navegação interna. -->
+
+            <div class="conteudo">
+            <!-- Um <div> interno com a classe "conteudo", usado para 
+                        encapsular e estilizar o conteúdo textual da seção de 
+                        uma maneira específica, definindo padding, background, 
+                        bordas, entre outros. -->
+
+                <h2>Maçã</h2>
+                <!-- A tag <h2> define o título desta seção, fornecendo uma 
+                            hierarquia clara e ajudando na SEO ao descrever o 
+                            conteúdo subsequente sobre maçãs. -->
+
+                <p>A maçã é uma fruta deliciosa e nutritiva, rica em fibras e vitaminas. Ela é conhecida por seus benefícios à saúde, como melhorar a digestão e fortalecer o sistema imunológico. Existem muitas variedades de maçãs, cada uma com seu sabor único, tornando-a uma das frutas mais versáteis e populares do mundo.</p>
+                <!-- A tag <p> contém um parágrafo descrevendo as características e 
+                                benefícios da maçã, contribuindo com informações úteis 
+                                para o leitor e potencialmente melhorando a classificação 
+                                do conteúdo em mecanismos de busca por relevância e 
+                                qualidade do texto. -->
+
+            </div>
+        </section>
+        
+        <section class="parallax parallax2" id="banana">
+        <!-- Outra <section> para a banana, usando uma técnica similar de 
+                        parallax ("parallax2"), o que pode significar uma 
+                        variação no estilo ou na velocidade do efeito parallax em 
+                        relação à primeira seção. O id "banana" serve propósitos 
+                        similares ao anterior. -->
+
+            <div class="conteudo">
+                <h2>Banana</h2>
+                <p>A banana é uma fruta tropical muito apreciada por seu sabor doce e textura macia. Rica em potássio, ela é uma excelente fonte de energia e ajuda a manter o equilíbrio eletrolítico do corpo. As bananas são perfeitas para um lanche rápido e saudável, e podem ser utilizadas em diversas receitas.</p>
+            </div>
+        </section>
+
+        <section class="parallax parallax3" id="laranja">
+        <!-- A terceira <section> com efeito de parallax ("parallax3"), dedicada à 
+                        laranja. Similar às outras seções, esta também apresenta um id 
+                        para identificação e navegação direta. -->
+
+            <div class="conteudo">
+                <h2>Laranja</h2>
+                <p>A laranja é uma fruta cítrica conhecida por seu sabor refrescante e alto teor de vitamina C. Ela ajuda a fortalecer o sistema imunológico e é ótima para a saúde da pele. A laranja pode ser consumida fresca, em sucos ou utilizada em receitas culinárias, oferecendo um sabor vibrante e benefícios nutritivos.</p>
+            </div>
+        </section>
+    </div>
+
+
+    <footer>
+    <!-- A tag <footer> define o rodapé do documento ou seção. É um contêiner 
+                para conteúdo que é colocado no final da página, geralmente 
+                contém informações como direitos autorais, links para termos 
+                de uso, informações de contato, etc. É uma parte importante da 
+                estrutura semântica de páginas web. -->
+
+        <p>&copy; 2024 Projeto Parallax. Todos os direitos reservados.</p>
+        <!-- A tag <p> dentro do <footer> contém uma declaração de direitos 
+                    autorais. O símbolo '&copy;' representa a marca de 
+                    copyright, e é seguido pelo ano e pelo nome do projeto ou 
+                    da empresa. "Todos os direitos reservados" é uma frase 
+                    legal que indica que o proprietário detém todos os 
+                    direitos legais sobre o material. -->
+
+    </footer>
+    <!-- Fim do <footer>. O uso do <footer> ajuda a organizar o conteúdo 
+                da página e proporciona uma experiência de usuário 
+                mais clara e profissional. -->
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' especificando "script.js" é 
+                usada para incluir um arquivo JavaScript externo que 
+                contém código que afeta o comportamento da página. 
+        Este script é crucial para adicionar interatividade dinâmica à 
+                página, como animações, efeitos parallax e outros comportamentos 
+                interativos. -->
+
+</body>
+<!-- Fim da tag <body>, que encerra todo o conteúdo visível 
+                da página. Todas as tags e elementos que aparecem 
+                visíveis ao usuário devem estar contidos dentro 
+                desta tag. -->
+
+</html>
+<!-- Fim da tag <html>, que encerra o documento HTML. Isso marca o 
+                fim do arquivo, e nenhum conteúdo deve ser colocado 
+                após esta tag. -->
