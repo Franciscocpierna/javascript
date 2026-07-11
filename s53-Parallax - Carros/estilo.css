@@ -1,0 +1,402 @@
+body, html {
+
+    height: 100%;
+    /* Define a altura de <body> e <html> como 100% da 
+                altura da janela de visualização, garantindo que 
+                estes elementos ocupem toda a altura da tela, útil para 
+                designs que requerem controle total do espaço da tela. */
+
+    margin: 0;
+    /* Remove todas as margens padrão do <body> e <html>, garantindo que 
+                não haja espaços indesejados ao redor desses elementos, o 
+                que é essencial para layouts que exigem alinhamento ou 
+                dimensionamento precisos. */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para Arial com fallback para qualquer 
+                fonte sans-serif disponível. Arial é uma escolha comum por 
+                sua legibilidade e aparência profissional. */
+
+    overflow-x: hidden;
+    /* Oculta o overflow (conteúdo que excede o limite do elemento) na 
+                horizontal. Isso impede a rolagem horizontal da página, 
+                mantendo o layout limpo e evitando deslocamentos 
+                acidentais para o lado. */
+
+}
+
+header {
+
+    position: fixed;
+    /* O cabeçalho é fixado na janela de visualização, o que 
+                significa que ele permanecerá visível e no mesmo lugar 
+                enquanto o usuário rola a página para baixo ou para cima. */
+
+    width: 100%;
+    /* Estabelece a largura do cabeçalho como 100% do viewport, garantindo 
+                que ele se estenda por toda a largura da tela. */
+
+    background: rgba(0, 0, 0, 0.8);
+    /* Define a cor de fundo do cabeçalho para preto com 80% de opacidade, 
+                permitindo que um pouco do conteúdo por trás do cabeçalho 
+                seja sutilmente visível através dele. */
+
+    color: white;
+    /* Define a cor do texto dentro do cabeçalho como branco, criando um 
+                alto contraste com o fundo escuro para uma fácil leitura. */
+
+    text-align: center;
+    /* Alinha o texto no centro do cabeçalho, útil para posicionar o título 
+                ou itens de navegação de forma equilibrada e 
+                visualmente agradável. */
+
+    padding: 10px 0;
+    /* Aplica um preenchimento vertical de 10px na parte superior e 
+                inferior do cabeçalho, mas sem preenchimento lateral, 
+                garantindo que o conteúdo tenha espaço suficiente sem 
+                tocar diretamente as bordas. */
+
+    z-index: 1000;
+    /* Um z-index elevado assegura que o cabeçalho fique sobre outros 
+                elementos da página, mantendo-o acessível e visível 
+                independentemente de outros conteúdos que possam 
+                rolar por baixo. */
+
+}
+
+header h1 {
+
+    margin: 0;
+    /* Remove todas as margens externas do título dentro do 
+                cabeçalho, ajudando a manter o layout do cabeçalho 
+                compacto e bem alinhado. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do título para 24px, que é grande o 
+                suficiente para chamar atenção e ser facilmente legível, 
+                mas não tão grande que domine o layout. */
+
+}
+
+
+nav ul {
+
+    list-style-type: none;
+    /* Remove os marcadores padrão (como pontos ou números) dos 
+                itens da lista (<ul>), criando um visual mais limpo e 
+                adequado para menus de navegação modernos, onde os 
+                marcadores geralmente não são necessários. */
+
+    margin: 0;
+    /* Remove as margens externas da lista, ajudando a alinhar o 
+                menu de navegação mais precisamente dentro de seu 
+                contêiner, como um cabeçalho ou uma barra lateral. 
+                Isso evita espaços indesejados ao redor do menu que 
+                poderiam afetar o layout geral. */
+
+    padding: 0;
+    /* Elimina o preenchimento interno da lista, permitindo que o 
+                controle total sobre o espaçamento entre os itens da 
+                lista e o contêiner da lista seja alcançado através de 
+                outras propriedades CSS. Isso é essencial para um 
+                alinhamento exato e controle do layout. */
+
+}
+
+
+nav li {
+
+    display: inline;
+    /* Altera o display dos itens da lista para 'inline', fazendo 
+                com que se comportem como texto e se alinhem horizontalmente 
+                em uma linha, ao invés de empilhados verticalmente como é 
+                padrão em listas não ordenadas. Isso é típico para 
+                menus de navegação onde os links são exibidos 
+                lado a lado. */
+
+    margin: 0 15px;
+    /* Aplica margens horizontais de 15px em cada lado dos itens 
+                da lista, proporcionando espaço entre cada link de 
+                navegação para facilitar a interação do usuário e 
+                uma aparência mais espaçosa e agradável visualmente. */
+
+}
+
+
+nav a {
+
+    color: white;
+    /* Define a cor do texto dos links para branco, oferecendo 
+                alto contraste contra fundos escuros e melhorando a 
+                legibilidade dos links de navegação. */
+
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links, o que é comum em 
+                design web moderno para menus de navegação, pois 
+                oferece uma aparência mais limpa e minimiza a 
+                desordem visual. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte dos links para 18px, equilibrando 
+                legibilidade e economia de espaço. Isso garante que os 
+                links sejam fáceis de ler sem ocupar muito espaço 
+                no layout. */
+
+    transition: color 0.3s;
+    /* Aplica uma transição suave na propriedade de cor que dura 0.3 
+                segundos. Essa animação melhora a experiência do 
+                usuário ao interagir com os links, fornecendo um 
+                feedback visual instantâneo que o link é interativo. */
+
+}
+
+
+nav a:hover {
+
+    color: #ff9900;
+    /* Muda a cor dos links para laranja (#ff9900) quando o 
+                cursor do mouse está sobre eles. Este efeito de 
+                hover não só aumenta a interatividade, indicando ao 
+                usuário que o item é clicável, mas também adiciona um 
+                elemento visual atraente que destaca o link sob o 
+                cursor, melhorando a navegação. */
+
+}
+
+.parallax {
+
+    min-height: 100vh;
+    /* Estabelece a altura mínima de cada seção parallax 
+                como 100vh (100% da altura da janela de visualização). 
+        Isso garante que cada seção parallax ocupe pelo menos a 
+                tela inteira, criando uma apresentação visual 
+                impactante e envolvente. */
+
+    background-attachment: fixed;
+    /* Fixa o plano de fundo em relação à janela de visualização. 
+        Quando você rola a página, o plano de fundo não se move, 
+                criando o efeito de parallax onde o conteúdo 
+                textual se move sobre um fundo estático. */
+
+    background-position: center;
+    /* Centraliza o plano de fundo na janela de visualização, 
+                garantindo que a parte mais importante da imagem de 
+                fundo esteja visível e bem posicionada, 
+                independentemente das dimensões da tela. */
+
+    background-repeat: no-repeat;
+    /* Impede que o plano de fundo seja repetido. Essa configuração é 
+                crucial para assegurar que a imagem de fundo apareça 
+                como uma única imagem contínua sem interrupções, 
+                mantendo a integridade visual do design. */
+
+    background-size: cover;
+    /* Assegura que a imagem de fundo cubra completamente a 
+                área da seção, ajustando a dimensão da imagem 
+                conforme necessário para cobrir todo o espaço 
+                disponível sem que haja espaços vazios, 
+                independentemente do tamanho da tela. */
+
+}
+
+.parallax1 {
+
+    background-image: url('imagem1.jpg');
+    /* Define a imagem de fundo para a primeira seção parallax. 
+    'imagem1.jpg' deve ser substituído pelo caminho correto da 
+                imagem que ilustra idealmente o conteúdo 
+                associado a essa seção. */
+
+}
+
+.parallax2 {
+
+    background-image: url('imagem2.jpg');
+    /* Similar à .parallax1, esta regra aplica uma imagem de 
+                fundo específica para a segunda seção parallax. 
+        Certifique-se de que 'imagem2.jpg' corresponde ao 
+                arquivo real que representa visualmente o 
+                conteúdo desta parte do site. */
+
+}
+
+.parallax3 {
+
+    background-image: url('imagem3.jpg');
+    /* Define a imagem de fundo para a terceira seção parallax. 
+    Como nas outras seções, 'imagem3.jpg' deve ser um caminho válido 
+                para uma imagem que se alinhe tematicamente com o 
+                conteúdo apresentado nesta parte do site. */
+
+}
+
+
+.conteudo {
+
+    min-height: 100vh;
+    /* A propriedade 'min-height: 100vh' garante que o 
+                contêiner de conteúdo tenha pelo menos a 
+                altura total da janela de visualização, 
+                promovendo uma apresentação mais impactante e 
+                garantindo que o conteúdo ocupe uma tela 
+                inteira quando necessário. */
+
+    display: flex;
+    /* Configura o contêiner para usar o modelo de layout Flexbox, 
+                que facilita o alinhamento e distribuição eficiente 
+                dos elementos filhos dentro do contêiner. */
+
+    flex-direction: column;
+    /* Orienta os elementos filhos do Flexbox em uma coluna 
+                vertical. Isso é útil para empilhar elementos 
+                como títulos e parágrafos verticalmente. */
+
+    justify-content: center;
+    /* Alinha os elementos filhos no centro do contêiner ao 
+                longo do eixo principal (neste caso, vertical), 
+                o que ajuda a centrar o conteúdo verticalmente 
+                dentro do contêiner. */
+
+    align-items: center;
+    /* Alinha os elementos filhos no centro do contêiner ao 
+                longo do eixo transversal (neste caso, horizontal), 
+                centralizando-os horizontalmente. */
+
+    text-align: left;
+    /* Define o alinhamento do texto para a esquerda dentro dos 
+                elementos filhos, proporcionando uma leitura mais 
+                natural e organizada, especialmente em idiomas que 
+                são lidos da esquerda para a direita. */
+
+    padding: 40px;
+    /* Aplica um preenchimento de 40px em todas as direções dentro 
+                do contêiner, criando espaço entre o conteúdo interno e 
+                as bordas do contêiner para uma apresentação mais 
+                clara e legível. */
+
+    background: rgba(241, 241, 241, 0.9);
+    /* Define a cor de fundo do contêiner para um cinza claro 
+                com 90% de opacidade, permitindo uma leve transparência 
+                que pode ajudar a integrar visualmente o conteúdo com o 
+                fundo ou outros elementos visuais sob o contêiner. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333), que 
+                oferece excelente contraste com o fundo claro sem 
+                ser tão intenso quanto o preto, facilitando a 
+                leitura confortável. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida de 1px com cor cinza claro (#ccc) 
+                ao redor do contêiner, delimitando claramente o espaço 
+                do conteúdo e enriquecendo a estética com um toque sutil. */
+
+    margin: 20px;
+    /* Aplica uma margem de 20px em todas as direções ao redor do 
+                contêiner, separando-o dos outros elementos na 
+                página para evitar que o conteúdo pareça amontoado. */
+
+    border-radius: 10px;
+    /* Arredonda as bordas do contêiner com um raio de 10px, 
+                suavizando o design e oferecendo um visual mais 
+                amigável e moderno. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra abaixo do contêiner, projetando-se 4px 
+                para baixo e com um desfoque de 8px, utilizando uma 
+                cor preta com 10% de opacidade. Esta sombra adiciona 
+                uma sensação de profundidade, elevando visualmente o 
+                contêiner acima de outros elementos da página. */
+
+}
+
+.conteudo h2 {
+
+    font-size: 32px;
+    /* Define o tamanho da fonte do elemento <h2> para 32px. 
+    Esse tamanho é significativamente grande, garantindo que o 
+                título se destaque visualmente no conteúdo, atraindo a 
+                atenção do usuário para as seções-chave ou títulos 
+                de tópicos. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem inferior de 20px abaixo do título <h2>. 
+    Esta margem ajuda a separar visualmente o título do texto que o 
+                segue, evitando que o layout pareça congestionado e 
+                melhorando a organização visual do conteúdo. */
+
+    text-align: center;
+    /* Centraliza o texto do título <h2> dentro do seu contêiner. 
+    O alinhamento central é frequentemente usado para títulos para 
+                dar ênfase e para criar um layout harmonioso e equilibrado, 
+                especialmente em seções de conteúdo centrado. */
+
+}
+
+
+.conteudo p {
+
+    font-size: 18px;
+    /* Estabelece o tamanho da fonte dos parágrafos para 18px, 
+                que é um tamanho ideal para leitura confortável em 
+                dispositivos digitais. Essa configuração assegura que o 
+                texto seja grande o suficiente para ser facilmente 
+                legível sem dominar visualmente a página. */
+
+    line-height: 1.6;
+    /* Define a altura da linha para 1.6 vezes o tamanho da fonte 
+                padrão. A linha com altura aumentada melhora a 
+                legibilidade ao criar espaço vertical adequado entre as 
+                linhas de texto, o que facilita o rastreamento visual 
+                ao ler longos blocos de texto. */
+
+}
+
+
+footer {
+
+    background: #333;
+    /* Define a cor de fundo do <footer> para um cinza escuro (#333). 
+        Esta escolha de cor proporciona um contraste forte com o texto 
+                    em cores claras, garantindo que o conteúdo do 
+                    rodapé seja fácil de ler e visualmente distinto 
+                    do resto da página. */
+
+    color: white;
+    /* Estabelece a cor do texto dentro do <footer> para branco. 
+    O texto branco sobre o fundo cinza escuro oferece excelente 
+                    visibilidade e ajuda a destacar as informações 
+                    importantes do rodapé, como direitos 
+                    autorais e links. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do <footer>. Esta propriedade é 
+                    frequentemente usada em rodapés para garantir que o 
+                    conteúdo, como textos de direitos autorais ou 
+                    informações de contato, seja apresentado de maneira 
+                    organizada e esteticamente agradável no meio 
+                    do elemento. */
+
+    padding: 10px 0;
+    /* Aplica um preenchimento vertical de 10px no topo e na base 
+                    do <footer>, mas sem preenchimento lateral. 
+    Isso cria um espaço confortável entre o texto do rodapé e as 
+                    bordas superior e inferior, melhorando a 
+                    legibilidade e o apelo visual do design. */
+
+    position: relative;
+    /* Define a posição do <footer> como relativa. Embora neste 
+                    caso específico a propriedade 
+                    'position: relative' possa não ter um impacto 
+                    visual direto, ela é útil para posicionar 
+                    elementos filhos que podem requerer posicionamento 
+                    absoluto em relação ao <footer>. */
+
+    margin-top: 20px;
+    /* Aplica uma margem superior de 20px ao <footer>, separando-o 
+                    visualmente do restante do conteúdo da página. 
+    Isso ajuda a delimitar claramente onde termina o conteúdo 
+                    principal e começa o rodapé, facilitando a 
+                    organização visual da página. */
+                    
+}

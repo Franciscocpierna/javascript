@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- Esta linha declara o tipo de documento que está sendo 
+            usado, especificamente HTML5. A declaração <!DOCTYPE html> é 
+            crucial porque diz ao navegador para renderizar a página 
+            usando o modo de padrões do HTML5, garantindo que os 
+            elementos HTML sejam interpretados e exibidos corretamente. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> define o elemento raiz do documento HTML, e o 
+            atributo 'lang="pt-BR"' especifica que o idioma principal do 
+            documento é o Português do Brasil. Isso ajuda os motores de 
+            busca e as tecnologias assistivas a entenderem o idioma do 
+            conteúdo, melhorando a acessibilidade e a SEO. -->
+
+<head>
+<!-- A tag <head> encapsula metadados (dados sobre dados) necessários 
+            para o documento, mas que não são diretamente visíveis na 
+            página web. Esses metadados incluem links para folhas de 
+            estilo, scripts e outras informações importantes que o 
+            navegador precisa para processar antes de renderizar a página. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com o atributo charset="UTF-8" especifica que o 
+                documento usa UTF-8, que é um sistema de codificação de 
+                caracteres universal que inclui praticamente todos os 
+                caracteres de todos os idiomas. Isso garante que qualquer 
+                texto dentro do documento seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta meta tag controla a janela de visualização do navegador. O 
+                conteúdo 'width=device-width' instrui o navegador a ajustar a 
+                largura da página para corresponder à largura do dispositivo. 
+        'initial-scale=1.0' estabelece o nível de zoom inicial quando a 
+                página é carregada pela primeira vez, otimizando a página 
+                para visualização em dispositivos móveis. -->
+
+    <title>Projeto Parallax - Carros</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba do 
+                navegador. Este título é também utilizado pelos motores de 
+                busca e quando a página é salva como favorito, servindo 
+                como uma referência rápida ao conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- A tag <link> é usada para conectar a página web a uma folha de 
+                estilo externa, especificada pelo atributo 'href'. 
+        Aqui, 'estilo.css' contém as regras de estilo CSS que definem a 
+                aparência da página. O atributo 'rel="stylesheet"' indica 
+                que o documento vinculado é uma folha de estilo. -->
+
+</head>
+<!-- Fim do cabeçalho. -->
+
+<body>
+<!-- A tag <body> marca o início do corpo do documento HTML, onde 
+                todo o conteúdo visível da página é inserido. -->
+
+    <header>
+    <!-- A tag <header> é usada para definir o cabeçalho da página. 
+                Contém elementos introdutórios ou navegacionais como 
+                títulos, logotipos e menus de navegação. -->
+
+        <h1>Projeto Parallax - Carros</h1>
+        <!-- A tag <h1> dentro do <header> serve como o título principal 
+                    da página, proporcionando uma visão clara do conteúdo 
+                    do site. O uso de <h1> é importante para SEO, pois 
+                        indica aos motores de busca o tópico principal da página. -->
+
+        <nav>
+        <!-- A tag <nav> define uma seção de links de navegação, ajudando na 
+                    organização e estruturação do site de maneira que seja 
+                    fácil para os usuários encontrarem outras páginas ou 
+                    seções relevantes. -->
+
+            <ul>
+            <!-- A tag <ul> cria uma lista não ordenada, que neste contexto é 
+                        usada para agrupar links de navegação, proporcionando uma 
+                        estrutura clara e ordenada. -->
+
+                <li><a href="#mustang">Ford Mustang</a></li>
+                <!-- Cada <li> contém um <a>, que é um link para uma seção 
+                            específica da página. Este link aponta para a seção 
+                            do 'Ford Mustang', permitindo a navegação direta 
+                            para essa parte da página ao clicar. -->
+
+                <li><a href="#tiggo">Chery Tiggo 2</a></li>
+                <!-- Similar ao anterior, este link permite a navegação direta 
+                            para a seção do 'Chery Tiggo 2'. -->
+
+                <li><a href="#civic">Honda Civic</a></li>
+                <!-- Este link aponta para a seção do 'Honda Civic', facilitando a 
+                            navegação direta para essa parte específica da página. -->
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="parallax parallax1" id="mustang">
+    <!-- A classe 'parallax' junto com 'parallax1' é usada aqui para 
+                aplicar efeitos visuais específicos (como fundo fixo ou 
+                movimento diferenciado durante a rolagem) à seção.
+         O ID 'mustang' identifica unicamente esta seção, que é decorada 
+                com uma imagem de fundo representativa do Ford Mustang. -->
+
+    </div>
+    <div class="conteudo">
+    <!-- A classe 'conteudo' é utilizada para estilizar esta seção de 
+                conteúdo, geralmente definindo estilos como cor de fundo, 
+                padding, entre outros, para destacar o texto dentro do 
+                layout geral da página. -->
+
+        <h2>Ford Mustang</h2>
+        <!-- A tag <h2> aqui é usada para o título da seção dentro do 
+                    conteúdo, destacando o nome 'Ford Mustang'. 
+            Isso ajuda na estruturação do conteúdo e melhora a experiência 
+                    do usuário ao navegar pela seção específica. -->
+
+        <p>O Ford Mustang é um carro esportivo icônico, conhecido por seu design robusto e desempenho poderoso. Com um motor V8 que entrega uma potência incrível, o Mustang oferece uma experiência de condução emocionante. O interior é luxuoso, com assentos confortáveis e tecnologia avançada. Este modelo é ideal para quem busca velocidade e estilo em um só veículo.</p>
+        <!-- A tag <p> contém uma descrição detalhada do Ford Mustang, 
+                    destacando suas características e apelo. 
+            Esse parágrafo fornece informações valiosas que podem atrair 
+                    entusiastas de carros ou potenciais compradores. -->
+
+    </div>
+
+    
+    <div class="parallax parallax2" id="tiggo">
+        <!-- A div com classe 'parallax parallax2' e ID 'tiggo' é 
+                    usada para aplicar um segundo efeito de parallax na 
+                    página, focado no Chery Tiggo 2. O ID específico 
+                    permite referenciar esta seção diretamente através de 
+                    links internos, enquanto a classe 'parallax2' pode ter 
+                    estilos específicos de parallax definidos no CSS. -->
+
+    </div>
+
+    <div class="conteudo">
+        <!-- Esta div com a classe 'conteudo' encapsula o texto 
+                    descritivo sobre o Chery Tiggo 2, estilizada para 
+                    destacar a informação dentro do layout geral da página. -->
+
+        <h2>Chery Tiggo 2</h2>
+        <!-- O elemento <h2> serve como um subtítulo para a seção dedicada ao 
+                    Chery Tiggo 2, fornecendo uma clara demarcação do 
+                    tópico tratado nesta parte do conteúdo. -->
+
+        <p>O Chery Tiggo 2 é um SUV compacto que combina estilo, conforto e economia. Equipado com um motor eficiente e recursos modernos, como sistema de infotainment e controle de estabilidade, o Tiggo 2 é perfeito para a vida urbana. Sua altura elevada e espaçoso interior proporcionam uma experiência de condução segura e agradável, seja na cidade ou na estrada.</p>
+        <!-- O parágrafo detalha as características do Chery Tiggo 2, 
+                    ressaltando seus pontos fortes e adaptabilidade à vida 
+                    urbana, apresentando uma narrativa que pode engajar os 
+                    leitores interessados em veículos práticos e estilosos. -->
+
+    </div>
+
+    <div class="parallax parallax3" id="civic">
+        <!-- Similar às anteriores, esta div com classe 'parallax parallax3' 
+                    e ID 'civic' aplica o efeito parallax para a seção sobre o 
+                    Honda Civic. A classe 'parallax3' pode ter propriedades 
+                    específicas de parallax que diferem das outras seções 
+                    para variar o efeito visual. -->
+
+    </div>
+
+    <div class="conteudo">
+        <!-- Outra div com a classe 'conteudo', seguindo o mesmo padrão de 
+                    design para manter a consistência visual ao longo do projeto. -->
+        <h2>Honda Civic</h2>
+        <!-- O título <h2> marca a seção do Honda Civic, destacando o nome do 
+                    carro como um ponto focal para os leitores. -->
+
+        <p>O Honda Civic é um sedã sofisticado que oferece um equilíbrio perfeito entre desempenho e conforto. Com um design elegante e aerodinâmico, o Civic é equipado com tecnologia de ponta, incluindo assistentes de direção e conectividade avançada. Seu motor eficiente proporciona uma condução suave e econômica, tornando-o uma escolha popular entre os motoristas exigentes.</p>
+        <!-- Este parágrafo fornece uma descrição detalhada do Honda Civic, 
+                    abordando suas características tecnológicas e design, 
+                    destinado a atrair potenciais interessados em um veículo 
+                    moderno e eficiente. -->
+
+    </div>
+
+    <footer>
+        <!-- O <footer> contém informações de direitos autorais, 
+                    situado no final do documento HTML. -->
+
+        <p>&copy; 2024 Projeto Parallax. Todos os direitos reservados.</p>
+        <!-- O texto dentro do footer informa o ano e o nome do projeto, 
+                    seguido pela frase padrão de direitos autorais, 
+                    estabelecendo a propriedade legal sobre o conteúdo e 
+                    design do site. -->
+
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta para 'script.js' 
+                    vincula um arquivo JavaScript externo à página. 
+        Este script contém código que gerencia os 
+                    efeitos de parallax dinâmicos e outras interações no site. -->
+
+</body>
+<!-- Fim da tag <body>, que encerra todo o conteúdo principal 
+            visível ao usuário. -->
+
+</html>
+<!-- Fim da tag <html>, que marca o término do documento HTML. -->
