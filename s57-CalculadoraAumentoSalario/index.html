@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<!-- Declaração do tipo de documento. Esta linha 
+        indica que o documento é HTML5. -->
+
+<html lang="pt-BR">
+<!-- Abertura da tag <html> com o atributo 'lang', especificando 
+        que o idioma principal do documento é o português do Brasil. -->
+
+<head>
+<!-- Abertura da tag <head>, que contém metadados (informações 
+            sobre os dados) e links para scripts e folhas de estilo. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' definido como 'UTF-8'. 
+     Isso especifica a codificação de caracteres para o documento, 
+            permitindo o uso de caracteres universais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, configurando o viewport do documento para 
+                    garantir uma visualização adequada em dispositivos móveis. 
+         'width=device-width' faz o layout renderizar na 
+                    largura do dispositivo.
+         'initial-scale=1.0' define o nível inicial de zoom 
+                    quando a página é carregada pela primeira vez. -->
+
+    <title>Exercício Calculadora de Aumento de Salário</title>
+    <!-- A tag <title> define o título do documento, que é 
+                    mostrado na aba do navegador. Este título é 
+                    "Exercício Calculadora de Aumento de Salário". -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> é usada aqui para conectar uma folha de 
+                    estilo CSS externa, denominada 'styles.css', 
+                    ao documento HTML. 
+         O atributo 'rel' especifica o relacionamento entre o 
+                    documento HTML e o recurso vinculado, que 
+                    neste caso é uma folha de estilo. -->
+
+</head>
+<!-- Fecho da tag <head>. -->
+
+
+<body>
+<!-- Abertura da tag <body> que contém todo o conteúdo principal 
+                    que será visível aos usuários quando eles 
+                    visitarem a página. -->
+
+    <div class="calculadora">
+    <!-- Abertura de uma <div> com a classe 'calculadora'. 
+        As <div>s são usadas para agrupar conteúdo e elementos 
+                    dentro de um documento HTML e a classe permite 
+                    aplicar estilos específicos definidos no CSS. -->
+
+        <h1>Exercício Calculadora de Aumento de Salário</h1>
+        <!-- Tag <h1> que define o cabeçalho principal da página. 
+            O texto "Exercício Calculadora de Aumento de Salário" é 
+                    o título principal visível na parte superior da 
+                    interface da calculadora. -->
+
+        <label for="salarioAntigo">Salário Antigo:</label>
+        <!-- Tag <label> associada ao input do salário antigo. 
+            O atributo 'for' conecta o label ao input com id 'salarioAntigo', 
+                    melhorando a acessibilidade e a usabilidade. -->
+
+        <input type="number" id="salarioAntigo" placeholder="Informe o salário antigo">
+        <!-- Tag <input> de tipo 'number', que permite ao usuário 
+                    inserir um número. O 'id' ajuda a identificar 
+                    unicamente este input no documento e o 'placeholder' 
+                    fornece um texto de exemplo dentro do input. -->
+
+        <label for="salarioNovo">Salário Novo:</label>
+        <!-- Outra tag <label> para o novo salário. Semelhante ao 
+                    label anterior, melhora a interação do usuário 
+                    com o formulário. -->
+
+        <input type="number" id="salarioNovo" placeholder="Informe o salário novo">
+        <!-- Segundo <input> de tipo 'number'. Este está configurado 
+                    para receber o novo salário do usuário. 
+            O 'placeholder' ajuda a indicar o que o usuário 
+                    deve inserir neste campo. -->
+
+        <button onclick="calcularAumento()">Calcular</button>
+        <!-- Tag <button> que o usuário pode clicar para calcular o 
+                    aumento. O atributo 'onclick' chama a função 
+                    JavaScript 'calcularAumento()', que é definida 
+                    no arquivo 'script.js'. -->
+
+        <div id="resultado"></div>
+        <!-- Uma <div> com o id 'resultado', onde o resultado do 
+                    cálculo será exibido. O JavaScript atualizará o 
+                    conteúdo desta div com os resultados após o cálculo. -->
+
+    </div>
+    <!-- Fecho da <div> 'calculadora'. -->
+
+    <script src="script.js"></script>
+    <!-- Tag <script> com o atributo 'src' que inclui o arquivo 
+                    JavaScript 'script.js'. Este script contém a 
+                    lógica para calcular o aumento de salário. -->
+
+</body>
+<!-- Fecho da tag <body>. -->
+
+</html>
+<!-- Fecho da tag <html>, indicando o fim do documento HTML. -->

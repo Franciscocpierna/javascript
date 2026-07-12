@@ -1,0 +1,170 @@
+body {
+
+    /* Define a família de fontes para o corpo do documento. 
+    'Arial' é a fonte principal, e 'sans-serif' é a 
+                fonte alternativa. */
+    font-family: Arial, sans-serif;
+
+    /* Define a cor de fundo para o corpo do documento. 
+    O código hexadecimal #f4f4f4 é um cinza claro. */
+    background-color: #f4f4f4;
+
+    /* Define o tipo de exibição como flexível, o que 
+                permite usar as propriedades flexbox para 
+                alinhamento e distribuição de espaço. */
+    display: flex;
+
+    /* Alinha os elementos filhos do corpo ao centro 
+                no eixo horizontal. */
+    justify-content: center;
+
+    /* Alinha os elementos filhos do corpo ao centro 
+                no eixo vertical. */
+    align-items: center;
+
+    /* Define a altura do corpo do documento para ser 100% 
+                da altura da viewport, o que faz com que ele 
+                ocupe toda a altura da tela do dispositivo. */
+    height: 100vh;
+
+    /* Remove as margens padrão do corpo do documento, 
+                permitindo que o conteúdo se estenda até as 
+                bordas da janela do navegador. */
+    margin: 0;
+
+}
+
+.calculadora {
+
+    /* Define a cor de fundo da div "calculadora" como branco. */
+    background-color: #fff;
+
+    /* Aplica um espaçamento interno de 20 pixels em 
+                todas as direções dentro da div. */
+    padding: 20px;
+
+    /* Define um raio de borda de 8 pixels para as 
+                bordas da div, dando-lhe bordas arredondadas. */
+    border-radius: 8px;
+
+    /* Aplica uma sombra à div. O deslocamento da sombra é 0px 
+                horizontalmente e verticalmente, com um desfoque 
+                de 10px e uma cor preta com 10% de opacidade. */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    /* Alinha o texto dentro da div ao centro. */
+    text-align: center;
+
+    /* Define a largura da div "calculadora" para 300 pixels. */
+    width: 300px;
+
+}
+
+h1 {
+
+    /* Define o tamanho da fonte do cabeçalho h1 
+                para 24 pixels. */
+    font-size: 24px;
+
+    /* Adiciona uma margem abaixo do cabeçalho h1 de 20 
+                pixels para separá-lo dos elementos abaixo. */
+    margin-bottom: 20px;
+
+}
+
+
+label {
+
+    /* Define o tipo de exibição do elemento <label> 
+                como 'block', o que faz com que ele ocupe 
+                toda a largura disponível, criando uma nova 
+                linha antes e depois de si mesmo. */
+    display: block;
+
+    /* Define as margens ao redor do elemento <label>. 10 
+                pixels na parte superior, 0 pixels nas 
+                laterais e 5 pixels na parte inferior. */
+    margin: 10px 0 5px;
+
+}
+
+input {
+
+    /* Define a largura do elemento <input> para 
+                ocupar 90% da largura do seu contêiner pai. */
+    width: 90%;
+
+    /* Adiciona um preenchimento de 10 pixels em todas as 
+                direções dentro do elemento <input> para 
+                maior legibilidade e melhor aparência. */
+    padding: 10px;
+
+    /* Define uma margem na parte inferior do elemento <input> 
+                de 10 pixels para espaçá-lo dos elementos abaixo. */
+    margin-bottom: 10px;
+
+    /* Adiciona uma borda ao redor do elemento <input> com 1 
+                pixel de espessura, estilo sólido e cor cinza 
+                claro (#ccc). */
+    border: 1px solid #ccc;
+
+    /* Define um raio de borda de 4 pixels para as bordas do 
+                elemento <input>, proporcionando bordas 
+                levemente arredondadas. */
+    border-radius: 4px;
+
+}
+
+button {
+
+    /* Define a cor de fundo dos botões como um 
+                azul brilhante (#007BFF). */
+    background-color: #007BFF;
+
+    /* Define a cor do texto dentro dos botões como 
+                branco (#fff), garantindo contraste adequado 
+                com o fundo azul. */
+    color: #fff;
+
+    /* Remove qualquer borda do botão, criando um 
+                estilo mais limpo e moderno. */
+    border: none;
+
+    /* Define o preenchimento interno do botão para 10 
+                pixels na vertical e 20 pixels na horizontal, 
+                o que ajuda a tornar o botão mais visível e 
+                fácil de clicar. */
+    padding: 10px 20px;
+
+    /* Aplica um raio de borda de 4 pixels, suavizando 
+                ligeiramente os cantos do botão. */
+    border-radius: 4px;
+
+    /* Muda o cursor para um ponteiro quando o usuário passa o 
+                mouse sobre o botão, indicando que ele é clicável. */
+    cursor: pointer;
+
+}
+
+button:hover {
+
+    /* Altera a cor de fundo dos botões para um azul mais 
+                escuro (#0056b3) quando o usuário passa o mouse 
+                sobre eles, fornecendo feedback visual interativo. */
+    background-color: #0056b3;
+
+}
+
+#resultado {
+
+    /* Adiciona uma margem na parte superior do elemento 
+                com id 'resultado' de 20 pixels, separando-o 
+                visualmente dos elementos acima. */
+    margin-top: 20px;
+
+    /* Define o tamanho da fonte do texto dentro do elemento 'resultado' 
+                para 18 pixels, tornando-o suficientemente grande 
+                para ser facilmente legível. */
+    font-size: 18px;
+    
+}
