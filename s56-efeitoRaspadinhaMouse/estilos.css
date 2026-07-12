@@ -1,0 +1,121 @@
+body, html {
+
+    margin: 0;
+    /* Define a margem externa dos elementos <body> e 
+                <html> para 0. Isso remove qualquer espaço 
+                entre os elementos e as bordas do navegador, 
+                garantindo que não haja margem indesejada ao 
+                redor da página. */
+
+    overflow: hidden;
+    /* Define a propriedade de overflow como 'hidden' 
+                para ambos os elementos. Isso impede que o 
+                conteúdo que exceda as dimensões do <body> ou
+                <html> seja exibido, ocultando barras de 
+                rolagem e conteúdo fora do viewport. */
+
+    height: 100%;
+    /* A altura de <body> e <html> é definida como 100% da 
+                altura da janela de visualização. Isso é usado 
+                para garantir que esses elementos ocupem toda a 
+                altura da tela, permitindo que o conteúdo dentro 
+                deles seja centralizado verticalmente. */
+
+    display: flex;
+    /* Estabelece um contexto de layout flexível para <body> e
+                <html>. Flexbox é um método de layout que 
+                facilita o alinhamento e a distribuição uniforme 
+                de espaço entre itens em um contêiner, mesmo 
+                quando seus tamanhos são desconhecidos ou dinâmicos. */
+
+    flex-direction: column;
+    /* Define a direção principal do layout flexível como 
+                'column'. Isso significa que os filhos diretos 
+                de <body> e <html> serão organizados verticalmente, 
+                um abaixo do outro. */
+
+    align-items: center;
+    /* Alinha os itens filhos (como <h1> e <canvas>) ao 
+                centro do eixo transversal (horizontal). Isso é 
+                útil para garantir que todos os elementos filhos 
+                sejam centralizados horizontalmente dentro 
+                de <body> e <html>. */
+
+    justify-content: center;
+    /* Justifica os itens filhos (como <h1> e <canvas>) ao 
+                centro do eixo principal (vertical). Isso garante 
+                que os elementos filhos sejam centralizados 
+                verticalmente dentro de <body> e <html>, útil 
+                para páginas com pouco conteúdo que devem 
+                aparecer no centro da tela. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo de <body> e <html> para um 
+                cinza claro (#f0f0f0). Essa cor de fundo é suave 
+                para os olhos e proporciona um contraste moderado 
+                com elementos de cores mais escuras, facilitando a 
+                leitura e a visualização dos conteúdos da página. */
+
+}
+
+h1 {
+
+    color: #333;
+    /* Define a cor do texto para o elemento <h1> como um 
+                cinza escuro (#333333). Esta cor é sutil, mas 
+                proporciona contraste suficiente contra fundos 
+                claros, facilitando a leitura e destacando a 
+                importância do título. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem na parte inferior do <h1>. Isso cria 
+                um espaço de 20 pixels entre o título e qualquer 
+                elemento que venha abaixo dele, neste caso, o canvas. 
+                Isso ajuda a separar visualmente o título do conteúdo 
+                do canvas, melhorando a organização e a estética 
+                da página. */
+
+}
+
+
+canvas {
+
+    display: block;
+    /* Define o método de exibição do elemento <canvas> 
+                para 'block'. Isso significa que o canvas 
+                começará em uma nova linha e ocupará a largura 
+                total da linha. O valor 'block' também permite 
+                aplicar margens e preenchimentos ao redor do canvas. */
+
+    background-image: url('imagem-inferior.jpg');
+    /* Define uma imagem de fundo para o canvas usando o URL 
+                especificado. Esta imagem serve como a camada 
+                inferior que pode ser revelada pelo efeito 
+                interativo de "raspadinha" no canvas. */
+
+    background-size: cover;
+    /* Ajusta o tamanho da imagem de fundo para cobrir 
+                completamente o área do canvas, independente das 
+                suas proporções originais. Isso garante que a 
+                imagem de fundo esteja totalmente visível e preencha 
+                todo o espaço do canvas sem repetições. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida, com 1 pixel de espessura e 
+                cor cinza claro (#cccccc), ao redor do canvas. 
+                A borda ajuda a definir claramente os limites do 
+                canvas na página, melhorando a visibilidade e o 
+                contraste em relação ao fundo. */
+
+    width: 500px;
+    /* Define a largura do canvas como 500 pixels. Isso 
+                especifica o tamanho horizontal do elemento 
+                na página. */
+
+    height: 500px;
+    /* Define a altura do canvas como 500 pixels. Isso 
+                especifica o tamanho vertical do elemento, 
+                formando um quadrado quando combinado com a 
+                mesma medida de largura. */
+                
+}

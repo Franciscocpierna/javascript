@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE informa ao navegador que esta 
+            página deve ser interpretada como um documento HTML5. 
+            É essencial para garantir o processamento correto do 
+            documento em diferentes navegadores. -->
+
+<html lang="pt">
+<!-- A tag <html> define o início do documento HTML, e o 
+            atributo 'lang="pt"' especifica que o idioma principal do 
+            conteúdo da página é o português. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de estilo, 
+                scripts e outras informações que não são exibidas diretamente 
+                na parte visível da página web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo charset="UTF-8" define o conjunto 
+                de caracteres usado no documento, garantindo suporte para a 
+                maioria dos caracteres usados em idiomas escritos globalmente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag <meta> configura a janela de visualização para 
+                controlar dimensões e escalonamento em dispositivos móveis.
+         'width=device-width' faz com que a largura da página 
+                corresponda à largura da tela do dispositivo.
+         'initial-scale=1.0' define o nível de zoom inicial quando a 
+                página é carregada pela primeira vez. -->
+
+    <title>Efeito de Raspadinha com Mouse</title>
+    <!-- A tag <title> especifica o título da página, que aparece na 
+                aba do navegador. É importante para SEO e para a usabilidade, 
+                ajudando os usuários a identificar o conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para vincular uma folha de estilos 
+                externa, chamada "estilos.css". Esta folha de estilos 
+                contém regras CSS que definem a aparência dos 
+                elementos na página. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página, 
+                como texto, imagens, vídeos, jogos, elementos 
+                clicáveis, etc. -->
+
+    <h1>Efeito de Raspadinha com Mouse</h1>
+    <!-- A tag <h1> é usada para o título principal da página. 
+        Ela tem grande importância em SEO, indicando o tópico 
+                principal da página para os mecanismos de busca e 
+                melhorando a estrutura do conteúdo para 
+                leitores de tela. -->
+
+    <canvas id="tela" width="500" height="500"></canvas>
+    <!-- A tag <canvas> é usada para desenhar gráficos via 
+                scripting (usualmente JavaScript). Aqui, está 
+                definida com uma largura e altura de 500 pixels e um 
+                identificador único 'id="tela"', que pode ser 
+                referenciado no CSS e no JavaScript. -->
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta 
+                para "script.js" é usada para incluir um arquivo 
+                JavaScript que contém scripts que interagem com o 
+                canvas e outros elementos da página. -->
+                
+</body>
+</html>
