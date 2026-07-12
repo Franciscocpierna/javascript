@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE informa ao navegador a
+               versão do HTML que a página está usando. 
+     No caso, é o HTML5, que é a versão atual e
+               recomendada do HTML. -->
+
+<html lang="pt">
+<!-- A tag <html> é a raiz do documento HTML. 
+     O atributo 'lang="pt"' especifica que o idioma
+               principal do documento é o português. -->
+
+<head>
+    <!-- A tag <head> contém metadados (informações sobre dados) que
+               não são exibidos diretamente na página web, 
+               mas são usados pelo navegador e outros serviços web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' 
+               define o conjunto de caracteres 
+               utilizado no documento como UTF-8, que 
+               inclui quase todos os caracteres de todos 
+               os idiomas humanos, proporcionando suporte internacional. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, essa configura a viewport (área 
+               de visualização) para controlar 
+               como a página é exibida em dispositivos móveis.
+         - 'width=device-width' instrui o navegador a 
+               definir a largura da página igual à 
+               largura do dispositivo.
+         - 'initial-scale=1.0' estabelece o nível inicial de 
+               zoom quando a página é carregada pela primeira vez. -->
+
+    <title>Efeito Dinâmico de Revelação</title>
+    <!-- A tag <title> define o título da página, que é 
+               exibido na aba do navegador e usado por motores de 
+               busca. Aqui, define-se o título como "Efeito 
+               Dinâmico de Revelação". -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para vincular um arquivo CSS 
+               externo, que é 'estilos.css'.
+         O atributo 'rel="stylesheet"' indica que o arquivo 
+               vinculado é uma folha de estilos. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém o conteúdo da página que é 
+               visível para os usuários. -->
+
+    <h1>Efeito Dinâmico de Revelação</h1>
+    <!-- A tag <h1> é usada para o título principal da 
+               página. É importante para a acessibilidade 
+               e SEO, pois define o contexto e o tópico 
+               principal da página. -->
+
+    <canvas id="tela" width="500" height="500"></canvas>
+    <!-- A tag <canvas> é usada para desenhar gráficos via 
+                    scripting (geralmente JavaScript).
+         - 'id="tela"' é um identificador único para o 
+                    elemento, usado no CSS e JavaScript.
+         - 'width="500"' define a largura do canvas como 500 pixels.
+         - 'height="500"' define a altura do canvas como 500 pixels. -->
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' vincula um arquivo 
+                    JavaScript externo, 'script.js',
+                    que contém scripts que controlam elementos 
+                    do HTML, neste caso, manipulando 
+                    o elemento <canvas>. -->
+                        
+</body>
+</html>

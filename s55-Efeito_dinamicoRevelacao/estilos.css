@@ -1,0 +1,69 @@
+body, html {
+
+    margin: 0;
+    /* Remove a margem padrão do <body> e do <html>, garantindo que 
+                não haja espaço extra ao redor dos elementos na página. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20 pixels em todas as direções 
+                dentro do <body> e do <html>, criando um espaço entre o 
+                conteúdo da página e suas bordas. */
+
+    height: 100%;
+    /* Define a altura do <body> e do <html> para ser 100% da altura da 
+                janela do navegador, permitindo que esses elementos ocupem 
+                todo o espaço vertical disponível. */
+
+    display: flex;
+    /* Estabelece um contexto flexível para <body> e <html>. O Flexbox é 
+                um método de layout que oferece uma maneira mais eficiente 
+                de alinhar e distribuir espaço entre os itens em um 
+                container, mesmo quando seu tamanho é desconhecido. */
+
+    flex-direction: column;
+    /* Define a direção principal do conteúdo flexível como vertical. 
+                Isso significa que os filhos diretos do <body> e do <html> 
+                serão organizados em uma coluna, um abaixo do outro. */
+
+    align-items: center;
+    /* Alinha os itens filhos (como <h1> e <canvas>) ao centro do 
+                eixo transversal (neste caso, horizontalmente), 
+                garantindo que eles sejam centralizados dentro 
+                de seus containers. */
+
+    justify-content: center;
+    /* Justifica o conteúdo ao centro no eixo principal (neste 
+                caso, verticalmente), posicionando todos os itens 
+                filhos (como <h1> e <canvas>) no centro da página. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo do <body> e do <html> para um 
+                cinza claro (#f0f0f0), que é um tom suave e 
+                comum para fundos de sites. */
+
+}
+
+h1 {
+
+    color: #333;
+    /* Define a cor do texto para o elemento <h1> como um 
+                cinza escuro (#333), proporcionando um contraste 
+                suficiente contra o fundo claro para uma 
+                boa legibilidade. */
+
+    margin-bottom: 20px;
+    /* Define uma margem abaixo do <h1> de 20 pixels, criando um 
+                espaço entre o título e o elemento abaixo 
+                dele (o <canvas>). */
+
+}
+
+canvas {
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida, cinza claro (#ccc) de 1 pixel 
+                ao redor do <canvas>, ajudando a definir 
+                claramente a área de desenho na página e a 
+                separá-la visualmente de outros conteúdos. */
+                
+}
