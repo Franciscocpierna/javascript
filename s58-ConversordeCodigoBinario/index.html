@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- A linha doctype declara o tipo do documento HTML. 
+        Neste caso, especifica que o documento segue o 
+        padrão HTML5. Esta declaração é importante para que o 
+        navegador interprete e renderize a página corretamente. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> define o início do documento HTML. 
+    O atributo 'lang' especifica o idioma principal do documento, 
+            neste caso, português do Brasil (pt-BR). Especificar o 
+            idioma ajuda os navegadores a exibir caracteres especiais 
+            corretamente e é útil para acessibilidade e motores 
+            de busca. -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de estilo, 
+            scripts e outras informações que não são diretamente 
+            exibidas na área de visualização do navegador. 
+    Tudo dentro desta tag define aspectos da configuração da 
+            página, mas não seu conteúdo visível. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define a codificação de 
+                caracteres usada no documento HTML. UTF-8 é uma 
+                codificação de caracteres universal que inclui quase 
+                todos os caracteres e símbolos usados pelas línguas 
+                humanas, garantindo que o texto apareça corretamente 
+                em qualquer navegador. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, que configura a visualização da página nos 
+                navegadores em dispositivos móveis. 
+         - `width=device-width` instrui o navegador a definir a 
+                largura da página igual à largura do dispositivo, o 
+                que ajuda a otimizar a visualização em dispositivos 
+                de diferentes tamanhos.
+         - `initial-scale=1.0` define o nível inicial de zoom quando a 
+                página é aberta, garantindo que a página seja 
+                carregada em escala 1:1 sem zoom inicial. -->
+
+    <title>Exercício Conversor de Código Binário</title>
+    <!-- A tag <title> define o título da página, que é mostrado 
+                na aba do navegador. Este título é útil para usuários e 
+                SEO (otimização para motores de busca), pois descreve o 
+                conteúdo da página. Neste caso, "Exercício Conversor de 
+                Código Binário" indica o propósito da página. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> é usada aqui para incorporar uma folha de 
+                estilo externa ao documento HTML. O atributo 'rel' 
+                especifica o tipo de relação que o documento HTML tem 
+                com o recurso referenciado, que neste caso é uma 
+                folha de estilo ('stylesheet'). 
+         - `href="styles.css"` especifica o caminho para a folha de 
+                estilo que contém os estilos CSS que serão aplicados ao HTML. -->
+
+</head>
+<!-- Fecha a tag <head>, indicando o fim da seção de configuração da página. -->
+
+<body>
+<!-- A tag <body> contém todo o conteúdo principal que será 
+            visível aos usuários na página. -->
+
+    <div class="conversor">
+    <!-- A tag <div> com a classe "conversor" é usada para agrupar 
+                visualmente o conteúdo relacionado ao conversor 
+                de código binário. 
+         As classes ajudam a aplicar estilos específicos definidos na 
+                folha de estilo CSS e também podem ser usadas para 
+                manipulação com JavaScript. -->
+
+        <h1>Exercício Conversor de Código Binário</h1>
+        <!-- A tag <h1> define o cabeçalho principal da página, que é 
+                    visível como o título grande no topo da interface do usuário. 
+             Isso ajuda os usuários a identificar rapidamente o 
+                    propósito da página. -->
+
+        <textarea id="textoEntrada" placeholder="Digite seu texto ou código binário aqui..."></textarea>
+        <!-- A tag <textarea> define uma área de entrada de texto onde os 
+                    usuários podem digitar ou colar texto ou código binário. 
+             - O atributo 'id' ajuda a identificar unicamente este 
+                    elemento no documento, o que é útil para manipulação 
+                    com JavaScript.
+             - O atributo 'placeholder' fornece um texto guia dentro 
+                    da área de texto, indicando aos usuários o 
+                    que eles devem inserir. -->
+
+        <div class="botoes">
+        <!-- Outra <div> com a classe "botoes". Este contêiner é 
+                    usado para agrupar os botões, permitindo estilos e 
+                    layout específicos via CSS. -->
+
+            <button onclick="converterParaBinario()">Converter para Binário</button>
+            <!-- A tag <button> com um atributo 'onclick' que chama a 
+                        função JavaScript 'converterParaBinario()' 
+                        quando o botão é clicado.
+                 Este botão permite ao usuário converter o texto 
+                        inserido em código binário. -->
+
+            <button onclick="converterParaTexto()">Converter para Texto</button>
+            <!-- Outro botão que, quando clicado, chama a função 
+                        JavaScript 'converterParaTexto()'.
+                 Este botão permite ao usuário converter uma string 
+                        binária de volta para texto legível. -->
+
+            <button onclick="mostrarExplicacao()">Explicação</button>
+            <!-- Este botão tem um atributo 'onclick' que chama a 
+                        função 'mostrarExplicacao()'.
+                 Ele é usado para mostrar uma janela modal com 
+                        informações adicionais sobre como o processo de 
+                        conversão funciona. -->
+
+        </div>
+
+        <textarea id="textoSaida" placeholder="Resultado..."></textarea>
+        <!-- Uma segunda <textarea> com o 'id' "textoSaida" onde os 
+                        resultados da conversão são exibidos.
+             O 'placeholder' oferece uma dica sobre o conteúdo 
+                        esperado (o resultado da conversão), antes 
+                        de qualquer ação do usuário. -->
+
+    </div>
+    <!-- Fecha a tag <div> 'conversor'. -->
+
+
+    <div id="modalExplicacao" class="modal">
+    <!-- A tag <div> define um contêiner genérico no HTML, aqui 
+                    identificado pelo id "modalExplicacao" e 
+                    classificado como "modal". 
+        - 'id' é um identificador único usado para referenciar o 
+                    elemento via CSS e JavaScript.
+        - 'class' "modal" será usada para aplicar estilos específicos 
+                    definidos na folha de estilo e para manipular o 
+                    comportamento do modal via JavaScript. -->
+
+        <div class="modal-conteudo">
+        <!-- Esta <div> contém todo o conteúdo do modal. A classe "modal-conteudo" é 
+                    usada para estilizar a área interna do modal, 
+            definindo coisas como plano de fundo, bordas e espaçamento, 
+                    além de formatar o conteúdo que aparece dentro do modal. -->
+
+            <span class="fechar" onclick="fecharExplicacao()">&times;</span>
+            <!-- Um elemento <span> com a classe "fechar" é usado aqui 
+                        como um botão de fechar o modal.
+                - O conteúdo '&times;' é um caractere de multiplicação 
+                        usado visualmente como um ícone de fechar.
+                - 'onclick' é um atributo de evento que chama a função 
+                        JavaScript 'fecharExplicacao()' quando o elemento é clicado,
+                        permitindo que os usuários fechem o modal interativamente. -->
+
+            <h2>Como Converter Texto para Binário</h2>
+            <!-- Um cabeçalho <h2> que fornece um título para a seção do 
+                        modal, introduzindo o tópico explicado no modal. -->
+
+            <p>Para converter texto em código binário, siga os seguintes passos:</p>
+            <!-- Um parágrafo <p> descrevendo a introdução ao processo que 
+                        será detalhado nos passos a seguir. -->
+
+            <ol>
+            <!-- A tag <ol> define uma lista ordenada, usada aqui para 
+                        enumerar os passos do processo de conversão de 
+                        texto para binário. -->
+
+                <li>
+                    <strong>Obtenha o código ASCII do caractere:</strong>
+                    Cada caractere em um texto possui um código numérico único chamado código ASCII. Por exemplo, o caractere "A" possui o código ASCII 65.
+                </li>
+                <!-- Cada <li> descreve um passo específico no 
+                            processo de conversão.
+                    Aqui, explica como cada caractere é representado por 
+                            um código ASCII, com um exemplo específico. -->
+
+                <li>
+                    <strong>Converta o código ASCII para binário:</strong>
+                    Converta o código ASCII de decimal para binário. O código 65 em binário é 1000001.
+                </li>
+                <!-- Outro passo explicando como converter o código ASCII para 
+                            sua representação binária equivalente. -->
+
+                <li>
+                    <strong>Padronize a representação binária:</strong>
+                    Padronize a representação binária para ter 8 bits (adicionando zeros à esquerda, se necessário). O código binário 1000001 se torna 01000001.
+                </li>
+                <!-- Detalha a importância de padronizar a representação 
+                            binária para 8 bits, assegurando consistência no 
+                            processo de conversão. -->
+
+                <li>
+                    <strong>Repita o processo para todos os caracteres:</strong>
+                    Repita os passos acima para todos os caracteres do texto. Por exemplo, para o texto "AB", você teria:
+                    <ul>
+                        <li>A: 01000001</li>
+                        <li>B: 01000010</li>
+                    </ul>
+                </li>
+                <!-- Explica a necessidade de aplicar o processo a cada 
+                            caractere no texto de entrada e apresenta um 
+                            exemplo de saída. -->
+
+                <li>
+                    <strong>Junte todas as representações binárias:</strong>
+                    Junte todas as representações binárias com um espaço entre elas. Para "AB", o resultado seria 01000001 01000010.
+                </li>
+                <!-- O último passo na conversão de texto para binário, destacando 
+                            como juntar as representações binárias de cada caractere. -->
+            </ol>
+
+            <p>Para converter de binário para texto, siga o processo inverso:</p>
+            <!-- Introduz a explicação para o processo inverso de 
+                            conversão de binário para texto. -->
+
+            <ol>
+                <li>Divida a string binária em blocos de 8 bits.</li>
+                <li>Converta cada bloco de 8 bits de binário para decimal (código ASCII).</li>
+                <li>Obtenha o caractere correspondente ao código ASCII.</li>
+                <li>Junte todos os caracteres para formar o texto original.</li>
+            </ol>
+            <!-- Lista ordenada explicando cada passo necessário para 
+                            converter uma string binária de volta 
+                            para texto legível. -->
+
+        </div>
+    </div>
+    <!-- Fim da <div> modal e seu conteúdo. -->
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta para o 
+                    arquivo 'script.js'. Este script contém a lógica 
+                    JavaScript que interage com a página HTML, 
+        como as funções chamadas pelos botões para converter texto e 
+                    mostrar/ocultar o modal. -->
+
+</body>
+<!-- Fecha a tag <body>, encerrando o conteúdo 
+            principal do documento. -->
+
+</html>
+<!-- Fecha a tag <html>, indicando o fim do documento HTML. -->

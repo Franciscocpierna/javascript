@@ -1,0 +1,337 @@
+body {
+
+    /* Define a família de fontes para todo o conteúdo do 
+                corpo. 'Arial' é a fonte principal, e 
+                'sans-serif' é a fonte de reserva.
+       Se 'Arial' não estiver disponível, o navegador usará 
+                qualquer fonte sans-serif padrão instalada 
+                no sistema. */
+    font-family: Arial, sans-serif;
+
+    /* Define a cor de fundo de todo o corpo do documento. 
+    O código de cor hexadecimal #f4f4f4 é um cinza muito claro. */
+    background-color: #f4f4f4;
+
+    /* Configura o modelo de layout flexível para o corpo do 
+                documento. Isso permite um alinhamento avançado e a 
+                capacidade de distribuir o espaço entre os itens filhos 
+                de forma mais eficaz. */
+    display: flex;
+
+    /* Alinha todos os elementos filhos (diretamente dentro do body) 
+                horizontalmente ao centro. Isso é parte do 
+                sistema de layout flexível. */
+    justify-content: center;
+
+    /* Alinha todos os elementos filhos verticalmente ao centro. 
+    Esta propriedade garante que os itens dentro do body estejam 
+                centralizados tanto horizontal quanto verticalmente. */
+    align-items: center;
+
+    /* Define a altura do corpo do documento para ser igual à 
+                altura da janela de visualização do navegador (100vh, 
+                ou 100% da altura da viewport).
+       Isso é útil para criar layouts que ocupam toda a altura da 
+                tela, independentemente do tamanho da janela do navegador. */
+    height: 100vh;
+
+    /* Remove qualquer margem ao redor do elemento <body>, permitindo 
+                que o conteúdo estenda-se completamente até as 
+                bordas da janela do navegador. */
+    margin: 0;
+
+}
+
+.conversor {
+
+    /* Define a cor de fundo da div com a classe "conversor" 
+                para branco (#fff). Isso faz com que o conteúdo 
+                dentro desta div se destaque contra outros 
+                fundos potenciais. */
+    background-color: #fff;
+
+    /* Adiciona um preenchimento de 20 pixels em todos os 
+                lados dentro da div, criando espaço entre o 
+                conteúdo e as bordas da div. */
+    padding: 20px;
+
+    /* Define um raio de borda de 8 pixels, arredondando os 
+                cantos da div. Isso suaviza o design visual 
+                do elemento. */
+    border-radius: 8px;
+
+    /* Aplica uma sombra ao redor da div. A sombra é 
+                sutil (0, 0, 10px, rgba(0, 0, 0, 0.1)) com 
+                deslocamento zero, desfoque de 10px, e uma 
+                opacidade de 10%, o que ajuda a elevar a div 
+                visualmente acima de outros elementos na página. */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    /* Centraliza o texto dentro da div, garantindo que todo o 
+                texto seja alinhado ao centro horizontalmente. */
+    text-align: center;
+
+    /* Define a largura da div para 400 pixels. Isso garante 
+                que a div tenha um tamanho consistente, independente 
+                do conteúdo interno ou do tamanho da tela. */
+    width: 400px;
+    
+}
+
+
+h1 {
+
+    /* Define o tamanho da fonte do cabeçalho <h1> para 24 pixels. 
+    Isso garante que o texto seja grande e legível, adequado 
+                para um título principal. */
+    font-size: 24px;
+
+    /* Adiciona uma margem abaixo do <h1> de 20 pixels. Isso 
+                separa visualmente o título do conteúdo que segue, 
+                ajudando a organizar o layout da página de 
+                forma mais clara. */
+    margin-bottom: 20px;
+
+}
+
+
+textarea {
+
+    /* Define a largura do <textarea> para ocupar 100% da 
+                largura do seu contêiner pai. Isso garante 
+                que o <textarea> se ajuste ao espaço disponível, 
+                mantendo a consistência do layout. */
+    width: 100%;
+
+    /* Define a altura do <textarea> para 100 pixels. Esta medida 
+                fixa oferece espaço suficiente para várias linhas de 
+                texto, melhorando a usabilidade. */
+    height: 100px;
+
+    /* Adiciona um preenchimento interno de 10 pixels em todas as 
+                direções dentro do <textarea>, proporcionando espaço 
+                entre o texto digitado e as bordas do <textarea>. */
+    padding: 10px;
+
+    /* Define uma margem na parte inferior do <textarea> de 10 
+                pixels. Isso cria espaço entre o <textarea> e 
+                qualquer conteúdo que esteja abaixo dele, melhorando a 
+                separação visual dos elementos. */
+    margin-bottom: 10px;
+
+    /* Adiciona uma borda sólida de 1 pixel ao redor do <textarea> 
+                com a cor cinza claro (#ccc). A borda ajuda a definir 
+                claramente a área do elemento na página. */
+    border: 1px solid #ccc;
+
+    /* Aplica um raio de borda de 4 pixels ao <textarea>, suavizando 
+                ligeiramente os cantos do elemento. Isso melhora a 
+                estética e a suavidade visual do elemento na 
+                interface do usuário. */
+    border-radius: 4px;
+
+}
+
+.botoes {
+
+    /* Configura a div com a classe ".botoes" para usar o layout 
+                flexível. O Flexbox é um método que oferece controle 
+                mais eficiente sobre alinhamento, direção, ordem e 
+                tamanho dos itens filhos dentro de um contêiner. */
+    display: flex;
+
+    /* Define o alinhamento dos itens filhos (botões) dentro do 
+                contêiner ".botoes" para que haja espaço entre eles. 
+        Isso significa que os itens serão distribuídos uniformemente ao 
+                longo do eixo principal do contêiner, maximizando o 
+                espaço entre cada botão. */
+    justify-content: space-between;
+
+}
+
+
+button {
+    /* Define a cor de fundo dos botões para um azul brilhante (#007BFF), o 
+                que os faz se destacar visualmente na interface do usuário. */
+    background-color: #007BFF;
+
+    /* Define a cor do texto dentro dos botões como branco (#fff), 
+                garantindo contraste suficiente para uma 
+                boa legibilidade. */
+    color: #fff;
+
+    /* Remove qualquer borda do botão, proporcionando um 
+                visual mais limpo e moderno. */
+    border: none;
+
+    /* Define o preenchimento interno do botão para 10 pixels 
+                tanto vertical quanto horizontalmente, o que ajuda a 
+                tornar o botão visualmente atraente e fácil de clicar. */
+    padding: 10px 10px;
+
+    /* Aplica um raio de borda de 4 pixels, arredondando 
+                levemente os cantos do botão para um design mais 
+                suave e moderno. */
+    border-radius: 4px;
+
+    /* Altera o cursor para um ponteiro quando o usuário passa o 
+                mouse sobre o botão, indicando que o botão é clicável. */
+    cursor: pointer;
+
+    /* Define a largura do botão para ocupar 32% da largura de seu 
+                contêiner pai, permitindo um layout responsivo e 
+                consistente entre múltiplos botões lado a lado. */
+    width: 32%;
+
+}
+
+button:hover {
+
+    /* Altera a cor de fundo do botão para um azul mais 
+                escuro (#0056b3) quando o usuário passa o mouse 
+                sobre ele, fornecendo um feedback visual interativo 
+                que o botão pode ser clicado. */
+    background-color: #0056b3;
+
+}
+
+#resultado {
+
+    /* Adiciona uma margem no topo do elemento com id 'resultado' 
+                de 20 pixels, criando um espaço visual entre o 
+                elemento e quaisquer outros elementos acima dele. */
+    margin-top: 20px;
+
+    /* Define o tamanho da fonte do texto dentro do elemento 'resultado' 
+                para 18 pixels, o que torna o texto suficientemente 
+                grande para ser facilmente legível. */
+    font-size: 18px;
+
+}
+
+
+/* Estilo para o modal */
+.modal {
+
+    /* Inicialmente oculta o modal, fazendo com que ele não 
+                seja visível até ser ativado por uma 
+                ação do usuário. */
+    display: none;
+
+    /* Posiciona o modal fixamente em relação à janela do 
+                navegador, fazendo com que ele permaneça visível 
+                na mesma posição na tela, mesmo quando a 
+                página é rolada. */
+    position: fixed;
+
+    /* Define a ordem de empilhamento do modal (z-index), 
+                garantindo que ele fique sobre outros elementos da 
+                página. O valor '1' é geralmente suficiente para 
+                sobrepor elementos base. */
+    z-index: 1;
+
+    /* Posiciona o canto superior esquerdo do modal no canto 
+                superior esquerdo da janela do navegador. */
+    left: 0;
+    top: 0;
+
+    /* Define a largura e altura do modal para cobrir 100% da 
+                largura e altura da janela do navegador, criando 
+                uma sobreposição total. */
+    width: 100%;
+    height: 100%;
+
+    /* Permite a rolagem dentro do modal se o conteúdo 
+                exceder a altura da janela do navegador. */
+    overflow: auto;
+
+    /* Define a cor de fundo do modal com uma opacidade 
+                parcial (transparência de 40%). A cor preta com 
+                transparência ajuda a reduzir a visibilidade do 
+                conteúdo por trás do modal, focando a atenção do 
+                usuário no conteúdo do modal. */
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.modal-conteudo {
+
+    /* Define a cor de fundo do conteúdo do modal como branco, 
+                garantindo que o texto e outros elementos dentro do 
+                modal sejam claramente visíveis. */
+    background-color: #fff;
+
+    /* Centraliza o conteúdo do modal horizontalmente na página e 
+                posiciona verticalmente a 15% do topo da página, 
+                ajudando a criar um foco visual central. */
+    margin: 15% auto;
+
+    /* Adiciona preenchimento ao redor do conteúdo interno do 
+                modal para espaço visual e para evitar que o 
+                conteúdo toque as bordas do modal. */
+    padding: 20px;
+
+    /* Define uma borda ao redor do conteúdo do modal para 
+                ajudar a separá-lo visualmente do fundo do 
+                modal. A cor da borda é um cinza (#888). */
+    border: 1px solid #888;
+
+    /* Define a largura do conteúdo do modal para ser 80% da 
+                largura do modal, com uma largura máxima de 500px, 
+                garantindo que o modal não se torne muito grande 
+                em telas maiores. */
+    width: 80%;
+    max-width: 500px;
+
+    /* Aplica um raio de borda de 8px para arredondar ligeiramente os 
+                cantos do conteúdo do modal, suavizando seu 
+                design visual. */
+    border-radius: 8px;
+
+}
+
+
+.fechar {
+
+    /* Define a cor do texto para um cinza claro (#aaa). Essa cor é 
+                sutil, mas ainda visível contra a maioria dos fundos. */
+    color: #aaa;
+
+    /* Posiciona o elemento com a classe 'fechar' à direita do 
+                seu contêiner pai, usando 'float'. Isso é útil para 
+                botões de fechar que geralmente são colocados no canto 
+                superior direito de modais e caixas de diálogo. */
+    float: right;
+
+    /* Define o tamanho da fonte para 28 pixels, tornando o ícone 
+                de fechar grande o suficiente para ser facilmente 
+                clicável e visível. */
+    font-size: 28px;
+
+    /* Aplica um peso de fonte 'bold' (negrito), o que faz com que o 
+                texto ou ícone pareça mais proeminente e importante, 
+                apropriado para um controle interativo como um 
+                botão de fechar. */
+    font-weight: bold;
+
+}
+
+.fechar:hover,
+.fechar:focus {
+
+    /* Altera a cor do texto para preto ao passar o mouse ('hover') ou 
+                ao focar ('focus') no elemento, oferecendo um feedback 
+                visual de que o elemento é interativo. */
+    color: black;
+
+    /* Remove qualquer decoração de texto, como sublinhados, que 
+                podem ser aplicados por padrão em alguns 
+                navegadores ou estilos globais. */
+    text-decoration: none;
+
+    /* Muda o cursor para um ponteiro quando o mouse está sobre o 
+                elemento ou quando ele está focado, indicando que o 
+                elemento é clicável. */
+    cursor: pointer;
+    
+}
