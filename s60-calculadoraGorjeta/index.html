@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- Esta linha declara o tipo do documento como HTML5. 
+ O uso do DOCTYPE no início do arquivo HTML informa ao 
+            navegador para processar a página usando o 
+            modo de padrões, o que garante que as funcionalidades 
+            do HTML5 sejam suportadas corretamente. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> marca o início do documento HTML. 
+    O atributo 'lang' especifica o idioma principal do 
+            documento, neste caso, Português do Brasil ('pt-BR'). 
+    Isso é importante para acessibilidade, ajudando leitores de 
+            tela a pronunciar corretamente o conteúdo, e também 
+            pode ajudar nos rankings de SEO. -->
+
+<head>
+<!-- A tag <head> contém metadados sobre o documento, links 
+            para folhas de estilo, scripts e outras informações 
+            que não são diretamente exibidas na parte principal da 
+            janela do navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define a codificação de 
+            caracteres para o documento como 'UTF-8'. Isso garante que 
+            qualquer caractere, seja ele especial ou não, seja exibido 
+            corretamente no navegador. UTF-8 é uma codificação universal 
+            que suporta todos os caracteres de todos os idiomas. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> define configurações do viewport 
+                para dispositivos móveis. 
+         - 'width=device-width' instrui o navegador a definir a 
+                    largura da página igual à largura da tela 
+                    do dispositivo.
+         - 'initial-scale=1.0' estabelece o nível de zoom inicial 
+                    quando a página é carregada pela primeira vez, 
+                    assegurando que o conteúdo não seja redimensionado 
+                    automaticamente. -->
+
+    <title>Exercício Calculadora de Gorjeta</title>
+    <!-- A tag <title> define o título do documento, que é mostrado 
+                    na aba do navegador. 
+        Este título, "Exercício Calculadora de Gorjeta", ajuda os 
+                    usuários a identificar o conteúdo da página e 
+                    também é usado pelos mecanismos de busca para 
+                    determinar o conteúdo relevante da página. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> é utilizada para vincular uma folha de 
+                    estilo externa ao documento HTML. 
+        O atributo 'rel' especifica o tipo de relação entre o 
+                    documento HTML e o arquivo referenciado. 
+        Neste caso, 'stylesheet' indica que o arquivo 'styles.css' é 
+                    uma folha de estilo CSS que contém as regras de 
+                    estilo para o layout e design da página. -->
+
+</head>
+<!-- Fim da tag <head>, encerrando o bloco que contém informações 
+                sobre o documento e links para recursos externos. -->
+
+
+<body>
+<!-- A tag <body> contém todo o conteúdo principal que será visível 
+                para os usuários quando visitarem a página. -->
+
+    <div class="calculadora">
+    <!-- A tag <div> cria um contêiner para a calculadora de gorjeta. 
+        A classe "calculadora" é usada para referenciar e aplicar 
+                estilos CSS específicos a esta seção do documento. -->
+
+        <h1>Exercício Calculadora de Gorjeta</h1>
+        <!-- A tag <h1> define o cabeçalho principal da página. 
+            "Exercício Calculadora de Gorjeta" é o título que descreve o 
+                    propósito da página aos usuários. -->
+
+        <label for="valorConta">Valor da Conta:</label>
+        <!-- A tag <label> fornece uma descrição para o campo de entrada 
+                    correspondente. O atributo 'for' associa a label ao 
+                    elemento de entrada com o ID 'valorConta', melhorando a 
+                    acessibilidade e a usabilidade do formulário. -->
+
+        <input type="number" id="valorConta" placeholder="Informe o valor da conta">
+        <!-- A tag <input> cria um campo onde os usuários podem inserir o valor da conta. 
+             - O tipo 'number' restringe o input a apenas números, 
+                        facilitando a inserção de valores monetários.
+             - O atributo 'placeholder' fornece um texto de exemplo 
+                        dentro do campo, orientando os usuários 
+                        sobre o que inserir. -->
+
+        <label for="percentualGorjeta">Percentual da Gorjeta (%):</label>
+        <!-- Outra tag <label> associada a um segundo campo de 
+                    entrada para o percentual da gorjeta. -->
+
+        <input type="number" id="percentualGorjeta" placeholder="Informe o percentual da gorjeta">
+        <!-- Segundo campo de entrada para o percentual da gorjeta, 
+                    seguindo o mesmo padrão do primeiro input. -->
+
+        <button onclick="calcularGorjeta()">Calcular</button>
+        <!-- A tag <button> cria um botão que, quando clicado, executa a 
+                    função 'calcularGorjeta()'. Esta função é definida no 
+                    arquivo JavaScript vinculado para calcular a gorjeta 
+                    com base nos valores fornecidos. -->
+
+        <div id="resultado"></div>
+        <!-- A tag <div> com o ID 'resultado' é usada para exibir o 
+                    resultado do cálculo da gorjeta. Inicialmente está 
+                    vazia e será preenchida dinamicamente pelo JavaScript. -->
+
+    </div>
+    <!-- Fim da <div> 'calculadora'. -->
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' que referencia o arquivo 'script.js'. 
+        Este script contém a lógica JavaScript para processar os 
+                    cálculos e interações na página. -->
+
+</body>
+<!-- Fim da tag <body>. -->
+
+</html>
+<!-- Fim da tag <html>, marcando o fim do documento HTML. -->
