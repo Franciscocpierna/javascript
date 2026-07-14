@@ -1,0 +1,261 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+    /* Define a família de fontes do corpo do documento. 
+    'Arial' é a fonte primária e 'sans-serif' é a 
+            fonte de fallback genérica. */
+    
+    background-color: #e0f7fa;
+    /* Define a cor de fundo do corpo do documento 
+            como um azul claro (#e0f7fa). */
+
+    display: flex;
+    /* Estabelece um contexto de layout flexível para os 
+            elementos filhos diretos do <body>. */
+
+    flex-direction: column;
+    /* Direciona os elementos filhos do <body> em 
+            uma coluna vertical. */
+
+    align-items: center;
+    /* Centraliza os elementos filhos horizontalmente no 
+            corpo do documento. */
+
+    margin: 0;
+    /* Remove todas as margens padrão do <body>, permitindo 
+            que o conteúdo ocupe toda a largura e altura 
+            disponíveis. */
+
+}
+
+header {
+
+    width: 100%;
+    /* Define a largura do <header> para ocupar 100% do 
+            seu contêiner pai, que é o <body>. */
+
+    background-color: #062648;
+    /* Define a cor de fundo do <header> como um 
+            azul forte (#062648). */
+
+    padding: 10px 0;
+    /* Define um preenchimento vertical de 10px e nenhum 
+            preenchimento horizontal, o que afeta o conteúdo 
+            interno do <header>. */
+
+    text-align: center;
+    /* Alinha o texto dentro do <header> ao centro 
+            horizontalmente. */
+
+    color: #ffffff;
+    /* Define a cor do texto dentro do <header> para 
+            branco (#ffffff), garantindo contraste com o fundo azul. */
+
+    margin-bottom: 20px;
+    /* Define uma margem abaixo do <header> de 20px, 
+            separando-o visualmente dos elementos que o 
+            seguem no layout. */
+            
+}
+
+.container {
+
+    background: #ffffff;
+    /* Define a cor de fundo do elemento com a classe "container" 
+                como branco (#ffffff). */
+    
+    padding: 30px;
+    /* Adiciona um preenchimento de 30px em todos os lados do 
+                conteúdo interno do "container", criando espaço entre o 
+                conteúdo e as bordas do "container". */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do "container" com um raio de 10px, 
+                suavizando as bordas. */
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    /* Aplica uma sombra ao redor do "container". A sombra é 
+                centralizada (0px horizontal e 0px vertical), com um 
+                desfoque de 15px e uma cor preta com transparência 
+                de 20% (rgba(0, 0, 0, 0.2)). */
+
+    max-width: 400px;
+    /* Define a largura máxima do "container" como 400px, o que 
+                significa que ele não pode se expandir além 
+                desse tamanho. */
+
+    width: 90%;
+    /* Define a largura do "container" como 90% do seu elemento 
+                pai, ajustando-se dinamicamente ao tamanho deste. */
+
+}
+
+h1, h2 {
+
+    margin: 0;
+    /* Remove todas as margens externas dos elementos <h1> e <h2>, 
+                fazendo com que eles não tenham espaço adicional em 
+                torno deles por padrão. */
+
+}
+
+h2 {
+
+    text-align: center;
+    /* Alinha o texto dos elementos <h2> ao centro do 
+                seu contêiner. */
+
+    color: #007BFF;
+    /* Define a cor do texto dos elementos <h2> como um 
+                azul forte (#007BFF), criando uma consistência 
+                de design com o <header>. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem na parte inferior dos elementos <h2>, 
+                separando-os visualmente dos conteúdos abaixo. */
+
+}
+
+.grupo-entrada, .grupo-saida {
+
+    margin-bottom: 15px;
+    /* Aplica uma margem inferior de 15px aos elementos com as 
+                classes "grupo-entrada" e "grupo-saida", criando 
+                um espaço entre eles e quaisquer elementos 
+                subsequentes no layout. */
+
+}
+
+.grupo-entrada label, .grupo-saida label {
+
+    display: block;
+    /* Altera o comportamento padrão do <label> para block, 
+                fazendo com que ocupe a linha inteira, permitindo 
+                margens e alinhamentos mais controláveis. */
+
+    margin-bottom: 5px;
+    /* Adiciona uma margem na parte inferior dos elementos <label> 
+                dentro de "grupo-entrada" e "grupo-saida", separando-os 
+                visualmente dos campos de entrada abaixo deles. */
+
+    color: #333333;
+    /* Define a cor do texto dos <label> para um cinza escuro (#333333), 
+                melhorando a legibilidade sobre fundos claros. */
+
+}
+
+.grupo-entrada input, .grupo-saida input, .grupo-entrada select {
+
+    width: 100%;
+    /* Define a largura dos elementos <input> e <select> dentro 
+                de "grupo-entrada" e "grupo-saida" para ocupar 100% da 
+                largura do seu contêiner pai, garantindo um layout 
+                consistente. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10px ao redor do conteúdo interno 
+                dos <input> e <select>, melhorando a ergonomia e a 
+                estética dos campos de entrada. */
+
+    box-sizing: border-box;
+    /* Altera o modelo de caixa CSS para 'border-box', o que 
+                significa que as larguras de borda e o preenchimento 
+                não aumentarão a largura declarada dos <input> e 
+                <select>, mantendo o layout conforme definido. */
+
+    border: 1px solid #cccccc;
+    /* Adiciona uma borda sólida com 1px de espessura e cor cinza 
+                claro (#cccccc) ao redor dos <input> e <select>, 
+                delimitando visualmente os campos de entrada. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos dos <input> e <select> com um raio 
+                de 5px, proporcionando um visual moderno e amigável. */
+
+    margin-bottom: 10px;
+    /* Aplica uma margem inferior de 10px, separando esses 
+                campos de entrada de outros elementos subsequentes 
+                no formulário, ajudando na organização visual. */
+
+    font-size: 30px;
+    /* Aumenta o tamanho da fonte do texto do botão para 30px, 
+                tornando-o mais legível e acessível. */
+
+
+}
+
+button {
+
+    width: 100%;
+    /* Define a largura do botão para ocupar 100% da largura do 
+                elemento pai, garantindo que ele estenda-se horizontalmente 
+                até as bordas do seu contêiner. */
+
+    padding: 12px;
+    /* Adiciona um preenchimento de 12px ao redor do conteúdo interno 
+                do botão, proporcionando um toque mais 
+                confortável e visível. */
+
+    background-color: #007BFF;
+    /* Define a cor de fundo do botão como azul (#007BFF), uma 
+                cor vibrante que se destaca no layout. */
+
+    color: #ffffff;
+    /* Define a cor do texto do botão para branco (#ffffff), 
+                criando um alto contraste com a cor de fundo 
+                para fácil leitura. */
+
+    border: none;
+    /* Remove a borda do botão, proporcionando um estilo 
+                mais limpo e moderno. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um raio de 5px, 
+                suavizando sua aparência visual. */
+
+    cursor: pointer;
+    /* Muda o cursor para o tipo 'pointer' quando o mouse passa 
+                sobre o botão, indicando que o botão é clicável. */
+
+    font-size: 18px;
+    /* Aumenta o tamanho da fonte do texto do botão para 18px, 
+                tornando-o mais legível e acessível. */
+
+    margin-top: 10px;
+    /* Adiciona uma margem superior de 10px, separando o botão 
+                de outros elementos acima dele no layout. */
+
+}
+
+button:hover {
+    
+    background-color: #0056b3;
+    /* Altera a cor de fundo do botão quando o mouse está 
+                sobre ele para um azul mais escuro (#0056b3), 
+                proporcionando um feedback visual ao usuário de 
+                que o botão é interativo. */
+
+}
+
+#resultado {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20px ao elemento 
+                com id "resultado", separando-o visualmente do 
+                botão ou outros elementos acima dele no layout. */
+
+}
+
+#resultado p {
+
+    margin: 5px 0;
+    /* Define as margens superior e inferior para 5px para cada <p> 
+                dentro do elemento #resultado, ajudando a manter um 
+                espaçamento consistente entre as linhas de texto. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16px para o texto dentro dos 
+                parágrafos do #resultado, garantindo que o texto seja 
+                grande o suficiente para ser facilmente lido. */
+                
+}

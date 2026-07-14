@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento como HTML5, 
+            garantindo que o navegador interprete 
+            corretamente conforme a especificação HTML5. -->
+
+<html lang="pt-BR">
+<!-- Tag raiz do HTML que define o documento como HTML. 
+            O atributo 'lang' especifica o idioma principal do 
+            conteúdo do documento como português do Brasil, 
+            ajudando na acessibilidade e nos motores de busca. -->
+
+<head>
+<!-- A tag <head> contém metadados sobre o documento, links para 
+            scripts, estilos e outras dependências. 
+            Não é visível diretamente na interface do usuário. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8, que 
+                inclui a maioria dos caracteres de idiomas do 
+                mundo. Isso é crucial para a exibição correta de 
+                textos e caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tag para controlar o layout em dispositivos móveis. 
+     'width=device-width' configura a largura da página para 
+                seguir a largura da tela do dispositivo. 
+     'initial-scale=1.0' estabelece o nível de zoom inicial 
+                quando a página é carregada pela primeira vez. -->
+
+    <title>Exercício Gerador de Tabuada</title>
+    <!-- Define o título do documento, que é mostrado na aba do 
+                navegador. Este título é também usado por 
+                motores de busca e quando a página é favoritada. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Link para um arquivo de folha de estilos CSS externo. 
+     'href' especifica o caminho para o arquivo que estiliza a 
+                página. Este arquivo controla a aparência visual 
+                do documento HTML. -->
+
+</head>
+<!-- Fim da tag <head>, que encapsula todos os metadados e 
+                links para recursos externos do documento HTML. -->
+
+
+<body>
+<!-- Início da tag <body> que contém todos os elementos visíveis da 
+                página web como texto, imagens, links, etc. -->
+
+    <header>
+    <!-- Tag <header> usada para representar o cabeçalho da página, 
+                geralmente contém títulos, logotipos ou outros 
+                elementos introdutórios. -->
+
+        <h1>Exercício Gerador de Tabuada</h1>
+        <!-- Tag <h1> define o título principal da página. Usada 
+                aqui para dar destaque ao nome da funcionalidade 
+                principal do site, que é o gerador de tabuada. -->
+
+    </header>
+    <!-- Fim da tag <header>. -->
+
+    <div class="container">
+    <!-- Divisão ou seção <div> com a classe "container" para 
+                agrupar visualmente o conteúdo relacionado em um 
+                bloco, facilitando o layout e o design responsivo. -->
+
+        <h2>Insira o número para gerar a tabuada</h2>
+        <!-- Tag <h2> para um cabeçalho de nível secundário, fornecendo 
+                    instruções ao usuário sobre como interagir com a 
+                    funcionalidade. -->
+
+        <div class="grupo-entrada">
+        <!-- <div> com classe "grupo-entrada" para agrupar elementos de 
+                    entrada de dados, melhorando a organização e a 
+                    manipulação via CSS. -->
+
+            <label for="numero">Número:</label>
+            <!-- Tag <label> associada ao input abaixo usando o 
+                        atributo 'for', melhora a acessibilidade, pois o 
+                        usuário pode clicar no texto do rótulo para 
+                        focar no campo de entrada. -->
+
+            <input type="number" id="numero" placeholder="Insira um número">
+            <!-- Campo de entrada <input> do tipo 'number' que permite 
+                        aos usuários inserir apenas números. 
+                O atributo 'placeholder' fornece uma dica sobre o 
+                        que inserir no campo. -->
+
+        </div>
+        <!-- Fim da <div> com classe "grupo-entrada". -->
+
+        <button onclick="gerarTabuada()">Gerar Tabuada</button>
+        <!-- Botão que, quando clicado, chama a função JavaScript 'gerarTabuada()'. 
+         Esta função é responsável por gerar e exibir a tabuada do número inserido. -->
+
+        <div id="resultado" class="grupo-saida"></div>
+        <!-- <div> com id "resultado" e classe "grupo-saida", usada 
+                    para exibir a tabuada gerada. O conteúdo será 
+                    dinamicamente inserido via JavaScript. -->
+
+    </div>
+    <!-- Fim da <div> com classe "container". -->
+
+    <script src="script.js"></script>
+    <!-- Tag <script> com o atributo 'src' que inclui o arquivo 
+                JavaScript externo 'script.js'. Este script contém a 
+                lógica para gerar a tabuada e manipular o DOM baseado na 
+                interação do usuário. -->
+
+</body>
+<!-- Fim da tag <body>. -->
+
+</html>
+<!-- Fim do documento HTML. -->
