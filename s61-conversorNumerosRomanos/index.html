@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE informa ao navegador que 
+               este documento é um documento HTML5. 
+     Esta linha é essencial para garantir que o navegador 
+               trate o documento de acordo com os padrões 
+               HTML5 mais recentes. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang' 
+               especifica o idioma principal do documento, 
+               neste caso, Português do Brasil (pt-BR). 
+     Isso é importante para acessibilidade e SEO, pois ajuda os 
+               leitores de tela a pronunciar corretamente o 
+               conteúdo e os motores de busca a identificar o 
+               idioma do conteúdo. -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de 
+               estilo, scripts e outras informações que não são 
+               diretamente visíveis na parte principal da 
+               janela do navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define a 
+               codificação de caracteres para o documento como 'UTF-8'. 
+         UTF-8 é uma codificação de caracteres universal que 
+               suporta todos os idiomas conhecidos e é crucial 
+               para a exibição correta de textos multilíngues. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> que configura a visualização da 
+                    página para dispositivos móveis. 
+         - 'width=device-width' faz com que a largura da página 
+                    seja igual à largura do dispositivo, o que é 
+                    ideal para dispositivos com diferentes 
+                    tamanhos de tela.
+         - 'initial-scale=1.0' define o nível de zoom inicial 
+                    quando a página é carregada, assegurando que a 
+                    página não será automaticamente ampliada ou 
+                    reduzida em dispositivos móveis. -->
+
+    <title>Exercício Conversor de Números Romanos</title>
+    <!-- A tag <title> define o título do documento, que é 
+                    exibido na aba do navegador. 
+         Este título é utilizado pelos motores de busca e aparece 
+                    nos resultados de pesquisa, além de ser importante 
+                    para a usabilidade e acessibilidade, ajudando 
+                    usuários a identificar o conteúdo da aba. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> é usada para vincular uma folha de 
+                    estilo externa ao documento HTML. 
+         O atributo 'rel' especifica que o tipo de relação entre o 
+                    documento HTML e o arquivo é de folha de 
+                    estilo (stylesheet).
+         'href' especifica o caminho para a folha de estilo que 
+                    contém os estilos CSS que serão aplicados ao HTML. -->
+
+</head>
+<!-- Encerra a tag <head>, concluindo a seção que contém 
+                    informações sobre o documento e links para 
+                    recursos externos. -->
+
+                    
+<body>
+<!-- A tag <body> contém todo o conteúdo principal da página 
+               que é visível para os usuários. -->
+
+    <div class="conversor">
+    <!-- A tag <div> com a classe "conversor" atua como contêiner 
+                    principal para a interface do conversor de 
+                    números romanos. 
+         A classe é usada para aplicar estilos específicos definidos 
+                    no CSS e para agrupar logicamente os elementos 
+                    relacionados ao conversor. -->
+
+        <h1>Exercício Conversor de Números Romanos</h1>
+        <!-- A tag <h1> define o título principal da página. 
+          Este título é importante para SEO e usabilidade, 
+                    ajudando os usuários a entenderem imediatamente o 
+                    propósito da página. -->
+
+        <input type="text" id="numeroEntrada" placeholder="Digite um número decimal ou romano">
+        <!-- A tag <input> de tipo "text" permite que os usuários 
+                    insiram um número decimal ou romano. 
+             - O atributo 'id' é utilizado para identificar unicamente o 
+                    campo de entrada, facilitando a manipulação com JavaScript.
+             - O atributo 'placeholder' fornece uma dica sobre o que o 
+                    usuário deve inserir no campo. -->
+
+        <div class="botoes">
+        <!-- A tag <div> com a classe "botoes" agrupa os botões de 
+                    ação, permitindo que sejam estilizados e 
+                    posicionados juntos. -->
+
+            <button onclick="converterParaRomano()">Converter para Romano</button>
+            <!-- Botão que, quando clicado, aciona a função 
+                         JavaScript 'converterParaRomano()'.
+                 Esta função converte números decimais inseridos em 
+                         números romanos. -->
+
+            <button onclick="converterParaDecimal()">Converter para Decimal</button>
+            <!-- Botão que aciona a função JavaScript 'converterParaDecimal()'.
+                 Esta função converte números romanos inseridos em 
+                         números decimais. -->
+
+            <button onclick="mostrarDica()">Dica</button>
+            <!-- Botão que aciona a função JavaScript 'mostrarDica()'.
+                 Esta função exibe um modal com dicas sobre os valores dos 
+                         números romanos, ajudando o usuário a entender 
+                         melhor o sistema numeral romano. -->
+
+        </div>
+
+        <textarea id="numeroSaida" placeholder="Resultado..."></textarea>
+        <!-- A tag <textarea> é usada para exibir o resultado da conversão. 
+             - O atributo 'id' facilita a referência ao elemento para 
+                         atualizações via JavaScript.
+             - O atributo 'placeholder' fornece uma dica visual de que o 
+                         resultado da conversão aparecerá neste campo. -->
+
+    </div>
+    <!-- Fim do contêiner principal 'conversor'. -->
+
+
+    <div id="modalDica" class="modal">
+    <!-- A tag <div> com o ID 'modalDica' e a classe 'modal' define um 
+                    contêiner para o modal de dicas. 
+        - 'id' é utilizado para identificação única no documento e 
+                    manipulação específica via JavaScript.
+        - 'class' "modal" é usada para aplicar estilos específicos 
+                    definidos no CSS que controlam a visualização e o 
+                    comportamento do modal. -->
+
+        <div class="modal-conteudo">
+        <!-- A tag <div> com a classe 'modal-conteudo' serve como 
+                    contêiner interno para o conteúdo do modal, permitindo 
+                    estilização adicional e estruturação do conteúdo 
+                    dentro do modal. -->
+
+            <span class="fechar" onclick="fecharDica()">&times;</span>
+            <!-- A tag <span> com a classe 'fechar' contém um caractere 
+                         especial '×' que funciona como um botão de 
+                         fechar o modal.
+                - 'onclick' chama a função 'fecharDica()' quando o 
+                         usuário clica no span, permitindo fechar o 
+                         modal de forma interativa. -->
+
+            <h2>Significado das Letras Romanas</h2>
+            <!-- A tag <h2> define o título do conteúdo do modal, 
+                         informando aos usuários o tema das informações 
+                         contidas no modal. -->
+
+            <ul>
+            <!-- A tag <ul> define uma lista não ordenada para 
+                         apresentar de forma organizada os significados 
+                         dos números romanos. -->
+
+                <li><strong>I</strong> = 1</li>
+                <li><strong>V</strong> = 5</li>
+                <li><strong>X</strong> = 10</li>
+                <li><strong>L</strong> = 50</li>
+                <li><strong>C</strong> = 100</li>
+                <li><strong>D</strong> = 500</li>
+                <li><strong>M</strong> = 1000</li>
+                <li><strong>IV</strong> = 4</li>
+                <li><strong>IX</strong> = 9</li>
+                <li><strong>XL</strong> = 40</li>
+                <li><strong>XC</strong> = 90</li>
+                <li><strong>CD</strong> = 400</li>
+                <li><strong>CM</strong> = 900</li>
+                <!-- Cada <li> na lista representa um número romano e 
+                              seu equivalente decimal.
+                    O uso de <strong> enfatiza os caracteres romanos, 
+                              facilitando a distinção visual dos números 
+                              romanos e seus valores correspondentes. -->
+
+            </ul>
+        </div>
+    </div>
+    <!-- Fim do contêiner do modal 'modalDica'. -->
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' referenciando 'script.js'. 
+        Este arquivo JavaScript contém as funções que controlam a 
+               lógica e as interações do conversor, como a conversão de 
+               números, exibição e ocultação do modal, etc. -->
+
+</body>
+<!-- Fim da tag <body>, que encerra o conteúdo 
+               principal do documento. -->
+
+</html>
+<!-- Fim da tag <html>, que encerra o documento HTML. -->
