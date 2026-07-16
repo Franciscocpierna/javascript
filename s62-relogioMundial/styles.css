@@ -1,0 +1,165 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+    /* Define a família de fontes para o texto do corpo. 'Arial' é 
+                a fonte principal e 'sans-serif' é a fonte alternativa */
+
+    background-color: #2C3E50;
+    /* Define a cor de fundo do corpo como um tom escuro 
+                de azul (#2C3E50) */
+
+    color: #ECF0F1;
+    /* Define a cor do texto como um tom claro de cinza (#ECF0F1) */
+
+    display: flex;
+    /* Define o modelo de layout do corpo como flexível (flexbox), 
+                permitindo alinhamento e distribuição de itens */
+
+    justify-content: center;
+    /* Alinha horizontalmente os itens do corpo ao centro */
+
+    align-items: center;
+    /* Alinha verticalmente os itens do corpo ao centro */
+
+    height: 100vh;
+    /* Define a altura do corpo como 100% da altura da 
+                janela de visualização (viewport height) */
+
+    margin: 0;
+    /* Remove as margens padrão do corpo */
+
+}
+
+.relogio-mundial {
+
+    text-align: center;
+    /* Alinha o texto no centro do contêiner */
+
+    background: #34495E;
+    /* Define a cor de fundo do contêiner como um 
+                tom de azul escuro (#34495E) */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno de 20 pixels ao 
+                redor do conteúdo do contêiner */
+
+    border-radius: 10px;
+    /* Define bordas arredondadas com um raio de 10 pixels */
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    /* Adiciona uma sombra ao redor do contêiner. A sombra não 
+                tem deslocamento horizontal (0) nem vertical (0),
+                é espalhada em 20 pixels, e é de cor preta com 30% 
+                de opacidade (rgba(0, 0, 0, 0.3)) */
+
+    width: 90%;
+    /* Define a largura do contêiner como 90% da largura do elemento pai */
+
+    max-width: 1200px;
+    /* Define a largura máxima do contêiner como 1200 pixels */
+
+}
+
+.relogio-mundial h1 {
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels para 
+                separar o título do conteúdo abaixo */
+
+    font-size: 2em;
+    /* Define o tamanho da fonte do título como 2 vezes o 
+                tamanho padrão da fonte */
+
+    color: #ECF0F1;
+    /* Define a cor do texto do título como um tom claro 
+                de cinza (#ECF0F1) */
+
+}
+
+#relogios {
+
+    display: grid;
+    /* Define o modelo de layout do contêiner como grid (grade), 
+                permitindo uma distribuição uniforme dos itens */
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Define que as colunas da grade devem se repetir 
+                automaticamente para preencher o espaço disponível.
+       Cada coluna deve ter um tamanho mínimo de 200 pixels e um 
+                tamanho máximo que se ajuste ao espaço disponível (1fr) */
+
+    gap: 20px;
+    /* Define um espaço (gap) de 20 pixels entre as colunas e 
+                linhas da grade */
+
+}
+
+
+.relogio {
+
+    background: #1ABC9C;
+    /* Define a cor de fundo do contêiner de cada relógio 
+                como um tom de verde claro (#1ABC9C) */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno de 20 pixels ao 
+                redor do conteúdo do relógio */
+
+    border-radius: 8px;
+    /* Define bordas arredondadas com um raio de 8 pixels */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra ao redor do contêiner do relógio. 
+                A sombra não tem deslocamento horizontal (0) 
+                nem vertical (0), é espalhada em 10 pixels, 
+                e é de cor preta com 20% de opacidade (rgba(0, 0, 0, 0.2)) */
+
+    transition: transform 0.2s;
+    /* Define uma transição suave para a propriedade 'transform' 
+                com duração de 0.2 segundos */
+
+    color: #2C3E50;
+    /* Define a cor do texto dentro do contêiner do relógio 
+                como um tom escuro de azul (#2C3E50) */
+
+}
+
+.relogio:hover {
+
+    transform: scale(1.05);
+    /* Ao passar o mouse sobre o contêiner do relógio, 
+                aplica uma transformação de escala para 
+                aumentar o tamanho em 5% */
+
+}
+
+.local {
+
+    font-size: 1.2em;
+    /* Define o tamanho da fonte para o nome do local 
+                como 1.2 vezes o tamanho padrão da fonte */
+
+    font-weight: bold;
+    /* Define a fonte como negrito para o nome do local */
+
+    margin-bottom: 10px;
+    /* Adiciona uma margem inferior de 10 pixels para separar o 
+                nome do local do conteúdo abaixo */
+
+    color: #ECF0F1;
+    /* Define a cor do texto do nome do local como um tom 
+                claro de cinza (#ECF0F1) */
+
+}
+
+.data-hora {
+
+    font-size: 1em;
+    /* Define o tamanho da fonte para a data e hora como o 
+                tamanho padrão da fonte (1em) */
+
+    color: #ECF0F1;
+    /* Define a cor do texto da data e hora como um tom 
+                claro de cinza (#ECF0F1) */
+                
+}
