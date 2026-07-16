@@ -1,0 +1,268 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+    /* Define a família de fontes para o corpo do documento. 
+            'Arial' é a fonte principal, e 'sans-serif' é a 
+            fonte de reserva.
+       Isso assegura que, se 'Arial' não estiver disponível, 
+            qualquer fonte sem serifa será usada. */
+
+    background-color: #2C3E50;
+    /* Define a cor de fundo do corpo da página como um azul 
+            escuro (#2C3E50). Essa cor proporciona um contraste 
+            agradável com o texto e outros elementos claros, 
+            facilitando a leitura e melhorando a estética da página. */
+
+    color: #ECF0F1;
+    /* Define a cor do texto para um cinza claro (#ECF0F1). 
+            Isso garante que o texto se destaque bem contra o 
+            fundo escuro, melhorando a legibilidade. */
+
+    display: flex;
+    /* Configura o modelo de caixa do corpo da página para 
+            Flexbox, o que facilita o alinhamento e a distribuição 
+            dos elementos filhos dentro do corpo. */
+
+    justify-content: center;
+    /* Alinha horizontalmente todos os elementos filhos (diretamente 
+            dentro do <body>) ao centro do corpo da página.
+       Isso é útil para centrar todo o conteúdo principal 
+            na visualização horizontal. */
+
+    align-items: center;
+    /* Alinha verticalmente todos os elementos filhos ao 
+            centro do corpo da página. Combinado com 
+            'justify-content: center', isso centra todos os 
+            elementos filhos tanto vertical quanto horizontalmente. */
+
+    height: 100vh;
+    /* Define a altura do corpo da página para ser 100% da 
+            altura da viewport (altura da janela de 
+            visualização do navegador).
+       Isso garante que o corpo estenda-se verticalmente por 
+            toda a altura disponível da janela do navegador. */
+
+    margin: 0;
+    /* Remove todas as margens padrão ao redor do <body>. 
+            Isso é frequentemente feito para eliminar qualquer espaço 
+            entre a borda da página e os elementos dentro dela, 
+            permitindo um controle mais preciso do layout. */
+
+}
+
+.temporizador-container {
+
+    text-align: center;
+    /* Alinha todo o texto e conteúdo filhos ao centro do 
+            contêiner, facilitando a organização visual centralizada. */
+
+    background: #34495E;
+    /* Define a cor de fundo do contêiner do temporizador 
+            para um tom de azul-escuro (#34495E), proporcionando 
+            um contraste agradável com textos e botões claros, 
+            além de oferecer um aspecto visual sofisticado. */
+
+    padding: 40px;
+    /* Adiciona um preenchimento interno de 40 pixels em todas as 
+            direções dentro do contêiner, criando espaço 
+            entre o conteúdo e as bordas do contêiner, o que 
+            melhora a estética e a legibilidade. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner com um raio de 10 pixels, 
+            suavizando a aparência geral e oferecendo um 
+            design mais moderno e menos rígido. */
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    /* Aplica uma sombra ao redor do contêiner. A sombra é 
+            projetada para ser sutil (com uma opacidade 
+            de 30% - '0.3') e espalha-se por 20 pixels, 
+            criando um efeito de elevação visual que destaca o 
+            contêiner sobre o restante da interface. */
+
+}
+
+.temporizador-container h1 {
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20 pixels para o 
+            cabeçalho dentro do contêiner, separando-o 
+            visualmente dos elementos que estão abaixo dele, 
+            como o display do temporizador ou botões, melhorando a 
+            estrutura visual da página. */
+
+    font-size: 2em;
+    /* Aumenta o tamanho da fonte do título para o dobro do 
+            tamanho padrão da fonte base, fazendo com que ele se destaque
+            como o elemento principal de título na interface. */
+
+}
+
+#temporizador {
+
+    font-size: 2em;
+    /* Define o tamanho da fonte do display do temporizador 
+            para o dobro do tamanho padrão da fonte base, 
+            garantindo que o tempo seja grande e claramente 
+            visível para os usuários. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem inferior de 20 pixels ao display do 
+            temporizador, proporcionando espaço adequado antes 
+            dos elementos subsequentes, como os botões de 
+            controle, o que ajuda a evitar uma interface 
+            sobrecarregada e mantém a clareza visual. */
+
+}
+
+
+.botoes {
+
+    display: flex;
+    /* Estabelece o modelo de layout flexível para o 
+            contêiner, facilitando o alinhamento e ajuste 
+            dos botões internos. */
+
+    justify-content: center;
+    /* Centraliza os botões horizontalmente dentro do contêiner, 
+            garantindo uma apresentação visual equilibrada. */
+
+    gap: 10px;
+    /* Define um espaço de 10 pixels entre cada botão, evitando 
+            que eles toquem uns aos outros e melhorando a 
+            estética geral. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem inferior de 20 pixels após o contêiner 
+            dos botões, criando espaço entre este contêiner e 
+            quaisquer elementos abaixo dele. */
+
+}
+
+button {
+
+    background: #1ABC9C;
+    /* Define a cor de fundo dos botões para um tom atraente 
+            de verde-água (#1ABC9C), tornando-os visualmente 
+            distintos e agradáveis. */
+
+    border: none;
+    /* Remove a borda padrão dos botões para um design 
+            mais limpo e moderno. */
+
+    padding: 10px 20px;
+    /* Adiciona preenchimento interno de 10 pixels na vertical 
+            e 20 pixels na horizontal, aumentando a área de 
+            clique e melhorando o conforto visual. */
+
+    border-radius: 5px;
+    /* Arredonda as bordas dos botões com um raio de 5 pixels, 
+            suavizando o design geral e proporcionando uma 
+            estética mais amigável. */
+
+    color: #2C3E50;
+    /* Define a cor do texto dentro dos botões como um azul 
+            escuro (#2C3E50), o que oferece um contraste 
+            eficaz com o fundo claro. */
+
+    font-size: 1em;
+    /* Mantém o tamanho da fonte dos botões alinhado com o 
+            tamanho padrão da fonte do documento, garantindo 
+            consistência e legibilidade. */
+
+    cursor: pointer;
+    /* Muda o cursor para uma mão apontando quando passa sobre o 
+            botão, indicando que o elemento é clicável. */
+
+    transition: background 0.3s;
+    /* Adiciona uma transição suave de 0,3 segundos para a cor 
+            de fundo, melhorando a experiência do usuário ao 
+            interagir com o botão. */
+
+}
+
+button:hover {
+
+    background: #095344;
+    /* Altera a cor de fundo do botão para um tom de verde 
+            mais escuro (#095344) quando o mouse está sobre 
+            ele, proporcionando feedback visual imediato. */
+
+    /* Altera a cor da fonte do botão para um branco. */
+    color: #FFFFFF;
+
+}
+
+button:disabled {
+
+    background: #95A5A6;
+    /* Define a cor de fundo para botões desabilitados como 
+            cinza (#95A5A6), comunicando visualmente que o 
+            botão está inativo. */
+
+    cursor: not-allowed;
+    /* Muda o cursor para um ícone de operação não permitida, 
+            reforçando que o botão não pode ser clicado no 
+            estado desabilitado. */
+
+}
+
+.definir-tempo {
+
+    display: flex;
+    /* Usa Flexbox para organizar os elementos internos (labels e 
+            inputs) de forma linear e responsiva. Flexbox facilita o
+            alinhamento e a distribuição dos elementos. */
+
+    justify-content: center;
+    /* Alinha os elementos filhos (labels e inputs) horizontalmente 
+            ao centro do contêiner, proporcionando um layout 
+            centralizado e equilibrado. */
+
+    gap: 10px;
+    /* Define um espaço de 10 pixels entre cada par de label e 
+            input, garantindo que eles não fiquem visualmente 
+            agrupados demais, melhorando a legibilidade e a estética. */
+
+}
+
+.definir-tempo label {
+
+    margin-right: 5px;
+    /* Adiciona uma margem à direita de cada label de 5 pixels. 
+            Isso separa o texto do label do campo de input 
+            associado, evitando uma aparência congestionada e 
+            facilitando a leitura. */
+
+}
+
+.definir-tempo input {
+
+    width: 50px;
+    /* Define a largura dos campos de input para 50 pixels, 
+            o que é suficiente para acomodar dois dígitos, 
+            mantendo o design compacto e uniforme. */
+
+    padding: 5px;
+    /* Aplica um preenchimento interno de 5 pixels em todos os 
+           lados dentro dos campos de input, aumentando a área 
+           de clique e melhorando a experiência tátil. */
+
+    border-radius: 5px;
+    /* Arredonda as bordas dos campos de input com um raio de 5 
+            pixels, suavizando a aparência geral dos campos e 
+            tornando o design mais amigável e moderno. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida de 1 pixel com a cor cinza 
+            claro (#ccc) ao redor dos campos de input. Isso 
+            define claramente os limites dos campos, melhorando a 
+            definição visual em fundos escuros ou claros. */
+
+    text-align: center;
+    /* Alinha o texto digitado nos campos de input ao centro, 
+            garantindo que os números estejam visualmente centrados 
+            dentro do campo, o que ajuda na uniformidade e 
+            na estética. */
+            
+}

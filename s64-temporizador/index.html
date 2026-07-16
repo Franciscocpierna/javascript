@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- Especifica que este documento usa HTML5, o que 
+            ajuda o navegador a renderizar a página corretamente. -->
+
+<html lang="pt-BR">
+<!-- Abre a tag <html> que envolve todo o conteúdo da página. 
+            O atributo 'lang' define o idioma principal do 
+            documento como português do Brasil. -->
+
+<head>
+    <!-- A tag <head> contém metadados (informações sobre os dados) 
+            que não são exibidos diretamente na página web, mas 
+            são usados pelo navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres utilizado no documento 
+                como UTF-8, que inclui quase todos os caracteres e 
+                símbolos usados nas línguas escritas humanas. 
+         Isso garante que qualquer texto no documento seja 
+                exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A tag <meta> com o atributo 'viewport' informa ao 
+                navegador como controlar as dimensões e a escala da página.
+         - width=device-width: ajusta a largura da página 
+                para a largura do dispositivo.
+         - initial-scale=1.0: define o nível de zoom inicial 
+                quando a página é carregada pela primeira vez. -->
+
+    <title>Temporizador</title>
+    <!-- A tag <title> define o título da página, que é mostrado 
+                na aba do navegador. Neste caso, 'Temporizador' é 
+                o título da página. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> é usada para vincular a folha de estilos 
+                externa, 'styles.css', ao documento HTML.
+         Isso permite que o documento use as regras de estilo 
+                definidas no arquivo CSS especificado. -->
+
+</head>
+<!-- Fecha a tag <head>, indicando o fim do 
+            cabeçalho do documento. -->
+
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo da página 
+                que é visível para o usuário. -->
+
+    <div class="temporizador-container">
+        <!-- Div principal que contém todos os elementos do 
+                    temporizador, usando uma classe para aplicar 
+                    estilos específicos. -->
+
+        <h1>Temporizador</h1>
+        <!-- Título da página exibido como um cabeçalho, indicando 
+                    que a funcionalidade principal é um temporizador. -->
+
+        <div id="temporizador">
+            <!-- Contêiner específico para mostrar o tempo do 
+                        temporizador, com um ID único para 
+                        manipulação via JavaScript. -->
+            
+            <span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span>
+            <!-- Três elementos <span> para horas, minutos e 
+                            segundos, inicialmente definidos como '00'. 
+                 Cada um possui um ID para permitir atualizações 
+                            dinâmicas via JavaScript. -->
+        
+        </div>
+
+        <div class="botoes">
+            <!-- Div que contém os botões para controlar o 
+                        temporizador, usando uma classe para estilização. -->
+            
+            <button id="iniciar">Iniciar</button>
+            <!-- Botão para iniciar o temporizador. -->
+            
+            <button id="pausar">Pausar</button>
+            <!-- Botão para pausar o temporizador. -->
+            
+            <button id="continuar">Continuar</button>
+            <!-- Botão para continuar o temporizador após uma pausa. -->
+            
+            <button id="resetar">Resetar</button>
+            <!-- Botão para resetar o temporizador, retornando 
+                        todos os valores a zero. -->
+        
+        </div>
+
+        <div class="definir-tempo">
+            <!-- Div que permite ao usuário definir o tempo 
+                        inicial do temporizador. -->
+            
+            <label for="entrada-horas">Horas:</label>
+            <!-- Rótulo associado ao campo de entrada para horas. -->
+            
+            <input type="number" id="entrada-horas" min="0" value="0">
+            <!-- Campo de entrada para definir as horas, do tipo 
+                        numérico, com valor mínimo de 0 e inicialmente 
+                        definido como 0. -->
+
+            <label for="entrada-minutos">Minutos:</label>
+            <!-- Rótulo associado ao campo de entrada para minutos. -->
+            
+            <input type="number" id="entrada-minutos" min="0" max="59" value="0">
+            <!-- Campo de entrada para definir os minutos, do tipo 
+                        numérico, com valor mínimo de 0, máximo de 59 e 
+                        inicialmente definido como 0. -->
+
+            <label for="entrada-segundos">Segundos:</label>
+            <!-- Rótulo associado ao campo de entrada para segundos. -->
+            
+            <input type="number" id="entrada-segundos" min="0" max="59" value="0">
+            <!-- Campo de entrada para definir os segundos, do tipo numérico, 
+                        com valor mínimo de 0, máximo de 59 e inicialmente 
+                        definido como 0. -->
+        
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Vincula um arquivo JavaScript externo chamado 'script.js', 
+                que contém a lógica para operar o temporizador. -->
+     
+</body>
+</html>
+<!-- Fecha as tags <body> e <html>, encerrando o documento HTML. -->
