@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+
+<html lang="pt-BR">
+<!-- Abertura da tag <html> com atributo de idioma 
+            definido como português do Brasil -->
+
+<head>
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres do 
+                 documento como UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a configuração do viewport para garantir 
+                 que a página seja responsiva.
+         O "width=device-width" define a largura da página 
+                     para seguir a largura da tela do dispositivo.
+         O "initial-scale=1.0" define o nível de zoom inicial 
+                     quando a página é carregada. -->
+
+    <title>Cronômetro Avançado</title>
+    <!-- Define o título da página que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Vincula o arquivo de estilos externo (CSS) para a página -->
+
+</head>
+<!-- Fecha a seção <head> onde são colocadas as meta-informações 
+                sobre o documento -->
+
+
+<body>
+    <!-- Inicia a tag <body>, que contém todos os elementos 
+                    visíveis na página -->
+
+    <div class="cronometro-container">
+        <!-- Div principal que contém todo o cronômetro, com 
+                     uma classe para estilização -->
+
+        <h1>Cronômetro Avançado</h1>
+        <!-- Cabeçalho principal da página, apresentando o 
+                     título 'Cronômetro Avançado' -->
+
+        <div id="cronometro">
+            <!-- Div que contém os elementos do cronômetro, 
+                         identificado por um ID para manipulação 
+                        via JavaScript -->
+            
+            <span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span>:<span id="milissegundos">00</span>
+            <!-- Quatro spans, cada um com um ID específico para horas, 
+                         minutos, segundos e milissegundos. 
+                 Inicializados com '00' para representar o início 
+                            do tempo do cronômetro. -->
+        
+        </div>
+
+        <div class="botoes">
+            <!-- Div que contém os botões de controle do cronômetro, 
+                         com uma classe para estilização -->
+            
+            <button id="iniciar">Iniciar</button>
+            <!-- Botão para iniciar o cronômetro, com um ID 
+                         para manipulação via JavaScript -->
+            
+            <button id="pausar">Pausar</button>
+            <!-- Botão para pausar o cronômetro, com um ID 
+                         para manipulação via JavaScript -->
+            
+            <button id="continuar">Continuar</button>
+            <!-- Botão para continuar o cronômetro após uma pausa, 
+                         com um ID para manipulação via JavaScript -->
+            
+            <button id="resetar">Resetar</button>
+            <!-- Botão para resetar o cronômetro, com um ID para 
+                         manipulação via JavaScript -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Vincula o arquivo JavaScript que contém a lógica 
+                 para operar o cronômetro -->
+
+</body>
+<!-- Fecha a tag <body>, encerrando o conteúdo visível da página -->
+    
+</html>
+<!-- Fecha a tag <html>, encerrando o documento HTML -->

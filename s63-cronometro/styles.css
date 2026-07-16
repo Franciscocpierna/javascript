@@ -1,0 +1,182 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+    /* Define a família de fontes para o texto 
+                dentro do elemento <body>. 
+       'Arial' é a fonte primária, e 'sans-serif' é a fonte de 
+                   fallback caso 'Arial' não esteja disponível. */
+
+    background-color: #2C3E50;
+    /* Define a cor de fundo para o corpo da página como um 
+                tom escuro de azul (#2C3E50). */
+
+    color: #ECF0F1;
+    /* Define a cor padrão do texto para todos os elementos dentro 
+                do <body> como um cinza claro (#ECF0F1). */
+
+    display: flex;
+    /* Estabelece o modelo de layout flexível para o <body>, 
+                permitindo a utilização de flexbox para alinhamento e 
+                distribuição de itens. */
+
+    justify-content: center;
+    /* Alinha os itens filhos do <body> horizontalmente ao centro. 
+       Trabalha em conjunto com 'display: flex'. */
+
+    align-items: center;
+    /* Alinha os itens filhos do <body> verticalmente ao centro.
+       Esta propriedade é usada para centralizar completamente os 
+                   itens dentro do <body> quando combinada 
+                   com 'justify-content'. */
+
+    height: 100vh;
+    /* Define a altura do <body> como 100% da altura da 
+                viewport (área visível da janela do navegador),
+               garantindo que o <body> ocupe toda a altura da tela. */
+
+    margin: 0;
+    /* Remove as margens externas padrão do <body>, garantindo 
+                que não haja espaço extra em torno dos elementos 
+                internos. */
+
+}
+
+.cronometro-container {
+
+    text-align: center;
+    /* Alinha o texto dentro do contêiner do cronômetro ao centro. */
+
+    background: #34495E;
+    /* Define a cor de fundo do contêiner do cronômetro como 
+                um tom escuro de azul (#34495E). */
+
+    padding: 40px;
+    /* Aplica um preenchimento de 40 pixels em todos os lados 
+                dentro do contêiner do cronômetro,
+               aumentando o espaço entre o conteúdo interno e 
+               as bordas do contêiner. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner do cronômetro com 
+                um raio de 10 pixels, 
+               proporcionando bordas suavemente curvadas. */
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    /* Aplica uma sombra ao redor do contêiner do cronômetro.
+       A sombra é centrada (deslocamentos x e y são 0), tem 
+               um raio de propagação de 20 pixels,
+               e é semitransparente preta com 30% de 
+               opacidade (indicado por rgba(0, 0, 0, 0.3)). */
+
+}
+
+.cronometro-container h1 {
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20 pixels para o 
+                cabeçalho <h1> dentro do contêiner, 
+               criando espaço entre o título e qualquer 
+               conteúdo que esteja abaixo dele. */
+
+    font-size: 2em;
+    /* Define o tamanho da fonte do cabeçalho <h1> como o 
+                dobro do tamanho padrão da fonte,
+               tornando-o proeminente e fácil de ler. */
+
+}
+
+#cronometro {
+
+    font-size: 2em;
+    /* Define o tamanho da fonte para o display do 
+               cronômetro como o dobro do tamanho padrão da fonte,
+               garantindo que o tempo seja grande e claramente visível. */
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20 pixels 
+               para o display do cronômetro,
+               separando-o dos botões ou de outros 
+               conteúdos que possam estar abaixo. */
+
+}
+
+.botoes {
+
+    display: flex;
+    /* Utiliza o modelo de layout flexível (flexbox) 
+                para os elementos dentro desta classe,
+               permitindo um alinhamento mais fácil e 
+               responsivo dos botões. */
+
+    justify-content: center;
+    /* Centraliza os botões horizontalmente dentro 
+                do contêiner usando flexbox. */
+
+    gap: 10px;
+    /* Aplica um espaço de 10 pixels entre cada botão 
+                dentro do contêiner. */
+
+}
+
+button {
+
+    background: #1ABC9C;
+    /* Define a cor de fundo dos botões para um 
+                tom de verde-água (#1ABC9C). */
+
+    border: none;
+    /* Remove a borda padrão dos botões para um 
+                design mais limpo e moderno. */
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento interno de 10 pixels 
+                na vertical e 20 pixels na horizontal,
+                fazendo com que o botão seja mais fácil 
+                de clicar e visualmente agradável. */
+
+    border-radius: 5px;
+    /* Arredonda as bordas dos botões com um raio de 5 pixels, 
+                suavizando as bordas retas padrão. */
+
+    color: #2C3E50;
+    /* Define a cor do texto dentro dos botões para um 
+                azul escuro (#2C3E50), que contrasta 
+                com o fundo claro. */
+
+    font-size: 1em;
+    /* Define o tamanho da fonte dos botões para ser o 
+                mesmo do tamanho de fonte padrão do 
+                elemento pai. */
+
+    cursor: pointer;
+    /* Muda o cursor para indicar que o botão é clicável, 
+                melhorando a usabilidade. */
+
+    transition: background 0.3s;
+    /* Adiciona uma transição suave de 0.3 segundos para 
+               mudanças de fundo, proporcionando um feedback visual
+               agradável quando o estado do botão muda. */
+
+}
+
+button:hover {
+
+    background: #0d6150;
+    /* Altera a cor de fundo do botão para um tom de verde 
+                mais escuro (#0d6150) quando o mouse está sobre ele,
+               destacando o botão sob o cursor do usuário. */
+
+}
+
+button:disabled {
+
+    background: #95A5A6;
+    /* Define a cor de fundo para os botões desabilitados 
+               como cinza (#95A5A6), indicando visualmente
+               que o botão não está disponível para interação. */
+
+    cursor: not-allowed;
+    /* Muda o cursor para o ícone 'não permitido', reforçando 
+                que o botão não está funcional. */
+                
+}
