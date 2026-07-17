@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo do documento, especifica 
+        que este é um documento HTML5 -->
+
+<html lang="pt-BR">
+<!-- Tag raiz que contém todo o conteúdo da página, com o 
+        atributo 'lang' definindo o idioma como português do Brasil -->
+
+<head>
+<!-- Cabeçalho da página que contém metadados, links para 
+        folhas de estilo e títulos -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres para UTF-8, que inclui a 
+                maioria dos caracteres usados em diversos idiomas -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Garante que a página seja exibida corretamente em diferentes 
+                tamanhos de dispositivos, ajustando a largura da página 
+                para a largura do dispositivo e definindo o nível 
+                de zoom inicial como 1 -->
+
+    <title>Tabela de Preços</title>
+    <!-- Define o título da página, que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Vincula uma folha de estilos externa chamada 'estilos.css' à 
+                página, que contém estilos CSS para formatar o HTML -->
+
+</head>
+<!-- Fim do cabeçalho da página -->
+
+<body>
+    <!-- Início do corpo da página, onde todo o conteúdo 
+            visível é colocado -->
+
+    <div class="tabela-precos">
+    <!-- Divisão que contém a tabela de preços, com uma 
+                classe para estilização -->
+
+        <div class="plano" id="plano-gratis">
+        <!-- Divisão para o plano gratuito, identificado por uma 
+                    classe para estilização comum e um ID único para 
+                    estilização ou funcionalidades específicas -->
+
+            <h2>GRÁTIS</h2>
+            <!-- Título do plano, apresentado em um cabeçalho de 
+                        segundo nível -->
+
+            <p class="preco">R$ 0.00 <span>por mês</span></p>
+            <!-- Parágrafo que mostra o preço do plano, com uma parte do 
+                        texto em uma tag <span> para estilização adicional -->
+
+            <ul>
+            <!-- Lista não ordenada para os benefícios do plano -->
+
+                <li>Acesso limitado aos recursos <span class="check">✔</span></li>
+                <!-- Item da lista com um ícone de verificação indicando a 
+                            característica disponível -->
+
+                <li>Suporte por e-mail <span class="check">✔</span></li>
+                <!-- Outro item da lista com um ícone de verificação -->
+
+                <li>5 GB de armazenamento <span class="check">✔</span></li>
+                <!-- Item da lista detalhando a quantidade de armazenamento disponível -->
+
+                <li>Sem integração com aplicativos <span class="nao">✘</span></li>
+                <!-- Item da lista com um ícone de negação, indicando uma 
+                            característica não disponível no plano -->
+
+                <li>Sem relatórios avançados <span class="nao">✘</span></li>
+                <!-- Outro item com ícone de negação para uma característica indisponível -->
+
+            </ul>
+
+            <button class="botao-assinar">ASSINAR</button>
+            <!-- Botão para assinar o plano, com uma classe para estilização -->
+
+        </div>
+        
+        <div class="plano" id="plano-basico">
+        <!-- Divisão para o plano Básico com a classe 'plano' para 
+                    estilização comum e um ID 'plano-basico' para 
+                    identificação única -->
+
+            <h2>BÁSICO</h2>
+            <!-- Cabeçalho nível 2 que exibe o nome do plano 'BÁSICO' -->
+
+            <p class="preco">R$ 9.99 <span>por mês</span></p>
+            <!-- Parágrafo mostrando o preço do plano, com 'R$ 9.99' e 'por mês' 
+                        em uma tag <span> para permitir estilização diferenciada -->
+
+            <ul>
+            <!-- Lista não ordenada para as características do plano -->
+
+                <li>Acesso a todos os recursos <span class="check">✔</span></li>
+                <!-- Item da lista com um texto e um ícone de verificação (✔) 
+                            dentro de uma <span> com classe 'check' para indicar a 
+                            inclusão do recurso -->
+
+                <li>Suporte por e-mail e chat <span class="check">✔</span></li>
+                <!-- Outro item com suporte por e-mail e chat também marcado
+                             com um ícone de verificação -->
+
+                <li>50 GB de armazenamento <span class="check">✔</span></li>
+                <!-- Item que lista a quantidade de armazenamento disponível, marcada 
+                            com um ícone de verificação -->
+
+                <li>Integração com aplicativos <span class="check">✔</span></li>
+                <!-- Item que indica integração com aplicativos, também marcado 
+                            com um ícone de verificação -->
+
+                <li>Relatórios básicos <span class="nao">✘</span></li>
+                <!-- Item que indica a ausência de relatórios avançados, marcado 
+                            com um ícone de negação (✘) dentro de uma <span> 
+                                com classe 'nao' -->
+
+            </ul>
+
+            <button class="botao-assinar">ASSINAR</button>
+            <!-- Botão para iniciar a assinatura do plano, com 
+                        classe 'botao-assinar' para estilização -->
+
+        </div>
+
+        <div class="plano" id="plano-padrao">
+        <!-- Divisão para o plano Padrão, similarmente identificado e estilizado -->
+
+            <h2>PADRÃO</h2>
+            <!-- Cabeçalho para o nome do plano 'PADRÃO' -->
+
+            <p class="preco">R$ 19.99 <span>por mês</span></p>
+            <!-- Preço do plano, similarmente estruturado com o preço em um 
+                        parágrafo e a periodicidade em uma <span> -->
+
+            <ul>
+            <!-- Lista não ordenada para as características do plano Padrão -->
+
+                <li>Acesso a todos os recursos <span class="check">✔</span></li>
+                <!-- Cada <li> aqui repete a estrutura anterior com ícones de 
+                            verificação para indicar recursos disponíveis -->
+
+                <li>Suporte por e-mail, chat e telefone <span class="check">✔</span></li>
+                <!-- Adiciona o suporte por telefone ao suporte existente por e-mail e chat -->
+
+                <li>100 GB de armazenamento <span class="check">✔</span></li>
+                <!-- Aumento na quantidade de armazenamento disponível para 100 GB -->
+
+                <li>Integração com todos os aplicativos <span class="check">✔</span></li>
+                <!-- Indica integração completa com aplicativos -->
+
+                <li>Relatórios avançados <span class="check">✔</span></li>
+                <!-- Indica a disponibilidade de relatórios avançados, 
+                        diferenciando este plano do básico -->
+
+            </ul>
+
+            <button class="botao-assinar">ASSINAR</button>
+            <!-- Botão para assinar o plano Padrão -->
+
+        </div>
+
+        <div class="plano" id="plano-premium">
+        <!-- Divisão para o plano Premium com as mesmas classes e um ID 
+                    único para referência e estilização -->
+
+            <h2>PREMIUM</h2>
+            <!-- Cabeçalho para o plano 'PREMIUM' -->
+
+            <p class="preco">R$ 49.99 <span>por mês</span></p>
+            <!-- Apresenta o preço do plano Premium -->
+
+            <ul>
+            <!-- Lista de características para o plano Premium -->
+
+                <li>Acesso a todos os recursos <span class="check">✔</span></li>
+                <!-- Acesso total a recursos, indicado com ícone de verificação -->
+
+                <li>Suporte prioritário 24/7 <span class="check">✔</span></li>
+                <!-- Suporte prioritário disponível 24/7 -->
+
+                <li>Armazenamento ilimitado <span class="check">✔</span></li>
+                <!-- Oferece armazenamento ilimitado, destacando a natureza premium do plano -->
+
+                <li>Integração com todos os aplicativos <span class="check">✔</span></li>
+                <!-- Repete a característica de integração total -->
+
+                <li>Relatórios avançados e personalizados <span class="check">✔</span></li>
+                <!-- Oferece relatórios ainda mais avançados e personalizados -->
+
+            </ul>
+            <button class="botao-assinar">ASSINAR</button>
+            <!-- Botão para assinar o plano Premium -->
+
+        </div>
+
+    </div>
+
+    <!-- Inclusão de um script externo -->
+    <script src="script.js"></script>
+    <!-- Arquivo JavaScript que contém funcionalidades 
+                para os botões de assinar -->
+
+</body>
+</html>

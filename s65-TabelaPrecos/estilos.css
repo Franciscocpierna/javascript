@@ -1,0 +1,455 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto dentro do body. 
+       'Arial' é a fonte primária e 'sans-serif' é a fonte 
+               de backup genérica. */
+    
+    display: flex;
+    /* Define o modelo de layout para Flexbox, que é um método 
+               para alinhar e distribuir o espaço entre os itens 
+               em um contêiner, mesmo quando seus tamanhos são 
+               desconhecidos ou dinâmicos. */
+
+    justify-content: center;
+    /* Alinha os itens flexíveis ao longo do eixo principal do 
+               contêiner flexível, neste caso, centralizando-os 
+               horizontalmente. */
+
+    align-items: center;
+    /* Alinha os itens flexíveis no eixo cruzado (vertical), neste 
+               caso, centralizando-os verticalmente. */
+
+    height: 100vh;
+    /* Define a altura do body para ser 100% da altura da janela de 
+               visualização (viewport), o que significa que 
+               o body preencherá toda a altura da tela visível 
+               do dispositivo. */
+
+    background-color: #f5f5f5;
+    /* Define a cor de fundo do corpo da página para um cinza claro. */
+
+    margin: 0;
+    /* Remove todas as margens externas padrão do body, garantindo 
+               que não haja espaço extra ao redor dos elementos na página. */
+
+}
+
+.tabela-precos {
+
+    display: flex;
+    /* Utiliza Flexbox para o contêiner `.tabela-precos`, permitindo 
+               um layout flexível e responsivo dos elementos filhos (planos). */
+
+    justify-content: space-between;
+    /* Distribui o espaço entre os itens filhos (planos) igualmente, 
+               colocando espaço máximo entre cada item e mantendo-os 
+               alinhados à esquerda e à direita do contêiner. */
+
+    align-items: stretch;
+    /* Faz com que os itens filhos se estiquem para preencher o contêiner 
+               ao longo do eixo vertical, garantindo que todos os 
+               elementos `.plano` tenham a mesma altura. */
+
+    width: 80%;
+    /* Define a largura do contêiner `.tabela-precos` para 80% da 
+               largura do seu contêiner pai, que é o `<body>`. 
+         Isso ajuda a manter a tabela de preços centralizada e 
+               não muito larga em telas grandes. */
+
+    margin: auto;
+    /* Centraliza horizontalmente o contêiner `.tabela-precos` 
+               dentro do seu contêiner pai ao definir as margens 
+               laterais automaticamente. */
+
+}
+
+.plano {
+
+    background-color: #fff;
+    /* Define a cor de fundo do elemento com plano 
+               para branco (#fff). */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do elemento com um raio de 8px, 
+               proporcionando um visual mais suave e estilizado. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do elemento. A sombra é 
+               sutil (opacidade 0.1) e se estende 10px para 
+               fora das bordas do elemento. */
+
+    padding: 20px;
+    /* Adiciona um espaço interno de 20px em todas as direções 
+               dentro do elemento plano, criando um espaço entre o 
+               conteúdo interno e as bordas do elemento. */
+
+    width: 22%;
+    /* Define a largura do elemento plano para ocupar 22% da largura 
+               de seu contêiner pai, ajudando a manter a proporção 
+               em layouts flexíveis. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do elemento plano, afetando o 
+               título, preços e botões contidos nele. */
+
+    display: flex;
+    /* Estabelece um contexto de Flexbox para o elemento, permitindo 
+               um layout mais flexível e responsivo dos itens internos. */
+
+    flex-direction: column;
+    /* Direciona os itens filhos do elemento plano para se 
+               orientarem verticalmente (em coluna). */
+
+    justify-content: space-between;
+    /* Distribui o espaço entre os itens filhos de maneira que haja um 
+               espaço máximo entre cada um deles, alinhando o primeiro 
+               item ao topo, o último ao fundo, e os demais 
+               distribuídos igualmente no meio. */
+
+}
+
+.plano h2 {
+
+    color: #fff;
+    /* Define a cor do texto do cabeçalho h2 para branco, 
+               garantindo que seja legível contra o fundo colorido. */
+
+    background-color: #00aaff;
+    /* Estabelece a cor de fundo do cabeçalho h2 para um 
+               azul claro, criando um destaque visual. */
+
+    padding: 10px;
+    /* Adiciona um espaço interno de 10px em torno do texto 
+               dentro do cabeçalho h2, aumentando a legibilidade e 
+               o impacto visual. */
+
+    border-radius: 8px 8px 0 0;
+    /* Arredonda apenas os cantos superiores do cabeçalho h2, 
+               alinhando o estilo com o contêiner `.plano` e 
+               criando uma continuidade visual. */
+
+}
+
+.plano:nth-child(2) h2 {
+
+    background-color: #6a00ff;
+    /* Altera a cor de fundo do cabeçalho h2 no segundo 
+               plano (`plano-basico`) para um roxo profundo, 
+               diferenciando-o visualmente dos outros planos. */
+
+}
+
+.plano:nth-child(3) h2 {
+
+    background-color: #ff00aa;
+    /* Define a cor de fundo do cabeçalho h2 no terceiro plano 
+               para um rosa vibrante (#ff00aa). 
+       Esta cor é usada para distinguir visualmente o terceiro 
+               plano (Padrão) dos outros planos disponíveis. */
+
+}
+
+.plano:nth-child(4) h2 {
+
+    background-color: #ffaa00;
+    /* Estabelece a cor de fundo do cabeçalho h2 no quarto plano 
+               para um amarelo âmbar (#ffaa00). 
+       Essa escolha de cor serve para diferenciar o plano Premium 
+               dos planos anteriores e atrair atenção para a 
+               opção mais avançada. */
+
+}
+
+.preco {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte para 24px, o que aumenta a 
+               legibilidade do preço e o destaca como um ponto 
+               focal dentro de cada plano. 
+       O tamanho maior ajuda a destacar o custo do plano para os 
+               usuários de forma clara e direta. */
+
+    margin: 10px 0;
+    /* Aplica uma margem vertical de 10px acima e abaixo do 
+               elemento de preço. 
+       Isso ajuda a separar visualmente o preço dos outros textos ou 
+               elementos próximos, criando um espaço aéreo que melhora a 
+               clareza e o design geral. */
+
+}
+
+.preco span {
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16px para o elemento <span> 
+               dentro de <p class="preco">. 
+       Isso torna o texto "por mês" menor que o preço principal, 
+               diferenciando visualmente a unidade do valor do preço em si. */
+
+    color: #666;
+    /* Define a cor do texto para um cinza médio (#666). 
+       Essa cor é sutil e mantém o foco no valor do preço, enquanto 
+               fornece uma distinção visual clara entre o preço e a 
+               unidade de tempo. */
+
+}
+
+ul {
+
+    list-style: none;
+    /* Remove qualquer estilo de lista (como marcadores ou 
+               números) dos elementos <ul>, criando uma apresentação 
+               mais limpa e alinhada ao design moderno e minimalista. */
+
+    padding: 0;
+    /* Remove o preenchimento padrão do <ul>, permitindo que o 
+               controle do layout seja totalmente personalizado e 
+               alinhado com o design geral. */
+
+    text-align: left;
+    /* Alinha o texto dos itens da lista à esquerda, garantindo que o 
+               conteúdo dentro de cada <li> esteja alinhado de 
+               maneira uniforme e fácil de ler. */
+
+    flex-grow: 1;
+    /* Permite que o <ul> cresça para ocupar todo o espaço disponível 
+               em seu contêiner flexível, ajudando a distribuir o espaço 
+               de forma eficaz e a manter o layout consistente. */
+
+}
+
+ul li {
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10px ao redor do conteúdo de cada <li>, 
+               aumentando o espaço entre o texto e as bordas do elemento <li> 
+               para melhor legibilidade e estética. */
+
+    border-bottom: 1px solid #ddd;
+    /* Adiciona uma borda sólida na parte inferior de cada <li> com 1px 
+               de espessura e uma cor cinza claro (#ddd). 
+       Isso ajuda a separar visualmente os itens individuais na lista, 
+               facilitando a distinção entre cada característica listada. */
+
+}
+
+.check {
+
+    color: green;
+    /* Define a cor do texto para verde, que é comumente associada a 
+               confirmação ou status positivo, indicando que um recurso 
+               está disponível ou que uma ação é positiva. */
+
+    float: right;
+    /* Posiciona o elemento (geralmente um ícone ou texto dentro de 
+               uma lista) à direita dentro de seu contêiner pai,
+               alinhando-o de forma que fique visualmente separado do 
+               texto associado, criando uma clara distinção de layout. */
+
+}
+
+.nao {
+
+    color: red;
+    /* Define a cor do texto para vermelho, frequentemente usado para 
+               indicar uma proibição, erro ou status negativo,
+               sugerindo que um recurso não está disponível ou que 
+               uma condição não foi atendida. */
+
+    float: right;
+    /* Similarmente ao `.check`, posiciona o elemento à direita, 
+               mantendo uma consistência visual que ajuda o usuário 
+               a rapidamente identificar qual recurso está ou 
+               não disponível. */
+
+}
+
+.botao-assinar {
+
+    background-color: #00aaff;
+    /* Define a cor de fundo do botão para um azul vibrante (#00aaff), 
+               tornando-o visualmente proeminente e atraente,
+               incentivando ações do usuário. */
+
+    color: #fff;
+    /* Define a cor do texto dentro do botão para branco (#fff), 
+               garantindo alto contraste com o fundo azul,
+               o que melhora a legibilidade e a visibilidade 
+               do texto do botão. */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão, oferecendo um 
+               design mais limpo e moderno. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos do botão com um raio de 4px, proporcionando 
+               um estilo mais suave e moderno que é 
+               visualmente agradável e alinhado com design de 
+               interfaces amigáveis. */
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento interno de 10px na vertical e 20px 
+               na horizontal, aumentando a área de clique 
+               e conforto na interação, além de tornar o botão 
+               mais substancial e fácil de ler. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando ele está sobre o botão, 
+               um indicador visual de que o botão é clicável,
+               aumentando a usabilidade e indicando interatividade. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem no topo de 20px, separando o botão 
+               dos elementos acima dele, o que ajuda a definir o 
+               espaço visual e a organizar melhor o conteúdo 
+               na interface. */
+
+}
+
+.plano:nth-child(2) .botao-assinar {
+
+    background-color: #6a00ff;
+    /* Define a cor de fundo do botão no segundo plano (Básico) 
+               para um roxo vibrante (#6a00ff).
+       Essa cor ajuda a diferenciar visualmente o plano Básico 
+               dos outros, atraindo atenção para a opção 
+               de assinatura. */
+
+}
+
+.plano:nth-child(3) .botao-assinar {
+
+    background-color: #ff00aa;
+    /* Define a cor de fundo do botão no terceiro plano (Padrão) 
+               para um rosa magenta (#ff00aa).
+       O uso dessa cor distinta serve para destacar o plano Padrão, 
+               diferenciando-o das outras opções disponíveis. */
+
+}
+
+.plano:nth-child(4) .botao-assinar {
+
+    background-color: #ffaa00;
+    /* Altera a cor de fundo do botão no quarto plano (Premium) 
+               para um amarelo ouro (#ffaa00).
+       Essa escolha de cor vibrante tem o objetivo de fazer o 
+               plano Premium se destacar como a opção mais 
+               avançada e valiosa. */
+
+}
+
+.botao-assinar:hover {
+
+    opacity: 0.9;
+    /* Reduz a opacidade do botão para 0.9 quando o mouse está 
+               sobre ele, criando um efeito visual de interatividade.
+       Esse efeito sutil sugere que o botão é interativo e responde 
+               ao usuário, aumentando a usabilidade e fornecendo 
+               feedback visual imediato. */
+
+}
+
+.assinatura {
+
+    text-align: center;
+    /* Alinha o texto ao centro do elemento '.assinatura'. Este alinhamento é 
+               útil para criar uma apresentação visual focada e equilibrada, 
+               especialmente útil em seções que precisam chamar atenção, 
+               como títulos ou confirmações de ações. */
+
+    margin-top: 50px;
+    /* Aplica uma margem superior de 50px ao elemento '.assinatura', 
+               separando-o visualmente de outros conteúdos acima dele. 
+      Isso ajuda a criar uma distinção clara entre as seções da página, 
+               melhorando a organização visual e proporcionando um espaço 
+               respiratório ao redor do conteúdo da assinatura. */
+
+}
+
+.assinatura h1 {
+
+    font-size: 36px;
+    /* Define o tamanho da fonte do cabeçalho <h1> dentro de '.assinatura' 
+               para 36px. Este tamanho grande é ideal para destacar o título 
+               da seção, tornando-o imediatamente visível e legível, o que é 
+               essencial para capturar a atenção do usuário. */
+
+    color: #333;
+    /* Define a cor do texto do <h1> para um cinza escuro (#333). Essa cor é 
+               escolhida por ser suave para os olhos ao mesmo tempo que fornece 
+               suficiente contraste em relação a um fundo claro, 
+               facilitando a leitura. */
+
+}
+
+.assinatura p {
+
+    font-size: 20px;
+    /* Ajusta o tamanho da fonte dos parágrafos dentro de '.assinatura' 
+               para 20px, que é adequado para texto informativo, garantindo 
+               que seja confortável para leitura sem sobrecarregar 
+               visualmente o usuário. */
+
+    color: #555;  
+    /* Especifica uma cor de texto cinza médio (#555) para os parágrafos. 
+               Esta tonalidade é mais suave que preto puro, o que reduz a 
+               fadiga visual mas ainda oferece contraste suficiente para 
+               legibilidade contra um fundo claro. */
+
+    margin: 20px 0;
+    /* Define as margens superior e inferior para os parágrafos em 20px, 
+               criando um espaçamento vertical entre este texto e outros 
+               elementos antes ou depois dele. Esse espaçamento é crucial 
+               para evitar que o texto pareça amontoado, ajudando na clareza e 
+               na estrutura visual da página. */
+
+}
+
+.assinatura button {
+
+    background-color: #00aaff;
+    /* Define a cor de fundo do botão para um azul vibrante (#00aaff). 
+    Esta cor não apenas chama a atenção, mas também proporciona uma 
+               aparência energética e atraente, alinhada com elementos 
+               de design de ação ou interação. */
+
+    color: #fff;
+    /* Estabelece a cor do texto dentro do botão para branco (#fff). 
+    O alto contraste entre o fundo azul e o texto branco melhora a 
+               legibilidade e destaca claramente o texto do botão. */
+
+    border: none;
+    /* Remove qualquer borda do botão, contribuindo para um design mais 
+               limpo e moderno. Isso é especialmente útil em designs de 
+               interface onde um estilo minimalista é desejado. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos do botão com um raio de 4px, suavizando a 
+               aparência do botão e tornando-o visualmente mais 
+               amigável e moderno. */
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento interno de 10px na vertical e 20px na 
+               horizontal ao botão, aumentando a área de superfície 
+               clicável e melhorando a experiência tátil e visual 
+               para o usuário. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário passa o mouse 
+               sobre o botão, indicando claramente que o botão é 
+               um elemento interativo. */
+
+}
+
+.assinatura button:hover {
+
+    opacity: 0.9;
+    /* Diminui a opacidade do botão para 0.9 quando ele é focado 
+               com o mouse. 
+      Este efeito visual sutil indica ao usuário que o botão é 
+               interativo e responde ao contato, aumentando a 
+               usabilidade ao fornecer feedback visual imediato de 
+               que o botão está sendo interagido. */
+               
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Declaração DOCTYPE para HTML5, informa ao navegador 
+                que esta é uma página HTML5. 
+     Isso é necessário para garantir que o navegador use o modo de 
+                compatibilidade correto ao renderizar a página. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang' 
+                especifica o idioma do conteúdo da página,
+                neste caso, Português do Brasil (pt-BR). 
+    Isso ajuda os motores de busca e navegadores a 
+                processar corretamente o idioma da página, além 
+                de ser útil para acessibilidade. -->
+
+<head>
+<!-- A tag <head> contém metadados sobre o documento HTML, 
+                que não são exibidos diretamente na página web, 
+                mas são essenciais para a comunicação com 
+                navegadores e motores de busca. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com atributo charset define o conjunto de 
+                    caracteres usado no documento, 
+         UTF-8 é um conjunto de caracteres universal que 
+                    inclui praticamente todos os caracteres 
+                    de todos os idiomas humanos, garantindo assim 
+                    que qualquer texto seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta meta tag controla a janela de visualização da 
+                    página em dispositivos móveis. 
+         'width=device-width' faz com que a largura da página 
+                    corresponda à largura do dispositivo.
+         'initial-scale=1.0' define o nível de zoom inicial quando a 
+                    página é carregada pela primeira vez. -->
+
+    <title>Assinatura</title>
+    <!-- A tag <title> define o título da página, que é exibido 
+                    na aba do navegador. 
+         'Assinatura' é o título dado, indicando 
+                    que a página está relacionada a processos de 
+                    assinatura ou confirmação de algum serviço. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para incluir um arquivo CSS 
+                    externo, que contém os estilos que definem 
+                    a aparência da página. 'href' especifica o 
+                    caminho para o arquivo CSS que é 'estilos.css'. 
+         Isso separa o conteúdo do design, facilitando a manutenção e 
+                    a acessibilidade da página. -->
+
+</head>
+<!-- Fim da tag <head>, que será seguida pela tag <body>, onde o 
+            conteúdo visível da página é colocado. -->
+
+
+<body>
+    <!-- Início do corpo da página, onde todo o conteúdo 
+                visível é colocado -->
+
+    <div class="assinatura">
+    <!-- Divisão que contém o conteúdo relacionado à confirmação de 
+                assinatura, com uma classe para estilização -->
+
+        <h1>Assinatura Confirmada</h1>
+        <!-- Cabeçalho nível 1 que fornece uma mensagem clara de 
+                    que a assinatura foi confirmada -->
+
+        <p id="mensagem-plano"></p>
+        <!-- Parágrafo com um id específico que será usado para exibir 
+                    uma mensagem dinâmica baseada no plano escolhido. 
+             Inicialmente, este parágrafo está vazio. -->
+
+        <button onclick="window.location.href='index.html'">Voltar para a Tabela de Preços</button>
+        <!-- Botão que, ao ser clicado, redireciona o usuário de 
+                    volta à página da tabela de preços. 
+             Utiliza JavaScript inline no atributo 'onclick' para 
+                    mudar a localização da janela. -->
+
+    </div>
+
+    <script>
+        // Script interno que controla a lógica para exibir a 
+                // mensagem do plano selecionado.
+
+            document.addEventListener('DOMContentLoaded', function() {
+            // Este ouvinte de evento é acionado quando todo o conteúdo 
+                    // da página (incluindo imagens, scripts, etc.) foi 
+                    // totalmente carregado.
+            // Garante que todos os elementos HTML estejam disponíveis 
+                    // para manipulação via JavaScript, evitando erros de 
+                    // elementos ainda não carregados.
+
+            const params = new URLSearchParams(window.location.search);
+            // 'window.location.search' retorna a parte da query string 
+                    // da URL, que começa após o símbolo '?'.
+            // 'URLSearchParams' é uma interface útil para trabalhar 
+                    // com parâmetros de query string. 
+            // Ela proporciona métodos para acessar os valores 
+                    // dos parâmetros diretamente pelo seu nome.
+
+            const plano = params.get('plano');
+            // 'params.get('plano')' extrai o valor do parâmetro 'plano' 
+                    // da URL. Por exemplo, se a URL for "page.html?plano=plano-gratis",
+            // 'plano' seria 'plano-gratis'. Esse valor indica qual plano foi 
+                    // escolhido pelo usuário na página anterior.
+
+            const mensagemPlano = document.getElementById('mensagem-plano');
+            // 'document.getElementById' é uma função que retorna o 
+                    // elemento HTML que tem o ID especificado.
+            // Neste caso, ele busca o elemento <p> com o ID 'mensagem-plano' 
+                        // para que possamos alterar seu conteúdo.
+
+            switch(plano) {
+                // A instrução 'switch' é usada para executar diferentes 
+                        // ações baseadas em diferentes condições.
+                // Aqui, ela avalia a variável 'plano' e compara seu 
+                        // valor com diferentes casos ('case').
+
+                case 'plano-gratis':
+
+                    mensagemPlano.textContent = 'Você escolheu o plano GRÁTIS. Aproveite nossos recursos limitados gratuitamente!';
+                    // Se 'plano' é 'plano-gratis', essa linha atualiza o conteúdo 
+                            // de texto do elemento 'mensagemPlano' com uma mensagem específica.
+
+                    break;
+
+                case 'plano-basico':
+                    mensagemPlano.textContent = 'Você escolheu o plano BÁSICO. Aproveite nossos recursos por R$ 9.99 por mês!';
+                    break;
+                case 'plano-padrao':
+                    mensagemPlano.textContent = 'Você escolheu o plano PADRÃO. Aproveite nossos recursos por R$ 19.99 por mês!';
+                    break;
+                case 'plano-premium':
+                    mensagemPlano.textContent = 'Você escolheu o plano PREMIUM. Aproveite todos os nossos recursos por R$ 49.99 por mês!';
+                    break;
+                default:
+
+                    mensagemPlano.textContent = 'Plano não encontrado.';
+                    // O 'default' funciona como uma cláusula de segurança, que
+                            //  será executada se nenhum dos casos anteriores 
+                            // corresponder ao valor de 'plano'.
+
+                    break;
+                    
+            }
+        });
+
+    </script>
+</body>
+</html>
