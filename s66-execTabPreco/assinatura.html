@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- A linha DOCTYPE declara que este documento é um documento HTML5, 
+            que é a versão mais recente e recomendada do HTML. 
+    Essa declaração ajuda o navegador a renderizar a página 
+            corretamente seguindo os padrões do HTML5. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> com o atributo 'lang' especifica que o idioma principal 
+            do documento é o Português do Brasil. Isso é útil para 
+            acessibilidade e motores de busca, pois informa o idioma 
+            do conteúdo do site. -->
+
+<head>
+    <!-- A tag <head> contém metadados (dados sobre dados) que não são 
+                exibidos diretamente na página web, mas são usados pelo 
+                navegador para saber como tratar o documento. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' configurado como "UTF-8" 
+                especifica a codificação de caracteres usada no documento. 
+        UTF-8 é uma codificação de caracteres universal que inclui quase 
+                todos os caracteres e símbolos do mundo, garantindo que o 
+                texto apareça corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> importante para a responsividade da página. 
+        O 'viewport' é a área visível da página. 
+        A configuração 'width=device-width' faz a largura da página 
+                    seguir a largura da tela do dispositivo.
+        'initial-scale=1.0' define o nível de zoom inicial quando a 
+                    página é carregada pela primeira vez. -->
+
+    <title>Assinatura</title>
+    <!-- A tag <title> define o título da página, que é mostrado na 
+                    aba do navegador. 
+        Este título é também utilizado por motores de busca e deve 
+                    refletir o conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para conectar uma folha de 
+                estilos CSS externa, chamada 'estilos.css', que 
+                contém as regras de estilo para a página. 
+        O atributo 'rel' define o tipo de relação que o documento 
+                HTML tem com o recurso linkado. -->
+
+</head>
+<!-- Fim da tag <head> -->
+
+<body>
+    <!-- Início do corpo do documento HTML, onde o conteúdo visível 
+                da página será inserido. -->
+
+    <div class="assinatura">
+        <!-- Div que envolve todo o conteúdo relacionado à confirmação de 
+                    assinatura, estilizada pela classe 'assinatura'. -->
+
+        <h1>Assinatura Confirmada</h1>
+        <!-- Título principal da página. Esse título comunica ao usuário 
+                    que a assinatura foi confirmada. 
+            A tag <h1> é usada para títulos de nível superior, importantes 
+                    para SEO e hierarquia de conteúdo. -->
+
+        <p id="mensagem-plano"></p>
+        <!-- Parágrafo vazio que será preenchido dinamicamente com uma 
+                    mensagem de confirmação sobre o plano escolhido, 
+                    usando o ID 'mensagem-plano' para fácil seleção e 
+                    manipulação via JavaScript. -->
+
+        <button onclick="window.location.href='index.html'">Voltar para a Tabela de Preços</button>
+        <!-- Botão que, ao ser clicado, redireciona o usuário de volta 
+                    para a página de tabela de preços ('index.html') 
+                    usando um manipulador de evento inline 'onclick'. 
+            Isso permite que o usuário volte facilmente à página anterior. -->
+
+    </div>
+    <!-- Fim da div 'assinatura'. -->
+
+    <script>
+
+        // Evento que espera que o conteúdo HTML seja totalmente carregado 
+                // antes de executar o código JavaScript.
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // 'URLSearchParams' é usado para analisar os parâmetros 
+                    // da URL, que contêm o ID do plano escolhido.
+            const params = new URLSearchParams(window.location.search);
+
+            // 'params.get' obtém o valor do parâmetro 'plano' da URL.
+            const plano = params.get('plano');
+
+            // Obtém o elemento com o ID 'mensagem-plano', onde a 
+                    // mensagem será exibida.
+            const mensagemPlano = document.getElementById('mensagem-plano');
+
+            // O switch examina o valor da variável 'plano' (que contém o ID 
+                    // do plano selecionado da URL) e exibe uma mensagem 
+                    // específica com base no valor.
+            switch(plano) {
+
+                // Caso o valor de 'plano' seja 'plano-basico', a mensagem 
+                        // correspondente será exibida.
+                case 'plano-basico':
+
+                    // A propriedade 'textContent' do elemento 'mensagemPlano' é 
+                            // usada para modificar o texto exibido na página.
+                    // Neste caso, a mensagem informa que o usuário escolheu o 
+                            // plano BÁSICO, e inclui o preço correspondente (R$ 10).
+                    mensagemPlano.textContent = 'Você escolheu o plano BÁSICO. Aproveite nossos recursos por R$ 10 por mês!';
+
+                    // 'break' finaliza este bloco de código, evitando que as 
+                            // próximas instruções no switch sejam executadas. 
+                    // Se o plano for 'plano-basico', o código abaixo não será executado.
+                    break;
+
+                // Caso o valor de 'plano' seja 'plano-premium', a seguinte 
+                        // mensagem será exibida.
+                case 'plano-premium':
+
+                    // Define o conteúdo do texto para o plano PREMIUM. 
+                    // O usuário verá uma mensagem específica indicando o 
+                            // plano premium e seu preço (R$ 25).
+                    mensagemPlano.textContent = 'Você escolheu o plano PREMIUM. Aproveite todos os nossos recursos por R$ 25 por mês!';
+                    
+                    // 'break' interrompe o fluxo do switch após o case 'plano-premium'.
+                    break;
+
+                // Caso o valor de 'plano' seja 'plano-padrao', este case será executado.
+                case 'plano-padrao':
+
+                    // Exibe a mensagem correspondente ao plano PADRÃO, informando o 
+                            // usuário sobre a escolha e o preço de R$ 20.
+                    mensagemPlano.textContent = 'Você escolheu o plano PADRÃO. Aproveite nossos recursos por R$ 20 por mês!';
+
+                    // 'break' encerra o bloco deste case para que o restante do 
+                            // código switch não seja executado.
+                    break;
+
+                // Caso o valor de 'plano' não corresponda a nenhum dos casos 
+                        // anteriores, o 'default' será executado.
+                default:
+
+                    // Aqui, 'default' serve como um tratamento de erro. 
+                    // Se o ID do plano não for reconhecido, exibe uma mensagem 
+                            // informando que o plano não foi encontrado.
+                    mensagemPlano.textContent = 'Plano não encontrado.';
+                    
+                    // O 'break' aqui não é estritamente necessário, mas é uma 
+                            // boa prática tê-lo no 'default' para manter a 
+                            // consistência no código.
+                    break;
+            }
+
+        });
+
+    </script>
+    <!-- Fim da tag <script>, que contém o código JavaScript responsável por 
+                // preencher a página com o plano correto baseado na URL. -->
+
+</body>
+<!-- Fim do corpo do documento HTML. -->
+
+</html>
+<!-- Fim do documento HTML. -->

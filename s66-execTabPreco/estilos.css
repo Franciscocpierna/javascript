@@ -1,0 +1,381 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do corpo do documento como Arial, uma 
+                fonte sans-serif, com um fallback genérico para qualquer 
+                sans-serif se o Arial não estiver disponível. */
+
+    display: flex;
+    /* Estabelece um contexto de flexbox para o elemento <body>, permitindo o 
+                uso de propriedades flexbox para alinhar e distribuir os 
+                elementos filhos. */
+
+    justify-content: center;
+    /* Alinha todos os elementos filhos do <body> horizontalmente ao 
+                centro do container flex. */
+
+    align-items: center;
+    /* Alinha todos os elementos filhos do <body> verticalmente ao 
+                centro do container flex. */
+
+    height: 100vh;
+    /* Define a altura do corpo do documento para ser 100% do viewport 
+                height (altura da janela de visualização), garantindo que o 
+                corpo ocupe toda a altura da tela visível. */
+
+    background-color: #f5f5f5;
+    /* Define a cor de fundo do corpo do documento para um cinza claro (#f5f5f5), 
+                proporcionando um fundo neutro para os elementos da página. */
+
+    margin: 0;
+    /* Remove as margens padrão do <body>, permitindo que o conteúdo estenda-se 
+                completamente até as bordas do viewport. */
+
+}
+
+.tabela-precos {
+
+    display: flex;
+    /* Aplica o flexbox ao container .tabela-precos, permitindo o uso de 
+                propriedades flexbox para organizar seus elementos filhos. */
+
+    justify-content: space-around;
+    /* Distribui espaço uniformemente ao redor de cada item filho 
+                dentro do container .tabela-precos, assegurando que haja 
+                um espaçamento equitativo entre eles e em relação às 
+                bordas do container. */
+
+    width: 80%;
+    /* Define a largura do container .tabela-precos para ser 80% da 
+                largura do seu container pai (neste caso, o <body>), 
+                centralizando o conteúdo e deixando espaço nas laterais. */
+
+}
+
+.plano {
+
+    background-color: #fff;
+    /* Define a cor de fundo dos elementos com a classe .plano para 
+                branco (#fff), o que ajuda a destacá-los no contexto 
+                geral da página. */
+
+    border-radius: 8px;
+    /* Aplica bordas arredondadas de 8 pixels a todos os elementos .plano, 
+                suavizando as bordas para um visual mais moderno e amigável. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra sutil ao redor dos elementos .plano, utilizando RGBA 
+                para uma cor preta com 10% de opacidade, melhorando a percepção de 
+                profundidade na interface. */
+
+    text-align: center;
+    /* Centraliza o texto dentro dos elementos .plano, garantindo que o 
+                conteúdo textual esteja alinhado de forma uniforme e 
+                esteticamente agradável. */
+
+    width: 30%;
+    /* Define a largura dos elementos .plano para 30% do seu container 
+                pai, ajudando a manter uma disposição harmoniosa e consistente 
+                dos planos na página. */
+
+    padding-bottom: 20px;
+    /* Adiciona um padding de 20 pixels na parte inferior dos elementos .plano, 
+                aumentando o espaço entre o conteúdo do plano e sua borda 
+                inferior, o que melhora a legibilidade e a apresentação visual. */
+
+    display: flex;
+    /* Estabelece um contexto de flexbox para cada elemento .plano, o que 
+                facilita a organização interna dos itens contidos 
+                nesses elementos. */
+
+    flex-direction: column;
+    /* Orienta os itens filhos dos elementos .plano em uma coluna (verticalmente), o 
+                que é ideal para estruturas de listagem como as dos 
+                planos de serviços. */
+
+    justify-content: space-between;
+    /* Distribui o espaço disponível entre os itens filhos de .plano de 
+                modo que haja uma separação igual entre eles, proporcionando 
+                um layout mais equilibrado e visualmente atraente. */
+
+    margin: 0 10px;
+    /* Define as margens laterais de cada elemento .plano para 10 pixels, 
+                separando-os visualmente uns dos outros e evitando que os 
+                elementos se toquem diretamente. */
+
+}
+
+.destaque {
+
+    transform: scale(1.1);
+    /* Aplica uma transformação de escala de 1.1 aos elementos com a 
+                classe .destaque, fazendo com que eles aumentem em 10% em 
+                tamanho em relação ao seu estado original. 
+        Esta transformação é usada para destacar visualmente um plano 
+                específico, como um plano premium ou mais vantajoso. */
+
+}
+
+.cabecalho {
+
+    position: relative;
+    /* Define a posição do elemento como relativa, permitindo que os 
+                elementos filhos posicionados de forma absoluta sejam 
+                alinhados em relação a este contêiner. */
+
+    background: linear-gradient(45deg, #007bff, #6610f2);
+    /* Aplica um gradiente linear como plano de fundo que começa com a 
+                cor azul (#007bff) e transiciona para o violeta (#6610f2) em 
+                um ângulo de 45 graus, criando um efeito visual 
+                atraente e moderno. */
+
+    color: #fff;
+    /* Define a cor do texto dentro do .cabecalho para branco (#fff), 
+                garantindo legibilidade contra o fundo colorido do gradiente. */
+
+    padding: 20px 0;
+    /* Aplica um espaçamento interno de 20 pixels no topo e na base do 
+                elemento .cabecalho, contribuindo para uma melhor distribuição 
+                visual do conteúdo dentro do elemento. */
+
+    border-radius: 8px 8px 0 0;
+    /* Arredonda os cantos superiores esquerdo e direito do .cabecalho com 
+                um raio de 8 pixels, enquanto os cantos inferiores permanecem 
+                sem arredondamento, criando uma forma coesa com elementos a
+                baixo que possam se encaixar. */
+
+    overflow: hidden;
+    /* Previne que qualquer conteúdo filho que exceda o tamanho do .cabecalho 
+                seja exibido, mantendo todos os efeitos visuais, como sombras ou 
+                bordas, dentro dos limites definidos. */
+
+}
+
+.destaque .cabecalho {
+
+    background: linear-gradient(45deg, #1d00ff, #00bfff);
+    /* Para elementos .cabecalho que estão dentro de um contêiner .destaque, 
+                redefine o plano de fundo para um gradiente linear 
+                começando de azul escuro (#1d00ff) a um azul claro (#00bfff). 
+        Este gradiente diferencia visualmente o plano destacado dos outros, 
+                acentuando sua importância e atração visual. */
+
+}
+
+.cabecalho::after {
+
+    content: "";
+    /* Define o conteúdo do pseudo-elemento ::after como vazio. 
+    Esta propriedade é necessária para que o pseudo-elemento 
+                seja gerado. */
+
+    position: absolute;
+    /* Posiciona o pseudo-elemento de forma absoluta em relação ao 
+                seu contêiner mais próximo com posição não estática, 
+                neste caso, o .cabecalho que tem 'position: relative'. */
+
+    bottom: -20px;
+    /* Posiciona o pseudo-elemento 20 pixels abaixo do limite inferior 
+                do .cabecalho, criando um efeito visual fora do 
+                contêiner do cabeçalho. */
+
+    left: 50%;
+    /* Posiciona o centro do pseudo-elemento no meio horizontal do .cabecalho. */
+
+    transform: translateX(-50%);
+    /* Ajusta a posição horizontal do pseudo-elemento movendo-o 50% para a 
+                esquerda de seu ponto de origem, garantindo que ele esteja 
+                verdadeiramente centralizado em relação ao .cabecalho. */
+
+    border-width: 20px 20px 0;
+    /* Define a largura das bordas do pseudo-elemento, criando uma "seta" 
+                ou "diamante" invertido. 20px nas partes superior e 
+                lateral e 0 na parte inferior. */
+
+    border-style: solid;
+    /* Define o estilo da borda como sólido, necessário para que as 
+                bordas definidas sejam visíveis. */
+
+    border-color: #fff transparent transparent transparent;
+    /* Define as cores das bordas: branca na parte superior e transparente 
+                nas outras três, criando o efeito de uma única "seta" 
+                apontando para cima a partir do .cabecalho. */
+
+}
+
+.cabecalho h2 {
+
+    margin: 0;
+    /* Remove qualquer margem padrão do elemento <h2>, permitindo um 
+                controle mais preciso do espaçamento ao redor do 
+                título dentro do .cabecalho. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do título para 24 pixels, garantindo 
+                que o texto seja legível e proeminente dentro do cabeçalho. */
+
+}
+
+.cabecalho p {
+
+    margin: 5px 0 0;
+    /* Define a margem superior do parágrafo em 5 pixels e remove as 
+                margens laterais e inferior, controlando o espaçamento 
+                diretamente acima do texto para separá-lo sutilmente 
+                do título acima dele. */
+
+}
+
+.preco {
+
+    font-size: 40px;
+    /* Define o tamanho da fonte para 40 pixels, tornando o texto do 
+                preço grande e facilmente visível para destacar a 
+                informação de custo dentro do layout. */
+
+    margin: 20px 0;
+    /* Estabelece uma margem de 20 pixels acima e abaixo do elemento, 
+                ajudando a separar visualmente o preço dos outros elementos 
+                ao redor, garantindo que ele se destaque de maneira eficaz. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333), que oferece 
+                uma leitura confortável e contraste suficiente com a maioria 
+                dos fundos claros sem ser tão duro quanto o preto puro. */
+
+}
+
+ul {
+
+    list-style: none;
+    /* Remove qualquer marcador padrão de itens de lista, proporcionando 
+                uma apresentação mais limpa e moderna, adequada para designs 
+                minimalistas ou quando os marcadores não agregam valor visual. */
+
+    padding: 0;
+    /* Remove o padding interno padrão da lista, permitindo um controle 
+                total sobre o espaçamento dentro da lista e alinhando conteúdo 
+                com outros elementos na interface. */
+
+    text-align: left;
+    /* Alinha o texto dos itens da lista à esquerda, garantindo consistência e 
+                facilidade de leitura, mantendo o alinhamento padrão para textos 
+                em idiomas ocidentais. */
+
+    margin: 0 20px;
+    /* Define as margens laterais da lista em 20 pixels, proporcionando um 
+                espaçamento adequado do conteúdo adjacente, enquanto as 
+                margens superior e inferior são definidas como 0 para 
+                manter o layout compacto. */
+
+    flex-grow: 1;
+    /* Permite que a lista cresça para absorver qualquer espaço disponível 
+                em seu contêiner flex, o que é útil para manter a consistência 
+                visual entre elementos que podem variar em conteúdo ou altura. */
+
+}
+
+ul li {
+
+    padding: 10px 0;
+    /* Aplica um padding de 10 pixels na parte superior e inferior de 
+                cada item da lista, melhorando a legibilidade ao aumentar o 
+                espaço ao redor do texto dentro de cada item. */
+
+    border-bottom: 1px solid #ddd;
+    /* Adiciona uma borda sólida na parte inferior de cada item da lista, 
+                com 1 pixel de espessura e uma cor cinza claro (#ddd), 
+                que serve para separar visualmente os itens individuais, 
+                facilitando a distinção entre eles. */
+
+}
+
+.check {
+
+    color: green;
+    /* Define a cor do texto para verde, geralmente usado para indicar 
+                confirmação ou uma característica positiva, aumentando a 
+                clareza visual para o usuário. */
+
+    float: right;
+    /* Posiciona o elemento à direita dentro de seu contêiner, tipicamente 
+                usado para alinhar ícones ou pequenos elementos de forma que 
+                se separem do texto principal para destaque visual. */
+
+}
+
+.nao {
+
+    color: red;
+    /* Define a cor do texto para vermelho, uma cor comumente associada a 
+                erros ou ausências, usada aqui para indicar características 
+                não incluídas ou negativas, oferecendo uma orientação 
+                visual imediata. */
+
+    float: right;
+    /* Similar ao .check, posiciona o elemento à direita, mantendo 
+                consistência no layout e facilitando a identificação visual 
+                rápida de itens inclusos e não inclusos. */
+
+}
+
+.botao-comprar {
+
+    background-color: #007bff;
+    /* Define a cor de fundo do botão para um azul vibrante (#007bff),
+                uma cor que sugere confiabilidade e ação, ideal para 
+                chamar a atenção para botões de ação principal. */
+
+    color: #fff;
+    /* Estabelece a cor do texto no botão para branco, proporcionando um 
+                alto contraste contra o fundo azul, o que melhora a 
+                legibilidade e a visibilidade do texto. */
+
+    border: none;
+    /* Remove qualquer borda do botão, oferecendo um design mais limpo e 
+                moderno, alinhado com estilos de interface de 
+                usuário mais atuais. */
+
+    border-radius: 4px;
+    /* Arredonda as bordas do botão com um raio de 4px, suavizando o 
+                design do botão e tornando-o visualmente mais amigável. */
+
+    padding: 10px 20px;
+    /* Aplica um padding interno de 10 pixels verticalmente e 20 pixels 
+                horizontalmente, garantindo que o texto dentro do botão 
+                tenha espaço suficiente ao redor para fácil leitura e um 
+                toque confortável em interfaces táteis. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando sobrevoado, indicando que o 
+                elemento é clicável e interativo. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, separando o botão de 
+                elementos acima dele, o que ajuda a organizar visualmente 
+                áreas clicáveis de forma clara. */
+
+    text-transform: uppercase;
+    /* Converte todo o texto dentro do botão para letras maiúsculas, o 
+                que pode ajudar a dar ênfase e melhorar a 
+                acessibilidade visual. */
+
+}
+
+.destaque .botao-comprar {
+
+    background-color: #1d00ff;
+    /* Altera a cor de fundo do botão para um azul mais profundo (#1d00ff) 
+                quando está dentro de um contêiner com a classe .destaque, 
+                diferenciando-o para indicar uma oferta ou plano especial. */
+
+}
+
+.botao-comprar:hover {
+
+    opacity: 0.9;
+    /* Reduz a opacidade do botão para 90% quando o mouse está sobre 
+                ele, criando um efeito visual sutil que indica interatividade, 
+                encorajando o usuário a clicar. */
+                
+}

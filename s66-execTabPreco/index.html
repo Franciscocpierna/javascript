@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento como HTML5 para garantir 
+            compatibilidade moderna e padrões de renderização -->
+
+<html lang="pt-BR">
+<!-- Elemento raiz do HTML definindo o idioma do documento 
+            como Português do Brasil -->
+
+<head>
+<!-- Cabeçalho do documento, contendo metadados, links para CSS, e outros 
+            scripts que não são exibidos diretamente na página -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8, suportando uma 
+                ampla gama de caracteres além do ASCII básico -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Assegura que a página seja responsiva, escalonando adequadamente 
+                em diferentes dispositivos -->
+    
+    <title>Tabela de Preços</title>
+    <!-- Define o título da página, que aparece na aba do navegador -->
+    
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Link para a folha de estilo externa, que controla a 
+                aparência da página -->
+
+</head>
+<!-- Fim do cabeçalho do documento -->
+
+
+<body>
+<!-- Corpo do documento, onde todo o conteúdo visível é colocado -->
+
+    <div class="tabela-precos">
+    <!-- Divisão que contém toda a tabela de preços, formatada pela 
+                classe 'tabela-precos' -->
+
+        <div class="plano" id="plano-basico">
+        <!-- Divisão que representa um plano individual, identificado 
+                    como 'plano-basico' -->
+
+            <div class="cabecalho">
+                <!-- Este elemento <div> age como o cabeçalho para a seção de 
+                            um plano específico, agrupando visualmente o título e a 
+                            descrição do plano usando a classe 'cabecalho'. -->
+            
+                <h2>BÁSICO</h2>
+                <!-- O elemento <h2> define o nível de título do plano, sendo 'BÁSICO' o 
+                            nome do plano. Essa tag é usada para destacar textualmente o 
+                            nível de serviço oferecido, ajudando na semântica SEO e na 
+                            estrutura do documento. -->
+            
+                <p>O cliente é muito importante.</p>
+                <!-- Este parágrafo <p> fornece uma descrição breve que acompanha o 
+                            título do plano. Esta mensagem reforça a importância do cliente, 
+                            adicionando um elemento persuasivo ao conteúdo. -->
+            
+            </div>
+            <!-- Fim da <div> 'cabecalho', encerrando o cabeçalho do plano -->
+            
+            <p class="preco">R$ 10</p>
+            <!-- Este parágrafo exibe o preço do plano. A classe 'preco' é 
+                        usada para estilização específica, como tamanho de fonte ou cor, 
+                        destacando o custo do plano dentro da estrutura da página. -->
+            
+            <ul>
+                <!-- A tag <ul> cria uma lista não ordenada. Aqui, ela é usada para listar os 
+                            benefícios ou características incluídas no plano, permitindo uma 
+                            fácil visualização das vantagens oferecidas. -->
+            
+                <li>Texto de exemplo <span class="check">✔</span></li>
+                <!-- Cada <li> representa um item individual na lista de características. 
+                            Este item inclui um texto 'Texto de exemplo' e um ícone de 
+                            verificação (<span class="check">✔</span>), indicando que este 
+                            benefício está incluído no plano. -->
+            
+                <li>Outro título de texto <span class="check">✔</span></li>
+                <!-- Similar ao item anterior, este também lista um benefício com um ícone de 
+                            verificação, usando uma descrição diferente para diversificar as 
+                            vantagens apresentadas. -->
+            
+                <li>Espaço para texto <span class="nao">✘</span></li>
+                <!-- Este item lista uma característica que não está incluída no plano, marcada 
+                            com um ícone de 'não' (<span class="nao">✘</span>), o que ajuda a 
+                            diferenciar visualmente os benefícios incluídos dos que não são. -->
+            
+                <li>Espaço para descrição <span class="check">✔</span></li>
+                <!-- Mais um benefício listado que está incluído no plano, também indicado 
+                            pelo ícone de verificação. Este item ajuda a completar a lista de 
+                            vantagens oferecidas. -->
+            
+            </ul>
+            <!-- Fim da <ul>, concluindo a lista de características do plano -->
+            
+            <button class="botao-comprar">COMPRAR AGORA</button>
+            <!-- Este <button> é usado para iniciar o processo de compra do plano. 
+                A classe 'botao-comprar' é usada para estilização e pode incluir 
+                            propriedades como cor de fundo, tamanho e interatividade, 
+                            como efeitos de hover. Este botão é essencial para a 
+                            conversão de usuários em clientes. -->
+            
+
+            </div>
+            <!-- Fim do plano básico -->
+
+            <div class="plano destaque" id="plano-premium">
+                <!-- Divisão (div) para um plano específico, marcado com as classes 'plano' 
+                            e 'destaque'. A classe 'destaque' sugere que este plano tem um 
+                            destaque visual ou de posição na página. O ID 'plano-premium' 
+                            identifica este plano como o 'Premium', permitindo manipulação 
+                            específica via CSS ou JavaScript. -->
+            
+                    <div class="cabecalho">
+                    <!-- Esta div representa o cabeçalho do plano Premium, agrupando visualmente o 
+                                título e descrição do plano para destacar informações importantes 
+                                para o usuário e melhorar a estrutura semântica da página. -->
+            
+                        <h2>PREMIUM</h2>
+                        <!-- Elemento h2 para o título do plano, designando a hierarquia e a 
+                                    importância deste texto como o nome do plano Premium. 
+                            Usado para atrair atenção e também para SEO (Search Engine Optimization). -->
+            
+                        <p>O cliente é muito importante.</p>
+                        <!-- Parágrafo descrevendo a importância do cliente, 
+                                    usado para reforçar o valor oferecido pelo plano e estimular a 
+                                    decisão de compra. -->
+            
+                    </div>
+                    <!-- Fim da div 'cabecalho', concluindo a seção de cabeçalho 
+                                do plano Premium. -->
+            
+                    <p class="preco">R$ 25</p>
+                    <!-- Parágrafo indicando o preço do plano Premium. A classe 'preco' é 
+                                utilizada para estilizar este elemento de modo que se destaque 
+                                na página, sendo essencial para a tomada de decisão do usuário. -->
+            
+                    <ul>
+                    <!-- Lista não ordenada (ul) contendo as características do plano Premium. 
+                    Este método de listagem ajuda na leitura e compreensão rápida do que 
+                                está sendo oferecido. -->
+            
+                        <li>Texto de exemplo <span class="check">✔</span></li>
+                        <!-- Item da lista apresentando uma característica do plano. 
+                        O ícone 'check' (✔) dentro da span com classe 'check' indica que essa 
+                                    característica está incluída, oferecendo um feedback 
+                                    visual positivo. -->
+            
+                        <li>Outro título de texto <span class="check">✔</span></li>
+                        <!-- Similar ao item anterior, esse também lista uma característica 
+                                    inclusa, utilizando o ícone 'check' para reforçar 
+                                    visualmente a inclusão. -->
+            
+                        <li>Espaço para texto <span class="check">✔</span></li>
+                        <!-- Outra característica inclusa, marcada com 'check', reforçando a 
+                                    ideia de valor agregado no plano Premium com a repetição 
+                                    visual do ícone de verificação. -->
+            
+                        <li>Espaço para descrição <span class="check">✔</span></li>
+                        <!-- Item final na lista de características, também com um 'check'. 
+                        Cada 'check' sucessivo ajuda a construir uma percepção de valor e 
+                                    completude do plano. -->
+            
+                    </ul>
+                    <!-- Fim da lista (ul), concluindo a apresentação das características 
+                                incluídas no plano Premium. -->
+            
+                    <button class="botao-comprar">COMPRAR AGORA</button>
+                    <!-- Botão para a ação de compra. A classe 'botao-comprar' 
+                                adiciona estilos específicos como cor de fundo, tipografia e 
+                                efeitos interativos para atrair a atenção do usuário e incentivar 
+                                cliques. 
+                    O texto 'COMPRAR AGORA' é uma chamada à ação direta e urgente, visando 
+                                conversões imediatas. -->
+            
+            </div>
+            <!-- Fim da div 'plano destaque', encerrando a representação visual e 
+                        estrutural do plano Premium na página. -->
+
+
+            <div class="plano" id="plano-padrao">
+            <!-- Divisão (<div>) que serve como contêiner para o plano "Padrão". 
+                A classe 'plano' é usada para aplicar estilos consistentes entre todos 
+                        os planos, e o ID 'plano-padrao' identifica especificamente este 
+                        plano para estilização ou manipulação via JavaScript. -->
+
+                <div class="cabecalho">
+                <!-- Seção de cabeçalho do plano, contendo o título e uma descrição. 
+                A estrutura do cabeçalho ajuda na organização visual e 
+                            hierárquica do conteúdo. -->
+
+                    <h2>PADRÃO</h2>
+                    <!-- Elemento <h2> que exibe o nome do plano. O uso de um cabeçalho 
+                                de segundo nível contribui para a semântica do documento, 
+                                ajudando na acessibilidade e SEO. -->
+
+                    <p>O cliente é muito importante.</p>
+                    <!-- Parágrafo com uma breve descrição do plano, destacando a importância 
+                                do cliente. Isso serve para reforçar o valor do plano aos 
+                                potenciais compradores. -->
+
+                </div>
+                <!-- Fim da div 'cabecalho'. Encerra o cabeçalho do plano, criando um
+                            bloco visual claramente definido. -->
+
+                <p class="preco">R$ 20</p>
+                <!-- Parágrafo que mostra o preço do plano. A classe 'preco' é usada para 
+                            destacar visualmente o valor, crucial para a decisão de 
+                            compra do usuário. -->
+
+                <ul>
+                <!-- Início de uma lista não ordenada (<ul>) que detalha as 
+                            características do plano. 
+                    A lista permite uma leitura fácil e rápida dos 
+                            benefícios incluídos. -->
+
+                    <li>Texto de exemplo <span class="check">✔</span></li>
+                    <!-- Item de lista (<li>) que apresenta uma característica inclusa 
+                                no plano, marcada com um ícone de verificação (✔), simbolizando 
+                                que o benefício está disponível. -->
+
+                    <li>Outro título de texto <span class="check">✔</span></li>
+                    <!-- Outro item de lista com uma característica incluída, também 
+                                indicada pelo ícone de verificação, mantendo consistência na 
+                                forma como as características são apresentadas. -->
+
+                    <li>Espaço para texto <span class="check">✔</span></li>
+                    <!-- Mais uma característica inclusa, demonstrando que o plano oferece 
+                                múltiplos benefícios, todos marcados visualmente com 'check' 
+                                para reforçar a inclusão. -->
+
+                    <li>Espaço para descrição <span class="nao">✘</span></li>
+                    <!-- Item de lista que mostra uma característica não inclusa no plano, 
+                                destacada com um ícone de 'não' (✘), oferecendo transparência 
+                                sobre o que não está incluído. -->
+
+                </ul>
+                <!-- Fim da lista (<ul>). Esta estrutura organiza as informações sobre o que 
+                                está e não está incluído no plano, facilitando a comparação 
+                                com outras opções. -->
+
+                <button class="botao-comprar">COMPRAR AGORA</button>
+                <!-- Botão com a classe 'botao-comprar', usado para iniciar o 
+                            processo de compra. 
+                    O texto "COMPRAR AGORA" é uma chamada à ação direta, projetada para 
+                        estimular uma resposta imediata do usuário. -->
+
+            </div>
+            <!-- Fim da divisão do plano padrão. Encerra a descrição completa do plano 
+                        dentro da estrutura da página, mantendo uma separação clara 
+                        entre os diferentes planos disponíveis. -->
+
+
+    </div>
+    <!-- Fim da divisão que contém todos os planos -->
+
+    <script src="script.js"></script>
+    <!-- Script externo carregado para adicionar funcionalidades 
+                de interatividade -->
+
+</body>
+<!-- Fim do corpo do documento -->
+
+</html>
+<!-- Fim do documento HTML -->
