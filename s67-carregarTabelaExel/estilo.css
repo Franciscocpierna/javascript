@@ -1,0 +1,157 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o corpo da página. 
+                "Arial" é a fonte primária, e "sans-serif" é a 
+                fonte de fallback.
+       As fontes sans-serif são fontes sem serifa, o que 
+                significa que não têm pequenos traços ou linhas 
+                nas extremidades das letras. */
+
+    margin: 20px;
+    /* Aplica uma margem de 20 pixels em todos os lados do elemento <body>. 
+                Isso cria um espaço entre a borda do conteúdo da 
+                página e a janela do navegador. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto dentro dos elementos <h1> (títulos principais) 
+                ao centro. Isso é comumente usado para centralizar 
+                títulos em uma página. */
+
+}
+
+input[type="text"] {
+
+    margin-top: 5px;
+    /* Aplica uma margem de 5 pixels apenas na parte superior dos 
+                elementos de entrada de texto. Isso cria um espaço entre 
+                este elemento e outros elementos acima dele. */
+
+    padding: 2px;
+    /* Define o preenchimento interno dos elementos de entrada de 
+                texto em 2 pixels em todas as direções. O preenchimento é o 
+                espaço entre o conteúdo interno de um elemento e sua borda. */
+
+    width: 100%;
+    /* Define a largura dos elementos de entrada de texto para 
+                ocupar 100% da largura do seu elemento pai. Isso faz 
+                com que o campo de entrada se estenda para cobrir 
+                toda a largura disponível. */
+
+    box-sizing: border-box;
+    /* Altera o modelo de caixa padrão para 'border-box', o que 
+                significa que a largura e altura definidas incluem 
+                conteúdo, preenchimento e borda, mas não a margem.
+       Isso facilita o dimensionamento dos elementos, pois ao 
+                definir a largura e a altura, você não precisa se 
+                preocupar com o preenchimento ou a borda adicionando-se 
+                ao tamanho declarado. */
+
+}
+
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura do 
+                seu elemento pai. Isso faz com que a tabela estenda-se 
+                horizontalmente para cobrir todo o espaço disponível. */
+
+    border-collapse: collapse;
+    /* Esta propriedade altera o comportamento padrão das bordas de 
+                tabelas e células para que as bordas adjacentes se 
+                fundam em uma única borda, removendo qualquer espaço 
+                duplo que normalmente existe entre as bordas. */
+
+    margin-top: 10px;
+    /* Adiciona uma margem de 10 pixels apenas no topo da tabela. 
+                Isso separa visualmente a tabela de qualquer conteúdo 
+                que esteja acima dela na página. */
+
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida com 1 pixel de espessura e cor 
+                cinza claro (#ddd) em torno de cada célula de 
+                cabeçalho (`th`) e de dados (`td`). 
+       Isso ajuda a definir os limites de cada célula dentro da 
+                tabela, tornando os dados mais fáceis de ler. */
+
+    padding: 8px;
+    /* Define um preenchimento de 8 pixels em todas as direções 
+                dentro de cada célula (`th` e `td`). O preenchimento é o 
+                espaço entre o conteúdo da célula e sua borda, 
+                aumentando a legibilidade ao afastar o texto das bordas. */
+
+    text-align: left;
+    /* Alinha o texto dentro das células de cabeçalho e de dados à 
+                esquerda. Este é o alinhamento padrão para texto em 
+                muitos idiomas que usam script da esquerda para a direita. */
+
+}
+
+th {
+
+    background-color: #f2f2f2;
+    /* Define a cor de fundo das células de cabeçalho (`th`) para 
+                um cinza muito claro (#f2f2f2). 
+       Isso distingue visualmente as células de cabeçalho das células 
+                de dados e ajuda a focar a atenção nas etiquetas das 
+                colunas, facilitando a navegação na tabela. */
+
+}
+
+
+button {
+
+    display: block;
+    /* Define o botão como um elemento de bloco. Elementos de 
+                bloco ocupam a largura total de seu contêiner pai, o 
+                que significa que o botão se estenderá horizontalmente 
+                para ocupar todo o espaço disponível, a menos que a 
+                largura seja especificamente definida. */
+
+    margin: 10px auto;
+    /* Configura a margem do botão. '10px auto' aplica uma margem 
+                superior e inferior de 10 pixels e uma margem 
+                horizontal automática. 
+       Isso centraliza o botão horizontalmente dentro de seu 
+                contêiner pai, já que as margens laterais automáticas 
+                empurram igualmente de ambos os lados. */
+
+    padding: 8px 16px;
+    /* Aplica um preenchimento interno ao botão. '8px 16px' significa 8 
+                pixels de preenchimento no topo e na base, e 16 
+                pixels nas laterais. 
+       Isso aumenta o tamanho do botão e faz com que o texto 
+                dentro do botão seja mais fácil de ler e clique 
+                mais confortável. */
+
+    background-color: #007BFF;
+    /* Define a cor de fundo do botão como um azul brilhante (#007BFF). 
+                Esta cor é visualmente atraente e comum em elementos 
+                interativos, sugerindo que é clicável. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão como branco. O contraste 
+                do texto branco sobre o fundo azul brilhante é alto, 
+                melhorando a legibilidade e atração visual. */
+
+    border: none;
+    /* Remove qualquer borda do botão. Isso dá ao botão um visual 
+                mais limpo e moderno, pois as bordas podem às vezes 
+                parecer desnecessárias ou antiquadas, dependendo do design. */
+
+    cursor: pointer;
+    /* Altera o cursor para um ponteiro quando ele passa sobre o botão. 
+                Isso indica que o botão é um elemento clicável, melhorando a 
+                usabilidade ao fornecer um feedback visual de que o 
+                botão pode ser pressionado. */
+                
+}

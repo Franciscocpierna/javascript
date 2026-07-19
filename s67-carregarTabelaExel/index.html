@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- A linha acima é a declaração do DOCTYPE, que é uma 
+               instrução para o navegador sobre a versão e o 
+               tipo do documento HTML. 
+     Essa declaração específica <!DOCTYPE html> indica que o 
+               documento é HTML5. -->
+
+<html lang="pt">
+<!-- A tag <html> é a raiz do documento HTML. O atributo 'lang="pt"' 
+               especifica que o idioma principal do conteúdo do 
+               documento é o português. -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre dados) que 
+               geralmente não são visíveis para os usuários, mas são 
+               úteis para o navegador e os mecanismos de busca. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> é usada para especificar metadados. 
+               O atributo 'charset="UTF-8"' define o conjunto de 
+               caracteres utilizado para o documento como UTF-8, 
+         que inclui quase todos os caracteres de todos os idiomas 
+               humanos, garantindo que o texto seja exibido corretamente. -->
+
+    <title>Tabela de Funcionários</title>
+    <!-- A tag <title> define o título do documento, que é mostrado na 
+               aba do navegador. Aqui, o título é "Tabela de Funcionários". -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- A tag <link> é usada aqui para vincular um arquivo CSS 
+               externo ao documento HTML. O atributo 'rel="stylesheet"' 
+               indica que o tipo de documento vinculado é uma 
+               folha de estilo CSS.
+         O atributo 'href="estilo.css"' especifica o caminho para o 
+               arquivo CSS que contém os estilos que serão 
+               aplicados ao HTML. -->
+
+</head>
+<!-- A tag </head> marca o fim da seção de cabeçalho do 
+          documento HTML. -->
+
+
+<body>
+<!-- A tag <body> contém todo o conteúdo da página que será 
+               visível para os usuários, como texto, imagens, 
+               vídeos, jogos, áudios, etc. -->
+
+    <h1>Tabela de Funcionários</h1>
+    <!-- A tag <h1> é usada para o título principal da página. 
+                    É considerado o título mais importante e é 
+                    frequentemente usado pelos motores de busca 
+                    para entender o tópico principal da página.
+         Aqui, ele exibe "Tabela de Funcionários", indicando o 
+                    conteúdo principal da página. -->
+
+    <button onclick="exportarParaExcel()">Exportar para Excel</button>
+    <!-- A tag <button> cria um botão clicável. O atributo 'onclick' 
+                    define uma ação de JavaScript que será executada 
+                    quando o botão for clicado.
+         Neste caso, chama a função 'exportarParaExcel()', que 
+                    exporta os dados da tabela para um arquivo Excel. 
+                    O texto dentro do botão é "Exportar para Excel". -->
+
+    <table id="tabelaFuncionarios">
+    <!-- A tag <table> é usada para criar uma tabela. O atributo 'id' 
+                    fornece um identificador único à tabela, chamado 
+                    "tabelaFuncionarios", que pode ser usado para 
+                    referenciar a tabela no CSS e JavaScript. -->
+
+        <thead>
+        <!-- A tag <thead> é usada para agrupar o conteúdo do cabeçalho 
+                    em uma tabela HTML. É útil para aplicar estilos específicos 
+                    aos cabeçalhos ou para fins de acessibilidade e 
+                    organização do conteúdo. -->
+
+            <tr>
+            <!-- A tag <tr> define uma linha de células em uma tabela. -->
+
+                <th>Nome <input type="text" oninput="filtrarTabela()" id="filtroNome" placeholder="Filtrar por Nome"></th>
+                <!-- A tag <th> define uma célula de cabeçalho em uma tabela HTML, 
+                              usada para títulos de colunas. Aqui, contém o 
+                              texto "Nome" e um campo de entrada (input) para 
+                              filtrar os dados da tabela.
+                     O campo de entrada tem um ouvinte de evento 'oninput' que 
+                              chama 'filtrarTabela()' sempre que o usuário digita, 
+                              permitindo filtrar dinamicamente os dados da 
+                              tabela por nome. -->
+
+                <th>Departamento <input type="text" oninput="filtrarTabela()" id="filtroDepartamento" placeholder="Filtrar por Departamento"></th>
+                <!-- Similar ao anterior, mas para o departamento. -->
+
+                <th>Cargo <input type="text" oninput="filtrarTabela()" id="filtroCargo" placeholder="Filtrar por Cargo"></th>
+                <!-- Similar ao anterior, mas para o cargo. -->
+
+                <th>Salário <input type="text" oninput="filtrarTabela()" id="filtroSalario" placeholder="Filtrar por Salário"></th>
+                <!-- Similar ao anterior, mas para o salário. -->
+
+                <th>Tempo de Empresa (anos) <input type="text" oninput="filtrarTabela()" id="filtroTempo" placeholder="Filtrar por Tempo"></th>
+                <!-- Similar ao anterior, mas para o tempo de empresa. Esta coluna 
+                              permite filtrar quanto tempo os funcionários 
+                              estão na empresa. -->
+
+            </tr>
+        </thead>
+
+        <tbody id="corpoTabela">
+        <!-- A tag <tbody> é usada para agrupar o conteúdo do corpo da tabela, 
+                    que contém todas as linhas de dados exceto o cabeçalho. O 'id' 
+                    permite que o JavaScript adicione dinamicamente linhas à tabela. -->
+                    
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- A tag <script> com o atributo 'src' inclui um arquivo JavaScript 
+               externo. Este script específico é uma biblioteca chamada 'xlsx', 
+               usada para manipular arquivos Excel no navegador. -->
+
+    <script src="script.js"></script>
+    <!-- Inclui um segundo arquivo JavaScript, 'script.js', que contém o 
+               código JavaScript específico para esta página. -->
+
+</body>
+</html>
+<!-- As tags </body> e </html> marcam o fim do conteúdo visível e o 
+               fim do documento HTML, respectivamente. -->
