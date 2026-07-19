@@ -288,3 +288,76 @@ function exportarParaExcel() {
             // Excel com os dados da tabela.
 
 }
+
+
+
+
+
+/*
+A mágica da filtragem acontece na função filtrarTabela(), especificamente na combinação 
+do laço de repetição (for) com a condicional dentro da propriedade style.display.
+
+Aqui está o passo a passo de como o código entende o que deve aparecer ou sumir:
+
+1. O momento do disparo
+Tudo começa no HTML, nesta parte que você enviou:
+
+1. O momento do disparo
+Tudo começa no HTML, nesta parte que você enviou:
+
+<input type="text" oninput="filtrarTabela()" id="filtroNome" ...>
+
+O evento oninput monitora o campo. Toda vez que você digita, apaga ou cola algo, o navegador chama a 
+função filtrarTabela() automaticamente.
+
+2. A lógica da decisão (O "coração" da filtragem)
+Dentro da função filtrarTabela(), o código percorre linha por linha da tabela 
+(for (var i = 0; i < linhas.length; i++)). Para cada linha, ele faz uma pergunta gigante.
+
+A parte crucial é esta:
+
+// Verifica se o valor da célula contém o que foi digitado
+
+(nome.includes(filtroNome) || filtroNome === "") &&
+(departamento.includes(filtroDepartamento) || filtroDepartamento === "") &&
+// ... (outros filtros)
+
+// Se o resultado for verdadeiro, ele aplica "" (mostra), se for falso, aplica "none" (esconde)
+? "" : "none";
+
+3. Por que funciona assim?
+nome.includes(filtroNome): É aqui que ocorre a comparação real. O método .includes() verifica se o texto 
+que você digitou está dentro do texto que está na tabela. Se você digitou "Ana" e na tabela está "Ana Paula", 
+o resultado é true (verdadeiro).
+
+|| filtroNome === "": Isso é o "seguro". Se o campo de filtro estiver vazio, o código entende que você 
+não quer filtrar por aquele critério, então ele retorna true para manter a linha visível.
+
+O Operador && (E): O código usa o && para unir todos os filtros. Isso significa que uma linha só será exibida 
+se ela passar em TODOS os testes ao mesmo tempo. Se o nome bater com o filtro, mas o departamento for diferente,
+ o resultado final será false.
+
+O Operador Ternário ? "" : "none": Esta é a forma simplificada de um if/else.
+
+Se toda aquela conta gigante deu true, ele define style.display = "" (isso limpa o estilo, fazendo o navegador 
+        mostrar a linha).
+
+Se deu false, ele define style.display = "none" (isso esconde a linha instantaneamente da tela).
+
+Resumo do processo
+Você digita: O oninput chama a função.
+
+Coleta: O código lê o que você escreveu e o que está escrito em cada linha da tabela.
+
+Compara: Ele checa se cada linha atende a todos os filtros preenchidos simultaneamente.
+
+Esconde/Mostra: Ele altera a propriedade CSS display de cada linha (<tr>), redesenhando a tabela na sua 
+tela em milissegundos.
+
+Uma dica técnica: Como você notou nos comentários do seu código, usar .includes() é excelente para buscas 
+rápidas, mas essa lógica funciona melhor se os dados na tabela forem strings. Se você quiser filtrar números 
+(como salário) por valores maiores ou menores que um número, essa lógica de .includes() precisaria ser alterada 
+para comparações matemáticas (>,<).
+
+Faz sentido essa estrutura de "perguntas" para cada linha da tabela?
+*/
