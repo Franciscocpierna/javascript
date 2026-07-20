@@ -1,0 +1,182 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do corpo do documento. 
+               "Arial" é a fonte primária, enquanto "sans-serif" 
+               serve como fallback. 
+       Arial é uma fonte sem serifa, conhecida por sua 
+               legibilidade em telas de computador. */
+
+    margin: 20px;
+    /* Aplica uma margem uniforme de 20 pixels em todos os 
+               lados do elemento <body>. 
+       Isso cria um espaço entre o conteúdo da página e as bordas 
+               do navegador, tornando o layout mais agradável visualmente. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto dos elementos <h1> ao centro. 
+       Isso é comumente usado para títulos principais, garantindo 
+               que eles se destaquem e sejam facilmente localizáveis 
+               visualmente na página. */
+
+}
+
+select {
+
+    margin-top: 5px;
+    /* Aplica uma margem de 5 pixels apenas no topo dos 
+               elementos <select>. 
+       Isso separa visualmente os elementos dropdown dos elementos 
+               que estão acima deles, como cabeçalhos de tabelas 
+               ou outros conteúdos. */
+
+    padding: 2px;
+    /* Define o preenchimento interno de 2 pixels em todas as 
+               direções dentro dos elementos <select>. 
+       O preenchimento aumenta a área clicável do dropdown, 
+               melhorando a usabilidade, especialmente em 
+               dispositivos com tela de toque. */
+
+    width: 100%;
+    /* Define a largura dos elementos <select> para ocupar 100% 
+               da largura de seu elemento pai. 
+       Isso garante que os dropdowns se estendam horizontalmente 
+               para se alinhar com outros elementos de formulário ou 
+               conteúdo, criando um layout coerente. */
+
+    box-sizing: border-box;
+    /* Altera o modelo de caixa dos elementos <select> 
+               para 'border-box'. 
+       Isso significa que as propriedades de largura e altura 
+               desses elementos incluirão o conteúdo, o 
+               preenchimento e a borda, mas não a margem. 
+       Facilita o controle do layout, pois as dimensões 
+               especificadas são as dimensões finais do elemento, 
+               incluindo bordas e preenchimento. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura do 
+               elemento pai. Isso garante que a tabela se estenda 
+               totalmente ao longo do espaço horizontal disponível, 
+               adequando-se ao layout da página. */
+
+    border-collapse: collapse;
+    /* A propriedade 'border-collapse: collapse;' faz com que as 
+               bordas de células adjacentes de uma tabela se fundam 
+               em uma única borda, eliminando bordas duplas entre 
+               células e dando à tabela um aspecto mais limpo e 
+               mais integrado. */
+
+    margin-top: 10px;
+    /* Aplica uma margem de 10 pixels apenas no topo da tabela. 
+               Isso cria um espaço vertical entre quaisquer elementos 
+               que estejam acima da tabela e a própria tabela, ajudando a 
+               separar visualmente a tabela de outros conteúdos. */
+               
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+    /* Define uma borda de 1 pixel sólida com a cor #ddd (um cinza 
+               claro) para todas as células de cabeçalho (`th`) e 
+               células de dados (`td`). Isso delineia claramente as 
+               células individuais na tabela, facilitando a leitura dos dados. */
+
+    padding: 8px;
+    /* Aplica um preenchimento de 8 pixels em todas as direções dentro '
+               de cada célula (`th` e `td`). Este preenchimento cria espaço 
+               entre o conteúdo da célula e suas bordas, melhorando a 
+               legibilidade e o aspecto visual dos dados na tabela. */
+
+    text-align: left;
+    /* Alinha o texto dentro das células à esquerda. Essa é a 
+            configuração padrão para texto em muitos idiomas e ajuda a 
+            manter a tabela organizada e fácil de ler, alinhando o texto 
+            de forma consistente em todas as células. */
+
+}
+
+th {
+
+    background-color: #f2f2f2;
+    /* Define a cor de fundo das células de cabeçalho (`th`) para um 
+            cinza muito claro (#f2f2f2). Essa diferenciação de cor destaca 
+            as células de cabeçalho das células de dados, ajudando os 
+            usuários a identificar rapidamente as colunas e a 
+            navegar pela tabela. */
+
+}
+
+
+button {
+
+    display: block;
+    /* Configura o botão para ser um elemento de bloco. Isso faz 
+            com que o botão ocupe toda a largura disponível de 
+            seu contêiner, a menos que a largura seja explicitamente 
+            definida. Por padrão, os botões são elementos inline-block. */
+
+    margin: 10px auto;
+    /* Define a margem do botão. '10px auto' coloca uma margem de 10 
+            pixels em cima e embaixo, e automaticamente centraliza o 
+            botão no eixo horizontal. 
+       Essa centralização é útil para alinhar o botão de forma 
+            estética no centro da página ou do contêiner pai. */
+
+    padding: 8px 16px;
+    /* Define o preenchimento interno do botão para 8 pixels na 
+            vertical (topo e base) e 16 pixels na horizontal 
+            (esquerda e direita). 
+       Isso aumenta a área de clique e melhora a visibilidade do 
+            texto dentro do botão, tornando-o mais acessível e 
+            fácil de usar. */
+
+    background-color: #007BFF;
+    /* Define a cor de fundo do botão para um azul vibrante (#007BFF). 
+       A cor azul é frequentemente usada em design para elementos 
+            interativos, pois é atraente e fácil de identificar 
+            como um elemento clicável. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para branco. 
+            O contraste do texto branco sobre um fundo azul é 
+            alto, o que melhora a legibilidade. */
+
+    border: none;
+    /* Remove a borda do botão. Isso proporciona um design mais 
+            limpo e moderno, pois as bordas não são necessárias para 
+            definir os limites do botão devido à sua cor de 
+            fundo distinta. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando ele está sobre o 
+            botão. Isso é um indicativo visual padrão que o 
+            elemento é clicável, melhorando a usabilidade. */
+
+}
+
+
+#info {
+
+    text-align: center;
+    /* Alinha o texto dentro do elemento com ID 'info' ao centro. 
+            Isso é útil para apresentar informações de forma 
+            clara e direta no meio da página, 
+            tornando-as mais visíveis e legíveis para os usuários. */
+
+    margin-top: 10px;
+    /* Aplica uma margem de 10 pixels apenas no topo do elemento 'info'. 
+            Isso separa visualmente o 'info' de quaisquer elementos 
+            que estejam acima dele, criando uma distinção clara 
+            entre diferentes seções de conteúdo na página. */
+            
+}

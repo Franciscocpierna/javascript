@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- Esta declaração DOCTYPE informa ao navegador que esta 
+            página deve ser interpretada como um documento HTML5. 
+     É o padrão recomendado para garantir que o navegador processe a 
+            página usando as regras de HTML mais modernas. -->
+
+<html lang="pt">
+<!-- A tag <html> define o elemento raiz de um documento HTML, 
+            que contém todos os outros elementos.
+     O atributo 'lang="pt"' especifica que o idioma principal 
+            do documento é o Português. 
+     Isso é importante para acessibilidade, motores de busca e 
+            navegadores que precisam saber o idioma do conteúdo 
+            para processá-lo corretamente. -->
+
+<head>
+<!-- A tag <head> contém metadados sobre o documento HTML. Metadados 
+            não são exibidos na página, mas são usados pelo navegador e 
+            por outros serviços web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> é usada aqui com o atributo 'charset', que 
+                especifica o conjunto de caracteres para a página.
+         'UTF-8' é um conjunto de caracteres universal que inclui 
+                quase todos os caracteres de todos os sistemas de 
+                escrita do mundo. 
+         Isso ajuda a garantir que qualquer texto seja exibido 
+                corretamente no navegador. -->
+
+    <title>Tabela com Filtros de Seleção (Dropdown)</title>
+    <!-- A tag <title> define o título da página, que é exibido 
+                na aba do navegador. 
+         É uma prática importante de SEO e usabilidade, pois dá aos 
+                usuários uma indicação do conteúdo da página. 
+         Aqui, ele indica que a página contém uma tabela com filtros 
+                de seleção em forma de dropdown. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- A tag <link> com o atributo 'rel' definido como 'stylesheet' é 
+                usada para vincular um arquivo CSS externo ao documento HTML.
+         O atributo 'href' especifica o caminho para o arquivo CSS que 
+                contém os estilos que serão aplicados aos elementos HTML.
+         'estilo.css' é o nome do arquivo CSS que contém estilos para 
+                formatar a tabela e outros elementos da página. -->
+
+</head>
+<!-- A tag </head> marca o fim da seção de cabeçalho 
+            do documento HTML. -->
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível de uma 
+                página web, como texto, imagens, vídeos, 
+                links, tabelas e mais. -->
+    
+        <h1>Tabela com Filtros de Seleção (Dropdown)</h1>
+        <!-- A tag <h1> define um cabeçalho de nível um, que é 
+                    geralmente usado para o título principal ou 
+                    mais importante da página.
+             Aqui, anuncia o conteúdo da página: "Tabela com 
+                    Filtros de Seleção (Dropdown)". 
+             Este título é importante para SEO e para dar aos 
+                    usuários uma compreensão clara do que a página contém. -->
+    
+        <button onclick="exportarParaExcel()">Exportar para Excel</button>
+        <!-- A tag <button> cria um botão na página que os 
+                    usuários podem clicar.
+             O atributo 'onclick' define uma ação de JavaScript 
+                    para ser executada quando o botão é clicado. 
+             Neste caso, ao clicar, a função 'exportarParaExcel()' 
+                    será chamada, que exporta os 
+                    dados da tabela para um arquivo Excel. 
+             O texto dentro do botão, "Exportar para Excel", informa 
+                    claramente o que o botão faz, tornando a 
+                    interface do usuário intuitiva. -->
+    
+        <div id="info">
+        <!-- A tag <div> é usada para agrupar elementos e pode ser 
+                    utilizada para aplicar estilos CSS ou 
+                    manipulações de JavaScript.
+             O atributo 'id' atribui um identificador único à div, 
+                    neste caso 'info', o que permite que estilos e 
+                    scripts se refiram especificamente a esta seção. -->
+    
+            <p>Total de Linhas: <span id="contadorLinhas">0</span></p>
+            <!-- A tag <p> é usada para parágrafos de texto. Aqui, ela 
+                        contém uma descrição e um valor numérico.
+                 A descrição é "Total de Linhas:", que é um rótulo 
+                        textual estático.
+                 A tag <span> com o 'id' 'contadorLinhas' é usada 
+                        para encapsular o número que representa o 
+                        total de linhas na tabela, inicialmente definido como 0.
+                 O uso de <span> permite a manipulação direta deste número 
+                        via JavaScript sem afetar o texto circundante. -->
+    
+            <p>Somatório de Salários: <span id="somaSalarios">R$ 0,00</span></p>
+            <!-- Similar ao parágrafo anterior, mas esta linha trata 
+                        do somatório dos salários.
+                 "Somatório de Salários:" é o rótulo, e <span id="somaSalarios"> 
+                        encapsula o valor do somatório, inicialmente 
+                        formatado como "R$ 0,00".
+                 Isso também permite atualizações dinâmicas via JavaScript, 
+                        facilitando a apresentação de dados calculados 
+                        em tempo real. -->
+                        
+        </div>
+        <!-- Fim da div com 'id' 'info'. -->
+    
+    <!-- Início da tabela de funcionários -->
+    <table id="tabelaFuncionarios">
+
+        <!-- Cabeçalho da tabela -->
+        <thead>
+
+            <!-- Linha do cabeçalho -->
+            <tr>
+
+                <!-- Cabeçalho da coluna Nome -->
+                <th>
+
+                    Nome
+
+                    <!-- Seleção para filtrar por Nome -->
+                    <select id="filtroNome" onchange="filtrarTabela()">
+
+                        <!-- Opção padrão que mostra todos os nomes -->
+                        <option value="">Todos</option>
+
+                        <!-- Opções adicionais serão adicionadas dinamicamente -->
+                         
+                    </select>
+
+                </th>
+                <!-- Cabeçalho da coluna Departamento -->
+
+                <th>
+                    Departamento
+
+                    <!-- Seleção para filtrar por Departamento -->
+                    <select id="filtroDepartamento" onchange="filtrarTabela()">
+
+                        <!-- Opção padrão que mostra todos os departamentos -->
+                        <option value="">Todos</option>
+
+                        <!-- Opções adicionais serão adicionadas dinamicamente -->
+                         
+                    </select>
+
+                </th>
+
+                <!-- Cabeçalho da coluna Cargo -->
+                <th>
+
+                    Cargo
+
+                    <!-- Seleção para filtrar por Cargo -->
+                    <select id="filtroCargo" onchange="filtrarTabela()">
+
+                        <!-- Opção padrão que mostra todos os cargos -->
+                        <option value="">Todos</option>
+
+                        <!-- Opções adicionais serão adicionadas dinamicamente -->
+                    </select>
+
+                </th>
+
+                <!-- Cabeçalho da coluna Salário -->
+                <th>
+
+                    Salário
+
+                    <!-- Seleção para filtrar por Salário -->
+                    <select id="filtroSalario" onchange="filtrarTabela()">
+
+                        <!-- Opção padrão que mostra todos os salários -->
+                        <option value="">Todos</option>
+
+                        <!-- Opções adicionais serão adicionadas dinamicamente -->
+
+                    </select>
+
+                </th>
+
+                <!-- Cabeçalho da coluna Tempo de Empresa -->
+
+                <th>
+
+                    Tempo de Empresa (anos)
+
+                    <!-- Seleção para filtrar por Tempo de Empresa -->
+                    <select id="filtroTempo" onchange="filtrarTabela()">
+
+                        <!-- Opção padrão que mostra todos os tempos de empresa -->
+                        <option value="">Todos</option>
+
+                        <!-- Opções adicionais serão adicionadas dinamicamente -->
+                    </select>
+
+                </th>
+            </tr>
+        </thead>
+
+        <!-- Corpo da tabela onde os dados serão inseridos -->
+        <tbody id="corpoTabela">
+
+            <!-- As linhas de dados serão inseridas aqui dinamicamente -->
+
+        </tbody>
+    </table>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- O script XLSX é uma biblioteca JavaScript que permite ler e 
+                escrever arquivos Excel, usada aqui para funcionalidades 
+                de exportação de dados da tabela. -->
+    
+    <script src="script.js"></script>
+    <!-- O script.js contém o código JavaScript personalizado para esta 
+                página, incluindo a lógica para manipular a tabela, os 
+                filtros e a exportação de dados. -->
+
+</body>
+</html>
