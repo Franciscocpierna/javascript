@@ -1,0 +1,206 @@
+body {
+
+    font-family: Arial, sans-serif; 
+    /* Define a família de fontes do corpo como Arial. 
+                Caso Arial não esteja disponível, usa qualquer 
+                fonte sans-serif. */
+    
+    margin: 0; 
+    /* Remove todas as margens externas do elemento <body>, 
+                fazendo com que ele se ajuste exatamente às 
+                bordas da janela do navegador. */
+    
+    padding: 0; 
+    /* Remove todo o preenchimento interno do elemento <body>, 
+                garantindo que não haja espaço extra dentro do corpo. */
+    
+    display: flex; 
+    /* Estabelece o modelo de caixa do corpo como flexível, permitindo 
+                que os elementos filhos sejam facilmente alinhados e 
+                distribuídos. */
+    
+    justify-content: center; 
+    /* Centraliza horizontalmente os elementos filhos dentro do 
+                corpo quando em modo de exibição flex. */
+    
+    align-items: center; 
+    /* Centraliza verticalmente os elementos filhos dentro do 
+                corpo quando em modo de exibição flex. */
+    
+    min-height: 100vh; 
+    /* Define a altura mínima do corpo para 100% da altura da 
+                viewport, garantindo que o corpo estenda-se 
+                verticalmente por toda a tela. */
+    
+    background-color: #f4f4f9; 
+    /* Define a cor de fundo do corpo para um cinza claro (cor 
+                hexadecimal #f4f4f9). */
+
+}
+
+
+.conteudo-principal {
+
+    width: 90%; 
+    /* Define a largura do contêiner principal para 90% da largura do 
+                elemento pai, permitindo uma margem automática em 
+                ambos os lados. */
+    
+    max-width: 1200px; 
+    /* Estabelece uma largura máxima para o contêiner principal de 
+                1200px para evitar que ele se torne muito largo em 
+                telas grandes. */
+    
+    background: white; 
+    /* Configura a cor de fundo do contêiner principal para branco, 
+                destacando-o contra o fundo mais claro do corpo. */
+    
+    padding: 20px; 
+    /* Aplica um preenchimento de 20px em todas as direções dentro 
+                do contêiner principal, criando espaço entre o conteúdo 
+                e as bordas do contêiner. */
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    /* Adiciona uma sombra abaixo do contêiner principal para 
+                dar um efeito de elevação. A sombra é leve e 
+                sutil com transparência. */
+
+}
+
+
+#container-tabela {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels ao elemento 
+                com ID 'container-tabela', criando um espaço 
+                entre ele e qualquer conteúdo acima. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura das tabelas para ocuparem 100% da 
+                largura do elemento pai, permitindo que a tabela 
+                se estenda por toda a largura disponível. */
+    
+    border-collapse: collapse;
+    /* Configura as bordas das células da tabela para colapsarem 
+                em uma única borda, removendo espaços duplos entre 
+                as bordas adjacentes das células. */
+
+}
+
+table, th, td {
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida de 1 pixel de espessura e 
+                cor #ddd (um cinza claro) para todas as tabelas, 
+                células de cabeçalho (th) e células de dados (td), 
+                proporcionando uma separação visual clara entre 
+                diferentes seções e células da tabela. */
+
+}
+
+th, td {
+
+    padding: 10px;
+    /* Adiciona um preenchimento interno de 10 pixels em todas 
+                as direções dentro das células de cabeçalho (th) e 
+                células de dados (td), aumentando a legibilidade ao 
+                afastar o texto das bordas das células. */
+    
+    text-align: left;
+    /* Alinha o texto dentro das células de cabeçalho (th) e 
+                células de dados (td) à esquerda, garantindo uma 
+                apresentação uniforme e facilitando a leitura do 
+                texto em colunas. */
+
+}
+
+
+.paginacao {
+
+    text-align: center;
+    /* Alinha o texto (e quaisquer botões ou elementos inline) ao 
+                centro do elemento que tem a classe 'paginacao'. 
+                Isso é usado para centralizar os botões de 
+                paginação na página. */
+    
+    margin-top: 20px;
+    /* Adiciona uma margem de 20 pixels no topo do elemento de 
+                paginação, criando um espaço entre este e quaisquer 
+                elementos acima dele, ajudando a separar 
+                visualmente a paginação do conteúdo acima. */
+
+}
+
+.paginacao button {
+
+    padding: 5px 10px;
+    /* Define um preenchimento de 5 pixels na vertical (topo e base) 
+                e 10 pixels na horizontal (esquerda e direita) para 
+                cada botão dentro de um elemento com a classe 'paginacao'. 
+                Isso torna os botões mais fáceis de clicar e visualmente 
+                mais agradáveis. */
+    
+    margin: 0 5px;
+    /* Define as margens dos botões para 0 no topo e na base, 
+                e 5 pixels nos lados esquerdo e direito, espaçando 
+                os botões horizontalmente entre si. */
+    
+    background-color: #007bff;
+    /* Configura a cor de fundo dos botões para um azul brilhante (#007bff), 
+                o que os faz se destacar na interface. */
+    
+    color: white;
+    /* Define a cor do texto dentro dos botões para branco, criando um 
+                alto contraste com o fundo azul, melhorando a legibilidade. */
+    
+    border: none;
+    /* Remove qualquer borda do botão, criando um visual mais limpo e 
+                moderno para os botões de paginação. */
+    
+    cursor: pointer;
+    /* Muda o cursor para o tipo 'pointer' quando o usuário passa o 
+                mouse sobre os botões, indicando que o botão é clicável. */
+
+}
+
+
+.paginacao button:hover {
+
+    background-color: #0056b3;
+    /* Muda a cor de fundo dos botões dentro de elementos com a 
+                classe 'paginacao' quando o mouse está sobre eles. 
+                A cor #0056b3 é um tom de azul mais escuro que o 
+                azul padrão, destacando o botão que está sob o cursor. */
+
+}
+
+.paginacao button:disabled {
+
+    background-color: #ddd;
+    /* Define a cor de fundo para cinza claro (#ddd) nos botões 
+                que estão desabilitados dentro de elementos com a 
+                classe 'paginacao'. Isso visualmente comunica que o 
+                botão está inativo. */
+    
+    cursor: not-allowed;
+    /* Muda o cursor para um ícone de 'não permitido' quando o 
+                usuário passa o mouse sobre um botão desabilitado, 
+                indicando que o botão não pode ser clicado. */
+
+}
+
+.paginacao span {
+
+    margin: 0 10px;
+    /* Define a margem horizontal dos <span> dentro dos elementos 
+                com a classe 'paginacao' para 10 pixels em ambos os 
+                lados, espaçando-os dos outros elementos dentro do 
+                mesmo contêiner. As margens verticais são definidas 
+                como 0, o que significa que não há espaço adicional 
+                acima ou abaixo dentro do mesmo elemento. */
+                
+}

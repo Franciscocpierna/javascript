@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<!-- A declaração DOCTYPE informa ao navegador a versão 
+            do HTML que está sendo usada na página, 
+            neste caso, HTML5. -->
+
+<html lang="pt">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt"' 
+            especifica que o idioma principal do documento é português. -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre os dados) 
+            que não são exibidos diretamente na página web, mas 
+            são importantes para o navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo charset="UTF-8" define o 
+                conjunto de caracteres utilizado no documento como 
+                UTF-8, que inclui quase todos os caracteres de todos os 
+                idiomas humanos, garantindo a compatibilidade 
+                internacional do texto. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, que configura a viewport para garantir 
+                que o site seja responsivo. 'width=device-width' faz o 
+                layout da página ter a largura do dispositivo, e 'initial-scale=1.0' 
+                define o nível de zoom inicial quando a página é carregada 
+                pela primeira vez. -->
+
+    <title>Importar Tabelas Excel</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba do 
+                navegador. Este título também é usado por motores de 
+                busca e bookmarks. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- A tag <link> é usada aqui para vincular um arquivo CSS externo, que 
+                contém as regras de estilo para a página. O atributo 'href' 
+                especifica o caminho para o arquivo CSS. -->
+
+</head>
+<!-- Fim da tag <head>, que encerra a seção de metadados da página. -->
+
+<body>
+<!-- A tag <body> contém todo o conteúdo principal que é visível para os 
+                usuários na página web, como texto, imagens, links, etc. -->
+
+    <div class="conteudo-principal">
+    <!-- Um <div> que atua como um contêiner para outros elementos. 
+                    A classe 'conteudo-principal' é usada para 
+                    aplicar estilos específicos definidos no CSS. -->
+
+        <h1>Tabela com Paginação e Filtragem</h1>
+        <!-- A tag <h1> é usada para o título principal da página. 
+                        Os motores de busca usam essas tags para 
+                        entender a estrutura e o conteúdo importante do site. -->
+
+        <button id="botao-exportar">Exportar Tabela</button>
+        <!-- Um botão que, quando clicado, dispara uma 
+                        função para exportar dados da tabela. O 'id' é 
+                        único e usado para referenciar o elemento no 
+                        CSS ou JavaScript. -->
+
+        <div id="container-tabela"></div>
+        <!-- Um <div> vazio destinado a ser preenchido dinamicamente, 
+                        com uma tabela gerada via JavaScript. O 'id' 
+                        permite que este elemento seja facilmente 
+                        acessado e manipulado por scripts. -->
+
+    </div>
+    <!-- Fim do <div> que contém os elementos principais da página. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- A tag <script> é usada para incluir um arquivo JavaScript 
+                        externo. Neste caso, é uma biblioteca chamada xlsx 
+                        que permite trabalhar com arquivos Excel em JavaScript. -->
+
+    <script src="script.js"></script>
+    <!-- Outra tag <script> para incluir um arquivo JavaScript que 
+                    contém lógica específica para esta página, como 
+                    manipulação de eventos e dinâmica de conteúdo. -->
+
+</body>
+<!-- Fim da tag <body>, que encerra o conteúdo principal do 
+                documento HTML. -->
+
+</html>
+<!-- Fim da tag <html>, que encerra o documento HTML. -->
