@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento que define este arquivo 
+            como HTML5. Isso ajuda os navegadores a interpretar
+             corretamente o código. -->
+
+<html lang="pt">
+<!-- A tag <html> é a raiz de um documento HTML. O atributo 'lang="pt"' 
+            especifica que o idioma principal do conteúdo do 
+            documento é o português. -->
+
+<head>
+<!-- A tag <head> contém metadados sobre o documento, como o título, 
+            links para estilos e scripts, e informações sobre a 
+            codificação de caracteres. Esses dados não são exibidos 
+            diretamente na página. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8, que é 
+            uma codificação padrão que suporta praticamente todos os 
+            caracteres e símbolos em qualquer idioma. Isso garante 
+            que o texto seja exibido corretamente. -->
+
+    <title>Tabela de População por Estado</title>
+    <!-- Define o título da página, que é exibido na aba do 
+            navegador e usado por motores de busca para indexação. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Vincula um arquivo de folha de estilos CSS externo 
+            chamado 'estilo.css'. Esse arquivo contém as regras de 
+            estilo que serão aplicadas ao conteúdo HTML para 
+            definir a aparência da página. -->
+
+</head>
+
+<body>
+<!-- Início do corpo do documento HTML, onde o conteúdo 
+            visível da página é colocado. -->
+
+    <h1>Tabela de População por Estado</h1>
+    <!-- Cabeçalho de nível 1 que exibe o título principal da 
+                página, "Tabela de População por Estado". Este título é 
+                exibido em grande destaque. -->
+
+    <table id="tabelaPopulacao">
+    <!-- Início da tabela HTML. A tabela é identificada com o 
+                atributo 'id' como 'tabelaPopulacao', permitindo 
+                que seja facilmente acessada e manipulada 
+                com CSS e JavaScript. -->
+
+        <thead>
+        <!-- Seção de cabeçalho da tabela que contém as linhas 
+                    de cabeçalhos das colunas. -->
+
+            <tr>
+            <!-- Início de uma linha na tabela. As linhas são 
+                        definidas com a tag <tr> (table row). -->
+
+                <th>Estado</th>
+                <!-- Cabeçalho da coluna para "Estado". A tag <th> 
+                            (table header) define células de cabeçalho, 
+                            que geralmente são exibidas em negrito e 
+                            centralizadas por padrão. -->
+
+                <th>Cidade</th>
+                <!-- Cabeçalho da coluna para "Cidade". -->
+
+                <th>Total de Habitantes</th>
+                <!-- Cabeçalho da coluna para "Total de Habitantes". -->
+                
+            </tr>
+            <!-- Fim da linha de cabeçalho. -->
+             
+        </thead>
+
+        <tbody>
+        <!-- Seção do corpo da tabela que conterá as 
+                    linhas de dados. -->
+
+            <!-- Os dados serão carregados aqui -->
+            
+        </tbody>
+    </table>
+    <!-- Fim da tabela HTML. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- Inclusão de um script externo. Este script é a 
+                biblioteca XLSX, carregada de uma CDN (Content Delivery Network). 
+                A biblioteca XLSX é usada para ler e manipular 
+                arquivos Excel no navegador. -->
+
+    <script src="script.js"></script>
+    <!-- Inclusão de um script JavaScript externo chamado 'script.js'. 
+                Este arquivo contém o código JavaScript personalizado 
+                que adiciona funcionalidades à página, como carregar 
+                dados e manipular a tabela. -->
+                
+</body>
+<!-- Fim do corpo do documento HTML. -->
+
+</html>
+<!-- Fim do documento HTML. -->
