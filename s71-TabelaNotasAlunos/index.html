@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento que 
+        define este arquivo como HTML5. 
+Isso informa ao navegador que o documento deve 
+        ser renderizado usando as regras do HTML5. -->
+
+<html lang="pt">
+<!-- A tag <html> é o elemento raiz de um documento HTML. 
+O atributo 'lang="pt"' especifica que o idioma principal 
+        do conteúdo do documento é o português. -->
+
+<head>
+<!-- A tag <head> contém metadados sobre o documento HTML, 
+        como informações de codificação de caracteres, título 
+        da página, links para arquivos de estilo e scripts. 
+Esses metadados não são exibidos diretamente na página. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8, 
+            que é uma codificação de caracteres padrão e 
+            compatível com quase todos os caracteres de 
+            todos os idiomas. 
+    Isso garante que todos os caracteres do documento 
+            sejam exibidos corretamente. -->
+
+    <title>Tabela de Notas dos Alunos</title>
+    <!-- Define o título da página, que é exibido na aba 
+            do navegador e nos resultados dos motores de busca. 
+    Este título é importante para a acessibilidade e 
+            SEO (otimização para motores de busca). -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Vincula um arquivo CSS externo chamado 'estilo.css' 
+            que contém as regras de estilo para esta página. 
+    O atributo 'href' especifica o caminho para o arquivo CSS. 
+    Isso permite separar o conteúdo (HTML) da apresentação (CSS). -->
+
+</head>
+
+<body>
+<!-- Início do corpo do documento HTML, onde o 
+        conteúdo visível da página é colocado. -->
+
+    <h1>Tabela de Notas dos Alunos</h1>
+    <!-- Cabeçalho de nível 1 que exibe o título principal da 
+            página, "Tabela de Notas dos Alunos". Este título é 
+            exibido em grande destaque. -->
+
+    <input type="text" id="filtroNome" placeholder="Filtrar por nome">
+    <!-- Campo de entrada de texto para filtrar os 
+            alunos pelo nome. 
+    O atributo 'id' permite que o elemento seja identificado e 
+            manipulado por JavaScript. 
+    O atributo 'placeholder' exibe um texto sugestivo dentro do 
+            campo até que o usuário comece a digitar. -->
+
+    <table id="tabelaAlunos">
+    <!-- Início da tabela HTML. A tabela é identificada 
+            com o atributo 'id' como 'tabelaAlunos', 
+            permitindo que seja facilmente acessada e 
+            manipulada com CSS e JavaScript. -->
+
+        <thead>
+        <!-- Seção de cabeçalho da tabela que contém as 
+                    linhas de cabeçalhos das colunas. -->
+
+            <tr>
+            <!-- Início de uma linha na tabela. As linhas são 
+                        definidas com a tag <tr> (table row). -->
+
+                <th>Aluno</th>
+                <!-- Cabeçalho da coluna para "Aluno". A tag <th> 
+                            (table header) define células de cabeçalho, que 
+                            são exibidas em negrito e centralizadas 
+                            por padrão. -->
+
+                <th>Nota 1</th>
+                <!-- Cabeçalho da coluna para "Nota 1". -->
+
+                <th>Nota 2</th>
+                <!-- Cabeçalho da coluna para "Nota 2". -->
+
+                <th>Nota 3</th>
+                <!-- Cabeçalho da coluna para "Nota 3". -->
+
+                <th>Nota 4</th>
+                <!-- Cabeçalho da coluna para "Nota 4". -->
+
+                <th>Média</th>
+                <!-- Cabeçalho da coluna para "Média". -->
+
+                <th>Status</th>
+                <!-- Cabeçalho da coluna para "Status". -->
+                
+            </tr>
+            <!-- Fim da linha de cabeçalho. -->
+
+        </thead>
+
+        <tbody>
+        <!-- Seção do corpo da tabela que conterá as linhas de dados. -->
+
+            <!-- Os dados serão carregados aqui -->
+            
+        </tbody>
+    </table>
+    <!-- Fim da tabela HTML. -->
+
+    <script src="script.js"></script>
+    <!-- Inclusão de um script JavaScript externo chamado 'script.js'. 
+            Este arquivo contém o código JavaScript personalizado que 
+            adiciona funcionalidades à página, como carregar dados e 
+            manipular a tabela. -->
+            
+</body>
+<!-- Fim do corpo do documento HTML. -->
+
+</html>
+<!-- Fim do documento HTML. -->

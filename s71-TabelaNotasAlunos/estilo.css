@@ -1,0 +1,163 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto do 
+            corpo do documento como Arial. 
+    Se Arial não estiver disponível, uma fonte 
+            genérica sans-serif será usada. 
+    Isso garante que o texto seja legível e com 
+            um estilo moderno. */
+
+    margin: 20px;
+    /* Define uma margem de 20 pixels ao redor de 
+            todo o corpo do documento, 
+    criando espaço em branco entre o conteúdo e as 
+            bordas da janela do navegador. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Centraliza o texto do cabeçalho de nível 1 (h1) 
+            horizontalmente. 
+    Isso faz com que o título principal "Tabela de Notas 
+            dos Alunos" seja exibido no centro da página. */
+
+}
+
+input[type="text"] {
+
+    display: block;
+    /* Define o campo de entrada de texto como um 
+            elemento de bloco, fazendo com que ele ocupe 
+            toda a largura disponível e permitindo a definição 
+            de margens verticais. */
+
+    margin: 10px auto;
+    /* Adiciona uma margem de 10 pixels em cima e 
+            embaixo do campo de entrada, e uma margem 
+            automática à esquerda e à direita, centralizando o 
+            campo horizontalmente. */
+
+    padding: 8px;
+    /* Adiciona um preenchimento interno de 8 pixels em 
+            todas as direções dentro do campo de entrada, 
+            aumentando a área clicável e melhorando a usabilidade. */
+
+    width: 80%;
+    /* Define a largura do campo de entrada para 80% da 
+            largura do elemento pai, fazendo com que o 
+            campo ocupe a maior parte da largura da página. */
+
+    box-sizing: border-box;
+    /* Inclui o preenchimento (padding) e a borda na 
+            largura total e altura do campo de entrada. 
+    Isso garante que a largura definida de 80% inclua 
+            também o preenchimento e a borda, mantendo a 
+            aparência consistente. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da 
+            largura do elemento pai.
+    Isso faz com que a tabela se expanda para 
+            preencher toda a largura disponível. */
+
+    border-collapse: collapse;
+    /* Define a propriedade border-collapse para 'collapse', 
+            o que remove o espaço entre as bordas das células da 
+            tabela e as une em uma única borda.
+    Isso dá à tabela uma aparência mais uniforme e 
+            simplificada. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels à tabela,
+            criando espaço entre a tabela e o conteúdo acima dela.
+    Isso melhora a separação visual entre o título e a tabela. */
+
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+    /* Define uma borda sólida de 1 pixel de espessura e 
+            cor #ddd (um cinza claro) para todas as células 
+            de cabeçalho (th) e células de dados (td).
+    Isso cria uma grade clara e visível ao redor das 
+            células da tabela. */
+
+    padding: 8px;
+    /* Adiciona um preenchimento interno de 8 pixels em 
+            todas as direções dentro das células de 
+            cabeçalho (th) e células de dados (td).
+    Isso cria espaço entre o conteúdo das células e 
+            suas bordas, melhorando a legibilidade. */
+
+    text-align: center;
+    /* Alinha o texto dentro das células de cabeçalho (th) e 
+            células de dados (td) ao centro.
+    Isso é útil para garantir que o texto fique bem 
+            organizado e alinhado nas colunas. */
+
+}
+
+th {
+
+    background-color: #f2f2f2;
+    /* Define a cor de fundo das células de cabeçalho (th) 
+            como #f2f2f2 (um cinza claro).
+    Isso diferencia visualmente os cabeçalhos das outras 
+            células da tabela, ajudando a identificar 
+            as colunas. */
+
+}
+
+
+.aprovado {
+
+    color: green;
+    /* Define a cor do texto dos elementos com a 
+            classe 'aprovado' como verde.
+    Isso é usado para indicar visualmente que um 
+            aluno está aprovado. */
+
+}
+
+.reprovado {
+
+    color: red;
+    /* Define a cor do texto dos elementos com a 
+            classe 'reprovado' como vermelho.
+    Isso é usado para indicar visualmente que um 
+            aluno está reprovado. */
+
+}
+
+.exame {
+
+    color: orange;
+    /* Define a cor do texto dos elementos com a 
+            classe 'exame' como laranja.
+    Isso é usado para indicar visualmente que um 
+            aluno está de exame. */
+
+}
+
+.icon {
+
+    font-size: 1.5em;
+    /* Define o tamanho da fonte para 1.5 vezes o 
+            tamanho padrão da fonte.
+    Isso aumenta o tamanho dos ícones usados para 
+            representar o status dos alunos. */
+
+    vertical-align: middle;
+    /* Alinha verticalmente o ícone ao centro da linha, 
+            ajustando sua posição para que fique centralizado 
+            em relação ao texto adjacente. */
+            
+}
