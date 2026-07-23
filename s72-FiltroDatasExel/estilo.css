@@ -1,0 +1,170 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte do texto do corpo da página como
+             Arial, com sans-serif como alternativa */
+
+    margin: 0;
+    /* Remove as margens padrão do corpo da página */
+
+    padding: 0;
+    /* Remove o preenchimento (padding) padrão do 
+            corpo da página */
+
+    display: flex;
+    /* Define o corpo da página como um container flexível */
+
+    justify-content: center;
+    /* Alinha o conteúdo centralmente ao longo do eixo horizontal */
+
+    align-items: center;
+    /* Alinha o conteúdo centralmente ao longo do eixo vertical */
+
+    min-height: 100vh;
+    /* Define a altura mínima do corpo da página como 100% 
+                da altura da janela de visualização */
+
+    background-color: #f4f4f9;
+    /* Define a cor de fundo do corpo da página como um 
+                tom de cinza claro */
+
+}
+
+.conteudo-principal {
+
+    width: 90%;
+    /* Define a largura do container principal como 90% da 
+                largura da janela de visualização */
+
+    max-width: 1200px;
+    /* Define a largura máxima do container principal 
+                como 1200 pixels */
+
+    background: white;
+    /* Define a cor de fundo do container principal como branco */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20 pixels ao redor do 
+                conteúdo dentro do container principal */
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao redor do container principal 
+                com deslocamento vertical de 2 pixels, 
+                desfoque de 5 pixels e uma cor preta com 10% 
+                de opacidade */
+
+}
+
+
+#container-tabela {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels ao 
+                container da tabela, criando espaço acima dele */
+                
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela como 100% do elemento pai, 
+                ocupando toda a largura disponível */
+
+    border-collapse: collapse;
+    /* Remove os espaços entre as bordas das células da tabela, 
+                criando um efeito de bordas contínuas */
+
+}
+
+table, th, td {
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda de 1 pixel de espessura e cor 
+                cinza (#ddd) à tabela, cabeçalhos (th) e 
+                células (td) */
+
+}
+
+th, td {
+
+    padding: 10px;
+    /* Adiciona um preenchimento (padding) de 10 pixels ao 
+                redor do conteúdo das células do cabeçalho (th) e 
+                das células de dados (td) */
+
+    text-align: left;
+    /* Alinha o texto dentro das células do cabeçalho (th) e das 
+                células de dados (td) à esquerda */
+
+}
+
+
+.paginacao {
+
+    text-align: center;
+    /* Centraliza o texto e os elementos dentro do 
+                container de paginação */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, criando 
+                espaço acima do container de paginação */
+
+}
+
+.paginacao button {
+
+    padding: 5px 10px;
+    /* Adiciona um preenchimento de 5 pixels na parte superior e 
+                inferior e 10 pixels nas laterais dos botões, 
+                aumentando a área clicável */
+
+    margin: 0 5px;
+    /* Adiciona uma margem de 5 pixels à esquerda e à direita 
+                dos botões, criando espaço entre eles */
+
+    background-color: #007bff;
+    /* Define a cor de fundo dos botões como um azul (#007bff) */
+
+    color: white;
+    /* Define a cor do texto dos botões como branca */
+
+    border: none;
+    /* Remove qualquer borda padrão dos botões */
+
+    cursor: pointer;
+    /* Define o cursor como uma mãozinha (indicando que o 
+                elemento é clicável) ao passar o mouse 
+                sobre o botão */
+
+}
+
+.paginacao button:hover {
+
+    background-color: #0056b3;
+    /* Muda a cor de fundo dos botões para um azul mais 
+                escuro (#0056b3) quando o mouse está sobre eles,
+                indicando que o botão é interativo */
+
+}
+
+.paginacao button:disabled {
+
+    background-color: #ddd;
+    /* Define a cor de fundo dos botões como um cinza 
+                claro (#ddd) quando eles estão desabilitados */
+
+    cursor: not-allowed;
+    /* Muda o cursor para indicar que a ação não é 
+                permitida (not-allowed) quando o botão 
+                está desabilitado */
+
+}
+
+.paginacao span {
+
+    margin: 0 10px;
+    /* Adiciona uma margem de 10 pixels à esquerda e à 
+                direita do span, criando espaço entre os 
+                elementos ao seu redor */
+                
+}

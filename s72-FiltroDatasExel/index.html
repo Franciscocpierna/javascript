@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- Define o documento como HTML5 -->
+
+<html lang="pt">
+<!-- Define o idioma da página como português -->
+
+<head>
+<!-- Cabeçalho do documento HTML -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, suportando a 
+                maioria dos caracteres e símbolos -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para garantir que a página seja 
+                exibida corretamente em dispositivos móveis, ajustando a 
+                largura da página para corresponder à largura da 
+                tela do dispositivo -->
+
+    <title>Importar Produtos Excel</title>
+    <!-- Define o título da página, que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Vincula o documento HTML ao arquivo de estilo CSS externo 
+                para aplicar estilos à página -->
+
+</head>
+
+<body>
+    <!-- Início do corpo do documento HTML. Todo o conteúdo visível 
+                da página deve estar dentro desta tag. -->
+    
+    <div class="conteudo-principal">
+    <!-- Um container principal para o conteúdo da página. A classe 
+                'conteudo-principal' é usada para estilizar 
+                este div no CSS. -->
+
+        <h1>Filtro entre Datas</h1>
+        <!-- Cabeçalho de nível 1 (h1), que é geralmente o título 
+                    principal da página. -->
+
+        <button id="botao-exportar">Exportar Tabela</button>
+        <!-- Um botão com o texto 'Exportar Tabela'. Ele possui um 
+                    id 'botao-exportar' que é usado para referenciá-lo 
+                    no JavaScript. -->
+
+        <div id="container-tabela"></div>
+        <!-- Um div vazio onde a tabela será gerada dinamicamente pelo 
+                    JavaScript. O id 'container-tabela' é usado para 
+                    referenciá-lo no JavaScript. -->
+
+    </div>
+    <!-- Fecha o div 'conteudo-principal'. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- Inclui a biblioteca XLSX a partir de uma CDN. Esta biblioteca é 
+                usada para manipular arquivos Excel no navegador. -->
+
+    <script src="script.js"></script>
+    <!-- Inclui o arquivo JavaScript externo 'script.js' onde a lógica 
+                de manipulação do Excel e a criação da tabela 
+                são implementadas. -->
+
+</body>
+<!-- Fecha o corpo do documento HTML. -->
+
+</html>
+<!-- Fecha o documento HTML. -->
