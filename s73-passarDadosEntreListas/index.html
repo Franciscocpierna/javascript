@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- Esta linha declara que o documento é um HTML5, 
+        que é a versão atual do HTML. É importante para 
+        garantir que o navegador processe corretamente o documento. -->
+
+<html lang="pt-BR">
+<!-- Esta tag <html> inicia o documento HTML e o atributo 'lang="pt-BR"' 
+            especifica que o idioma principal do documento é o 
+            português do Brasil. Isso ajuda os navegadores e 
+            ferramentas de acessibilidade a tratar o conteúdo 
+            de forma adequada. -->
+
+<head>
+<!-- A tag <head> contém metadados (dados sobre os dados) e links 
+            para scripts e folhas de estilo. Não é exibida 
+            diretamente na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta tag <meta> define o conjunto de caracteres utilizado no 
+             documento como UTF-8, que inclui quase todos os caracteres de 
+             todos os idiomas humanos. Isso garante que qualquer texto 
+             seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag <meta> configura a janela de visualização para 
+                    controlar como a página é exibida em dispositivos móveis. 
+         'width=device-width' faz a largura da página seguir a largura 
+                    da tela do dispositivo.
+         'initial-scale=1.0' define o nível de zoom inicial quando a 
+                    página é carregada pela primeira vez. -->
+
+    <title>Passar dados entre Listas</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba 
+                do navegador. Este título é "Passar dados entre Listas". -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- A tag <link> aqui é usada para conectar uma folha de estilos 
+                externa, neste caso 'estilo.css', ao documento HTML. 
+         Isso permite que você defina estilos para elementos da 
+                sua página web em um arquivo separado, mantendo o 
+                HTML mais organizado. -->
+
+</head>
+<!-- A tag </head> marca o fim da seção head do documento HTML. -->
+
+<body>
+<!-- A tag <body> marca o início do corpo do documento HTML, 
+            onde todo o conteúdo visível da página é inserido. -->
+
+    <div class="container">
+    <!-- Um <div> com a classe "container" é usado para envolver e 
+                centralizar o conteúdo principal da página, facilitando o 
+                controle de layout e estilização. -->
+
+        <h1>Passar dados entre Listas</h1>
+        <!-- A tag <h1> é usada para o título principal da página. 
+                    "Passar dados entre Listas" é o texto que será exibido 
+                    como o título principal, indicando o propósito da página. -->
+
+        <div class="listas">
+        <!-- Outro <div>, desta vez com a classe "listas", é utilizado 
+                    para agrupar visualmente as duas listas na página, 
+                    ajudando na organização e no layout. -->
+
+            <div class="lista">
+            <!-- Um <div> com a classe "lista" contém elementos relacionados a 
+                        uma lista específica, neste caso, a lista de "Nomes". -->
+
+                <h2>Nomes</h2>
+                <!-- A tag <h2> define um subtítulo, neste caso, "Nomes", 
+                            indicando o conteúdo da lista abaixo. -->
+
+                <select id="listaNomes" multiple size="15"></select>
+                <!-- A tag <select> cria uma lista suspensa. O atributo 'id' 
+                            permite identificar unicamente este elemento no documento.
+                     O atributo 'multiple' permite selecionar múltiplos itens na lista.
+                     O atributo 'size' com valor '15' determina que a lista 
+                            mostrará 15 itens ao mesmo tempo sem a necessidade de rolar. -->
+
+            </div>
+
+            <div class="botoes">
+            <!-- Um <div> com a classe "botoes" agrupa os botões que 
+                        permitem mover dados entre as listas. -->
+
+                <button id="moverParaDados">&gt;</button>
+                <!-- Um <button> que, quando clicado, move itens selecionados 
+                            para a lista de "Dados". O símbolo '&gt;' é a 
+                            representação HTML para o sinal de maior ('>'). -->
+
+                <button id="moverParaNomes">&lt;</button>
+                <!-- Um <button> para mover itens de volta para a lista de "Nomes". 
+                            O símbolo '&lt;' é a representação HTML para o 
+                            sinal de menor ('<'). -->
+
+                <button id="moverTodosParaDados">&gt;&gt;</button>
+                <!-- Um <button> para mover todos os itens para a lista de "Dados". 
+                            O símbolo '&gt;&gt;' representa uma ação de mover tudo. -->
+
+                <button id="moverTodosParaNomes">&lt;&lt;</button>
+                <!-- Um <button> para mover todos os itens de volta para a 
+                            lista de "Nomes". O símbolo '&lt;&lt;' representa uma 
+                            ação de mover tudo de volta. -->
+                
+            </div>
+
+            <div class="lista">
+            <!-- Outro <div> com a classe "lista" para a segunda lista, 
+                        que armazena "Dados". -->
+
+                <h2>Dados</h2>
+                <!-- <h2> define um subtítulo para esta lista, indicando 
+                            que ela contém "Dados". -->
+
+                <select id="listaDados" multiple size="15"></select>
+                <!-- Similar à primeira, esta <select> cria outra lista 
+                            suspensa que pode ter múltiplos itens selecionados e 
+                            exibe 15 itens. -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- Esta tag <script> importa uma biblioteca JavaScript externa 
+                chamada 'xlsx', que é usada para ler arquivos Excel. -->
+
+    <script src="script.js"></script>
+    <!-- Outra tag <script> para vincular um arquivo JavaScript 
+                externo chamado 'script.js', que contém a lógica 
+                interativa da página. -->
+                
+</body>
+<!-- A tag </body> marca o final do corpo do documento HTML. -->
+ 
+</html>
+<!-- A tag </html> marca o fim do documento HTML. -->

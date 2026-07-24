@@ -1,0 +1,279 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto. 'Arial' é 
+                uma fonte sem serifa (sans-serif),
+       comumente usada para uma leitura fácil em telas. Se o 
+                Arial não estiver disponível,
+                qualquer outra fonte sem serifa será 
+                usada como substituta. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo da página. A cor é 
+                um cinza claro (#f4f4f4). */
+
+    display: flex;
+    /* Estabelece que o layout dentro do <body> deve usar 
+                Flexbox, um método de layout que facilita o 
+                alinhamento e a distribuição do espaço entre 
+                itens em uma interface. */
+
+    justify-content: center;
+    /* Alinha todos os elementos filhos (containers) 
+                horizontalmente ao centro do <body>. */
+
+    align-items: center;
+    /* Alinha todos os elementos filhos (containers) 
+                verticalmente ao centro do <body>. */
+
+    height: 100vh;
+    /* Define a altura do <body> para ser igual a 100% da 
+                altura da viewport (área visível da tela). */
+
+    margin: 0;
+    /* Remove qualquer margem padrão em torno do <body>, fazendo 
+                com que ele ocupe toda a largura e altura disponíveis. */
+
+}
+
+.container {
+
+    background: #fff;
+    /* Define a cor de fundo do elemento com a classe 
+                'container' para branco (#fff). */
+
+    padding: 20px 40px;
+    /* Aplica um espaçamento interno ao 'container'. 20px no 
+                topo e na base, 40px à esquerda e à direita. */
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao redor do 'container'. A sombra é 
+                leve (0.1 de opacidade), preta, e se 
+                espalha 15 pixels em todas as direções, sem 
+                deslocamento horizontal ou vertical. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do 'container' com um raio de 8 pixels. 
+                Isso suaviza as bordas retas. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do 'container'. */
+
+    width: 80%;
+    /* Define a largura do 'container' para ser 80% da largura do 
+                seu elemento pai (neste caso, o <body>). */
+
+    max-width: 1000px;
+    /* Estabelece uma largura máxima para o 'container'. Mesmo 
+                que 80% da largura do pai seja maior, o 'container' 
+                não excederá 1000 pixels. */
+
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Define uma margem na parte inferior do elemento <h1> 
+                para criar um espaço de 20 pixels entre ele e o 
+                próximo elemento na página. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do texto dentro do <h1> para 24 
+                pixels, o que ajuda a destacar o título como um 
+                elemento visual importante. */
+
+    color: #333;
+    /* Define a cor do texto dentro do <h1> para um cinza 
+                escuro (#333), que é mais suave do que o preto puro, 
+                proporcionando melhor legibilidade. */
+
+}
+
+.listas {
+
+    display: flex;
+    /* Estabelece que o layout dentro do elemento com a 
+                classe 'listas' deve usar Flexbox, que é um 
+                modelo de layout mais eficiente para alinhar e 
+                distribuir itens. */
+
+    justify-content: space-between;
+    /* Distribui os elementos filhos (listas individuais e botões) 
+                igualmente no espaço disponível, colocando o máximo 
+                de espaço possível entre cada um deles. */
+
+    align-items: center;
+    /* Alinha todos os elementos filhos verticalmente ao centro, 
+                garantindo que eles estejam alinhados no mesmo eixo 
+                vertical, independentemente de suas alturas individuais. */
+
+}
+
+.lista {
+
+    flex: 1;
+    /* Faz com que cada <div> com a classe 'lista' ocupe uma 
+                fração igual do espaço disponível no seu elemento 
+                pai. Em um layout flexível, 'flex: 1' garante que 
+                todas as listas compartilhem o espaço de forma igual. */
+
+    margin: 0 10px;
+    /* Define as margens à esquerda e à direita de cada lista 
+                para 10 pixels, criando um espaçamento entre 
+                elas e outros elementos adjacentes, como os botões. */
+
+    font-size: 30px;
+    /* Aumenta o tamanho do texto dentro de cada lista para 30 
+                pixels, tornando os nomes nas listas mais 
+                fáceis de ler. */
+
+}
+
+.lista h2 {
+
+    margin-bottom: 10px;
+    /* Define uma margem na parte inferior de cada cabeçalho <h2> 
+                dentro de uma lista para separá-lo visualmente do
+                conteúdo da lista abaixo dele. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para os cabeçalhos <h2> 
+                dentro de cada lista para 18 pixels, o que é 
+                suficiente para diferenciá-los dos outros 
+                textos, mas sem competir com o <h1> principal. */
+
+    color: #555;
+    /* Define a cor do texto dos cabeçalhos <h2> para um 
+                cinza médio (#555), que é distinto, mas ainda 
+                assim discreto e fácil de ler. */
+
+}
+
+select {
+
+    width: 100%;
+    /* Define a largura do elemento <select> para 
+                ocupar 100% da largura de seu elemento pai, 
+                garantindo que use todo o espaço disponível. */
+
+    height: 300px;
+    /* Estabelece a altura do elemento <select> para 300 pixels, 
+                o que fornece espaço suficiente para exibir várias 
+                opções simultaneamente. */
+
+    padding: 10px;
+    /* Aplica um espaçamento interno de 10 pixels em todas as 
+                direções dentro do <select>, melhorando a legibilidade 
+                ao separar o texto das bordas. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e 
+                cor cinza clara (#ccc) ao redor do <select>, 
+                delimitando claramente o elemento na interface. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos da borda do <select> com um raio 
+                de 4 pixels, proporcionando um design mais 
+                suave e moderno. */
+
+    background-color: #fafafa;
+    /* Define a cor de fundo do <select> para um cinza 
+                muito claro (#fafafa), que é sutil e minimiza a 
+                distração visual. */
+
+    font-size: 30px;
+    /* Aumenta o tamanho do texto dentro do <select> para 30 
+                pixels, tornando as opções mais fáceis de 
+                ler e selecionar. */
+
+}
+
+
+.botoes {
+
+    display: flex;
+    /* Utiliza Flexbox no container que agrupa os botões, 
+                permitindo um layout mais flexível e responsivo. */
+
+    flex-direction: column;
+    /* Organiza os botões em uma coluna (verticalmente), ao 
+                contrário do padrão que seria em 
+                linha (horizontalmente). */
+
+    justify-content: center;
+    /* Centraliza os botões verticalmente dentro do container, 
+                garantindo que eles estejam alinhados ao centro, 
+                independentemente da altura do container. */
+
+}
+
+button {
+
+    margin: 5px;
+    /* Aplica uma margem de 5 pixels em todos os lados dos 
+                botões, criando espaço entre eles e quaisquer 
+                outros elementos adjacentes. */
+
+    padding: 10px 20px;
+    /* Aplica um espaçamento interno de 10 pixels na 
+                vertical e 20 pixels na horizontal dentro de 
+                cada botão, tornando-os mais fáceis de clicar. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário 
+                passa o mouse sobre os botões, indicando que o 
+                elemento é clicável. */
+
+    background-color: #007bff;
+    /* Define a cor de fundo inicial dos botões para um azul 
+                brilhante (#007bff), que é atraente e fácil 
+                de identificar. */
+
+    color: white;
+    /* Define a cor do texto dentro dos botões para 
+                branco, garantindo um contraste alto contra o 
+                fundo azul, melhorando a legibilidade. */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão, proporcionando 
+                um visual mais limpo e moderno. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos dos botões com um raio de 4 pixels, 
+                consistente com o design do <select>. */
+
+    font-size: 16px;
+    /* Define o tamanho do texto dentro dos botões para 16 
+                pixels, que é um tamanho legível para a 
+                maioria dos usuários. */
+
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave de 0.3 segundos para 
+                mudanças na cor de fundo, melhorando a 
+                experiência visual ao interagir com o botão. */
+
+}
+
+button:hover {
+
+    background-color: #0056b3;
+    /* Muda a cor de fundo dos botões para um azul mais 
+                escuro (#0056b3) quando o mouse está sobre 
+                eles, fornecendo um feedback visual imediato 
+                de interatividade. */
+
+}
+
+button:focus {
+
+    outline: none;
+    /* Remove o contorno que aparece ao redor de um botão 
+                quando ele é focado (clicado ou acessado 
+                via teclado), mantendo a estética limpa. */
+
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Adiciona uma sombra azul suave ao redor do botão 
+                quando está focado, ajudando a indicar 
+                visualmente o foco sem usar um contorno. */
+                
+}
