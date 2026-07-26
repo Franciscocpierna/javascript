@@ -1,0 +1,351 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto do corpo 
+            como Arial. Caso Arial não esteja disponível, 
+            qualquer fonte sem serifa (sans-serif) será usada 
+            como alternativa. Arial é escolhida por sua 
+            legibilidade e aparência limpa. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo da página como um 
+            cinza claro (#f4f4f4), proporcionando um contraste 
+            suave que é fácil para os olhos e não distrai do 
+            conteúdo principal. */
+
+    display: flex;
+    /* Ativa o Flexbox, um método de layout que permite que os 
+            itens filhos sejam alinhados e distribuídos de forma 
+            mais eficiente e previsível dentro do contêiner. */
+
+    justify-content: center;
+    /* Alinha todos os itens filhos (neste caso, o contêiner principal) 
+            horizontalmente ao centro do corpo da página. */
+
+    align-items: center;
+    /* Alinha todos os itens filhos verticalmente ao centro do 
+            corpo da página. Isso é útil para centrar o contêiner 
+            principal no meio da página vertical e horizontalmente. */
+
+    height: 100vh;
+    /* Define a altura do corpo da página para ser 100% da altura 
+            da viewport (vh - viewport height), garantindo que o 
+            corpo estenda-se verticalmente por toda a altura da 
+            janela do navegador. */
+
+    margin: 0;
+    /* Remove qualquer margem externa ao redor do corpo da página, 
+            ajudando a evitar espaços indesejados entre o conteúdo 
+            da página e as bordas da janela do navegador. */
+
+    padding: 20px;
+    /* Aplica um espaçamento interno de 20 pixels em todas as 
+            direções dentro do corpo da página, criando uma margem 
+            entre o conteúdo e as bordas da janela do navegador. */
+
+}
+
+.container {
+
+    background: #fff;
+    /* Define a cor de fundo do contêiner principal para 
+            branco (#fff), criando um contraste claro com a cor de 
+            fundo do corpo e destacando o contêiner principal. */
+
+    padding: 20px;
+    /* Aplica um espaçamento interno de 20 pixels em todas as 
+            direções dentro do contêiner, proporcionando espaço 
+            entre o conteúdo interno e as bordas do contêiner. */
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao redor do contêiner com uma leve 
+            opacidade (0.1). Esta sombra é sutil e adiciona uma 
+            sensação de profundidade, fazendo o contêiner parecer 
+            elevado sobre o fundo. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do contêiner com um raio de 8 pixels, 
+            suavizando a aparência geral do contêiner e tornando-o 
+            visualmente mais agradável. */
+
+    width: 90%;
+    /* Define a largura do contêiner para ser 90% da largura do seu 
+            contêiner pai (neste caso, o corpo), o que ajuda a manter o 
+            contêiner responsivamente ajustado à largura da 
+            janela do navegador. */
+
+    max-width: 1200px;
+    /* Estabelece uma largura máxima para o contêiner de 1200 pixels. 
+            Isso garante que o contêiner não se torne excessivamente 
+            largo em telas maiores, mantendo a legibilidade e a 
+            estética do conteúdo. */
+
+    display: flex;
+    /* Continua usando Flexbox dentro do contêiner para alinhar e 
+            organizar os elementos filhos. */
+
+    flex-direction: column;
+    /* Define a direção dos itens filhos para ser em coluna (verticalmente), 
+            o que é ideal para empilhar elementos verticalmente 
+            dentro do contêiner. */
+
+    align-items: center;
+    /* Alinha todos os itens filhos ao centro horizontalmente dentro do 
+            contêiner, garantindo que eles sejam centrados dentro do 
+            espaço disponível. */
+
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Esta propriedade adiciona uma margem de 20 pixels abaixo 
+            do título (h1), criando espaço entre o título e o 
+            conteúdo que segue, para evitar que os elementos 
+            pareçam amontoados. */
+    
+    font-size: 24px;
+    /* Define o tamanho da fonte do título para 24 pixels, 
+            garantindo que seja grande o suficiente para chamar 
+            atenção como um cabeçalho principal, proporcionando 
+            uma hierarquia visual clara na página. */
+    
+    color: #333;
+    /* A cor do texto é definida como um cinza escuro (#333), uma 
+            escolha que oferece uma leitura confortável, 
+            proporcionando um contraste adequado com o fundo 
+            claro sem ser tão duro quanto o preto puro. */
+
+}
+
+.conteudo {
+
+    display: flex;
+    /* Utiliza Flexbox, um modelo de layout CSS que permite 
+            espaçar e alinhar itens de forma eficiente em contêineres, 
+            mesmo quando seus tamanhos são desconhecidos ou 
+            dinâmicos. */
+
+    width: 100%;
+    /* Estabelece que o elemento ocupará 100% da largura de seu 
+            contêiner pai, assegurando que utilize todo o espaço 
+            horizontal disponível. */
+
+    justify-content: space-between;
+    /* Distribui espaço entre os elementos filhos de forma que 
+            haja a máxima separação entre eles, alinhando o 
+            primeiro item ao início e o último ao final do 
+            contêiner, com o espaço restante distribuído 
+            uniformemente entre eles. */
+
+}
+
+#treeContainer {
+
+    width: 30%;
+    /* Define a largura do contêiner da TreeView para 30% do 
+            seu contêiner pai, garantindo que ele ocupe uma 
+            parte proporcional da interface, deixando espaço 
+            para outros elementos. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e 
+            cor cinza claro (#ccc) ao redor do contêiner, 
+            delimitando visualmente o espaço que a TreeView 
+            ocupa na página. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos do contêiner com um raio de 4 
+            pixels, suavizando a aparência geral e tornando o 
+            design mais esteticamente agradável. */
+
+    padding: 10px;
+    /* Aplica um espaçamento interno de 10 pixels em todas as 
+            direções dentro do contêiner, criando um buffer entre o 
+            conteúdo interno e as bordas do contêiner, melhorando a 
+            legibilidade e o aspecto visual. */
+
+    background-color: #fafafa;
+    /* Define a cor de fundo como um cinza muito claro (#fafafa), o 
+            que ajuda a diferenciar visualmente a área da TreeView do 
+            resto do layout, mantendo uma aparência limpa e organizada. */
+
+    overflow-y: auto;
+    /* Permite que o conteúdo que excede a altura do contêiner seja 
+            acessível através de uma barra de rolagem vertical, 
+            garantindo que todo o conteúdo possa ser acessado sem 
+            alterar o layout ou a estrutura da página. */
+
+}
+
+
+.detalhes {
+
+    width: 65%;
+    /* Define a largura do elemento com a classe 'detalhes' 
+            para ocupar 65% da largura de seu contêiner pai. Isso 
+            permite que o elemento tenha um espaço substancial na 
+            interface, ideal para exibir informações detalhadas. */
+
+    padding: 20px;
+    /* Aplica um espaçamento interno de 20 pixels em todas as direções, 
+            criando uma margem entre o conteúdo interno e as bordas do 
+            contêiner. Isso melhora a legibilidade e a estética 
+            do conteúdo. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda de 1 pixel de espessura e cor 
+            cinza claro (#ccc) ao redor do elemento. Isso ajuda a 
+            delimitar o espaço do elemento, tornando-o visualmente 
+            distinto no layout. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos do contêiner com um raio de 4 pixels, 
+            suavizando a aparência geral e tornando o design 
+            mais amigável. */
+
+    background-color: #fafafa;
+    /* Estabelece a cor de fundo do elemento como um cinza 
+            muito claro (#fafafa), oferecendo um contraste 
+            suave com o conteúdo e não distraindo do mesmo. */
+
+}
+
+.detalhes h2 {
+
+    margin-top: 0;
+    /* Remove a margem superior do elemento 'h2' dentro 
+            de '.detalhes'. Isso faz com que o título fique 
+            alinhado mais próximo ao topo do seu contêiner, 
+            maximizando o uso do espaço disponível. */
+
+}
+
+button {
+
+    padding: 10px 20px;
+    /* Define o espaçamento interno do botão para 10 pixels 
+            verticalmente e 20 pixels horizontalmente, tornando-o 
+            mais fácil de clicar e visualmente atraente. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem de 20 pixels abaixo de cada botão, 
+            separando-o de outros elementos abaixo e evitando 
+            que os elementos pareçam amontoados. */
+
+    background-color: #007bff;
+    /* Define a cor de fundo do botão para um azul brilhante (#007bff), 
+            uma cor atraente que chama atenção e é frequentemente 
+            usada para elementos interativos. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para branco, criando 
+            um alto contraste com o fundo azul, melhorando a 
+            legibilidade. */
+
+    border: none;
+    /* Remove as bordas do botão para um visual mais 
+            limpo e moderno. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos do botão, alinhando-o ao estilo 
+            suavizado do resto dos componentes da interface. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando ele passa sobre o 
+            botão, indicando que o botão é clicável. */
+
+    font-size: 16px;
+    /* Estabelece o tamanho da fonte dentro do botão para 16 pixels, 
+            assegurando que o texto seja fácil de ler. */
+
+}
+
+button:hover {
+
+    background-color: #0056b3;
+    /* Muda a cor de fundo do botão quando o mouse está 
+            sobre ele para um azul mais escuro (#0056b3). 
+       Isso fornece um feedback visual imediato de que o botão é 
+            interativo, aumentando a usabilidade. */
+
+}
+
+
+button:focus {
+
+    outline: none;
+    /* Remove o contorno padrão que os navegadores aplicam aos 
+            botões quando estão focados. Isso é útil para 
+            personalizar totalmente a aparência dos botões, 
+            especialmente quando se deseja um estilo mais 
+            consistente e integrado ao design da aplicação. */
+
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Adiciona uma sombra ao redor do botão que está focado, 
+            utilizando um azul semi-transparente. Esta sombra cria um 
+            efeito visual que indica claramente que o botão está 
+            focado, substituindo o contorno padrão e aumentando a 
+            acessibilidade sem comprometer o estilo. */
+
+}
+
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura de 
+            seu contêiner pai. Isso garante que a tabela utilize 
+            todo o espaço disponível, facilitando a organização e 
+            exibição dos dados. */
+
+    border-collapse: collapse;
+    /* Colapsa as bordas das células da tabela em uma única borda 
+            quando duas células adjacentes ou a tabela e as células 
+            têm bordas. Isso ajuda a criar um design mais limpo e 
+            contínuo para a tabela. */
+
+    margin-top: 10px;
+    /* Aplica uma margem no topo da tabela, separando-a de 
+            quaisquer elementos acima dela e assegurando que o 
+            conteúdo não fique visualmente amontoadado. */
+
+}
+
+table, th, td {
+
+    border: 1px solid #ccc;
+    /* Aplica uma borda sólida de 1 pixel com uma cor 
+            cinza claro (#ccc) a toda a tabela, incluindo 
+            cabeçalhos ('th') e células ('td'). Essa uniformidade 
+            ajuda a delimitar claramente as células, facilitando a 
+            leituar dos dados. */
+
+}
+
+th, td {
+
+    padding: 10px;
+    /* Aplica um espaçamento interno de 10 pixels em todas as 
+            direções dentro das células do cabeçalho e das células 
+            normais. Isso assegura que o texto dentro das células 
+            tenha um buffer ao redor, aumentando a legibilidade. */
+
+    text-align: left;
+    /* Alinha o texto dentro das células do cabeçalho e das 
+            células normais à esquerda. Isso é uma prática comum 
+            para textos que não são numéricos, melhorando a leitura e a 
+            consistência visual da tabela. */
+
+}
+
+th {
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo dos cabeçalhos das tabelas para 
+            um cinza muito claro (#f4f4f4). Isso não apenas 
+            diferencia visualmente os cabeçalhos das células 
+            normais mas também melhora a legibilidade dos 
+            títulos das colunas, destacando-os. */
+            
+}

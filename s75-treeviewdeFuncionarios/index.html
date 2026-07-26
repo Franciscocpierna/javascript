@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE informa ao navegador que 
+            versão do HTML a página está usando.
+     Neste caso, especifica HTML5, que é a versão mais 
+            recente e suporta todos os elementos e APIs 
+            modernos do HTML. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> inicia o documento HTML. O atributo 
+            'lang="pt-BR"' especifica que o idioma principal da 
+            página é o português do Brasil.
+     Isso é importante para acessibilidade, SEO e para 
+            navegadores que realizam traduções automáticas. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de 
+                estilo, scripts e outras informações que não são 
+                exibidas diretamente na parte visível da página web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define a 
+                codificação de caracteres para UTF-8.
+         UTF-8 é uma codificação de caracteres universal que inclui 
+                quase todos os caracteres e símbolos usados em 
+                todas as línguas escritas.
+         Isso garante que qualquer texto seja exibido corretamente 
+                no navegador. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> que configura a viewport para garantir 
+                que sua página seja responsiva.
+         O atributo 'content="width=device-width, initial-scale=1.0"' 
+                define a largura da viewport para corresponder à 
+                largura do dispositivo e a escala inicial (zoom) para 1.0. 
+                Isso é crucial para otimizar sua página para 
+                dispositivos móveis. -->
+
+    <title>Exercício - TreeView de Funcionários</title>
+    <!-- A tag <title> define o título da página, que é exibido na 
+                aba do navegador. Este título é útil para SEO 
+                e para usuários identificarem sobre o que é a 
+                página quando têm várias abas abertas. -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+    <!-- Esta tag <link> importa a folha de estilo da biblioteca 
+                jsTree de um CDN (Content Delivery Network).
+         jsTree é uma biblioteca que permite criar árvores 
+                interativas (TreeView) facilmente.
+         O estilo padrão é usado aqui para aplicar estilos 
+                predefinidos à TreeView, como cores, ícones e 
+                layout geral. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Outra tag <link> para incluir uma folha de estilo CSS 
+                local chamada 'estilo.css'.
+         Esta folha de estilo contém regras CSS personalizadas 
+                para estilizar outros elementos da página,
+                garantindo que o design da página siga seu 
+                esquema visual desejado. -->
+
+</head>
+<!-- Fecha a tag <head>, indicando que todos os metadados, links 
+            para folhas de estilo e outras informações de 
+            cabeçalho foram definidos. -->
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível da página, tudo 
+            que é exibido na janela do navegador. -->
+
+    <div class="container">
+    <!-- A div com classe "container" serve como um contêiner 
+            principal para todos os outros elementos na página, 
+            ajudando a manter o layout organizado. -->
+
+        <h1>Exercício - TreeView de Funcionários</h1>
+        <!-- A tag <h1> define o título principal da página, "TreeView 
+                    de Funcionários", indicando o conteúdo principal e o 
+                    propósito da página. -->
+
+        <div class="conteudo">
+        <!-- A div com classe "conteudo" organiza visualmente o 
+                    espaço onde a TreeView e os detalhes adicionais 
+                    serão mostrados. -->
+
+            <div id="treeContainer"></div>
+            <!-- A div com id "treeContainer" é o local onde a TreeView 
+                    será renderizada dinamicamente pelo jsTree com os 
+                    dados dos funcionários. -->
+
+            <div class="detalhes">
+            <!-- A div com classe "detalhes" contém informações adicionais 
+                    que serão dinamicamente atualizadas, neste caso, 
+                    relacionadas a cargos. -->
+
+                <h2>Cargos</h2>
+                <!-- A tag <h2> fornece um subtítulo para a seção, indicando 
+                            que os detalhes serão especificamente sobre cargos. -->
+
+                <button id="exportar">Exportar para Excel</button>
+                <!-- Um botão que permite aos usuários exportar os dados 
+                            apresentados para um arquivo Excel. 
+                     Este botão é interativo e, quando clicado, acionará 
+                            uma função de exportação definida no script.js. -->
+
+                <table id="tabelaCargos">
+                <!-- A tag <table> cria uma tabela HTML com o id "tabelaCargos", 
+                            onde os dados dos funcionários serão exibidos. -->
+
+                    <thead>
+                    <!-- O elemento <thead> é usado para agrupar o conteúdo do cabeçalho 
+                                em uma tabela HTML. -->
+                                
+                        <tr>
+                        <!-- A tag <tr> define uma linha da tabela. -->
+                            
+                            <th>Departamento</th>
+                            <!-- A tag <th> define uma célula de cabeçalho da tabela, 
+                                        especificando o nome da coluna. -->
+                            <th>Cargo</th>
+                            <th>Nome</th>
+                            <th>Salário</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    <!-- A tag <tbody> é usada para agrupar o conteúdo do corpo da 
+                                tabela, onde os dados dos funcionários serão inseridos 
+                                dinamicamente. -->
+                        <!-- Dados serão populados aqui -->
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Este script inclui a biblioteca jQuery na versão 3.5.1. jQuery é 
+                uma das bibliotecas JavaScript mais populares e é utilizada para 
+                facilitar a manipulação do Document Object Model (DOM), o 
+                tratamento de eventos, e realizar requisições Ajax de forma 
+                mais simples e compatível entre diferentes navegadores. A versão "min" 
+                indica que o arquivo é uma versão minificada, otimizada para 
+                produção com menos espaço e carregamento mais rápido. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+    <!-- Este script carrega a biblioteca jsTree, específica para criar árvores 
+                hierárquicas interativas (TreeView). É amplamente utilizada para 
+                visualizar estruturas de dados complexas como estruturas organizacionais, 
+                sistemas de arquivos, entre outros, de forma intuitiva e interativa. 
+                A jsTree oferece funcionalidades como expansão/recolhimento de nós, 
+                seleção e drag-and-drop, adaptando-se bem a interfaces de gerenciamento 
+                de dados hierárquicos. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- Inclui a biblioteca SheetJS, também conhecida como xlsx, que é uma poderosa 
+                ferramenta para manipulação de arquivos Excel (e outros formatos de planilhas). 
+                Esta biblioteca permite ler dados de arquivos Excel diretamente no 
+                navegador, sem necessidade de servidor, e também escrever em arquivos 
+                Excel, o que é ideal para aplicações que necessitam de importação e 
+                exportação de dados complexos. A versão "full.min" refere-se à versão 
+                completa e minificada, contendo todas as funcionalidades com otimização 
+                para produção. -->
+
+
+    <script src="script.js"></script>
+    <!-- Vincula o arquivo JavaScript personalizado que contém a lógica para 
+                carregar dados, renderizar a TreeView e a tabela, e também 
+                manipular a exportação para Excel. -->
+
+</body>
+<!-- Marca o fim do corpo do documento HTML, contendo todos os 
+                elementos visíveis e scripts. -->
+                
+</html>
+<!-- Marca o fim do documento HTML. -->
