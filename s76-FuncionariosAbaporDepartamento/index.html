@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- Isso indica que o documento deve ser interpretado como HTML5, 
+          que é a versão mais recente. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> marca o início do documento HTML. O atributo 'lang' 
+               especifica o idioma principal do documento,
+               que neste caso é o Português do Brasil ('pt-BR'). -->
+
+<head>
+<!-- A tag <head> inicia a seção do cabeçalho do documento HTML. 
+               Esta seção é destinada a incluir metadados,
+               links para folhas de estilo, scripts externos. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define o conjunto de 
+                    caracteres para o documento HTML. UTF-8 é
+                    um conjunto de caracteres universal que inclui 
+                    praticamente todos os caracteres de todos os sistemas de
+                    escrita do mundo. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, desta vez especificando a 'viewport', ou área de 
+                    visualização do navegador. Esta configuração
+                    é crucial para o design responsivo, pois instrui o 
+                    navegador a controlar as dimensões e a escala da janela de
+                    visualização de acordo com o dispositivo em que o site 
+                    está sendo exibido. 
+          "width=device-width" faz com que a largura da janela de 
+                    visualização corresponda à largura do dispositivo 
+                    em termos de pixels de dispositivo.
+         "initial-scale=1.0" define o nível de zoom inicial quando a 
+                    página é carregada pela primeira vez, o que ajuda
+                    a garantir que o conteúdo não seja exibido nem muito 
+                    pequeno nem muito grande. -->
+
+    <title>Funcionários por Departamento</title>
+    <!-- A tag <title> define o título do documento HTML, que é exibido na 
+                    aba do navegador. -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- A tag <link> é usada aqui para incluir uma folha de estilo externa, 
+                    neste caso, a versão minificada do Bootstrap 4.5.2. 
+          Bootstrap é um framework CSS amplamente utilizado que 
+                    facilita o design responsivo e a estilização de 
+                    componentes da interface do usuário. A utilização da 
+                    versão minificada ajuda a reduzir o tempo de carregamento 
+                    da página, pois o arquivo CSS está compactado para 
+                    remover espaços extras, comentários, e outros elementos que 
+                    não são necessários para a execução do código, mas que 
+                    ocupam banda. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> marca o início da seção do corpo do 
+                   documento HTML, onde todo o conteúdo visível 
+                   da página é colocado. -->
+
+    <div class="container mt-4">
+    <!-- Esta <div> atua como o contêiner principal da página. 
+                   A classe 'container' é uma classe do Bootstrap 
+                   que centraliza o conteúdo e ajusta seu máximo 
+                   largura dependendo do tamanho da tela, facilitando o 
+                   design responsivo. 
+         'mt-4' é uma classe de margem do Bootstrap que adiciona uma 
+                   margem superior (margin-top) de 1.5rem (unidades 
+                   relativas em CSS) para espaçar o conteúdo do 
+                   topo da página. -->
+
+        <h1 class="text-center">Funcionários por Departamento</h1>
+        <!-- A tag <h1> define o título principal da página. 
+              A classe 'text-center' é usada para centralizar o 
+                        texto, melhorando a estética e tornando o layout 
+                        mais agradável visualmente. O texto "Funcionários 
+                        por Departamento" indica o tema ou o propósito da página. -->
+
+        <div id="indicador-carregamento" class="text-center mt-4">Carregando...</div>
+        <!-- Esta <div> é usada como um indicador de carregamento. 
+              'id' permite que esta <div> seja identificada unicamente 
+                        como 'indicador-carregamento'.
+             A classe 'text-center' centraliza o texto dentro 
+                        da <div>, e 'mt-4' adiciona uma margem superior 
+                        para distanciá-la do título. O texto "Carregando..."
+                        informa aos usuários que os dados estão sendo 
+                        processados ou carregados, melhorando a experiência 
+                        do usuário ao proporcionar feedback visual
+                        durante o carregamento da página ou de dados dinâmicos. -->
+
+        <div id="conteudo" style="display: none;">
+        <!-- Esta <div> contém o conteúdo principal que será dinamicamente 
+                        exibido. 'id' permite que esta <div> seja identificada 
+                        unicamente como 'conteudo'.
+             'style="display: none;"' faz com que esta <div> inicialmente 
+                        não seja exibida. Esta propriedade será alterada 
+                        dinamicamente por scripts para mostrar o conteúdo 
+                        uma vez que os dados estejam carregados, proporcionando 
+                        uma transição suave na visualização de conteúdo. -->
+
+            <input type="text" id="campo-pesquisa" class="form-control mt-3" placeholder="Pesquisar por nome...">
+            <!-- Um campo de entrada para permitir aos usuários filtrar ou 
+                        pesquisar por nomes. 'type="text"' define o campo
+                        como entrada de texto.
+                 'id="campo-pesquisa"' permite a identificação única do 
+                        campo para scripts. 
+                 'class="form-control mt-3"' usa classes do Bootstrap para
+                        estilizar o campo adequadamente e adicionar uma 
+                        margem superior. 
+                 'placeholder="Pesquisar por nome..."' fornece um texto 
+                        de exemplo dentro do campo,
+                        indicando aos usuários o propósito do campo. -->
+
+            <div class="d-flex justify-content-between mt-3">
+            <!-- Uma <div> com exibição flexível para alinhar elementos 
+                             internos. 
+                   'class="d-flex justify-content-between mt-3"' 
+                             usa o Flexbox do Bootstrap para distribuir espaço 
+                             entre elementos (botões neste caso) de maneira 
+                             uniforme e adiciona margem superior. -->
+
+                <button id="exportar-selecionado" class="btn btn-primary">Exportar Dados da Aba Selecionada</button>
+                <!-- Botão para exportar dados da aba atualmente selecionada. 
+                 'class="btn btn-primary"' aplica estilos do Bootstrap 
+                             para um botão com cor primária, destacando a 
+                             ação como importante. O texto indica claramente a 
+                             ação que o botão realizará. -->
+
+                <button id="exportar-todos" class="btn btn-secondary">Exportar Todos os Dados</button>
+                <!-- Botão para exportar todos os dados disponíveis. 
+                 'class="btn btn-secondary"' aplica estilos do Bootstrap 
+                             para um botão com uma cor secundária,
+                             diferenciando esta opção da ação principal. 
+                   O texto indica a função abrangente do botão. -->
+
+            </div>
+
+            <div id="container-abas" class="mt-4"></div>
+            <!-- Um contêiner para abas de navegação que será preenchido 
+                             dinamicamente com conteúdo. 
+                   'id="container-abas"' permite identificação única.
+                   'class="mt-4"' adiciona margem superior para separação 
+                             visual das outras seções. -->
+
+            <div id="container-dados" class="mt-4"></div>
+            <!-- Um contêiner para dados dinâmicos que será preenchido 
+                             com conteúdo específico baseado na aba selecionada. 
+                   'id="container-dados"' permite identificação única. 
+                   'class="mt-4"' adiciona margem superior, mantendo 
+                             consistência no espaçamento vertical. -->
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- Script para incluir a biblioteca XLSX.js, que fornece 
+                   funcionalidades para manipulação de arquivos Excel. 
+         A versão '.min' indica que é uma versão minificada, o que 
+                   reduz o tempo de carregamento. Essa biblioteca é 
+                   essencial para as funcionalidades de importação e 
+                   exportação de dados da página. -->
+
+    <script src="script.js"></script>
+    <!-- Inclui um arquivo de script externo 'script.js' que contém a 
+                   lógica JavaScript para interações e manipulação de 
+                   dados na página. Separar o JavaScript
+                   em um arquivo externo é uma prática recomendada 
+                   para manter o HTML limpo e para melhorar o 
+                   cacheamento do script pelo navegador. -->
+                   
+</body>
+</html>
