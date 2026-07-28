@@ -1,0 +1,381 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte do texto para o corpo inteiro do 
+                documento. 
+    "Arial" é a fonte primária, e se não estiver disponível, 
+                usa-se qualquer fonte sans-serif como fallback. */
+
+    background-color: #f8f9fa;
+    /* Define a cor de fundo do corpo do documento 
+                como um cinza muito claro (#f8f9fa). */
+
+}
+
+
+.titulo {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels para 
+                separar o título de quaisquer elementos 
+                acima dele. */
+
+    font-weight: bold;
+    /* Define o peso da fonte do título como negrito, 
+                tornando-o mais proeminente na página. */
+
+    text-align: center;
+    /* Centraliza o texto do título horizontalmente 
+                na página. */
+
+    color: #343a40;
+    /* Define a cor do texto do título para um 
+                cinza escuro (#343a40), proporcionando um 
+                bom contraste com o fundo claro. */
+                
+}
+
+.container {
+
+    max-width: 1200px;
+    /* Define a largura máxima do contêiner para 1200 pixels. 
+                Isso ajuda a manter o conteúdo legível em 
+                telas muito grandes. */
+
+    margin: auto;
+    /* Define a margem à esquerda e à direita como automática, 
+                centralizando o contêiner horizontalmente na página. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno de 20 pixels em todos os 
+                lados do contêiner, dando espaço entre o conteúdo 
+                interno e as bordas do contêiner. */
+
+}
+
+.carregando {
+
+    text-align: center;
+    /* Centraliza horizontalmente o texto dentro do elemento 
+                com a classe 'carregando'. Isso é útil para 
+                mensagens de status ou alertas que devem chamar 
+                atenção no centro da página. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, separando 
+                este elemento de outros conteúdos acima dele, 
+                criando um espaço visual claro. */
+
+}
+
+
+.barra-controle {
+
+    display: flex;
+    /* Define o modelo de caixa do elemento para flexível, o que 
+                facilita o alinhamento de itens filhos horizontalmente 
+                ou verticalmente de maneira eficiente. */
+                
+    justify-content: space-between;
+    /* Distribui o espaço restante igualmente entre os itens 
+                filhos, empurrando-os para os extremos (começo e fim) 
+                do elemento contêiner. */
+
+    align-items: center;
+    /* Alinha os itens filhos ao centro ao longo do eixo 
+                transversal (vertical, neste caso), garantindo 
+                que eles estejam centralizados dentro do contêiner. */
+                
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, criando 
+                espaço entre este elemento e elementos acima dele. */
+
+}
+
+.campo-pesquisa {
+    
+    flex: 1;
+    /* Faz com que o elemento 'campo-pesquisa' cresça para 
+                ocupar todo o espaço disponível no contêiner 
+                flexível. Isso garante que o campo de pesquisa se 
+                expanda para preencher qualquer espaço extra 
+                que outros itens não ocupem. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento interno de 10 pixels em 
+                todos os lados do campo de entrada, aumentando a 
+                área clicável e melhorando a estética visual. */
+
+    margin-right: 10px;
+    /* Adiciona uma margem à direita de 10 pixels para separar o 
+                campo de pesquisa do próximo elemento na mesma linha, 
+                normalmente um botão ou outro controle de interface. */
+
+}
+
+.botao-exportar {
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento interno de 10 pixels no 
+                topo e na base, e 20 pixels nos lados esquerdo e 
+                direito do botão. Isso melhora a legibilidade e a 
+                acessibilidade, fazendo o botão ser mais fácil de 
+                clicar e visualmente agradável. */
+
+}
+
+
+.abas-container {
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do contêiner de abas 
+                como branco (#ffffff). */
+
+    padding: 20px;
+    /* Aplica um preenchimento interno de 20 pixels em todos 
+                os lados, proporcionando espaço entre os bordos 
+                do contêiner e seu conteúdo interno. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do contêiner com um raio de 8 
+                pixels, dando um visual mais suave e moderno. */
+                
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do contêiner, utilizando 
+                preto com opacidade de 10% para criar um efeito 
+                de elevação, dando uma sensação de profundidade. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, separando o 
+                contêiner de abas de outros elementos acima dele. */
+
+}
+
+.abas {
+
+    display: flex;
+    /* Estabelece o modelo de exibição flexível para as abas, 
+                facilitando o alinhamento horizontal dos itens 
+                filhos (aba-items). */
+
+    border-bottom: 1px solid #dee2e6;
+    /* Adiciona uma borda sólida na parte inferior das abas 
+                com uma cor cinza claro (#dee2e6), visualmente 
+                separando as abas do conteúdo abaixo delas. */
+
+}
+
+.abas .aba-item {
+
+    margin-bottom: -1px;
+    /* Aplica uma margem inferior negativa para que a aba-item 
+                sobreponha ligeiramente a borda do contêiner abaixo, 
+                criando um efeito visual de tabulação. */
+
+}
+
+.abas .aba-link {
+
+    display: block;
+    /* Define o estilo de exibição para bloco, permitindo que o 
+                elemento ocupe toda a largura disponível 
+                se necessário. */
+
+    padding: 10px 20px;
+    /* Adiciona um preenchimento interno, 10 pixels 
+                verticalmente e 20 pixels horizontalmente, 
+                aumentando a área clicável e melhorando a estética. */
+
+    margin-right: 5px;
+    /* Adiciona uma margem à direita de 5 pixels para 
+                separar visualmente as abas adjacentes. */
+
+    border: 1px solid transparent;
+    /* Define uma borda de 1 pixel transparente em torno da 
+                aba-link para manter a consistência do layout 
+                mesmo quando as cores das bordas mudam. */
+
+    border-radius: 5px 5px 0 0;
+    /* Arredonda apenas os cantos superiores esquerdo e 
+                direito das abas para dar uma forma de guia. */
+
+    color: #495057;
+    /* Define a cor do texto para um cinza escuro (#495057), 
+                que oferece bom contraste com o fundo claro. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito, destacando visualmente 
+                as abas como elementos clicáveis. */
+
+    cursor: pointer;
+    /* Muda o cursor para o tipo ponteiro, indicando que o 
+                elemento é clicável. */
+
+}
+
+.abas .aba-link.ativa {
+
+    color: #ffffff;
+    /* Define a cor do texto da aba ativa para branco, 
+                aumentando o contraste com o fundo azul. */
+
+    background-color: #007bff;
+    /* Define a cor de fundo da aba ativa para um 
+                azul brilhante (#007bff), destacando-a das 
+                outras abas. */
+
+    border-color: #007bff #007bff #ffffff;
+    /* Ajusta as cores das bordas para as abas ativas, 
+                mantendo a consistência com a cor de fundo e 
+                diferenciando visualmente a aba selecionada. */
+
+}
+
+.conteudo-abas > .conteudo-aba {
+
+    display: none;
+    /* Inicialmente oculta todo o conteúdo da aba, 
+                tornando-o invisível na página até que 
+                sua aba correspondente seja ativada. */
+
+}
+
+.conteudo-abas > .conteudo-aba.ativa {
+
+    display: block;
+    /* Altera o estilo de exibição do conteúdo da aba 
+                ativa para 'block', tornando-o visível 
+                quando sua aba correspondente é selecionada. */
+
+}
+
+.table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da 
+                largura do contêiner pai. Isso garante que a 
+                tabela se estenda ao longo de toda a largura 
+                disponível. */
+
+    border-collapse: collapse;
+    /* Ajusta a propriedade border-collapse para 'collapse', 
+                o que faz com que as bordas das células sejam 
+                fundidas em uma única borda, criando um visual 
+                mais limpo e contínuo para a tabela. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, criando 
+                espaço entre a tabela e quaisquer elementos que 
+                estejam acima dela, separando visualmente a tabela 
+                de outros conteúdos. */
+
+}
+
+.table th, .table td {
+
+    padding: 8px;
+    /* Aplica um preenchimento interno de 8 pixels em 
+                todas as direções (topo, direita, base, 
+                esquerda) nas células da tabela (tanto cabeçalhos 
+                quanto células de dados), o que melhora a 
+                legibilidade ao criar mais espaço ao redor do 
+                texto dentro das células. */
+
+    text-align: left;
+    /* Alinha o texto dentro das células à esquerda, proporcionando 
+                uma apresentação clara e consistente do 
+                conteúdo nas células. */
+
+    border: 1px solid #dee2e6;
+    /* Define as bordas das células com uma largura de 1 pixel, 
+                sólida, e uma cor cinza claro (#dee2e6), o que 
+                ajuda a delinear claramente as células individuais 
+                na tabela. */
+
+}
+
+.table thead th {
+
+    background-color: #007bff;
+    /* Define a cor de fundo dos cabeçalhos da tabela (elementos 
+                <th> dentro de <thead>) para um azul 
+                brilhante (#007bff), o que ajuda a 
+                destacar a área do cabeçalho da tabela. */
+
+    color: #ffffff;
+    /* Estabelece a cor do texto nos cabeçalhos da 
+                tabela como branco (#ffffff), garantindo um 
+                alto contraste contra o fundo azul, o que 
+                facilita a leitura. */
+
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+
+    background-color: #f2f2f2;
+    /* Aplica uma cor de fundo cinza claro (#f2f2f2) às 
+                linhas ímpares da tabela (cada linha ímpar 
+                dentro de <tbody>). Este zebra striping melhora a 
+                legibilidade ao diferenciar visualmente as 
+                linhas adjacentes na tabela. */
+
+}
+
+
+/* Estilos para os status */
+.aprovado {
+
+    background-color: #d4edda;
+    /* Define a cor de fundo para um verde claro (#d4edda), comumente 
+                associado a sucesso ou aprovação, ideal para indicar 
+                que o aluno foi aprovado. */
+
+    color: #155724;
+    /* Estabelece a cor do texto para um verde escuro (#155724), 
+                garantindo um contraste adequado contra o fundo 
+                claro e mantendo uma associação com temas de sucesso. */
+
+}
+
+.recuperacao {
+
+    background-color: #e4ff94;
+    /* Define a cor de fundo para um amarelo claro (#e4ff94), 
+                geralmente usado para indicar atenção ou necessidade 
+                de melhoria, ideal para status de recuperação. */
+                
+    color: #856404;
+    /* Estabelece a cor do texto para um marrom (#856404), 
+                proporcionando um contraste visível contra o 
+                fundo amarelo claro, mantendo a estética de alerta. */
+
+}
+
+.reprovado-por-nota {
+
+    background-color: #f8d7da;
+    /* Define a cor de fundo para um rosa claro (#f8d7da), 
+                frequentemente usado para indicar erro ou problemas, 
+                adequado para status de reprovação por notas. */
+
+    color: #721c24;
+    /* Define a cor do texto para um vermelho escuro (#721c24), que 
+                oferece um contraste forte contra o fundo rosa, 
+                reforçando a seriedade do status de reprovação. */
+
+}
+
+.reprovado-por-faltas {
+
+    background-color: #f5c6cb;
+    /* Define a cor de fundo para um rosa ligeiramente 
+                diferente (#f5c6cb), usado para diferenciar 
+                visualmente da reprovação por nota, mas ainda 
+                indicando problemas, neste caso, reprovação por faltas. */
+
+    color: #721c24;
+    /* Utiliza a mesma cor de texto vermelho escuro (#721c24) 
+                para manter a consistência com a regra 'reprovado-por-nota', 
+                indicando uma situação negativa similar. */
+                
+}

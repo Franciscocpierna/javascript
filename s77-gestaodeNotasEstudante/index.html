@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- A linha acima é a declaração do DOCTYPE, que é uma 
+            instrução para o navegador sobre a versão e o tipo de 
+            documento HTML que está sendo usado. No caso, indica 
+            que o documento é HTML5. -->
+
+<html lang="pt-BR">
+<!-- Esta é a tag raiz de todo o documento HTML. O atributo 'lang' 
+            especifica o idioma principal do conteúdo do documento, 
+            que é o português do Brasil (pt-BR). -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de estilo, 
+            scripts e outras informações que não são exibidas 
+            diretamente na área de visualização da página. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta tag <meta> define o conjunto de caracteres usado no 
+            documento HTML, neste caso UTF-8, que inclui a maioria 
+            dos caracteres de todos os idiomas escritos humanamente. 
+            Isso é essencial para a internacionalização e é especialmente 
+            importante em idiomas com caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag <meta> é usada para controlar a viewport (área de visualização) 
+            do navegador. O atributo 'content' com 'width=device-width' 
+            instrui o navegador a definir a largura da viewport de acordo 
+            com a largura do dispositivo (útil para dispositivos móveis). 
+    'initial-scale=1.0' define o nível inicial de zoom quando a página é 
+            carregada pela primeira vez. -->
+
+    <title>Exercício - Gestão de Notas de Estudantes</title>
+    <!-- A tag <title> define o título do documento, que é o texto 
+            que aparece na aba do navegador. Este título é "Gestão de 
+            Notas de Estudantes", informando ao usuário sobre o 
+            conteúdo da página. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Esta tag <link> é usada para vincular uma folha de estilo 
+            externa ao documento HTML. O atributo 'href' especifica o 
+            caminho para o arquivo CSS que estilizará a página. 
+    'rel="stylesheet"' indica que o tipo de arquivo vinculado é 
+            uma folha de estilo CSS. -->
+    
+</head>
+<!-- Fim da tag <head>. Todo o conteúdo dentro de <head> é 
+            informacional e não é exibido diretamente na página 
+            web visualizada, exceto o título na aba do navegador. -->
+
+
+<body>
+<!-- A tag <body> contém todo o conteúdo principal de uma 
+            página HTML que é visível para o usuário, como texto, 
+            imagens, links, tabelas e mais. -->
+
+    <div class="container">
+    <!-- Esta <div> age como um contêiner para os elementos dentro 
+                dela, permitindo que sejam estilizados e posicionados 
+                juntos. A classe 'container' é geralmente usada para 
+                definir uma largura máxima e centralizar o conteúdo 
+                na página. -->
+
+        <h1 class="titulo">Exercício - Gestão de Notas de Estudantes</h1>
+        <!-- A tag <h1> define o título principal da página. 
+                    A classe 'titulo' pode ser usada para aplicar estilos 
+                    específicos a este título através de CSS. Este título 
+                    também ajuda na SEO (otimização para motores de busca) 
+                    ao descrever o conteúdo da página. -->
+
+        <div id="indicador-carregamento" class="carregando">Carregando...</div>
+        <!-- Uma <div> para mostrar um texto de carregamento enquanto os 
+                    dados estão sendo processados ou até que a página esteja 
+                    completamente carregada. O ID 'indicador-carregamento' 
+                    permite manipular este elemento com JavaScript, e a 
+                    classe 'carregando' pode ser usada para estilizar o texto. -->
+
+        <div id="conteudo" style="display: none;">
+        <!-- Esta <div> contém o conteúdo principal que é inicialmente 
+                    oculto (style="display: none;"). O conteúdo pode ser 
+                    exibido dinamicamente com JavaScript após o 
+                    carregamento dos dados. -->
+
+            <div class="barra-controle">
+            <!-- Uma <div> que funciona como uma barra de controle, 
+                        contendo elementos de entrada e botões para 
+                        interação do usuário. -->
+
+                <input type="text" id="campo-pesquisa" class="campo-pesquisa" placeholder="Pesquisar...">
+                <!-- Um campo de entrada para permitir ao usuário digitar um 
+                            texto para pesquisar. O placeholder fornece uma 
+                            dica sobre o que o campo espera ("Pesquisar..."). -->
+
+                <button id="exportar-filtrados" class="botao-exportar" onclick="exportarNotasFiltradas()">Exportar Notas Filtradas</button>
+                <!-- Um botão que permite ao usuário exportar dados filtrados. 
+                            O evento 'onclick' chama a função 'exportarNotasFiltradas()' 
+                            definida no JavaScript. -->
+
+            </div>
+
+            <div id="container-abas" class="abas-container">
+            <!-- Uma <div> que serve como um contêiner para as 
+                        abas de navegação. -->
+
+                <ul class="abas" id="abasTurmas"></ul>
+                <!-- Uma lista não ordenada que será preenchida com abas 
+                            para cada turma dinamicamente via JavaScript. -->
+
+                <div class="conteudo-abas" id="conteudoAbas"></div>
+                <!-- Uma <div> que conterá o conteúdo associado a cada aba 
+                            selecionada. O conteúdo é gerado e controlado 
+                            dinamicamente por JavaScript. -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- Um script externo que é usado para lidar com arquivos Excel (.xlsx). 
+                Este script facilita a leitura e escrita de arquivos 
+                Excel com JavaScript. -->
+
+    <script src="script.js"></script>
+    <!-- A inclusão do arquivo JavaScript local 'script.js' que 
+                contém a lógica específica para esta aplicação, como 
+                carregar dados, gerar abas e manipular eventos. -->
+                
+</body>
+</html>
+<!-- Fim da tag <body> e do documento HTML. -->
