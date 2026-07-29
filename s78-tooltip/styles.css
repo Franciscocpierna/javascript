@@ -1,0 +1,226 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o corpo do documento como 'Arial', 
+            com um fallback para qualquer fonte 'sans-serif' se 'Arial' não 
+            estiver disponível. 'Arial' é uma escolha comum por sua legibilidade e 
+            aparência limpa, adequada para textos em interfaces de usuário. */
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto do cabeçalho principal (h1) ao centro do contêiner. Isso é 
+            útil para títulos para garantir que eles sejam um ponto 
+            focal claro na página. */
+
+}
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+    /* Estabelece que as tabelas ocupem 100% da largura do contêiner pai, 
+                proporcionando uma disposição mais fluida e integrada. 
+
+        'border-collapse: collapse;' remove as bordas duplas entre células 
+                adjacentes, tornando a tabela mais coesa e esteticamente agradável. */
+
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    /* Define um estilo comum para as células de cabeçalho (th) 
+                e as células de dados (td):
+       - 'border: 1px solid #ddd;' adiciona uma borda sólida com uma 
+                cor cinza claro (#ddd) para delimitar claramente as células.
+       - 'padding: 8px;' adiciona um espaçamento interno de 8 pixels em 
+                todas as direções dentro de cada célula para evitar que o 
+                conteúdo fique muito compacto.
+       - 'text-align: center;' centraliza o conteúdo textual dentro das 
+                células, melhorando a legibilidade e a apresentação 
+                uniforme dos dados. */
+
+}
+
+th {
+
+    background-color: #f2f2f2;
+    /* Aplica uma cor de fundo cinza claro (#f2f2f2) para as células 
+                de cabeçalho. Isso ajuda a diferenciar visualmente as 
+                células de cabeçalho das células de dados, tornando a 
+                tabela mais fácil de navegar visualmente. */
+
+}
+
+tr:hover {
+
+    background-color: #f5f5f5;
+    /* Define uma cor de fundo cinza muito claro (#f5f5f5) para uma 
+                linha da tabela quando o mouse passa sobre ela ('hover'). 
+                Esta interatividade visual ajuda os usuários a focar em uma 
+                linha por vez, facilitando a leitura de dados em tabelas densas. */
+
+}
+
+.filtros {
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20px ao contêiner `.filtros`. 
+                Isso cria um espaço vertical entre os filtros e os elementos 
+                subsequentes na página, evitando que os componentes fiquem 
+                visualmente amontoados e melhorando a clareza e a separação dos 
+                elementos de interface do usuário. */
+
+}
+
+.filtros input {
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10px ao redor do conteúdo interno dos 
+                elementos de entrada dentro do `.filtros`. Isso aumenta a área 
+                clicável e melhora a legibilidade do texto inserido. */
+
+    margin-right: 10px;
+    /* Aplica uma margem direita de 10px a cada campo de entrada, criando espaço 
+                entre eles quando dispostos horizontalmente. Isso previne que os 
+                elementos de entrada se toquem, mantendo uma distância visual 
+                agradável e funcional. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida de 1px com a cor cinza claro (#ddd) ao redor 
+                dos campos de entrada, definindo claramente os limites do campo e 
+                melhorando o contraste com o fundo. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos dos campos de entrada com um raio de 5px, proporcionando 
+                uma estética moderna e suave que é frequentemente associada a designs 
+                amigáveis e acessíveis. */
+
+}
+
+.tooltip {
+
+    position: absolute;
+    /* Define a posição do elemento `.tooltip` como absoluta, o que permite que 
+                ele seja posicionado em relação ao seu contêiner posicionado mais 
+                próximo. Isso é crucial para o posicionamento dinâmico do tooltip 
+                com base nas interações do usuário. */
+
+    display: none;
+    /* Inicialmente define o tooltip como oculto (`display: none`), fazendo 
+                com que ele não afete o layout da página até ser necessário. 
+                Isso evita distrações visuais até que o tooltip seja ativado. */
+
+    background-color: white;
+    /* Define a cor de fundo do tooltip como branca, garantindo que o conteúdo 
+                dentro do tooltip seja fácil de ler contra o fundo claro. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda de 1px de espessura com cor cinza claro (#ddd), que 
+                delimita o tooltip do restante do conteúdo da página e reforça a 
+                percepção visual do mesmo como um elemento flutuante e distinto. */
+
+    padding: 10px;
+    /* Aplica um preenchimento interno de 10px para todas as direções 
+                dentro do tooltip, criando espaço entre o conteúdo e as 
+                bordas do tooltip. Isso melhora a legibilidade e a 
+                apresentação estética do conteúdo. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao redor do tooltip, aumentando a percepção de 
+                profundidade e destacando o tooltip sobre outros elementos 
+                da página. A sombra é sutil, usando preto com 10% de 
+                opacidade, o que é suficiente para criar um contraste 
+                visual sem ser dominante. */
+
+    z-index: 1000;
+    /* Define um alto valor para `z-index` garantindo que o tooltip fique 
+                acima de outros elementos na página. Isso é importante para 
+                assegurar que o tooltip não seja bloqueado ou escondido 
+                por outros elementos visuais. */
+
+    width: 420px;
+    /* Define a largura do tooltip para 420px, garantindo que haja espaço 
+                suficiente para exibir o conteúdo desejado de forma clara e 
+                legível. Essa largura fixa ajuda na consistência do layout dos 
+                tooltips independentemente do conteúdo exibido. */
+                
+}
+
+
+.tooltip img {
+
+    display: block;
+    /* Define que as imagens dentro do tooltip serão tratadas como blocos. 
+                Isso significa que ocuparão uma linha inteira por si só, o que é 
+                útil para centralizá-las horizontalmente. */
+
+    margin: 0 auto;
+    /* Aplica margem automática em ambos os lados da imagem. Isso centraliza a 
+                imagem horizontalmente dentro do seu contêiner, criando um layout 
+                visualmente equilibrado e atraente. */
+
+}
+
+.tooltip .produto-imagem {
+
+    width: 200px;
+    /* Define a largura da imagem do produto dentro do tooltip como 200px, 
+                garantindo que a imagem seja grande o suficiente para ser 
+                claramente visível, mas não tão grande a ponto de dominar o 
+                espaço do tooltip. */
+
+    height: 200px;
+    /* Define a altura da imagem do produto para corresponder à sua largura, 
+                mantendo a imagem proporcional e bem dimensionada. Isso ajuda a 
+                manter a qualidade visual e a consistência das imagens apresentadas. */
+
+}
+
+.tooltip .produto-nome {
+
+    text-align: center;
+    /* Centraliza o texto do nome do produto dentro do tooltip, facilitando a 
+                leitura e mantendo a consistência com o alinhamento centralizado 
+                da imagem acima. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para o nome do produto como 18px, o que é 
+                adequado para destacar o nome sem sobrecarregar 
+                visualmente o usuário. */
+
+    margin-top: 10px;
+    /* Aplica uma margem superior de 10px acima do nome do produto, 
+                criando um espaço visual entre a imagem do produto e o 
+                texto, o que ajuda a separar claramente os elementos 
+                dentro do tooltip. */
+
+}
+
+.tooltip .total {
+
+    text-align: center;
+    /* Centraliza o texto que apresenta o total das vendas ou preço, 
+                alinhando-o visualmente com o nome do produto e a imagem. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte para o total das vendas como 24px, 
+                tornando-o proeminente e fácil de ler, o que é importante 
+                para destacar valores numéricos significativos. */
+
+    margin-top: 10px;
+    /* Adiciona uma margem superior de 10px para separar visualmente o 
+                valor total do nome do produto acima, ajudando a organizar e 
+                diferenciar claramente as informações dentro do tooltip. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito para o total das vendas, 
+                enfatizando ainda mais essa informação crucial, 
+                garantindo que se destaque entre outros textos 
+                dentro do tooltip. */
+                
+}

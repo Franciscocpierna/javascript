@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE é uma instrução para o navegador 
+            sobre qual versão do HTML a página está escrita. Neste 
+            caso, indica HTML5, o padrão atual da web, assegurando que os 
+            navegadores renderizem a página usando as regras de 
+            sintaxe do HTML5. -->
+
+<html lang="pt-br">
+<!-- A tag <html> marca o início do documento HTML. O atributo 'lang' 
+            define o idioma principal do documento como português do 
+            Brasil (pt-br), o que ajuda os motores de busca e as tecnologias 
+            assistivas a entenderem o conteúdo da página. -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de estilo, scripts e 
+            outras informações que não são diretamente visíveis na área de 
+            conteúdo do navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' definido como "UTF-8" 
+            especifica a codificação de caracteres para o documento. UTF-8 é 
+            uma codificação de caracteres universal que inclui praticamente 
+            todos os caracteres e símbolos do mundo, assegurando que qualquer 
+            texto seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> que configura a viewport para controlar como a 
+                página é dimensionada e visualizada em diferentes dispositivos. 
+                O atributo 'content' com 'width=device-width' instrui o navegador a 
+                definir a largura da viewport de acordo com a largura do dispositivo, 
+                o que é crucial para design responsivo. 'initial-scale=1.0' 
+                estabelece o nível de zoom inicial quando a página é carregada, 
+                promovendo uma melhor acessibilidade e visualização inicial. -->
+
+    <title>Projeto Vendedores</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba do navegador. 
+                Este título é também utilizado pelos motores de busca e pode 
+                influenciar o SEO (Search Engine Optimization) da página. 
+                "Projeto Vendedores" é um título que dá uma ideia clara do 
+                conteúdo da página. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> é usada aqui para vincular uma folha de estilo 
+                externa, localizada no arquivo 'styles.css'. Esse arquivo 
+                contém todas as regras de estilo CSS que definem a aparência 
+                da página. Isso ajuda a separar o conteúdo (HTML) da 
+                apresentação (CSS), facilitando a manutenção e atualizações do design. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- A tag <script> com um atributo 'src' que aponta para um URL 
+                CDN (Content Delivery Network) que hospeda a biblioteca 'xlsx.full.min.js'. 
+                Esta biblioteca JavaScript é utilizada para ler e manipular 
+                arquivos do Excel diretamente no navegador, permitindo que a 
+                página processe e exiba dados de arquivos Excel sem a necessidade 
+                de um backend para parseamento dos dados. -->
+
+</head>
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível da página web. Aqui, são 
+            definidos todos os elementos que os usuários podem interagir e 
+            ver no navegador. -->
+
+    <h1>Dados dos Vendedores</h1>
+    <!-- A tag <h1> define um cabeçalho de nível um, o mais importante dentro 
+                de uma página. "Dados dos Vendedores" serve como o título principal 
+                da página, indicando o tema ou o conteúdo principal para os usuários e 
+                também é importante para SEO. -->
+
+    <div class="filtros">
+    <!-- Um <div> com a classe "filtros" agrupa visualmente e semanticamente os 
+                    campos de entrada utilizados para filtrar os dados da tabela. 
+                    Isso melhora a organização do layout e ajuda na aplicação 
+                    de estilos CSS específicos. -->
+
+        <input type="text" id="filtro-vendedor" placeholder="Filtrar por Vendedor">
+        <!-- Campo de entrada para filtrar os dados da tabela por vendedor. 
+                    O atributo 'placeholder' fornece uma dica ao usuário sobre o 
+                    que inserir no campo. -->
+
+        <input type="text" id="filtro-produto" placeholder="Filtrar por Produto">
+        <!-- Similar ao campo anterior, mas destinado ao filtro por produto. -->
+
+        <input type="text" id="filtro-preco" placeholder="Filtrar por Preço">
+        <!-- Campo de entrada para filtrar os dados da tabela por preço. Isso 
+                    permite aos usuários restringir a visualização dos dados 
+                    conforme especificado. -->
+
+    </div>
+
+    <table id="tabela-vendedores">
+    <!-- A tag <table> é usada para definir uma tabela HTML, que será 
+                    preenchida dinamicamente com os dados dos vendedores. 
+                    O atributo 'id' permite referenciar e manipular a 
+                    tabela via JavaScript. -->
+
+        <thead>
+        <!-- A seção <thead> define o cabeçalho da tabela. -->
+
+            <tr>
+            <!-- A tag <tr> define uma linha na tabela. -->
+
+                <th>Imagem</th>
+                <!-- Cada <th> define uma célula de cabeçalho, que descreve os 
+                            dados das colunas. 'Imagem' indica que nesta coluna serão 
+                            exibidas imagens. -->
+
+                <th>Vendedor</th>
+                <!-- Descreve a coluna que mostrará o nome do vendedor. -->
+
+                <th>Produto</th>
+                <!-- Descreve a coluna para os produtos vendidos. -->
+
+                <th>Total</th>
+                <!-- Descreve a coluna que mostrará o total de vendas ou preço 
+                            total dos produtos vendidos. -->
+
+            </tr>
+        </thead>
+
+        <tbody>
+
+        <!-- A seção <tbody> contém o corpo principal da tabela, onde os 
+                        dados serão inseridos dinamicamente via JavaScript. -->
+            <!-- Dados serão carregados aqui -->
+
+        </tbody>
+
+    </table>
+
+    
+    <div id="tooltip" class="tooltip">
+    <!-- Uma <div> com a classe 'tooltip' e o id 'tooltip' é usada para mostrar 
+                informações adicionais quando o usuário passa o mouse sobre 
+                elementos da tabela. Estilo e comportamento são definidos 
+                no CSS e JavaScript, respectivamente. -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta para o arquivo 'script.js' 
+                é usada para incluir um arquivo JavaScript externo que contém a 
+                lógica para carregar os dados na tabela, filtrar os dados, e 
+                gerenciar outras interações do usuário na página. -->
+                
+</body>
+</html>
