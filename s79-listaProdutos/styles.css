@@ -1,0 +1,369 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do corpo do documento como 'Arial', 
+            com 'sans-serif' como fallback. Arial é uma fonte limpa e 
+            profissional que melhora a legibilidade do texto. */
+
+    margin: 0;
+    /* Remove as margens padrão do elemento <body>, permitindo que o 
+            conteúdo ocupe toda a largura e altura da janela do navegador 
+            sem espaços adicionais nas bordas. */
+
+    padding: 0;
+    /* Remove o preenchimento interno padrão do elemento <body>, garantindo 
+            que não haja espaço extra dentro do limite do corpo que 
+            afete o layout interno. */
+
+    background-color: #f5f5f5;
+    /* Define a cor de fundo para um cinza muito claro (#f5f5f5), 
+            proporcionando um contraste suave que é fácil para os olhos e 
+            melhora a estética geral da página. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Centraliza o texto dentro do elemento <h1>, garantindo que o título 
+            principal esteja alinhado ao meio horizontalmente, o que é 
+            ideal para cabeçalhos. */
+
+    background-color: #4CAF50;
+    /* Aplica uma cor de fundo verde (#4CAF50) ao título, o que destaca 
+            visualmente o cabeçalho e ajuda a definir a identidade 
+            visual da página. */
+
+    color: white;
+    /* Define a cor do texto dentro do <h1> para branco, criando um alto 
+            contraste com o fundo verde, o que facilita a leitura. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20px em todas as direções dentro do 
+            elemento <h1>, aumentando o espaço em torno do texto, o que 
+            melhora a legibilidade e a presença visual do título. */
+
+    margin: 0;
+    /* Define a margem do <h1> para 0, removendo qualquer espaço extra 
+            ao redor do cabeçalho que poderia afetar o layout vertical. */
+
+}
+
+.total-vendas {
+
+    text-align: center;
+    /* Centraliza o texto da classe '.total-vendas', que é útil para 
+            garantir que o total de vendas exibido seja facilmente visível e 
+            esteticamente alinhado ao centro da área de exibição. */
+
+    margin: 10px 0;
+    /* Define a margem superior e inferior para 10px e as margens laterais 
+            para 0, criando um espaçamento vertical adequado em torno do 
+            elemento sem afetar o alinhamento horizontal. */
+
+    font-size: 18px;
+    /* Ajusta o tamanho da fonte para 18px, garantindo que o texto seja 
+            grande o suficiente para ser lido confortavelmente sem 
+            dominar o layout. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333), que é suave 
+            para os olhos enquanto mantém uma legibilidade excelente 
+            contra o fundo claro. */
+
+}
+
+.conteudo {
+
+    display: flex;
+    /* Utiliza o modelo de layout flexível (Flexbox) para o 
+            container '.conteudo', permitindo um layout responsivo e 
+            adaptável dos elementos filhos. Flexbox facilita o alinhamento e 
+            a distribuição do espaço entre itens em um contêiner, mesmo quando o 
+            tamanho dos itens é desconhecido ou dinâmico. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20px em todas as direções dentro do 
+            elemento '.conteudo'. Isso cria um espaço entre os limites do 
+            contêiner e seus filhos, melhorando a estética geral e 
+            evitando que o conteúdo toque diretamente as bordas. */
+
+}
+
+.lista-produtos {
+
+    width: 30%;
+    /* Define a largura da '.lista-produtos' para 30% da largura de 
+            seu contêiner pai. Isso estabelece um layout proporcional 
+            dentro do flex container, permitindo que o conteúdo restante 
+            use o espaço disponível restante. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10px em todas as direções dentro 
+            de '.lista-produtos', o que melhora a separação visual entre o 
+            conteúdo da lista e as bordas do contêiner. */
+
+    background-color: white;
+    /* Define a cor de fundo de '.lista-produtos' para branco, 
+            proporcionando um contraste limpo com a maioria dos esquemas 
+            de cores e destacando visualmente o contêiner na interface. */
+
+    border-right: 1px solid #ddd;
+    /* Adiciona uma borda direita sólida de 1px com uma cor cinza claro (#ddd). 
+            Isso serve como uma divisão visual entre a '.lista-produtos' e 
+            outros conteúdos ao lado dela no layout flexível. */
+
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra à direita do contêiner '.lista-produtos'. 
+            Esta sombra adiciona profundidade visual, melhorando a distinção 
+            entre este contêiner e outros elementos adjacentes na página. */
+
+}
+
+.lista-produtos select,
+.lista-produtos input {
+
+    width: 100%;
+    /* Define a largura dos elementos 'select' e 'input' dentro de 
+            '.lista-produtos' para ocupar 100% do espaço disponível de seu 
+            contêiner pai, garantindo uma apresentação consistente e alinhada 
+            dos controles de entrada. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10px, aumentando a área de interação e 
+            melhorando a estética das caixas de seleção e campos de entrada. */
+
+    margin-bottom: 10px;
+    /* Aplica uma margem inferior de 10px, criando um espaço entre 
+            este elemento e qualquer outro elemento abaixo dele no 
+            layout, ajudando a separar visualmente os diferentes 
+            controles de entrada. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida de 1px com cor cinza claro para 
+            definir claramente os limites dos campos de entrada. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos da borda com um raio de 5px, suavizando a 
+            aparência dos elementos de entrada e proporcionando um 
+            toque de design moderno e amigável. */
+
+}
+
+.lista-produtos ul {
+
+    list-style-type: none;
+    /* Remove qualquer estilo de lista padrão (como marcadores ou 
+            números) do elemento 'ul', limpa a apresentação visual para 
+            que apenas o conteúdo da lista seja exibido sem 
+            distrações adicionais. */
+
+    padding: 0;
+    /* Remove o preenchimento interno do elemento 'ul', garantindo 
+            que os itens da lista alinhem exatamente com as bordas 
+            do contêiner '.lista-produtos'. */
+
+}
+
+.lista-produtos li {
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10px em todas as direções dentro 
+            de cada item de lista, aumentando a área de interação e 
+            melhorando o conforto visual ao separar o texto das bordas. */
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida de 1px com uma cor cinza claro (#ddd), 
+            delimitando claramente cada item de lista, o que ajuda na 
+            organização visual e na distinção entre itens adjacentes. */
+
+
+    margin-bottom: 5px;
+    /* Define uma margem inferior de 5px para cada item de lista, 
+            criando um espaço vertical entre eles e evitando uma 
+            aparência aglomerada. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário passa o mouse 
+            sobre um item de lista, indicando que o item é clicável. */
+
+    border-radius: 5px;
+    /* Arredonda as bordas dos itens de lista com um raio de 5px, 
+            suavizando a aparência geral e tornando o design mais 
+            moderno e amigável. */
+
+    transition: background-color 0.3s;
+    /* Aplica uma transição suave para mudanças de cor de fundo que 
+            ocorrem, por exemplo, ao passar o mouse. A duração da 
+            transição é de 0.3 segundos. */
+
+}
+
+.lista-produtos li:hover {
+
+    background-color: #e0e0e0;
+    /* Muda a cor de fundo de um item de lista para um cinza 
+            claro (#e0e0e0) quando o mouse está sobre ele, 
+            fornecendo um feedback visual imediato de que o 
+            item é interativo. */
+
+}
+
+.lista-produtos button {
+
+    width: 100%;
+    /* Estende a largura dos botões para ocupar 100% da largura 
+            disponível dentro de seu contêiner, garantindo um 
+            alinhamento e uma apresentação consistentes. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10px, aumentando a área de 
+            clique e melhorando a usabilidade, especialmente em 
+            dispositivos com tela sensível ao toque. */
+
+    margin-top: 10px;
+    /* Define uma margem superior de 10px, separando visualmente os 
+            botões de outros elementos acima deles. */
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo dos botões para um verde vibrante (#4CAF50), 
+            tornando-os visualmente distintos e fáceis de identificar 
+            como elementos clicáveis. */
+
+    color: white;
+    /* Define a cor do texto dentro dos botões para branco, criando um 
+            alto contraste com o fundo verde, o que facilita a leitura. */
+
+    border: none;
+    /* Remove a borda padrão dos botões para uma aparência mais 
+            limpa e moderna. */
+
+    border-radius: 5px;
+    /* Arredonda as bordas dos botões para harmonizar com outros 
+            elementos arredondados na interface. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando sobre os botões, 
+            indicando que são interativos. */
+
+    transition: background-color 0.3s;
+    /* Permite uma transição suave de cor de fundo quando o estado 
+            do botão muda, por exemplo, ao passar o mouse, melhorando a 
+            resposta visual. */
+
+}
+
+.lista-produtos button:hover {
+
+    background-color: #45a049;
+    /* Escurece a cor de fundo dos botões para um verde mais 
+            profundo (#45a049) quando o mouse está sobre eles, 
+            proporcionando um feedback visual de interatividade. */
+
+}
+
+.detalhes-produto {
+
+    width: 70%;
+    /* Define a largura do contêiner `.detalhes-produto` para 70% do 
+            seu contêiner pai, permitindo espaço amplo para exibir 
+            informações detalhadas sobre os produtos selecionados. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno ao `.detalhes-produto`, criando 
+            espaço ao redor do conteúdo, o que melhora a legibilidade 
+            e o apelo visual. */
+
+    background-color: white;
+    /* Estabelece a cor de fundo da seção `.detalhes-produto` como branca, 
+            proporcionando um fundo limpo e neutro para os detalhes do produto, 
+            fazendo com que textos ou imagens se destaquem. */
+
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra sutil ao redor do contêiner, ajudando a destacá-lo 
+            visualmente do restante do layout, aumentando a percepção de 
+            profundidade e foco no conteúdo dos detalhes do produto. */
+
+}
+
+.detalhes-produto img {
+
+    max-width: 400px;
+    /* Define a largura máxima das imagens dentro de `.detalhes-produto` para 
+            400px, garantindo que as imagens não se tornem excessivamente
+            grandes e dominem a interface. */
+
+    display: block;
+    /* Configura as imagens para serem exibidas como blocos, o que 
+            significa que elas ocuparão a linha inteira por si só, 
+            facilitando a centralização. */
+
+    margin: 0 auto 20px;
+    /* Centraliza a imagem horizontalmente dentro do contêiner e adiciona 
+            uma margem inferior de 20px, separando visualmente a imagem 
+            dos outros conteúdos abaixo dela. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos das imagens com um raio de 10px, suavizando a 
+            aparência geral e tornando o design mais moderno e amigável. */
+
+}
+
+.miniaturas {
+
+    display: flex;
+    /* Utiliza o modelo de caixa flexível para organizar as miniaturas 
+            dentro do contêiner, permitindo um layout responsivo e adaptável. */
+
+    flex-wrap: wrap;
+    /* Permite que os itens da flexbox sejam envolvidos em várias linhas, 
+            ajustando-se ao espaço disponível sem esticar os itens. */
+
+    gap: 10px;
+    /* Define um espaço de 10px entre cada miniatura, garantindo que haja 
+            espaço suficiente para evitar uma aparência aglomerada. */
+
+    justify-content: center;
+    /* Centraliza as miniaturas horizontalmente dentro do contêiner, criando 
+            um alinhamento visual agradável. */
+
+}
+
+.miniaturas img {
+
+    width: 100px;
+    height: 100px;
+    /* Define a largura e altura das miniaturas para 100px, garantindo 
+            uniformidade no tamanho das imagens, o que ajuda a manter 
+            um layout consistente. */
+
+    object-fit: cover;
+    /* Garante que as imagens se ajustem às dimensões sem distorcer, 
+            cobrindo completamente o espaço designado sem perder a proporção. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário passa o mouse 
+            sobre as miniaturas, indicando que elas são interativas. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos das miniaturas, alinhando-se ao estilo das 
+            imagens maiores e mantendo a coerência visual. */
+
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Adiciona uma transição suave para transformações e sombras, 
+            melhorando a resposta visual quando as miniaturas são interagidas. */
+
+}
+
+.miniaturas img:hover {
+
+    transform: scale(1.1);
+    /* Aumenta a escala da miniatura em 10% quando o mouse passa sobre ela, 
+            destacando a imagem selecionada e adicionando um efeito visual atraente. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Aplica uma sombra mais pronunciada durante o estado de hover, 
+            aumentando a percepção de profundidade e destacando ainda 
+            mais a miniatura sobre a qual o usuário está interagindo. */
+            
+}

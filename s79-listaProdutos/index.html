@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE é uma instrução para o navegador 
+            sobre qual versão do HTML a página está escrita. Neste caso, 
+            indica HTML5, o padrão atual da web, assegurando que os navegadores 
+            renderizem a página usando as regras de sintaxe do HTML5. -->
+
+<html lang="pt-br">
+<!-- A tag <html> marca o início do documento HTML. O atributo 'lang' 
+            define o idioma principal do documento como português do 
+            Brasil (pt-br), o que ajuda os motores de busca e as tecnologias 
+            assistivas a entenderem o conteúdo da página. -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de estilo, scripts e 
+            outras informações que não são diretamente visíveis na área 
+            de conteúdo do navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' definido como "UTF-8" 
+                especifica a codificação de caracteres para o documento. 
+                UTF-8 é uma codificação de caracteres universal que inclui 
+                praticamente todos os caracteres e símbolos do mundo, assegurando 
+                que qualquer texto seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> que configura a viewport para controlar como a 
+                página é dimensionada e visualizada em diferentes dispositivos. 
+                O atributo 'content' com 'width=device-width' instrui o navegador a 
+                definir a largura da viewport de acordo com a largura do dispositivo, o 
+                que é crucial para design responsivo. 'initial-scale=1.0' 
+                estabelece o nível de zoom inicial quando a página é carregada, 
+                promovendo uma melhor acessibilidade e visualização inicial. -->
+
+    <title>Lista de Produtos</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba do 
+                navegador. Este título é também utilizado pelos motores de 
+                busca e pode influenciar o SEO (Search Engine Optimization) da 
+                página. "Lista de Produtos" é um título que dá uma ideia clara 
+                do conteúdo da página. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> é usada aqui para vincular uma folha de estilo externa, 
+                localizada no arquivo 'styles.css'. Esse arquivo contém todas as 
+                regras de estilo CSS que definem a aparência da página. Isso ajuda a 
+                separar o conteúdo (HTML) da apresentação (CSS), facilitando a 
+                manutenção e atualizações do design. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- A tag <script> com um atributo 'src' que aponta para um URL 
+                CDN (Content Delivery Network) que hospeda a biblioteca 'xlsx.full.min.js'. 
+                Esta biblioteca JavaScript é utilizada para ler e manipular arquivos 
+                do Excel diretamente no navegador, permitindo que a página processe e 
+                exiba dados de arquivos Excel sem a necessidade de um backend para 
+                parseamento dos dados. -->
+
+</head>
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível da página web. Aqui são 
+                definidos todos os elementos que os usuários podem interagir e 
+                visualizar no navegador. -->
+
+    <h1>Lista de Produtos</h1>
+    <!-- A tag <h1> define um cabeçalho de nível um, que é o mais importante e 
+                mais influente em termos de SEO dentro de uma página. "Lista de Produtos" 
+                serve como o título principal da página, indicando claramente o 
+                conteúdo principal para os usuários. -->
+
+    <div class="total-vendas" id="total-vendas">Total de Vendas: R$ 0,00</div>
+    <!-- Um <div> que exibe o total de vendas inicializado com R$ 0,00. 
+                Este elemento será atualizado dinamicamente via JavaScript 
+                conforme os dados forem processados. A classe e o id fornecem 
+                ganchos para estilização e manipulação via script. -->
+
+    <div class="conteudo">
+    <!-- Uma <div> que agrupa os elementos principais da interface, facilitando a 
+                estilização e organização do layout. -->
+
+        <div class="lista-produtos">
+        <!-- Uma <div> interna que contém a interface para a filtragem e 
+                    listagem dos produtos. -->
+
+            <select id="filtro-vendedor">
+
+                <option value="">Todos os Vendedores</option>
+                <!-- Um campo de seleção que permite ao usuário filtrar produtos 
+                            por vendedor. Inicialmente, oferece a opção de ver 
+                            todos os vendedores. Outras opções serão adicionadas 
+                            dinamicamente com base nos dados. -->
+
+            </select>
+
+            <input type="text" id="filtro-produto" placeholder="Filtrar por Produto">
+            <!-- Um campo de entrada de texto que permite ao usuário filtrar a 
+                            lista de produtos por nome do produto. -->
+
+            <ul id="lista-produtos">
+
+                <!-- Um elemento <ul> onde a lista de produtos será dinamicamente 
+                            inserida via JavaScript. -->
+
+            </ul>
+
+            <button id="mostrar-todos">Mostrar Todos os Produtos</button>
+            <!-- Um botão que quando clicado, redefinirá quaisquer filtros 
+                            aplicados e mostrará todos os produtos. -->
+
+        </div>
+
+        <div class="detalhes-produto" id="detalhes-produto">
+            <!-- Uma <div> para exibir detalhes sobre um produto selecionado. 
+                        Os detalhes serão adicionados dinamicamente quando um 
+                        produto for clicado na lista. -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta para o 
+                arquivo 'script.js'. Este script contém a lógica para 
+                manipular os dados do Excel, aplicar filtros e atualizar o
+                DOM com informações sobre produtos e vendas. -->
+                
+</body>
+</html>
