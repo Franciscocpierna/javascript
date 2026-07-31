@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Declara que este documento é HTML5, recomendando ao navegador 
+            usar o modo padrão de compatibilidade mais atual 
+            para renderizar a página. -->
+
+<html lang="pt-BR">
+<!-- Define o elemento raiz da página e especifica o idioma como 
+            Português do Brasil, o que é essencial para acessibilidade e 
+            motores de busca. -->
+
+<head>
+<!-- Abre a tag head, que contém metadados (dados sobre os dados) que não 
+            são exibidos diretamente na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres (encoding) para UTF-8, que 
+            inclui quase todos os caracteres de todos os idiomas humanos, 
+            assegurando assim a compatibilidade global do conteúdo da página. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Garante que a página seja exibida corretamente em todos os 
+            dispositivos e tamanhos de tela, configurando a largura da 
+            viewport para seguir a largura do dispositivo e a escala 
+            inicial para 1. -->
+
+    <title>Tabela de Estados e Habitantes</title>
+    <!-- Define o título da página, que é exibido na aba do navegador e 
+            usado por motores de busca. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Linka um arquivo de folha de estilo CSS externo chamado 
+            'estilo.css' para estilizar a página. Este arquivo definirá 
+            como os elementos HTML serão exibidos visualmente. -->
+
+</head>
+<!-- Fecha a tag head. -->
+
+
+<body>
+<!-- Abre a tag body, que contém todo o conteúdo principal da 
+            página que é visível ao usuário. -->
+
+    <h1>Resumo de Estados e Habitantes</h1>
+    <!-- Define um cabeçalho de nível 1, que é geralmente usado para o 
+            título mais importante da página, neste caso, "Resumo de 
+            Estados e Habitantes". -->
+
+    <table id="tabela-estados">
+    <!-- Cria uma tabela com o ID 'tabela-estados', que será usado para 
+            referenciar a tabela via CSS para estilos ou via JavaScript
+            para manipulação dinâmica. -->
+
+        <thead>
+        <!-- Define o cabeçalho da tabela, onde são especificados 
+                    os títulos das colunas. -->
+
+            <tr>
+            <!-- Cria uma linha na tabela, que conterá as células de 
+                    cabeçalho (th). -->
+
+                <th>Estado</th>
+                <!-- Define uma célula de cabeçalho, que será usada para o 
+                        título da coluna "Estado". -->
+
+                <th>Total de Habitantes</th>
+                <!-- Define uma célula de cabeçalho, que será usada para o 
+                        título da coluna "Total de Habitantes". -->
+
+            </tr>
+        </thead>
+        <!-- Fecha a tag thead. -->
+
+        <tbody>
+        <!-- Abre o corpo da tabela, onde os dados da tabela serão inseridos 
+                    dinamicamente via JavaScript. -->
+
+            <!-- Conteúdo da tabela será inserido dinamicamente -->
+
+        </tbody>
+        <!-- Fecha a tag tbody. -->
+
+    </table>
+    <!-- Fecha a tag table. -->
+
+    <div id="tooltip" class="tooltip"></div>
+    <!-- Cria uma div com ID 'tooltip' e classe 'tooltip'. Este elemento 
+                será usado como um tooltip, que é uma pequena caixa que 
+                aparece para fornecer informações adicionais quando o usuário 
+                passa o mouse sobre um elemento. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Inclui a biblioteca 'xlsx.full.min.js' usando um script externo. Esta 
+                biblioteca é usada para manipular arquivos Excel (XLSX) via JavaScript. -->
+
+    <script src="script.js"></script>
+    <!-- Inclui o arquivo JavaScript 'script.js', que contém o código para 
+                manipulação dos dados da tabela e outras interações na página. -->
+
+</body>
+<!-- Fecha a tag body. -->
+
+</html>
+<!-- Fecha a tag html, que é o fechamento do elemento raiz do 
+            documento HTML. -->

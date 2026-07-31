@@ -1,0 +1,214 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define as fontes Arial como principal e sans-serif como 
+            fallback para o corpo do documento, garantindo 
+            legibilidade e um design limpo. */
+
+    margin: 20px;
+    /* Aplica uma margem de 20px em todos os lados do corpo do 
+            documento, criando um espaçamento uniforme em torno 
+            do conteúdo interno. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Centraliza o texto dentro de elementos <h1>, geralmente usado 
+            para títulos, para dar destaque e melhorar a apresentação. */
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20px para elementos <h1> para separar 
+            visualmente o título dos conteúdos que o seguem. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura das tabelas para 100% do elemento pai, garantindo 
+            que ocupem todo o espaço disponível horizontalmente. */
+
+    border-collapse: collapse;
+    /* Colapsa as bordas das células da tabela em uma única borda para 
+            evitar duplicidade e melhorar a estética. */
+
+    margin-top: 20px;
+    /* Aplica uma margem superior de 20px às tabelas para criar espaço 
+            entre quaisquer elementos acima e a tabela. */
+
+}
+
+th, td {
+
+    padding: 10px;
+    /* Aplica um preenchimento de 10px em todas as direções dentro das 
+            células de cabeçalho (th) e dados (td), melhorando a legibilidade 
+            ao separar o texto das bordas da célula. */
+
+    text-align: left;
+    /* Alinha o texto à esquerda em células de cabeçalho e de dados para uma 
+            apresentação clara e consistente dos dados tabulares. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida de 1px com cor cinza claro (#ddd) ao redor 
+            de células de cabeçalho e dados para definir claramente os 
+            limites das células. */
+
+}
+
+th {
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo das células de cabeçalho para um 
+            verde (#4CAF50), destacando visualmente a área de 
+            cabeçalho da tabela. */
+
+    color: white;
+    /* Define a cor do texto nas células de cabeçalho para branco, 
+            garantindo contraste suficiente e facilidade de leitura 
+            contra o fundo verde. */
+
+}
+
+td {
+
+    background-color: #f9f9f9;
+    /* Define a cor de fundo das células de dados (td) para um 
+            cinza muito claro (#f9f9f9), que ajuda a diferenciar 
+            visualmente as células de dados das células de cabeçalho e 
+            melhora a legibilidade do conteúdo. */
+
+}
+
+.tooltip {
+
+    position: absolute;
+    /* Posiciona o tooltip de forma absoluta em relação ao seu contêiner 
+            posicionado mais próximo, permitindo que ele flutue sobre 
+            outros conteúdos sem alterar o layout do documento. */
+
+    background-color: #333;
+    /* Define a cor de fundo do tooltip para um cinza escuro (#333), que 
+            destaca visualmente o tooltip contra o conteúdo de fundo mais claro. */
+
+    color: #fff;
+    /* Define a cor do texto dentro do tooltip para branco (#fff), criando 
+            um contraste forte com o fundo escuro para facilitar a leitura. */
+
+    padding: 15px;
+    /* Aplica um preenchimento de 15px em todas as direções dentro do 
+            tooltip, aumentando o espaço entre o texto e as bordas 
+            do tooltip para melhor legibilidade. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do tooltip com um raio de 8px, suavizando 
+            sua aparência visual para uma estética mais moderna e amigável. */
+
+    display: none;
+    /* Inicialmente oculta o tooltip, que só será exibido dinamicamente 
+            através de interações específicas (como mouseover) via JavaScript. */
+
+    z-index: 1000;
+    /* Define um valor alto de z-index para garantir que o tooltip 
+            apareça acima de outros elementos na página, evitando que 
+            seja obscurecido. */
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Aplica uma sombra em torno do tooltip, melhorando a sua 
+            visibilidade e destacando-o contra o fundo da página. 
+            A sombra é suave e sutil. */
+
+    max-width: 300px;
+    /* Limita a largura máxima do tooltip a 300px, garantindo que ele 
+            não se torne excessivamente largo e permaneça legível. */
+
+}
+
+.tooltip p {
+
+    margin: 5px 0;
+    /* Define a margem superior e inferior para os parágrafos 
+            dentro do tooltip como 5px, mantendo um espaçamento 
+            vertical uniforme entre eles. */
+
+    line-height: 1.4;
+    /* Define a altura da linha para os parágrafos dentro do tooltip, 
+            melhorando a legibilidade ao aumentar o espaço entre as 
+            linhas de texto. */
+
+}
+
+.tooltip strong {
+
+    color: #FFD700;
+    /* Define a cor do texto para elementos <strong> dentro do 
+            tooltip para um amarelo dourado (#FFD700), usado para 
+            destacar partes importantes do texto e chamar a atenção para elas. */
+
+}
+
+.tooltip p:first-child {
+
+    font-size: 1.1em;
+    /* Aumenta o tamanho da fonte do primeiro parágrafo dentro do 
+            tooltip para 1.1 vezes o tamanho da fonte normal do elemento, 
+            destacando-o como importante ou como um cabeçalho interno. */
+
+    margin-bottom: 10px;
+    /* Aplica uma margem inferior de 10px ao primeiro parágrafo, criando 
+            espaço entre ele e qualquer conteúdo que o siga dentro do tooltip. */
+
+    border-bottom: 1px solid #555;
+    /* Adiciona uma borda inferior sólida de 1px com cor cinza escuro (#555) 
+            ao primeiro parágrafo, servindo como uma linha divisória visual 
+            que separa o cabeçalho do conteúdo subsequente. */
+
+    padding-bottom: 5px;
+    /* Aplica um preenchimento inferior de 5px ao primeiro parágrafo, 
+            aumentando o espaço entre o texto e a borda inferior, melhorando 
+            assim a legibilidade. */
+
+}
+
+.tooltip button {
+
+    margin-top: 10px;
+    /* Aplica uma margem superior de 10px ao botão dentro do tooltip, 
+            separando-o de outros conteúdos acima para evitar aglomeração visual. */
+
+    padding: 5px 10px;
+    /* Define o preenchimento do botão para 5px na vertical e 10px na 
+            horizontal, aumentando a área de clique e melhorando a ergonomia. */
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo do botão para um verde vibrante (#4CAF50), 
+            tornando-o visualmente distinto e fácil de identificar. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para branco, criando um 
+            alto contraste com o fundo verde para facilitar a leitura. */
+
+    border: none;
+    /* Remove qualquer borda do botão, proporcionando um design mais 
+            limpo e moderno. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um raio de 5px, suavizando sua 
+            aparência para uma estética mais amigável. */
+
+    cursor: pointer;
+    /* Muda o cursor para o tipo 'pointer' quando sobre o botão, indicando 
+            que o elemento é clicável. */
+
+}
+
+.tooltip button:hover {
+
+    background-color: #45a049;
+    /* Muda a cor de fundo do botão para um tom de verde ligeiramente 
+            mais escuro (#45a049) quando o mouse está sobre ele, fornecendo 
+            um feedback visual de interatividade. */
+            
+}
