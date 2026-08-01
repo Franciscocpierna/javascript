@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Declara que este documento é um HTML5, garantindo que o 
+        navegador utilize o modo de padrões mais atual para 
+        renderizar a página. -->
+
+<html lang="pt-BR">
+<!-- Elemento raiz do documento HTML, definindo o idioma principal 
+        da página como Português do Brasil, o que é importante para 
+        acessibilidade e motores de busca. -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre os dados) que 
+            não são exibidos diretamente na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- Especifica a codificação de caracteres UTF-8 para o 
+                conteúdo do documento. 
+         UTF-8 suporta todos os caracteres universais e símbolos, 
+                essencial para exibir texto corretamente em múltiplas línguas. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define configurações de visualização para dispositivos móveis:
+         1. 'width=device-width' instrui o navegador a definir a 
+                largura da página igual à largura da tela do dispositivo.
+         2. 'initial-scale=1.0' configura o nível de zoom inicial 
+                quando a página é carregada pela primeira vez, garantindo 
+                que o texto e os gráficos sejam legíveis. -->
+
+    <title>Tabela de Estados e Cidades com Filtros Interativos</title>
+    <!-- Define o título da página, que é exibido na aba do navegador. 
+         Este título é também utilizado pelos motores de busca e 
+                quando a página é salva como favorita. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Vincula uma folha de estilo externa ao documento. 'estilo.css' 
+                contém as regras de formatação para elementos da página,
+                permitindo um controle centralizado do design 
+                visual da página. -->
+
+</head>
+<!-- Fecha a tag <head>, indicando que todos os metadados 
+        para a página foram definidos. -->
+
+<body>
+<!-- Abre a tag <body>, que contém todo o conteúdo principal 
+            visível aos usuários na página web. -->
+
+    <h1>Tabela de Estados e Cidades</h1>
+    <!-- Cria um cabeçalho de nível 1 que serve como o título principal 
+                da página, informando aos usuários o conteúdo da tabela. -->
+
+    <table id="tabela-dados">
+    <!-- Inicia uma tabela com o ID 'tabela-dados'. Este ID pode ser 
+                referenciado no CSS para estilização e no JavaScript 
+                para manipulação dos dados. -->
+
+        <thead>
+        <!-- Define o cabeçalho da tabela, especificando as colunas. -->
+
+            <tr>
+            <!-- Cria uma linha no cabeçalho da tabela. -->
+
+                <th>Estado</th>
+                <!-- Define uma célula de cabeçalho que descreve a coluna dos estados. -->
+
+                <th>Cidade</th>
+                <!-- Define uma célula de cabeçalho que descreve a coluna das cidades. -->
+
+                <th>Total de Habitantes</th>
+                <!-- Define uma célula de cabeçalho que descreve a coluna 
+                            do total de habitantes de cada cidade ou estado. -->
+
+            </tr>
+        </thead>
+        <!-- Fecha a tag <thead>, indicando o fim do cabeçalho da tabela. -->
+
+        <tbody>
+        <!-- Abre a tag <tbody>, que é destinada ao corpo da tabela onde os 
+                    dados dinâmicos serão inseridos. -->
+
+            <!-- Conteúdo será carregado dinamicamente -->
+            
+
+        </tbody>
+        <!-- Fecha a tag <tbody>. -->
+
+    </table>
+    <!-- Fecha a tag <table>. -->
+
+    <div id="tooltip" class="tooltip"></div>
+    <!-- Cria uma <div> que servirá como um tooltip. Este tooltip pode 
+                ser usado para mostrar informações adicionais quando o 
+                usuário passar o mouse sobre elementos específicos da tabela.
+         O ID 'tooltip' e a classe 'tooltip' são usados para 
+                referência e estilização. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Inclui a biblioteca XLSX.js através de um CDN (Content Delivery Network), 
+                que é usada para ler e manipular arquivos Excel no navegador. -->
+
+    <script src="script.js"></script>
+    <!-- Liga um arquivo JavaScript externo chamado 'script.js', que 
+                contém o código para carregar e processar os dados da tabela, 
+                bem como para controlar o comportamento do tooltip. -->
+                
+</body>
+<!-- Fecha a tag <body>, finalizando o conteúdo principal da página. -->
+
+</html>
+<!-- Fecha a tag <html>, indicando o fim do documento HTML. -->
