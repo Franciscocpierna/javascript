@@ -1,0 +1,234 @@
+/* Estilo básico para o corpo do documento */
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte para Arial, com fallback para qualquer 
+            sans-serif disponível, garantindo legibilidade e 
+            um design limpo. */
+
+    margin: 20px;
+    /* Aplica uma margem de 20 pixels em todos os lados do corpo 
+            do documento, criando um espaço entre o conteúdo da 
+            página e as bordas da janela do navegador. */
+
+}
+
+/* Estilos para o cabeçalho principal da página */
+h1 {
+
+    text-align: center;
+    /* Centraliza o texto do cabeçalho no meio da página, o que é 
+            útil para títulos, oferecendo um destaque visual claro. */
+            
+    margin-bottom: 20px;
+    /* Estabelece uma margem de 20 pixels abaixo do cabeçalho, 
+            separando-o visualmente dos elementos que vêm a seguir. */
+
+    color: #2c3e50;
+    /* Define a cor do texto para um azul escuro (naval), proporcionando 
+            um contraste suave com o fundo, geralmente claro, e uma 
+            aparência sofisticada. */
+
+}
+
+/* Estilos para as tabelas */
+table {
+
+    width: 100%;
+    /* Faz com que a tabela ocupe 100% da largura do elemento pai, 
+            maximizando o uso do espaço disponível. */
+
+    border-collapse: collapse;
+    /* Remove as bordas duplas entre as células da tabela, resultando 
+            em uma única borda compartilhada, o que melhora a 
+            clareza visual. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels para a tabela, 
+            separando-a de qualquer conteúdo acima dela. */
+            
+}
+
+/* Estilos comuns para células de cabeçalho (th) e 
+        células de dados (td) */
+th, td {
+
+    padding: 10px;
+    /* Aplica um preenchimento de 10 pixels em todas as direções 
+            dentro das células, aumentando o espaço ao redor do texto 
+            para evitar uma aparência lotada e melhorar a legibilidade. */
+
+    text-align: left;
+    /* Alinha o texto à esquerda, que é o padrão para textos em muitos 
+            idiomas, facilitando a leitura. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida com cor cinza claro (#ddd) ao redor 
+            de cada célula, definindo claramente os limites de cada célula. */
+            
+}
+
+/* Estilos específicos para as células de cabeçalho (th) */
+th {
+
+    background-color: #4CAF50;
+    /* Aplica uma cor de fundo verde vivo (#4CAF50) às células de 
+            cabeçalho, destacando-as visualmente das células de dados. */
+
+    color: white;
+    /* Define a cor do texto das células de cabeçalho para branco, 
+            garantindo um alto contraste com o fundo verde, o que 
+            facilita a leitura. */
+
+}
+
+/* Estilos específicos para as células de dados (td) */
+td {
+
+    background-color: #f9f9f9;
+    /* Define a cor de fundo das células de dados para um cinza 
+            muito claro (#f9f9f9), o que suaviza o contraste visual 
+            em relação ao texto e é agradável aos olhos. */
+
+    color: #2c3e50;
+    /* Configura a cor do texto das células de dados para azul 
+            escuro (#2c3e50), proporcionando uma consistência visual 
+            com o estilo do cabeçalho <h1>. */
+
+}
+
+/* Estilos para o elemento tooltip, usado para exibir informações 
+            adicionais de maneira flutuante sobre outros conteúdos. */
+.tooltip {
+
+    position: absolute;
+    /* Posiciona o tooltip de forma absoluta em relação ao seu 
+        contêiner posicionado mais próximo, permitindo que ele 
+        flutue sobre outros elementos sem afetar o layout da página. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do tooltip para branco, proporcionando 
+            um contraste elevado com o texto escuro para melhor legibilidade. */
+
+    padding: 10px;
+    /* Aplica um preenchimento de 10 pixels em todas as direções 
+            dentro do tooltip, criando espaço entre o texto e as 
+            bordas do tooltip. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do tooltip para suavizar sua aparência 
+            visual, tornando-o menos intrusivo e mais 
+            esteticamente agradável. */
+
+    display: none;
+    /* Inicialmente oculta o tooltip, ele só será exibido (tornando-se 'block') 
+            através de interações específicas com o JavaScript. */
+
+    z-index: 1000;
+    /* Ajusta a pilha de ordem do tooltip na página, garantindo 
+            que ele sempre apareça sobre outros elementos, 
+            evitando ser coberto. */
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Adiciona uma sombra ao redor do tooltip para melhorar sua 
+            visibilidade contra fundos variados e adicionar 
+            profundidade ao elemento. */
+
+    max-width: 350px;
+    /* Define uma largura máxima para o tooltip, garantindo que 
+            ele não se estenda demais horizontalmente e mantenha o 
+            conteúdo legível. */
+
+    color: #000000;
+    /* Configura a cor do texto para preto, que oferece alto 
+            contraste contra o fundo branco. */
+
+    font-size: 14px;
+    /* Define o tamanho da fonte para 14 pixels, otimizando a 
+            legibilidade do texto dentro do tooltip. */
+
+}
+
+/* Estilos para elementos <canvas>, usados aqui principalmente 
+        dentro de tooltips para gráficos. */
+canvas {
+
+    display: block;
+    /* Muda o display de canvas para 'block', garantindo que 
+            ele se comporte como um bloco, ocupando toda a largura 
+            disponível e não permitindo elementos ao lado. */
+
+    width: 100% !important;
+    /* Define a largura do canvas para 100%, garantindo que ele 
+            preencha o espaço disponível de seu contêiner. O '!important' 
+            garante que esta regra tenha prioridade sobre outras 
+            potencialmente conflitantes. */
+
+    height: auto !important;
+    /* Define a altura do canvas como 'auto', permitindo que ele se 
+            ajuste proporcionalmente à largura para manter as proporções 
+            corretas do gráfico. O '!important' é usado para assegurar que 
+            esta configuração prevaleça sobre outras. */
+
+}
+
+/* Estilos aplicados a todos os parágrafos dentro do 
+        elemento com a classe 'tooltip'. */
+.tooltip p {
+
+    margin: 5px 0;
+    /* Define a margem superior e inferior dos parágrafos para 5px, 
+            deixando um pequeno espaço acima e abaixo de cada parágrafo 
+            para evitar que o texto pareça apertado. */
+
+    line-height: 1.4;
+    /* Define a altura da linha para 1.4 vezes o tamanho da fonte, o 
+            que ajuda a melhorar a legibilidade do texto ao criar mais 
+            espaço vertical entre as linhas de texto. */
+
+    font-size: 14px;
+    /* Define o tamanho da fonte para 14 pixels, garantindo que o 
+            texto seja grande o suficiente para ser lido 
+            confortavelmente sem ocupar espaço excessivo. */
+
+}
+
+/* Estilos aplicados a elementos <strong> dentro do '.tooltip', 
+        geralmente usados para destacar ou enfatizar parte do texto. */
+.tooltip strong {
+
+    color: #FFD700;
+    /* Define a cor do texto para um amarelo dourado (#FFD700), 
+            que é brilhante e chamativo, destacando eficazmente o 
+            texto que é considerado importante ou que precisa de 
+            ênfase especial. */
+
+}
+
+/* Estilos específicos para o primeiro parágrafo 
+        dentro de cada '.tooltip'. */
+.tooltip p:first-child {
+
+    font-size: 1.1em;
+    /* Aumenta o tamanho da fonte para 1.1 vezes o tamanho 
+            da fonte normal do elemento, tornando o primeiro 
+            parágrafo sutilmente maior para destacá-lo como um 
+            cabeçalho ou introdução. */
+
+    margin-bottom: 10px;
+    /* Adiciona uma margem inferior de 10px, separando visualmente o 
+            primeiro parágrafo dos parágrafos subsequentes e dando-lhe 
+            um destaque adicional. */
+
+    border-bottom: 1px solid #2f13ae;
+    /* Aplica uma borda inferior sólida e colorida (azul escuro) 
+            para delimitar claramente o fim do primeiro parágrafo, 
+            servindo tanto como um elemento de design quanto uma 
+            quebra funcional no conteúdo. */
+
+    padding-bottom: 5px;
+    /* Adiciona um preenchimento inferior de 5px, aumentando o 
+            espaço entre o texto do primeiro parágrafo e a borda 
+            abaixo dele, melhorando assim a clareza e a apresentação. */
+            
+}

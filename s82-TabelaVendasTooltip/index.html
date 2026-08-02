@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE informa ao navegador a versão 
+          do HTML que a página está utilizando. 
+     Neste caso, especifica HTML5, que é a versão mais recente e 
+          recomendada para novos documentos. 
+     Isso garante que o navegador use o modo de padrões, proporcionando 
+          maior compatibilidade e desempenho. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang' 
+               especifica o idioma principal do documento,
+               o que ajuda os navegadores a entenderem o conteúdo e os 
+               leitores de tela a pronunciarem corretamente o texto.
+     'pt-BR' indica que o conteúdo está em Português do Brasil. -->
+
+<head>
+<!-- A tag <head> contém metadados sobre o documento, que não 
+          são exibidos diretamente na página web,
+          mas são essenciais para definições de configuração e 
+          referências a recursos externos. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com o atributo 'charset' define o conjunto de 
+               caracteres usado no documento.
+         'UTF-8' é um conjunto de caracteres universal que inclui 
+               praticamente todos os caracteres de todos os idiomas.
+         Isso é importante para garantir que todos os caracteres 
+               sejam exibidos corretamente, independentemente do conteúdo. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A meta tag 'viewport' é crucial para o design responsivo. 
+         'width=device-width' faz com que a largura da página seja 
+               igual à largura do dispositivo, 
+               o que é essencial para dispositivos móveis.
+         'initial-scale=1.0' define o nível de zoom inicial 
+               quando a página é carregada, garantindo que o conteúdo 
+               não esteja ampliado nem reduzido. -->
+
+    <title>Tabela de Vendas com Gráficos no Tooltip</title>
+    <!-- A tag <title> define o título da página, que aparece 
+               na aba do navegador.
+         Este título é usado pelos motores de busca e quando a 
+               página é marcada como favorita. 
+         Aqui, descreve o conteúdo da página como uma tabela de 
+               vendas que utiliza tooltips para mostrar gráficos. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- A tag <link> é usada aqui para conectar uma folha de 
+                    estilo CSS externa ao documento.
+         'rel' define o relacionamento do documento HTML com o 
+                    recurso, que neste caso é 'stylesheet'.
+         'href' especifica o caminho para o arquivo CSS que contém 
+                    os estilos para formatar a página. 
+         Isso permite que o estilo visual da página seja definido 
+                    separadamente do conteúdo HTML, promovendo reutilização e 
+                    manutenção mais fáceis. -->
+
+</head>
+<!-- Encerra a tag <head>, indicando que todos os 
+          metadados foram definidos. -->
+
+<body>
+<!-- A tag <body> contém todo o conteúdo principal que é visível 
+          para os usuários na página web. -->
+
+    <h1>Tabela de Produtos e Vendas</h1>
+    <!-- Define um cabeçalho de nível 1, que é usado para 
+                    apresentar o título principal da página. 
+         Este cabeçalho ajuda os usuários a entenderem rapidamente o 
+                    propósito principal da página. -->
+
+    <table id="tabela-produtos">
+    <!-- Cria uma tabela com um ID específico 'tabela-produtos', que 
+               será usado para referenciar esta tabela no CSS e JavaScript. -->
+
+        <thead>
+        <!-- Define a seção do cabeçalho da tabela, que contém 
+                    os títulos das colunas. -->
+
+            <tr>
+            <!-- Cria uma linha dentro do cabeçalho da tabela. -->
+
+                <th>Produto</th>
+                <!-- Cria uma célula de cabeçalho que define o título da 
+                         primeira coluna como 'Produto'. -->
+
+                <th>Total de Vendas</th>
+                <!-- Cria uma célula de cabeçalho que define o título da 
+                         segunda coluna como 'Total de Vendas'. -->
+
+            </tr>
+        </thead>
+        <!-- Fecha a tag <thead>, completando a definição dos 
+                    cabeçalhos das colunas. -->
+
+        <tbody>
+        <!-- Inicia a seção do corpo da tabela, onde os dados das linhas 
+                    serão inseridos dinamicamente através do JavaScript. -->
+
+            <!-- Conteúdo será carregado dinamicamente -->
+            
+
+        </tbody>
+    </table>
+    <!-- Fecha a tag <table>. -->
+
+    <div id="tooltip" class="tooltip">
+    <!-- Cria um div que funcionará como um tooltip. 
+         Este div é posicionado dinamicamente e usado para mostrar 
+               informações adicionais, neste caso, gráficos. -->
+
+        <canvas id="grafico-vendas" width="300" height="150"></canvas>
+        <!-- Inclui um elemento <canvas>, onde o gráfico será desenhado. 
+             O canvas tem atributos de largura e altura definidos para 
+                    especificar o tamanho do gráfico. -->
+
+    </div>
+
+    <!-- Inclui a biblioteca SheetJS via CDN para manipulação de arquivos Excel. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <!-- Inclui a biblioteca Chart.js via CDN para a criação de gráficos. -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Inclui um arquivo de script JavaScript local que contém a 
+               lógica para carregar dados e manipular a 
+               tabela e os gráficos. -->
+    <script src="script.js"></script>
+
+</body>
+<!-- Fecha a tag <body>, finalizando o conteúdo principal da página. -->
+     
+</html>
+<!-- Fecha a tag <html>, marcando o fim do documento HTML. -->
