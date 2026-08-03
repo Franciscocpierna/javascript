@@ -1,0 +1,95 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte do texto dentro do elemento <body> para Arial, 
+            com um fallback para qualquer sans-serif genérico se 
+            Arial não estiver disponível. */
+
+    margin: 20px;
+    /* Adiciona uma margem de 20 pixels em todos os lados do corpo 
+            da página, criando um espaço entre o conteúdo e as 
+            bordas do navegador. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Centraliza o texto dentro de elementos <h1>, o que afeta o 
+            título principal da página. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels abaixo dos elementos <h1>, 
+            separando visualmente o título do conteúdo abaixo dele. */
+
+    color: #2c3e50;
+    /* Define a cor do texto dos elementos <h1> para um azul escuro (#2c3e50),
+            melhorando a legibilidade e o design visual. */
+
+}
+
+canvas {
+    
+    display: block;
+    /* Altera o display do elemento <canvas> para block, o que 
+            permite outras propriedades de estilo como margem 
+            automática (margin auto). */
+
+    margin: 0 auto;
+    /* Define as margens superior e inferior como 0 e as margens 
+            laterais como automáticas, centralizando o canvas 
+            horizontalmente na página. */
+
+    max-width: 800px;
+    /* Define a largura máxima do <canvas> como 800 pixels, garantindo 
+            que ele não se estenda além disso, independentemente 
+            do tamanho da tela. */
+
+}
+
+.tooltip {
+
+    position: absolute;
+    /* Define a posição do elemento como absoluta, o que permite 
+            que ele seja posicionado em relação ao seu contêiner 
+            mais próximo com posição não estática. */
+
+    background-color: #2c3e50;
+    /* Define a cor de fundo do tooltip como um azul escuro (#2c3e50), 
+            proporcionando um contraste apropriado com o texto claro. */
+
+    padding: 10px;
+    /* Aplica um preenchimento de 10 pixels em todas as direções 
+            dentro do tooltip, criando espaço entre o texto e as 
+            bordas do elemento. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do tooltip com um raio de 8 pixels, 
+            suavizando a aparência do elemento. */
+
+    display: none;
+    /* Define o display inicial do tooltip como 'none', fazendo 
+            com que ele não seja visível até ser ativado por um 
+            evento de JavaScript. */
+
+    z-index: 1000;
+    /* Ajusta o nível de empilhamento do tooltip para 1000, garantindo 
+            que ele fique acima de outros elementos na página que 
+            possam ter z-index menor. */
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Aplica uma sombra ao redor do tooltip para destacá-lo 
+            visualmente do resto do conteúdo da página. A sombra é 
+            relativamente suave e semi-transparente. */
+
+    color: #ecf0f1;
+    /* Define a cor do texto dentro do tooltip para um cinza claro (#ecf0f1), 
+            garantindo boa legibilidade contra o fundo escuro. */
+
+    font-size: 14px;
+    /* Define o tamanho da fonte do texto dentro do tooltip para 14 
+            pixels, que é um tamanho confortável para leitura em 
+            muitos dispositivos. */
+
+                       
+}

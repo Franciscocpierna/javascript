@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Esta linha declara que o documento é do tipo HTML5, o 
+        padrão atual da web, que proporciona uma maior compatibilidade 
+        entre diferentes navegadores. -->
+
+<html lang="pt-BR">
+<!-- Esta linha abre a tag HTML e define o idioma do documento como 
+        português do Brasil, ajudando os navegadores e mecanismos de 
+        busca a identificar o idioma principal do conteúdo. -->
+
+<head>
+<!-- Abre a seção head do documento, que contém metadados e links 
+        para scripts e folhas de estilo. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres UTF-8 para o documento, 
+            garantindo o suporte a uma ampla gama de caracteres para 
+            diferentes idiomas e símbolos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag meta assegura que o layout do site será ajustado de 
+            acordo com a largura do dispositivo, sendo crucial para o 
+            design responsivo. A escala inicial é definida como 1.0, 
+            mantendo o tamanho do conteúdo proporcional ao tamanho 
+            do dispositivo. -->
+
+    <title>Comparação de Vendas por Produto</title>
+    <!-- Define o título do documento, que é mostrado na aba do navegador. 
+            Este título é também importante para SEO. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Esta linha vincula uma folha de estilo externa ao documento, 
+            especificamente o arquivo 'estilo.css', que contém as definições 
+            de estilo para a apresentação visual da página. -->
+
+</head>
+<!-- Fecha a seção head do documento. -->
+
+<body>
+    <!-- Inicia a seção do corpo do documento HTML, onde todo o 
+            conteúdo visível na página será incluído. -->
+
+    <h1>Comparação de Vendas por Produto</h1>
+    <!-- A tag <h1> é usada para o título principal da página. Essa 
+            linha define "Comparação de Vendas por Produto" como o título 
+            principal, o que é importante para SEO e ajuda a definir o foco 
+            da página para os usuários. -->
+
+    <canvas id="grafico-vendas" width="800" height="400"></canvas>
+    <!-- A tag <canvas> é usada para desenhar gráficos ou outras imagens 
+            via scripting (geralmente com JavaScript). Aqui, ela é identificada 
+            pelo ID 'grafico-vendas', que será referenciado em JavaScript para 
+            renderizar um gráfico. As dimensões são definidas como 800 pixels de 
+            largura e 400 pixels de altura. -->
+
+    <!-- Abaixo estão incluídas as bibliotecas JavaScript necessárias 
+            para o funcionamento do gráfico e a manipulação de dados de arquivos Excel. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Esta linha inclui a biblioteca SheetJS (xlsx), que é uma biblioteca 
+            LJavaScript poderosa para ler e escrever dados em formatos de planilha, 
+            como Excel. A versão incluída é minificada para reduzir o tamanho do 
+            arquivo e acelerar o carregamento. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Inclui a biblioteca Chart.js, que é uma biblioteca JavaScript de código 
+            aberto utilizada para criar gráficos animados e interativos 
+            baseados em dados. -->
+
+    <script src="script.js"></script>
+    <!-- Este script é o arquivo JavaScript personalizado para a página, onde 
+            as funções para processar os dados de vendas e renderizar o gráfico 
+            no elemento <canvas> são definidas. -->
+
+</body>
+<!-- Fecha a tag <body>, encerrando a seção do conteúdo 
+            visível da página. -->
+
+</html>
+<!-- Fecha a tag <html>, indicando o fim do documento HTML. -->
