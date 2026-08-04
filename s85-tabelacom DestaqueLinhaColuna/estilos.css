@@ -1,0 +1,176 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o corpo do documento, 
+                usando Arial como principal e sans-serif como fallback */
+
+    margin: 20px;
+    /* Aplica uma margem de 20 pixels em todos os lados do corpo do 
+                documento para dar um espaçamento entre o conteúdo e as 
+                bordas da janela do navegador */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo do documento como um cinza claro (#f4f4f4) 
+                para um visual mais suave e moderno */
+
+}
+
+.container {
+
+    overflow-x: auto;
+    /* Permite a rolagem horizontal dentro do contêiner se o conteúdo 
+                exceder a largura do contêiner */
+
+    background-color: white;
+    /* Define a cor de fundo do contêiner como branco, destacando-o 
+                contra o fundo mais claro do corpo */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todos os lados dentro do 
+                contêiner, criando espaço entre o conteúdo e as 
+                bordas do contêiner */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do contêiner com um raio de 8 pixels, proporcionando 
+                um visual mais moderno e menos rígido */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao redor do contêiner com um desfoque de 10 pixels e 
+                uma cor preta com 10% de opacidade, criando um efeito 
+                de elevação visual */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto do cabeçalho (h1) ao centro, garantindo que o 
+                título esteja centralizado na página */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem de 20 pixels abaixo do cabeçalho para 
+                separá-lo do conteúdo que segue */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do cabeçalho para 24 pixels, 
+                tornando-o proeminente e fácil de ler */
+
+    color: #333;
+    /* Define a cor do texto do cabeçalho para um cinza escuro (#333), 
+                garantindo boa legibilidade contra o fundo claro */
+
+}
+
+table {
+
+    width: 100%;
+    /* Estabelece a largura da tabela para ocupar 100% da largura do 
+                contêiner pai, permitindo que ela se ajuste completamente 
+                ao espaço disponível. */
+
+    border-collapse: collapse;
+    /* Combina as bordas adjacentes das células da tabela em uma única 
+                borda para um visual mais limpo e contínuo. */
+
+    margin: 0 auto;
+    /* Define a margem superior e inferior como 0 e centraliza 
+                horizontalmente a tabela dentro de seu contêiner. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para todo o conteúdo da tabela, garantindo 
+                uniformidade e legibilidade adequada. */
+
+}
+
+th, td {
+
+    padding: 12px 15px;
+    /* Aplica um preenchimento interno nas células da tabela (tanto 
+                cabeçalhos quanto células de dados), com 12 pixels na 
+                vertical e 15 pixels na horizontal, para um espaço 
+                adequado em torno do texto. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e uma cor 
+                cinza claro (#ddd) em torno de cada célula, ajudando a 
+                definir claramente os limites de cada célula. */
+
+    text-align: left;
+    /* Alinha o texto dentro das células à esquerda, proporcionando 
+                uma leitura consistente da esquerda para a direita. */
+
+}
+
+th {
+
+    background-color: #333;
+    /* Define a cor de fundo dos cabeçalhos da tabela para um cinza 
+                muito escuro (#333), destacando visualmente os cabeçalhos 
+                das demais células. */
+
+    color: white;
+    /* Estabelece a cor do texto dentro dos cabeçalhos como branco, 
+                criando um contraste alto contra o fundo escuro para 
+                facilitar a leitura. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito aos textos dos cabeçalhos, 
+                aumentando sua ênfase e legibilidade. */
+
+    text-transform: uppercase;
+    /* Transforma todo o texto dos cabeçalhos para letras maiúsculas, 
+                aumentando a visibilidade e oferecendo um estilo 
+                mais formal e consistente. */
+
+}
+
+
+tr:nth-child(even) {
+
+    background-color: #f9f9f9;
+    /* Aplica uma cor de fundo cinza claro (#f9f9f9) às linhas da 
+                tabela que são filhas pares do elemento pai (por 
+                exemplo, 2ª, 4ª, 6ª linha, etc.).
+       Isso ajuda a diferenciar visualmente linhas alternadas e 
+                melhora a legibilidade da tabela. */
+
+}
+
+.destaque {
+
+    background-color: #1a1a3a !important;
+    /* Define a cor de fundo para um azul escuro (#1a1a3a) para elementos 
+                com a classe .destaque. A regra !important garante 
+                que essa cor de fundo sobrescreva quaisquer outras 
+                regras de fundo aplicadas anteriormente, assegurando a 
+                consistência visual do destaque. */
+
+    color: white;
+    /* Define a cor do texto para branco, garantindo alto contraste 
+                contra o fundo azul escuro, facilitando a leitura. */
+
+}
+
+.destaque-atual {
+
+    background-color: #ffeb3b !important;
+    /* Define a cor de fundo para amarelo (#ffeb3b) para elementos com a 
+                classe .destaque-atual. A regra !important assegura 
+                que essa cor de fundo prevaleça sobre outras definições 
+                de fundo, destacando eficazmente a célula ou item atual selecionado. */
+
+    color: black;
+    /* Estabelece a cor do texto para preto, oferecendo um contraste eficaz 
+                contra o fundo amarelo e mantendo a legibilidade. */
+
+    font-size: 28px;
+    /* Aumenta o tamanho da fonte para 28 pixels, ampliando o texto dentro 
+                do elemento, o que ajuda a destacá-lo ainda mais 
+                no contexto visual. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito, intensificando o destaque 
+                visual do texto e tornando-o mais proeminente e 
+                fácil de identificar. */
+                
+}

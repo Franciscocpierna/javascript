@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Especifica que este documento é HTML5 -->
+
+<html lang="pt-BR">
+<!-- Define a linguagem do documento como português do Brasil, 
+            ajudando os navegadores a selecionar o idioma apropriado 
+            para tecnologias assistivas e ajudando motores de busca a 
+            identificar o conteúdo do idioma específico -->
+
+<head>
+<!-- Início da cabeça do documento, que contém metadados (informações 
+            que não são exibidas diretamente na página web) -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8, que inclui quase 
+            todos os caracteres e símbolos usados nas linguagens humanas escritas -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Assegura que a largura da página será igual à largura do dispositivo 
+            de visualização, e a escala inicial será 1.0, otimizando a 
+            visualização em dispositivos móveis -->
+
+    <title>Tabela de Estados e Cidades</title>
+    <!-- Define o título da página, que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Vincula um arquivo CSS externo chamado 'estilos.css', que contém os 
+            estilos para formatar a página -->
+
+</head>
+<!-- Fim da cabeça do documento -->
+
+<body>
+<!-- Início do corpo do documento HTML, que contém todo o conteúdo 
+            visível da página -->
+
+    <div class="container">
+    <!-- Divisão com a classe 'container' usada para estilização e agrupamento 
+                de elementos relacionados, definindo um contêiner que pode ser 
+                estilizado de forma independente do resto da página -->
+
+        <h1>Tabela de Estados, Cidades e Habitantes</h1>
+        <!-- Cabeçalho principal da página, descrevendo o conteúdo apresentado, 
+                    neste caso, uma tabela de estados, cidades e seus 
+                    respectivos habitantes -->
+
+        <table id="tabela-dados">
+        <!-- Início da tabela com o ID 'tabela-dados', permitindo a identificação e 
+                    manipulação específica via CSS ou JavaScript -->
+
+            <thead>
+            <!-- Seção de cabeçalho da tabela, contendo células de cabeçalho -->
+
+                <tr>
+                <!-- Linha de tabela, agrupando os cabeçalhos de coluna -->
+
+                    <th>Estado</th>
+                    <!-- Célula de cabeçalho definindo o título da primeira 
+                                coluna como 'Estado' -->
+
+                    <th>Cidade</th>
+                    <!-- Célula de cabeçalho definindo o título da segunda coluna como 'Cidade' -->
+
+                    <th>Total de Habitantes</th>
+                    <!-- Célula de cabeçalho definindo o título da terceira coluna 
+                                como 'Total de Habitantes', indicando a quantidade de 
+                                habitantes em cada cidade -->
+
+                </tr>
+            </thead>
+            <!-- Fim da seção de cabeçalho da tabela -->
+
+            <tbody>
+            <!-- Início do corpo da tabela, onde os dados dinâmicos serão inseridos -->
+
+                <!-- Os dados serão carregados aqui via JavaScript -->
+                
+            </tbody>
+            <!-- Fim do corpo da tabela -->
+
+        </table>
+        <!-- Fim da tabela -->
+
+    </div>
+    <!-- Fim da divisão 'container' -->
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.17.0/package/dist/xlsx.full.min.js"></script>
+    <!-- Inclui o script SheetJS (xlsx.full.min.js) para manipulação de 
+                arquivos Excel dentro do navegador -->
+
+    <script src="script.js"></script>
+    <!-- Inclui um arquivo de script externo 'script.js' para a lógica e 
+                interatividade específica da página -->
+
+</body>
+<!-- Fim do corpo do documento HTML -->
+
+</html>
+<!-- Fim do documento HTML -->
