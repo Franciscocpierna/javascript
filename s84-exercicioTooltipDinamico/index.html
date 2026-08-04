@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- Esta linha declara que o documento é do tipo HTML5, o 
+            padrão atual da web, que proporciona uma maior compatibilidade 
+            entre diferentes navegadores. -->
+
+<html lang="pt-BR">
+<!-- Esta linha abre a tag HTML e define o idioma do documento como português 
+            do Brasil, ajudando os navegadores e mecanismos de busca a identificar o 
+            idioma principal do conteúdo. -->
+
+<head>
+<!-- Abre a seção head do documento, que contém metadados e links para 
+            scripts e folhas de estilo. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres UTF-8 para o documento, garantindo o 
+                suporte a uma ampla gama de caracteres para diferentes 
+                idiomas e símbolos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag meta assegura que o layout do site será ajustado de acordo 
+                com a largura do dispositivo, sendo crucial para o design responsivo. 
+                A escala inicial é definida como 1.0, mantendo o tamanho do conteúdo 
+                proporcional ao tamanho do dispositivo. -->
+
+    <title>Exercício - Tooltip Dinâmico</title>
+    <!-- Define o título do documento, que é mostrado na aba do navegador. Este 
+                título é também importante para SEO. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Esta linha vincula uma folha de estilo externa ao documento, especificamente 
+                o arquivo 'estilo.css', que contém as definições de estilo para a 
+                apresentação visual da página. -->
+
+</head>
+<!-- Fecha a seção head do documento. -->
+
+<body>
+    <!-- Corpo do documento HTML, contendo todo o conteúdo 
+                visível na página -->
+
+    <h1>Exercício - Tooltip Dinâmico</h1>
+    <!-- Título da página, geralmente exibido no topo com destaque -->
+
+    <table id="lista-funcionarios">
+    <!-- Início da tabela que irá listar os funcionários, identificada 
+                pelo ID "lista-funcionarios" -->
+
+        <tr>
+        <!-- Linha de cabeçalho da tabela, contendo os títulos das colunas -->
+
+            <th>Nome</th>
+            <!-- Célula do cabeçalho da tabela, define a coluna dos 
+                        nomes dos funcionários -->
+
+            <th>Departamento</th>
+            <!-- Célula do cabeçalho da tabela, define a coluna dos 
+                        departamentos dos funcionários -->
+
+            <th>Email</th>
+            <!-- Célula do cabeçalho da tabela, define a coluna dos 
+                        emails dos funcionários -->
+
+        </tr>
+        <!-- Fim da linha de cabeçalho da tabela -->
+
+        <tr data-nome="John Doe" data-departamento="Marketing" data-email="john.doe@example.com">
+        <!-- Linha da tabela contendo os dados do funcionário John Doe, 
+                    com atributos data- para armazenar informações adicionais -->
+
+            <td>John Doe</td>
+            <!-- Célula da tabela contendo o nome do funcionário -->
+
+            <td>Marketing</td>
+            <!-- Célula da tabela contendo o departamento do funcionário -->
+
+            <td>john.doe@example.com</td>
+            <!-- Célula da tabela contendo o email do funcionário -->
+
+        </tr>
+        <!-- Fim da linha com dados de John Doe -->
+
+        <tr data-nome="Jane Smith" data-departamento="Vendas" data-email="jane.smith@example.com">
+        <!-- Linha da tabela contendo os dados da funcionária Jane Smith, 
+                    com atributos data- para armazenar informações adicionais -->
+
+            <td>Jane Smith</td>
+            <!-- Célula da tabela contendo o nome da funcionária -->
+
+            <td>Vendas</td>
+            <!-- Célula da tabela contendo o departamento da funcionária -->
+
+            <td>jane.smith@example.com</td>
+            <!-- Célula da tabela contendo o email da funcionária -->
+
+        </tr>
+        <!-- Fim da linha com dados de Jane Smith -->
+
+    </table>
+    <!-- Fim da tabela de funcionários -->
+
+    <div id="caixa-tooltip" style="display: none;">
+    <!-- Início do div que contém o tooltip, inicialmente oculto 
+                com display: none -->
+
+        <p><strong>Nome:</strong> <span id="nome-tooltip"></span></p>
+        <!-- Parágrafo mostrando o nome do funcionário, onde o nome 
+                    será inserido dinamicamente via JavaScript -->
+
+        <p><strong>Departamento:</strong> <span id="departamento-tooltip"></span></p>
+        <!-- Parágrafo mostrando o departamento do funcionário, que será 
+                    inserido dinamicamente via JavaScript -->
+
+        <p><strong>Email:</strong> <a href="#" id="email-tooltip"></a></p>
+        <!-- Parágrafo mostrando o email do funcionário, que será inserido 
+                    dinamicamente via JavaScript -->
+
+        <button onclick="enviarEmail()">Criar Email Outlook</button>
+        <!-- Botão que ao ser clicado executa a função enviarEmail() para 
+                    criar um email para o funcionário -->
+
+    </div>
+    <!-- Fim do div do tooltip -->
+
+    <script src="script.js"></script>
+    <!-- Link para o arquivo JavaScript externo que contém a 
+                lógica para interatividade da página -->
+
+</body>
+<!-- Fim do corpo do documento -->
+ 
+</html>
+<!-- Fim do documento HTML -->

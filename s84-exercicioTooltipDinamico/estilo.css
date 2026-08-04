@@ -1,0 +1,89 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte do corpo do documento como Arial, e se 
+            Arial não estiver disponível, usa uma fonte 
+            sans-serif genérica */
+
+    padding: 20px;
+    /* Aplica um espaçamento interno de 20px em todos os lados 
+            do corpo do documento para separar o conteúdo 
+            das bordas da janela */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura do 
+                elemento pai, geralmente o corpo do documento 
+                ou um contêiner */
+
+    border-collapse: collapse;
+    /* Colapsa as bordas das células da tabela para formar uma única 
+                borda contínua em vez de bordas separadas para cada célula */
+
+}
+
+th, td {
+
+    padding: 8px;
+    /* Aplica um espaçamento interno de 8px em todas as direções dentro 
+                das células de cabeçalho (th) e das células de dados (td) */
+
+    text-align: left;
+    /* Alinha o texto dentro das células à esquerda */
+
+    border-bottom: 1px solid #ddd;
+    /* Adiciona uma borda inferior sólida com 1px de espessura e cor 
+                cinza claro (#ddd) para as células de cabeçalho e de dados */
+
+}
+
+#caixa-tooltip {
+
+    position: absolute;
+    /* Define a posição do elemento como absoluta, o que permite que 
+                ele seja posicionado em relação ao seu contêiner mais 
+                próximo com posição não estática */
+
+    padding: 10px;
+    /* Aplica um espaçamento interno de 10px em todas as direções dentro 
+                do elemento, aumentando o espaço entre o conteúdo interno 
+                e as bordas do elemento */
+
+    background-color: #f9f9f9;
+    /* Define a cor de fundo do elemento para um cinza muito 
+                claro (#f9f9f9) */
+
+    border: 1px solid #d3d3d3;
+    /* Cria uma borda ao redor do elemento com 1px de espessura, 
+                sólida e de cor cinza claro (#d3d3d3) */
+
+    border-radius: 5px;
+    /* Arredonda os cantos da borda do elemento com um raio de 5px, 
+                dando-lhe bordas suavemente curvadas */
+
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    /* Adiciona uma sombra ao redor do elemento, deslocada 2px 
+                para a direita e 2px para baixo, com um desfoque de 5px e 
+                uma cor preta semi-transparente (20% de opacidade) */
+
+    display: none;
+    /* Inicialmente oculta o elemento, não sendo visível na página 
+                até ser ativado via JavaScript */
+
+    z-index: 100;
+    /* Define a posição do elemento no eixo z, permitindo que ele 
+                sobreponha outros elementos na página que tenham 
+                um z-index menor */
+
+}
+
+button {
+
+    margin-top: 10px;
+    /* Aplica uma margem superior de 10px ao botão, separando-o 
+                de elementos acima dele */
+                
+}
