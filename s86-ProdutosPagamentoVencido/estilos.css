@@ -1,0 +1,162 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte do corpo do documento como Arial, que é 
+                uma sans-serif, proporcionando uma leitura clara e simples. */
+
+    margin: 20px;
+    /* Aplica uma margem de 20 pixels em todos os lados do corpo do 
+                documento, criando um espaço entre o conteúdo e as 
+                bordas da janela do navegador. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo do documento para um cinza claro (#f4f4f4), 
+                que é suave para os olhos. */
+
+}
+
+.container {
+
+    overflow-x: auto;
+    /* Permite a rolagem horizontal dentro do container se o 
+                conteúdo exceder a largura do elemento. */
+
+    background-color: white;
+    /* Define a cor de fundo do container como branca, garantindo 
+                que o conteúdo dentro dele se destaque contra a cor 
+                de fundo do corpo. */
+
+    padding: 20px;
+    /* Aplica um espaçamento interno de 20 pixels em todas as direções 
+                dentro do container, separando o conteúdo das bordas do container. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do container, com um raio de 8 pixels, 
+                para um visual moderno e suave. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra sutil ao redor do container, usando 
+                preto com 10% de opacidade, para dar profundidade e 
+                destacar o container. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto do cabeçalho ao centro, garantindo que 
+                ele seja facilmente localizado e lido. */
+
+    margin-bottom: 20px;
+    /* Define uma margem de 20 pixels abaixo do cabeçalho, separando-o 
+                visualmente dos elementos que o seguem. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do cabeçalho para 24 pixels, garantindo 
+                que ele se destaque como um elemento importante na página. */
+
+    color: #333;
+    /* Define a cor do texto do cabeçalho para um cinza escuro (#333), o 
+                que oferece bom contraste com a cor de fundo branca do container. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura do elemento 
+                pai, garantindo que ela se estenda por toda a largura disponível. */
+
+    border-collapse: collapse;
+    /* Faz com que as bordas das células da tabela sejam fundidas em uma 
+                única borda, evitando duplicação e proporcionando um 
+                visual mais limpo. */
+
+    margin: 0 auto;
+    /* Centraliza a tabela horizontalmente dentro de seu elemento pai, 
+                com margem zero na parte superior e inferior. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para todo o conteúdo da tabela como 16 
+                pixels, garantindo legibilidade. */
+
+}
+
+th, td {
+
+    padding: 12px 15px;
+    /* Aplica um espaçamento interno de 12 pixels na parte superior e 
+                inferior e 15 pixels nos lados em todas as células da 
+                tabela, para melhorar a legibilidade. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e cor 
+                cinza claro (#ddd) ao redor de cada célula, destacando 
+                cada campo individualmente. */
+
+    text-align: left;
+    /* Alinha o texto dentro das células à esquerda, proporcionando uma 
+                leitura mais natural, especialmente em idiomas que são 
+                lidos da esquerda para a direita. */
+
+}
+
+th {
+
+    background-color: #333;
+    /* Define a cor de fundo das células do cabeçalho da tabela para 
+                um cinza muito escuro (#333), aumentando o contraste 
+                com o texto. */
+
+    color: white;
+    /* Define a cor do texto dentro das células do cabeçalho como 
+                branco, garantindo um contraste alto e uma legibilidade 
+                excelente contra o fundo escuro. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito para o texto dentro das células 
+                do cabeçalho, destacando-o e indicando sua importância 
+                como cabeçalho de coluna. */
+
+    text-transform: uppercase;
+    /* Transforma o texto das células do cabeçalho em maiúsculas, 
+                aumentando a legibilidade e oferecendo um aspecto 
+                uniforme e formal. */
+
+}
+
+tr:nth-child(even) {
+
+    background-color: #f9f9f9;
+    /* Define a cor de fundo das linhas pares da tabela para um 
+                cinza muito claro (#f9f9f9), melhorando a legibilidade ao 
+                alternar as cores das linhas. */
+
+}
+
+.vencido {
+
+    background-color: #a50b0b;
+    /* Define a cor de fundo para itens marcados com a classe 'vencido' 
+                como um vermelho escuro (#a50b0b), destacando visualmente 
+                que o item está vencido ou em alerta. */
+
+    color: white;
+    /* Define a cor do texto para itens marcados como 'vencido' para 
+                branco, garantindo alto contraste contra o fundo escuro 
+                para excelente legibilidade. */
+
+}
+
+.normal {
+
+    background-color: white;
+    /* Define a cor de fundo para itens marcados com a classe 'normal' 
+                como branco, indicando que o status do item está 
+                normal ou sem alertas. */
+
+    color: black;
+    /* Define a cor do texto para itens marcados como 'normal' para 
+                preto, proporcionando uma leitura clara e direta. */
+                
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Declara que o documento é do tipo HTML5, que é a versão atual 
+            do HTML, garantindo compatibilidade e uso de recursos modernos -->
+
+<html lang="pt-BR">
+<!-- Abre a tag HTML definindo o idioma do documento como português do 
+            Brasil, o que ajuda na acessibilidade e na otimização 
+            de motores de busca -->
+
+<head>
+<!-- Abre a seção de cabeçalho do documento, onde são colocadas as 
+            meta-informações e links para recursos externos -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8, garantindo o 
+            suporte para uma ampla gama de caracteres usados globalmente -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define as configurações de viewport para dispositivos móveis, 
+            garantindo que a largura da página corresponda à largura do 
+            dispositivo e que o zoom inicial seja 1 -->
+
+    <title>Produtos com Pagamento Vencido</title>
+    <!-- Define o título do documento, que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Link para um arquivo CSS externo chamado 'estilos.css', 
+            usado para estilizar a página -->
+
+</head>
+<!-- Fecha a tag head -->
+
+<body>
+<!-- Início do corpo do documento HTML, onde todo o conteúdo 
+            visível da página é inserido -->
+
+    <div class="container">
+    <!-- Divisão que atua como um container principal para o conteúdo 
+                da página, aplicando estilos específicos definidos na 
+                classe 'container' -->
+
+        <h1>Produtos com Pagamento Vencido</h1>
+        <!-- Título principal da página, descrito como 'Produtos com 
+                    Pagamento Vencido', servindo como cabeçalho e informação 
+                    focal para o usuário -->
+
+        <button id="filtrar-vencidos">Filtrar Produtos Vencidos</button>
+        <!-- Botão que, quando clicado, aciona uma função para filtrar e mostrar 
+                    apenas produtos com pagamento vencido. 
+             A função é definida e manipulada no arquivo JavaScript. O ID 'filtrar-vencidos' é 
+                    usado como seletor no JavaScript -->
+
+        <button id="limpar-filtro">Limpar Filtro</button>
+        <!-- Botão que permite ao usuário limpar todos os filtros aplicados e 
+                    restaurar a visualização inicial da tabela.
+             Isso é gerenciado através de um script JavaScript vinculado 
+                    pelo ID 'limpar-filtro' -->
+
+        <button id="exportar-excel">Exportar para Excel</button>
+        <!-- Botão que ativa a exportação dos dados visíveis na tabela 
+                    para um arquivo Excel.
+             Essa funcionalidade é implementada via JavaScript e faz uso da 
+                    biblioteca SheetJS, referenciada externamente -->
+
+        <table id="tabela-produtos">
+        <!-- Tabela HTML que será utilizada para exibir os dados dos produtos.
+             O ID 'tabela-produtos' é utilizado para manipulação e 
+                    inserção de dados via JavaScript -->
+
+            <thead>
+            <!-- Cabeçalho da tabela, definindo os títulos das colunas -->
+
+                <tr>
+                <!-- Linha do cabeçalho da tabela -->
+
+                    <th>Produto</th>
+                    <!-- Coluna do cabeçalho para o nome do produto -->
+
+                    <th>Data de Pagamento</th>
+                    <!-- Coluna do cabeçalho para a data de pagamento do produto -->
+
+                    <th>Valor</th>
+                    <!-- Coluna do cabeçalho para o valor associado ao produto -->
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+            <!-- Corpo da tabela, onde os dados dinâmicos serão inseridos via JavaScript -->
+               
+            </tbody>
+
+        </table>
+    </div>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.17.0/package/dist/xlsx.full.min.js"></script>
+    <!-- Inclusão de uma biblioteca externa SheetJS para manipulação de 
+                arquivos Excel. Esta biblioteca é essencial para a funcionalidade de 
+                exportar dados para Excel -->
+
+    <script src="script.js"></script>
+    <!-- Link para o arquivo JavaScript externo 'script.js', que contém 
+                toda a lógica de interação e funcionalidade da página -->
+
+</body>
+</html>
+<!-- Fim do documento HTML -->
