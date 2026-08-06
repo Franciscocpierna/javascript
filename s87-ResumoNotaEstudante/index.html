@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- Esta linha declara o tipo de documento como HTML5, 
+            que é a versão mais recente e recomendada do HTML. -->
+
+<html lang="pt-BR">
+<!-- Esta linha abre a tag <html> que envolve todo o conteúdo da página.
+            O atributo 'lang' especifica que o idioma principal do 
+            documento é o português do Brasil. -->
+
+<head>
+<!-- Esta tag <head> contém metadados, links para folhas de estilo e 
+            scripts que não são exibidos diretamente na página web, mas 
+            são essenciais para o processamento do documento. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta tag <meta> define o conjunto de caracteres usado no 
+            documento como UTF-8, que inclui quase todos os caracteres de 
+            todos os idiomas humanos, assegurando que qualquer texto possa 
+            ser exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag <meta> é usada para controlar a janela de visualização 
+                (viewport) do navegador, garantindo que o site seja dimensionado 
+                corretamente em diferentes dispositivos. 
+        'width=device-width' faz a largura da página seguir a largura da 
+                tela do dispositivo, e 'initial-scale=1.0' define o nível 
+                de zoom inicial quando a página é carregada pela primeira vez. -->
+
+    <title>Exercício - Resumo das Notas por Turma</title>
+    <!-- A tag <title> define o título da página, que é mostrado na aba do 
+                navegador. Este título é útil para a acessibilidade e SEO. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> aqui é usada para incluir uma folha de estilos 
+                externa, especificada pelo atributo 'href'. 
+        Isso permite que a apresentação visual da página seja definida 
+                separadamente do seu conteúdo estrutural. -->
+
+</head>
+<!-- Fecha a tag <head>. -->
+
+<body>
+<!-- A tag <body> contém todo o conteúdo da página que é visível 
+            para o usuário, como texto, imagens, links, tabelas, etc. -->
+
+    <h1>Exercício - Resumo das Notas por Turma</h1>
+    <!-- A tag <h1> define um cabeçalho de nível 1, que é usado 
+                para o título principal da página. Os navegadores, por 
+                padrão, dão mais importância a esse texto em SEO e acessibilidade. -->
+
+    <table id="resumo-tabela">
+    <!-- A tag <table> é utilizada para criar uma tabela. O atributo 'id' é 
+                usado para identificar unicamente a tabela no documento, o que 
+                permite que scripts e folhas de estilo se refiram 
+                especificamente a ela. -->
+
+        <thead>
+        <!-- A tag <thead> é usada para agrupar o conteúdo do 
+                    cabeçalho em uma tabela. -->
+
+            <tr>
+            <!-- A tag <tr> define uma linha de células em uma tabela. -->
+
+                <th>Turma</th>
+                <!-- A tag <th> define uma célula de cabeçalho em uma 
+                            tabela. O texto dentro de <th> é normalmente 
+                                apresentado em negrito e alinhado ao centro. -->
+
+                <th>Média das Notas</th>
+                <!-- Outra célula de cabeçalho, usada aqui para representar o 
+                            título da coluna 'Média das Notas'. -->
+
+                <th>Total de Faltas</th>
+                <!-- Outra célula de cabeçalho, usada aqui para representar o 
+                            título da coluna 'Total de Faltas'. -->
+
+            </tr>
+            <!-- Fecha a tag <tr>. -->
+
+        </thead>
+        <!-- Fecha a tag <thead>. -->
+
+        <tbody>
+        <!-- A tag <tbody> é usada para agrupar o conteúdo do corpo 
+                    principal de uma tabela. -->
+
+            <!-- Linhas da tabela serão inseridas via JavaScript -->
+            
+        </tbody>
+        <!-- Fecha a tag <tbody>. -->
+
+    </table>
+    <!-- Fecha a tag <table>. -->
+
+
+    <div id="tooltip" class="tooltip">
+    <!-- A tag <div> é usada para criar um contêiner genérico que 
+                    agrupa outros elementos. Neste caso, possui um 'id' 
+                    de 'tooltip' e uma classe de 'tooltip', indicando que 
+                    este bloco funcionará como uma dica de ferramenta (tooltip). -->
+
+        <h2 id="tooltip-titulo" style="margin-bottom: 10px;"></h2> 
+        <!-- A tag <h2> define um cabeçalho de nível 2. O 'id' ajuda a 
+                    identificar este cabeçalho especificamente para 
+                    alterações via JavaScript ou CSS. 
+            O estilo inline 'margin-bottom: 10px;' adiciona um 
+                    espaçamento abaixo do cabeçalho. -->
+        
+        <div id="Detalhes" class="tabcontent" style="display: block;">
+        <!-- A tag <div> aqui é usada para criar um subcontêiner que 
+                    organizará detalhes específicos dentro do tooltip. 
+            Tem uma classe 'tabcontent', o que implica que pode fazer 
+                    parte de um sistema de tabs (guias), embora seja 
+                    mostrado diretamente aqui com 'display: block;'. -->
+
+            <input type="text" id="filtro-tooltip" placeholder="Filtrar alunos..." style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box;">
+            <!-- A tag <input> cria um campo de texto para filtrar os alunos. 
+                O placeholder fornece um texto guia dentro do campo antes da 
+                        entrada do usuário. Estilos inline definem a largura, 
+                        o espaçamento interno e o modelo de caixa, assegurando que o 
+                        elemento se ajuste adequadamente dentro de seus contêineres. -->
+
+            <table id="tooltip-tabela">
+            <!-- A tag <table> cria uma tabela que será usada para mostrar 
+                        dados filtrados. O 'id' permite que esta tabela seja 
+                        especificamente manipulada via JavaScript. -->
+
+                <thead>
+                <!-- A tag <thead> agrupa o cabeçalho da tabela. -->
+
+                    <tr>
+                    <!-- A tag <tr> define uma linha de tabela. -->
+
+                        <th>Nome</th>
+                        <!-- A tag <th> define uma célula de cabeçalho, aqui 
+                                    para o nome do aluno. -->
+
+                        <th>Média</th>
+                        <!-- Outra célula de cabeçalho para a média de notas do aluno. -->
+
+                        <th>Situação</th>
+                        <!-- Outra célula de cabeçalho para a situação acadêmica do 
+                                    aluno (por exemplo, Aprovado/Reprovado). -->
+
+                    </tr>
+                    <!-- Fecha a tag <tr>. -->
+
+                </thead>
+                <!-- Fecha a tag <thead>. -->
+
+                <tbody>
+                <!-- A tag <tbody> agrupa o corpo principal da tabela, onde 
+                            os dados serão inseridos. -->
+
+                    <!-- Linhas da tabela do tooltip serão inseridas via JavaScript -->
+                    
+                </tbody>
+                <!-- Fecha a tag <tbody>. -->
+
+            </table>
+            <!-- Fecha a tag <table>. -->
+
+        </div>
+        <!-- Fecha a tag <div> de 'Detalhes'. -->
+
+    </div>
+    <!-- Fecha a tag <div> do 'tooltip'. -->
+
+
+    <!-- Tooltip detalhado do aluno -->
+    <div id="tooltip-detalhe" class="tooltip-detalhe"></div>
+    <!-- A tag <div> aqui define um contêiner para o tooltip detalhado 
+                do aluno. O 'id' permite que este elemento seja referenciado 
+                unicamente no CSS e JavaScript. 
+        A classe 'tooltip-detalhe' é usada para aplicar estilos 
+                específicos definidos na folha de estilo. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- Esta tag <script> incorpora uma biblioteca JavaScript externa, 
+                neste caso, 'xlsx.full.min.js' da CDN (Content Delivery Network) 'cdnjs'. 
+        Esta biblioteca é utilizada para ler e manipular arquivos 
+                Excel dentro do navegador. -->
+
+    <script src="script.js"></script>
+    <!-- Esta tag <script> incorpora o arquivo JavaScript 'script.js'. 
+        Este arquivo contém o código que implementa a lógica específica 
+                da página, como manipulação de eventos, interações do DOM, e 
+                outras funcionalidades dinâmicas. -->
+
+</body>
+<!-- Esta tag fecha a tag <body>, indicando o fim do conteúdo 
+            principal do documento HTML. -->
+
+</html>
+<!-- Esta tag fecha a tag <html>, indicando o fim do documento HTML. -->
