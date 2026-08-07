@@ -1,0 +1,343 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o corpo do documento. 
+            "Arial" é especificado como a fonte primária, e "sans-serif" 
+            como fallback genérico. Isso garante que se "Arial" não 
+            estiver disponível, qualquer fonte sans-serif disponível 
+            no sistema será usada. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo da página como um cinza claro (#f4f4f4), 
+            proporcionando um contraste suave que é fácil para os olhos e 
+            melhora a legibilidade do conteúdo. */
+
+    margin: 0;
+    /* Remove as margens padrão do corpo do documento. Isso é comumente 
+            feito para garantir que o conteúdo se estenda totalmente às 
+            bordas do navegador sem espaço adicional. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todos os lados do corpo do 
+            documento. Isso cria um espaço entre o conteúdo da página e as 
+            bordas do navegador, melhorando a estética e a legibilidade. */
+
+}
+
+.container {
+
+    max-width: 900px;
+    /* Define a largura máxima do contêiner para 900 pixels. Isso garante 
+            que o contêiner não se torne excessivamente largo em monitores 
+            de grande escala, mantendo o conteúdo centralizado e 
+            facilmente legível. */
+
+    margin: 0 auto;
+    /* Centraliza o contêiner na página. "0" remove a margem vertical e "auto" 
+            aplica margens automáticas horizontalmente, centralizando o 
+            contêiner dentro de seu contêiner pai. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do contêiner para branco (#fff). Isso cria 
+            uma distinção clara entre o contêiner do conteúdo e o fundo da 
+            página, focando a atenção do usuário no conteúdo dentro do contêiner. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todos os lados do contêiner. 
+            Isso garante que o conteúdo dentro do contêiner não toque 
+            diretamente suas bordas, melhorando a legibilidade e o design visual. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do contêiner, com um raio de 8 pixels. 
+            Isso suaviza o design visual do contêiner, tornando-o mais 
+            agradável esteticamente e menos rígido. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do contêiner. Os valores especificam um 
+            deslocamento de sombra de 0 pixels horizontalmente e verticalmente, 
+            um desfoque de 10 pixels e uma cor preta com 10% de 
+            opacidade (rgba(0, 0, 0, 0.1)). Isso cria um efeito de elevação 
+            sutil, fazendo o contêiner parecer flutuar acima do resto da página. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto do cabeçalho ao centro, garantindo que o título esteja 
+            centralizado horizontalmente dentro de seu contêiner. Isso é 
+            comumente usado para cabeçalhos para capturar a atenção e como um 
+            ponto focal na parte superior de páginas e seções. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem de 20 pixels abaixo do cabeçalho. Isso cria um 
+            espaço visual entre o título e o conteúdo subsequente, ajudando a 
+            definir claramente a área do título e melhorar a estrutura 
+            visual da página. */
+
+    color: #333;
+    /* Define a cor do texto do cabeçalho para um cinza escuro (#333). 
+            Esta cor é suficientemente escura para uma boa legibilidade, mas 
+            mais suave que o preto puro, o que reduz o contraste agressivo e 
+            melhora a estética visual. */
+
+}
+
+#menu {
+
+    display: flex;
+    /* Configura o elemento #menu para utilizar o modelo de layout 
+            Flexbox. Isso permite um posicionamento mais flexível e 
+            alinhamento de seus elementos filhos (como labels, selects, 
+            inputs e buttons) de maneira eficiente. */
+
+    flex-wrap: wrap;
+    /* Permite que os itens filhos de #menu sejam envolvidos em múltiplas 
+            linhas ou colunas, se necessário, evitando que eles sejam espremidos 
+            além de sua largura mínima. Isso é útil quando a largura do 
+            contêiner não é suficiente para acomodar todos os itens em 
+            uma única linha. */
+
+    gap: 15px;
+    /* Define um espaço de 15 pixels entre os itens filhos de #menu, 
+            tanto vertical quanto horizontalmente. Isso assegura que haja um 
+            espaço consistente entre os controles do formulário, melhorando a 
+            estética e a usabilidade. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem de 20 pixels abaixo do #menu, criando espaço entre o 
+            menu e qualquer conteúdo que esteja abaixo dele. Isso ajuda a separar 
+            visualmente diferentes seções da interface do usuário. */
+
+    justify-content: center;
+    /* Alinha horizontalmente todos os itens filhos de #menu ao centro do 
+            contêiner. Isso é especialmente útil para centros de layout, 
+            proporcionando um equilíbrio visual na página. */
+
+    align-items: center;
+    /* Alinha verticalmente todos os itens filhos ao centro de seus 
+            contêineres respectivos, garantindo que todos os controles 
+            fiquem alinhados no eixo vertical, independentemente 
+            de sua altura. */
+
+}
+
+#menu label, #menu select, #menu input, #menu button {
+
+    padding: 10px;
+    /* Aplica um preenchimento de 10 pixels em todos os lados de labels, 
+            selects, inputs e buttons dentro de #menu, aumentando a área 
+            de clique e melhorando a legibilidade e a interatividade. */
+
+    font-size: 14px;
+    /* Define o tamanho da fonte para 14 pixels para labels, selects, 
+            inputs e buttons dentro de #menu, garantindo que o texto seja 
+            grande o suficiente para ser lido confortavelmente 
+            sem dominar o layout. */
+
+    border-radius: 4px;
+    /* Aplica um raio de borda de 4 pixels para labels, selects, 
+            inputs e buttons, arredondando os cantos desses elementos. 
+            Isso suaviza o design e é frequentemente preferido 
+            por razões estéticas. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e cor 
+            cinza claro (#ccc) em volta de labels, selects, inputs e 
+            buttons, delimitando claramente os limites dos elementos e 
+            melhorando a definição visual no layout. */
+
+}
+
+#menu button {
+
+    background-color: #007bff;
+    /* Define a cor de fundo dos botões dentro de #menu para um 
+            azul brilhante (#007bff), o que os torna visualmente 
+            distintos e atrativos. */
+
+    color: white;
+    /* Define a cor do texto dos botões para branco, garantindo alto 
+            contraste contra o fundo azul, o que melhora a legibilidade. */
+
+    cursor: pointer;
+    /* Altera o cursor para o tipo 'pointer' quando o mouse está sobre os 
+            botões, indicando que são elementos clicáveis, o que 
+            melhora a usabilidade. */
+
+    border: none;
+    /* Remove qualquer borda dos botões, criando um visual mais limpo e 
+            moderno, alinhado com o estilo de design do botão. */
+
+}
+
+#menu button:hover {
+
+    background-color: #0056b3;
+    /* Muda a cor de fundo dos botões para um azul mais escuro (#0056b3) 
+            quando o mouse passa sobre eles, fornecendo um feedback visual 
+            de que o botão é interativo e melhorando a experiência do usuário. */
+
+}
+
+#tabelaContainer {
+
+    overflow-x: auto;
+    /* Define que o conteúdo que exceder horizontalmente a largura do 
+            contêiner #tabelaContainer deve ser acessível por meio de uma 
+            barra de rolagem horizontal. Isso é útil para garantir que a 
+            tabela não estoure a largura do contêiner e permaneça acessível, 
+            mesmo em dispositivos com telas menores. */
+
+    margin-top: 20px;
+    /* Aplica uma margem superior de 20 pixels para o contêiner da tabela, 
+            criando espaço entre ele e quaisquer elementos que estejam acima, 
+            ajudando a separar visualmente as seções da interface do usuário. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura do seu 
+            contêiner. Isso garante que a tabela utilize todo o espaço 
+            disponível, ajustando-se ao layout do contêiner pai. */
+
+    border-collapse: collapse;
+    /* Esta propriedade faz com que as bordas das células da tabela se 
+            fundam em uma única borda, em vez de cada célula ter sua própria 
+            borda individual. Isso resulta em um visual mais limpo e 
+            contínuo para a tabela. */
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20 pixels para a tabela, proporcionando 
+            espaço entre a tabela e qualquer conteúdo que esteja abaixo 
+            dela, facilitando a distinção visual entre seções 
+            diferentes do conteúdo. */
+
+}
+
+table, th, td {
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida com 1 pixel de espessura e cor 
+            cinza claro (#ddd) em volta das células da tabela e dos 
+            cabeçalhos, delimitando claramente os limites de cada 
+            célula e melhorando a legibilidade da tabela. */
+
+    text-align: left;
+    /* Alinha o texto dentro das células da tabela e dos cabeçalhos à 
+            esquerda, o que é uma prática padrão para a maioria dos 
+            conteúdos de tabela, melhorando a legibilidade e a aparência 
+            ordenada da informação. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10 pixels em todas as direções 
+            dentro das células da tabela e dos cabeçalhos, aumentando o 
+            espaço em torno do texto e melhorando a legibilidade e a 
+            estética das células. */
+
+}
+
+th {
+
+    background-color: #f8f9fa;
+    /* Define a cor de fundo dos cabeçalhos da tabela para um cinza 
+            muito claro (#f8f9fa). Isso ajuda a diferenciar visualmente 
+            os cabeçalhos das células normais da tabela, destacando a área 
+            onde estão os títulos das colunas. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito aos textos nos cabeçalhos da 
+            tabela. Isso serve para dar ênfase aos títulos das colunas, 
+            tornando-os mais proeminentes e fáceis de identificar ao 
+            visualizar a tabela. */
+
+}
+
+tr.formato-condicional td {
+
+    background-color: #ffeeba;
+    /* Define a cor de fundo para as células (`td`) dentro de uma 
+            linha (`tr`) que possui a classe `.formato-condicional` 
+            para um amarelo claro (#ffeeba). Esta cor é usada para 
+            destacar células que atendem a certos critérios de 
+            formatação condicional, tornando-as facilmente identificáveis 
+            em uma tabela. */
+
+}
+
+input[type="text"] {
+
+    width: 150px;
+    /* Define a largura dos elementos de entrada de texto (`input[type="text"]`) 
+            para 150 pixels. Isso padroniza o tamanho desses campos de entrada, 
+            garantindo que eles sejam largos o suficiente para acomodar 
+            entradas típicas de texto sem ocupar espaço excessivo na interface. */
+
+}
+
+#inputFileContainer {
+
+    display: flex;
+    /* Aplica o modelo de layout Flexbox ao contêiner do arquivo de 
+            entrada, permitindo um alinhamento flexível e responsivo dos 
+            elementos internos (como o rótulo do arquivo e o próprio input). */
+
+    align-items: center;
+    /* Alinha verticalmente os itens dentro do contêiner do arquivo de 
+            entrada ao centro, garantindo que todos os elementos dentro 
+            do contêiner estejam alinhados de forma limpa e uniforme, 
+            melhorando a estética e a funcionalidade. */
+
+    gap: 10px;
+    /* Define um espaço de 10 pixels entre os elementos dentro do 
+            contêiner do arquivo de entrada, evitando que os elementos 
+            fiquem muito juntos e facilitando a interação do usuário 
+            com cada elemento separadamente. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem inferior de 20 pixels ao contêiner do arquivo 
+            de entrada, criando espaço entre ele e qualquer conteúdo que 
+            esteja abaixo, separando visualmente diferentes seções da 
+            interface do usuário. */
+
+}
+
+.botaoArquivo {
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento de 10 pixels verticalmente e 20 pixels 
+            horizontalmente ao botão de arquivo, aumentando a área de 
+            interação e melhorando a legibilidade do texto no botão. */
+
+    background-color: #007bff;
+    /* Define a cor de fundo do botão de arquivo para um azul 
+            brilhante (#007bff), tornando-o visualmente atraente e fácil 
+            de identificar como um elemento interativo. */
+
+    color: white;
+    /* Define a cor do texto no botão de arquivo para branco, garantindo 
+            alto contraste com o fundo azul e facilitando a leitura do texto. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos do botão de arquivo com um raio de 4 pixels, 
+            suavizando o design do botão e tornando-o esteticamente 
+            mais agradável. */
+
+    cursor: pointer;
+    /* Altera o cursor para o tipo 'pointer' quando o mouse está 
+            sobre o botão de arquivo, indicando que o botão é 
+            clicável e melhorando a usabilidade. */
+
+}
+
+.botaoArquivo:hover {
+
+    background-color: #0056b3;
+    /* Muda a cor de fundo do botão de arquivo para um azul mais 
+            escuro (#0056b3) quando o mouse passa sobre ele, fornecendo 
+            um feedback visual imediato de interatividade, incentivando o 
+            usuário a clicar. */
+            
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- Declara o tipo de documento como HTML5, indicando ao 
+        navegador que deve usar a versão mais recente do HTML -->
+
+<html lang="pt-BR">
+<!-- Inicia o elemento raiz HTML e define o atributo 'lang' 
+        como 'pt-BR', que especifica o idioma da página como 
+        Português do Brasil. Isso ajuda motores de busca e leitores de 
+        tela a interpretar corretamente o conteúdo da página. -->
+
+<head>
+<!-- Inicia o elemento 'head', que contém metadados sobre o documento, 
+        como links para arquivos externos, título da página, 
+        meta informações, etc. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8, que é uma 
+            das codificações mais amplamente usadas e compatíveis. 
+            Garante que caracteres especiais, como acentos, sejam 
+            exibidos corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport, que é a área visível do conteúdo em 
+            diferentes dispositivos. 'width=device-width' ajusta a 
+            largura da página para corresponder à largura da tela do 
+            dispositivo. 
+    'initial-scale=1.0' define o zoom inicial quando a página é 
+            carregada. Isso é essencial para garantir que a página 
+            seja responsiva e tenha uma boa apresentação em 
+            dispositivos móveis. -->
+
+    <title>Formatação Condicional em Tabela</title>
+    <!-- Define o título da página, que é exibido na aba do 
+            navegador e usado pelos motores de busca. 
+    Esse título deve ser descritivo e relacionado ao conteúdo 
+            da página para melhorar a usabilidade e SEO. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Vincula o arquivo CSS externo 'estilos.css' à página, que 
+            contém as regras de estilo aplicadas a esse documento. 
+    O navegador carrega e aplica essas regras de estilo para 
+            formatar visualmente a página. -->
+
+</head>
+<!-- Termina o elemento 'head'. Todos os metadados e links para 
+            recursos externos devem ser incluídos antes do 
+            fechamento dessa tag. -->
+
+<body>
+<!-- Inicia o corpo do documento HTML. Todo o conteúdo visível 
+            da página como texto, imagens, vídeos e elementos 
+            interativos são colocados aqui. -->
+
+    <div class="container">
+    <!-- Cria um contêiner div com a classe 'container'. Esta div é 
+                usada para encapsular e estilizar o conteúdo principal da 
+                página, proporcionando, por exemplo, um alinhamento central e 
+                um fundo específico através do CSS associado à classe. -->
+
+        <h1>Formatação Condicional em Tabela</h1>
+        <!-- Define um cabeçalho de nível 1 que serve como título principal da 
+                página, indicando o propósito ou o conteúdo principal da página, 
+                neste caso, uma demonstração de formatação condicional em uma tabela. -->
+
+        <div id="inputFileContainer">
+        <!-- Define uma div com id 'inputFileContainer', que será usada para 
+                    agrupar os elementos relacionados ao carregamento de 
+                    arquivos, como o botão para escolher o arquivo e o texto 
+                    que mostra o nome do arquivo selecionado. -->
+
+            <label for="carregarArquivo" id="labelCarregarArquivo" class="botaoArquivo">Escolher Arquivo</label>
+            <!-- Cria um rótulo que funciona como um botão para o input de 
+                        arquivo. O atributo 'for' vincula o rótulo ao input pelo 
+                        id, melhorando a acessibilidade, permitindo que um clique 
+                        no rótulo ative o input de arquivo. -->
+
+            <span id="nomeArquivo">Nenhum arquivo escolhido</span>
+            <!-- Define um elemento span para exibir o nome do arquivo escolhido. 
+             Inicialmente, mostra uma mensagem indicando que nenhum 
+                        arquivo foi selecionado. -->
+
+            <input type="file" id="carregarArquivo" accept=".xlsx, .xls" style="display: none;">
+            <!-- Cria um campo de entrada para carregar arquivos, aceitando 
+                        apenas arquivos com extensões .xlsx e .xls. 
+                O campo é ocultado visualmente (display: none) para que o 
+                        rótulo estilizado funcione como o botão. -->
+
+        </div>
+        <!-- Fecha a div 'inputFileContainer'. -->
+
+        <div id="menu">
+        <!-- Inicia uma div com id 'menu', usada para agrupar os elementos 
+                    interativos que permitem ao usuário selecionar colunas e 
+                    condições para a formatação condicional da tabela. -->
+
+            <label for="selecaoColuna">Selecione a Coluna:</label>
+            <!-- Cria um rótulo para um elemento select, guiando o usuário a 
+                        escolher uma das colunas disponíveis da tabela para 
+                        aplicar a formatação condicional. -->
+
+            <select id="selecaoColuna">
+            <!-- Cria um elemento select com id 'selecaoColuna', que conterá 
+                        opções correspondentes às colunas da tabela. Estas opções 
+                        serão preenchidas dinamicamente pelo JavaScript conforme 
+                        os dados da tabela carregada. -->
+
+                <!-- As opções serão preenchidas dinamicamente -->
+
+            </select>
+            <!-- Fecha o elemento select. -->
+
+            <label for="condicao">Condição:</label>
+            <!-- Cria outro rótulo para um segundo elemento select, instruindo o 
+                        usuário a selecionar uma condição para a formatação condicional. -->
+
+            <select id="condicao">
+            <!-- Cria um elemento select com id 'condicao', onde cada opção 
+                        representa uma condição diferente que pode ser aplicada à 
+                        coluna selecionada para alterar a visualização da tabela 
+                        conforme os critérios estabelecidos. -->
+
+                <option value="maiorQue">Maior que</option>
+                <!-- Define uma opção que permite ao usuário selecionar a 
+                        condição 'Maior que'. -->
+
+                <option value="menorQue">Menor que</option>
+                <!-- Define uma opção que permite ao usuário selecionar a 
+                        condição 'Menor que'. -->
+
+                <option value="igualA">Igual a</option>
+                <!-- Define uma opção que permite ao usuário selecionar a 
+                        condição 'Igual a'. -->
+
+                <option value="entre">Entre</option>
+                <!-- Define uma opção que permite ao usuário selecionar a 
+                        condição 'Entre', para especificar um intervalo de valores. -->
+
+                <option value="contémTexto">Texto que Contém...</option>
+                <!-- Define uma opção que permite ao usuário selecionar a 
+                        condição 'Texto que Contém', para filtrar células que 
+                        incluem um texto específico. -->
+
+                <option value="dataOcorre">Uma Data que Ocorre...</option>
+                <!-- Define uma opção que permite ao usuário selecionar a 
+                        condição 'Uma Data que Ocorre', para filtrar células 
+                        com datas específicas. -->
+
+                <option value="valoresDuplicados">Valores Duplicados...</option>
+                <!-- Define uma opção que permite ao usuário selecionar a 
+                        condição 'Valores Duplicados', para destacar células 
+                        com valores que aparecem mais de uma vez na mesma coluna. -->
+
+            </select>
+            <!-- Fecha o elemento select 'condicao'. -->
+       
+            <input type="text" id="valor1" placeholder="Texto ou Número">
+            <!-- Cria um campo de entrada de texto com o id 'valor1'. 
+             O atributo 'placeholder' fornece um texto guia ("Texto ou Número") 
+                        que é exibido no campo de entrada quando este está vazio, 
+                        indicando ao usuário que ele pode inserir um texto ou número, 
+                        dependendo da condição de formatação selecionada. -->
+
+            <input type="text" id="valor2" placeholder="Número" style="display:none">
+            <!-- Cria um segundo campo de entrada de texto com o id 'valor2', 
+                        inicialmente oculto (style="display:none"). 
+                Este campo é usado para entrada de um segundo valor numérico ou 
+                        de data quando a condição 'Entre' é selecionada, permitindo ao 
+                        usuário especificar um intervalo para a formatação condicional. -->
+
+            <label for="mostrarSomenteFiltrados">
+                <!-- Cria um rótulo associado a um checkbox, onde 'for="mostrarSomenteFiltrados"' 
+                        vincula o rótulo ao checkbox por meio do id. 
+                Isso melhora a acessibilidade, permitindo que o usuário clique 
+                        no texto do rótulo para alterar o estado do checkbox. -->
+
+                <input type="checkbox" id="mostrarSomenteFiltrados">
+                <!-- Cria um checkbox com o id 'mostrarSomenteFiltrados'. 
+                 Quando marcado, este checkbox pode ser usado para controlar a 
+                        visualização da tabela, mostrando apenas as linhas que 
+                        atendem às condições especificadas de formatação condicional. -->
+
+                Mostrar apenas filtrados
+                <!-- Texto que explica a função do checkbox, informando ao usuário 
+                        que marcar esta opção resultará na exibição apenas das 
+                        linhas da tabela que correspondem à formatação condicional aplicada. -->
+
+            </label>
+
+            <button id="aplicarFormatacao">Aplicar Formatação</button>
+            <!-- Cria um botão com o id 'aplicarFormatacao'. Este botão é usado 
+                        para iniciar a aplicação da formatação condicional na 
+                        tabela baseada nas colunas e condições selecionadas, 
+                        juntamente com quaisquer valores fornecidos nos 
+                        campos de entrada. -->
+
+            <button id="exportarDados">Exportar Dados Filtrados</button>
+            <!-- Cria um botão com o id 'exportarDados'. Este botão é usado 
+                        para exportar os dados que foram filtrados e formatados 
+                        conforme as condições aplicadas, permitindo ao usuário 
+                        salvar esses dados em um arquivo Excel. -->
+
+            </div>
+            <!-- Fecha a div 'menu', que contém todos os controles para a aplicação 
+                        de formatação condicional e exportação dos dados. -->
+
+            <div id="tabelaContainer">
+                <!-- Cria uma div com id 'tabelaContainer'. Esta div serve como 
+                        contêiner onde a tabela dinamicamente gerada será inserida. 
+                O conteúdo da tabela depende dos dados carregados pelo usuário e das 
+                        operações realizadas através dos controles no menu. -->
+
+                <!-- A tabela será gerada dinamicamente -->
+
+            </div>
+
+        </div>
+        <!-- Fecha a div 'container', que encapsula todos os elementos e 
+                    controles da interface de usuário para a funcionalidade de 
+                    formatação condicional em tabelas. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- Inclui o script da biblioteca XLSX.js a partir de um CDN (Content Delivery Network). 
+     Esta biblioteca é usada para ler e escrever arquivos Excel (formatos .xlsx, .xls). 
+     A versão incluída é a '0.17.0', e o arquivo 'xlsx.full.min.js' é a versão 
+            minificada, que tem um tamanho de arquivo reduzido para carregamento 
+            mais rápido. O script permite a manipulação de arquivos Excel diretamente 
+            no navegador, facilitando operações como a leitura de dados do arquivo 
+            carregado pelo usuário e a exportação de dados filtrados. -->
+
+    <script src="script.js"></script>
+    <!-- Inclui o arquivo 'script.js', que contém o código JavaScript personalizado 
+            para a página. Este script contém lógicas específicas 
+            para manipular os eventos na interface do usuário, como carregar 
+            arquivos, aplicar formatação condicional, gerar a tabela dinâmica 
+            baseada nos dados do arquivo e exportar dados filtrados. O uso de um 
+            arquivo separado para o JavaScript ajuda a manter o HTML limpo e a 
+            separação de responsabilidades, facilitando a manutenção e a 
+            atualização do código. -->
+
+</body>
+<!-- Fecha a tag 'body'. Todo o conteúdo visível da página deve ser 
+        colocado entre as tags de abertura e fechamento do 'body'. -->
+
+</html>
+<!-- Fecha a tag 'html'. Este é o fim do documento HTML. A tag 'html' 
+        encapsula todo o conteúdo da página e deve ser a última tag a ser 
+        fechada, indicando que não há mais conteúdo a ser processado 
+        pelo navegador. -->
