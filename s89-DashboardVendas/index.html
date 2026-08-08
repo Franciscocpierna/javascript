@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- Declaração DOCTYPE para HTML5, instruindo o navegador a 
+            usar o modo de padrões mais recentes para renderizar a página. -->
+
+<html lang="pt-br">
+<!-- A tag <html> começa o documento HTML, e o atributo 'lang="pt-br"' 
+            especifica que o idioma principal do documento é o 
+            Português Brasileiro. -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de estilo e scripts 
+            que não são exibidos diretamente na área de conteúdo da página web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define a codificação 
+                de caracteres para o documento como UTF-8, que suporta todos 
+                os caracteres de idiomas modernos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A tag <meta> com 'name="viewport"' configura a área de visualização 
+                para dispositivos móveis. 'width=device-width' ajusta a largura 
+                da página para seguir a largura da tela do dispositivo. 
+        'initial-scale=1.0' define o nível de zoom inicial quando a 
+                página é carregada. -->
+
+    <title>Dashboard de Vendas</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba 
+                do navegador. Este título é também usado por motores de 
+                busca e bookmarks. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> com 'rel="stylesheet"' vincula uma folha de 
+                estilo externa ao documento. 'href="estilos.css"' 
+                especifica o caminho para o arquivo CSS que contém os 
+                estilos da página. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <!-- A tag <script> com 'src' inclui um arquivo JavaScript externo. 
+        Neste caso, é incluída a biblioteca xlsx.full.min.js, que é 
+                usada para manipular arquivos Excel diretamente no navegador. -->
+
+</head>
+<!-- Fim da tag <head>. -->
+
+<body>
+    <!-- Inicia a seção do corpo do documento HTML, onde todo o 
+                conteúdo visível é colocado. -->
+
+    <div class="container">
+        <!-- Div principal que serve como contêiner para todo o conteúdo 
+                    da página, ajudando na estrutura e organização do layout. -->
+
+        <div class="barra-lateral">
+            <!-- Div secundária que contém a barra lateral do dashboard, 
+                        utilizada para navegação entre diferentes seções do dashboard. -->
+
+            <h2>Dashboard</h2>
+            <!-- Título dentro da barra lateral que indica o contexto da 
+                        página, neste caso, um 'Dashboard'. -->
+
+            <ul>
+                <!-- Lista não ordenada usada para agrupar os links de 
+                        navegação do dashboard. -->
+
+                <li><a href="#" id="mostrar-top-3">01 - Vendedor TOP 3</a></li>
+                <!-- Primeiro item da lista com um link (âncora) que, 
+                                exibe os três melhores vendedores. 
+                     O 'href="#"' indica que o link é funcional através de JavaScript, 
+                                não levando a uma nova página.
+                     'id="mostrar-top-3"' é um identificador único usado para conectar o 
+                                elemento a scripts que manipulam eventos de clique. -->
+
+                <li><a href="#" id="mostrar-ranking">02 - Rank Vendas</a></li>
+                <!-- Segundo item da lista com um link para mostrar o ranking de vendas.
+                     Similar ao primeiro item, utiliza-se JavaScript para 
+                                controlar a ação do link. -->
+
+                <li><a href="#" id="mostrar-resumo">03 - Resumo</a></li>
+                <!-- Terceiro item da lista, um link para mostrar um 
+                                resumo das vendas.
+                     Este também é controlado por JavaScript, indicado 
+                                pelo 'href="#"' e pelo identificador único 'id'. -->
+
+            </ul>
+            <!-- Fim da lista de navegação na barra lateral. -->
+
+        </div>
+        <!-- Fim da div 'barra-lateral'. -->
+
+        <div class="principal">
+            <!-- Div 'principal' que contém o conteúdo principal do dashboard, 
+                        exibindo diferentes seções de dados com base na seleção 
+                        do usuário na barra lateral. -->
+
+            <h1 id="titulo-principal">Melhores Vendedores do Mês</h1>
+            <!-- Cabeçalho principal que exibe o título da seção ativa. 
+             'id="titulo-principal"' é usado para acessar e  
+                        modificar este elemento via JavaScript. -->
+
+            <div id="top-3-vendedores" class="melhores-vendedores">
+                <!-- Div para exibir os três melhores vendedores. Inicialmente 
+                            visível ao carregar a página.
+                    'id="top-3-vendedores"' permite manipulação específica via 
+                            JavaScript, como atualizar ou ocultar esta seção. -->
+                <!-- Os dados serão inseridos aqui pelo JavaScript -->
+                <!-- Comentário indicando que o conteúdo dinâmico, 
+                            detalhes dos vendedores, será adicionado por JavaScript. -->
+
+            </div>
+
+            <div id="ranking-vendedores" class="ranking-vendedores" style="display: none;">
+                <!-- Div para exibir o ranking de todos os vendedores. Oculta 
+                            por padrão (style="display: none;").
+                    'id="ranking-vendedores"' identifica esta seção para 
+                            operações específicas como exibição baseada em 
+                            ações do usuário. -->
+                <!-- Os dados serão inseridos aqui pelo JavaScript -->
+                <!-- Indica que dados dinâmicos serão adicionados aqui pelo 
+                            JavaScript, como uma lista ou tabela de vendedores 
+                            e suas vendas. -->
+
+            </div>
+
+            <div id="resumo-vendas" class="resumo-vendas" style="display: none;">
+                <!-- Div para exibir um resumo detalhado das vendas. 
+                            Também oculta por padrão.
+                    'id="resumo-vendas"' é usado para mostrar esta seção 
+                            através de JavaScript conforme interação do usuário. -->
+
+                <div class="filtros">
+                    <!-- Subdiv que contém campos de entrada para filtrar o resumo 
+                            das vendas por diferentes critérios. -->
+
+                    <input type="text" id="filtro-vendedor" placeholder="Filtrar por Vendedor">
+                    <!-- Campo para inserir o nome do vendedor como filtro. -->
+
+                    <input type="text" id="filtro-produto" placeholder="Filtrar por Produto">
+                    <!-- Campo para inserir o nome do produto como filtro. -->
+
+                    <input type="text" id="filtro-total" placeholder="Filtrar por Total">
+                    <!-- Campo para inserir um valor total como filtro, 
+                                para filtrar vendas acima ou abaixo de um certo valor. -->
+
+                    <button id="exportar-resumo">Exportar para Excel</button>
+                    <!-- Botão para exportar os dados filtrados para um arquivo 
+                                Excel. 'id="exportar-resumo"' permite vincular a funcionalidade 
+                                de exportação via JavaScript. -->
+
+                </div>
+
+                <table id="tabela-resumo">
+                    <!-- Tabela para exibir os dados filtrados do 
+                                resumo das vendas. -->
+
+                    <thead>
+                        <!-- Cabeçalho da tabela, definindo as colunas. -->
+
+                        <tr>
+                            <!-- Linha de cabeçalho da tabela. -->
+
+                            <th>Vendedor</th>
+                            <!-- Coluna para o nome do vendedor. -->
+                            
+                            <th>Produto</th>
+                            <!-- Coluna para o nome do produto. -->
+                            
+                            <th>Total</th>
+                            <!-- Coluna para o total de vendas. -->
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Corpo da tabela onde as linhas de dados serão 
+                                inseridas dinamicamente por JavaScript. -->
+                        <!-- Indica que o conteúdo será adicionado dinamicamente. -->
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- Fim da div 'resumo-vendas'. -->
+
+            <div id="detalhes-vendedor" class="detalhes-vendedor" style="display: none;">
+            <!-- Esta div é usada para mostrar detalhes específicos de um 
+                        vendedor selecionado, inicialmente oculta 
+                        (style="display: none;").
+                A visibilidade da div pode ser alterada dinamicamente via 
+                        JavaScript, baseada em interações do usuário com 
+                        outras partes da interface. -->
+
+                <button id="voltar-ranking">Voltar</button>
+                <!-- Botão para voltar à visualização anterior, geralmente o 
+                            ranking ou lista principal de vendedores.
+                    O JavaScript pode ser usado para adicionar funcionalidade a 
+                            este botão, permitindo aos usuários retornar à tela 
+                            anterior sem recarregar a página. -->
+
+                <button id="exportar-detalhes">Exportar para Excel</button>
+                <!-- Botão para exportar os detalhes do vendedor atual 
+                            para um arquivo Excel.
+                    Essa funcionalidade é tipicamente implementada via JavaScript 
+                            utilizando uma biblioteca como XLSX.js, que foi 
+                            referenciada anteriormente no <head>. -->
+
+                <table id="tabela-detalhes">
+                    <!-- Tabela para apresentar informações detalhadas sobre 
+                                vendas de um vendedor específico.
+                        A tabela é preenchida dinamicamente com dados relevantes, 
+                                como descrito nos elementos <th> abaixo. -->
+
+                    <thead>
+                        <!-- Cabeçalho da tabela, definindo as categorias de dados 
+                                    que serão exibidas em cada coluna. -->
+
+                        <tr>
+                            <!-- Linha de cabeçalho contendo os títulos das colunas. -->
+
+                            <th>Vendedor</th>
+                            <!-- Coluna para o nome do vendedor. -->
+                            
+                            <th>Produto</th>
+                            <!-- Coluna para o nome do produto vendido. -->
+                            
+                            <th>Total</th>
+                            <!-- Coluna para o total de vendas do produto pelo vendedor. -->
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <!-- Corpo da tabela onde as linhas de dados específicos 
+                                    serão inseridas dinamicamente pelo JavaScript.
+                            Os dados aqui podem incluir várias entradas para um único 
+                                    vendedor, cada uma representando uma venda diferente. -->
+                        <!-- Os dados serão inseridos aqui pelo JavaScript -->
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- Fim da div 'detalhes-vendedor'. -->
+
+        </div>
+        <!-- Fim da div 'principal'. -->
+
+    </div>
+    <!-- Fim da div 'container'. -->
+
+    <script src="scripts.js"></script>
+    <!-- Script externo 'scripts.js' incluído no final do corpo para 
+                garantir que todos os elementos HTML sejam carregados antes 
+                de qualquer manipulação pelo JavaScript. -->
+        <!-- Esse script contém a lógica para controlar a interatividade do 
+                dashboard, como eventos de clique, filtragem de dados e 
+                exportação para Excel. -->
+
+</body>
+</html>
+<!-- Fim do documento HTML. -->

@@ -1,0 +1,748 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do corpo do documento para Arial, 
+                com sans-serif como fallback se Arial não estiver disponível. */
+
+    margin: 0;
+    /* Remove a margem padrão ao redor do <body>, que navegadores 
+                geralmente aplicam. */
+
+    padding: 0;
+    /* Remove o padding padrão interno do <body> para garantir que o 
+                layout utilize todo o espaço da janela do navegador. */
+
+    display: flex;
+    /* Define o modelo de layout do <body> para Flexbox, o que permite 
+                que seus elementos filhos sejam alinhados e distribuídos 
+                flexivelmente. */
+
+    height: 100vh;
+    /* Ajusta a altura do <body> para ser igual à altura da viewport 
+                (100% da altura visível da janela do navegador). */
+
+    background-color: #f4f4f9;
+    /* Define a cor de fundo do <body> para um cinza muito claro (#f4f4f9), 
+                fornecendo uma cor de fundo neutra para o conteúdo. */
+
+}
+
+.container {
+
+    display: flex;
+    /* Usa Flexbox para o contêiner principal, permitindo um layout 
+                responsivo e flexível dos elementos internos. */
+
+    width: 100%;
+    /* Define a largura do contêiner para ocupar 100% da largura de seu 
+                elemento pai (neste caso, o <body>). */
+
+}
+
+.barra-lateral {
+
+    width: 20%;
+    /* Define a largura da barra lateral para 20% da largura de seu 
+                contêiner pai, o que a torna uma barra lateral estreita. */
+
+    background-color: #002147;
+    /* Define a cor de fundo da barra lateral para um azul marinho escuro (#002147), 
+                o que ajuda a destacar a barra lateral do restante do conteúdo. */
+
+    color: white;
+    /* Define a cor do texto dentro da barra lateral para branco, 
+                garantindo uma boa legibilidade contra o fundo escuro. */
+
+    padding: 20px;
+    /* Aplica um padding de 20 pixels em todos os lados dentro da 
+                barra lateral, criando espaço entre o conteúdo da barra 
+                lateral e suas bordas. */
+
+}
+
+
+.barra-lateral h2 {
+
+    font-size: 1.5em;
+    /* Define o tamanho da fonte do cabeçalho <h2> para 1.5 vezes o 
+                tamanho da fonte padrão do elemento pai, tornando-o 
+                destacado e visível. */
+
+    text-align: center;
+    /* Centraliza o texto do cabeçalho <h2> horizontalmente, melhorando a 
+                estética e a legibilidade. */
+
+    border-bottom: 1px solid white;
+    /* Adiciona uma borda sólida branca de 1 pixel na parte inferior do 
+                cabeçalho <h2>, funcionando como um divisor visual entre o 
+                título e o conteúdo abaixo. */
+
+    padding-bottom: 10px;
+    /* Aplica um espaço de 10 pixels abaixo do texto dentro do cabeçalho <h2>, 
+                criando uma separação entre o texto e a borda inferior. */
+
+}
+
+.barra-lateral ul {
+
+    list-style: none;
+    /* Remove qualquer marcador padrão de lista para <ul>, como discos 
+                ou círculos, limpa visualmente a área de navegação. */
+
+    padding: 0;
+    /* Remove o padding padrão do <ul>, permitindo que o controle total 
+                sobre o espaçamento seja definido pelos estilos dos 
+                elementos <li>. */
+
+}
+
+.barra-lateral ul li {
+
+    margin: 20px 0;
+    /* Define a margem vertical para 20 pixels acima e abaixo de cada 
+                item de lista <li>, ajudando a separar visualmente 
+                cada item de lista. */
+
+}
+
+.barra-lateral ul li a {
+
+    color: white;
+    /* Define a cor do texto dos links dentro dos itens de lista 
+                para branco, garantindo legibilidade contra o fundo 
+                escuro da barra lateral. */
+
+    text-decoration: none;
+    /* Remove a decoração padrão de sublinhado dos links, proporcionando 
+                um visual mais limpo e menos distrativo. */
+
+    font-size: 1.2em;
+    /* Aumenta o tamanho da fonte dos links para 1.2 vezes o tamanho 
+                padrão da fonte do elemento pai, fazendo os links 
+                ficarem mais acessíveis e fáceis de clicar. */
+
+}
+
+
+.principal {
+
+    width: 80%;
+    /* Define a largura da div .principal para ocupar 80% da 
+                largura de seu elemento pai. Isso é tipicamente usado 
+                em layouts que incluem uma barra lateral que ocupa o 
+                resto do espaço. */
+
+    padding: 20px;
+    /* Aplica um espaçamento interno de 20 pixels em todos os lados 
+                dentro da div .principal, criando espaço entre o conteúdo 
+                e as bordas da div. */
+
+}
+
+.principal h1 {
+
+    text-align: center;
+    /* Centraliza o texto do cabeçalho <h1> horizontalmente, geralmente 
+                usado para garantir que o título seja o ponto focal 
+                visual na página. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem de 20 pixels abaixo do cabeçalho <h1>, 
+                criando separação entre o título e o conteúdo que segue. */
+
+    font-size: 2em;
+    /* Aumenta o tamanho da fonte para 2 vezes o tamanho da fonte base 
+                do elemento, tornando o cabeçalho <h1> proeminente e 
+                mais legível. */
+
+    color: #333;
+    /* Define a cor do texto do cabeçalho para um cinza escuro (#333), 
+                proporcionando um contraste moderado que é fácil para os olhos. */
+
+}
+
+.melhores-vendedores {
+
+    display: flex;
+    /* Utiliza Flexbox para estabelecer um layout flexível, permitindo 
+                que os elementos filhos (vendedores) sejam facilmente 
+                organizados. */
+
+    justify-content: space-around;
+    /* Distribui espaço igualmente em torno de cada item filho (cada vendedor), 
+                garantindo que eles sejam espaçados uniformemente ao 
+                longo do eixo horizontal. */
+
+    align-items: center;
+    /* Alinha os itens filhos (vendedores) ao centro no eixo vertical, 
+                garantindo que eles estejam alinhados perfeitamente no meio, 
+                independentemente de suas alturas individuais. */
+
+}
+
+.vendedor {
+
+    text-align: center;
+    /* Centraliza o texto dentro de cada elemento .vendedor, útil 
+                para títulos e descrições sob as imagens dos vendedores. */
+
+    margin: 0 20px;
+    /* Aplica uma margem horizontal de 20 pixels em cada lado de cada 
+                elemento .vendedor, criando espaço entre vendedores adjacentes. */
+                
+}
+
+.vendedor img {
+
+    border-radius: 50%;
+    /* Arredonda as bordas da imagem para formar um círculo perfeito, 
+                comumente usado para retratos ou avatares de usuário. */
+
+    width: 100px;
+    height: 100px;
+    /* Define a largura e altura da imagem para 100 pixels, garantindo 
+                que todas as imagens de vendedores tenham o mesmo 
+                tamanho e forma. */
+
+}
+
+.vendedor .podio {
+
+    display: flex;
+    /* Utiliza Flexbox para o layout do .podio, permitindo um 
+                controle fino sobre a disposição dos elementos internos. */
+
+    flex-direction: column;
+    /* Define a direção do Flexbox para coluna, empilhando os 
+                elementos filhos verticalmente. */
+
+    align-items: center;
+    /* Centraliza os elementos filhos (como medalhas ou números de 
+                posição) ao longo do eixo transversal, garantindo que 
+                estejam alinhados ao centro. */
+
+}
+
+
+.vendedor .podio .posicao {
+
+    width: 100px;
+    /* Define a largura do elemento .posicao para 100 pixels, 
+                garantindo uniformidade no tamanho entre 
+                diferentes vendedores. */
+
+    height: 150px;
+    /* Define a altura inicial para 150 pixels, criando um 
+                espaço vertical adequado para exibir informações 
+                ou decorações de ranking. */
+
+    display: flex;
+    /* Usa Flexbox para facilitar o alinhamento dos elementos 
+                internos (como o parágrafo com a posição do vendedor). */
+
+    justify-content: center;
+    /* Centraliza os elementos filhos horizontalmente dentro 
+                do elemento .posicao. */
+
+    align-items: flex-end;
+    /* Alinha os elementos filhos ao final do contêiner no eixo 
+                vertical, útil para posicionar conteúdo na base 
+                do elemento. */
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* Arredonda os cantos superiores esquerdo e direito para 10 
+                pixels, adicionando um toque estético suave. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, separando 
+                visualmente este elemento de outros acima dele. */
+
+    position: relative;
+    /* Estabelece um contexto de posicionamento relativo, permitindo 
+                que elementos absolutamente posicionados dentro sejam 
+                alinhados em relação a este contêiner. */
+
+}
+
+.vendedor .podio .posicao p {
+
+    margin: 0;
+    /* Remove qualquer margem padrão do parágrafo, permitindo 
+                controle mais preciso sobre o posicionamento. */
+
+    padding: 10px;
+    /* Aplica um preenchimento de 10 pixels em todos os lados do 
+                parágrafo, aumentando a legibilidade do texto ao 
+                adicionar espaço ao redor. */
+
+    font-size: 1.2em;
+    /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho padrão, 
+                destacando visualmente o texto. */
+
+    width: 100%;
+    /* Define a largura do parágrafo para ocupar 100% do seu contêiner 
+                pai, garantindo que ele se estenda completamente horizontalmente 
+                dentro do elemento .posicao. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do parágrafo, proporcionando uma 
+                apresentação equilibrada e fácil de ler. */
+
+    position: absolute;
+    /* Posiciona o parágrafo absolutamente dentro de seu contêiner 
+                relativo, permitindo um alinhamento preciso. */
+
+    top: 0;
+    left: 0;
+    /* Alinha o parágrafo no topo e à esquerda do contêiner .posicao, 
+                garantindo que ele se inicie exatamente nos limites 
+                superiores do contêiner. */
+
+}
+
+.posicao-1 {
+
+    background-color: #FF6347;
+    /* Define a cor de fundo para um vermelho tomate, destacando 
+                visualmente o vendedor na primeira posição. */
+
+    height: 200px;
+    /* Aumenta a altura para 200 pixels, diferenciando visualmente a 
+                primeira posição como sendo superior. */
+
+}
+
+.posicao-2 {
+
+    background-color: #FFD700;
+    /* Define a cor de fundo para um amarelo ouro, indicando 
+                visualmente a segunda posição. */
+
+    height: 175px;
+    /* Define a altura para 175 pixels, um pouco menor que a 
+                primeira posição mas ainda destacada. */
+
+}
+
+.posicao-3 {
+
+    background-color: #32CD32;
+    /* Define a cor de fundo para um verde limão, 
+                associado à terceira posição. */
+
+    height: 150px;
+    /* Mantém a altura inicial de 150 pixels, consistente 
+                com a altura padrão definida para os elementos 
+                de posição. */
+
+}
+
+.ranking-vendedores {
+
+    display: flex;
+    /* Utiliza Flexbox para o layout da seção de ranking, 
+                facilitando o alinhamento e a organização 
+                dos itens de ranking. */
+
+    flex-direction: column;
+    /* Configura a direção do Flexbox para 'column', fazendo 
+                com que os itens de ranking sejam organizados 
+                verticalmente. */
+
+    align-items: center;
+    /* Centraliza os itens de ranking horizontalmente dentro da 
+                seção, garantindo que todos estejam alinhados ao meio. */
+
+    padding: 20px;
+    /* Adiciona um espaçamento interno de 20 pixels em todas as 
+                direções dentro da seção de ranking, criando espaço 
+                entre os bordos e os itens. */
+
+}
+
+.ranking-vendedores .item-ranking {
+
+    display: flex;
+    /* Configura Flexbox para cada item de ranking, permitindo um 
+                alinhamento eficiente dos elementos internos, 
+                como imagem e informações. */
+
+    align-items: center;
+    /* Alinha os elementos internos de cada item de ranking 
+                ao centro no eixo vertical. */
+
+    background-color: white;
+    /* Define a cor de fundo de cada item de ranking para 
+                branco, criando um contraste visual com o 
+                conteúdo e o fundo. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos de cada item de ranking para 10 
+                pixels, suavizando o design visual. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra suave para dar um efeito elevado aos 
+                itens de ranking, aumentando a profundidade e o 
+                interesse visual. */
+
+    margin-bottom: 10px;
+    /* Adiciona uma margem abaixo de cada item de ranking para 
+                separá-los visualmente uns dos outros. */
+
+    width: 60%;
+    /* Define a largura de cada item de ranking para 60% da 
+                largura de seu contêiner, garantindo uniformidade. */
+
+    padding: 10px;
+    /* Aplica um espaçamento interno de 10 pixels dentro de cada 
+                item de ranking, aumentando o conforto visual ao 
+                redor do conteúdo interno. */
+
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave para qualquer transformação 
+                aplicada (como hover), melhorando a experiência do 
+                usuário com feedback visual interativo. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário passa o 
+                mouse sobre um item de ranking, indicando que o 
+                item é clicável. */
+
+}
+
+.ranking-vendedores .item-ranking:hover {
+
+    transform: translateY(-5px);
+    /* Move o item de ranking 5 pixels para cima quando o mouse 
+                está sobre ele, criando um efeito visual de 'levantar', 
+                o que pode indicar interatividade. */
+
+}
+
+.ranking-vendedores .item-ranking img {
+
+    border-radius: 50%;
+    /* Arredonda a imagem dentro do item de ranking para formar 
+                um círculo completo, geralmente usado para avatares 
+                ou ícones. */
+
+    width: 50px;
+    height: 50px;
+    /* Define a largura e a altura da imagem para 50 pixels, 
+                garantindo que todas as imagens sejam uniformes em tamanho. */
+
+    margin-right: 15px;
+    /* Adiciona uma margem à direita da imagem, separando-a 
+                visualmente das informações textuais ao lado. */
+
+}
+
+.ranking-vendedores .item-ranking .info {
+
+    display: flex;
+    /* Utiliza Flexbox dentro do contêiner de informações para 
+                alinhar corretamente os elementos de texto. */
+
+    flex-direction: column;
+    /* Configura a direção dos itens de Flexbox para 'column', 
+                organizando o texto verticalmente. */
+
+    align-items: flex-start;
+    /* Alinha os elementos de texto ao início do contêiner, 
+                garantindo que o texto esteja alinhado à esquerda. */
+
+}
+
+.ranking-vendedores .item-ranking .info p {
+
+    margin: 0;
+    /* Remove todas as margens do parágrafo para permitir um 
+                controle mais preciso do layout e espaçamento. */
+
+    font-size: 1.1em;
+    /* Aumenta ligeiramente o tamanho da fonte para 1.1 vezes o 
+                tamanho normal, destacando o texto principal. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333), 
+                oferecendo boa legibilidade. */
+
+}
+
+.ranking-vendedores .item-ranking .info p:nth-child(2) {
+
+    font-size: 1em;
+    /* Define o tamanho da fonte para o tamanho padrão (1em) 
+                para o segundo parágrafo, que é tipicamente 
+                menos proeminente. */
+
+    color: #777;
+    /* Define a cor do texto para um cinza médio (#777), 
+                diferenciando-o do texto principal e indicando 
+                que é uma informação secundária. */
+
+}
+
+.resumo-vendas {
+
+    padding: 20px;
+    /* Adiciona um espaçamento interno de 20 pixels em todas 
+                as direções dentro da seção .resumo-vendas, criando 
+                espaço entre o conteúdo e as bordas da div, facilitando a 
+                leitura e a visualização dos elementos contidos. */
+
+}
+
+.filtros {
+
+    display: flex;
+    /* Utiliza Flexbox para o layout dos elementos de filtro, 
+                facilitando o alinhamento e a distribuição dos 
+                controles de filtro (inputs e botão). */
+
+    justify-content: space-between;
+    /* Distribui o espaço entre os elementos filhos de forma 
+                equitativa, colocando espaço máximo entre eles, o 
+                que ajuda a separar visualmente cada controle de filtro. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels abaixo do contêiner de 
+                filtros, separando-o dos outros conteúdos abaixo, 
+                como tabelas ou outras seções. */
+
+}
+
+.filtros input {
+
+    padding: 8px;
+    /* Aplica um preenchimento de 8 pixels em todas as direções 
+                dentro de cada campo de entrada, aumentando a área 
+                clicável e melhorando a legibilidade do texto inserido. */
+
+    font-size: 1em;
+    /* Define o tamanho da fonte para o tamanho padrão (1em), mantendo a 
+                consistência com o estilo de texto geral da interface. */
+
+    width: 30%;
+    /* Define a largura de cada campo de entrada para ocupar 30% da 
+                largura do seu contêiner pai, garantindo que os campos 
+                não se tornem muito largos ou estreitos. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e uma cor 
+                cinza clara (#ccc) em volta dos campos de entrada, 
+                ajudando a definir claramente a área dos campos. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos das bordas dos campos de entrada para 5 pixels, 
+                suavizando o design visual e tornando-o mais 
+                moderno e agradável. */
+
+}
+
+.filtros button {
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento de 10 pixels na vertical e 20 pixels 
+                na horizontal no botão, tornando-o fácil de clicar e 
+                visualmente proporcional. */
+
+    font-size: 1em;
+    /* Mantém o tamanho da fonte do texto no botão consistente 
+                com o dos campos de entrada (1em). */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão, criando um design 
+                mais limpo e integrado. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão para 5 pixels, correspondendo ao 
+                estilo dos campos de entrada e mantendo a 
+                consistência visual. */
+
+    background-color: #002147;
+    /* Define a cor de fundo do botão para um azul marinho 
+                profundo (#002147), destacando o botão contra outros 
+                elementos e incentivando a interação. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para branco, garantindo 
+                alta legibilidade contra o fundo escuro. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário passa o 
+                mouse sobre o botão, indicando que o elemento é clicável. */
+
+}
+
+.filtros button:hover {
+
+    background-color: #001F3F;
+    /* Altera a cor de fundo do botão para um azul um pouco 
+                mais escuro (#001F3F) quando o mouse está sobre ele, 
+                proporcionando feedback visual de que o botão é interativo. */
+
+}
+
+.resumo-vendas table {
+
+    width: 100%;
+    /* Estabelece que a tabela ocupe 100% da largura do seu 
+                contêiner pai, garantindo que utilize todo o 
+                espaço disponível. */
+
+    border-collapse: collapse;
+    /* A propriedade 'border-collapse: collapse' faz com que as 
+                bordas das células se fundam em uma única borda, em 
+                vez de cada célula ter sua própria borda, resultando 
+                em um visual mais limpo e contínuo. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels à tabela, criando 
+                um espaçamento entre quaisquer elementos acima 
+                dela e a tabela em si. */
+
+}
+
+.resumo-vendas table, .resumo-vendas th, .resumo-vendas td {
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida com 1 pixel de espessura e cor 
+                cinza claro (#ddd) em torno da tabela, e cada 
+                célula de cabeçalho (th) e célula de dados (td) 
+                dentro dela, para definir claramente os limites dos dados. */
+
+}
+
+.resumo-vendas th, .resumo-vendas td {
+
+    padding: 8px;
+    /* Adiciona preenchimento de 8 pixels em todas as direções 
+                dentro de cada célula de cabeçalho e célula de dados, 
+                melhorando a legibilidade ao aumentar o espaço ao 
+                redor do texto. */
+
+    text-align: left;
+    /* Alinha o texto dentro das células de cabeçalho e de dados à 
+                esquerda, proporcionando uma apresentação clara e 
+                consistente da informação. */
+
+}
+
+.resumo-vendas th {
+
+    background-color: #f2f2f2;
+    /* Define a cor de fundo para as células do cabeçalho da 
+                tabela para um cinza muito claro (#f2f2f2), distinguindo 
+                visualmente o cabeçalho do resto da tabela. */
+
+}
+
+.detalhes-vendedor {
+
+    padding: 20px;
+    /* Adiciona preenchimento de 20 pixels em todas as direções 
+                dentro da div .detalhes-vendedor, criando espaço 
+                entre o conteúdo interno e as bordas da div. */
+
+}
+
+.detalhes-vendedor table {
+    
+    width: 100%;
+    /* Similar à tabela em .resumo-vendas, faz com que a tabela em 
+                .detalhes-vendedor também ocupe 100% da largura 
+                do seu contêiner pai. */
+
+    border-collapse: collapse;
+    /* Usa a mesma propriedade de 'border-collapse' para garantir 
+                que as bordas das células se fundam em uma única borda. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, semelhante ao 
+                usado na tabela .resumo-vendas, para manter a 
+                consistência do design. */
+
+}
+
+.detalhes-vendedor table, .detalhes-vendedor th, .detalhes-vendedor td {
+
+    border: 1px solid #ddd;
+    /* Aplica bordas cinza claro (#ddd) em torno da tabela e suas 
+            células, assim como na seção .resumo-vendas, mantendo a 
+            uniformidade visual entre diferentes seções. */
+
+}
+
+.detalhes-vendedor th, .detalhes-vendedor td {
+
+    padding: 8px;
+    /* Adiciona um preenchimento de 8 pixels em todas as direções 
+            dentro das células de cabeçalho (th) e das 
+            células de dados (td), aumentando a legibilidade ao 
+            separar visualmente o conteúdo das bordas das células. */
+
+    text-align: left;
+    /* Alinha o texto à esquerda dentro das células, proporcionando 
+            uma apresentação clara e consistente da informação, 
+            facilitando a leitura em sequência dos dados tabulares. */
+
+}
+
+.detalhes-vendedor th {
+
+    background-color: #f2f2f2;
+    /* Define a cor de fundo das células do cabeçalho para um 
+            cinza muito claro (#f2f2f2), destacando visualmente a 
+            área do cabeçalho do restante das células da tabela e 
+            ajudando a diferenciar categorias de informação. */
+
+}
+
+.detalhes-vendedor button {
+
+    background-color: #002147;
+    /* Estabelece a cor de fundo dos botões para um azul 
+            marinho profundo (#002147), criando um contraste 
+            eficaz com o texto, que é configurado para branco, 
+            facilitando a localização e utilização dos botões. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para branco, 
+            garantindo alta legibilidade contra o fundo escuro. */
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento de 10 pixels na vertical e 20 
+            pixels na horizontal dentro do botão, 
+            tornando-o visualmente proporcional e fácil de interagir. */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão, criando um 
+            visual mais limpo e integrado ao design geral. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão para 5 pixels, suavizando o 
+            design visual e mantendo a consistência com outros 
+            elementos de entrada. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário passa o 
+            mouse sobre o botão, indicando interatividade. */
+
+    margin-right: 10px;
+    /* Adiciona uma margem à direita do botão de 10 pixels, 
+            separando-o de outros elementos ou botões adjacentes 
+            para evitar sobreposição visual. */
+
+}
+
+.detalhes-vendedor button:hover {
+
+    background-color: #001F3F;
+    /* Muda a cor de fundo do botão para um azul um pouco 
+            mais escuro (#001F3F) quando o mouse está sobre ele, 
+            proporcionando feedback visual que o botão é 
+            interativo e pode ser clicado. */
+            
+}
