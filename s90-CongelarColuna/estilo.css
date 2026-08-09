@@ -1,0 +1,245 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do corpo do documento para 'Arial', 
+            que é uma fonte sans-serif. Se 'Arial' não estiver disponível, 
+            qualquer fonte sans-serif será usada como alternativa. */
+
+    margin: 20px;
+    /* Define uma margem de 20 pixels em todos os lados do corpo do 
+            documento, criando um espaço entre o conteúdo e as bordas 
+            da janela do navegador. */
+
+    padding: 0;
+    /* Define o preenchimento interno do corpo do documento para 0, 
+            garantindo que não haja espaço extra dentro da borda do corpo. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do corpo do documento. Isso afeta 
+            todos os elementos de texto que não têm um alinhamento de 
+            texto específico definido. */
+
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Define a margem inferior do elemento h1 para 20 
+            pixels, criando espaço entre o título h1 e 
+            qualquer conteúdo abaixo dele. */
+
+}
+
+.tabela-container {
+
+    width: 600px;
+    /* Define a largura do container da tabela para 600 pixels. 
+            Isso controla o espaço horizontal que a tabela pode 
+            ocupar na página. */
+
+    height: 300px;
+    /* Define a altura do container da tabela para 300 pixels. 
+            Esta propriedade limita o espaço vertical que a tabela 
+            pode ocupar, potencialmente ativando a rolagem vertical 
+            se a tabela exceder essa altura. */
+
+    overflow: auto;
+    /* Habilita barras de rolagem tanto verticais quanto horizontais 
+            automaticamente se o conteúdo exceder o tamanho 
+            do container. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e cor #ddd (um 
+            cinza claro) ao redor do container da tabela, melhorando a 
+            distinção visual do container no layout. */
+
+    margin: 0 auto;
+    /* Define a margem superior e inferior como 0 e centraliza o 
+            container horizontalmente dentro de seu elemento pai, 
+            utilizando margens automáticas nos lados esquerdo e 
+            direito. */
+
+}
+
+#tabela-estudantes {
+
+    width: 1000px;
+    /* Define a largura da tabela para 1000 pixels, que é maior 
+            que a do container. Isso ativa a rolagem horizontal 
+            dentro do `.tabela-container` se o espaço disponível 
+            for menor que 1000 pixels. */
+
+    border-collapse: collapse;
+    /* Esta propriedade remove os espaços entre as bordas das 
+            células, fazendo com que a tabela tenha uma aparência 
+            mais compacta e unificada. */
+
+    margin: 0 auto;
+    /* Centraliza a tabela horizontalmente dentro de seu container, 
+            alinhando-a no centro do `.tabela-container`. */
+
+}
+
+#tabela-estudantes th, #tabela-estudantes td {
+
+    padding: 10px;
+    /* Define o preenchimento interno das células de cabeçalho (th) e 
+            das células de dados (td) para 10 pixels em todos os lados, 
+            proporcionando espaço entre o texto e as bordas da célula. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda de 1 pixel, sólida e de cor cinza claro (#ddd) 
+            ao redor de cada célula da tabela, ajudando na separação 
+            visual dos dados. */
+
+    text-align: center;
+    /* Centraliza o texto dentro das células, tanto de cabeçalho quanto 
+            de dados, alinhando o conteúdo textual no meio da célula. */
+
+    white-space: nowrap;
+    /* Impede que o conteúdo dentro das células quebre linha e saia 
+                para a linha seguinte, garantindo que o texto ou dados 
+                fiquem em uma única linha contínua, mesmo que o texto seja 
+                mais longo que a célula. */
+
+}
+
+.nome-fixo {
+
+    position: sticky;
+    /* Aplica um posicionamento "pegajoso" ao elemento, o que significa 
+                que ele se tornará fixo em relação à tela quando você 
+                rolar além de sua posição normal na viewport, até que 
+                seu contêiner pai esteja fora da visualização. */
+
+    left: 0;
+    /* Define a posição esquerda do elemento pegajoso para 0, fazendo 
+                com que ele fique alinhado à esquerda da viewport 
+                quando rolar para baixo. */
+
+    background-color: #f1f1f1;
+    /* Define a cor de fundo do elemento para cinza muito claro (#f1f1f1), 
+                ajudando a distinguir essa célula de outras 
+                células da tabela. */
+
+    z-index: 2;
+    /* Define a ordem de empilhamento do elemento para 2, garantindo 
+                que ele sobreponha outros elementos na página que 
+                possam ter um z-index menor ou padrão (1 ou auto). */
+
+    border-right: 2px solid #ddd;
+    /* Adiciona uma borda sólida de 2 pixels de espessura e de 
+                cor cinza claro (#ddd) no lado direito do elemento, 
+                proporcionando uma separação visual clara do elemento 
+                com outros conteúdos adjacentes. */
+
+}
+
+thead th.nome-fixo {
+
+    z-index: 3;
+    /* Aumenta a ordem de empilhamento para 3 em células de 
+                cabeçalho dentro de 'thead' que têm a 
+                classe 'nome-fixo'. 
+       Isso garante que essas células de cabeçalho fiquem acima de 
+                outros elementos com z-index menor quando a tabela 
+                for rolada, mantendo-as visíveis e sobrepondo 
+                outros elementos que possam interferir visualmente. */
+
+}
+
+thead th {
+
+    position: sticky;
+    /* Define o posicionamento das células de cabeçalho como 'sticky', o 
+                que permite que elas fiquem fixas (grudadas) na posição 
+                definida pelo 'top' conforme o usuário rola a página. 
+        Isso é útil para manter o cabeçalho visível e acessível ao 
+                visualizar longas listas de dados. */
+
+
+    top: 0;
+    /* Estabelece a posição superior das células de cabeçalho como 0, o 
+                que significa que elas ficarão fixas no topo da janela de 
+                visualização assim que alcançarem essa posição durante a 
+                rolagem. Isso garante que o cabeçalho da tabela não se 
+                mova para fora da visualização ao rolar a página para baixo. */
+
+    background-color: #fff;
+    /* Define a cor de fundo das células do cabeçalho para branco (#fff). 
+        Isso garante que o cabeçalho tenha um fundo opaco, prevenindo 
+                que textos e outros elementos da tabela que estejam 
+                rolando por trás dele sejam visíveis através do 
+                cabeçalho. */
+
+
+    z-index: 2;
+    /* Define a ordem de empilhamento das células de cabeçalho 
+                com um 'z-index' de 2. Isso assegura que o cabeçalho 
+                sobreponha outras linhas da tabela ao rolar a página, 
+                evitando que elementos de linhas abaixo interfiram 
+                visualmente com o conteúdo do cabeçalho. */
+
+    
+}
+
+
+tbody td.nome-fixo {
+
+    background-color: #ffffff;
+    /* Define a cor de fundo das células de dados dentro de 'tbody' 
+                que têm a classe 'nome-fixo' para branco (#ffffff). 
+       Isso ajuda a manter uma aparência limpa e uniforme para 
+                células que são fixas durante a rolagem. */
+
+    border-right: 2px solid #ddd;
+    /* Adiciona uma borda sólida de 2 pixels de espessura e cor 
+                cinza claro (#ddd) no lado direito dessas células. 
+       Esta borda serve para separar visualmente a célula fixa das 
+                outras células da tabela, facilitando a distinção
+                durante a rolagem horizontal e vertical da tabela. */
+
+}
+
+
+tbody tr:hover {
+
+    background-color: #f1f1f1;
+    /* Aplica uma cor de fundo cinza claro (#f1f1f1) às linhas da 
+                tabela dentro de 'tbody' quando o mouse é 
+                passado sobre elas. 
+       Isso serve para destacar visualmente a linha que está 
+                sob o cursor, melhorando a interatividade ao fornecer 
+                um feedback visual ao usuário. */
+
+}
+
+.linha-destacada {
+
+    background-color: #add8e6 !important;
+    /* Define a cor de fundo das linhas marcadas como destacadas 
+                para um azul claro (#add8e6), e usa a 
+                declaração '!important' para garantir que esta 
+                regra tenha precedência sobre outras regras 
+                de cor de fundo. 
+       Isso é usado para manter a linha visualmente destacada 
+                mesmo quando outras regras CSS podem tentar 
+                alterar sua cor de fundo, como ao interagir com a 
+                tabela de outras maneiras. */
+
+}
+
+.celula-destacada {
+
+    background-color: #add8e6 !important;
+    /* Aplica a mesma cor de fundo azul claro (#add8e6) e a 
+                declaração '!important' às células específicas 
+                que são consideradas destacadas, geralmente após 
+                uma interação específica como um clique. 
+       Este estilo é tipicamente aplicado à célula dentro de uma 
+                linha que necessita ser destacada para manter a 
+                consistência visual com a linha destacada, 
+                enfatizando a célula importante (por exemplo, a 
+                coluna 'Nome') dentro da linha interativa. */
+                
+}

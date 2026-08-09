@@ -1,0 +1,142 @@
+<!DOCTYPE html> 
+<!-- Define que o documento segue o padrão HTML5, 
+        garantindo compatibilidade com todos os navegadores 
+        modernos -->
+
+<html lang="pt-BR">
+<!-- Abre a tag HTML definindo o idioma do conteúdo do documento 
+        como português do Brasil, o que ajuda os navegadores e 
+        ferramentas de SEO a identificar o idioma principal 
+        do conteúdo -->
+
+<head>
+<!-- Abre a seção head do documento, que contém metadados, 
+        links para folhas de estilo e scripts que não são exibidos 
+        diretamente na página -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres para UTF-8, que suporta 
+            todos os caracteres e símbispositivo (como smartphones e 
+            tablets) e que a escala inicial seja 1, o que significa 
+            que a página será exibida em um zoom de 100% sem necessidade 
+            de ajustes inicolos usados em quase todos os 
+            idiomas escritos, garantindo a correta exibição de textos -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para garantir que a largura da página 
+            corresponda à largura do diais -->
+
+    <title>Tabela de Notas dos Estudantes</title>
+    <!-- Define o título da página, que aparece na aba do navegador e 
+            é utilizado por mecanismos de busca para identificar o 
+            conteúdo da página -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Vincula uma folha de estilo externa ao documento, localizada 
+            no arquivo 'estilo.css', que contém os estilos CSS 
+            para formatar a página -->
+
+</head>
+<!-- Fecha a tag head -->
+
+<body>
+<!-- Abre a tag body, que contém todo o conteúdo 
+        visível da página web -->
+
+    <h1>Tabela de Notas dos Estudantes</h1>
+    <!-- Define um cabeçalho de nível 1 (h1) para a página, usado 
+            aqui para indicar o título principal da página: 'Tabela 
+            de Notas dos Estudantes'. Esse elemento é importante para 
+            SEO e para a estrutura semântica da página -->
+
+    <div class="tabela-container">
+    <!-- Abre um container div com a classe 'tabela-container', que 
+                será usada para estilizar a área ao redor da tabela 
+                com CSS, como definir largura, altura e propriedades 
+                de rolagem -->
+
+        <table id="tabela-estudantes">
+        <!-- Cria uma tabela com o ID 'tabela-estudantes', permitindo 
+                manipulação específica via CSS e JavaScript -->
+
+            <thead>
+            <!-- Define o cabeçalho da tabela, que contém as células de 
+                    cabeçalho (th) -->
+
+                <tr>
+                <!-- Abre uma linha na tabela; todas as células de cabeçalho 
+                        abaixo serão inseridas nesta linha -->
+
+                    <th class="nome-fixo">Nome</th>
+                    <!-- Cria uma célula de cabeçalho para 'Nome' com a classe 'nome-fixo', 
+                            que será estilizada para se manter fixa ao rolar a 
+                            tabela horizontalmente -->
+
+                    <th>Turma</th>
+                    <!-- Cria uma célula de cabeçalho para 'Turma' -->
+
+                    <th>Nota 1</th>
+                    <!-- Cria uma célula de cabeçalho para 'Nota 1' -->
+
+                    <th>Nota 2</th>
+                    <!-- Cria uma célula de cabeçalho para 'Nota 2' -->
+
+                    <th>Nota 3</th>
+                    <!-- Cria uma célula de cabeçalho para 'Nota 3' -->
+
+                    <th>Nota 4</th>
+                    <!-- Cria uma célula de cabeçalho para 'Nota 4' -->
+
+                    <th>Nota 5</th>
+                    <!-- Cria uma célula de cabeçalho para 'Nota 5' -->
+
+                    <th>Nota 6</th>
+                    <!-- Cria uma célula de cabeçalho para 'Nota 6' -->
+
+                    <th>Nota 7</th>
+                    <!-- Cria uma célula de cabeçalho para 'Nota 7' -->
+
+                    <th>Nota 8</th>
+                    <!-- Cria uma célula de cabeçalho para 'Nota 8' -->
+
+                    <th>Média</th>
+                    <!-- Cria uma célula de cabeçalho para 'Média' -->
+
+                    <th>Faltas</th>
+                    <!-- Cria uma célula de cabeçalho para 'Faltas' -->
+
+                    <th>Status</th>
+                    <!-- Cria uma célula de cabeçalho para 'Status' -->
+
+                </tr>
+            </thead>
+            <!-- Fecha o cabeçalho da tabela -->
+
+            <tbody>
+            <!-- Abre o corpo da tabela, onde os dados das linhas serão 
+                    inseridos dinamicamente via JavaScript -->
+
+                <!-- Os dados serão carregados aqui via JavaScript -->
+
+            </tbody>
+            <!-- Fecha o corpo da tabela -->
+
+        </table>
+        <!-- Fecha a tabela -->
+
+    </div>
+    <!-- Fecha o div do container da tabela -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Importa a biblioteca XLSX.js do CDN para ler arquivos Excel e 
+            manipulá-los em JavaScript -->
+
+    <script src="script.js"></script>
+    <!-- Vincula o arquivo de script externo 'script.js' que contém o 
+            código JavaScript para manipulação da página -->
+     
+</body>
+<!-- Fecha a tag body -->
+
+</html>
+<!-- Fecha a tag html -->
