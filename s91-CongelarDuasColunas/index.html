@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- A linha acima é a declaração do doctype. Ela informa ao 
+        navegador que versão do HTML está sendo usada. Neste caso, 
+        indica que o documento é HTML5. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt-BR"' 
+        especifica que o idioma principal do documento é o 
+        português do Brasil. -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre os dados) que 
+        não são exibidos diretamente na página web, mas são usados 
+        pelo navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define o conjunto de 
+            caracteres usado no documento, neste caso, UTF-8, que inclui a 
+            maioria dos caracteres de todos os idiomas escritos. 
+    Isso ajuda a exibir corretamente o texto no navegador. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, que controla a janela de visualização do navegador. 
+     O 'content="width=device-width"' faz com que a largura da página 
+            corresponda à largura do dispositivo.
+    'initial-scale=1.0' define o nível de zoom inicial quando a 
+            página é carregada pela primeira vez. Isso é crucial para 
+            garantir que o site seja responsivo e funcione bem em 
+            dispositivos móveis. -->
+
+    <title>Exercício Congelar Duas Colunas + Filtro</title>
+    <!-- A tag <title> define o título da página, que é exibido na 
+            aba do navegador. Esse título também é usado por motores de 
+            busca e quando a página é adicionada aos favoritos. -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- A tag <link> é usada aqui para vincular um arquivo de folha de 
+            estilo CSS externo ao documento HTML. 
+    O atributo 'rel="stylesheet"' indica que o arquivo vinculado é 
+            uma folha de estilo, e 'href="estilo.css"' especifica o 
+            caminho para o arquivo CSS que estiliza a página. -->
+
+</head>
+<!-- A tag </head> marca o fim da seção head do documento HTML. -->
+
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível da página, como 
+            texto, imagens, links, tabelas e muito mais. -->
+
+    <h1>Exercício Congelar Duas Colunas + Filtro</h1>
+    <!-- A tag <h1> define um cabeçalho de nível 1, que é usado para o 
+            título principal da página. Os navegadores geralmente exibem o 
+            texto em <h1> maior do que outros textos para destacá-lo 
+            como título principal. -->
+
+    <div id="filtros">
+    <!-- A tag <div> é usada para agrupar elementos, permitindo que 
+            sejam formatados com CSS ou manipulados com JavaScript. 
+    O atributo 'id' permite que esta <div> seja identificada de forma 
+            única como "filtros". -->
+
+        <input type="text" placeholder="Filtrar Nome" onkeyup="filtrarTabela(0)" id="filtro-nome">
+        <!-- Um campo de entrada para texto. 'type="text"' define o 
+                    tipo de entrada como texto.
+             'placeholder="Filtrar Nome"' mostra um texto guia dentro 
+                    do campo antes da entrada do usuário.
+             'onkeyup="filtrarTabela(0)"' é um manipulador de eventos 
+                    que chama a função 'filtrarTabela(0)' cada vez que 
+                    uma tecla é levantada, iniciando o filtro na primeira 
+                    coluna (0 - Nome).
+             'id="filtro-nome"' dá um identificador único ao 
+                    campo de entrada. -->
+
+        <!-- Os seguintes <input> são similares ao acima, mudando 
+                    apenas o placeholder, a função chamada em 'onkeyup' e 
+                    o id. Cada um é responsável por filtrar uma coluna 
+                    específica da tabela baseada em sua entrada. -->
+        <input type="text" placeholder="Filtrar Turma" onkeyup="filtrarTabela(1)" id="filtro-turma">
+        <input type="text" placeholder="Filtrar Nota 1" onkeyup="filtrarTabela(2)" id="filtro-nota1">
+        <input type="text" placeholder="Filtrar Nota 2" onkeyup="filtrarTabela(3)" id="filtro-nota2">
+        <input type="text" placeholder="Filtrar Nota 3" onkeyup="filtrarTabela(4)" id="filtro-nota3">
+        <input type="text" placeholder="Filtrar Nota 4" onkeyup="filtrarTabela(5)" id="filtro-nota4">
+        <input type="text" placeholder="Filtrar Nota 5" onkeyup="filtrarTabela(6)" id="filtro-nota5">
+        <input type="text" placeholder="Filtrar Nota 6" onkeyup="filtrarTabela(7)" id="filtro-nota6">
+        <input type="text" placeholder="Filtrar Nota 7" onkeyup="filtrarTabela(8)" id="filtro-nota7">
+        <input type="text" placeholder="Filtrar Nota 8" onkeyup="filtrarTabela(9)" id="filtro-nota8">
+        <input type="text" placeholder="Filtrar Média" onkeyup="filtrarTabela(10)" id="filtro-media">
+        <input type="text" placeholder="Filtrar Faltas" onkeyup="filtrarTabela(11)" id="filtro-faltas">
+        <input type="text" placeholder="Filtrar Status" onkeyup="filtrarTabela(12)" id="filtro-status">
+        <button id="exportar-btn">Exportar para Excel</button>
+        <!-- Um botão com o id 'exportar-btn'. Quando clicado, executa 
+                uma função (definida no JavaScript) para exportar os dados 
+                filtrados da tabela para um arquivo Excel. -->
+
+    </div>
+
+    <div class="tabela-container">
+    <!-- Uma <div> que contém a tabela. A classe 'tabela-container' pode 
+                ser usada para aplicar estilos específicos a esta <div> via CSS. -->
+
+        <table id="tabela-estudantes">
+        <!-- A tag <table> cria uma tabela HTML. O 'id="tabela-estudantes"' 
+                permite que esta tabela seja referenciada de forma única 
+                no CSS e JavaScript. -->
+
+            <thead>
+            <!-- A tag <thead> é usada para agrupar o conteúdo do cabeçalho 
+                    em uma tabela HTML. -->
+
+                <tr>
+                <!-- A tag <tr> define uma linha de células em uma tabela. -->
+
+                    <!-- Cada tag <th> define uma célula de cabeçalho na tabela, 
+                            usada para descrever o que cada coluna representa. 
+                    As classes aplicam estilos específicos para fixar essas colunas. -->
+                    <th class="nome-fixo">Nome</th>
+                    <th class="turma-fixa">Turma</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Nota 3</th>
+                    <th>Nota 4</th>
+                    <th>Nota 5</th>
+                    <th>Nota 6</th>
+                    <th>Nota 7</th>
+                    <th>Nota 8</th>
+                    <th>Média</th>
+                    <th>Faltas</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <!-- A tag <tbody> é usada para agrupar o conteúdo 
+                        do corpo principal da tabela. 
+                Os dados serão carregados aqui via JavaScript -->
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Inclui um script externo, XLSX.js, que é uma biblioteca 
+                JavaScript para manipulação de arquivos Excel. -->
+
+    <script src="script.js"></script>
+    <!-- Inclui um arquivo JavaScript externo, script.js, que contém o 
+                código para manipular os dados da tabela e interagir 
+                com a interface. -->
+
+</body>
+</html>

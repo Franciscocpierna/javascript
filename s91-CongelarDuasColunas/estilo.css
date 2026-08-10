@@ -1,0 +1,423 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define as fontes do texto no corpo do documento. 
+        'Arial' é a fonte primária, e 'sans-serif' é a fonte 
+            genérica secundária caso 'Arial' não esteja disponível. */
+
+    margin: 20px;
+    /* Define uma margem de 20 pixels em todos os lados do 
+            corpo do documento. Isso cria um espaço entre o 
+            conteúdo da página e as bordas do navegador. */
+
+    padding: 0;
+    /* Define o preenchimento interno do corpo do documento como 0. 
+    Isso significa que não haverá espaço entre os bordos do 
+            corpo e seu conteúdo. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do elemento <body>. Isso afeta 
+            todos os textos dentro do corpo da página, a menos que 
+            especificado de outra forma em seletores mais específicos. */
+
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Aplica uma margem na parte inferior do elemento <h1> de 20 
+            pixels. Isso separa visualmente o título <h1> do 
+            conteúdo que o segue. */
+
+}
+
+#filtros {
+
+    display: flex;
+    /* Define o modelo de caixa do elemento com id 'filtros' para 
+            flexível, o que facilita o design responsivo e o 
+            posicionamento dos filhos do elemento. */
+
+    flex-wrap: wrap;
+    /* Permite que os itens dentro do elemento 'filtros' sejam 
+            dispostos em múltiplas linhas se não houver espaço 
+            suficiente numa única linha. */
+
+    justify-content: center;
+    /* Centraliza os itens dentro do elemento 'filtros' horizontalmente. 
+            Esta propriedade só funciona porque o 'display' foi 
+            definido como flex. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem de 20 pixels na parte inferior do elemento 
+            'filtros'. Isso cria um espaço entre este elemento e 
+            qualquer conteúdo que o segue. */
+
+}
+
+#filtros input {
+
+    margin: 5px;
+    /* Adiciona uma margem de 5 pixels em todos os lados de cada 
+            campo de entrada dentro do elemento com id 'filtros'. 
+    Isso ajuda a separar visualmente cada campo de entrada dos outros. */
+
+    padding: 10px;
+    /* Define o preenchimento interno dos campos de entrada em 10 
+            pixels. Isso faz com que o texto dentro dos campos de 
+            entrada não fique muito próximo das bordas, melhorando a 
+            legibilidade. */
+
+    width: 180px;
+    /* Define a largura de cada campo de entrada para 180 pixels. 
+    Isso garante que todos os campos de entrada tenham um tamanho 
+            uniforme, proporcionando uma aparência equilibrada e 
+            facilitando a organização. */
+
+    font-size: 14px;
+    /* Ajusta o tamanho da fonte para 14 pixels nos campos de entrada. 
+    Isso torna o texto suficientemente grande para ser lido confortavelmente, 
+            sem ser demasiado grande ou pequeno. */
+
+}
+
+#exportar-btn {
+
+    margin-top: 20px;
+    /* Aplica uma margem de 20 pixels apenas no topo do botão. 
+    Isso separa o botão dos elementos acima dele, geralmente os 
+            campos de entrada, assegurando que não fiquem visualmente 
+            muito próximos. */
+
+    padding: 10px 20px;
+    /* Define o preenchimento interno do botão, sendo 10 pixels na 
+            vertical (topo e fundo) e 20 pixels na horizontal (esquerda e 
+            direita). 
+        Isso faz com que o botão seja maior e mais fácil de clicar. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte do texto dentro do botão para 16 
+            pixels, que é ligeiramente maior do que o texto nos campos 
+            de entrada, destacando o botão como um elemento interativo 
+            importante. */
+
+    cursor: pointer;
+    /* Muda o cursor para o tipo 'pointer' quando o usuário passa o 
+            mouse sobre o botão, indicando que o botão é clicável. */
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo do botão para um verde específico (#4CAF50). 
+    Isso não só faz o botão se destacar visualmente, mas também comummente 
+            associa-se a cor verde a ações positivas, como 'prosseguir' 
+            ou 'confirmar'. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para branco. Isto garante 
+            um alto contraste contra o fundo verde, tornando o texto 
+            facilmente legível. */
+
+    border: none;
+    /* Remove qualquer borda do botão, criando um visual mais 
+            limpo e moderno. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um raio de 5 pixels. Isso 
+            suaviza o design do botão, tornando-o visualmente mais 
+            amigável e moderno. */
+
+}
+
+.tabela-container {
+
+    width: 80%;
+    /* Define a largura do container da tabela como 80% do elemento pai. 
+    Isso permite que o container ocupe a maior parte da largura disponível, 
+            mas ainda deixa espaço nas laterais. */
+
+    max-width: 1200px;
+    /* Estabelece uma largura máxima para o container da tabela de 1200 
+            pixels. Isso significa que, mesmo se o elemento pai for maior 
+            que 1200 pixels, o container da tabela não se estenderá 
+            além disso. */
+
+    height: 300px;
+    /* Define a altura do container da tabela como 300 pixels. Isso 
+            restringe a altura visível da tabela, o que pode ser necessário 
+            para manter o layout da página organizado. */
+
+    overflow: auto;
+    /* Permite que barras de rolagem sejam adicionadas automaticamente ao 
+            container quando o conteúdo ultrapassa a altura ou largura 
+            definida. 
+    Isso garante que todo o conteúdo da tabela possa ser acessado 
+            sem alterar o layout da página. */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida ao redor do container da tabela, 
+            com 1 pixel de espessura e cor #ddd (um cinza claro). 
+    Isso delimita visualmente a área da tabela, ajudando a separá-la 
+            do resto do conteúdo da página. */
+
+    margin: 0 auto;
+    /* Define a margem superior e inferior como 0 e as margens laterais 
+            como automáticas. Isso centraliza o container da tabela 
+            horizontalmente dentro de seu elemento pai. */
+
+}
+
+#tabela-estudantes {
+
+    width: 100%;
+    /* Faz com que a tabela ocupe 100% da largura do seu container (.tabela-container).
+    Isso garante que a tabela se expanda para usar todo o espaço 
+            horizontal disponível dentro do container. */
+
+    border-collapse: collapse;
+    /* A propriedade 'border-collapse: collapse;' faz com que as bordas 
+            das células da tabela se fundam em uma única borda, em vez 
+            de cada célula ter sua própria borda. Isso melhora a estética 
+            da tabela, tornando-a mais limpa e mais fácil de ler. */
+
+    margin: 0 auto;
+    /* Define as margens superior e inferior como 0 e as margens 
+            laterais como automáticas, similar ao container. 
+    No entanto, nesta instância, ajuda a garantir que a tabela 
+            em si também esteja centralizada dentro do container, mesmo 
+            que tecnicamente já ocupe 100% da largura do container. */
+
+}
+
+#tabela-estudantes th, #tabela-estudantes td {
+
+    padding: 10px;
+    /* Aumenta o espaço interno nas células da tabela (tanto cabeçalho `th` 
+            quanto células `td`) para 10 pixels em todas as direções. 
+    Isso faz com que o conteúdo dentro das células tenha um espaço de 
+            buffer ao redor, melhorando a legibilidade e a estética geral. */
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida com 1 pixel de espessura e cor #ddd (cinza 
+            claro) em torno de cada célula. Isso ajuda a definir claramente 
+            os limites de cada célula, tornando a tabela mais fácil de ler. */
+
+    text-align: center;
+    /* Centraliza o texto dentro das células. Esta propriedade é particularmente 
+            útil para garantir que os dados numéricos ou categorias nas células 
+            do cabeçalho sejam facilmente alinhados e visualizados centralmente. */
+
+    white-space: nowrap;
+    /* Evita que o conteúdo dentro das células quebre linhas e se estenda 
+            para várias linhas. Isso é crucial para manter a altura das 
+            células uniforme e garantir que todos os textos dentro de uma 
+            célula sejam exibidos em uma única linha contínua. */
+
+}
+
+.nome-fixo {
+
+    position: sticky;
+    /* Aplica um posicionamento 'sticky' (fixo) à coluna. Uma coluna 
+            com `position: sticky` se comporta como `relative` até que 
+            seu bloco de contêiner atinja um ponto de limite definido (neste 
+            caso, `left: 0`), momento no qual se comporta como `fixed`, 
+            ficando fixo na tela durante a rolagem vertical. */
+
+    left: 0;
+    /* Define a posição da coluna fixa para zero pixels da esquerda do 
+            contêiner, fazendo com que ela fique fixa na borda esquerda 
+            da área de visualização ao rolar a página. */
+
+    background-color: #f1f1f1;
+    /* Define a cor de fundo da coluna fixa para um cinza claro (#f1f1f1). 
+    Isso não apenas melhora a legibilidade, separando visualmente a coluna 
+            fixa das outras colunas, mas também mantém a consistência 
+            visual quando a tabela é rolada. */
+
+    z-index: 2;
+    /* Define a ordem de empilhamento da coluna fixa em relação a outros 
+            elementos na página com posicionamento não estático. Um `z-index` 
+            maior faz com que a coluna fixa sobreponha outras células durante a 
+            rolagem, garantindo que ela permaneça visível. */
+
+    border-right: 2px solid #ddd;
+    /* Adiciona uma borda sólida mais grossa (2 pixels) no lado direito 
+            da coluna. Isso ajuda a destacar a coluna fixa do resto da 
+            tabela, especialmente útil quando outras colunas sob ela estão 
+            sendo roladas horizontalmente. */
+
+    min-width: 150px;
+    /* Define a largura mínima da coluna fixa para 150 pixels. Isso 
+            garante que a coluna não encolha abaixo desse tamanho, mantendo a 
+            visibilidade do conteúdo, independentemente do tamanho 
+            da janela ou tela. */
+
+    max-width: 150px;
+    /* Define a largura máxima da coluna fixa para 150 pixels, garantindo 
+            que ela não exceda esse limite e mantenha um layout consistente 
+            da tabela, mesmo com ajustes de tamanho de tela ou conteúdo. */
+
+    box-sizing: border-box;
+    /* Inclui a borda e o preenchimento no cálculo da largura (e altura) 
+            total da coluna. Isso é útil para garantir que a largura e 
+            altura definidas (incluindo preenchimento e borda) sejam realmente 
+            as medidas finais da coluna, evitando surpresas na 
+            disposição visual. */
+
+}
+
+
+.turma-fixa {
+
+    position: sticky;
+    /* Define a coluna "Turma" com um posicionamento fixo ao rolar a 
+            página, similar a um elemento com `position: fixed`, mas que 
+            se ativa apenas quando atinge um certo ponto na janela 
+            do navegador. */
+
+    left: 150px;
+    /* Posiciona a coluna "Turma" a 150 pixels da esquerda da área de 
+            visualização. Este valor é especificamente escolhido para 
+            ajustar a largura da primeira coluna fixa ("Nome"), 
+            garantindo que "Turma" não sobreponha "Nome". */
+
+    background-color: #f1f1f1;
+    /* Aplica uma cor de fundo cinza claro (#f1f1f1) para a coluna "Turma". 
+    Isso ajuda a coluna a se destacar visualmente do resto da tabela e 
+            mantém a legibilidade ao rolar. */
+
+    z-index: 2;
+    /* Define a ordem de empilhamento da coluna "Turma" no contexto 3D 
+            da página. Um z-index de 2 garante que ela fique acima das 
+            células regulares da tabela, mas abaixo do cabeçalho quando 
+            este está configurado com um z-index mais alto. */
+
+    border-right: 2px solid #ddd;
+    /* Inclui uma borda sólida de 2 pixels na cor cinza claro (#ddd) no 
+            lado direito da coluna. Isso define claramente o limite da 
+            coluna "Turma" e a separa das outras colunas ao lado. */
+
+    min-width: 150px;
+    /* Estabelece uma largura mínima para a coluna "Turma" de 150 pixels. 
+    Isso garante que o texto dentro da coluna não seja comprimido além 
+            de um ponto legível, mesmo quando a janela do navegador é 
+            redimensionada. */
+
+    max-width: 150px;
+    /* Estabelece uma largura máxima para a coluna "Turma" de 150 pixels. 
+    Essa restrição impede que a coluna se expanda além do necessário, 
+            mantendo um layout consistente da tabela. */
+
+    box-sizing: border-box;
+    /* Garante que o cálculo da largura da coluna "Turma" inclua o 
+            preenchimento e a borda, permitindo que as dimensões definidas 
+            sejam exatas e previsíveis, facilitando o controle do layout. */
+
+}
+
+thead th.nome-fixo, thead th.turma-fixa {
+
+    z-index: 3;
+    /* Aumenta o z-index das células de cabeçalho das colunas "Nome" 
+            e "Turma" para 3. Isso garante que essas células de cabeçalho 
+            permaneçam visíveis acima de outras partes da tabela, como o 
+            corpo, quando o usuário rola a página. 
+    Esse efeito é especialmente importante para manter a legibilidade e 
+            o acesso fácil aos rótulos das colunas enquanto se navega 
+            por dados extensos na tabela. */
+
+}
+
+
+tbody td.nome-fixo, tbody td.turma-fixa {
+
+    background-color: #ffffff;
+    /* Define a cor de fundo das células nas colunas "Nome" e "Turma" 
+            para branco (#ffffff). Isso ajuda a manter a área de 
+            conteúdo visualmente clara e limpa, proporcionando um 
+            contraste forte com o texto, o que melhora a legibilidade. */
+
+    border-right: 2px solid #ddd;
+    /* Adiciona uma borda sólida de 2 pixels de espessura na cor cinza 
+            claro (#ddd) no lado direito das células das colunas "Nome" e
+            "Turma". Este estilo de borda serve para demarcar visualmente o 
+            fim de cada uma dessas colunas importantes, separando-as 
+            claramente das colunas adjacentes na tabela. */
+
+}
+
+tbody tr:hover {
+
+    background-color: #f1f1f1;
+    /* Aplica uma cor de fundo cinza claro (#f1f1f1) a uma linha 
+            inteira (<tr>) no corpo da tabela quando o cursor do 
+            mouse passa sobre ela. Este efeito de "hover" é utilizado 
+            para destacar visualmente a linha que está sob o cursor do 
+            usuário, aumentando a usabilidade ao facilitar a visualização e 
+            seguimento dos dados da linha específica enquanto se navega 
+            pela tabela. Este tipo de feedback visual é particularmente 
+            útil em tabelas com muitos dados, ajudando a focar na informação 
+            sob o cursor e reduzindo a confusão visual. */
+
+}
+
+
+thead th {
+
+    position: sticky;
+    /* Define o posicionamento das células de cabeçalho como 'sticky', o 
+            que permite que elas fiquem fixas (grudadas) na posição 
+            definida pelo 'top' conforme o usuário rola a página. 
+    Isso é útil para manter o cabeçalho visível e acessível ao 
+            visualizar longas listas de dados. */
+
+    top: 0;
+    /* Estabelece a posição superior das células de cabeçalho como 0, o 
+            que significa que elas ficarão fixas no topo da janela de 
+            visualização assim que alcançarem essa posição durante a 
+            rolagem. 
+    Isso garante que o cabeçalho da tabela não se mova para fora da 
+            visualização ao rolar a página para baixo. */
+
+    background-color: #fff;
+    /* Define a cor de fundo das células do cabeçalho para branco (#fff). 
+    Isso garante que o cabeçalho tenha um fundo opaco, prevenindo que 
+            textos e outros elementos da tabela que estejam rolando por 
+            trás dele sejam visíveis através do cabeçalho. */
+
+    z-index: 2;
+    /* Define a ordem de empilhamento das células de cabeçalho com 
+            um 'z-index' de 2. Isso assegura que o cabeçalho sobreponha 
+            outras linhas da tabela ao rolar a página, evitando que elementos 
+            de linhas abaixo interfiram visualmente com o conteúdo do cabeçalho. */
+
+}
+
+
+.linha-destacada {
+
+    background-color: #add8e6 !important;
+    /* Aplica uma cor de fundo azul claro (#add8e6) a uma linha inteira da 
+            tabela. 
+    A utilização da palavra-chave `!important` garante que este estilo 
+            tenha prioridade sobre outros estilos de fundo que 
+            possam ser aplicados à mesma linha. Isso é útil para garantir 
+            que a cor de destaque seja aplicada independentemente de 
+            outros estilos CSS em conflito. Este destaque visual é comumente 
+            usado para indicar que uma linha foi selecionada ou requer 
+            atenção especial, melhorando a interação visual com o usuário. */
+
+}
+
+.celula-destacada {
+
+    background-color: #add8e6 !important;
+    /* Define a mesma cor de fundo azul claro (#add8e6) para células 
+            específicas, geralmente nas colunas "Nome" e "Turma". 
+    Assim como na classe anterior, a declaração `!important` é usada 
+            para assegurar que esta cor de fundo prevaleça sobre 
+            outros estilos possíveis. Este método é frequentemente 
+            usado para enfatizar células específicas que são importantes 
+            ou foram interagidas de alguma maneira, como através de um 
+            clique, ajudando a manter o foco do usuário nas áreas destacadas. */
+            
+}
