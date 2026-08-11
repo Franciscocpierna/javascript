@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- Declaração DOCTYPE para HTML5, que instrui o navegador a 
+        usar as regras do HTML5 para interpretar o conteúdo 
+        do documento. 
+Essencial para garantir que o documento seja 
+        processado corretamente. -->
+
+<html lang="pt-BR">
+<!-- Elemento raiz <html> que define toda a estrutura da página. 
+    O atributo 'lang' especifica que o idioma principal do documento é 
+            o Português do Brasil, o que é importante para 
+            acessibilidade e SEO. -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de estilo, 
+            scripts e outras informações que não são exibidas 
+            diretamente na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com charset UTF-8 garante que todos os caracteres no 
+            documento sejam exibidos corretamente, suportando quase 
+            todos os caracteres de todos os idiomas. 
+    Essencial para internacionalização e exibição correta de conteúdo. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tag para controlar a viewport do navegador. 
+     O atributo 'content' define a largura da viewport igual à 
+            largura do dispositivo e o nível de zoom inicial como 1.0. 
+    Isso otimiza a página para visualização em dispositivos móveis, 
+            garantindo que seja responsiva. -->
+
+    <title>Exercício - Agrupamento de Tabela de Produtos por Semanas</title>
+    <!-- A tag <title> define o título da página, que é mostrado na aba 
+            do navegador. 
+    Esse título é também usado pelos motores de busca e é importante 
+            para SEO e usabilidade. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para incluir uma folha de estilo 
+            externa, localizada no arquivo 'estilos.css'. 
+    Isso separa a apresentação visual do HTML, mantendo a 
+            organização e facilitando a manutenção. -->
+
+</head>
+<!-- Fim da tag <head>, onde termina a inclusão de metadados e 
+            outros recursos relacionados ao cabeçalho do documento. -->
+
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível de uma página web, 
+            como texto, imagens, tabelas e outros elementos interativos. -->
+
+    <h1>Exercício - Agrupamento de Tabela de Produtos por Semanas</h1>
+    <!-- A tag <h1> é usada para o título principal da página. 
+        Ele descreve o conteúdo da página e é crucial para acessibilidade, 
+                SEO e estrutura semântica do HTML. -->
+
+    <table id="tabela">
+        <!-- A tag <table> cria uma tabela no documento HTML. 
+            O atributo 'id' permite que a tabela seja identificada e 
+                    acessada facilmente por CSS e JavaScript. -->
+
+            <thead>
+                <!-- A tag <thead> é usada para definir o grupo de cabeçalhos 
+                            de uma tabela. Agrupar cabeçalhos ajuda em aspectos 
+                            como a impressão de páginas da web e estilos específicos 
+                            para a seção de cabeçalho da tabela. -->
+            
+                <tr>
+                    <!-- A tag <tr>, ou linha de tabela, serve como um contêiner 
+                            para um conjunto de células de cabeçalho (<th>) ou 
+                            células de tabela (<td>) que serão exibidas como uma 
+                            linha horizontal na tabela. -->
+            
+                    <th>Produto</th>
+                    <!-- A tag <th> especifica uma célula de cabeçalho e é usada 
+                                aqui para o título da coluna de produtos. 
+                        O uso de <th> em vez de <td> indica semanticamente que esta 
+                                célula contém informações de cabeçalho, o que é 
+                                importante para acessibilidade e motores de busca. -->
+            
+                    <th class="coluna-mes1">Semana 1 (Mês 1)</th>
+                    <th class="coluna-mes1">Semana 2 (Mês 1)</th>
+                    <th class="coluna-mes1">Semana 3 (Mês 1)</th>
+                    <th class="coluna-mes1">Semana 4 (Mês 1)</th>
+                    <!-- Cada uma dessas células de cabeçalho representa uma semana 
+                                específica do primeiro mês. A classe 'coluna-mes1' é 
+                                usada para agrupá-las logicamente, permitindo que ações 
+                                como mostrar ou ocultar sejam aplicadas coletivamente 
+                                via JavaScript. -->
+            
+                    <th id="totalMes1"><span id="toggleMes1" class="botao-toggle" onclick="alternarColunas('mes1')">+</span> Total Mês 1</th>
+                    <!-- Esta célula de cabeçalho inclui um controle interativo, 
+                                especificamente um botão toggle, que permite ao usuário 
+                                mostrar ou ocultar as colunas do primeiro mês. 
+                        O texto '+' indica que as colunas estão inicialmente ocultas. 
+                        O atributo 'onclick' chama a função 'alternarColunas', passando 'mes1' 
+                                como argumento para especificar quais colunas devem ser alternadas. -->
+            
+                    <th class="coluna-mes2">Semana 1 (Mês 2)</th>
+                    <th class="coluna-mes2">Semana 2 (Mês 2)</th>
+                    <th class="coluna-mes2">Semana 3 (Mês 2)</th>
+                    <th class="coluna-mes2">Semana 4 (Mês 2)</th>
+                    <!-- Similar às colunas do primeiro mês, estas células de 
+                                cabeçalho para o segundo mês são também classificadas 
+                                para facilitar a manipulação coletiva. 
+                        Estas também podem ser mostradas ou ocultadas com base 
+                                nas ações do usuário. -->
+            
+                    <th id="totalMes2"><span id="toggleMes2" class="botao-toggle" onclick="alternarColunas('mes2')">+</span> Total Mês 2</th>
+                    <!-- A célula de cabeçalho para o total do segundo mês também 
+                                inclui um botão toggle com funcionalidade semelhante ao 
+                                total do primeiro mês. Este cabeçalho ajuda o usuário a 
+                                controlar a visibilidade das colunas associadas ao 
+                                segundo mês, aumentando a interatividade e flexibilidade 
+                                da tabela. -->
+
+                </tr>
+            </thead>
+            
+
+            <tbody id="corpo-tabela">
+
+                <!-- A tag <tbody> agrupa o conteúdo principal da tabela, onde os 
+                        dados são inseridos dinamicamente via JavaScript. -->
+
+            </tbody>
+
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <!-- Importa a biblioteca XLSX.js via CDN, que é usada para ler e manipular 
+                dados de arquivos Excel no navegador. -->
+
+    <script src="script.js"></script>
+    <!-- Vincula o arquivo JavaScript que contém a lógica para preencher a 
+                tabela e manipular as interações do usuário com a tabela. -->
+
+
+</body>
+</html>
+<!-- Fim do documento HTML, encerrando a tag <body> e todo o 
+            conteúdo visível da página. -->

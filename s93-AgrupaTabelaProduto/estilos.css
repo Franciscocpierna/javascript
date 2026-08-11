@@ -1,0 +1,207 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o corpo do documento. 'Arial' é 
+            especificado como a fonte principal com 'sans-serif' como 
+            fallback. 
+    Isso garante que o texto seja legível e esteticamente agradável em 
+            diferentes navegadores e sistemas operacionais. */
+    
+    margin: 20px;
+    /* Aplica uma margem de 20 pixels em todos os lados do corpo do documento. 
+    Isso cria um espaçamento entre o conteúdo da página e as bordas da janela 
+            do navegador, melhorando a legibilidade e a apresentação visual. */
+    
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo do documento para um cinza muito claro. 
+    Essa cor suave é fácil para os olhos e proporciona um contraste suave, 
+            mas eficaz, para o conteúdo da página. */
+    
+    color: #333;
+    /* Estabelece a cor do texto para um cinza escuro em todo o corpo 
+            do documento. 
+    Essa cor oferece excelente contraste contra o fundo claro, 
+            melhorando a legibilidade. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto do elemento <h1> ao centro da página. 
+    Esta propriedade é frequentemente usada para títulos principais 
+            para chamar a atenção e centralizar visualmente o
+             conteúdo importante. */
+    
+    color: #444;
+    /* Define a cor do texto para um cinza médio. Esta cor é escolhida 
+            para o cabeçalho para diferenciá-lo do texto do corpo e 
+            para manter a harmonia estética com o esquema de cores 
+            geral da página. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura do elemento 
+            pai, garantindo que a tabela se estenda por toda a largura 
+            disponível do seu contêiner. */
+
+    border-collapse: collapse;
+    /* Remove os espaços entre as bordas das células, fazendo com que as 
+            bordas de células adjacentes se fundam em uma única borda 
+            mais limpa e mais esteticamente agradável. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem de 20 pixels acima da tabela, criando espaço 
+            entre quaisquer elementos acima dela e a tabela em si, para 
+            uma melhor separação visual. */
+
+    background-color: #fff;
+    /* Define a cor de fundo da tabela como branco, proporcionando uma 
+            base neutra que não distrai e melhora a legibilidade dos 
+            dados dentro da tabela. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor da tabela. A sombra é sutil, com 
+            baixa opacidade (10%), e ajuda a elevar visualmente a 
+            tabela do resto do conteúdo da página, dando-lhe um efeito 
+            de profundidade leve. */
+
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida com 1 pixel de espessura e cor 
+            cinza claro (#ddd) em torno de cada célula de cabeçalho 
+            (<th>) e célula de dados (<td>), definindo claramente os 
+            limites das células. */
+
+    padding: 12px;
+    /* Adiciona um preenchimento de 12 pixels em todas as direções 
+            dentro de cada célula, o que aumenta o espaço entre o texto e 
+            as bordas das células para uma leitura mais confortável. */
+
+    text-align: left;
+    /* Alinha o texto dentro das células à esquerda, o padrão para texto 
+            em muitas culturas, facilitando a leitura sequencial de 
+            dados da esquerda para a direita. */
+
+    transition: background-color 0.3s ease;
+    /* Adiciona uma animação suave para a mudança de cor de fundo das 
+            células, ocorrendo ao longo de 0.3 segundos com um efeito 'ease', 
+            o que torna qualquer mudança de estado visualmente mais 
+            agradável e menos abrupta. */
+
+}
+
+th {
+
+    background-color: #007BFF;
+    /* Define a cor de fundo das células de cabeçalho para um azul 
+            brilhante (#007BFF), o que ajuda a diferenciar claramente 
+            as células de cabeçalho das células de dados e chama a atenção 
+            para as informações de cabeçalho. */
+
+    color: #fff;
+    /* Define a cor do texto nas células de cabeçalho para branco, 
+            garantindo alto contraste contra o fundo azul, o que 
+            facilita a leitura das etiquetas das colunas. */
+
+}
+
+td {
+
+    background-color: #fafafa;
+    /* Define a cor de fundo das células de dados para um cinza 
+            muito claro (#fafafa), uma escolha sutil que ajuda a 
+            diferenciar visualmente as células de dados das células 
+            de cabeçalho e melhora a legibilidade do texto. */
+
+}
+
+tr:nth-child(even) td {
+
+    background-color: #f2f2f2;
+    /* Define a cor de fundo para células (td) em linhas pares da 
+            tabela usando o pseudo-seletor ':nth-child(even)'. 
+    A cor #f2f2f2 é um cinza claro que ajuda a diferenciar visualmente as 
+            linhas alternadas da tabela, melhorando a legibilidade ao 
+            criar um efeito zebrado. */
+
+}
+
+.botao-toggle {
+
+    cursor: pointer;
+    /* Define o cursor como 'pointer' para indicar que o elemento pode 
+            ser clicado. Isso melhora a usabilidade, fornecendo uma 
+            dica visual de que o elemento é interativo. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte 'negrito' ao texto dentro do botão, 
+            fazendo-o se destacar mais facilmente no contexto da interface, o 
+            que é útil para chamar atenção para os controles interativos. */
+
+    margin-right: 10px;
+    /* Adiciona uma margem à direita do botão de 10 pixels, proporcionando 
+            um espaçamento que evita que o texto ou outros elementos gráficos 
+            fiquem visualmente amontoados ao redor do botão. */
+
+    color: #fff;
+    /* Define a cor do texto dentro do botão para branco (#fff). 
+    Isso garante um alto contraste contra fundos coloridos (tipicamente o 
+            azul usado nos cabeçalhos da tabela), facilitando a leitura e 
+            identificação do botão. */
+
+}
+
+.coluna-mes1, .coluna-mes2 {
+
+    display: none;
+    /* Define a propriedade 'display' das colunas com as classes 
+            'coluna-mes1' e 'coluna-mes2' para 'none'. 
+    Isso faz com que as colunas correspondentes sejam inicialmente 
+            ocultadas na carga da página, podendo ser mostradas posteriormente 
+            através de interação do usuário com os botões de alternância. 
+    Esse comportamento suporta funcionalidades de interatividade na 
+            visualização de dados da tabela. */
+
+}
+
+/* Estilos para os cabeçalhos das colunas das semanas do Mês 1 */
+th.coluna-mes1 {
+
+    background-color: yellow;
+    /* Define a cor de fundo das células de cabeçalho associadas 
+            ao Mês 1 para amarelo. A escolha dessa cor vibrante 
+            ajuda a destacar visualmente essas colunas, facilitando a 
+            rápida identificação das semanas pertencentes ao Mês 1. */
+
+    color: #000000;
+    /* Define a cor do texto nessas células de cabeçalho para 
+            preto (#000000). O contraste do texto preto sobre o 
+            fundo amarelo garante excelente legibilidade, o que é 
+            essencial para a clareza na visualização de dados 
+            estruturados por tempo. */
+
+}
+
+/* Estilos para os cabeçalhos das colunas das semanas do Mês 2 */
+th.coluna-mes2 {
+
+    background-color: #FFFF99; /* Um amarelo mais claro */
+    /* Define a cor de fundo das células de cabeçalho associadas 
+            ao Mês 2 para um amarelo mais claro (#FFFF99). 
+    Esta variação de cor diferencia sutilmente as colunas do Mês 2 
+            das do Mês 1, mantendo a coerência visual, mas permitindo a 
+            distinção entre os dois períodos. */
+
+    color: #000000;
+    /* Mantém a cor do texto para preto nas células de cabeçalho do 
+            Mês 2, assegurando que a legibilidade seja mantida 
+            independentemente da mudança sutil na tonalidade do fundo. */
+            
+}
