@@ -1,0 +1,178 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define as fontes para o texto dentro do <body>. 'Arial' é 
+            especificado como a fonte principal, e 'sans-serif' como a 
+            fonte de fallback. 
+    Isso garante que, se 'Arial' não estiver disponível, o navegador 
+            usará qualquer fonte sem serifa disponível. */
+
+    margin: 20px;
+    /* Aplica uma margem uniforme de 20 pixels em todos os lados do <body>. 
+    Isso cria um espaço entre o conteúdo da página e as bordas da janela do 
+            navegador, melhorando a estética visual da página. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo do documento como um 
+            cinza muito claro (#f4f4f4). Isso proporciona um contraste 
+            suave que é fácil para os olhos, em comparação com um 
+            fundo branco puro. */
+
+    color: #333;
+    /* Estabelece a cor padrão do texto dentro do <body> como um 
+            cinza escuro (#333). Esta cor é escolhida para garantir 
+            uma boa legibilidade do texto sobre o fundo claro. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto dentro da tag <h1> ao centro. Isso é usado 
+            para títulos e cabeçalhos principais, proporcionando um 
+            destaque visual e equilíbrio à página. */
+
+    color: #444;
+    /* Define a cor do texto dentro da tag <h1> para um 
+            cinza médio (#444). Essa escolha de cor ajuda a diferenciar o 
+            texto do cabeçalho do restante do texto no corpo da página, 
+            mantendo ainda a harmonia com o esquema geral de cores. */
+
+}
+
+table {
+    
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura do 
+            elemento pai, garantindo que a tabela se estenda por 
+            toda a largura disponível. */
+
+    border-collapse: collapse;
+    /* A propriedade 'border-collapse: collapse' faz com que as 
+            bordas de células adjacentes se fundam em uma única borda, 
+            em vez de cada célula ter sua própria borda. Isso resulta em 
+            uma tabela mais limpa e organizada visualmente. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels à tabela, criando espaço 
+            entre quaisquer elementos acima da tabela e a tabela em si, 
+            melhorando o layout da página. */
+
+    background-color: #fff;
+    /* Define a cor de fundo da tabela como branco (#fff), proporcionando 
+            um contraste claro com o texto e as bordas, facilitando a 
+            leitura dos dados. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor da tabela. A sombra é sutil (preto 
+            com 10% de opacidade) e espalhada a 10 pixels, dando à tabela 
+            uma elevação sutil e destacando-a contra o fundo. */
+
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+    /* Define uma borda sólida de 1 pixel na cor cinza claro (#ddd) para 
+            todas as células 'th' (cabeçalho) e 'td' (dados), garantindo 
+            que cada célula seja claramente delimitada. */
+
+    padding: 12px;
+    /* Aplica um preenchimento de 12 pixels em todas as direções 
+            dentro das células, proporcionando espaço suficiente ao 
+            redor do texto para uma leitura confortável. */
+
+    text-align: left;
+    /* Alinha o texto dentro das células à esquerda, proporcionando 
+            uma apresentação consistente e fácil leitura dos 
+            dados tabulares. */
+
+    transition: background-color 0.3s ease;
+    /* Adiciona uma transição suave de cor de fundo que ocorre 
+            em 0,3 segundos, utilizando um timing 'ease'. 
+        Isso é mais notável em interações como hover ou seleção, 
+            suavizando a mudança de estado visual. */
+
+}
+
+th {
+
+    background-color: #007BFF;
+    /* Define a cor de fundo das células de cabeçalho para um 
+            azul forte (#007BFF), que contrasta com o texto branco, 
+            destacando os títulos das colunas da tabela. */
+
+    color: #fff;
+    /* Define a cor do texto nas células de cabeçalho para branco (#fff), 
+            garantindo uma leitura clara e destacada contra o fundo azul. */
+
+    position: relative;
+    /* Define a posição das células de cabeçalho como relativa, o que 
+            pode ser útil para posicionamento de elementos adicionais 
+            dentro das células de cabeçalho, como ícones de ordenação 
+            ou informações de tooltip. */
+
+}
+
+td {
+
+    background-color: #fafafa;
+    /* Define a cor de fundo das células de dados para um cinza 
+            muito claro (#fafafa), um pouco diferente do branco da 
+            tabela, ajudando a diferenciar visualmente as células de 
+            dados das de cabeçalho e melhorando a legibilidade. */
+
+}
+
+tr:nth-child(even) td {
+
+    background-color: #f2f2f2;
+    /* Aplica uma cor de fundo cinza claro (#f2f2f2) a todas as 
+            células (td) em linhas pares da tabela. 
+    O seletor ':nth-child(even)' seleciona cada segundo elemento, 
+            começando com o segundo, o que ajuda a diferenciar 
+            visualmente linhas alternadas e melhora a legibilidade 
+            da tabela ao criar um efeito de listras. */
+
+}
+
+.botao-toggle {
+
+    cursor: pointer;
+    /* Define o cursor como 'pointer' quando o usuário passa o 
+            mouse sobre o elemento. Isso indica que o elemento é 
+            clicável, melhorando a usabilidade ao dar ao usuário uma 
+            indicação visual de que o elemento é interativo. */
+
+    font-weight: bold;
+    /* Aumenta o peso da fonte para 'bold' (negrito), fazendo com 
+            que o texto dentro do botão toggle se destaque mais, o 
+            que é útil para chamar a atenção do usuário para a 
+            funcionalidade de alternância das colunas. */
+
+    padding: 0 10px;
+    /* Aplica um preenchimento horizontal de 10 pixels nos lados 
+            esquerdo e direito do botão, o que ajuda a aumentar a 
+            área de clique e melhora a estética visual do botão. 
+    O padding vertical é mantido em 0 para alinhar visualmente o 
+            botão com outros elementos da linha. */
+
+    color: #fff; /* Cor branca para o botão "+" */
+    /* Define a cor do texto dentro do botão toggle como branco (#fff). 
+    A cor branca sobre um fundo azul (como definido no estilo 
+            do <th>) garante um alto contraste, facilitando a 
+            visualização e o uso do botão. */
+
+}
+
+.coluna-oculta {
+
+    display: none;
+    /* Define a propriedade 'display' como 'none' para todos os 
+            elementos com a classe 'coluna-oculta'. Isso remove 
+            esses elementos do fluxo do documento, efetivamente 
+            ocultando-os sem ocupar espaço na renderização da página. 
+    Esta classe é utilizada para ocultar colunas na tabela que podem 
+            ser mostradas através da interação com o botão toggle. */
+            
+}

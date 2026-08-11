@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- Esta é a declaração do tipo de documento. 
+ Ela informa ao navegador que este é um documento HTML5. 
+ É importante porque ativa o modo de padrões nos navegadores
+        modernos, garantindo que o CSS e o JavaScript sejam interpretados 
+        de forma consistente em diferentes navegadores. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> é o elemento raiz de uma página HTML. 
+O atributo 'lang' especifica o idioma principal do documento, neste 
+        caso, Português do Brasil ('pt-BR'). Isso é importante para 
+        acessibilidade, SEO e para navegadores que ajustam a 
+        gramática ou ortografia conforme o idioma. -->
+
+<head>
+<!-- A tag <head> contém metadados sobre o documento, que não são 
+        exibidos diretamente na página web, mas são essenciais para a 
+        definição de configurações e inclusão de recursos externos 
+        como CSS e JavaScript. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define o conjunto de 
+            caracteres usado no documento. 'UTF-8' é um conjunto de 
+            caracteres universal que inclui praticamente todos os 
+            caracteres de todos os idiomas, ajudando a evitar problemas 
+            de exibição de texto no navegador. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> que controla a visibilidade e escalabilidade 
+            da página em dispositivos móveis. O atributo 'content' 
+            com 'width=device-width' faz com que a largura da página 
+            corresponda à largura do dispositivo, enquanto 'initial-scale=1.0' 
+            define o nível inicial de zoom ao abrir a página. 
+    Isso é crucial para sites responsivos que se adaptam a diferentes 
+            tamanhos de tela. -->
+
+    <title>Tabela com Agrupamento de Colunas</title>
+    <!-- A tag <title> define o título da página, que é exibido na 
+            aba do navegador e usado por motores de busca. É importante 
+            para SEO e para a experiência do usuário, fornecendo uma 
+            visão clara do conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para vincular um arquivo CSS 
+            externo chamado 'estilos.css' ao documento. 
+    O atributo 'rel' especifica o tipo de relação que o documento 
+            atual tem com o documento vinculado, neste caso, uma 
+            folha de estilo que define a apresentação visual da página. -->
+
+</head>
+<!-- Fim da tag <head>, indicando o término dos metadados e 
+        configurações do documento. -->
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível da página web, 
+        como texto, imagens, links e tabelas. -->
+
+    <h1>Tabela com Agrupamento de Colunas</h1>
+    <!-- A tag <h1> define um cabeçalho de nível 1, que é usado para o 
+            título principal da página. 
+    Este cabeçalho informa sobre o conteúdo principal da página, 
+            que é uma tabela com capacidade de agrupamento de colunas. -->
+
+    <table id="tabela">
+        <!-- A tag <table> cria uma tabela HTML e o atributo 'id' permite 
+                que esta tabela seja identificada unicamente como 'tabela' 
+                no documento e manipulada via CSS ou JavaScript. -->
+
+        <thead>
+        <!-- A tag <thead> é usada para agrupar o conteúdo do cabeçalho 
+                    em uma tabela HTML. -->
+
+            <tr>
+            <!-- A tag <tr> define uma linha de células em uma tabela. -->
+
+                <th>Nome</th>
+                <!-- A tag <th> define uma célula de cabeçalho na tabela,  
+                        usada para descrever o que cada coluna representa. 
+                Neste caso, a coluna 'Nome'. -->
+
+                <th class="coluna-oculta">Idade</th>
+                <!-- Outra célula de cabeçalho para a coluna 'Idade', com a 
+                        classe 'coluna-oculta' que inicialmente oculta 
+                        esta coluna via CSS. -->
+
+                <th class="coluna-oculta">Cidade</th>
+                <!-- Célula de cabeçalho para a coluna 'Cidade', também 
+                        oculta inicialmente. -->
+
+                <th class="coluna-oculta">Profissão</th>
+                <!-- Célula de cabeçalho para a coluna 'Profissão', igualmente 
+                        oculta no carregamento inicial da página. -->
+
+                <th><span id="toggle" class="botao-toggle" onclick="alternarColunas()">+</span> Salário</th>
+                <!-- Célula de cabeçalho para 'Salário', com um botão 
+                        toggle (span com id 'toggle' e classe 'botao-toggle') 
+                        que permite ao usuário alternar a visibilidade das 
+                        colunas ocultas. O '+' indica que as colunas estão 
+                        atualmente ocultas. -->
+
+            </tr>
+        </thead>
+
+        <tbody id="corpo-tabela">
+
+            <!-- A tag <tbody> é usada para agrupar o conteúdo do corpo 
+                    principal da tabela. Os dados serão inseridos dinamicamente 
+                    aqui via JavaScript. -->
+
+        </tbody>
+        
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <!-- Inclui uma versão minificada da biblioteca XLSX.js, que é usada 
+            para ler e escrever arquivos Excel. Esta biblioteca será usada 
+            pelo script.js para processar dados de um arquivo Excel. -->
+
+    <script src="script.js"></script>
+    <!-- Vincula o arquivo script.js que contém o JavaScript para manipular a 
+            tabela e implementar funcionalidades como carregamento de dados e 
+            alternância da visibilidade das colunas. -->
+
+</body>
+</html>
+<!-- Fim do documento HTML. A tag </body> fecha o conteúdo visível da 
+        página, e a tag </html> indica o fim do documento HTML. -->
