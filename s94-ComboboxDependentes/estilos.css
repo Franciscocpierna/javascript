@@ -1,0 +1,81 @@
+body {
+
+    /* Define a família de fontes do corpo do documento 
+                como Arial, que é uma fonte sans-serif. 
+       'sans-serif' é um fallback genérico para qualquer 
+                fonte sem serifas caso Arial não esteja disponível. */
+    font-family: Arial, sans-serif;
+
+    /* Aplica uma margem de 20 pixels em todos os lados do 
+                elemento <body>, que é o container principal de 
+                conteúdo visível. */
+    margin: 20px;
+
+}
+
+table {
+
+    /* Define a largura da tabela como 100% do elemento pai, 
+                fazendo com que a tabela se estenda completamente na 
+                horizontal dentro de sua área de contenção. */
+    width: 100%;
+
+    /* A propriedade 'border-collapse' com o valor 'collapse' faz 
+                com que as bordas das células da tabela sejam fundidas 
+                em uma única borda mais limpa e menos espaçosa. */
+    border-collapse: collapse;
+
+    /* Adiciona uma margem superior de 20 pixels para a tabela, 
+                criando um espaço entre quaisquer elementos que 
+                estejam acima dela e a própria tabela. */
+    margin-top: 20px;
+
+}
+
+th, td {
+
+    /* Aplica uma borda de 1 pixel de espessura, sólida e de 
+                cor #ddd (um cinza claro) tanto para células de 
+                cabeçalho (<th>) quanto para células de 
+                corpo (<td>) da tabela. */
+    border: 1px solid #ddd;
+
+    /* Define o preenchimento interno das células (<th> e <td>) 
+                como 8 pixels em todas as direções (topo, direita, 
+                baixo, esquerda). */
+    padding: 8px;
+
+    /* Alinha o texto dentro das células (<th> e <td>) à esquerda. */
+    text-align: left;
+
+}
+
+th {
+
+    /* Define a cor de fundo das células de cabeçalho (<th>) 
+                como #f2f2f2, que é um cinza muito claro. 
+       Isso ajuda a diferenciar visualmente o cabeçalho 
+                do corpo da tabela. */
+    background-color: #f2f2f2;
+
+}
+
+
+select {
+
+    /* A propriedade 'padding' adiciona um espaço interno de 5 
+                pixels ao redor do conteúdo dentro do elemento <select>. 
+       Isso aumenta a área clicável e melhora a legibilidade ao 
+                dar mais espaço ao redor do texto ou imagem 
+                dentro do elemento. */
+    padding: 5px;
+
+    /* A propriedade 'margin-right' adiciona uma margem de 10 
+                pixels apenas no lado direito do elemento <select>.
+       Isso cria um espaço entre o <select> e qualquer outro 
+                elemento que estaria imediatamente à sua direita,
+                ajudando a evitar que os elementos se toquem visualmente, o 
+                que pode melhorar a clareza e a aparência geral da interface. */
+    margin-right: 10px;
+
+}

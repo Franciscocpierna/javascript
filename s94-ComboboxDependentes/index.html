@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- A linha acima declara o tipo de documento como HTML5, 
+            que é o padrão atual para páginas web. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> inicia o documento HTML. 
+     O atributo 'lang="pt-BR"' especifica que o idioma principal 
+            do conteúdo da página é Português do Brasil. -->
+
+<head>
+    <!-- A tag <head> contém metadados (informações sobre os dados) da 
+            página, que não são exibidos diretamente na área 
+            visual do navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta tag <meta> define o conjunto de caracteres usado no 
+            documento como UTF-8, que inclui a maioria dos caracteres 
+            de todos os idiomas escritos e é a prática recomendada para 
+            codificação de caracteres. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, que controla a janela de visualização 
+                (viewport) da página:
+         - 'width=device-width' instrui o navegador a definir a largura 
+                da janela de visualização para seguir a largura da 
+                tela do dispositivo.
+         - 'initial-scale=1.0' define o nível inicial de zoom quando a 
+                página é carregada pela primeira vez, garantindo que o 
+                conteúdo seja exibido em um tamanho adequado de acordo 
+                com o dispositivo. -->
+
+    <title>Filtro Dinâmico de Cidades</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba 
+                do navegador. Este título também é utilizado por 
+                mecanismos de busca e favoritos do navegador. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> aqui é usada para incluir um arquivo CSS 
+                externo, que define os estilos da página.
+         - 'rel="stylesheet"' indica que o relacionamento (rel) do 
+                documento linkado é uma folha de estilos.
+         - 'href="estilos.css"' especifica o caminho para o arquivo de 
+                estilo que será aplicado à página. -->
+
+</head>
+<!-- Fim da tag <head>, tudo o que é incluído aqui configura 
+            informações e estilos para a página, mas não cria 
+            conteúdo visível diretamente. -->
+
+
+<body>
+    <!-- A tag <body> define o corpo do documento HTML, que contém 
+            todo o conteúdo visível da página, como texto, 
+            imagens, links, etc. -->
+
+    <h2>Filtro Dinâmico de Cidades</h2>
+    <!-- A tag <h2> é um cabeçalho de nível 2, que cria um título 
+            grande na página. Aqui, serve para indicar o título da 
+            funcionalidade da página, que é o filtro de cidades. -->
+
+    <div>
+        <!-- A tag <div> define uma divisão ou seção em um documento HTML.
+            É usada aqui para agrupar elementos relacionados para 
+                    formar uma seção de filtragem. -->
+
+        <label for="pais">País:</label>
+        <!-- A tag <label> define um rótulo para um elemento <select> abaixo.
+             - O atributo 'for' associa o rótulo ao id de um elemento de 
+                    entrada (neste caso, o campo de seleção de país), 
+                    melhorando a acessibilidade e permitindo que um clique no 
+                    rótulo ative/focalize o elemento associado. -->
+
+        <select id="pais">
+            <!-- A tag <select> cria um menu suspenso, que permite ao usuário 
+                        escolher uma opção de uma lista.
+                 - O atributo 'id' identifica unicamente o elemento na página e é 
+                        usado para referenciar o elemento através de JavaScript ou CSS. -->
+            
+                 <option value="">Todos</option>
+            <!-- A tag <option> define uma opção que pode ser escolhida em um 
+                        menu suspenso <select>.
+                 - O atributo 'value' é o valor que será enviado quando o formulário 
+                        for submetido. Neste caso, um valor vazio ('') representa a 
+                        opção de filtrar por "Todos" os países. -->
+        
+        </select>
+
+        <label for="estado">Estado:</label>
+        <!-- Similar ao rótulo anterior, mas para estados. -->
+
+        <select id="estado">
+
+            <option value="">Todos</option>
+            <!-- Menu suspenso para estados, com uma opção padrão para 
+                    selecionar "Todos" os estados. -->
+
+        </select>
+
+        <label for="cidade">Cidade:</label>
+        <!-- Rótulo para o campo de seleção de cidades. -->
+
+        <select id="cidade">
+
+            <option value="">Todos</option>
+            <!-- Menu suspenso para cidades, com uma opção padrão 
+                    para selecionar "Todas" as cidades. -->
+
+        </select>
+    </div>
+
+    <table id="tabela">
+
+        <!-- A tag <table> é usada para criar uma tabela. O atributo 'id' 
+                permite identificar e manipular a tabela com CSS e JavaScript. -->
+        <thead>
+
+            <!-- A tag <thead> define o cabeçalho de uma tabela. -->
+            <tr>
+
+                <!-- A tag <tr> define uma linha em uma tabela. -->
+                <th>País</th>
+                <th>Estado</th>
+                <th>Cidade</th>
+                <!-- Cada tag <th> define uma célula de cabeçalho, que 
+                        contém texto que descreve a informação que será 
+                        exibida nas colunas sob esses cabeçalhos. -->
+
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!-- A tag <tbody> define o corpo principal da tabela, que é 
+                        preenchido dinamicamente com dados baseados na 
+                        seleção do usuário nos menus suspensos acima.
+                Dados da tabela serão inseridos aqui -->
+
+
+        </tbody>
+    </table>
+
+    <!-- Scripts externos para funcionalidades adicionais -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- Script para carregar a biblioteca XLSX.js, que 
+                permite ler dados de arquivos Excel. -->
+
+    <script src="script.js"></script>
+    <!-- Script externo que contém a lógica JavaScript para manipular 
+                os dados da tabela e os menus de seleção. -->
+                
+
+</body>
+</html>
