@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Esta declaração define que o documento é do tipo HTML5, o 
+        padrão atual para páginas da web. Ela deve ser a primeira 
+        linha de qualquer documento HTML. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> começa o documento HTML. O atributo 'lang="pt-BR"' 
+            especifica que o idioma principal da página é o Português 
+            do Brasil, o que ajuda os navegadores a aplicar as configurações 
+            de idioma corretas e pode melhorar o SEO. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de estilo, 
+                scripts e outras configurações que não são diretamente 
+                visíveis na página. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta tag <meta> define o conjunto de caracteres UTF-8 
+                para o documento. 
+        UTF-8 inclui quase todos os caracteres de todos os idiomas 
+                humanos, garantindo que o texto seja exibido corretamente, 
+                independentemente do conteúdo. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> importante para páginas responsivas. 
+     Ela garante que a largura da página seja definida de acordo 
+                com a largura do dispositivo e que o nível de zoom 
+                inicial seja 1.0. 
+    Isso é crucial para uma boa visualização em dispositivos móveis. -->
+
+    <title>Filtro Dinâmico de Cidades</title>
+    <!-- A tag <title> define o título da página, que é exibido na 
+                aba do navegador. 
+    É importante para SEO e para a usabilidade, ajudando os 
+                usuários a identificar o conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> aqui é usada para incluir uma folha de 
+                estilos externa. 
+         - 'rel="stylesheet"' especifica que o tipo de documento 
+                    linkado é uma folha de estilo CSS.
+         - 'href="estilos.css"' aponta para o arquivo CSS que contém os 
+                    estilos que serão aplicados à página. -->
+
+</head>
+
+<body>
+    <!-- Corpo do documento HTML, onde todo o conteúdo visível ao 
+                usuário é inserido. -->
+
+    <h2>Filtro Dinâmico de Cidades</h2>
+    <!-- Um cabeçalho (h2) que serve como título ou cabeçalho 
+                principal da página. 
+        Este texto dá ao usuário uma indicação imediata do 
+                propósito ou conteúdo da página. -->
+
+    <div class="listbox-container">
+        <!-- Um contêiner 'div' que agrupa visualmente os seguintes 
+                    elementos de lista. 
+        A classe 'listbox-container' pode ser usada para 
+                    aplicar estilos específicos. -->
+
+        <div>
+            <!-- Divisão individual para o grupo de 
+                        seleção de países. -->
+            
+            <label for="pais">País:</label>
+            <!-- O elemento 'label' associa o texto "País:" com a lista abaixo. 
+             O atributo 'for' ajuda a melhorar a acessibilidade, associando o 
+                        rótulo à lista de IDs 'pais'. -->
+            
+            <ul id="pais" class="listbox"></ul>
+            <!-- Lista não ordenada que será usada para exibir as 
+                        opções de países. 
+            O 'id' ajuda a identificar unicamente este elemento para 
+                        manipulações via CSS ou JavaScript. 
+            A classe 'listbox' é usada para aplicar estilos predefinidos. -->
+
+        </div>
+
+        <div>
+            <!-- Divisão individual para o grupo de seleção de estados. -->
+            
+            <label for="estado">Estado:</label>
+            <!-- Rótulo para a lista de estados, associado à lista 
+                    abaixo usando o atributo 'for'. -->
+            
+            <ul id="estado" class="listbox"></ul>
+            <!-- Lista não ordenada para exibir as opções de estados, 
+                    similar à lista de países. -->
+
+        </div>
+
+        <div>
+            <!-- Divisão individual para o grupo de seleção de cidades. -->
+            
+            <label for="cidade">Cidade:</label>
+            <!-- Rótulo para a lista de cidades, associado à lista 
+                    abaixo usando o atributo 'for'. -->
+            
+            <ul id="cidade" class="listbox"></ul>
+            <!-- Lista não ordenada para exibir as opções de cidades, 
+                    similar às listas de países e estados. -->
+
+        </div>
+    </div>
+
+    <table id="tabela">
+        <!-- Elemento 'table' usado para exibir dados dinâmicos 
+                    relacionados às seleções feitas nas listas acima. -->
+        
+        <thead>
+            <!-- Cabeçalho da tabela, definindo os títulos das colunas. -->
+            
+            <tr>
+                <!-- Uma linha no cabeçalho da tabela. -->
+
+                <th>País</th>
+                <!-- Célula do cabeçalho para o título 'País'. -->
+
+                <th>Estado</th>
+                <!-- Célula do cabeçalho para o título 'Estado'. -->
+
+                <th>Cidade</th>
+                <!-- Célula do cabeçalho para o título 'Cidade'. -->
+
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!-- Corpo da tabela, onde os dados filtrados serão 
+                    inseridos dinamicamente com base nas seleções 
+                    de país, estado e cidade. -->
+
+        </tbody>
+
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- Inclui a biblioteca XLSX.js via CDN para manipular arquivos Excel. 
+     Esta biblioteca é essencial para ler dados de um arquivo .xlsx e 
+                convertê-los em um formato que o JavaScript possa 
+                manipular facilmente. -->
+
+    <script src="script.js"></script>
+    <!-- Link para o arquivo JavaScript externo que contém a lógica de 
+                manipulação dos eventos da página e a interatividade 
+                com os dados. -->
+
+</body>
+</html>

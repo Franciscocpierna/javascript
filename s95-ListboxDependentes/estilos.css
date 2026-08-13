@@ -1,0 +1,175 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o corpo do documento. 
+            'Arial' é uma fonte sans-serif limpa e profissional.
+       Se 'Arial' não estiver disponível, o navegador usará qualquer 
+            outra fonte sans-serif padrão. */
+
+    margin: 20px;
+    /* Aplica uma margem de 20 pixels em todos os 
+            lados do corpo do documento, criando um espaço 
+            entre o conteúdo da página e as bordas da 
+            janela do navegador. */
+
+}
+
+.listbox-container {
+
+    display: flex;
+    /* Define o modelo de caixa para 'flex', o que permite um 
+            layout flexível dos itens dentro deste contêiner. 
+       Isso facilita o alinhamento e a distribuição dos 
+            elementos filhos. */
+
+    justify-content: space-between;
+    /* Distribui os elementos filhos do contêiner com espaço 
+            igual entre eles. Isso ajuda a manter uma distância 
+            uniforme entre cada elemento filho. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem na parte inferior do contêiner de 20 
+            pixels, separando-o de outros elementos que possam 
+            estar abaixo dele. */
+
+}
+
+.listbox-container div {
+
+    width: 32%;
+    /* Define a largura de cada div dentro de 'listbox-container' 
+               para 32% da largura total do contêiner pai.
+       Isso assegura que cada div tenha espaço suficiente e que 
+               todos sejam do mesmo tamanho, promovendo um 
+               layout uniforme. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura de 
+               seu contêiner pai. Isso faz com que a tabela estenda-se 
+               totalmente na área disponível. */
+
+    border-collapse: collapse;
+    /* Faz com que as bordas das células da tabela sejam 
+               fundidas em uma única borda, em vez de cada 
+               célula ter suas próprias bordas individuais.
+       Isso ajuda a criar uma apresentação mais limpa e 
+               menos confusa da tabela. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels à tabela, 
+               criando espaço entre quaisquer elementos que 
+               possam estar acima dela e a própria tabela. */
+
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+    /* Define uma borda de 1 pixel de espessura, sólida e de cor 
+               cinza claro (#ddd) para as células de cabeçalho (th) 
+               e células de dados (td) da tabela.
+       Isso ajuda a delinear claramente as divisões 
+               entre os dados dentro da tabela. */
+
+    padding: 8px;
+    /* Aplica um preenchimento interno de 8 pixels em 
+               todas as direções dentro de cada 
+               célula (topo, direita, baixo, esquerda).
+       Isso aumenta a legibilidade ao afastar o texto 
+               das bordas da célula. */
+
+    text-align: left;
+    /* Alinha o texto à esquerda nas células, o que é um 
+               padrão para a maioria dos textos e facilita a 
+               leitura, especialmente em tabelas com muitos dados. */
+
+}
+
+th {
+
+    background-color: #f2f2f2;
+    /* Define a cor de fundo para as células de cabeçalho (th) 
+                  como um cinza muito claro (#f2f2f2).
+       Isso destaca visualmente as células de cabeçalho das 
+                  células de dados, ajudando a distinguir as categorias 
+                  das informações apresentadas na tabela. */
+                  
+}
+
+.listbox {
+
+    list-style-type: none;
+    /* Remove qualquer estilo de lista (como marcadores ou números) 
+                  das listas, proporcionando uma aparência mais 
+                  limpa e controlada para listas usadas como 
+                  caixas de listagem. */
+
+    padding: 0;
+    /* Remove o preenchimento interno da lista, garantindo que os 
+                  itens da lista utilizem todo o espaço disponível 
+                  horizontalmente, ou permitindo um controle mais 
+                  preciso do preenchimento via estilos de 
+                  itens individuais. */
+
+    margin: 0;
+    /* Remove a margem externa da lista, permitindo que a lista se 
+                  ajuste sem espaços extras em torno dela, útil para 
+                  alinhar com outros elementos na interface. */
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda cinza claro ao redor da lista, definindo 
+                  claramente o limite da área de listagem e mantendo 
+                  consistência visual com as células da tabela. */
+
+    height: 150px;
+    /* Define uma altura fixa para a caixa de listagem, garantindo 
+                  que todas as listas tenham o mesmo tamanho 
+                  independentemente do conteúdo. */
+
+    overflow-y: auto;
+    /* Permite rolagem vertical dentro da caixa de listagem se o 
+                  conteúdo exceder a altura definida.
+       Isso é essencial para manter a caixa de listagem utilizável 
+                  mesmo com uma grande quantidade de itens, sem expandir 
+                  indefinidamente e desorganizar o layout da página. */
+
+}
+
+.listbox li {
+
+    padding: 5px;
+    /* Adiciona um preenchimento interno de 5 pixels em todas as 
+                  direções (topo, direita, baixo, esquerda) ao redor 
+                  do conteúdo de cada item da lista.
+       Isso melhora a estética e torna os itens mais fáceis de clicar, 
+                  especialmente útil para interfaces de usuário 
+                  sensíveis ao toque. */
+    
+    cursor: pointer;
+    /* Muda o cursor para o estilo 'pointer' quando o usuário passa o 
+                  mouse sobre os itens da lista.
+       Esse estilo de cursor é tipicamente usado para indicar que um 
+                  elemento é clicável, melhorando a usabilidade ao dar 
+                  feedback visual ao usuário de que o item pode 
+                  ser selecionado. */
+
+
+}
+
+.listbox li.selected {
+
+    background-color: #ddd;
+    /* Define a cor de fundo para os itens da lista que têm a 
+                  classe 'selected' como um cinza claro (#ddd).
+       Isso fornece um feedback visual claro de que o item está 
+                  selecionado, diferenciando-o dos outros itens 
+                  que não estão selecionados.
+       A cor de fundo ajuda a melhorar a experiência do usuário ao 
+                  fornecer uma indicação visual imediata do 
+                  estado de seleção. */
+       
+}
