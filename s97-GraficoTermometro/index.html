@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!-- Esta linha declara o tipo de documento para ser HTML5. 
+     A declaração DOCTYPE é uma instrução para o navegador 
+               sobre qual versão do HTML a página está escrita.
+     É importante porque ativa o modo de padrões nos navegadores 
+               modernos, o que garante que as funcionalidades
+               do HTML5 sejam interpretadas corretamente. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> inicia o documento HTML. O atributo 'lang="pt-BR"' 
+               especifica que o idioma principal da página é o 
+               Português do Brasil.
+     Isso é usado pelos navegadores para fins de acessibilidade, 
+               como leitores de tela, e ajuda os motores de 
+               busca a entenderem a língua da página para 
+               propósitos de indexação e SEO. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de 
+               estilo, scripts e outras informações que não 
+               são diretamente visíveis na página web. Tudo 
+               dentro de <head> é usado pelo navegador para 
+               processar a página. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta meta tag define o conjunto de caracteres usado para o 
+               conteúdo do documento como UTF-8, que inclui a maioria
+               dos caracteres de todos os sistemas de escrita do 
+               mundo. Isso é essencial para garantir que textos 
+               com caracteres especiais ou acentuados sejam 
+               exibidos corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A meta tag 'viewport' controla o layout da página nos 
+               navegadores de dispositivos móveis. 
+         'width=device-width' faz o layout da página se ajustar à 
+               largura do dispositivo, e 'initial-scale=1.0' define o 
+               nível de zoom quando a página é carregada pela primeira vez. 
+         Essas configurações ajudam a garantir que a página seja 
+               acessível e legível em dispositivos móveis. -->
+
+    <title>Gráfico - Termômetro</title>
+    <!-- A tag <title> define o título da página, que é 
+               exibido na aba do navegador. 
+         Este título é importante tanto para a usabilidade 
+               quanto para o SEO, pois descreve o conteúdo da página
+               e aparece nos resultados de pesquisa. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> com rel="stylesheet" é usada para vincular 
+               uma folha de estilo externa ao documento HTML.
+         O atributo 'href' especifica o caminho para o arquivo 
+               CSS que contém os estilos da página.
+         Isso separa o conteúdo e a apresentação, permitindo 
+               uma manutenção mais fácil e designs mais flexíveis. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da 
+               página web que o usuário interage diretamente. -->
+
+    <div class="container">
+        <!-- Um contêiner principal que encapsula todos os 
+                    elementos visíveis da página, facilitando a 
+                    aplicação de estilos e alinhamentos. A classe 
+                    'container' é usada tipicamente para centralizar o 
+                    conteúdo na página e aplicar um espaçamento consistente. -->
+
+        <h1>Gráfico - Termômetro</h1>
+        <!-- A tag <h1> é usada aqui para definir o título principal da página. 
+             Este cabeçalho descreve o conteúdo principal ou o propósito da página, 
+             que é apresentar um "Gráfico - Termômetro". Utilizar <h1> é importante para SEO,
+             pois ajuda os motores de busca a entenderem o tópico principal da página. -->
+
+        <div class="filtro">
+            <!-- Divisão destinada aos elementos de filtro, permitindo 
+                         ao usuário controlar quais dados são visualizados 
+                         no gráfico. A classe 'filtro' pode ser usada para 
+                         aplicar estilos específicos, como margens ou alinhamento. -->
+
+            <label for="produtoSelect">Filtrar por Produto:</label>
+            <!-- A tag <label> define um rótulo para o elemento <select> abaixo. 
+                 O atributo 'for' associa o rótulo ao ID do elemento 
+                         de seleção, 'produtoSelect', melhorando a acessibilidade 
+                         ao permitir que os usuários cliquem no rótulo para 
+                         focar ou ativar o campo associado. -->
+
+            <select id="produtoSelect" onchange="filtrarPorProduto()">
+                <!-- A tag <select> cria uma lista suspensa que permite ao 
+                              usuário escolher entre múltiplas opções predefinidas.
+                     O atributo 'id' fornece uma maneira de identificar o 
+                              elemento de forma única no documento.
+                     O atributo 'onchange' adiciona um manipulador de 
+                              eventos JavaScript, 'filtrarPorProduto()', 
+                              que é chamado sempre que o usuário altera a 
+                              seleção, permitindo uma interação dinâmica 
+                              com os dados do gráfico. -->
+
+                <option value="">Selecione um produto</option>
+                <!-- Uma opção padrão que instrui o usuário a selecionar um produto. 
+                     O valor vazio ('value=""') é usado para indicar que 
+                              nenhuma seleção foi feita ainda. -->
+
+                <option value="Produto A">Produto A</option>
+                <!-- As opções subsequentes fornecem valores específicos 
+                              que representam produtos diferentes.
+                     Esses valores são usados para filtrar os dados 
+                              no gráfico de termômetro. -->
+
+                <option value="Produto B">Produto B</option>
+                <option value="Produto C">Produto C</option>
+                <option value="Produto D">Produto D</option>
+
+            </select>
+        </div>
+
+        <div class="termometro-info-container">
+            <!-- Esta <div> atua como um contêiner geral para o gráfico 
+                         do termômetro e a legenda informativa associada.
+                 A classe 'termometro-info-container' é usada para estilizar e 
+                         organizar o layout deste contêiner, geralmente 
+                         definindo seu display para flex para alinhar 
+                         horizontalmente seus elementos filhos. -->
+        
+            <div class="termometro-container">
+                <!-- Contêiner específico para o gráfico do termômetro. 
+                         Esta <div> encapsula o elemento <canvas>,
+                         que é utilizado para desenhar o gráfico termômetro. -->
+        
+                <canvas id="graficoTermometro" width="150" height="400"></canvas>
+                <!-- Elemento <canvas> usado para desenhar gráficos ou 
+                              outros conteúdos visuais através de JavaScript.
+                     O 'id' permite que este <canvas> seja facilmente 
+                              acessado e manipulado via scripts.
+                     Os atributos 'width' e 'height' definem as dimensões 
+                              do canvas, que neste caso são configurados
+                              para 150 pixels de largura e 400 pixels de 
+                              altura, proporcionando espaço suficiente para o 
+                              gráfico termômetro. -->
+
+            </div>
+        
+            <div class="info">
+                <!-- Esta <div> serve como um contêiner para a legenda 
+                              do gráfico termômetro, fornecendo informações adicionais
+                              sobre o significado das cores usadas no gráfico. -->
+        
+                <h3>Menu</h3>
+                <!-- Um cabeçalho que introduz a seção de informações. -->
+        
+                <ul>
+                    <!-- A tag <ul> é usada para uma lista não ordenada, 
+                              onde cada item da lista representa
+                              uma faixa de valores com uma cor correspondente 
+                              no gráfico termômetro. -->
+        
+                    <li><span style="color: #FF0000;">Ruim (0% - 25%)</span></li>
+                    <!-- Cada <li> contém um <span> que estiliza o texto de 
+                              acordo com a cor que representa uma faixa 
+                              de desempenho no gráfico. A cor vermelha (#FF0000) 
+                              aqui representa desempenho ruim. -->
+
+                    <li><span style="color: #FFD700;">Regular (25% - 50%)</span></li>
+                    <!-- Cor amarela (#FFD700) para desempenho regular. -->
+
+                    <li><span style="color: #1E90FF;">Bom (50% - 75%)</span></li>
+                    <!-- Cor azul (#1E90FF) para desempenho bom. -->
+
+                    <li><span style="color: #32CD32;">Ótimo (75% - 100%)</span></li>
+                    <!-- Cor verde (#32CD32) para desempenho ótimo. -->
+
+                </ul>
+            </div>
+        </div>
+
+        <h2>Vendas de Produtos</h2>
+        <!-- Um cabeçalho <h2> para introduzir a seção que 
+                    contém dados ou uma tabela relacionada às vendas dos produtos. 
+                    Este cabeçalho ajuda a estruturar o conteúdo de forma
+                    hierárquica e clara na página. -->
+        
+        <table id="tabelaVendas">
+        <!-- A tag <table> é utilizada para criar uma tabela, 
+                    que é um meio eficaz de apresentar dados 
+                    relacionados em formato de grade.
+            O atributo 'id' permite identificar de maneira única a 
+                    tabela no documento, facilitando a manipulação 
+                    com CSS ou JavaScript. -->
+
+        <thead>
+            <!-- A tag <thead> (cabeçalho da tabela) agrupa um ou 
+                         mais elementos <th> para formar um cabeçalho de tabela.
+                Isso é usado principalmente para agrupar os cabeçalhos 
+                         das colunas, proporcionando uma base para 
+                         estilização e organização. -->
+
+            <tr>
+                <!-- A tag <tr> define uma linha na tabela. Cada linha 
+                         pode conter elementos de célula de cabeçalho (<th>) 
+                              ou célula de dados (<td>). -->
+
+                <th>Produto</th>
+                <!-- A tag <th> define uma célula de cabeçalho na tabela. 
+                    Texto dentro de <th> é normalmente em negrito e 
+                              centralizado por padrão, o que ajuda a 
+                              destacar as informações que categorizam os dados 
+                              da tabela. Este cabeçalho representa a coluna 
+                              dos nomes dos produtos. -->
+
+                <th>Quantidade de Vendas</th>
+                <!-- Outro cabeçalho de coluna que descreve a quantidade 
+                              de vendas de cada produto listado na tabela. -->
+
+                <th>Meta</th>
+                <!-- Este cabeçalho indica a coluna das metas de vendas 
+                              estabelecidas para cada produto, permitindo uma 
+                              comparação visual rápida entre a performance 
+                              atual e os objetivos. -->
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- A tag <tbody> (corpo da tabela) agrupa o conteúdo 
+                         principal da tabela, normalmente constituído de 
+                         múltiplas linhas de dados. -->
+
+            <tr>
+                <!-- Cada <tr> dentro de <tbody> representa uma linha 
+                         de dados na tabela. -->
+
+                <td>Produto A</td>
+                <!-- A tag <td> define uma célula de dados padrão dentro 
+                              da tabela. Esta célula contém o nome de um produto. -->
+
+                <td>50</td>
+                <!-- Célula adjacente que mostra a quantidade de vendas para "Produto A". -->
+
+                <td>100</td>
+                <!-- Célula que mostra a meta de vendas estabelecida para "Produto A". -->
+
+            </tr>
+
+            <!-- As linhas subsequentes repetem a estrutura acima para 
+                         diferentes produtos (B, C, D), mostrando suas vendas
+                         e metas correspondentes. -->
+                
+            <tr>
+                <td>Produto B</td>
+                <td>80</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Produto C</td>
+                <td>90</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Produto D</td>
+                <td>120</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+    <!-- Encerra o contêiner principal 'container'. -->
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com o atributo 'src' é utilizada para incluir 
+               um arquivo JavaScript externo chamado 'scripts.js'.
+        Este script contém a lógica para manipular os dados da 
+               tabela e interagir com o gráfico termômetro. -->
+
+</body>
+<!-- Encerra a tag <body>, que contém todo o conteúdo 
+          visível da página. -->
+
+</html>
+<!-- Encerra a tag <html>, que encapsula todo o documento HTML. -->

@@ -1,0 +1,349 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    /* Define a família de fontes para 'Roboto', uma 
+            fonte sans-serif popular que é moderna e legível,
+            garantindo que o texto seja fácil de ler em 
+            diferentes dispositivos e resoluções. */
+
+    background-color: #f4f4f4;
+    /* Aplica uma cor de fundo cinza claro (#f4f4f4) ao 
+            corpo da página, proporcionando um contraste suave 
+            que é fácil para os olhos e melhora a legibilidade do conteúdo. */
+
+    margin: 0;
+    /* Remove todas as margens externas do <body>, permitindo 
+            que o conteúdo da página se estenda até as bordas do navegador. */
+
+    padding: 0;
+    /* Remove todo o preenchimento interno do <body>, garantindo 
+            que não haja espaço extra dentro dos limites do 
+            corpo da página. */
+
+    display: flex;
+    /* Ativa o modelo de layout Flexbox para o <body>, proporcionando 
+            um método poderoso e flexível para alinhar conteúdo 
+            de forma responsiva. */
+
+    justify-content: center;
+    /* Alinha todos os elementos filhos do <body> (neste caso, o 
+            contêiner principal) horizontalmente ao centro,
+            garantindo que o contêiner esteja centralizado na página. */
+
+    align-items: center;
+    /* Alinha todos os elementos filhos do <body> verticalmente ao 
+            centro, garantindo que o contêiner esteja centralizado na página. */
+
+    min-height: 100vh;
+    /* Define a altura mínima do <body> para 100% da altura da 
+            viewport (vh - viewport height), o que significa que 
+            o <body> sempre ocupará pelo menos a tela inteira, 
+            independentemente do conteúdo. */
+
+}
+
+.container {
+
+    text-align: center;
+    /* Alinha o texto dentro do contêiner ao centro, o que é 
+            útil para cabeçalhos, parágrafos, ou qualquer 
+            outro texto dentro do contêiner. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do contêiner para branco, 
+            proporcionando um contraste claro com o fundo cinza do <body>
+            e focando a atenção do usuário para o conteúdo 
+            dentro do contêiner. */
+
+    padding: 30px;
+    /* Aplica um preenchimento de 30px em todas as direções 
+            dentro do contêiner, criando espaço entre o 
+            conteúdo e as bordas do contêiner,
+            o que aumenta a legibilidade e a estética visual. */
+
+    border-radius: 12px;
+    /* Arredonda os cantos do contêiner com um raio de 12px, 
+            suavizando sua aparência visual e dando um toque 
+            mais moderno e amigável. */
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Aplica uma sombra ao redor do contêiner. A sombra é 
+            definida para ter um deslocamento vertical de 2px, 
+            um desfoque de 8px, e uma cor preta com 20% de 
+            opacidade, adicionando profundidade visual que faz o 
+            contêiner parecer elevado acima da página. */
+
+    max-width: 800px;
+    /* Define a largura máxima do contêiner para 800px, 
+            garantindo que ele não se torne demasiado largo 
+            em monitores maiores, o que poderia afetar a 
+            legibilidade do conteúdo. */
+
+    width: 100%;
+    /* Define a largura do contêiner para ocupar 100% do 
+            espaço disponível de seu elemento pai, até o 
+            máximo de 800px, garantindo responsividade e 
+            adaptabilidade a diferentes tamanhos de tela. */
+
+}
+
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20px para o elemento <h1>. 
+            Isso cria um espaço entre o título e o conteúdo que segue. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333). */
+
+}
+
+.termometro-info-container {
+
+    display: flex;
+    /* Ativa o layout Flexbox para o contêiner de informações 
+            do termômetro. Flexbox é uma maneira eficiente de criar layouts
+            complexos de forma mais simples e com melhor alinhamento. */
+
+    align-items: flex-start;
+    /* Alinha os itens dentro do contêiner ao começo do eixo 
+            transversal (neste caso, topo do contêiner).
+       Isso significa que todos os elementos filhos começam 
+            no ponto mais alto do contêiner, adequado quando eles têm
+            alturas diferentes e você quer que eles comecem a partir 
+            do mesmo ponto no topo. */
+
+    justify-content: center;
+    /* Alinha os itens dentro do contêiner ao centro do 
+            eixo principal (neste caso, horizontalmente).
+       Isso centraliza os elementos filhos dentro do 
+            contêiner ao longo da linha principal, ideal 
+            para garantir que o conteúdo esteja equilibrado e centralizado. */
+
+}
+
+.termometro-container {
+
+    position: relative;
+    /* Define a posição do contêiner do termômetro como 'relative', 
+            o que permite que qualquer posicionamento absoluto
+            de elementos filhos seja relativo a este contêiner. 
+            Isso é útil para sobrepor elementos como texto ou 
+            outros indicadores dentro do contêiner do termômetro. */
+
+    width: 150px;
+    /* Define a largura do contêiner do termômetro para 150px. 
+            Esta largura é suficiente para acomodar a visualização
+            do termômetro sem ser excessivamente larga, mantendo a 
+            proporção visual adequada. */
+
+    height: 400px;
+    /* Define a altura do contêiner do termômetro para 400px. 
+            Uma altura maior permite uma representação detalhada
+            das várias faixas de temperatura ou desempenho no termômetro, 
+            facilitando a visualização precisa dos níveis. */
+
+}
+
+
+.info {
+
+    margin-left: 100px;
+    /* Aplica uma margem à esquerda de 100px para o contêiner .info. 
+            Esta margem efetivamente afasta a seção informativa
+            do gráfico do termômetro, criando um espaço visual que 
+            ajuda a separar e distinguir claramente as duas 
+            partes do conteúdo. */
+
+    text-align: left;
+    /* Define o alinhamento do texto para a esquerda dentro do 
+         contêiner .info. Este alinhamento é padrão para textos
+         em muitos idiomas, incluindo o português, e ajuda a manter a 
+         legibilidade e a organização natural do texto. */
+
+}
+
+.info h3 {
+
+    margin-bottom: 10px;
+    /* Define uma margem inferior de 10px para o cabeçalho <h3> 
+               dentro de .info. Esta margem inferior ajuda a criar
+               um espaço entre o título da seção e o conteúdo da lista 
+               que se segue, contribuindo para uma separação visual clara. */
+
+    color: #333;
+    /* Define a cor do texto do cabeçalho <h3> para um cinza 
+               escuro (#333). Esta cor é escolhida para garantir
+               uma boa legibilidade e contraste moderado com o fundo, 
+               mantendo o texto claramente visível sem ser muito agressivo. */
+
+}
+
+.info ul {
+
+    list-style: none;
+    /* Remove os estilos de lista padrão (como marcadores ou números) 
+            do elemento <ul>. Isso é útil para criar uma lista
+            visualmente mais limpa e moderna, onde o conteúdo fala 
+            por si mesmo sem a necessidade de marcadores adicionais. */
+
+    padding: 0;
+    /* Remove o preenchimento padrão do elemento <ul>, garantindo 
+            que a lista não tenha espaço extra dentro ou ao redor,
+            o que ajuda a manter o layout compacto e alinhado 
+            com outros elementos de texto. */
+
+}
+
+.info li {
+
+    margin: 5px 0;
+    /* Define a margem superior e inferior para 5px para 
+            cada item de lista (<li>). Este espaçamento 
+            vertical entre itens ajuda a separar cada linha 
+            da lista, tornando cada entrada mais distinta e fácil de ler. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16px, que é um tamanho 
+            confortável para leitura em dispositivos desktop e móveis,
+            equilibrando clareza e economia de espaço. */
+
+    color: #555;
+    /* Define a cor do texto para cada item da lista para 
+            um cinza médio (#555). Esta cor é mais suave 
+            que o preto puro, reduzindo a tensão visual 
+            enquanto mantém suficiente contraste para a 
+            leitura confortável. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura 
+            do seu contêiner. Isso garante que a tabela utilize 
+            todo o espaço disponível, maximizando a área de 
+            exibição dos dados. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem inferior de 20px para separar a 
+            tabela de quaisquer elementos que venham a seguir, 
+            ajudando a manter o conteúdo visualmente organizado e claro. */
+
+    border-collapse: collapse;
+    /* Combina as bordas de células adjacentes para formar 
+            uma única borda mais limpa e contínua, melhorando a 
+            estética da tabela ao remover as bordas duplas 
+            entre as células. */
+
+}
+
+table, th, td {
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida de 1px com cor cinza claro (#ddd) 
+            a toda a tabela, assim como a cada cabeçalho 
+            (<th>) e célula (<td>), definindo claramente os 
+            limites de cada célula e da tabela como um todo. */
+
+}
+
+th {
+
+    background-color: #f8f8f8;
+    /* Define a cor de fundo dos cabeçalhos da tabela para um 
+            cinza muito claro (#f8f8f8), o que ajuda a destacar a 
+            área do cabeçalho da tabela. */
+
+    font-weight: bold;
+    /* Torna o texto nos cabeçalhos da tabela em negrito, o que é 
+            útil para chamar atenção para os títulos das colunas e 
+            melhorar a legibilidade. */
+
+    text-transform: uppercase;
+    /* Transforma o texto nos cabeçalhos da tabela para letras 
+            maiúsculas, aumentando a visibilidade e criando uma 
+            apresentação mais formal e uniforme. */
+
+}
+
+th, td {
+
+    padding: 12px;
+    /* Aplica um preenchimento de 12px em todas as direções 
+            dentro de cada cabeçalho e célula, aumentando o espaço 
+            ao redor do texto para uma leitura mais confortável. */
+
+    text-align: center;
+    /* Centraliza o texto dentro dos cabeçalhos e células, facilitando a 
+            leitura e a comparação dos dados alinhados de maneira uniforme. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333), proporcionando 
+            um contraste forte com o fundo claro sem ser tão duro quanto o preto. */
+
+}
+
+tr:nth-child(even) {
+
+    background-color: #f9f9f9;
+    /* Aplica uma cor de fundo cinza muito claro (#f9f9f9) para 
+            cada segunda linha da tabela (linhas pares), ajudando a 
+            diferenciar visualmente as linhas adjacentes para 
+            facilitar a leitura. */
+
+}
+
+tr:hover {
+
+    background-color: #f1f1f1;
+    /* Muda a cor de fundo de uma linha para um cinza claro (#f1f1f1) 
+            quando o usuário passa o mouse sobre ela, destacando a 
+            linha sob o cursor para melhor rastreabilidade 
+            visual dos dados. */
+
+}
+
+.filtro {
+
+    margin-top: 20px;
+    /* Aplica uma margem superior de 20px para o contêiner do 
+            filtro, criando espaço entre este e quaisquer 
+            elementos acima, ajudando a separar visualmente 
+            as seções da interface. */
+
+}
+
+.filtro label {
+
+    margin-right: 10px;
+    /* Aplica uma margem à direita do rótulo do filtro de 10px, 
+            separando o texto do rótulo do elemento de seleção 
+            associado para evitar um visual apertado e melhorar a clareza. */
+
+    font-weight: bold;
+    /* Torna o texto do rótulo em negrito, o que ajuda a destacar a 
+            função do campo associado, reforçando a interação do 
+            usuário com o elemento de seleção. */
+
+}
+
+.filtro select {
+
+    padding: 8px;
+    /* Aplica um preenchimento de 8px dentro do elemento de 
+            seleção, aumentando a área de clique e melhorando a 
+            estética visual e a usabilidade. */
+
+    border: 1px solid #ddd;
+    /* Define uma borda sólida de 1px ao redor do elemento de 
+            seleção com a mesma cor cinza claro (#ddd) usada nas 
+            bordas da tabela, mantendo a consistência visual. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos do elemento de seleção com um raio de 4px, 
+            suavizando sua aparência e criando um visual mais 
+            moderno e amigável. */
+            
+}
