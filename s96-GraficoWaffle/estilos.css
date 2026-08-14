@@ -1,0 +1,348 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    /* Define a família de fontes para 'Roboto', 
+               que é uma fonte sans-serif. 
+       Sans-serif significa "sem serifa", indicando que a 
+               fonte não tem os pequenos traços nas extremidades das letras. 
+       Essa escolha é popular para interfaces digitais por 
+               sua legibilidade e modernidade. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo da página para um 
+               cinza claro (#f4f4f4). 
+       Isso proporciona um contraste suave com os elementos 
+               mais claros ou coloridos, 
+               melhorando a legibilidade e o conforto visual. */
+
+    color: #333;
+    /* Define a cor padrão do texto para cinza escuro (#333). 
+       Esta cor é usada para o texto dentro do elemento <body>, a 
+               menos que seja especificado de outra forma. */
+
+    display: flex;
+    /* Ativa o modelo de caixa flexível para o layout do <body>. 
+               Flexbox é um método de layout que permite
+               um espaço distribuído entre os itens em uma interface 
+               e alinhamentos complexos. */
+
+    flex-direction: column;
+    /* Define a direção principal do layout flexível como 'column', 
+               fazendo com que os filhos diretos do <body> 
+               sejam organizados verticalmente, um abaixo do outro. */
+
+    align-items: center;
+    /* Alinha os itens filhos do <body> ao centro do eixo transversal 
+               (neste caso, horizontalmente), garantindo que todos 
+               os elementos filhos estejam centralizados em relação ao <body>. */
+
+    margin: 0;
+    /* Remove todas as margens externas do elemento <body>, garantindo 
+               que não haja espaço extra na borda da página. */
+
+    padding: 20px; /* Adicionando padding para evitar cortes na parte superior */
+    /* Define o preenchimento interno do <body> para 20px 
+               em todas as direções. 
+       Isso cria um espaço entre o conteúdo da página e 
+               as bordas do navegador, melhorando a estética e 
+               evitando que o conteúdo toque as bordas do navegador. */
+
+}
+
+
+.container {
+
+    text-align: center;
+    /* Alinha o texto dentro do contêiner ao centro, 
+               afetando qualquer texto ou elemento de bloco 
+               inline contido que não tenha alinhamento 
+               específico definido. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do contêiner para branco. Isso 
+               destaca o contêiner contra o fundo cinza claro do <body>. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20px em todas as direções 
+               dentro do contêiner, criando espaço entre 
+               os bordos do contêiner e seu conteúdo, melhorando a 
+               legibilidade e a apresentação visual. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner com um raio de 10px, 
+               suavizando sua aparência e proporcionando um 
+               design mais moderno e amigável. */
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra abaixo do contêiner, criando um 
+               efeito de elevação. Isso ajuda a contêiner
+               a se destacar do fundo, melhorando a percepção 
+               de profundidade na interface do usuário. */
+
+    max-width: 800px;
+    /* Define a largura máxima do contêiner para 800px, 
+               garantindo que ele não se torne demasiadamente largo 
+               em telas maiores, o que poderia prejudicar a 
+               legibilidade do conteúdo. */
+
+    width: 100%;
+    /* Define a largura do contêiner para 100%, fazendo com 
+               que ele ocupe toda a largura disponível 
+               dentro de seu elemento pai, até um máximo de 800px. */
+
+}
+
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Define a margem na parte inferior do cabeçalho <h1> para 20px.
+       Isso cria um espaço entre o cabeçalho e qualquer conteúdo que o siga,
+               ajudando a segmentar visualmente as seções da página e 
+               melhorando a legibilidade. */
+
+}
+
+.grafico-waffle {
+
+    display: inline-block;
+    /* Define o tipo de exibição do contêiner do gráfico 
+               de waffle como 'inline-block', permitindo que 
+               ele flua com outros elementos inline mas aceitando 
+               propriedades de bloco como largura e altura. */
+
+    position: relative;
+    /* Estabelece o contêiner do gráfico de waffle como um 
+               contexto de posicionamento relativo. 
+       Isso significa que os elementos posicionados absolutamente 
+               dentro dele serão posicionados relativo a este contêiner. */
+
+    width: 200px;
+    height: 200px;
+    /* Define a largura e altura do gráfico de waffle para 200px 
+               cada, criando um espaço quadrado para visualizar o gráfico. */
+
+    margin: 20px auto;
+    /* Define a margem do contêiner do gráfico de waffle para 20px 
+               em todas as direções e automaticamente centraliza
+               o contêiner na direção horizontal dentro de seu contêiner pai. */
+
+}
+
+.grafico-waffle .percentual {
+
+    position: absolute;
+    /* Posiciona o elemento que mostra o percentual absolutamente 
+               dentro do seu contêiner pai (grafico-waffle),
+               o que permite que ele seja posicionado sobreposta 
+               ao gráfico de waffle. */
+
+    top: 50%;
+    left: 50%;
+    /* Posiciona o centro do elemento de percentual exatamente 
+               no meio do contêiner grafico-waffle. */
+
+    transform: translate(-50%, -50%);
+    /* Ajusta a posição do elemento de percentual para que 
+               seu centro coincida com o ponto especificado 
+               pelas propriedades 'top' e 'left', centrando-o 
+               efetivamente dentro do contêiner grafico-waffle. */
+
+    font-size: 3em;
+    /* Define o tamanho da fonte para 3 vezes o tamanho da 
+               fonte base do elemento, tornando-o proeminente
+                fácil de ler. */
+
+    color: #a80e0e;
+    /* Define a cor do texto para um vermelho escuro, garantindo 
+               que o percentual seja visualmente distinto 
+               no contexto do gráfico de waffle. */
+
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.59); /* Adiciona sombra ao texto */
+    /* Adiciona uma sombra escura ao texto para aprimorar a 
+               legibilidade e dar um efeito visual 3D sutil. 
+       A sombra é posicionada diretamente atrás do texto (sem 
+               deslocamento horizontal ou vertical) e tem um 
+               desfoque de 10px. */
+
+}
+
+.grafico-waffle .grade {
+
+    display: grid;
+    /* Define o tipo de exibição do contêiner da grade para 'grid'. 
+       O layout de grid é uma técnica poderosa para criar 
+               interfaces complexas e responsivas com 
+               alinhamentos precisos. */
+
+    grid-template-columns: repeat(10, 1fr);
+    /* Define dez colunas iguais na grade. '1fr' é uma 
+               unidade fracionária que divide o espaço 
+               disponível de forma igual, garantindo que 
+               todas as colunas tenham a mesma largura. 
+               O uso de 'repeat(10, 1fr)' simplifica a definição de 
+               múltiplas colunas idênticas. */
+
+    grid-template-rows: repeat(10, 1fr);
+    /* Define dez linhas iguais, similar às colunas, usando '1fr' 
+               para garantir que todas as linhas sejam iguais em altura. */
+
+    gap: 2px;
+    /* Define um espaço de 2px entre as células da grade, tanto 
+               na vertical quanto na horizontal,
+               criando uma distinção visual entre os elementos da grade. */
+
+    width: 100%;
+    height: 100%;
+    /* Define a largura e altura do contêiner da grade para ocupar 100% 
+               do espaço de seu contêiner pai (grafico-waffle). 
+       Isso assegura que a grade se expanda para preencher completamente o 
+               contêiner designado para o gráfico. */
+
+}
+
+.grafico-waffle .grade div {
+
+    width: 100%;
+    /* Define a largura de cada div (célula da grade) para 
+               ocupar 100% da célula da grade,
+               garantindo que o conteúdo da célula se expanda 
+               para preencher completamente a célula. */
+
+    padding-bottom: 100%; /* This makes the divs square */
+    /* Define o preenchimento inferior para ser igual à largura 
+               da célula, criando divs quadrados.
+       Esse truque é usado frequentemente para manter uma 
+               proporção de aspecto fixa em elementos responsivos. */
+
+    background-color: #ddd;
+    /* Define a cor de fundo das células da grade para um 
+               cinza claro (#ddd). 
+       Isso serve como cor de fundo padrão para as células 
+               que não estão preenchidas com dados. */
+
+}
+
+.grafico-waffle .grade div.preenchido {
+
+    background-color: #ffe46d;
+    /* Altera a cor de fundo das células da grade que 
+               possuem a classe 'preenchido' para um 
+               amarelo claro (#ffe46d).
+       Esta cor indica que a célula representa dados 
+               preenchidos no gráfico, diferenciando visualmente
+               o progresso ou a quantidade representada em 
+               relação às outras células. */
+
+}
+
+table {
+
+    width: 80%;
+    /* Define a largura da tabela para ocupar 80% da 
+               largura do contêiner pai.
+       Isso garante que a tabela seja grande o suficiente 
+               para ser legível, mas não tão grande
+               que ocupe toda a largura da tela, permitindo um 
+               layout visualmente equilibrado. */
+
+    margin: 20px auto;
+    /* Define as margens superior e inferior para 20px e 
+               centraliza a tabela horizontalmente dentro 
+               de seu contêiner.
+       O valor 'auto' para as margens laterais ajuda a 
+               centrar a tabela no meio do contêiner. */
+
+    border-collapse: collapse;
+    /* Altera o comportamento padrão da borda da tabela 
+               para que as bordas das células sejam fundidas 
+               em uma única borda.
+       Isso elimina o espaço entre as bordas das células 
+               adjacentes, proporcionando um visual mais 
+               limpo e contínuo. */
+
+    color: #333;
+    /* Define a cor do texto dentro da tabela para um 
+               cinza escuro (#333).
+       Esta cor é escolhida para garantir uma boa 
+               legibilidade contra o fundo claro da tabela. */
+
+}
+
+table, th, td {
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida de 1px com cor cinza claro (#ddd) 
+               para a tabela e todas as suas células (th e td).
+       Isso define claramente os limites de cada célula e 
+               da própria tabela, ajudando na organização 
+               visual dos dados. */
+
+}
+
+th, td {
+
+    padding: 12px;
+    /* Define o preenchimento interno para 12px em todas as 
+               direções dentro das células de cabeçalho (th) 
+               e dados (td).
+       Isso aumenta o espaço ao redor do conteúdo dentro das 
+               células, melhorando a legibilidade e o conforto visual. */
+
+    text-align: center;
+    /* Alinha o texto ao centro das células de cabeçalho (th) 
+               e de dados (td).
+       Esta centralização é útil para apresentar dados numéricos 
+               ou informações curtas, facilitando a leitura e a 
+               comparação visual entre as células. */
+
+}
+
+
+.filtro {
+
+    margin-top: 20px;
+    /* Define a margem superior do contêiner de 
+               filtro para 20px.
+       Isso cria um espaço entre os elementos acima dele 
+               e o próprio contêiner de filtro,
+               ajudando a segmentar visualmente as diferentes 
+               seções da interface. */
+
+}
+
+.filtro label {
+
+    margin-right: 10px;
+    /* Define a margem à direita da etiqueta para 10px.
+       Isso separa a etiqueta do campo de seleção associado, 
+               evitando que os elementos apareçam
+               muito juntos e melhorando a legibilidade. */
+
+    font-weight: bold;
+    /* Define o peso da fonte da etiqueta para negrito.
+       Isso ajuda a destacar a etiqueta, tornando-a mais 
+               visível e indicando claramente ao usuário
+               a função do campo de seleção associado. */
+
+}
+
+.filtro select {
+
+    padding: 8px;
+    /* Define o preenchimento interno do elemento de seleção para 8px.
+       Isso aumenta a área de clique e melhora a estética do elemento de seleção,
+       tornando-o mais fácil e confortável de usar. */
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida de 1px de cor cinza claro (#ddd) 
+               ao redor do elemento de seleção.
+       Esta borda define claramente os limites do elemento de 
+               seleção, ajudando na sua identificação e uso. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos do elemento de seleção com um raio de 4px.
+       Este arredondamento suaviza a aparência do elemento de seleção, 
+               proporcionando um design mais moderno e amigável. */
+               
+}

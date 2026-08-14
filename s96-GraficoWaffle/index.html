@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5. 
+     A declaração do tipo de documento é importante 
+            porque diz ao navegador que versão do HTML a página 
+            está usando, garantindo que seja interpretada corretamente. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> é a raiz do documento HTML. O atributo 'lang' 
+            especifica a língua do conteúdo da página, que neste 
+            caso é o português do Brasil ('pt-BR'). 
+     Isso ajuda os navegadores a fornecerem funcionalidades 
+            baseadas na língua, como correção ortográfica e acessibilidade. -->
+
+<head>
+    <!-- A tag <head> contém metadados (informações sobre os dados) 
+                que não são exibidos diretamente na página web,
+                mas são usados pelo navegador. Inclui elementos 
+                como scripts, estilos, metadados, etc. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres para UTF-8, que 
+                inclui quase todos os caracteres de todos os idiomas 
+                humanos. Isso é essencial para internacionalização e 
+                para exibir corretamente os caracteres especiais, como acentos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a área de visualização para controlar as dimensões 
+                e a escala na página.
+         - width=device-width: define a largura da área de visualização 
+                para seguir a largura da tela do dispositivo.
+         - initial-scale=1.0: define o nível inicial de zoom quando a 
+                página é carregada pela primeira vez. 
+         Esta tag é fundamental para desenvolvimento web responsivo. -->
+
+    <title>Gráfico de Waffle</title>
+    <!-- Define o título da página, que é mostrado na aba do navegador. 
+         O título é importante para a experiência do usuário e SEO. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Inclui um arquivo CSS externo chamado 'estilos.css'. 
+                O atributo 'rel' especifica a relação entre o 
+                documento HTML e o arquivo vinculado (neste caso, 
+                um arquivo de estilo). 
+         O atributo 'href' especifica o caminho para o arquivo CSS, 
+                que estiliza a página HTML. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo da página que é 
+                visível ao usuário, como texto, imagens, links, etc. -->
+
+    <div class="container">
+        <!-- Div container: serve como um contêiner para agrupar 
+                    elementos relacionados visualmente. 
+             A classe 'container' é usada geralmente para estilizar e 
+                    alinhar o conteúdo de maneira centrada e organizada. -->
+
+        <h1>Gráfico de Waffle</h1>
+        <!-- O elemento <h1> define o título principal da página. 
+                    Este é o texto 'Gráfico de Waffle', que descreve o 
+                    conteúdo ou propósito principal da página. Usar <h1> 
+                        ajuda na acessibilidade e SEO,
+                        indicando a estrutura hierárquica do conteúdo. -->
+
+        <div class="filtro">
+            <!-- Div filtro: contêiner para os elementos de filtro, usado 
+                        para agrupar e estilizar a seção de filtragem. -->
+
+            <label for="selecionarProduto">Filtrar por Produto:</label>
+            <!-- Elemento <label>: especifica um rótulo para um elemento <select> abaixo. 
+                 O atributo 'for' associa o rótulo ao ID do elemento de 
+                        entrada, melhorando a acessibilidade,
+                        pois ao clicar no rótulo, o foco é movido para o 
+                        elemento de seleção correspondente. -->
+
+            <select id="selecionarProduto" onchange="filtrarPorProduto()">
+                <!-- Elemento <select>: cria uma lista suspensa. 
+                     O atributo 'id' é usado para identificar unicamente o 
+                            elemento na página, que pode ser referenciado 
+                            com JavaScript.
+                     O atributo 'onchange' adiciona um manipulador de eventos 
+                            que chama a função 'filtrarPorProduto()' 
+                            sempre que uma opção é selecionada, permitindo a 
+                            interatividade de filtrar dados com base na seleção 
+                            do usuário. -->
+
+                <option value="">Selecione um produto</option>
+                <!-- Elemento <option>: define as opções dentro 
+                            da lista suspensa. 
+                     A primeira opção geralmente serve como instrução 
+                            inicial e não possui um valor associado, 
+                            indicando ao usuário para selecionar uma 
+                            das opções válidas abaixo. -->
+
+                <option value="Produto A">Produto A</option>
+                <!-- Opções subsequentes representam produtos 
+                            específicos que podem ser selecionados. 
+                     O atributo 'value' é usado para determinar qual 
+                            produto foi selecionado quando o formulário é 
+                            processado ou acessado via JavaScript. -->
+
+                <option value="Produto B">Produto B</option>
+                <option value="Produto C">Produto C</option>
+                <option value="Produto D">Produto D</option>
+                <option value="Produto E">Produto E</option>
+
+            </select>
+        </div>
+
+        <div class="grafico-waffle">
+            <!-- Div grafico-waffle: contêiner para o gráfico de waffle, 
+                    usado para agrupar e estilizar visualmente o gráfico. -->
+
+            <div class="percentual">0%</div>
+            <!-- Div percentual: mostra o percentual atual de progresso ou 
+                        desempenho. Inicialmente definido para '0%'. 
+                 É dinamicamente atualizado via JavaScript com base 
+                        nos dados selecionados. -->
+
+            <div class="grade"></div>
+            <!-- Div grade: representa a grade visual do gráfico de 
+                        waffle, onde cada quadrado será colorido conforme o 
+                        percentual de desempenho. 
+                 Será preenchido dinamicamente com pequenos 
+                        quadrados (divs) via JavaScript. -->
+
+        </div>
+
+        <h2>Vendas de Produtos</h2>
+        <!-- O elemento <h2> define um cabeçalho secundário na página. 
+                        Este 'Vendas de Produtos' introduz a seção específica 
+                        que detalhará as vendas dos produtos, ajudando a 
+                        organizar o conteúdo de forma lógica para os 
+                        usuários e mecanismos de busca. -->
+
+        <table id="tabelaVendas">
+        <!-- A tag <table> é usada para criar uma tabela. O atributo 'id' 
+                        permite identificar a tabela unicamente na página,
+                        facilitando a manipulação com CSS ou JavaScript. -->
+
+            <thead>
+                <!-- A tag <thead> define um grupo de cabeçalhos para a tabela. 
+                    Ela agrupa conteúdo de cabeçalho que, por padrão, recebe 
+                            ênfase visual para diferenciá-lo dos dados da tabela. -->
+
+                <tr>
+                    <!-- A tag <tr> define uma linha da tabela. Cada <tr> 
+                                pode conter uma ou mais <td> (dados da tabela) 
+                                ou <th> (cabeçalhos da tabela). -->
+
+                    <th>Produto</th>
+                    <!-- A tag <th> especifica uma célula de cabeçalho em uma 
+                                tabela. Por padrão, o texto dentro de <th> é 
+                                negrito e centralizado.
+                        Este cabeçalho indica que uma das colunas da tabela 
+                                será para listar os produtos. -->
+
+                    <th>Quantidade de Vendas</th>
+                    <!-- Outro cabeçalho <th> que descreve que os dados nesta 
+                                coluna indicam a quantidade de vendas de cada produto. -->
+
+                    <th>Meta</th>
+                    <!-- Outro cabeçalho <th> que descreve que os dados nesta 
+                                coluna mostram a meta de vendas para cada produto. -->
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- A tag <tbody> é usada para agrupar o conteúdo 
+                            do corpo da tabela, geralmente contendo 
+                            múltiplas linhas (<tr>) que representam os 
+                            dados da tabela. -->
+
+                <tr>
+                    <!-- Define uma linha de dados na tabela. -->
+
+                    <td>Produto A</td>
+                    <!-- A tag <td> define uma célula de dados padrão 
+                                dentro da linha da tabela.
+                        Aqui, especifica que o produto nesta linha é "Produto A". -->
+
+                    <td>25</td>
+                    <!-- Célula adjacente mostrando a quantidade de 
+                                vendas para "Produto A". -->
+
+                    <td>100</td>
+                    <!-- Célula adjacente mostrando a meta de vendas para "Produto A". -->
+
+                </tr>
+                <!-- As linhas subsequentes repetem o formato acima para 
+                            diferentes produtos, como "Produto B", "Produto C" e "Produto D",
+                            fornecendo uma clara visão sobre as vendas e metas para cada um. -->
+
+                <tr>
+                    <td>Produto B</td>
+                    <td>45</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Produto C</td>
+                    <td>78</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Produto D</td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Produto E</td>
+                    <td>38</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        
+        </table>
+
+    </div>
+    <!-- Encerra o contêiner 'container'. Todos os elementos do gráfico, 
+                filtros e a tabela de vendas estão encapsulados neste contêiner. -->
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com o atributo 'src' inclui um arquivo JavaScript 
+                externo chamado 'scripts.js'.
+        Este script é responsável por manipular os dados e comportamentos 
+                na página, como filtrar produtos e desenhar o gráfico de waffle. -->
+                
+</body>
+<!-- Encerra a tag <body>, que contém todo o conteúdo 
+            visível da página. -->
+
+</html>
+<!-- Encerra a tag <html>, que encapsula todo o documento HTML. -->
