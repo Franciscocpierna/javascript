@@ -1,0 +1,334 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    /* Define a família de fontes para 'Roboto', uma 
+               fonte sans-serif. Roboto é moderna e legível,
+               adequada para interfaces digitais e melhora a 
+               legibilidade geral do texto na página. */
+
+    background-color: #f4f4f4;
+    /* Aplica uma cor de fundo cinza claro (#f4f4f4) ao corpo da página. 
+       Essa cor de fundo neutra cria um contraste suave que não 
+               cansa os olhos, ideal para melhorar a experiência do usuário. */
+
+    margin: 0;
+    /* Remove todas as margens externas do <body>, fazendo com 
+               que o conteúdo estenda até as bordas do navegador,
+               maximizando o uso do espaço disponível na tela. */
+
+    padding: 0;
+    /* Remove todo o preenchimento interno do <body>, garantindo 
+               que não haja espaços extras dentro do contêiner 
+               principal da página. */
+
+    display: flex;
+    /* Estabelece um layout flexível para o <body>. Flexbox é um 
+               método de layout que oferece um controle mais eficiente
+               da distribuição do espaço entre itens em uma interface e 
+               alinhamento de conteúdo, mesmo quando o tamanho 
+               desconhecido dos itens é um fator. */
+
+    justify-content: center;
+    /* Centraliza horizontalmente todos os elementos filhos 
+               diretos do <body> (neste caso, o .container).
+       Esta propriedade é útil para garantir que o contêiner 
+               principal esteja sempre no centro da viewport. */
+
+    align-items: center;
+    /* Centraliza verticalmente os elementos filhos diretos 
+               do <body> na página. 
+       Juntamente com `justify-content`, essa propriedade assegura 
+               que o .container esteja centrado tanto vertical 
+               quanto horizontalmente. */
+
+    min-height: 100vh;
+    /* Define a altura mínima do <body> para 100% da altura 
+               da viewport (vh - viewport height).
+       Isso garante que o corpo da página ocupe pelo menos a tela 
+               inteira, proporcionando uma visualização completa do 
+               conteúdo central sem necessidade de rolagem inicial. */
+
+}
+
+.container {
+
+    text-align: center;
+    /* Centraliza o texto dentro do .container, que é útil 
+               para alinhar corretamente títulos e qualquer 
+               texto dentro do contêiner,
+               promovendo uma apresentação estética e ordenada. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do .container para branco (#ffffff). 
+               O fundo branco é eficaz para destacar elementos dentro dele,
+               proporcionando uma tela limpa e clara para conteúdo 
+               como texto, gráficos e tabelas. */
+
+    padding: 30px;
+    /* Aplica um preenchimento de 30px em todas as direções dentro 
+               do .container, criando espaço entre os conteúdos 
+               internos e as bordas, o que aumenta a legibilidade 
+               e a estética visual. */
+
+    border-radius: 12px;
+    /* Arredonda os cantos do .container com um raio de 12px. 
+               Isso suaviza o design da interface, tornando a 
+               aparência do contêiner mais amigável e moderna. */
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Aplica uma sombra ao redor do .container. A sombra é 
+               sutil, com um desfoque de 8px e uma opacidade de 20%,
+               criando uma sensação de profundidade que ajuda a elevar 
+               visualmente o contêiner acima do resto da página. */
+
+    max-width: 800px;
+    /* Define a largura máxima do .container para 800px. Isso é 
+               importante para garantir que o contêiner não se 
+               torne muito largo em telas grandes, o que poderia 
+               prejudicar a experiência do usuário ao forçar movimentos 
+               excessivos dos olhos para ler linhas de texto muito longas. */
+
+    width: 100%;
+    /* Define a largura do .container para ocupar 100% do espaço 
+               disponível de seu elemento pai até o máximo de 800px,
+               garantindo que o layout seja responsivo e se ajuste a 
+               diferentes tamanhos de tela. */
+
+}
+
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20px para o cabeçalho <h1>, 
+               criando espaço entre o título e o conteúdo abaixo dele,
+               ajudando a estabelecer uma clara separação visual. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333), que oferece 
+               uma leitura confortável com contraste adequado em 
+               relação ao fundo claro. */
+
+}
+
+.grafico-info-container {
+
+    display: flex;
+    /* Utiliza Flexbox para o layout do contêiner das informações do 
+               gráfico, permitindo um alinhamento eficiente e 
+               responsivo dos elementos filhos. */
+
+    align-items: center;
+    /* Centraliza os itens filhos verticalmente dentro do 
+               contêiner, garantindo que todos os elementos 
+               estejam alinhados no centro ao longo do eixo transversal. */
+
+    justify-content: center;
+    /* Centraliza os itens filhos horizontalmente dentro do 
+               contêiner, promovendo um layout equilibrado e 
+               visualmente agradável. */
+
+}
+
+.grafico-container {
+
+    margin: 20px;
+    /* Aplica uma margem de 20px ao redor do contêiner do 
+               gráfico, criando espaço entre este contêiner e outros 
+               elementos ou bordas do contêiner pai. */
+
+}
+
+.info {
+
+    margin-left: 20px;
+    /* Aplica uma margem esquerda de 20px ao contêiner de 
+               informações, afastando-o do contêiner do gráfico 
+               para evitar uma aparência muito aglomerada e 
+               melhorar a legibilidade. */
+
+    text-align: left;
+    /* Alinha o texto à esquerda dentro do contêiner de informações, 
+               o que é padrão para textos em muitos idiomas e ajuda na 
+               leitura natural do conteúdo. */
+
+}
+
+.info h3 {
+
+    margin-bottom: 10px;
+    /* Define uma margem inferior de 10px para o cabeçalho <h3> 
+               dentro do contêiner de informações, separando 
+               visualmente o título da lista abaixo. */
+
+    color: #333;
+    /* Define a cor do texto do cabeçalho para cinza escuro (#333), 
+               mantendo a consistência com o estilo do título 
+               principal (h1) e garantindo boa legibilidade. */
+
+}
+
+.info ul {
+
+    list-style: none;
+    /* Remove os marcadores padrão das listas para as <ul>, criando 
+               uma lista mais limpa visualmente, adequada para apresentações 
+               mais formais e estilizadas de conteúdo. */
+
+    padding: 0;
+    /* Remove o preenchimento interno padrão da lista, ajudando a 
+               alinhar o conteúdo da lista com outros elementos 
+               dentro do mesmo contêiner. */
+
+}
+
+.info li {
+
+    margin: 5px 0;
+    /* Aplica uma pequena margem vertical de 5px acima e abaixo de 
+               cada item da lista (<li>), melhorando a separação entre os 
+               itens para facilitar a distinção visual. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16px, que é adequado para a leitura 
+               confortável em dispositivos desktop e móveis. */
+
+    color: #555;
+    /* Define a cor do texto para os itens da lista como um cinza 
+               médio (#555), que é mais suave do que o preto completo e 
+               melhora a estética visual enquanto mantém a legibilidade. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define que a largura da tabela ocupará 100% da largura do 
+               contêiner, garantindo que utilize todo o espaço disponível. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20px para separar a tabela de 
+               qualquer conteúdo que a seguir, melhorando a separação 
+               visual e a legibilidade. */
+
+    border-collapse: collapse;
+    /* Colapsa as bordas da tabela em uma única borda ou as 
+               remove para evitar bordas duplas entre as células,
+               criando um visual mais limpo e profissional. */
+
+}
+
+table, th, td {
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida de 1px com uma cor cinza 
+               claro (#ddd) aos elementos table, th e td,
+               definindo divisões claras entre as células e 
+               ao redor da tabela. */
+
+}
+
+th {
+
+    background-color: #f8f8f8;
+    /* Define uma cor de fundo cinza claro para as 
+               células do cabeçalho da tabela, ajudando a 
+               distinguir visualmente as células de cabeçalho 
+               das células de dados. */
+
+    font-weight: bold;
+    /* Define o texto nas células de cabeçalho como negrito, 
+               enfatizando os títulos e fazendo-os se destacarem 
+               como identificadores importantes para as 
+               colunas de dados. */
+
+    text-transform: uppercase;
+    /* Transforma o texto nas células de cabeçalho para letras 
+               maiúsculas, aumentando a legibilidade e conferindo 
+               uma aparência uniforme e profissional. */
+
+}
+
+th, td {
+
+    padding: 12px;
+    /* Adiciona um preenchimento interno de 12px dentro 
+               de cada célula da tabela, criando espaço ao 
+               redor do texto e melhorando a legibilidade e o 
+               conforto visual. */
+
+    text-align: center;
+    /* Centraliza o texto horizontalmente dentro das células 
+               de cabeçalho e de dados, garantindo que o conteúdo 
+               seja alinhado de forma ordenada e uniforme. */
+
+    color: #333;
+    /* Define a cor do texto como cinza escuro (#333), proporcionando 
+               um bom contraste contra os fundos claros das células sem 
+               ser tão intenso quanto o preto. */
+
+}
+
+tr:nth-child(even) {
+
+    background-color: #f9f9f9;
+    /* Aplica uma cor de fundo cinza muito claro às linhas 
+               pares, criando um efeito de listras que 
+               melhora a legibilidade ao separar visualmente 
+               as linhas adjacentes. */
+
+}
+
+tr:hover {
+
+    background-color: #f1f1f1;
+    /* Altera a cor de fundo de uma linha para um cinza 
+               ligeiramente mais escuro quando o mouse passa sobre ela,
+               proporcionando um feedback visual que ajuda os 
+               usuários a acompanhar a linha com a qual 
+               estão interagindo. */
+
+}
+
+.filtro {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior ao contêiner do filtro, 
+               criando um espaço vertical entre ele e qualquer 
+               conteúdo acima, separando o filtro funcional e 
+               visualmente de outros elementos. */
+
+}
+
+.filtro label {
+
+    margin-right: 10px;
+    /* Adiciona uma margem direita ao rótulo do filtro, 
+               espaçando-o da caixa de seleção associada
+               e melhorando o fluxo e a legibilidade do layout. */
+
+    font-weight: bold;
+    /* Realça o rótulo do filtro tornando-o negrito, ajudando os 
+               usuários a identificar mais facilmente a área 
+               interativa do filtro. */
+
+}
+
+.filtro select {
+
+    padding: 8px;
+    /* Adiciona preenchimento dentro da caixa de seleção, tornando-a 
+               mais fácil de clicar e melhorando a usabilidade 
+               visual e tátil do filtro. */
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda cinza claro à caixa de seleção, 
+               definindo visualmente seus limites
+               e garantindo que ela se destaque contra o fundo. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos da caixa de seleção com um raio 
+               de 4px, suavizando sua aparência
+               e tornando-a mais visualmente atraente. */
+               
+}
