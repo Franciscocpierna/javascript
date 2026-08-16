@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- Declara que esta é uma página HTML5. Essa declaração é 
+          fundamental para que os navegadores modernos processem 
+          corretamente a página e usem os padrões atuais de 
+          HTML, CSS e JavaScript. -->
+
+<html lang="pt-BR">
+<!-- Inicia o documento HTML e especifica o idioma como Português 
+          do Brasil (pt-BR). Isso é importante para acessibilidade, 
+          SEO e para definir a língua padrão para quaisquer elementos 
+          que possam precisar de localização, como formatos de 
+          data, números e texto direcional. -->
+
+<head>
+    <!-- A tag <head> é uma seção que contém metadados (dados 
+               sobre os dados da página), links para scripts e 
+               folhas de estilo. Ela não contém conteúdo que é 
+               diretamente visível na página. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres como UTF-8, que é um 
+               padrão de codificação que inclui quase todos os 
+               caracteres e símbolos usados nas línguas escritas 
+               humanas. Isso assegura que qualquer texto inserido na 
+               página será exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o viewport para controlar o layout em navegadores 
+               móveis. Não permite zoom ao carregar e define a largura do 
+               viewport para igualar a largura do dispositivo, o que é 
+               essencial para que o design responsivo funcione corretamente. -->
+
+    <title>Gráfico de Áreas com Dados de Excel</title>
+    <!-- Define o título da página, que é exibido na aba do 
+               navegador e usado pelos motores de busca para identificar o 
+               conteúdo da página. O título também é importante 
+               para a usabilidade e SEO. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Vincula uma folha de estilo externa ao documento. 
+               O atributo 'href' especifica o caminho para o 
+               arquivo CSS que controla a apresentação visual da 
+               página. Isso permite separar o conteúdo e o design, 
+               facilitando manutenções e atualizações. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- Inclui a biblioteca 'xlsx', que é usada para ler e manipular 
+               arquivos do Excel diretamente no navegador. Esta versão é 
+               minificada, o que significa que o código foi compactado 
+               para reduzir o tempo de carregamento. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Adiciona a biblioteca Chart.js ao documento. Chart.js é uma 
+               biblioteca JavaScript de código aberto utilizada para 
+               criar gráficos animados e responsivos em um elemento <canvas>. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <!-- Adiciona o plugin Chartjs-plugin-datalabels, que é usado 
+               com Chart.js para exibir rótulos de dados em gráficos, 
+               fornecendo informações adicionais visualmente sobre os 
+               pontos de dados individuais. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível ao usuário na 
+               página web. Aqui é onde você coloca elementos como 
+               texto, imagens, vídeos, tabelas, e outros 
+               componentes interativos. -->
+
+    <div class="container">
+        <!-- A tag <div> com a classe "container" é usada para 
+                    encapsular elementos e facilitar o controle de 
+                    layout usando CSS. 
+             A classe "container" geralmente é usada para centralizar o 
+                    conteúdo na página e aplicar estilização consistente, 
+                    como margens, paddings, e sombras. -->
+
+        <h1>Gráfico de Áreas com Dados de Excel</h1>
+        <!-- A tag <h1> representa o título principal da página. 
+                    Usar <h1> ajuda na estruturação semântica da página 
+                    e é crucial para SEO (Search Engine Optimization),
+                    pois os motores de busca usam esse título para entender o 
+                    conteúdo principal da página. -->
+
+        <canvas id="graficoAreas" width="400" height="200"></canvas>
+        <!-- A tag <canvas> é usada para desenhar gráficos e outras 
+                    imagens via scripting (geralmente JavaScript). 
+             O atributo 'id' permite que o canvas seja facilmente 
+                    referenciado no JavaScript. 
+             Os atributos 'width' e 'height' definem as 
+                    dimensões do canvas na página. -->
+
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com o atributo 'src' apontando para "scripts.js" 
+                    inclui um arquivo JavaScript externo que contém o código 
+                    necessário para gerar e manipular o gráfico de 
+                    áreas no elemento <canvas> acima.
+         Esse script usa a biblioteca Chart.js, já 
+                    incluída no cabeçalho, para desenhar e configurar o 
+                    gráfico com base nos dados carregados de um 
+                    arquivo Excel. -->
+
+</body>
+</html>
+<!-- As tags </body> e </html> marcam o fim do corpo e do 
+          documento HTML, respectivamente. Todos os scripts e 
+          conteúdo que devem ser renderizados devem estar dentro 
+          do <body>, enquanto o <html> encerra todos os 
+          elementos da página. -->

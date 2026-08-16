@@ -1,0 +1,119 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    /* Define a família de fontes para o corpo do documento. 
+                'Roboto' é uma fonte sans-serif limpa e moderna. 
+                Caso não esteja disponível, o navegador usará 
+                qualquer fonte sans-serif padrão. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo do documento como um cinza 
+                claro (#f4f4f4), que é suave para os olhos e oferece um 
+                contraste moderado com texto escuro. */
+
+    color: #333;
+    /* Define a cor padrão do texto em todo o corpo do documento 
+                como um cinza escuro (#333), proporcionando uma 
+                leitura fácil sem ser tão dura quanto o preto puro. */
+
+    display: flex;
+    /* Ativa o Flexbox, um método de layout que permite o alinhamento 
+                fácil e a distribuição espacial de itens dentro
+                 de um contêiner. */
+
+    flex-direction: column;
+    /* Define a direção principal do flexbox como coluna, o que 
+                significa que os filhos do corpo serão organizados 
+                verticalmente. */
+
+    align-items: center;
+    /* Centraliza os itens filho do corpo na direção transversal 
+                (neste caso, horizontalmente, pois a direção flex é coluna). */
+
+    margin: 0;
+    /* Remove todas as margens externas do elemento <body>, ajudando a 
+                garantir que o layout não seja afetado por espaços 
+                indesejados em torno das bordas da página. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno de 20px ao redor do 
+                conteúdo dentro do <body>, criando espaço entre o 
+                conteúdo e as bordas do navegador. */
+
+}
+
+.container {
+
+    text-align: center;
+    /* Alinha o texto dentro do contêiner ao centro, o que é 
+                útil para títulos, botões e outros elementos que 
+                devem ser destacados visualmente no meio. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do contêiner como branco (#fff), 
+                garantindo que qualquer conteúdo dentro dele se 
+                destaque contra o fundo mais escuro do corpo. */
+
+    padding: 30px;
+    /* Adiciona um preenchimento de 30px ao redor do conteúdo 
+                dentro do contêiner, proporcionando espaço entre o 
+                conteúdo e as bordas do contêiner. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner, dando-lhe um aspecto 
+                mais suave e moderno com um raio de 10px. */
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra sutil ao contêiner, elevando-o visualmente 
+                da página. A sombra se estende horizontalmente em 0px, 
+                verticalmente em 2px, e desfoca em 10px com uma 
+                cor preta translúcida. */
+
+    max-width: 800px;
+    /* Define uma largura máxima para o contêiner de 800px, garantindo 
+                que ele não se torne demasiadamente largo em telas grandes. */
+
+    width: 100%;
+    /* Define a largura do contêiner para ocupar 100% da largura 
+                de seu elemento pai, mas não excederá a largura 
+                máxima de 800px. */
+
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20px para o elemento <h1>. Isso 
+                cria um espaço entre o título e qualquer conteúdo que o 
+                siga, ajudando a separar visualmente o título de 
+                outros elementos na página. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do título para 24px, o que ajuda a 
+                garantir que o título seja grande e claro o suficiente 
+                para chamar atenção e ser facilmente legível. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte 'negrito' ao texto do título. Isso faz 
+                com que o texto fique mais espesso e mais proeminente, 
+                ajudando a destacar o título como uma informação 
+                importante na página. */
+
+    color: #333;
+    /* Define a cor do texto do título para um cinza escuro (#333). 
+                Essa cor é escura o suficiente para excelente legibilidade 
+                sem ser tão dura quanto o preto puro, reduzindo 
+                o cansaço visual. */
+
+}
+
+canvas {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20px ao elemento <canvas>. 
+                Isso cria um espaço entre o elemento <canvas> e qualquer 
+                conteúdo acima dele, como um título ou outro componente 
+                visual, assegurando que o gráfico não esteja visualmente 
+                apertado contra outros elementos. */
+                
+}
