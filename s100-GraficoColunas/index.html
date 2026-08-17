@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- A declaração do tipo de documento (DOCTYPE) define que 
+            esta é uma página HTML5. É essencial para garantir 
+            que o navegador processe a página usando o modo 
+            de padrões do HTML5. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> começa o documento HTML. O atributo 'lang' 
+            especifica que o idioma principal da página é o 
+            português do Brasil, o que ajuda os motores de busca e 
+            as tecnologias assistivas a entenderem o conteúdo da página. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para CSS, scripts e 
+            outras informações que não são exibidas diretamente na 
+            parte visível da página. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define UTF-8 como o 
+            conjunto de caracteres para a página, suportando todos os 
+            caracteres universais. Isso é crucial para a internacionalização 
+            e para exibir corretamente textos em qualquer idioma. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> que configura a visualização da página para 
+            ser responsiva. O atributo 'content' especifica que a largura 
+            da página deve coincidir com a largura do dispositivo 
+            (width=device-width) e que o zoom inicial seja 1.0 
+            (initial-scale=1.0). Isso é fundamental para garantir 
+            que a página se comporte bem em dispositivos móveis. -->
+
+    <title>Gráfico de Colunas com Dados de Excel</title>
+    <!-- A tag <title> define o título da página, que aparece na 
+            aba do navegador. Este título é também usado pelos 
+            motores de busca para entender o conteúdo da página 
+            e exibi-lo nos resultados de pesquisa. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada para vincular uma folha de estilo 
+            externa ao documento. O atributo 'href' especifica o 
+            caminho para o arquivo CSS que contém os estilos para a 
+            página. Isso permite separar o design e a formatação do 
+            conteúdo HTML, facilitando a manutenção. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- Inclui a biblioteca 'xlsx' através de um CDN (Content Delivery 
+            Network). Esta biblioteca é usada para ler dados de arquivos 
+            Excel diretamente no navegador. A versão '.min' indica que é
+            uma versão minimizada, otimizada para carregamento 
+            mais rápido. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Inclui a biblioteca Chart.js, também via CDN. Chart.js é 
+            uma biblioteca de gráficos JavaScript que permite criar 
+            uma ampla variedade de gráficos interativos e responsivos. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página web. 
+            É aqui que todos os elementos interativos, textos, imagens, 
+            etc., são colocados para que os usuários possam 
+            interagir diretamente. -->
+
+    <div class="container">
+        <!-- A tag <div> com a classe "container" serve como um 
+                    contêiner principal para centralizar e organizar o 
+                    conteúdo da página. 
+             A classe "container" é tipicamente usada em CSS para 
+                    aplicar estilos específicos como margens, alinhamento e 
+                    outros para melhorar o layout. -->
+
+        <h1>Gráfico de Colunas com Dados de Excel</h1>
+        <!-- A tag <h1> define o título principal da página. Ele é 
+                    importante tanto para SEO quanto para acessibilidade, 
+                    pois fornece um resumo claro do conteúdo da página 
+                    aos motores de busca e às tecnologias assistivas. -->
+
+        <canvas id="graficoColunas" width="400" height="200"></canvas>
+        <!-- A tag <canvas> é usada para desenhar gráficos ou outros 
+                    elementos visuais via scripting (usualmente JavaScript). 
+             O atributo 'id' permite que o elemento seja facilmente 
+                    referenciado pelo JavaScript para dinamicamente 
+                    renderizar o gráfico de colunas. 
+             Os atributos 'width' e 'height' definem o tamanho do 
+                    elemento canvas na página. -->
+
+        <table id="tabelaVendas">
+            <!-- A tag <table> é usada para criar uma tabela. 
+                    O atributo 'id' permite que a tabela seja identificada e 
+                    manipulada facilmente via JavaScript. -->
+
+            <thead>
+                <!-- A tag <thead> é usada para agrupar o 
+                        cabeçalho de uma tabela. -->
+
+                <tr>
+                    <!-- A tag <tr> define uma linha da tabela. -->
+
+                    <th>Produto</th>
+                    <!-- A tag <th> define uma célula de cabeçalho, 
+                                que é usada para títulos das colunas na tabela. -->
+
+                    <th>Quantidade de Vendas</th>
+                    <!-- Outra célula de cabeçalho para a segunda coluna. -->
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- A tag <tbody> é usada para agrupar o corpo 
+                        principal da tabela, onde os dados da tabela 
+                        são realmente exibidos. -->
+                <!-- Dados da tabela serão carregados aqui através 
+                        do JavaScript. -->
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta para 'scripts.js' 
+                inclui um arquivo JavaScript externo que contém o código 
+                necessário para gerar o gráfico e preencher a tabela 
+                com dados dinamicamente. -->
+                
+</body>
+</html>

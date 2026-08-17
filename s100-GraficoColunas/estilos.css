@@ -1,0 +1,151 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    /* Define a família de fontes do corpo da página para 'Roboto', 
+            uma fonte sans-serif moderna e legível. Essa escolha de 
+            fonte é popular por sua clareza e adequação a 
+            interfaces digitais. */
+
+    background-color: #f4f4f4;
+    /* Configura a cor de fundo de todo o corpo da página para um 
+            cinza claro (#f4f4f4), que é suave para os olhos e oferece 
+            um contraste adequado com o texto escuro. */
+
+    color: #333;
+    /* Define a cor padrão do texto para um cinza escuro (#333). Esta cor é 
+            escura o suficiente para forte legibilidade sem ser tão dura 
+            quanto o preto puro. */
+
+    display: flex;
+    /* Ativa o Flexbox para o layout do corpo, um modelo de layout 
+            que permite um alinhamento fácil e a distribuição proporcional 
+            do espaço entre os itens do contêiner. */
+
+    flex-direction: column;
+    /* Define a direção do fluxo principal do Flexbox para 'column', o 
+            que significa que os filhos do <body> são empilhados verticalmente. */
+
+    align-items: center;
+    /* Alinha os itens filhos (como <div>, <h1>, etc.) no centro do 
+            eixo transversal, garantindo que estejam centralizados
+            horizontalmente dentro do corpo. */
+
+    margin: 0;
+    /* Remove todas as margens externas do <body>, garantindo que 
+            não haja espaço extra na borda da página. */
+
+    padding: 20px;
+    /* Aplica um padding (preenchimento interno) de 20px em todos os 
+            lados do corpo da página, criando um espaço entre o 
+            conteúdo e as bordas do navegador. */
+            
+}
+
+.container {
+
+    text-align: center;
+    /* Centraliza o texto dentro do contêiner, que é útil para 
+            títulos, textos e outros elementos internos que 
+            devem ser alinhados ao centro. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do contêiner para branco (#fff), 
+            garantindo que qualquer conteúdo dentro dele se 
+            destaque contra o fundo mais escuro do corpo. */
+
+    padding: 20px;
+    /* Aplica um padding de 20px em todos os lados dentro do 
+            contêiner, aumentando o espaço entre o conteúdo 
+            interno e as bordas do contêiner. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner com um raio de 10px, 
+            dando ao elemento uma aparência mais suave e moderna. */
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra sutil ao contêiner, criando um efeito 
+            visual de elevação. A sombra se projeta 2px para baixo 
+            com um desfoque de 10px e uma transparência leve. */
+
+    max-width: 800px;
+    /* Define a largura máxima do contêiner para 800px, 
+            garantindo que ele não se torne excessivamente 
+            largo em telas grandes. */
+
+    width: 100%;
+    /* Faz com que a largura do contêiner seja 100% do seu 
+            contêiner pai (neste caso, o <body>), mas não 
+            excederá a largura máxima definida. */
+
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20px para o elemento <h1>. 
+            Isso cria espaço entre o título e qualquer conteúdo 
+            que venha a seguir, ajudando a separar visualmente o 
+            título de outros elementos na página. */
+
+}
+
+table {
+
+    width: 80%;
+    /* Define a largura das tabelas para 80% da largura do 
+            contêiner pai. Isso ajuda a manter a tabela 
+            proporcionalmente espaçosa, mas não excessivamente larga. */
+            
+    margin: 20px auto;
+    /* Centraliza a tabela horizontalmente dentro do seu 
+            contêiner e adiciona uma margem de 20px acima e 
+            abaixo dela, criando espaço entre a tabela e 
+            outros elementos. */
+
+    border-collapse: collapse;
+    /* Recolhe as bordas da tabela em uma única borda, 
+            removendo o espaço entre as bordas das células, resultando em um 
+            aparência mais limpa e conectada. */
+
+    color: #333;
+    /* Define a cor do texto dentro da tabela para um 
+            cinza escuro (#333), o que proporciona excelente 
+            legibilidade contra o fundo claro da tabela. */
+
+}
+
+table, th, td {
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida de 1px com uma cor cinza 
+            claro (#ddd) para a tabela inteira, incluindo 
+            cabeçalhos (<th>) e células (<td>).
+       Isso ajuda a definir claramente as divisões entre 
+            diferentes seções da tabela. */
+
+}
+
+th, td {
+
+    padding: 12px;
+    /* Aplica um preenchimento de 12px dentro de cada cabeçalho 
+            de tabela (<th>) e célula de tabela (<td>). 
+       Isso garante que o conteúdo dentro das células tenha um 
+            espaço adequado ao redor, melhorando a legibilidade 
+            e a estética. */
+
+    text-align: center;
+    /* Centraliza o texto dentro dos cabeçalhos e das células da 
+            tabela, proporcionando um layout uniforme e fácil de ler. */
+
+}
+
+canvas {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20px ao elemento <canvas>. 
+       Isso cria espaço entre o canvas e qualquer conteúdo 
+            acima dele, garantindo que o gráfico não esteja 
+            visualmente apertado contra outros elementos. */
+            
+}
