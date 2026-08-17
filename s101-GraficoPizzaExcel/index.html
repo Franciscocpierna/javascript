@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE é uma instrução para o navegador 
+               sobre a versão do HTML que a página está escrita. 
+     Neste caso, informa que o documento é HTML5, a 
+               versão mais atual do HTML. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> indica o início do documento HTML. O atributo 'lang' 
+               especifica o idioma do conteúdo da página,
+               que neste caso é o Português do Brasil ('pt-BR'). 
+          Isto é importante para acessibilidade e motores de busca. -->
+
+<head>
+<!-- A tag <head> contém metadados (dados sobre dados) que 
+               geralmente não são visíveis para o usuário,
+               mas são úteis para o navegador e motores de busca. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define a codificação 
+                    de caracteres para o documento. 
+         'UTF-8' é uma codificação de caracteres Unicode que 
+                    inclui praticamente todos os caracteres 
+                    de todos os sistemas de escrita do mundo, garantindo 
+                    que o texto seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag <meta> é usada para controlar a viewport (área de exibição) 
+                    do navegador, garantindo responsividade.
+         'width=device-width' faz com que a largura da página 
+                    corresponda à largura do dispositivo.
+         'initial-scale=1.0' define o nível de zoom inicial quando a 
+                    página é carregada pela primeira vez. -->
+
+    <title>Gráfico de Pizza com Dados de Excel</title>
+    <!-- A tag <title> define o título da página, que é 
+                    mostrado na aba do navegador.
+         Este título é também usado pelos motores de busca e 
+                    deve ser informativo e conciso. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> aqui é usada para incluir um arquivo de 
+                    folha de estilos CSS externo.
+         'rel="stylesheet"' indica que o tipo de documento vinculado é 
+                    uma folha de estilos CSS.
+         'href="estilos.css"' especifica o caminho para o arquivo CSS 
+                    que estiliza a página. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- A tag <script> com o atributo 'src' é usada para incluir um 
+                    arquivo JavaScript externo.
+         Este script específico é uma biblioteca chamada 'xlsx', que é 
+                    usada para ler arquivos Excel. 
+         A URL completa aponta para uma versão minificada da biblioteca, o 
+                    que ajuda a reduzir o tempo de carregamento. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Inclui a biblioteca Chart.js, uma popular biblioteca JavaScript 
+                    para criar gráficos interativos. 
+         Isso permite criar o gráfico de pizza mencionado no 
+                    título da página. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <!-- Inclui um plugin para a biblioteca Chart.js chamado 
+                    'datalabels', que é usado para exibir 
+                    etiquetas de dados em gráficos, oferecendo mais 
+                    interatividade e informações aos usuários. -->
+
+</head>
+
+<body>
+<!-- A tag <body> contém todo o conteúdo da página que é visível 
+                    para o usuário, como texto, imagens, links, etc. -->
+
+    <div class="container">
+    <!-- A tag <div> é usada para agrupar outros elementos e facilitar a 
+                    estilização e manipulação com CSS e JavaScript.
+         A classe 'container' é geralmente usada para definir um 
+                    contêiner centralizado para o conteúdo dentro dela,
+                    que pode ser estilizado separadamente do restante da página. -->
+
+        <h1>Gráfico de Pizza com Dados de Excel</h1>
+        <!-- A tag <h1> representa um cabeçalho, que é o título ou o 
+                    tópico principal da página.
+             Cabeçalhos ajudam a organizar o conteúdo da página e são 
+                    importantes para SEO (Otimização para motores de busca). -->
+
+        <canvas id="graficoPizza" width="200" height="200"></canvas>
+        <!-- A tag <canvas> é usada para desenhar gráficos via 
+                         scripting (geralmente JavaScript).
+             O atributo 'id' permite que o elemento seja identificado 
+                         de forma única no documento.
+             Os atributos 'width' e 'height' definem a largura e a 
+                         altura do canvas, aqui configurados como 200x200 pixels. -->
+
+        <table id="tabelaVendas">
+        <!-- A tag <table> é usada para criar uma tabela. O atributo 'id' 
+                         permite a identificação única,
+                         facilitando a manipulação com JavaScript. -->
+
+            <thead>
+            <!-- A tag <thead> é usada para agrupar o conteúdo do 
+                         cabeçalho em uma tabela. -->
+
+                <tr>
+                <!-- A tag <tr> define uma linha de células em uma tabela. -->
+
+                    <th>Produto</th>
+                    <!-- A tag <th> define uma célula de cabeçalho em uma 
+                                   tabela. O texto dentro de <th> geralmente é 
+                                   em negrito e centralizado. -->
+
+                    <th>Quantidade de Vendas</th>
+                    <!-- Outra célula de cabeçalho, definindo o título para a 
+                                   coluna de quantidades de vendas. -->
+
+                </tr>
+            </thead>
+            <tbody>
+            <!-- A tag <tbody> é usada para agrupar o corpo da tabela, 
+                              geralmente contendo múltiplas linhas de dados. -->
+
+                <!-- Dados da tabela serão carregados aqui -->
+                <!-- Um comentário indicando que os dados da tabela 
+                              serão inseridos dinamicamente aqui. 
+                     Utilizado para informar desenvolvedores ou manter o 
+                              local reservado para manipulação via JavaScript. -->
+
+            </tbody>
+        </table>
+        
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com o atributo 'src' inclui um 
+                    arquivo JavaScript externo. 
+         Este script contém a lógica para manipular os dados do 
+                    Excel e renderizar o gráfico de pizza, bem como 
+                    preencher a tabela. -->
+
+</body>
+</html>
+<!-- O fim das tags <body> e <html> marca o final 
+               do documento HTML. -->
