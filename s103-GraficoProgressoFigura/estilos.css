@@ -1,0 +1,195 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    /* Define a família de fontes para 'Roboto', seguida 
+            de 'sans-serif' como fallback. 'Roboto' é uma fonte 
+            moderna e legível, adequada para interfaces digitais. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo do documento como um cinza 
+            claro (#f4f4f4), proporcionando um fundo neutro que não 
+            distrai, ideal para conteúdos coloridos ou interfaces. */
+
+    color: #333;
+    /* Define a cor padrão do texto para um cinza escuro (#333), que 
+            oferece bom contraste com o fundo claro, melhorando a legibilidade. */
+
+    display: flex;
+    /* Ativa o modelo de layout Flexbox, que permite um alinhamento 
+            mais fácil e responsivo dos elementos filhos. */
+
+    flex-direction: column;
+    /* Define a direção principal do layout flexível para 'column', 
+            fazendo com que os elementos filhos sejam organizados verticalmente. */
+
+    align-items: center;
+    /* Alinha os elementos filhos ao centro do eixo transversal 
+            (horizontalmente neste caso), centralizando-os dentro do corpo. */
+
+    margin: 0;
+    /* Remove todas as margens externas do elemento 'body', 
+            permitindo que o conteúdo utilize todo o espaço disponível 
+            na janela do navegador. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20px ao redor do conteúdo interno 
+            do corpo, criando um espaço entre o conteúdo e as bordas do 
+            navegador, aumentando a área de respiração visual. */
+
+}
+
+.container {
+
+    text-align: center;
+    /* Alinha o texto e, por extensão, outros elementos inline ao 
+            centro do contêiner. Isso é útil para garantir que títulos, 
+            textos e outros conteúdos sejam centralizados visualmente. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do elemento '.container' como branco (#fff), 
+            criando um contraste claro com o fundo cinza do 'body' e 
+            destacando visualmente a área principal de conteúdo. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20px ao redor do conteúdo dentro 
+            do '.container', aumentando o espaço entre o conteúdo e as 
+            bordas do contêiner, melhorando a legibilidade e a estética. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner com um raio de 10px, proporcionando 
+            uma aparência mais suave e moderna, que é visualmente 
+            agradável e menos formal. */
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra sutil ao redor do '.container'. Os valores 
+            especificam o deslocamento horizontal, vertical, o raio de 
+            desfoque, e a cor da sombra (um preto com 10% de transparência), 
+            criando um efeito de elevação visual que faz o contêiner 
+            parecer flutuar acima do restante da página. */
+
+    max-width: 800px;
+    /* Define a largura máxima do '.container' para 800px. Isso 
+            garante que o contêiner não se torne excessivamente largo 
+            em telas grandes, mantendo a legibilidade e a estética do layout. */
+
+    width: 100%;
+    /* Define a largura do '.container' para ocupar 100% do espaço 
+            disponível de seu elemento pai, até o máximo de 800px. Isso 
+            garante que o contêiner se adapte ao tamanho da tela ou ao 
+            espaço disponível. */
+
+}
+
+.grafico-container {
+
+    position: relative;
+    /* Define a posição do container como relativa, o que permite 
+                que os elementos filhos com posição absoluta se 
+                posicionem em relação a ele, criando um contexto de 
+                posicionamento localizado para seus elementos internos. */
+
+    width: 400px;
+    /* Estabelece a largura do container do gráfico para 400 pixels, 
+                garantindo que o gráfico tenha um tamanho fixo e adequado 
+                para a visualização das imagens de progresso. */
+
+    height: 400px;
+    /* Define a altura do container do gráfico, também para 400 pixels, 
+                criando uma área quadrada perfeita que facilita o 
+                alinhamento e a proporção visual das imagens internas. */
+
+    margin: 0 auto;
+    /* Centraliza o container do gráfico horizontalmente dentro de 
+                seu elemento pai, utilizando '0' para a margem superior e 
+                inferior e 'auto' para as margens laterais, otimizando a 
+                visualização central no layout da página. */
+
+}
+
+
+.grafico-container img {
+
+    position: absolute;
+    /* A posição absoluta é aplicada para cada imagem dentro do 
+                container, fazendo com que elas se posicionem em relação 
+                ao próprio container, devido à sua posição relativa. Isso é 
+                essencial para sobrepor as imagens de base e 
+                preenchimento corretamente. */
+
+    top: 0;
+    /* Posiciona as imagens no topo do container, garantindo que o 
+                ponto de início vertical seja o canto superior do container. */
+
+    left: 0;
+    /* Posiciona as imagens à esquerda do container, garantindo que o 
+                ponto de início horizontal seja o canto esquerdo do container. */
+
+    width: 100%;
+    /* Define a largura das imagens para cobrir 100% da largura do 
+                container, assegurando que as imagens se estendam por 
+                toda a largura disponível, mantendo a proporção e o 
+                alinhamento corretos. */
+
+    height: 100%;
+    /* Define a altura das imagens para cobrir 100% da altura do 
+                container, garantindo que as imagens preencham 
+                completamente a altura disponível, alinhando-se 
+                perfeitamente ao espaço designado. */
+
+}
+
+#percentual {
+
+    position: absolute;
+    /* A propriedade 'position: absolute' é usada para posicionar o 
+                elemento de forma absoluta em relação ao seu contêiner 
+                posicionado mais próximo, neste caso, dentro do `.grafico-container`, 
+                que tem 'position: relative'. Isso permite que o percentual seja 
+                posicionado exatamente sobre a imagem do gráfico. */
+
+    top: 50%;
+    left: 50%;
+    /* As propriedades 'top' e 'left' definem a posição do elemento a 50% 
+                do topo e 50% da esquerda do seu contêiner, posicionando-o 
+                teoricamente no centro. */
+
+    transform: translate(-50%, -50%);
+    /* 'transform: translate(-50%, -50%)' ajusta o posicionamento, 
+                movendo o elemento para trás pela metade de sua própria 
+                altura e largura, garantindo que ele seja centralizado 
+                precisamente no meio do gráfico. Este método de centralização é 
+                muito eficaz e responsivo. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte para 24 pixels, garantindo que o 
+                texto seja grande o suficiente para ser facilmente 
+                legível sobre o gráfico de progresso. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333), que oferece 
+                excelente contraste com a maioria dos fundos, melhorando a 
+                legibilidade do texto sobre imagens coloridas ou 
+                variadas no gráfico. */
+
+}
+
+#descricaoProduto {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20px, separando visualmente a 
+                descrição do produto dos elementos acima dela, como o 
+                gráfico ou o seletor de produto. Isso ajuda a organizar 
+                melhor o conteúdo e a melhorar a estética da apresentação. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para 18 pixels, que é suficientemente 
+                grande para facilitar a leitura sem dominar visualmente 
+                outros elementos da interface. */
+
+    color: #333;
+    /* Configura a cor do texto para um cinza escuro (#333). Esta 
+                cor foi escolhida para manter a consistência com outras 
+                partes do texto na página e para assegurar boa 
+                visibilidade e contraste. */
+                
+}

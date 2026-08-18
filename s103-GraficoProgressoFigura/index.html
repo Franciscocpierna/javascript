@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE é crucial para informar ao 
+            navegador que versão do HTML está sendo usada, neste 
+            caso, HTML5. Isso garante que o navegador interprete e 
+            renderize a página de acordo com os padrões HTML5. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> envolve todo o conteúdo da página e o atributo 'lang' 
+            especifica o idioma principal do documento, aqui configurado 
+            como Português do Brasil ('pt-BR'). Isso é útil para ferramentas 
+            de acessibilidade e mecanismos de busca. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de estilo, 
+                scripts e outras configurações que não são exibidas 
+                diretamente na área de visualização da página. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' definido como 'UTF-8' 
+                especifica a codificação de caracteres usada para o 
+                documento. UTF-8 inclui quase todos os caracteres de todos 
+                os sistemas de escrita humanos, o que a torna universal 
+                para a exibição de texto em diferentes idiomas. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> importante para tornar a página responsiva. O 
+                atributo 'content' definido como 'width=device-width' faz com 
+                que a largura da página corresponda à largura do dispositivo de 
+                visualização, e 'initial-scale=1.0' estabelece o nível de zoom 
+                inicial quando a página é carregada, ambos essenciais para uma 
+                boa visualização em dispositivos móveis. -->
+
+    <title>Gráfico de Progresso de Figura</title>
+    <!-- A tag <title> define o título da página, que é exibido na aba do 
+                navegador e utilizado pelos mecanismos de busca. Aqui, o 
+                título é 'Gráfico de Progresso de Figura', que descreve 
+                brevemente o conteúdo ou a funcionalidade principal da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada para incluir uma folha de estilo CSS 
+                externa, localizada no arquivo 'estilos.css'. Esta folha 
+                de estilo contém as regras de formatação visual da página. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- A tag <script> com o atributo 'src' apontando para a URL da 
+                biblioteca XLSX.js permite a leitura de arquivos Excel no 
+                navegador. Esta versão minificada ('full.min') é uma versão 
+                completa, porém compactada, da biblioteca, o que ajuda a 
+                reduzir o tempo de carregamento da página. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo da página que é 
+                visível para o usuário. -->
+
+    <div class="container">
+        <!-- A classe 'container' é usada para encapsular e centralizar o 
+                conteúdo principal da página, geralmente estilizada para 
+                melhorar a apresentação visual. -->
+
+        <h1>Gráfico de Progresso de Figura</h1>
+        <!-- A tag <h1> é usada aqui como o título principal da página. 
+                    Ela fornece uma visão clara do conteúdo ou propósito 
+                    principal da página, neste caso, um gráfico de 
+                    progresso de figura. -->
+
+        <select id="seletorProduto">
+            <!-- A tag <select> cria uma caixa de seleção dropdown. 
+                        O atributo 'id' facilita a manipulação deste 
+                        elemento via JavaScript. -->
+            <!-- Opções de produtos serão carregadas aqui -->
+            <!-- Este comentário indica que as opções dentro do <select> 
+                        serão preenchidas dinamicamente com JavaScript, 
+                        com base nos dados carregados de uma fonte externa ou arquivo. -->
+
+        </select>
+
+        <div id="descricaoProduto"></div>
+        <!-- Uma <div> vazia com o 'id' de 'descricaoProduto'. Esta div 
+                        será usada para exibir informações dinâmicas sobre o 
+                        produto selecionado, tais como detalhes adicionais 
+                        ou uma descrição. -->
+
+        <div class="grafico-container">
+            <!-- A classe 'grafico-container' indica que esta <div> é 
+                        usada para conter elementos relacionados ao 
+                        gráfico de progresso. -->
+
+            <img id="imagemBase" src="base.png" alt="Imagem Base">
+            <!-- Um elemento <img> para a imagem de base do gráfico. O 'src' 
+                        aponta para o arquivo de imagem que serve como a 
+                        camada de fundo do gráfico. -->
+
+            <img id="imagemPreenchimento" src="preenchimento.png" alt="Imagem Preenchimento">
+            <!-- Outro elemento <img> para a imagem de preenchimento que se 
+                        sobreporá à imagem de base conforme o progresso. 
+                        É manipulado dinamicamente para mostrar visualmente o 
+                        progresso de vendas ou outra métrica. -->
+
+            <div id="percentual"></div>
+            <!-- Uma <div> vazia com o 'id' 'percentual'. Usada para 
+                        exibir o percentual numérico de progresso, que 
+                        será atualizado dinamicamente com JavaScript. -->
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com um atributo 'src' que inclui o arquivo 'scripts.js'. 
+                    Este script contém o JavaScript necessário para adicionar 
+                    funcionalidades interativas à página, como carregar dados, 
+                    manipular imagens e atualizar conteúdos. -->
+                    
+</body>
+</html>
