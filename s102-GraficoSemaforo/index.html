@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento. Esta linha indica 
+            que o documento é um HTML5, o que ajuda o navegador a 
+            renderizar o conteúdo corretamente seguindo as 
+            normas da versão HTML5. -->
+
+<html lang="pt-BR">
+<!-- Tag de abertura 'html' com o atributo 'lang', especificando 
+            que o idioma principal do documento é o Português do 
+            Brasil. Isso é útil para acessibilidade, SEO e define 
+            como os navegadores devem tratar o conteúdo linguístico. -->
+
+<head>
+<!-- Tag 'head' que encapsula metadados, links para folhas de 
+            estilo, scripts e outras informações que não são diretamente 
+            exibidas na parte visual (viewport) da página. -->
+
+    <meta charset="UTF-8">
+    <!-- Uma tag 'meta' que define o conjunto de caracteres utilizado 
+            no documento como UTF-8, que inclui quase todos os caracteres 
+            de todos os idiomas humanos. Isso assegura que qualquer texto 
+            no HTML seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag 'meta', que controla a viewport do navegador. 
+     O 'content' com 'width=device-width' faz a largura da página 
+            seguir a largura da tela do dispositivo, e 'initial-scale=1.0' 
+            define o zoom inicial quando a página é carregada. Esta linha é 
+            crucial para garantir uma boa experiência de usuário em 
+            dispositivos móveis, permitindo um design responsivo. -->
+
+    <title>Gráfico de Semáforo com Dados de Excel</title>
+    <!-- A tag 'title' define o título da página, que é exibido na 
+            aba do navegador. Este título é também usado por motores de 
+            busca e quando a página é adicionada aos favoritos. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag 'link' é usada aqui para incluir uma folha de 
+            estilo externa, localizada no arquivo 'estilos.css'. 
+            Esta folha de estilo contém as regras CSS que 
+            estilizam o documento HTML. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- Esta tag 'script' inclui uma biblioteca JavaScript externa, 
+            especificamente uma versão minificada do XLSX.js. Esta 
+            biblioteca permite que a página web leia arquivos Excel. 
+            A versão 'full.min' sugere que é uma versão completa, mas 
+            minificada para reduzir o tamanho do arquivo e acelerar 
+            o carregamento. -->
+
+</head>
+
+<body>
+<!-- A tag 'body' encapsula todo o conteúdo visível de uma página HTML. 
+            Aqui começam todos os elementos que o usuário final irá 
+            interagir diretamente. -->
+
+    <div class="container">
+    <!-- Uma 'div' com a classe 'container'. Esta div  é 
+            usada para centralizar e conter visualmente os elementos internos 
+            na página, estilizada para ter uma aparência específica 
+            conforme definido no CSS. -->
+
+        <h1>Gráfico de Semáforo com Dados de Excel</h1>
+        <!-- Tag 'h1' que define o cabeçalho principal da página. O uso 
+                    de 'h1' é importante para a semântica do SEO, indicando o 
+                    tema principal da página. O texto aqui explica o propósito 
+                    da página: exibir um gráfico de semáforo com dados oriundos 
+                    de um arquivo Excel. -->
+
+        <div class="conteudo">
+        <!-- Uma 'div' com a classe 'conteudo'. Esta classe é 
+                    usada para estilizar e organizar a disposição dos elementos de 
+                    conteúdo dentro do 'container'. -->
+
+            <div class="esquerda">
+            <!-- Uma 'div' com a classe 'esquerda'. Essa divisão sugere que a 
+                        página tem um layout dividido, e esta 'div' compõe a parte 
+                        esquerda desse layout. Os estilos associados podem incluir 
+                        largura, alinhamento e outros atributos visuais. -->
+
+                <select id="seletorProduto">
+                <!-- Um elemento 'select' com ID 'seletorProduto'. Este elemento é 
+                            um menu dropdown que será usado para selecionar produtos. 
+                            A ID indica que ele terá uma funcionalidade específica, 
+                            populado dinamicamente com JavaScript. -->
+                    <!-- Opções serão carregadas dinamicamente -->
+                    <!-- Comentário explicativo, indicando que as opções do 'select' 
+                            serão adicionadas através de JavaScript, baseando-se em dados 
+                            lidos de um arquivo Excel. -->
+
+                </select>
+
+                <div id="graficoSemaforo">
+                <!-- Uma 'div' com ID 'graficoSemaforo'. Este ID sugere que a 'div' 
+                            está relacionada à visualização do gráfico de semáforo,  
+                            contendo elementos visuais que representam o status de vendas. -->
+
+                    <div class="semaforo" id="semaforo">
+                    <!-- Uma 'div' interna com a classe 'semaforo' e ID 'semaforo'. 
+                                Esta 'div' é claramente destinada a ser a representação 
+                                visual do semáforo, com luzes individuais abaixo que 
+                                mudarão de cor com base nas condições de venda. -->
+
+                        <div class="luz" id="vermelho"></div>
+                        <!-- Uma 'div' para a luz vermelha do semáforo, com ID 'vermelho'. 
+                                    Não tem conteúdo visível, mas é estilizada para aparecer 
+                                    como uma luz. Mudará de aparência baseando-se nas vendas, 
+                                    através de classes CSS adicionadas dinamicamente. -->
+
+                        <div class="luz" id="amarelo"></div>
+                        <!-- Similar à 'div' anterior, mas para a luz amarela, 
+                                    com ID 'amarelo'. -->
+
+                        <div class="luz" id="verde"></div>
+                        <!-- Similar às anteriores, para a luz verde, com ID 'verde'. -->
+
+                    </div>
+                </div>
+
+                <div class="indice">
+                <!-- Uma 'div' com a classe 'indice'. Contém parágrafos que explicam o 
+                            significado das cores do semáforo em relação às vendas. Esta parte é 
+                            importante para contextualizar visualmente o que as cores representam 
+                            em termos de desempenho de vendas. -->
+
+                    <p><span class="luz-vermelho"></span> <strong>Vermelho:</strong> Vendas < 50% da meta</p>
+                    <!-- Um parágrafo explicando o indicador vermelho. Um 'span' com a 
+                                classe 'luz-vermelho'  mostra uma pequena amostra da cor para 
+                                associação visual. -->
+
+                    <p><span class="luz-amarelo"></span> <strong>Amarelo:</strong> Vendas entre 50% e 75% da meta</p>
+                    <!-- Um parágrafo para o indicador amarelo. Similar ao anterior, mas com a 
+                                classe 'luz-amarelo'. -->
+
+                    <p><span class="luz-verde"></span> <strong>Verde:</strong> Vendas ≥ 75% da meta</p>
+                    <!-- Um parágrafo para o indicador verde. Similar aos anteriores, mas com a 
+                                classe 'luz-verde'. -->
+
+                </div>
+            </div>
+
+            <div class="direita">
+            <!-- Uma 'div' com a classe 'direita'. Esta 'div' serve como a parte direita 
+                        do layout dividido da página. Semelhante à 'div' com a classe 'esquerda', 
+                        esta área é estilizada separadamente e  contém conteúdo complementar ou 
+                        relacionado, no caso, uma tabela de dados. -->
+
+                <table id="tabelaProdutos">
+                <!-- A tag 'table' com o ID 'tabelaProdutos'. Este elemento tabela será usado 
+                            para exibir dados dinamicamente carregados. O uso de um ID indica 
+                            que a tabela pode ser manipulada ou referenciada especificamente 
+                            por scripts. -->
+
+                    <thead>
+                    <!-- A tag 'thead' é usada para agrupar o cabeçalho de uma tabela. Isso é 
+                                útil para estilização, acessibilidade e para programas que processam 
+                                tabelas, como leitores de tela. -->
+
+                        <tr>
+                        <!-- A tag 'tr' define uma linha da tabela. Dentro do 'thead', esta 
+                                    linha conterá os cabeçalhos das colunas. -->
+
+                            <th>Produto</th>
+                            <!-- A tag 'th' especifica uma célula de cabeçalho, que é usada para 
+                                        descrever o propósito de cada coluna. Aqui, define a coluna 
+                                        para os nomes dos produtos. -->
+
+                            <th>Vendas</th>
+                            <!-- Outra 'th', para a coluna das vendas. Define onde as quantidades 
+                                        de vendas serão exibidas. -->
+
+                            <th>Meta</th>
+                            <!-- Outra 'th', para a coluna das metas de venda. Mostra a meta de 
+                                        vendas para cada produto. -->
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <!-- A tag 'tbody' é usada para agrupar o corpo principal da tabela, 
+                                    onde os dados serão inseridos. Esta organização ajuda na 
+                                    manipulação do conteúdo via CSS e JavaScript. -->
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com o atributo 'src' inclui um 
+                    arquivo JavaScript externo. 
+         Este script contém a lógica para manipular os dados do 
+                    Excel e renderizar o gráfico, bem como 
+                    preencher a tabela. -->
+
+</body>
+</html>
+<!-- O fim das tags <body> e <html> marca o final 
+               do documento HTML. -->

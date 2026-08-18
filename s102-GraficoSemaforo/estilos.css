@@ -1,0 +1,427 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    /* Define a família de fontes para o corpo do documento. 
+            'Roboto' é uma fonte sem serifa, moderna e legível, seguida 
+            por 'sans-serif', que é a família genérica caso a primeira 
+            não esteja disponível. */
+    
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo do documento como um cinza muito 
+            claro (#f4f4f4), proporcionando um fundo neutro que facilita a 
+            leitura e é agradável aos olhos. */
+    
+    color: #333;
+    /* Define a cor do texto para um cinza escuro (#333), que oferece alto 
+            contraste com o fundo claro para melhor legibilidade. */
+    
+    display: flex;
+    /* Ativa o modelo de layout Flexbox para o corpo do documento, permitindo um 
+            alinhamento mais flexível e responsivo dos elementos filhos. */
+    
+    flex-direction: column;
+    /* Define a direção principal do Flexbox para 'column', fazendo com 
+            que os elementos filhos sejam empilhados verticalmente. */
+    
+    align-items: center;
+    /* Alinha os elementos filhos ao centro no eixo transversal (neste caso, 
+            horizontalmente, porque a direção flex é coluna), centralizando-os 
+            dentro do corpo. */
+    
+    margin: 0;
+    /* Remove todas as margens externas do corpo, fazendo com que o conteúdo 
+            ocupe toda a largura disponível sem espaço adicional nas bordas. */
+    
+    padding: 20px;
+    /* Adiciona um preenchimento de 20px ao redor do conteúdo interno do 
+            corpo, criando um espaço entre o conteúdo e as bordas do navegador. */
+
+}
+
+.container {
+
+    text-align: center;
+    /* Alinha o texto e, por extensão, outros elementos inline como 
+            botões e links, ao centro do elemento '.container'. */
+    
+    background-color: #fff;
+    /* Define a cor de fundo do elemento '.container' como branco (#fff), 
+            criando um contraste claro com o fundo do corpo e focando a 
+            atenção no conteúdo dentro do container. */
+    
+    padding: 30px;
+    /* Adiciona um preenchimento de 30px ao redor do conteúdo dentro 
+            do '.container', aumentando o espaço entre o conteúdo e as 
+            bordas do elemento '.container'. */
+    
+    border-radius: 10px;
+    /* Arredonda os cantos do '.container' com um raio de 10px, dando um 
+            aspecto mais suave e moderno ao elemento. */
+    
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do '.container'. Os valores representam, 
+            respectivamente, o deslocamento horizontal e vertical da sombra, 
+            o raio de desfoque e a cor da sombra, que é um preto com 
+            transparência de 10% (rgba(0, 0, 0, 0.1)). Isso adiciona 
+            profundidade ao elemento, fazendo-o se destacar do fundo. */
+    
+    max-width: 1000px;
+    /* Define a largura máxima do '.container' como 1000px. Isso garante 
+            que o '.container' não se torne excessivamente largo em telas 
+            grandes, mantendo a legibilidade e a estética do layout. */
+    
+    width: 100%;
+    /* Define a largura do '.container' para ocupar 100% do espaço 
+            disponível de seu elemento pai, até o máximo de 1000px. */
+
+}
+
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20px para o elemento 'h1', 
+            criando espaço entre o título e o conteúdo abaixo dele, 
+            evitando que elementos se sobreponham visualmente. */
+    
+    font-size: 24px;
+    /* Define o tamanho da fonte do título para 24px, garantindo que 
+            seja grande e claro o suficiente para ser reconhecido como um 
+            cabeçalho principal. */
+    
+    font-weight: bold;
+    /* Atribui um peso de fonte 'negrito' ao texto dentro de 'h1', 
+            destacando-o e tornando-o mais proeminente na página. */
+    
+    color: #333;
+    /* Define a cor do texto do título para um cinza escuro (#333), que é 
+            suficientemente forte para uma boa legibilidade contra 
+            um fundo claro. */
+
+}
+
+.conteudo {
+
+    display: flex;
+    /* Ativa o modelo de layout Flexbox para '.conteudo', permitindo um 
+            alinhamento flexível e responsivo dos elementos filhos 
+            dentro deste contêiner. */
+    
+    justify-content: space-between;
+    /* Distribui o espaço no layout de maneira que os elementos 
+            filhos (divisões '.esquerda' e '.direita') sejam justificados 
+            com espaço máximo entre eles, alinhando o primeiro elemento ao 
+            início e o último ao final do contêiner, maximizando a 
+            separação entre eles. */
+
+}
+
+
+.esquerda, .direita {
+
+    width: 48%;
+    /* Define a largura de cada uma das divisões '.esquerda' e '.direita' 
+            para 48% do seu contêiner pai '.conteudo'. Isso assegura que 
+            ocupem quase metade do espaço disponível, deixando um pequeno 
+            espaço entre elas para não se tocarem diretamente. */
+
+}
+
+
+select {
+    
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20px, separando o elemento 'select' 
+            de outros conteúdos abaixo dele, evitando um visual aglomerado. */
+    
+    padding: 10px;
+    /* Aplica um preenchimento interno de 10px em todas as direções dentro do 
+            elemento 'select', aumentando a área de clique e melhorando a estética. */
+    
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16px, que é um tamanho confortável para 
+            leitura em a maioria dos dispositivos, facilitando a interação 
+            com o elemento. */
+    
+    width: 100%;
+    /* Define a largura do 'select' para ocupar 100% da largura do seu 
+            contêiner pai, garantindo que o elemento seja facilmente acessível e 
+            visualmente consistente com a largura da divisão que o contém. */
+
+    
+}
+
+
+#graficoSemaforo {
+
+    display: flex;
+    /* Ativa o modelo de layout Flexbox, permitindo um alinhamento flexível 
+            dos elementos filhos dentro deste contêiner. */
+            
+    justify-content: center;
+    /* Centraliza os elementos filhos horizontalmente dentro do contêiner, 
+            garantindo que o semáforo fique no meio do espaço designado. */
+
+    align-items: center;
+    /* Centraliza os elementos filhos verticalmente, assegurando que o 
+            semáforo esteja alinhado no centro do contêiner tanto horizontal 
+            quanto verticalmente. */
+
+    height: 150px;
+    /* Define a altura do contêiner do semáforo para 150px, dando espaço 
+            suficiente para acomodar as luzes semáforo internamente. */
+
+    width: 50px;
+    /* Define a largura do contêiner do semáforo para 50px, adequada 
+            para manter as luzes visualmente alinhadas e organizadas. */
+
+    background-color: #333;
+    /* Aplica uma cor de fundo cinza escuro (#333) ao contêiner do 
+            semáforo, proporcionando contraste suficiente para que as 
+            luzes coloridas se destaquem. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner com um raio de 10px, suavizando a 
+            aparência geral e tornando-o visualmente mais agradável. */
+
+    margin: 0 auto;
+    /* Centraliza o contêiner do semáforo na horizontal dentro de seu 
+            contêiner pai, utilizando 'auto' para as margens laterais e '0' 
+            para as margens superior e inferior. */
+
+}
+
+.semaforo {
+
+    display: flex;
+    /* Utiliza Flexbox também dentro do contêiner `.semaforo`, 
+            permitindo alinhamento e organização flexíveis dos 
+            elementos 'luz'. */
+
+    flex-direction: column;
+    /* Define a direção do Flexbox para 'column', fazendo com 
+            que as luzes sejam empilhadas verticalmente. */
+
+    align-items: center;
+    /* Centraliza as luzes verticalmente dentro do contêiner `.semaforo`, 
+            garantindo que fiquem alinhadas e ordenadas de forma apropriada. */
+
+}
+
+.luz {
+
+    width: 40px;
+    /* Define a largura de cada luz para 40px, adequada para 
+            caber dentro do contêiner do semáforo e grande o 
+            suficiente para ser visualmente clara. */
+
+    height: 40px;
+    /* Define a altura de cada luz para 40px, criando uma forma 
+            perfeitamente circular quando combinada com 
+            'border-radius: 50%'. */
+
+    margin: 10px 0;
+    /* Aplica uma margem superior e inferior de 10px para 
+            cada luz, separando-as entre si dentro do contêiner 
+            `.semaforo` e evitando que toquem umas nas outras. */
+
+    border-radius: 50%;
+    /* Define o 'border-radius' para 50%, criando um círculo 
+            perfeito para cada luz, o que é ideal para representar 
+            visualmente uma luz de semáforo. */
+
+    background-color: #555;
+    /* Utiliza um cinza médio (#555) para a cor de fundo das luzes 
+            quando não estão ativas, mantendo a consistência com o 
+            esquema de cores escuro e permitindo uma transição visual 
+            clara quando mudam de estado (ativo/inativo). */
+
+}
+
+
+#vermelho.ativo {
+
+    background-color: red;
+    /* Aplica uma cor de fundo vermelha ao elemento com ID 
+            'vermelho' quando a classe 'ativo' é adicionada. Esta mudança 
+            visual indica que o semáforo está no estado "vermelho", 
+            geralmente usado para representar uma condição de alerta ou 
+            uma situação que requer atenção imediata. */
+
+}
+
+#amarelo.ativo {
+
+    background-color: yellow;
+    /* Define a cor de fundo como amarela para o elemento com ID 
+            'amarelo' quando ele possui a classe 'ativo'. O amarelo no 
+            semáforo pode representar uma situação de cautela ou um estado 
+            intermediário, indicando que as vendas estão entre dois 
+            limites definidos. */
+
+}
+
+#verde.ativo {
+
+    background-color: green;
+    /* Estabelece a cor de fundo verde para o elemento com ID 'verde' 
+            quando a classe 'ativo' é aplicada. O verde é comumente 
+            utilizado para indicar uma condição positiva ou satisfatória, 
+            como atingir ou superar metas de vendas. */
+
+}
+
+.indice {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20px, separando visualmente a 
+            seção '.indice' do conteúdo acima dela, ajudando na organização 
+            visual e melhorando a legibilidade ao criar espaço entre 
+            diferentes seções de conteúdo. */
+
+    text-align: left;
+    /* Alinha o texto à esquerda dentro do contêiner '.indice', o 
+            que é típico para textos em muitos idiomas que são lidos da 
+            esquerda para a direita, facilitando a leitura e seguindo 
+            convenções comuns de design. */
+            
+}
+
+.indice p {
+
+    display: flex;
+    /* Utiliza Flexbox no elemento 'p' dentro de '.indice' para alinhar 
+            os elementos internos, como os ícones das luzes e o texto 
+            descritivo. Isso permite um alinhamento vertical adequado e 
+            uma disposição mais flexível dos componentes dentro de cada parágrafo. */
+
+    align-items: center;
+    /* Centraliza os itens no eixo transversal (vertical) dentro do 
+            flex container, garantindo que os ícones das luzes e o texto 
+            estejam alinhados no centro, melhorando a coesão visual e a 
+            aparência estética dos elementos. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16px, o que assegura que o texto 
+            seja grande o suficiente para ser lido confortavelmente, melhorando a 
+            acessibilidade e a experiência do usuário. */
+
+}
+
+.indice .luz-vermelho,
+.indice .luz-amarelo,
+.indice .luz-verde {
+
+    width: 20px;
+    /* Define a largura de cada luz para 20px, garantindo um tamanho 
+            uniforme para todas as representações visuais das luzes do 
+            semáforo dentro da seção de índice. */
+
+    height: 20px;
+    /* Define a altura como 20px, criando uma forma quadrada que será 
+            transformada em círculo com o 'border-radius'. */
+
+    border-radius: 50%;
+    /* Aplica um raio de borda de 50%, transformando a forma quadrada 
+            em um círculo perfeito, o que é ideal para representar uma luz 
+            de semáforo de maneira icônica e clara. */
+
+    display: inline-block;
+    /* Muda o display para 'inline-block', permitindo que as luzes se 
+            alinhem na linha do texto enquanto mantêm as propriedades de 
+            layout de caixa de um elemento de bloco, como largura e altura. */
+
+    margin-right: 10px;
+    /* Adiciona uma margem à direita de cada luz, separando-as do texto ao 
+            lado, o que melhora a legibilidade e a estética, evitando que os 
+            elementos se amontoem. */
+
+}
+
+.indice .luz-vermelho {
+
+    background-color: red;
+    /* Define a cor de fundo da luz vermelha como vermelho, usando essa 
+            cor para indicar condições típicas associadas ao vermelho em um 
+            semáforo, como alerta ou condição crítica. */
+
+}
+
+.indice .luz-amarelo {
+
+    background-color: yellow;
+    /* Estabelece a cor de fundo da luz amarela como amarelo, que comumente 
+            indica cautela ou uma situação que requer atenção intermediária 
+            em semáforos ou indicadores. */
+
+}
+
+.indice .luz-verde {
+
+    background-color: green;
+    /* Aplica uma cor de fundo verde à luz verde, simbolizando condições 
+            favoráveis ou metas alcançadas, conforme o uso comum do verde em 
+            semáforos para indicar 'prosseguir' ou 'seguro'. */
+
+}
+
+table {
+
+    width: 100%;
+    /* Define a largura da tabela para ocupar 100% da largura do 
+            contêiner pai. Isso garante que a tabela se estenda horizontalmente 
+            para aproveitar todo o espaço disponível, tornando o conteúdo 
+            mais legível e organizado. */
+    
+    border-collapse: collapse;
+    /* A propriedade 'border-collapse: collapse' faz com que as bordas das 
+            células, linhas e colunas da tabela se fundam em uma única borda, 
+            resultando em um visual mais limpo e uma estrutura mais compacta, 
+            especialmente útil em tabelas com muitas células. */
+    
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20px, separando a tabela de 
+            quaisquer elementos que estejam acima dela. Isso ajuda a criar 
+            um espaço visual claro, evitando que a tabela pareça estar 
+            visualmente amontoada contra outros conteúdos. */
+
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+    /* Aplica uma borda sólida de 1px com a cor #ddd (cinza claro) a cada 
+            célula da tabela (cabeçalhos e células de dados). Esta borda 
+            ajuda a delinear claramente as divisões entre os dados, 
+            melhorando a legibilidade da tabela. */
+    
+    padding: 8px;
+    /* Adiciona um preenchimento de 8px em todas as direções dentro das 
+            células (tanto cabeçalhos quanto células de dados), aumentando o 
+            espaço entre o texto e as bordas das células para uma leitura 
+            mais confortável. */
+    
+    text-align: center;
+    /* Centraliza o texto dentro das células, o que é útil para melhorar a 
+            legibilidade e a apresentação estética, especialmente em 
+            tabelas onde os dados são numericamente orientados ou onde a 
+            uniformidade é visualmente atraente. */
+
+}
+
+th {
+
+    background-color: #f2f2f2;
+    /* Define a cor de fundo dos cabeçalhos da tabela para #f2f2f2, um 
+            cinza muito claro. Isso não apenas destaca visualmente os 
+            cabeçalhos das outras células, mas também ajuda a separar o 
+            título das colunas dos dados, facilitando a rápida identificação 
+            das seções da tabela. */
+    
+    font-weight: bold;
+    /* Aplica um peso de fonte 'negrito' aos textos dentro dos cabeçalhos 
+            da tabela, aumentando a legibilidade e a importância visual dos 
+            títulos das colunas, ajudando os usuários a entenderem 
+            rapidamente o conteúdo de cada coluna. */
+            
+}
