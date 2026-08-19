@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento. Esta linha indica 
+            que o documento é um HTML5, o que ajuda o navegador a 
+            renderizar o conteúdo corretamente seguindo as 
+            normas da versão HTML5. -->
+
+<html lang="pt-BR">
+<!-- Tag de abertura 'html' com o atributo 'lang', especificando que o 
+            idioma principal do documento é o Português do Brasil. Isso é 
+            útil para acessibilidade, SEO e define como os navegadores 
+            devem tratar o conteúdo linguístico. -->
+
+<head>
+    <!-- Tag 'head' que encapsula metadados, links para folhas de estilo, 
+            scripts e outras informações que não são diretamente exibidas na 
+            parte visual (viewport) da página. -->
+
+    <meta charset="UTF-8">
+    <!-- Uma tag 'meta' que define o conjunto de caracteres utilizado no 
+            documento como UTF-8, que inclui quase todos os caracteres de 
+            todos os idiomas humanos. Isso assegura que qualquer texto no 
+            HTML seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag 'meta', que controla a viewport do navegador. O 'content' 
+                com 'width=device-width' faz a largura da página seguir a 
+                largura da tela do dispositivo, e 'initial-scale=1.0' define o 
+                zoom inicial quando a página é carregada. Esta linha é crucial 
+                para garantir uma boa experiência de usuário em dispositivos móveis, 
+                permitindo um design responsivo. -->
+
+    <title>Gráfico de Caminho de Carreira</title>
+    <!-- A tag 'title' define o título da página, que é exibido na aba do 
+                navegador. Este título é também usado por motores de busca e 
+                quando a página é adicionada aos favoritos. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag 'link' é usada aqui para incluir uma folha de estilo externa, 
+                localizada no arquivo 'estilos.css'. Esta folha de estilo contém as 
+                regras CSS que estilizam o documento HTML. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- Esta tag 'script' inclui uma biblioteca JavaScript externa, especificamente 
+                uma versão minificada do XLSX.js. Esta biblioteca permite que a página 
+                web leia arquivos Excel. A versão 'full.min' sugere que é uma versão 
+                completa, mas minificada para reduzir o tamanho do arquivo e 
+                acelerar o carregamento. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> encapsula todo o conteúdo visível da página web. -->
+
+    <div class="container">
+        <!-- A 'div' com a classe 'container' serve como o contêiner principal 
+                    para centralizar e organizar o conteúdo visual da página. -->
+
+        <h1>Gráfico de Caminho de Carreira</h1>
+        <!-- O elemento <h1> define o título principal da página, fornecendo um 
+                    contexto claro do que o usuário pode esperar ver, neste 
+                    caso, um gráfico de barras mostrando vendas por vendedor. -->
+
+        <div id="detalhesVendedor">
+            <!-- Esta 'div' com o ID 'detalhesVendedor' é reservada para 
+                        exibir informações dinâmicas sobre o vendedor selecionado, 
+                        como nome e total de vendas, que serão atualizadas conforme a 
+                        interação do usuário com o gráfico. -->
+            <!-- Detalhes do vendedor serão exibidos aqui -->
+
+        </div>
+
+        <select id="seletorVendedor">
+            <!-- O elemento <select> com o ID 'seletorVendedor' permite que os 
+                        usuários escolham entre diferentes vendedores cujos dados 
+                        estão disponíveis para visualização. As opções dentro 
+                        deste 'select' serão preenchidas dinamicamente com base nos 
+                        dados carregados, de um arquivo ou banco de dados. -->
+            <!-- Opções de vendedores serão carregadas aqui -->
+
+        </select>
+
+        <div class="grafico-barras" id="graficoBarras">
+            <!-- A 'div' com a classe 'grafico-barras' e o ID 'graficoBarras' é 
+                        designada para conter o gráfico de barras. Cada barra 
+                        dentro desta 'div' representará visualmente as vendas de um 
+                        vendedor específico e será gerada dinamicamente com base nos dados. -->
+            <!-- As barras serão carregadas dinamicamente aqui -->
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta para o arquivo 
+                'scripts.js' contém código JavaScript que gerencia a lógica 
+                de carregamento de dados, interatividade do usuário e dinâmica 
+                de atualização do gráfico e dos detalhes do vendedor. -->
+                
+</body>
+</html>
