@@ -1,0 +1,233 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para o texto. 'Arial' é uma fonte 
+            sans-serif genérica e amplamente suportada, que é usada como 
+            primeira escolha. Se 'Arial' não estiver disponível, qualquer 
+            outra fonte sans-serif será usada como fallback. */
+
+    background-color: #f0f2f5;
+    /* Define a cor de fundo do corpo da página. '#f0f2f5' é um cinza claro 
+            que serve como um fundo neutro, agradável aos olhos e 
+            facilita a leitura. */
+
+    margin: 0;
+    /* Remove as margens externas padrão do elemento 'body'. Isso é comum 
+                para garantir que não haja espaço indesejado em torno dos 
+                elementos da página nas bordas do navegador. */
+
+    padding: 0;
+    /* Define o preenchimento interno do 'body' para 0, garantindo que os 
+                elementos dentro do 'body' alinhem-se diretamente às bordas do 
+                navegador sem espaçamento interno. */
+
+}
+
+.container {
+
+    display: flex;
+    /* Define o modelo de caixa do container para flexível, permitindo 
+                um layout flexível que facilita o alinhamento e a distribuição 
+                dos elementos filhos (como colunas) dentro do container. */
+
+    max-width: 1200px;
+    /* Define a largura máxima do container como 1200 pixels. Isso significa 
+                que o container pode se expandir até 1200px, mas não mais 
+                que isso, garantindo consistência e legibilidade em telas maiores. */
+
+    margin: 50px auto;
+    /* Configura a margem do container. '50px auto' significa que o 
+                container terá uma margem superior e inferior de 50px e 
+                uma margem esquerda e direita automática, centralizando-o 
+                horizontalmente na página. */
+
+    padding: 20px;
+    /* Define um preenchimento interno de 20 pixels em todos os lados do 
+                container, criando um espaço entre o conteúdo interno e 
+                as bordas do container. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do container como branco ('#ffffff'). Isso 
+                fornece um contraste com a cor de fundo do corpo para 
+                destacar visualmente a área do container. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do container. '0 0 10px rgba(0, 0, 0, 0.1)' 
+                configura a sombra sem deslocamento horizontal ou vertical, 
+                com um desfoque de 10px, e uma cor preta com transparência 
+                de 10%, criando um efeito sutil que eleva o container 
+                visualmente da página. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do container, com um raio de 8 pixels. Isso 
+                suaviza as bordas do container, dando-lhe um aspecto 
+                mais moderno e menos rígido. */
+
+}
+
+.coluna-esquerda {
+
+    flex: 1;
+    /* Define a proporção de crescimento da coluna esquerda dentro de 
+                um container flexível. O valor '1' significa que esta 
+                coluna crescerá na mesma proporção que outras colunas (se 
+                houver) que também possuam flex: 1, ocupando espaço 
+                disponível no container. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20 pixels em todos os lados internos 
+                da coluna esquerda, proporcionando espaço entre o conteúdo 
+                da coluna e suas bordas. */
+
+    border-right: 1px solid #cccccc;
+    /* Adiciona uma borda sólida de 1 pixel à direita da coluna esquerda, 
+                com a cor cinza claro (#cccccc). Isso serve para visualmente 
+                separar a coluna esquerda da coluna direita adjacente. */
+
+}
+
+.coluna-direita {
+
+    flex: 2;
+    /* Define a proporção de crescimento da coluna direita dentro de um 
+                container flexível. O valor '2' indica que esta coluna 
+                crescerá duas vezes mais rápido que as colunas com flex: 1, 
+                ocupando mais espaço no container. */
+
+    display: flex;
+    /* Define o modelo de caixa da coluna direita para flexível, 
+                permitindo a utilização de propriedades flex para 
+                alinhar itens internos. */
+
+    justify-content: center;
+    /* Alinha os itens internos da coluna direita ao centro horizontalmente. 
+                Isso é útil especialmente para centrar o conteúdo como 
+                gráficos ou imagens no meio da coluna. */
+
+    align-items: center;
+    /* Alinha os itens internos da coluna direita ao centro 
+                verticalmente, garantindo que o conteúdo esteja centrado 
+                tanto vertical quanto horizontalmente. */
+
+}
+
+h1 {
+
+    text-align: center;
+    /* Alinha o texto do cabeçalho <h1> ao centro da página ou 
+                container, facilitando a leitura e proporcionando um 
+                layout visualmente equilibrado. */
+
+    color: #333333;
+    /* Define a cor do texto do cabeçalho <h1> para um cinza 
+                escuro (#333333), que oferece contraste suficiente 
+                contra um fundo claro, melhorando a acessibilidade 
+                e a legibilidade. */
+
+}
+
+label {
+
+    display: block;
+    /* Transforma o <label> em um bloco de nível de elemento, o 
+                que significa que ocupará a linha inteira por padrão e 
+                poderá receber propriedades de margem e preenchimento. */
+
+    margin: 20px 0 10px;
+    /* Define as margens ao redor do <label>. Especificamente, 
+                margem superior de 20px, margem inferior de 10px, e 
+                nenhuma margem nas laterais. Isso ajuda a criar espaço 
+                visual antes e depois do rótulo, separando-o de 
+                outros elementos na página. */
+
+    font-weight: bold;
+    /* Aumenta a espessura da fonte para 'negrito', destacando o 
+                <label> visualmente e indicando a importância 
+                do campo que ele descreve. */
+
+    color: #333333;
+    /* Define a cor do texto do <label> para um cinza escuro (#333333). 
+                Essa cor é usada consistentemente para texto em toda a 
+                página, mantendo um design coeso. */
+
+}
+
+
+select {
+
+    width: 100%;
+    /* Define a largura do elemento <select> para ocupar 100% da 
+                largura do seu container pai. Isso garante que o 
+                seletor de produtos se ajuste ao espaço disponível, 
+                independentemente do tamanho do container. */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10 pixels em todas as direções 
+                dentro do elemento <select>, tornando o interior do 
+                campo de seleção mais espaçoso e fácil de interagir 
+                para o usuário. */
+
+    margin-bottom: 20px;
+    /* Define uma margem de 20 pixels abaixo do elemento <select>. 
+                Isso separa visualmente o seletor de produtos dos 
+                outros elementos que possam estar abaixo dele, melhorando a 
+                legibilidade e a estrutura da página. */
+
+    border: 1px solid #cccccc;
+    /* Aplica uma borda sólida de 1 pixel ao redor do elemento <select>, 
+                com a cor cinza claro (#cccccc). Isso delimita claramente a 
+                área do campo de seleção, facilitando a visualização do usuário. */
+
+    border-radius: 4px;
+    /* Arredonda os cantos da borda do elemento <select> com um raio 
+                de 4 pixels. Esse pequeno arredondamento suaviza a 
+                aparência do elemento, tornando o design mais 
+                amigável e moderno. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16 pixels, o que garante 
+                que o texto dentro do <select> seja facilmente legível, 
+                ajudando na usabilidade especialmente em dispositivos 
+                com telas menores. */
+
+}
+
+#info {
+
+    text-align: left;
+    /* Alinha o texto dentro do container com ID 'info' à esquerda. 
+                Isso é típico para textos que precisam ser lidos da 
+                esquerda para a direita, facilitando a leitura natural em 
+                muitos idiomas, incluindo o português. */
+
+    margin-bottom: 20px;
+    /* Define uma margem de 20 pixels abaixo do container #info. Isso 
+                ajuda a separar visualmente as informações do produto de 
+                outros elementos ou seções que podem estar abaixo, mantendo 
+                uma clareza estrutural na página. */
+
+}
+
+#grafico {
+
+    width: 100%;
+    /* Define a largura do container do gráfico, com ID 'grafico', para 
+                ocupar 100% da largura de seu container pai. Isso garante 
+                que o gráfico aproveite todo o espaço horizontal disponível. */
+
+    max-width: 500px;
+    /* Estabelece uma largura máxima de 500 pixels para o container do 
+                gráfico. Isso significa que, embora o gráfico possa se 
+                expandir até 100% da largura do container pai, ele não 
+                excederá 500 pixels, garantindo que o gráfico permaneça 
+                visualmente coerente e não fique demasiadamente largo 
+                em telas grandes. */
+
+    margin: 0 auto;
+    /* Centraliza o container do gráfico horizontalmente dentro de seu 
+                container pai. O valor '0' para a margem superior e inferior 
+                mantém o gráfico alinhado verticalmente, enquanto 'auto' 
+                para as margens laterais permite que ele se centralize 
+                horizontalmente. */
+                
+}

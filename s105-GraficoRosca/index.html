@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE define que este documento é 
+        do tipo HTML5, que é a versão mais recente e recomendada 
+        do HTML. Ela deve ser a primeira linha de qualquer documento 
+        HTML para garantir que o navegador processe o arquivo no 
+        modo de compatibilidade com HTML5. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> é o elemento raiz de um documento HTML, envolvendo 
+        todo o conteúdo da página. O atributo 'lang' especifica o 
+        idioma principal do documento, que neste caso é Português do 
+        Brasil ('pt-BR'). Isso ajuda os navegadores a entenderem o 
+        idioma do conteúdo, o que é útil para acessibilidade e SEO. -->
+
+<head>
+    <!-- A tag <head> contém metadados (dados sobre dados) que 
+            geralmente não são exibidos diretamente na página web. 
+            Esses metadados podem incluir scripts, instruções de 
+            estilo, meta-informações e mais. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define o conjunto de caracteres 
+            usado no documento HTML. 'UTF-8' é um conjunto de caracteres 
+            universal que inclui quase todos os caracteres e símbolos 
+            existentes em todos os idiomas do mundo, garantindo assim a 
+            correta exibição de textos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, desta vez configurando a 'viewport' (área 
+            de visualização) do navegador. O 'width=device-width' faz com 
+            que a largura da viewport corresponda à largura do dispositivo (em 
+            pixels). 'initial-scale=1.0' define o nível de zoom inicial quando a 
+            página é carregada. Essas configurações ajudam a assegurar que a 
+            página seja responsiva e bem visualizada em dispositivos móveis. -->
+
+    <title>Gráfico Doughnut - Gráfico Rosca</title>
+    <!-- A tag <title> define o título da página, que é mostrado na aba do 
+                navegador e usado pelos motores de busca. É importante para SEO e 
+                usabilidade, pois fornece aos usuários uma rápida compreensão 
+                do conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada para vincular documentos externos à página HTML. 
+                Neste caso, está vinculando um arquivo de folha de estilo CSS ('estilos.css') 
+                que contém as regras de estilo para a página. O atributo 'rel' 
+                especifica o tipo de relação que o documento HTML tem com o 
+                arquivo vinculado. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Inclui um script externo na página, especificamente a biblioteca 'xlsx' 
+                que é usada para ler arquivos Excel. O atributo 'src' especifica o URL 
+                de onde o script pode ser carregado. 'xlsx.full.min.js' é a versão 
+                minimizada (compactada) da biblioteca, o que ajuda a reduzir o tempo 
+                de carregamento da página. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Similar à linha anterior, essa tag <script> carrega a biblioteca Chart.js 
+                de um CDN (Content Delivery Network). Chart.js é uma biblioteca de gráficos 
+                JavaScript que permite criar uma variedade de gráficos interativos e responsivos. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo da página que é visível para o 
+                usuário, como textos, imagens, links, etc. É o container principal 
+                para o conteúdo visível. -->
+
+    <div class="container">
+        <!-- A tag <div> é usada para agrupar elementos. Aqui, ela é usada para 
+                    criar um container principal com a classe 'container', que 
+                    é estilizada no CSS para gerenciar layout e estilos gerais. -->
+
+        <div class="coluna-esquerda">
+            <!-- Outra <div>, representando a coluna esquerda do layout. Esta coluna 
+                        inclui o título da página, um seletor de produtos e informações 
+                        sobre o produto selecionado. -->
+
+            <h1>Gráfico Doughnut - Gráfico Rosca</h1>
+            <!-- A tag <h1> define o título mais importante na página. Usado aqui para 
+                        dar destaque ao nome da página ou seção. É bom para SEO, pois 
+                        ajuda os motores de busca a entenderem o principal tópico da página. -->
+
+            <label for="produto">Selecione o Produto:</label>
+            <!-- A tag <label> define um rótulo para um elemento de entrada, neste 
+                        caso, o seletor de produtos. O atributo 'for' associa a etiqueta 
+                        com um elemento específico cujo 'id' é igual ao valor de 'for', 
+                        melhorando a acessibilidade. -->
+
+            <select id="produto">
+                <!-- A tag <select> é usada para criar um elemento de seleção (dropdown), 
+                            que permite aos usuários escolher uma opção de uma lista. -->
+
+                <option value="">Selecione...</option>
+                <!-- A tag <option> define as opções que podem ser selecionadas. 
+                            O valor "" indica que essa opção não tem um valor associado e 
+                            serve como uma prompt de seleção inicial para o usuário. -->
+
+            </select>
+
+            <div id="info">
+                <!-- Outra <div> usada para agrupar informações relacionadas ao 
+                            produto selecionado. Cada pedaço de informação é 
+                            contido em um <p>. -->
+
+                <p id="produtoInfo"></p>
+                <!-- Parágrafo destinado a exibir informações sobre o produto 
+                            selecionado. Inicialmente vazio, será preenchido 
+                            dinamicamente pelo JavaScript. -->
+
+                <p id="metaInfo"></p>
+                <!-- Parágrafo destinado a exibir a meta de vendas do produto. 
+                            Também preenchido dinamicamente. -->
+
+                <p id="vendaInfo"></p>
+                <!-- Parágrafo para exibir as vendas atuais do produto. Semelhante 
+                            aos anteriores, é atualizado pelo JavaScript. -->
+
+            </div>
+        </div>
+
+        <div class="coluna-direita">
+            <!-- Divisão que representa a coluna direita do layout, 
+                        destinada a exibir o gráfico. -->
+
+            <div id="grafico">
+                <!-- Container para o gráfico. -->
+
+                <canvas id="graficoKPI"></canvas>
+                <!-- Elemento <canvas> usado para desenhar gráficos via 
+                            JavaScript. O id 'graficoKPI' indica que este 
+                            canvas será usado especificamente para o gráfico de 
+                            KPIs (Indicadores de Desempenho). -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> no final do body para vincular um arquivo JavaScript 
+                externo ('script.js') que contém a lógica para manipulação de 
+                dados e geração de gráficos. Carregar scripts no final do body é 
+                uma prática comum para melhorar o tempo de carregamento da página, 
+                pois permite que o conteúdo visual seja carregado primeiro. -->
+        
+</body>
+</html>
