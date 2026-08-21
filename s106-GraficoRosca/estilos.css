@@ -1,0 +1,105 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    /* Define a família de fontes para 'Roboto', uma fonte sans-serif 
+                moderna, garantindo que o texto seja claro e legível em diferentes 
+                dispositivos e resoluções. */
+
+    background-color: #f4f4f4;
+    /* Define a cor de fundo do corpo do documento para um cinza muito 
+                claro (#f4f4f4), proporcionando um fundo neutro que é fácil nos 
+                olhos e destaca o conteúdo colorido. */
+
+    color: #333;
+    /* Define a cor padrão do texto para cinza escuro (#333), que oferece 
+                excelente contraste com o fundo claro sem ser tão duro 
+                quanto o preto puro. */
+
+    display: flex;
+    /* Estabelece um container flexível, permitindo o uso de flexbox 
+                para organizar os elementos filhos com mais facilidade e 
+                responsividade. */
+
+    flex-direction: column;
+    /* Orienta os elementos filhos do corpo em uma coluna vertical, 
+                organizando-os de cima para baixo. Isso é útil para páginas 
+                que seguem um layout linear simples. */
+
+    align-items: center;
+    /* Centraliza os elementos filhos horizontalmente dentro do corpo, 
+                garantindo que todos os conteúdos, como o container e qualquer 
+                outro elemento, estejam alinhados ao centro. */
+
+    margin: 0;
+    /* Remove todas as margens externas do corpo, assegurando que não haja 
+                espaço indesejado ao redor dos elementos no início da página. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todas as direções ao redor do 
+                conteúdo interno do corpo, criando espaço entre os elementos 
+                filhos e as bordas do navegador. */
+
+}
+
+.container {
+
+    text-align: center;
+    /* Alinha o texto dentro do container ao centro, o que é ideal para 
+                cabeçalhos ou qualquer conteúdo central que precise de 
+                destaque visual. */
+
+    background-color: #fff;
+    /* Define a cor de fundo do container para branco (#fff), garantindo 
+                que o conteúdo dentro do container se destaque contra o 
+                fundo cinza claro do corpo. */
+
+    padding: 20px;
+    /* Adiciona 20 pixels de preenchimento dentro do container, criando 
+                espaço entre os bordos do container e seu conteúdo, como o 
+                título e o canvas. */
+
+    border-radius: 10px;
+    /* Aplica um raio de borda de 10 pixels, arredondando os cantos do 
+                container para um visual moderno e suave. */
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra abaixo do container, utilizando RGBA para uma 
+                cor preta com 10% de opacidade. Isso dá ao container um 
+                efeito de elevação sutil, melhorando a percepção visual 
+                da profundidade. */
+
+    max-width: 800px;
+    /* Define a largura máxima do container para 800 pixels, garantindo 
+                que ele não se torne demasiado largo em monitores maiores, o 
+                que poderia prejudicar a experiência visual e de leitura. */
+
+    width: 100%;
+    /* Faz com que o container tome toda a largura disponível até o máximo de 800 
+                pixels, permitindo que ele seja responsivo e se ajuste a diferentes 
+                tamanhos de tela. */
+
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    /* Esta regra define uma margem inferior de 20 pixels para todos os 
+                elementos <h1>. O espaço extra na parte inferior
+                serve para separar visualmente o título do conteúdo que 
+                segue, como um <canvas> ou outro texto, melhorando a legibilidade
+                e a estética geral da página ao evitar que os elementos fiquem 
+                visualmente amontoados. */
+
+}
+
+canvas {
+
+    margin-top: 20px;
+    /* Esta regra aplica uma margem superior de 20 pixels a todos os 
+                elementos <canvas>. Assim como a margem no <h1>,
+                esta margem cria espaço entre o <canvas> e qualquer conteúdo 
+                acima dele, como um título ou outro elemento, garantindo
+                que o gráfico não toque diretamente em outros conteúdos e 
+                oferecendo uma apresentação mais clara e organizada. */
+                
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- Esta linha declara que o documento é do tipo HTML5, o que é 
+            uma prática padrão para garantir que os navegadores modernos 
+            processem o documento usando as regras do HTML5. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> com o atributo 'lang="pt-BR"' especifica que o idioma 
+            principal do conteúdo do documento é Português do Brasil. Isso 
+            ajuda os motores de busca e as tecnologias assistivas a entenderem o 
+            contexto linguístico do conteúdo. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de estilo, scripts e 
+                outras informações que não são exibidas diretamente na área de 
+                visualização do navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres do documento para UTF-8, que suporta 
+                quase todos os caracteres e símbolos usados em qualquer idioma. 
+                Isso é essencial para a internacionalização e para evitar problemas 
+                de exibição de caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A tag <meta> com a configuração de 'viewport' ajusta a escala do 
+                conteúdo conforme a largura do dispositivo, o que é crucial para a 
+                responsividade do design. 'initial-scale=1.0' estabelece o nível de 
+                zoom inicial quando a página é carregada. -->
+
+    <title>Gráfico de Rosca com Dados de Excel</title>
+    <!-- A tag <title> define o título da página, que aparece na aba do navegador. 
+                É um elemento importante tanto para a usabilidade quanto para o SEO, 
+                fornecendo contexto sobre o conteúdo da página. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é utilizada para conectar a página HTML a uma folha de estilo 
+                externa, neste caso, 'estilos.css'. Isso separa o conteúdo do estilo, 
+                mantendo a organização e facilitando a manutenção. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- Inclui a biblioteca XLSX.js através de um CDN. Esta biblioteca é utilizada 
+                para ler arquivos Excel (.xlsx) diretamente no navegador, permitindo 
+                que o script manipule os dados do arquivo para uso no gráfico. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Inclui a biblioteca Chart.js através de um CDN. Chart.js é uma biblioteca 
+                de gráficos JavaScript que permite criar uma ampla variedade de gráficos 
+                interativos e responsivos. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <!-- Adiciona o plugin Chart.js Data Labels que é usado para exibir rótulos de 
+                dados nos gráficos criados com Chart.js, proporcionando uma maneira 
+                clara de visualizar os valores de dados individuais. -->
+
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página web, como texto, 
+                imagens, vídeos, formulários, etc. -->
+
+    <div class="container">
+        <!-- A classe "container" é comumente usada para delimitar a largura do 
+                conteúdo central e alinhá-lo esteticamente na página. Isso ajuda na 
+                gestão do layout e na responsividade do site. -->
+
+        <h1>Exercício - Gráfico de Rosca com Dados de Excel</h1>
+        <!-- A tag <h1> é usada aqui para o título principal da página. É importante 
+                    para a acessibilidade e SEO, pois fornece uma visão clara do conteúdo 
+                    da página. O texto "Gráfico de Rosca com Dados de Excel" especifica o 
+                    propósito da página. -->
+
+        <canvas id="graficoRosca" width="400" height="400"></canvas>
+        <!-- A tag <canvas> é usada para desenhar gráficos, jogos ou outras visualizações 
+                    visuais em tempo real. O atributo 'id' permite que este elemento 
+                    seja facilmente acessado pelo JavaScript.
+             Os atributos 'width' e 'height' definem o tamanho do canvas, neste 
+                    caso, 400x400 pixels, o que é adequado para a visualização de 
+                    um gráfico de rosca. -->
+
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com o atributo 'src' aponta para um arquivo JavaScript 
+                    externo, 'scripts.js', que contém o código que manipula os 
+                    dados e renderiza o gráfico no canvas acima.
+         Incluir esse script no final do <body> ajuda a garantir que ele seja 
+                    carregado após todos os elementos da página já estarem renderizados, 
+                    permitindo que o script interaja com eles sem problemas. -->
+                    
+</body>
+</html>
