@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<!-- Declaração do tipo de documento. Esta linha é 
+            essencial para ativar o modo de padrões completos 
+            nos navegadores, assegurando que o HTML5 seja 
+            corretamente interpretado. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> define o início do documento HTML. O atributo 'lang="pt-BR"' 
+            especifica que o idioma principal do conteúdo do documento é o 
+            português do Brasil, o que ajuda os leitores de tela e os mecanismos 
+            de busca a entenderem a língua do conteúdo. -->
+
+<head>
+<!-- A tag <head> encapsula metadados (informações sobre dados) do documento HTML,
+            que não são exibidos diretamente na página web, mas são utilizados 
+            pelos navegadores e outros serviços web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' especifica a codificação 
+                de caracteres UTF-8 para o documento HTML. Isso garante que 
+                qualquer caractere em qualquer idioma possa ser exibido 
+                corretamente no navegador. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta>, que configura a janela de visualização dos dispositivos 
+                móveis para controlar a escala e as dimensões da página. 
+         - 'width=device-width' ajusta a largura da página para seguir a 
+                largura da tela do dispositivo.
+         - 'initial-scale=1.0' define o nível inicial de zoom quando a página é 
+                carregada pela primeira vez. -->
+
+    <title>Gráfico de Vendas - Gráfico de Barras Horizontais</title>
+    <!-- A tag <title> define o título do documento, que é mostrado na aba do 
+                navegador e é usado pelos mecanismos de busca para determinar o 
+                título da página nos resultados de pesquisa. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> é usada aqui para conectar uma folha de estilos externa, 
+                localizada no arquivo 'estilos.css'. Isso permite que todos os 
+                estilos CSS sejam definidos separadamente do HTML, facilitando a 
+                manutenção e a reutilização do CSS. -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Inclui o script 'xlsx.full.min.js' de uma CDN (Content Delivery Network). 
+                Esta biblioteca JavaScript é usada para ler arquivos Excel (XLSX) 
+                diretamente no navegador, permitindo manipular e utilizar dados de 
+                arquivos Excel sem a necessidade de um servidor backend. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Inclui o script 'Chart.js' de uma CDN. Chart.js é uma biblioteca leve que 
+                permite criar gráficos interativos e responsivos em HTML5. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <!-- Adiciona o plugin 'chartjs-plugin-datalabels' para Chart.js, que permite 
+                mostrar rótulos de dados nos gráficos, oferecendo mais informações 
+                diretamente nas visualizações. -->
+
+</head>
+
+<body>
+<!-- A tag <body> contém todo o conteúdo da página que é visível para o 
+                usuário, como texto, imagens, links, entre outros elementos. -->
+
+    <div class="container">
+    <!-- A tag <div> com a classe 'container' serve como um contêiner para 
+                outros elementos HTML. A classe 'container' é geralmente usada para 
+                aplicar estilos específicos como largura máxima, margens automáticas 
+                para centralização, e estilos de background e borda, definidos 
+                no arquivo CSS. -->
+
+        <h1>Exercício - Gráfico de Barras Horizontais</h1>
+        <!-- A tag <h1> representa um cabeçalho de primeiro nível. É usado aqui 
+                    para fornecer um título visível na página, descrevendo o conteúdo 
+                    ou o propósito da página, neste caso, indicando que se trata de 
+                    um gráfico de vendas com barras horizontais. Os cabeçalhos são 
+                    importantes para a acessibilidade e SEO (Search Engine Optimization). -->
+
+        <div id="grafico">
+        <!-- Uma segunda <div> com o id 'grafico' serve como contêiner específico 
+                    para o gráfico. O ID é único e pode ser usado para aplicar estilos 
+                    específicos ou manipulações via JavaScript. -->
+
+            <canvas id="graficoKPI"></canvas>
+            <!-- A tag <canvas> com o id 'graficoKPI' é usada como o elemento 
+                        onde o gráfico será renderizado. O Canvas fornece um espaço de 
+                        desenho para gráficos (via JavaScript), como gráficos de barras, 
+                        linhas, tortas, etc. O ID 'graficoKPI' permite que este canvas 
+                        seja facilmente acessado e manipulado através de scripts. -->
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta para 'script.js' é usada 
+                para incluir um arquivo JavaScript externo. Este script contém o código 
+                necessário para manipular os dados e renderizar o gráfico no elemento <canvas> 
+                mencionado acima. -->
+
+</body>
+</html>
+<!-- Fim do documento HTML. A tag </html> indica que todos os elementos 
+            do documento HTML foram fechados corretamente. -->

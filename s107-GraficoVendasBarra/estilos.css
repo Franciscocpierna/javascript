@@ -1,0 +1,101 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do texto para 'Arial', com um 
+                fallback para qualquer fonte 'sans-serif' caso 'Arial' 
+                não esteja disponível. 'sans-serif' é um tipo de fonte 
+                que não possui pequenos traços no fim das letras, o que a 
+                torna clara e legível em telas. */
+
+    background-color: #f0f2f5;
+    /* Configura a cor de fundo de todo o corpo da página para um 
+                cinza claro (#f0f2f5). Esta cor de fundo é sutil e comum em 
+                designs modernos por ser suave aos olhos. */
+
+    margin: 0;
+    /* Remove as margens padrão do corpo da página. Navegadores geralmente 
+                adicionam uma margem por padrão, e zerá-la ajuda a garantir 
+                consistência no layout em diferentes navegadores. */
+
+    padding: 0;
+    /* Remove o preenchimento (padding) padrão do corpo da página. Assim 
+                como as margens, o preenchimento padrão pode variar entre 
+                navegadores, então zerar ajuda a manter a consistência do layout. */
+
+}
+
+.container {
+
+    max-width: 1200px;
+    /* Define a largura máxima do contêiner para 1200px. Isso significa que o 
+                contêiner pode se expandir até 1200px de largura, mas não mais 
+                que isso, garantindo que o conteúdo não fique muito estendido 
+                em monitores grandes. */
+
+    margin: 50px auto;
+    /* Configura a margem superior e inferior para 50px e as margens laterais 
+                para 'auto'. Isso centraliza o contêiner horizontalmente dentro 
+                de seu contêiner pai (neste caso, o <body>), pois as margens 
+                automáticas empurram igualmente de ambos os lados. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20px a todos os lados do contêiner, criando 
+                espaço entre os bordos do contêiner e seu conteúdo, melhorando a 
+                legibilidade e a estética. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do contêiner para branco. Isso ajuda a destacar o 
+                contêiner do fundo da página e torna o conteúdo mais legível. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do contêiner. A sombra é sutil (preta com 10% 
+                de opacidade) e se espalha 10px em todas as direções. Isso adiciona 
+                profundidade ao layout, fazendo o contêiner parecer elevado em 
+                relação ao restante da página. */
+
+    border-radius: 8px;
+    /* Arredonda os cantos do contêiner com um raio de 8px. Cantos arredondados 
+                são uma escolha de design comum que pode fazer a interface parecer 
+                mais amigável e moderna. */
+
+    text-align: center;
+    /* Alinha o texto dentro do contêiner ao centro. Isso é frequentemente 
+                usado em cabeçalhos ou outros elementos importantes para chamar 
+                atenção e melhorar a estética. */
+
+}
+
+
+h1 {
+    
+    color: #333333;
+    /* Define a cor do texto para os elementos <h1> para um cinza escuro (#333333). 
+                Esta cor é frequentemente usada para texto porque fornece um alto 
+                contraste com fundos claros sem ser tão duro aos olhos quanto o 
+                preto puro. É ideal para títulos devido à sua legibilidade e 
+                destaque sutil. */
+}
+
+#grafico {
+
+    width: 100%;
+    /* Define a largura do contêiner do gráfico para 100% da largura de seu 
+                contêiner pai. Isso faz com que o contêiner do gráfico se ajuste à 
+                largura disponível, tornando-o responsivo e adaptável a 
+                diferentes tamanhos de tela. */
+
+    max-width: 800px;
+    /* Estabelece uma largura máxima de 800px para o contêiner do gráfico. 
+                Isso significa que, mesmo que o contêiner pai possa se estender 
+                além de 800px, o contêiner do gráfico não excederá essa largura, 
+                garantindo que o gráfico permaneça visualmente agradável e não se 
+                estique demais horizontalmente em telas grandes. */
+
+    margin: 0 auto;
+    /* Aplica uma margem de zero no topo e na base, e automática nas laterais. 
+                Essa configuração centraliza o contêiner do gráfico horizontalmente 
+                dentro de seu contêiner pai, utilizando margens automáticas para 
+                ajustar equitativamente de ambos os lados. Isso assegura que o 
+                gráfico esteja alinhado centralmente, independente da largura da tela. */
+                
+}
