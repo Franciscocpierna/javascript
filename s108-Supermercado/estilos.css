@@ -1,0 +1,168 @@
+#secoes-produtos .card {
+
+    margin-bottom: 20px;
+    /* Define uma margem inferior de 20 pixels para os 
+            elementos com a classe 'card' que estão dentro 
+            do elemento com o ID 'secoes-produtos'. 
+   Isso ajuda a criar espaço entre os cartões de 
+            produtos quando empilhados verticalmente. */
+
+}
+
+.bg-imagem-topo {
+
+    width: 100%;  
+    /* Define a largura da imagem para ocupar 100% do 
+            elemento pai, garantindo que a imagem estenda-se 
+            por toda a largura disponível. */
+
+    height: 200px; 
+    /* Estabelece uma altura fixa de 200 pixels para a 
+            imagem, o que proporciona uniformidade na 
+            exibição das imagens em diferentes cartões. */
+
+    object-fit: contain;  
+    /* Garante que toda a imagem seja visível dentro do 
+            espaço definido sem distorção, ajustando a imagem 
+            dentro das dimensões sem recortá-la. */
+
+    background: #fff;  
+    /* Define a cor de fundo do elemento para 
+            branco (#fff), útil se a imagem não cobrir todo o 
+            espaço definido, evitando fundos inesperados. */
+
+}
+
+.item-carrinho {
+
+    display: flex;
+    /* Aplica o modelo de caixa flexível, facilitando o 
+            alinhamento dos itens dentro deste elemento 
+            horizontalmente. */
+
+    align-items: center;
+    /* Centraliza verticalmente os itens dentro do 
+            elemento, útil para alinhar itens de diferentes 
+            tamanhos (como texto e imagens) na mesma linha. */
+
+}
+
+.imagem-item-carrinho {
+
+    width: 50px;
+    /* Define a largura da imagem do item do 
+            carrinho para 50 pixels, mantendo as 
+            imagens pequenas e consistentes em tamanho. */
+
+    height: 50px;
+    /* Define a altura da imagem do item do carrinho 
+            para 50 pixels, assegurando que as imagens 
+            sejam sempre quadradas e uniformes. */
+
+    object-fit: cover;
+    /* Garante que a imagem preencha completamente o 
+            espaço definido (50x50 pixels), cortando o 
+            excesso de imagem se necessário para cobrir 
+            todo o espaço. */
+
+    margin-right: 10px;
+    /* Adiciona uma margem à direita de 10 pixels, 
+            separando a imagem dos textos ou outros 
+            elementos ao lado dentro do carrinho. */
+
+}
+
+
+.detalhes-item-carrinho {
+
+    display: flex;
+    /* Configura o contêiner 'detalhes-item-carrinho' 
+            para usar flexbox, que é um modelo de layout 
+            projetado para estruturar elementos de forma 
+            mais eficiente e com melhor controle. */
+
+    flex-direction: column;
+    /* Define a direção dos itens flex como 'column', o que 
+            significa que os itens filhos (como nomes, preços, etc.) 
+            serão empilhados verticalmente, um abaixo do outro. */
+
+}
+
+.sidebar {
+
+    position: fixed;
+    /* A propriedade 'position: fixed' é usada para fixar a 
+            barra lateral na janela de visualização, fazendo 
+            com que ela não se mova ao rolar a página. */
+
+    top: 0;
+    /* 'top: 0' coloca a barra lateral no topo da página. */
+
+    bottom: 0;
+    /* 'bottom: 0' estende a barra lateral até o fundo da 
+            página, criando uma altura que se adapta ao 
+            tamanho da janela de visualização. */
+
+    left: 0;
+    /* 'left: 0' alinha a barra lateral à esquerda da página. */
+
+    z-index: 100;
+    /* 'z-index: 100' garante que a barra lateral fique sobre 
+            outros elementos da página que possam ter 
+            um z-index menor. */
+
+    padding: 48px 0 0;
+    /* 'padding: 48px 0 0' aplica um espaçamento interno 
+            no topo de 48 pixels e nenhum espaçamento nos 
+            lados e na parte inferior, dando espaço acima do 
+            primeiro item da barra lateral. */
+
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    /* Adiciona uma sombra interna sutil no lado esquerdo da 
+            barra lateral para dar uma sensação de profundidade, 
+            melhorando a separação visual do conteúdo adjacente. */
+
+    background-color: #000080;
+    /* Define a cor de fundo da barra lateral para azul 
+            marinho (#000080), proporcionando um contraste alto 
+            com elementos de texto claros para melhor legibilidade. */
+
+}
+
+.sidebar .nav-link {
+
+    font-weight: 500;
+    /* 'font-weight: 500' faz o texto dentro de '.nav-link' ser 
+            semi-negrito, ajudando a destacar os links na navegação. */
+            
+    color: #ffffff;
+    /* 'color: #ffffff' define a cor do texto para 
+            branco, garantindo que os links sejam facilmente 
+            visíveis contra o fundo azul marinho. */
+    
+    /* Aumenta o tamanho da fonte para melhor legibilidade. */
+    font-size: 18px;
+
+}
+
+.sidebar .nav-link:hover {
+
+    color: #050505;
+    /* Muda a cor do texto para quase preto quando o 
+            mouse passa sobre o link, aumentando a visibilidade. */
+            
+    background-color: rgb(182, 209, 123);
+    /* Altera a cor de fundo para um verde claro, 
+            proporcionando um feedback visual 
+            claro de interatividade. */
+
+    width: 100%;
+    /* Garante que o fundo no hover estenda-se 
+            pela largura total da barra lateral. */
+
+    padding-left: 0;
+    /* Remove o padding esquerdo para garantir que o 
+            fundo preencha completamente a barra lateral 
+            horizontalmente. */
+            
+}
