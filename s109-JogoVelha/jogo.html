@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE é crucial para definir o 
+            padrão de HTML que o navegador deve usar 
+            para interpretar o documento. 
+     '!DOCTYPE html' especifica que este documento 
+            segue o padrão HTML5, que é a versão mais 
+            recente e recomendada do HTML. 
+     Essa linha deve ser a primeira no seu documento HTML, 
+            para garantir que o navegador processe 
+            tudo corretamente. -->
+
+<html lang="pt-br">
+<!-- A tag <html> é o elemento raiz de todo documento HTML. 
+            Ela deve englobar todos os outros elementos 
+            HTML (exceto o DOCTYPE).
+     O atributo 'lang="pt-br"' especifica que o idioma principal 
+            do documento é o português do Brasil. Isso ajuda 
+            motores de busca e navegadores a tratar o conteúdo do 
+            documento de forma adequada, além de ser importante 
+            para acessibilidade. -->
+
+<head>
+<!-- A tag <head> contém metadados, links para folhas de 
+            estilo, scripts e outras informações que não 
+            são diretamente visíveis na página.
+     Tudo dentro de <head> é essencial para configurar a página, 
+            mas não constitui o conteúdo que os usuários 
+            veem no navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset="UTF-8"' define a 
+            codificação de caracteres para UTF-8, que suporta 
+            quase todos os caracteres de qualquer idioma.
+         Isso é crucial para garantir que qualquer texto dentro 
+            da página seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag <meta> configura a viewport (área de visualização) 
+                da página para dispositivos móveis.
+         - 'width=device-width' faz com que a largura da 
+                página corresponda à largura do dispositivo.
+         - 'initial-scale=1.0' define o nível inicial de zoom 
+                quando a página é carregada pela primeira vez. 
+         Essas configurações são importantes para garantir que a 
+                página seja responsiva e bem visualizada em 
+                diferentes dispositivos. -->
+
+    <title>Jogo da Velha</title>
+    <!-- A tag <title> define o título da página, que é exibido na 
+                aba do navegador. Este título também é usado por 
+                motores de busca, sendo importante para SEO. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- A tag <link> com o atributo 'rel="stylesheet"' é usada 
+                para incluir uma folha de estilo CSS externa no documento.
+         O atributo 'href' especifica o caminho para o arquivo 
+                CSS ('estilos.css'), que contém os estilos que 
+                serão aplicados ao documento.
+         Incluir CSS desta maneira é fundamental para controlar a 
+                aparência da página. -->
+
+</head>
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível de uma página HTML. 
+        Aqui você define o que os usuários interagem e veem no navegador. -->
+
+    <!-- Título-->
+    <h1>Jogo da Velha</h1>
+        
+    <!-- Início do bloco de pontuações -->
+    <div id="pontuacoes">
+
+            <!-- Texto fixo "Jogador: " para indicar a 
+                    pontuação do jogador humano -->
+            Jogador: 
+
+            <!-- Elemento <span> que contém a pontuação do jogador. 
+            O 'id' é um identificador único para permitir 
+                    manipulações específicas via CSS ou JavaScript.
+            Inicia com 0 e pode ser atualizado dinamicamente. -->
+            <span id="pontuacao-jogador">0</span>
+    
+            <!-- Separador visual entre as pontuações do 
+                    jogador e do computador -->
+            | 
+    
+            <!-- Texto fixo "Computador: " para indicar a 
+                    pontuação do adversário controlado pelo computador -->
+            Computador: 
+
+            <!-- Elemento <span> que contém a pontuação do computador.
+            Inicia com 0 e pode ser atualizado dinamicamente com scripts. -->
+            <span id="pontuacao-computador">0</span>
+    
+            <!-- Separador visual entre as pontuações do 
+                    computador e os empates -->
+            | 
+    
+            <!-- Texto fixo "Empates: " para indicar a 
+                    quantidade de jogos empatados -->
+
+            Empates: 
+
+            <!-- Elemento <span> que contém o número de empates.
+            Inicia com 0 e pode ser atualizado dinamicamente com scripts. -->
+            <span id="pontuacao-empates">0</span>
+            
+    </div>
+    <!-- Fim do bloco de pontuações -->
+
+
+    <!-- Início do contêiner do tabuleiro do jogo -->
+    <div class="tabuleiro" id="tabuleiro">
+
+            <!-- Célula do tabuleiro onde ocorre uma jogada ao clicar. 
+            'onclick' é um evento que chama a função 'fazerJogada(0)' 
+                    quando a célula é clicada.
+
+            O argumento '0' refere-se à posição desta 
+                    célula no tabuleiro. -->
+            <div class="celula" onclick="fazerJogada(0)"></div>
+
+            <!-- Segunda célula do tabuleiro, com evento de 
+                    clique que chama 'fazerJogada(1)'. -->
+            <div class="celula" onclick="fazerJogada(1)"></div>
+
+            <!-- Terceira célula do tabuleiro, com evento de 
+                    clique que chama 'fazerJogada(2)'. -->
+            <div class="celula" onclick="fazerJogada(2)"></div>
+    
+            <!-- Elemento <br> para quebra de linha, movendo as 
+                    próximas células para uma nova linha visualmente. -->
+            <br>
+    
+            <!-- Quarta célula do tabuleiro, com evento de clique 
+                    que chama 'fazerJogada(3)'. -->
+            <div class="celula" onclick="fazerJogada(3)"></div>
+
+            <!-- Quinta célula do tabuleiro, com evento de clique 
+                    que chama 'fazerJogada(4)'. -->
+            <div class="celula" onclick="fazerJogada(4)"></div>
+
+            <!-- Sexta célula do tabuleiro, com evento de clique 
+                    que chama 'fazerJogada(5)'. -->
+            <div class="celula" onclick="fazerJogada(5)"></div>
+                    
+            <!-- Outro elemento <br> para nova quebra de linha. -->
+            <br>
+    
+            <!-- Sétima célula do tabuleiro, com evento de clique que 
+                    chama 'fazerJogada(6)'. -->
+            <div class="celula" onclick="fazerJogada(6)"></div>
+
+            <!-- Oitava célula do tabuleiro, com evento de clique que 
+                    chama 'fazerJogada(7)'. -->
+            <div class="celula" onclick="fazerJogada(7)"></div>
+
+            <!-- Nona e última célula do tabuleiro, com evento de 
+                    clique que chama 'fazerJogada(8)'. -->
+            <div class="celula" onclick="fazerJogada(8)"></div>
+
+    </div>
+    <!-- Fim do contêiner do tabuleiro -->
+
+    <!-- Inclusão de um arquivo JavaScript externo chamado 'script.js'. 
+            Este script é responsável pela lógica do jogo, 
+                    manipulação dos eventos de clique, 
+                    e atualização da interface do jogo. -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+   

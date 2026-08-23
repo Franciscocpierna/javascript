@@ -1,0 +1,108 @@
+/* Estilizações para o corpo do documento HTML */
+body {
+
+    font-family: Arial, sans-serif; 
+    /* Define a família da fonte como Arial, com um 
+            fallback para qualquer fonte sans-serif disponível */
+
+    text-align: center; 
+    /* Alinha todo o texto contido no corpo do 
+            documento ao centro */
+
+    margin-top: 50px; 
+    /* Aplica uma margem superior de 50 pixels para separar o 
+            conteúdo do topo da página */
+
+}
+
+/* Estilizações para a classe .tabuleiro, usada para 
+        posicionar o tabuleiro de jogo */
+.tabuleiro {
+
+    margin: 0 auto;
+    /* Define as margens laterais como automáticas para 
+            centralizar o tabuleiro horizontalmente na página,
+            e a margem superior e inferior como 0 */
+
+    display: inline-block;
+    /* Define o tipo de exibição como inline-block, 
+            permitindo que o tabuleiro seja alinhado como um elemento inline
+            mas respeitando as propriedades de box-model como um elemento block */
+
+}
+
+/* Estilizações para a classe .celula, usada para cada 
+        célula individual no tabuleiro de jogo */
+.celula {
+
+    width: 100px;
+    /* Define a largura da célula como 100 pixels */
+
+    height: 100px;
+    /* Define a altura da célula como 100 pixels */
+
+    font-size: 48px;
+    /* Define o tamanho da fonte dentro da célula como 48 pixels, 
+            útil para exibir grandes caracteres (X ou O) */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o mouse passa 
+            sobre a célula, indicando que é clicável */
+
+    border: 2px solid #ccc;
+    /* Adiciona uma borda sólida com 2 pixels de espessura e 
+            cor cinza claro (#ccc) ao redor da célula */
+
+    display: inline-flex;
+    /* Usa o modelo de layout flexível em linha, permitindo que o 
+            conteúdo da célula seja flexível e alinhado facilmente */
+
+    justify-content: center;
+    /* Alinha o conteúdo da célula horizontalmente ao centro, 
+            parte do modelo flexível */
+
+    align-items: center;
+    /* Alinha o conteúdo da célula verticalmente ao centro, 
+            também parte do modelo flexível */
+
+    vertical-align: middle;
+    /* Garante que o alinhamento vertical do elemento 
+            inline-flex (a célula) seja ao meio em relação 
+            ao seu contêiner */
+
+    margin: 5px;
+    /* Adiciona uma margem de 5 pixels ao redor de cada célula 
+            para garantir algum espaço entre as células adjacentes */
+
+}
+
+/* Estilizações para o pseudo-elemento :hover da classe .celula, 
+        aplicadas quando o cursor do mouse passa sobre a célula */
+.celula:hover {
+
+    background-color: #1a1da7;
+    /* Muda a cor de fundo da célula para um azul muito 
+            escuro (#1a1da7) quando o mouse passa sobre ela,
+            indicando que a célula é interativa e realçando a 
+            célula sob o cursor */
+
+    /* Cor da fonte */
+    color: #ccc;
+
+}
+
+/* Estilizações para o elemento com ID #pontuacoes, usado 
+        para exibir as pontuações no jogo */
+#pontuacoes {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, criando 
+            espaço entre as pontuações e outros elementos 
+            acima delas */
+
+    font-weight: bold;
+    /* Define o peso da fonte para negrito, destacando 
+            visualmente o texto das pontuações para 
+            fácil leitura */
+
+}
