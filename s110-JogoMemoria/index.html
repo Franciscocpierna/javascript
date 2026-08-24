@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<!-- Define que este documento é um documento HTML5. -->
+
+<html lang="pt-BR">
+<!-- Inicia o elemento HTML principal e define o idioma 
+      do documento como português do Brasil. -->
+
+<head>
+<!-- Abre a seção head, que contém metadados (informações s
+        obre os dados) e links para scripts e folhas de estilo. -->
+
+  <meta charset="UTF-8">
+  <!-- Define o conjunto de caracteres usado no documento 
+        como UTF-8, que inclui a maioria dos caracteres de 
+        todos os sistemas de escrita humanos. -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Define a viewport para controlar a área de visualização da 
+            página nos navegadores, especialmente útil para 
+            responsividade em dispositivos móveis. 
+       - 'width=device-width' define a largura da viewport 
+            igual à largura do dispositivo.
+       - 'initial-scale=1.0' define o nível de zoom inicial 
+            quando a página é carregada pela primeira vez. -->
+
+  <title>Jogo da Memória</title>
+  <!-- Define o título da página, que é exibido na aba do navegador. -->
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Link para a folha de estilo externa chamada 'styles.css', que 
+            contém os estilos CSS para o documento HTML. -->
+
+</head>
+<!-- Fecha a seção head do documento HTML. -->
+
+<body>
+  <!-- Abre o corpo do documento HTML, que contém todo o conteúdo 
+          visível da página, como texto, imagens, vídeos, etc. -->
+  
+    <h1>Jogo da Memória</h1>
+    <!-- Cria um cabeçalho de nível 1, que geralmente é usado para o 
+          título principal da página. Aqui, ele diz "Jogo da Memória". -->
+  
+    <div class="tabuleiro">
+    <!-- Abre uma div com a classe 'tabuleiro'. 'Div' é uma abreviação 
+            de 'division' e é usada para agrupar elementos. 
+         A classe 'tabuleiro' é usada para aplicar estilos específicos a 
+            esta seção e pode ser referenciada no CSS e no JavaScript. -->
+  
+      <!-- Cada 'div' com a classe 'carta' representa uma 
+                carta no jogo da memória. 
+           Essas divs são blocos de construção para onde as 
+                cartas do jogo serão exibidas. 
+           Elas estão inicialmente vazias e serão manipuladas 
+                pelo JavaScript para mostrar imagens. -->
+      <div class="carta"></div> <!-- Representa uma carta individual no jogo. -->
+      <div class="carta"></div> <!-- Repete para cada carta necessária no jogo. -->
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+      <div class="carta"></div>
+    </div>
+    <!-- Fecha a div do 'tabuleiro', que contém todas as 'cartas'. -->
+  
+    <script src="script.js"></script>
+    <!-- Adiciona o arquivo JavaScript chamado 'script.js' ao 
+              documento. Este script é carregado ao final do corpo 
+              para garantir que o HTML seja processado antes do 
+              JavaScript, melhorando a interatividade do usuário. -->
+  
+</body>
+<!-- Fecha o elemento body do documento HTML. -->
+
+</html>
+<!-- Fecha o elemento HTML principal do documento. -->
+  

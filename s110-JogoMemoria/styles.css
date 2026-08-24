@@ -1,0 +1,173 @@
+body {
+
+  /* Define a família de fontes do conteúdo do
+         corpo como 'Arial', que é uma fonte sans-serif.
+     Se 'Arial' não estiver disponível, o navegador 
+        usará qualquer fonte sans-serif padrão. */
+  font-family: Arial, sans-serif;
+
+  /* Configura o modelo de layout para 'flex', que é
+         um modelo de caixa flexível.
+     Isso permite o posicionamento flexível de 
+        elementos filhos dentro do corpo. */
+  display: flex;
+
+  /* Define a direção principal do eixo flexível como 'column'.
+     Isso faz com que os elementos filhos sejam 
+        empilhados verticalmente, de cima para baixo. */
+  flex-direction: column;
+
+  /* Centraliza os elementos filhos horizontalmente 
+        no contêiner flexível.
+     Isso é eficaz em conjunto com 'display: flex' 
+        e 'flex-direction: column'. */
+  align-items: center;
+
+  /* Centraliza os elementos filhos verticalmente 
+        no contêiner flexível.
+     Ajuda a alinhar todo o conteúdo do corpo no 
+        centro da página verticalmente. */
+  justify-content: center;
+
+  /* Define a altura do corpo para '100vh'.
+     'vh' é uma unidade relativa que se refere 
+          a 1% da altura da janela de visualização.
+     Assim, '100vh' significa 100% da altura total da 
+          janela de visualização, fazendo o corpo 
+          ocupar toda a altura da tela. */
+  height: 100vh;
+
+  /* Define a margem de todos os lados do corpo como 0.
+     Isso remove qualquer espaço entre as bordas do 
+          corpo e as bordas da janela do navegador,
+     útil para garantir que não haja espaços 
+          indesejados ao redor dos elementos. */
+  margin: 0;
+  
+}
+
+.tabuleiro {
+
+   /* Configura o modelo de layout para 'grid'. Este modelo é 
+            usado para criar layouts de página mais complexos
+            e permite o controle detalhado sobre como os elementos 
+            filhos (neste caso, as cartas) são posicionados e alinhados. */
+   display: grid;
+ 
+   /* Define o padrão das colunas no grid.
+      'repeat(5, 100px)' cria cinco colunas, cada uma 
+            com 100 pixels de largura.
+      A função 'repeat' é uma maneira prática de definir múltiplas 
+            colunas ou linhas que têm as mesmas dimensões. */
+   grid-template-columns: repeat(5, 100px); /* Define a largura das colunas */
+ 
+   /* Define o espaçamento entre os itens do grid.
+      '10px' é o espaço entre as cartas tanto 
+            horizontal quanto verticalmente.
+      Isso ajuda a separar visualmente cada carta no tabuleiro,
+            tornando o layout mais claro e organizado. */
+   grid-gap: 10px; /* Espaçamento entre as cartas */
+
+ }
+
+
+ .carta {
+
+    /* Define a posição do elemento como 'relative'.
+       Isso permite que você posicione os elementos 
+             filhos (como imagens) relativamente à posição 
+             original da carta.
+       Elementos posicionados relativamente podem ser 
+             ajustados usando as propriedades 'top', 
+             'right', 'bottom', e 'left'. */
+    position: relative;
+ 
+    /* Define a largura das cartas como 100 pixels.
+       Isso garante que todas as cartas tenham uma 
+             largura uniforme, importante para a consistência 
+             do layout do grid. */
+    width: 100px; /* Largura das cartas */
+ 
+    /* Define a altura das cartas como 100 pixels.
+       Como a largura, a altura uniforme ajuda a manter 
+             todas as cartas visualmente consistentes e 
+             alinhadas no grid. */
+    height: 100px; /* Altura das cartas */
+ 
+    /* Define a cor de fundo das cartas como cinza claro (#ccc).
+       Esta é uma cor de fundo temporária que pode ser 
+             vista antes de as imagens serem carregadas ou 
+             se as imagens falharem ao carregar. */
+    background-color: #ccc; /* Cor de fundo temporária para as cartas */
+ 
+    /* Adiciona uma borda sólida de 1 pixel de espessura e 
+             cor preta (#000) ao redor de cada carta.
+       A borda ajuda a delinear cada carta individualmente, 
+             tornando-as mais distintas uma das outras 
+             no tabuleiro. */
+    border: 1px solid #000; /* Borda para as cartas */
+ 
+    /* Configura o modelo de exibição para 'flex'.
+       O modelo flexível é usado aqui para alinhar 
+             centralmente o conteúdo da carta (normalmente 
+             uma imagem). */
+    display: flex;
+ 
+    /* Alinha o conteúdo da carta no centro verticalmente.
+       Isso é útil para garantir que o conteúdo da 
+             carta (como uma imagem) seja centralizado 
+             dentro da área definida. */
+    align-items: center;
+ 
+    /* Justifica o conteúdo da carta no centro horizontalmente.
+       Junto com 'align-items: center', essa propriedade 
+             garante que o conteúdo da carta esteja perfeitamente 
+             centralizado tanto vertical quanto horizontalmente. */
+    justify-content: center;
+ 
+ }
+
+
+.carta img {
+
+   /* Define a posição do elemento 'img' como 'absolute'.
+      Isso posiciona a imagem de forma absoluta em 
+            relação ao primeiro ancestral posicionado (neste 
+            caso, '.carta' com 'position: relative').
+      Com essa configuração, a imagem será posicionada diretamente 
+            no início da div '.carta', independentemente de 
+            outros conteúdos. */
+   position: absolute;
+ 
+   /* Define o topo do elemento 'img' como 0.
+      Isso alinha a parte superior da imagem com a parte 
+            superior de seu contêiner pai '.carta'. */
+   top: 0;
+ 
+   /* Define a esquerda do elemento 'img' como 0.
+      Isso alinha o lado esquerdo da imagem com o lado 
+            esquerdo de seu contêiner pai '.carta'. */
+   left: 0;
+ 
+   /* Define a largura do elemento 'img' para ocupar 100% da 
+            largura de seu contêiner pai '.carta'.
+      Isso garante que a imagem se estenda por toda a largura 
+            da carta, cobrindo completamente a área horizontal. */
+   width: 100%;
+ 
+   /* Define a altura do elemento 'img' para ocupar 100% da 
+            altura de seu contêiner pai '.carta'.
+      Isso garante que a imagem se estenda por toda a altura 
+            da carta, cobrindo completamente a área vertical. */
+   height: 100%;
+ 
+   /* Aplica a propriedade 'object-fit: cover' à imagem.
+      Esta propriedade faz com que a imagem cubra totalmente a 
+            área disponível da carta, preservando suas proporções originais.
+      Caso a imagem não se ajuste perfeitamente ao contêiner, as 
+            partes excedentes da imagem serão cortadas,
+            garantindo que não haja espaço não preenchido e a imagem 
+            não seja distorcida. */
+   object-fit: cover; /* Garante que a imagem ocupe toda a área da carta */
+
+}
