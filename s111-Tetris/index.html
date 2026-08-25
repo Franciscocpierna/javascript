@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento, que é HTML5 -->
+
+<html lang="pt-br">
+<!-- Define o idioma da página como português do Brasil -->
+
+<head>
+    <!-- Cabeçalho do documento HTML -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, que 
+        suporta a maioria dos caracteres de todas as línguas escritas -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define como a página deve ser exibida em diferentes 
+        dispositivos, garantindo que ela seja responsiva (se 
+        adapte a diferentes tamanhos de tela) -->
+
+    <title>Tetris</title>
+    <!-- Título da página, que será exibido na aba 
+        do navegador -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Inclui um arquivo CSS externo para estilizar a página -->
+
+</head>
+
+<body>
+    <!-- Corpo do documento HTML, onde o conteúdo 
+         visível para o usuário é colocado -->
+
+    <h1>Tetris</h1>
+    <!-- Cabeçalho de nível 1 com o título do jogo -->
+
+    <div id="pontuacao">
+        <!-- Div que exibe a pontuação do jogador -->
+
+        Pontuação: 
+        
+        <span id="pontuacaoValor">0</span>
+        <!-- O valor inicial da pontuação é 0 e está dentro de um elemento <span> 
+             com o id "pontuacaoValor". Este valor será atualizado dinamicamente 
+             pelo JavaScript conforme o jogador ganha pontos no jogo -->
+
+    </div>
+
+    <div id="jogo">
+        <!-- Div que contém o canvas do jogo e as peças disponíveis -->
+        
+        <canvas id="tetris" width="300" height="600"></canvas>
+        <!-- Elemento canvas onde o jogo Tetris será desenhado. 
+             A largura é de 300 pixels e a altura é de 600 pixels. 
+             O canvas é uma área de desenho onde o JavaScript pode renderizar gráficos 
+             e animações, como o jogo Tetris. -->
+
+        <div id="pecasDisponiveis">
+            <!-- Div que contém as peças disponíveis para o 
+                    jogador selecionar -->
+
+            <h2>Peças Disponíveis</h2>
+            <!-- Cabeçalho de nível 2 para a seção de peças disponíveis -->
+
+            <div id="pecas"></div>
+            <!-- Div que irá conter todas as peças disponíveis 
+                        que o jogador pode escolher. 
+                 Esta área será preenchida dinamicamente pelo 
+                        JavaScript com as diferentes 
+                 peças de Tetris que o jogador pode clicar para selecionar. -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Inclui um arquivo JavaScript externo que contém a 
+                lógica do jogo Tetris. 
+         Este arquivo irá controlar a renderização do jogo no 
+                canvas, a atualização da pontuação 
+         e a lógica para selecionar e desenhar as peças disponíveis. -->
+         
+</body>
+
+</html>
