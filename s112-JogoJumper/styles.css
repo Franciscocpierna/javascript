@@ -1,0 +1,152 @@
+/* Estilos para o corpo (body) da página */
+body {
+
+    /* Define que o layout será flexível usando Flexbox */
+    display: flex;
+    
+    /* Define que os elementos filhos serão dispostos em
+     uma coluna (verticalmente) */
+    flex-direction: column;
+    
+    /* Centraliza os elementos filhos horizontalmente */
+    align-items: center;
+    
+    /* Define a fonte padrão para o texto no corpo
+     como Arial, ou sans-serif se Arial não estiver disponível */
+    font-family: Arial, sans-serif;
+
+}
+
+
+/* Estilos para o cabeçalho de nível 1 (h1) */
+h1 {
+
+    /* Define uma margem superior de 20 pixels */
+    margin-top: 20px;
+
+}
+
+/* Estilos para o elemento com id 'pontuacao' */
+#pontuacao {
+
+    /* Define uma margem inferior de 20 pixels */
+    margin-bottom: 20px;
+
+    /* Define o tamanho da fonte como 30 pixels */
+    font-size: 30px;
+
+}
+
+
+/* Estilos para o elemento com id 'jogo' */
+#jogo {
+
+    /* Define que o layout será flexível usando Flexbox */
+    display: flex;
+
+}
+
+/* Estilos para o elemento <canvas> */
+canvas {
+
+    /* Define uma borda ao redor do canvas com 2 
+        pixels de largura e cor preta */
+    border: 2px solid black;
+
+}
+
+/* Estilos para o elemento com id 'pecasDisponiveis' */
+#pecasDisponiveis {
+
+    /* Define que o layout será flexível usando Flexbox */
+    display: flex;
+    
+    /* Define que os elementos filhos serão dispostos em
+         uma coluna (verticalmente) */
+    flex-direction: column;
+    
+    /* Centraliza os elementos filhos horizontalmente */
+    align-items: center;
+    
+    /* Define uma margem à esquerda de 20 pixels para criar
+        espaço entre o canvas e as peças disponíveis */
+    margin-left: 20px;
+
+}
+
+/* Estilos para o elemento com id 'pecas' */
+#pecas {
+
+    /* Define que o layout será flexível usando Flexbox */
+    display: flex;
+    
+    /* Define que os elementos filhos serão 
+        dispostos em uma coluna (verticalmente) */
+    flex-direction: column;
+    
+    /* Define um espaço (gap) de 10 pixels entre 
+        os elementos filhos */
+    gap: 10px;
+
+}
+
+/* Estilos para os elementos com a classe 'peca' */
+.peca {
+
+    /* Define que o layout será em grade (grid) */
+    display: grid;
+    
+    /* Define um espaço (gap) de 2 pixels entre 
+        os itens da grade */
+    gap: 2px;
+
+}
+
+/* Estilos específicos para a peça com o formato "I" */
+.peca[data-shape="I"] {
+
+    /* Define uma grade (grid) com 4 colunas, cada uma 
+        com 30 pixels de largura */
+    grid-template-columns: repeat(4, 30px);
+
+}
+
+/* Estilos específicos para a peça com o formato "O" */
+.peca[data-shape="O"] {
+
+    /* Define uma grade (grid) com 2 colunas, cada uma 
+        com 30 pixels de largura */
+    grid-template-columns: repeat(2, 30px);
+
+}
+
+/* Estilos para as peças com os 
+    formatos "T", "L", "J", "S" e "Z" */
+.peca[data-shape="T"],
+.peca[data-shape="L"],
+.peca[data-shape="J"],
+.peca[data-shape="S"],
+.peca[data-shape="Z"] {
+
+    /* Define uma grade (grid) com 3 colunas, cada 
+        uma com 30 pixels de largura */
+    grid-template-columns: repeat(3, 30px);
+
+}
+
+
+/* Estilos para cada bloco individual dentro de uma peça */
+.peca div {
+
+    /* Define a largura de cada bloco como 30 pixels */
+    width: 30px;
+    
+    /* Define a altura de cada bloco como 30 pixels */
+    height: 30px;
+    
+    /* Define uma borda de 1 pixel de largura e 
+        cor preta ao redor de cada bloco */
+    border: 1px solid black;
+
+}
+
