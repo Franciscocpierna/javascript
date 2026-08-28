@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!-- Esta linha define o tipo de documento como HTML5, 
+     que é a versão mais recente do HTML. -->
+
+<html lang="en">
+<!-- Esta linha inicia o documento HTML e define o idioma do 
+     conteúdo como inglês, o que ajuda navegadores e 
+     mecanismos de busca a interpretar o texto corretamente. -->
+
+<head>
+<!-- A seção <head> contém metadados sobre o documento, como o 
+          título da página, links para folhas de estilo e scripts, e 
+          informações sobre a codificação de caracteres. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta linha define a codificação de caracteres do documento 
+          como UTF-8, que é capaz de representar quase todos os 
+          caracteres escritos no mundo. Isso é importante para 
+          garantir que todos os caracteres sejam exibidos corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta linha define a configuração da viewport, que é a 
+               área visível do conteúdo no dispositivo. O 
+               atributo 'width=device-width' define que a 
+               largura da viewport deve ser igual à largura da 
+               tela do dispositivo. O 'initial-scale=1.0' define o 
+               nível de zoom inicial quando a página é carregada 
+               pela primeira vez. Isso é essencial para tornar a 
+               página responsiva e adequada para visualização em 
+               dispositivos móveis. -->
+
+    <title>Jogo de Pedra, Papel e Tesoura</title>
+    <!-- Esta linha define o título da página, que aparece na 
+               aba do navegador ou na barra de título. Isso 
+               ajuda os usuários a identificar o conteúdo da 
+               página rapidamente. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Esta linha inclui uma folha de estilos externa 
+               chamada 'styles.css'. O atributo 'href' especifica o 
+               caminho para o arquivo CSS. O CSS é usado para definir a 
+               aparência visual e o layout do conteúdo HTML. -->
+
+</head>
+<!-- Fecha a seção <head>. -->
+
+<body>
+    <!-- O <body> contém todo o conteúdo visível da página web. Tudo o 
+               que está dentro do <body> será exibido no navegador. -->
+
+    <div class="container">
+        <!-- A <div> é um contêiner genérico usado para agrupar outros 
+                    elementos e aplicar estilos ou scripts a eles. 
+             A classe 'container' é usada para aplicar estilos 
+                    específicos a este contêiner através do CSS. -->
+
+        <h1>Jogo de Pedra, Papel e Tesoura</h1>
+        <!-- O <h1> é um elemento de cabeçalho de nível 1, geralmente 
+                    usado para o título principal da página. -->
+
+        <button id="regras-btn" class="regras-btn">Regras</button>
+        <!-- O <button> cria um botão clicável na página. 
+             O atributo 'id' é usado para identificar o botão de 
+                    forma única no documento, permitindo manipulá-lo 
+                    com JavaScript.
+             A classe 'regras-btn' é usada para aplicar estilos 
+                    específicos ao botão através do CSS. -->
+
+        <div class="game">
+            <!-- Outra <div> que serve como contêiner para os elementos do jogo.
+                 A classe 'game' é usada para aplicar estilos específicos 
+                         a esta seção do jogo. -->
+
+            <div class="opcoes">
+                <!-- Esta <div> contém as opções do jogo (Pedra, Papel, Tesoura).
+                     A classe 'opcoes' é usada para aplicar estilos 
+                              específicos às opções do jogo. -->
+
+                <img src="pedra.png" alt="Pedra" class="opcao" onclick="jogar('pedra')">
+                <!-- O <img> exibe uma imagem. O atributo 'src' 
+                              especifica o caminho para a imagem.
+                     O atributo 'alt' fornece um texto alternativo que 
+                              será exibido se a imagem não puder ser carregada.
+                     A classe 'opcao' é usada para aplicar estilos específicos à imagem.
+                     O atributo 'onclick' define um evento que chama a 
+                              função 'jogar' passando 'pedra' como argumento 
+                              quando a imagem é clicada. -->
+
+                <img src="papel.png" alt="Papel" class="opcao" onclick="jogar('papel')">
+                <!-- Imagem para a opção 'Papel' com funcionalidade 
+                              semelhante à opção 'Pedra'. -->
+
+                <img src="tesoura.png" alt="Tesoura" class="opcao" onclick="jogar('tesoura')">
+                <!-- Imagem para a opção 'Tesoura' com funcionalidade 
+                              semelhante à opção 'Pedra'. -->
+
+            </div>
+            <!-- Fecha a <div> que contém as opções do jogo. -->
+
+            <div id="resultado-container" class="resultado-container">
+                <!-- Esta <div> serve como contêiner para exibir o 
+                              resultado do jogo.
+                     O atributo 'id' é usado para identificar esta <div> 
+                              de forma única no documento.
+                     A classe 'resultado-container' é usada para 
+                              aplicar estilos específicos a este contêiner. -->
+
+                <div class="escolha escolha-jogador">
+                    <!-- Esta <div> contém a escolha do jogador.
+                         A classe 'escolha' é usada para aplicar 
+                                   estilos comuns às escolhas.
+                         A classe 'escolha-jogador' é usada para aplicar 
+                                   estilos específicos à escolha do jogador. -->
+
+                    <h2>Jogador</h2>
+                    <!-- O <h2> é um elemento de cabeçalho de
+                                   nível 2, usado para subtítulos.
+                         Aqui, ele é usado para rotular a escolha do jogador. -->
+
+                    <img id="escolha-jogador-imagem" src="" alt="" class="escolha-imagem">
+                    <!-- Imagem que mostrará a escolha do jogador.
+                         O atributo 'id' é usado para identificar a 
+                                   imagem de forma única no documento.
+                         O atributo 'src' será definido dinamicamente 
+                                   com JavaScript para mostrar a imagem 
+                                   correspondente à escolha do jogador.
+                         O atributo 'alt' será definido dinamicamente 
+                                   com JavaScript.
+                         A classe 'escolha-imagem' é usada para aplicar 
+                                   estilos específicos à imagem. -->
+
+                    <p id="escolha-jogador-nome"></p>
+                    <!-- O <p> é um elemento de parágrafo, usado aqui 
+                                   para exibir o nome da escolha do jogador.
+                         O atributo 'id' é usado para identificar este 
+                                   parágrafo de forma única no documento. -->
+                
+                </div>
+                <!-- Fecha a <div> que contém a escolha do jogador. -->
+
+                <div class="escolha escolha-computador">
+                    <!-- Esta <div> contém a escolha do computador.
+                         A classe 'escolha' é usada para aplicar 
+                                   estilos comuns às escolhas.
+                         A classe 'escolha-computador' é usada para 
+                                   aplicar estilos específicos à 
+                                   escolha do computador. -->
+
+                    <h2>Computador</h2>
+                    <!-- Subtítulo para a escolha do computador. -->
+
+                    <img id="escolha-computador-imagem" src="" alt="" class="escolha-imagem">
+                    <!-- Imagem que mostrará a escolha do computador com 
+                                   funcionalidades semelhantes à imagem 
+                                   da escolha do jogador. -->
+
+                    <p id="escolha-computador-nome"></p>
+                    <!-- Parágrafo para exibir o nome da escolha do 
+                                   computador, semelhante ao parágrafo da 
+                                   escolha do jogador. -->
+                
+                </div>
+                <!-- Fecha a <div> que contém a escolha do computador. -->
+
+            </div>
+            <!-- Fecha a <div> que contém o resultado do jogo. -->
+
+            <div id="resultado" class="resultado"></div>
+            <!-- Esta <div> exibe o resultado do jogo (ganhou, perdeu ou empatou).
+                 O atributo 'id' é usado para identificar esta <div> de 
+                              forma única no documento.
+                 A classe 'resultado' é usada para aplicar estilos
+                              específicos ao resultado. -->
+
+            <div id="pontuacao" class="pontuacao">
+                <!-- Esta <div> exibe a pontuação atual do jogo.
+                     O atributo 'id' é usado para identificar 
+                              esta <div> de forma única no documento.
+                     A classe 'pontuacao' é usada para aplicar estilos 
+                              específicos à pontuação. -->
+
+                Pontuação: Jogador: <span id="pontuacao-jogador">0</span> - Computador: <span id="pontuacao-computador">0</span>
+                <!-- Texto que exibe a pontuação atual do jogador e 
+                              do computador.
+                     O <span> é um elemento inline usado para aplicar 
+                              estilos ou identificar uma parte 
+                              específica do texto.
+                     Os atributos 'id' ('pontuacao-jogador' e 'pontuacao-computador') 
+                              são usados para identificar os spans de forma 
+                              única para que suas pontuações possam ser 
+                              atualizadas com JavaScript. -->
+            
+            </div>
+            <!-- Fecha a <div> que contém a pontuação. -->
+
+        </div>
+        <!-- Fecha a <div> que contém os elementos do jogo. -->
+
+    </div>
+    <!-- Fecha a <div> principal que contém todo o conteúdo do jogo. -->
+
+    
+    <div id="regras-modal" class="modal">
+        <!-- Esta <div> representa o modal (janela pop-up) que 
+                    contém as regras do jogo.
+             O atributo 'id' é usado para identificar este modal de forma única.
+             A classe 'modal' é usada para aplicar estilos específicos ao modal. -->
+
+        <div class="modal-content">
+            <!-- Esta <div> contém o conteúdo do modal.
+                 A classe 'modal-content' é usada para aplicar estilos 
+                         específicos ao conteúdo do modal. -->
+
+            <span class="close-btn" id="close-btn">&times;</span>
+            <!-- O <span> é usado para criar um botão de fechar o modal.
+                 A classe 'close-btn' é usada para aplicar estilos 
+                         específicos ao botão de fechar.
+                 O id 'close-btn' é usado para identificar o botão de 
+                         forma única no documento.
+                 O '&times;' é um caractere especial que representa o 
+                         símbolo de multiplicação (×), usado aqui como 
+                         ícone de fechar. -->
+
+            <h2>Regras do Jogo</h2>
+            <!-- Cabeçalho do modal com o título 'Regras do Jogo'. -->
+
+            <p>Pedra, Papel e Tesoura é um jogo simples de dois jogadores onde cada jogador escolhe uma das três opções ao mesmo tempo:</p>
+            <!-- Parágrafo que explica o básico do jogo. -->
+
+            <ul>
+                <!-- O <ul> cria uma lista não ordenada (com marcadores). -->
+
+                <li>Pedra quebra a Tesoura</li>
+                <!-- O <li> representa um item da lista. Este item 
+                         explica uma regra do jogo. -->
+
+                <li>Tesoura corta o Papel</li>
+                <!-- Outro item da lista explicando uma regra do jogo. -->
+
+                <li>Papel embrulha a Pedra</li>
+                <!-- Outro item da lista explicando uma regra do jogo. -->
+
+            </ul>
+            <!-- Fecha a lista não ordenada. -->
+
+            <p>Se ambos os jogadores escolhem a mesma opção, o jogo resulta em empate.</p>
+            <!-- Parágrafo que explica o que acontece em caso de empate. -->
+
+        </div>
+        <!-- Fecha a <div> que contém o conteúdo do modal. -->
+            
+    </div>
+    <!-- Fecha a <div> do modal. -->
+
+    <script src="script.js"></script>
+    <!-- O <script> inclui um arquivo JavaScript externo 
+               chamado 'script.js'. Este arquivo contém a lógica do jogo. -->
+
+</body>
+<!-- Fecha a seção <body> do documento. -->
+
+</html>
+<!-- Fecha o documento HTML. -->
