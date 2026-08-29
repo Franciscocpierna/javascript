@@ -1,0 +1,418 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+    /* Define a fonte principal do corpo do 
+            documento como 'Arial'. 
+       Se 'Arial' não estiver disponível, usa uma 
+            fonte genérica sans-serif. */
+    
+    display: flex;
+    /* Define o modo de exibição do corpo como 
+            flexbox, que permite criar layouts flexíveis. */
+    
+    justify-content: center;
+    /* Alinha os itens do flex container horizontalmente ao centro. 
+       Neste caso, centraliza o conteúdo do corpo horizontalmente. */
+    
+    align-items: center;
+    /* Alinha os itens do flex container verticalmente ao centro. 
+       Neste caso, centraliza o conteúdo do corpo verticalmente. */
+    
+    height: 100vh;
+    /* Define a altura do corpo como 100% da altura da 
+            viewport (janela do navegador). 
+       Isso faz com que o corpo ocupe toda a altura disponível. */
+    
+    margin: 0;
+    /* Remove qualquer margem padrão do corpo, geralmente 
+            usada para evitar espaços indesejados ao redor da página. */
+    
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* Define um fundo gradiente linear para o corpo, 
+            começando em um ângulo de 135 graus. 
+       A cor começa com #f5f7fa (branco acinzentado) no 
+            início do gradiente (0%) 
+       e muda para #c3cfe2 (azul claro) no final do 
+            gradiente (100%). */
+
+}
+
+.container {
+
+    text-align: center;
+    /* Alinha o texto dentro do contêiner ao centro. */
+    
+    background: white;
+    /* Define a cor de fundo do contêiner como branco. */
+    
+    padding: 30px;
+    /* Adiciona um preenchimento (espaço interno) de 
+            30 pixels ao redor do conteúdo do contêiner. */
+    
+    border-radius: 10px;
+    /* Define cantos arredondados com um raio de 
+            10 pixels para o contêiner. */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao contêiner. A sombra é 
+            deslocada 0 pixels horizontalmente e 4 pixels verticalmente, 
+       com um desfoque de 8 pixels e uma cor preta 
+            com 10% de opacidade (rgba(0, 0, 0, 0.1)). */
+    
+    max-width: 600px;
+    /* Define a largura máxima do contêiner como 600 pixels. 
+       Isso impede que o contêiner se expanda além de 600 
+            pixels, mesmo em telas maiores. */
+    
+    width: 100%;
+    /* Define a largura do contêiner como 100% do contêiner pai. 
+       Se o contêiner pai for menor que 600 pixels, o 
+            contêiner se ajustará à largura total do pai. */
+
+}
+
+
+h1 {
+
+    color: #333;
+    /* Define a cor do texto do elemento <h1> 
+            como #333 (um tom escuro de cinza). */
+    
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels ao elemento <h1>. 
+       Isso cria espaço entre o <h1> e os elementos 
+            abaixo dele. */
+
+}
+
+.regras-btn {
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo do botão com a 
+            classe 'regras-btn' como #4CAF50 (um tom de verde). */
+    
+    color: white;
+    /* Define a cor do texto do botão como branco. */
+    
+    border: none;
+    /* Remove qualquer borda padrão do botão. */
+    
+    padding: 10px 20px;
+    /* Adiciona um preenchimento (espaço interno) de 
+            10 pixels no topo e na base, 
+       e 20 pixels nas laterais do botão. */
+    
+    text-align: center;
+    /* Alinha o texto dentro do botão ao centro. */
+    
+    text-decoration: none;
+    /* Remove qualquer decoração de texto (como 
+            sublinhado) do botão. */
+    
+    display: inline-block;
+    /* Define o botão como um elemento inline-block, 
+            permitindo definir dimensões (largura e altura) 
+       e aplicar margens e preenchimentos. */
+    
+    font-size: 16px;
+    /* Define o tamanho da fonte do texto dentro do 
+            botão como 16 pixels. */
+    
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels ao botão. 
+       Isso cria espaço entre o botão e os elementos 
+            abaixo dele. */
+    
+    cursor: pointer;
+    /* Altera o cursor do mouse para um ponteiro (mão) 
+            quando passar sobre o botão, indicando que é clicável. */
+    
+    border-radius: 5px;
+    /* Define cantos arredondados com um raio de 5 pixels para o botão. */
+    
+    transition: background-color 0.3s ease;
+    /* Define uma transição suave para a propriedade 
+            background-color. 
+       Quando a cor de fundo muda, a transição durará 0.3 
+            segundos e será suave. */
+
+}
+
+.regras-btn:hover {
+
+    background-color: #154a18;
+    /* Define a cor de fundo do botão como #154a18 (um 
+            tom mais escuro de verde) 
+       quando o cursor do mouse passa sobre ele (hover). */
+
+}
+
+.opcoes {
+
+    display: flex;
+    /* Define o modo de exibição como flexbox, permitindo o 
+            uso de layouts flexíveis. */
+    
+    justify-content: center;
+    /* Alinha os itens do flex container horizontalmente ao centro. 
+       Neste caso, centraliza as opções do jogo horizontalmente. */
+    
+    gap: 10px;
+    /* Define um espaçamento de 10 pixels entre cada item do 
+            flex container. */
+    
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels abaixo do 
+            contêiner, criando espaço entre as opções e o 
+            próximo elemento. */
+    
+    flex-wrap: wrap;
+    /* Permite que os itens do flex container quebrem para a 
+            próxima linha se não couberem na linha atual. */
+
+}
+
+.opcao {
+
+    width: 80px;
+    /* Define a largura de cada item com a classe 'opcao' 
+            como 80 pixels. */
+    
+    cursor: pointer;
+    /* Altera o cursor do mouse para um ponteiro (mão) quando 
+            passar sobre a opção, indicando que é clicável. */
+    
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Define transições suaves para as propriedades 
+            transform e box-shadow. 
+       Quando essas propriedades mudam, a transição 
+            durará 0.2 segundos. */
+
+}
+
+.opcao:hover {
+
+    transform: scale(1.1);
+    /* Aplica uma transformação de escala, 
+            aumentando o tamanho do item em 10% 
+       quando o cursor do mouse passa sobre ele (hover). */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra ao item, deslocada 0 pixels 
+            horizontalmente e 4 pixels verticalmente, 
+       com um desfoque de 8 pixels e uma cor preta 
+            com 20% de opacidade (rgba(0, 0, 0, 0.2)). */
+
+}
+
+.resultado-container {
+
+    display: flex;
+    /* Define o modo de exibição como flexbox, 
+            permitindo o uso de layouts flexíveis. */
+
+    justify-content: center;
+    /* Alinha os itens do flex container horizontalmente 
+            ao centro. Neste caso, centraliza os itens 
+            do contêiner de resultado. */
+
+    gap: 50px;
+    /* Define um espaçamento de 50 pixels entre 
+            cada item do flex container. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels 
+            acima do contêiner, criando espaço entre o 
+            contêiner e o elemento acima. */
+
+    background-color: #d0eaff;
+    /* Define a cor de fundo do contêiner como 
+            #d0eaff (um tom claro de azul). */
+
+    padding: 20px;
+    /* Adiciona um preenchimento (espaço interno) de 
+            20 pixels ao redor do conteúdo do contêiner. */
+
+    border-radius: 10px;
+    /* Define cantos arredondados com um raio de 
+            10 pixels para o contêiner. */
+
+}
+
+.escolha {
+
+    text-align: center;
+    /* Alinha o texto dentro do elemento com a 
+            classe 'escolha' ao centro. Isso centraliza o 
+            conteúdo textualmente. */
+
+}
+
+.escolha-imagem {
+
+    width: 80px;
+    /* Define a largura da imagem com a 
+            classe 'escolha-imagem' como 80 pixels. */
+    
+    border-radius: 10px;
+    /* Define cantos arredondados com um raio 
+         de 10 pixels para a imagem. */
+
+}
+
+.resultado {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do texto dentro do 
+         elemento com a classe 'resultado' como 24 pixels. */
+    
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels acima do 
+         elemento, criando espaço entre o elemento e o 
+         conteúdo acima. */
+    
+    font-weight: bold;
+    /* Define o peso da fonte como 'bold' (negrito), 
+         tornando o texto mais espesso e destacado. */
+    
+    color: #333;
+    /* Define a cor do texto como #333 (um tom escuro de cinza). */
+
+}
+
+.pontuacao {
+
+    font-size: 18px;
+    /* Define o tamanho da fonte do texto dentro do 
+            elemento com a classe 'pontuacao' como 18 pixels. */
+    
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels acima do 
+            elemento, criando espaço entre o elemento e o 
+            conteúdo acima. */
+    
+    color: #555;
+    /* Define a cor do texto como #555 (um tom médio de cinza). */
+
+}
+
+/* Modal Styles */
+.modal {
+
+    display: none;
+    /* Define o display como 'none', ocultando o 
+            modal quando a página é carregada. O modal 
+            só será exibido quando o display for alterado 
+            para 'block' com JavaScript. */
+    
+    position: fixed;
+    /* Define o posicionamento como 'fixed', o que significa 
+            que o modal será posicionado em relação à janela 
+            do navegador e permanecerá na mesma posição 
+            mesmo quando a página for rolada. */
+    
+    z-index: 1;
+    /* Define o z-index como 1, garantindo que o 
+            modal fique acima de outros elementos na página. */
+    
+    left: 0;
+    /* Posiciona o modal a 0 pixels do lado esquerdo da 
+            janela do navegador. */
+    
+    top: 0;
+    /* Posiciona o modal a 0 pixels do topo da janela 
+            do navegador. */
+    
+    width: 100%;
+    /* Define a largura do modal como 100% da largura 
+            da janela do navegador. */
+    
+    height: 100%;
+    /* Define a altura do modal como 100% da altura 
+            da janela do navegador. */
+    
+    overflow: auto;
+    /* Adiciona uma barra de rolagem automática se o 
+            conteúdo do modal exceder a altura da 
+            janela do navegador. */
+    
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Define a cor de fundo do modal como preto 
+            com 40% de opacidade (rgba(0, 0, 0, 0.4)). Isso 
+            cria um efeito de sobreposição escura para 
+            destacar o modal. */
+
+}
+
+.modal-content {
+
+    background-color: #fefefe;
+    /* Define a cor de fundo do conteúdo do modal 
+            como #fefefe (um tom muito claro de 
+            cinza, quase branco). */
+    
+    margin: 15% auto;
+    /* Adiciona uma margem de 15% no topo e na base do 
+            conteúdo do modal, e centraliza 
+            horizontalmente (auto) dentro do modal. */
+    
+    padding: 20px;
+    /* Adiciona um preenchimento (espaço interno) 
+            de 20 pixels ao redor do conteúdo do modal. */
+    
+    border: 1px solid #888;
+    /* Define uma borda sólida de 1 pixel ao redor do 
+            conteúdo do modal, com a cor #888 (um tom de cinza). */
+    
+    width: 80%;
+    /* Define a largura do conteúdo do modal 
+            como 80% da largura do modal. */
+    
+    max-width: 500px;
+    /* Define a largura máxima do conteúdo do modal 
+            como 500 pixels. Isso impede que o conteúdo do 
+            modal se expanda além de 500 pixels, mesmo em 
+            telas maiores. */
+    
+    border-radius: 10px;
+    /* Define cantos arredondados com um raio de 
+            10 pixels para o conteúdo do modal. */
+
+}
+
+.close-btn {
+
+    color: #aaa;
+    /* Define a cor do texto do botão de fechar 
+            como #aaa (um tom claro de cinza). */
+    
+    float: right;
+    /* Faz com que o botão de fechar flutue à 
+            direita dentro do conteúdo do modal. */
+    
+    font-size: 28px;
+    /* Define o tamanho da fonte do texto do botão 
+            de fechar como 28 pixels. */
+    
+    font-weight: bold;
+    /* Define o peso da fonte como 'bold' (negrito), tornando o 
+            texto do botão de fechar mais espesso e destacado. */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+
+    color: black;
+    /* Altera a cor do texto do botão de fechar para 
+            preto quando o cursor do mouse passa sobre 
+            ele (hover) ou quando ele é focado (focus). */
+    
+    text-decoration: none;
+    /* Remove qualquer decoração de texto (como sublinhado) 
+            do botão de fechar. */
+    
+    cursor: pointer;
+    /* Altera o cursor do mouse para um ponteiro (mão) quando 
+            passa sobre o botão de fechar, indicando que é clicável. */
+            
+}
