@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento:
+     <!DOCTYPE html> é usada para informar ao 
+               navegador que este documento está 
+               escrito em HTML5. -->
+
+<html lang="pt-br">
+<!-- Abertura da tag <html> que define o início de 
+               um documento HTML.
+     O atributo 'lang="pt-br"' define o idioma 
+               principal do conteúdo como Português do Brasil,
+               ajudando navegadores e mecanismos de busca a 
+               entenderem o conteúdo. -->
+
+<head>
+    <!-- Abertura da tag <head> que contém metadados sobre o 
+               documento, como título, links para estilos, etc. -->
+    
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres do documento como UTF-8,
+               que é uma codificação padrão para representar a 
+               maioria dos caracteres usados na web.
+         Isso garante que caracteres especiais e 
+               acentos sejam exibidos corretamente. -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a configuração da viewport para melhorar a 
+               exibição em dispositivos móveis.
+         'width=device-width' ajusta a largura da página 
+               para a largura da tela do dispositivo.
+         'initial-scale=1.0' define o nível inicial de zoom 
+               quando a página é carregada pela primeira vez. -->
+    
+    <link rel="stylesheet" href="styles.css">
+    <!-- Vincula um arquivo CSS externo para estilizar a página.
+         'href="styles.css"' especifica o caminho para o arquivo CSS.
+         Isso permite que o navegador carregue e aplique 
+               os estilos definidos no arquivo 'styles.css'. -->
+    
+    <title>Jogo de Quebra-Cabeça</title>
+    <!-- Define o título da página, que será exibido na aba 
+               do navegador e usado pelos mecanismos de busca.
+         O texto entre as tags <title> e </title> será o 
+               nome da aba do navegador. -->
+
+</head>
+<!-- Fecha a tag <head>. Todo o conteúdo que define as 
+               configurações e informações da página foi 
+               inserido acima. -->
+
+
+
+<body>
+    <!-- Abertura da tag <body> que contém todo o 
+               conteúdo visível da página da web.
+        Tudo o que está dentro desta tag será 
+               exibido no navegador. -->
+
+    <label for="entradaImagem" class="botao-personalizado">Carregar imagem</label>
+    <!-- Cria um rótulo (label) que será clicável 
+               para carregar uma imagem.
+         O atributo 'for="entradaImagem"' associa o 
+               rótulo ao input com id 'entradaImagem'.
+         A classe 'botao-personalizado' aplica 
+               estilos CSS personalizados ao rótulo,
+         transformando-o em um botão estilizado para 
+               carregar a imagem. -->
+
+    <input type="file" id="entradaImagem" accept="image/*">
+    <!-- Cria um campo de entrada de arquivo (input) 
+               para carregar uma imagem.
+         'type="file"' define o tipo de entrada como arquivo.
+         'id="entradaImagem"' é um identificador único para o elemento,
+               permitindo que ele seja acessado e 
+               manipulado via JavaScript.
+         'accept="image/*"' restringe os tipos de 
+               arquivos aceitos a imagens, garantindo que 
+               apenas arquivos de imagem possam ser selecionados. -->
+
+    <select id="selecaoTamanho">
+        <!-- Cria um menu suspenso (select) para o 
+                    usuário escolher o tamanho do quebra-cabeça.
+             'id="selecaoTamanho"' é um identificador único 
+                    que permite a manipulação deste 
+                    elemento via JavaScript.
+             Isso será usado para selecionar a quantidade de 
+                    peças do quebra-cabeça. -->
+
+        <option value="9">9 Peças</option>
+        <!-- Cria uma opção no menu suspenso com o valor '9' (9 peças).
+             "9 Peças" é o texto exibido ao usuário. -->
+
+        <option value="16">16 Peças</option>
+        <!-- Cria uma opção no menu suspenso com o valor '16' (16 peças).
+             "16 Peças" é o texto exibido ao usuário. -->
+             
+    </select>
+
+    <div class="container-quebra-cabeca" id="containerQuebraCabeca"></div>
+    <!-- Cria uma div com a classe 'container-quebra-cabeca' 
+               para conter o quebra-cabeça.
+         'id="containerQuebraCabeca"' é um identificador 
+               único que permite a manipulação deste 
+               elemento via JavaScript.
+         Essa div será usada para exibir o quebra-cabeça, 
+               configurando a grade onde as peças serão 
+               posicionadas. -->
+
+    <script src="script.js"></script>
+    <!-- Vincula um arquivo JavaScript externo para 
+               adicionar funcionalidades à página.
+         'src="script.js"' especifica o caminho para o 
+               arquivo JavaScript.
+         Esse script conterá o código que manipula a 
+               lógica do jogo de quebra-cabeça. -->
+
+</body>
+<!-- Fecha a tag <body>. Todo o conteúdo visível 
+               da página foi inserido acima. -->
+               
+</html>
+<!-- Fecha a tag <html>, indicando o fim do documento HTML. -->

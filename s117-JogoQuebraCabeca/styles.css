@@ -1,0 +1,109 @@
+.container-quebra-cabeca {
+    /* Seleciona o elemento com a classe 
+               "container-quebra-cabeca".
+       Este contêiner será usado para posicionar as 
+               peças do quebra-cabeça em uma grade. */
+
+    display: grid;
+    /* Define o modo de exibição do contêiner como uma grade.
+       O layout de grade permite organizar os 
+               itens em linhas e colunas. */
+
+    grid-template-columns: repeat(3, 150px);
+    /* Define a estrutura das colunas da grade.
+       "repeat(3, 150px)" cria três colunas, cada 
+               uma com 150 pixels de largura. */
+
+    grid-template-rows: repeat(3, 150px);
+    /* Define a estrutura das linhas da grade.
+       "repeat(3, 150px)" cria três linhas, cada  
+               uma com 150 pixels de altura. */
+
+    gap: 5px;
+    /* Define um espaço (gap) de 5 pixels entre 
+               cada célula da grade.
+       Isso cria um espaçamento uniforme entre as 
+               peças do quebra-cabeça. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels ao contêiner.
+       Isso cria um espaço de 20 pixels acima do contêiner. */
+
+}
+
+.peca-quebra-cabeca {
+    /* Seleciona o elemento com a classe "peca-quebra-cabeca".
+       Cada peça do quebra-cabeça será estilizada com estas regras. */
+
+    width: 150px;
+    /* Define a largura de cada peça do quebra-cabeça como 150 pixels.
+       Isso corresponde à largura das colunas da grade. */
+
+    height: 150px;
+    /* Define a altura de cada peça do quebra-cabeça como 150 pixels.
+       Isso corresponde à altura das linhas da grade. */
+
+    background-size: 450px 450px;
+    /* Define o tamanho da imagem de fundo de cada peça.
+       A imagem de fundo é redimensionada para 450 pixels por 450 pixels,
+       que é o tamanho total da imagem usada no quebra-cabeça. */
+
+    cursor: grab;
+    /* Define o cursor do mouse como uma mão que 
+            agarra (grab) ao passar sobre a peça.
+       Isso indica que a peça pode ser arrastada. */
+
+}
+
+#entradaImagem {
+    /* Seleciona o elemento com o id "entradaImagem".
+       Este é o campo de entrada de arquivo para 
+            carregar a imagem. */
+
+    display: none;
+    /* Oculta o campo de entrada de arquivo.
+       Isso permite usar um rótulo estilizado (label) 
+            como botão para carregar a imagem. */
+
+}
+
+.botao-personalizado {
+    /* Seleciona o elemento com a classe "botao-personalizado".
+       Este rótulo será estilizado para se parecer com um botão. */
+
+    display: inline-block;
+    /* Define o modo de exibição do rótulo como inline-block.
+       Isso permite que ele seja estilizado como um 
+            botão, mantendo o comportamento inline. */
+
+    padding: 10px 20px;
+    /* Adiciona um espaçamento interno de 10 pixels 
+            na parte superior e inferior,
+       e 20 pixels nas laterais. Isso aumenta o 
+            tamanho do botão e melhora a aparência. */
+
+    background-color: #007bff;
+    /* Define a cor de fundo do botão como azul (#007bff).
+       Isso dá ao botão uma aparência distinta e chamativa. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão 
+            como branco (white).
+       Isso garante um bom contraste com o 
+            fundo azul, tornando o texto legível. */
+
+    cursor: pointer;
+    /* Define o cursor do mouse como um 
+            ponteiro (pointer) ao passar sobre o botão.
+       Isso indica que o elemento é interativo e pode ser clicado. */
+
+    border-radius: 5px;
+    /* Adiciona cantos arredondados de 5 pixels ao botão.
+       Isso dá ao botão uma aparência mais suave e moderna. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels ao botão.
+       Isso cria um espaço de 20 pixels abaixo do 
+            botão, separando-o dos elementos seguintes. */
+            
+}
