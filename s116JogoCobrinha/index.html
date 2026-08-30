@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Define que este documento adere ao padrão HTML5, 
+        o que ajuda os navegadores a renderizar corretamente 
+        o conteúdo. -->
+
+<html lang="pt-br">
+<!-- Abre a tag html definindo a linguagem do documento como 
+        português brasileiro, o que é útil para acessibilidade e 
+        motores de busca. -->
+
+<head>
+<!-- A tag head contém metadados e links para scripts ou 
+        folhas de estilo, que não são diretamente visíveis 
+        na página. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres usado no documento 
+            como UTF-8, que inclui quase todos os caracteres de 
+            todos os idiomas humanos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Assegura que a página seja exibida corretamente em todos os 
+            dispositivos e tamanhos de tela, definindo a largura da 
+            visualização conforme a largura do dispositivo e o zoom 
+            inicial como 1. -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Link para uma folha de estilos externa chamada "estilos.css", 
+        que contém estilos CSS para formatar a página. -->
+
+    <title>Jogo da Cobrinha</title>
+    <!-- Define o título da página, que é mostrado na 
+            aba do navegador. -->
+
+</head>
+
+<body>
+<!-- A tag body contém todo o conteúdo da página que é visível para o 
+            usuário, como texto, imagens, vídeos, jogos, etc. -->
+
+    <h1 id="titulo">Jogo da Cobrinha</h1>
+    <!-- Cria um cabeçalho de primeiro nível que é grande e 
+            chamativo, útil para títulos. O 'id' ajuda a identificar o 
+            elemento para estilos e scripts. -->
+
+    <div id="pontuacao">Pontuação: 0</div>
+    <!-- Cria uma divisão (div) que contém a pontuação do jogo. 
+            O 'id' permite manipular ou estilizar o elemento 
+            posteriormente com CSS ou JavaScript. -->
+
+    <canvas id="jogo" width="400" height="400"></canvas>
+    <!-- Cria uma área retangular (canvas) onde o jogo acontece, 
+            com largura e altura de 400 pixels. O 'id' permite 
+            acessar o canvas via JavaScript para desenhar o jogo. -->
+
+    <script src="script.js"></script>
+    <!-- Link para um arquivo JavaScript externo chamado "script.js". 
+            Este script contém a lógica para o jogo da cobrinha. -->
+
+</body>
+<!-- Fecha a tag body, encerrando o conteúdo 
+        visível da página. -->
+        
+</html>
+<!-- Fecha a tag html, encerrando o documento HTML. -->

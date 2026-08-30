@@ -1,0 +1,87 @@
+canvas {
+
+    background-color: #f0f0f0; 
+    /* Define a cor de fundo do canvas, onde o jogo é 
+            desenhado, para um cinza claro. */
+    
+    display: block; 
+    /* Define o elemento canvas como um bloco, garantindo 
+            que ele ocupe a linha inteira sozinho. */
+
+    margin: 0 auto; 
+    /* Define as margens superior e inferior como 0 e centraliza o 
+            canvas horizontalmente dentro de seu contêiner. */
+
+    border: 2px solid #000;
+    /* Adiciona uma borda preta sólida de 2 pixels ao redor do 
+            canvas para aumentar a visibilidade e delimitar 
+            claramente a área de jogo. */
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* Aplica uma sombra ao redor do canvas para dar um efeito 
+            visual de elevação, tornando-o mais destacado 
+            na página. */
+
+}
+
+#titulo {
+
+    text-align: center; 
+    /* Centraliza o texto do título horizontalmente, garantindo 
+            que apareça no meio da página. */
+
+    font-size: 24px; 
+    /* Define o tamanho da fonte do título para 24 pixels, 
+            tornando-o claramente visível como o elemento 
+            principal do cabeçalho. */
+
+    color: #333; 
+    /* Define a cor do texto do título para um cinza escuro, 
+            proporcionando bom contraste com o fundo 
+            geralmente claro da página. */
+
+    margin-top: 20px; 
+    /* Adiciona uma margem superior de 20 pixels ao título para 
+            separá-lo de outros elementos acima dele, ajudando a 
+            organizar visualmente o espaço. */
+
+    font-family: 'Arial', sans-serif; 
+    /* Especifica Arial como a fonte do título, com uma 
+            fonte sans-serif como backup caso Arial não esteja 
+            disponível. Isso garante uma aparência limpa e moderna. */
+
+}
+
+#pontuacao {
+
+    text-align: center; 
+    /* Centraliza a pontuação horizontalmente na página para 
+            alinhamento e apresentação consistentes com o título. */
+
+    font-size: 28px; 
+    /* Define o tamanho da fonte para a pontuação, garantindo que 
+            seja grande o suficiente para ser lida facilmente 
+            durante o jogo. */
+
+    color: #555; 
+    /* Escolhe um cinza médio para o texto da pontuação, que 
+            oferece contraste suficiente com o fundo sem ser 
+            tão severo quanto o preto. */
+
+    margin-top: 10px; 
+    /* Adiciona uma margem superior de 10 pixels para criar um 
+            espaço visual entre a pontuação e outros elementos acima, 
+            ajudando a segmentar visualmente as informações. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels para criar um 
+            espaço visual entre a pontuação e outros elementos abaixo, 
+            ajudando a segmentar visualmente as informações. */
+
+
+    font-family: 'Arial', sans-serif; 
+    /* Define Arial como a fonte da pontuação, com uma fonte 
+            sans-serif como backup para manter a consistência 
+            visual com o título. */
+            
+}
