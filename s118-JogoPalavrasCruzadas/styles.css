@@ -1,0 +1,697 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do corpo do documento 
+            como Arial, com fallback para qualquer fonte 
+            sans-serif disponível. Isso garante que o 
+            texto seja exibido com uma fonte limpa e legível. */
+
+    background-color: #87CEFA;
+    /* Define a cor de fundo do corpo do documento como 
+            um azul claro (#87CEFA), proporcionando um 
+            visual suave e agradável que não distrai 
+            do conteúdo principal. */
+
+    display: flex;
+    /* Ativa o layout flexível, permitindo o uso de 
+            propriedades adicionais do Flexbox para 
+            organizar os elementos filhos do corpo de 
+            forma mais eficiente e responsiva. */
+
+    justify-content: center;
+    /* Alinha horizontalmente todos os elementos 
+            filhos (diretamente no corpo) ao centro, 
+            garantindo que o conteúdo principal 
+            esteja centralizado na página. */
+
+    align-items: center;
+    /* Alinha verticalmente todos os elementos 
+            filhos ao centro, garantindo que o conteúdo 
+            principal esteja no meio da página verticalmente. */
+
+    height: 100vh;
+    /* Define a altura do corpo para ocupar 100% da 
+            altura da viewport (a área visível da janela 
+            do navegador), criando uma experiência 
+            de tela cheia. */
+
+    margin: 0;
+    /* Remove as margens padrão do corpo, permitindo 
+            que o conteúdo ocupe toda a largura e altura da 
+            viewport sem espaçamento extra ao redor das bordas. */
+
+    flex-direction: column;
+    /* Define a direção principal do layout flexível 
+            como coluna, o que significa que os elementos 
+            filhos são organizados verticalmente, um 
+            abaixo do outro. */
+
+}
+
+
+#container-jogo {
+
+    width: 1200px;
+    /* Define a largura do contêiner do jogo como 1200 
+            pixels, garantindo que haja espaço suficiente 
+            para todos os componentes internos do jogo. */
+
+    border: 2px solid #388e3c;
+    /* Adiciona uma borda sólida de 2 pixels ao redor 
+            do contêiner com uma cor verde escura (#388e3c), 
+            que ajuda a definir visualmente a área de 
+            jogo na tela. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da borda do contêiner 
+            para 10 pixels, suavizando a aparência geral e 
+            tornando o design mais moderno e menos rígido. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do contêiner como 
+            branco (#ffffff), proporcionando um 
+            contraste claro com os outros elementos de 
+            design e facilitando a leitura do conteúdo 
+            do jogo. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor do contêiner, 
+            criando um efeito de elevação que ajuda o 
+            contêiner a se destacar contra o fundo. A 
+            sombra é sutil, com uma transparência de 10%. */
+
+    padding: 20px;
+    /* Adiciona um espaçamento interno de 20 pixels em 
+            todas as direções dentro do contêiner, 
+            garantindo que o conteúdo interno não 
+            toque diretamente as bordas. */
+
+    position: relative;
+    /* Define a posição do contêiner como relativa, 
+            permitindo que elementos filhos 
+            posicionados de forma absoluta se 
+            baseiem na posição deste contêiner. */
+
+    text-align: center;
+    /* Alinha todo o texto dentro do contêiner ao 
+            centro, garantindo uma apresentação 
+            consistente e centrada do conteúdo textual. */
+
+    display: flex;
+    /* Ativa o layout flexível dentro do contêiner, 
+            permitindo o uso de propriedades adicionais do 
+            Flexbox para organizar os elementos filhos 
+            de forma eficiente. */
+
+    flex-direction: column;
+    /* Estabelece a direção principal do layout 
+            flexível como coluna dentro do contêiner, 
+            organizando os elementos filhos verticalmente. */
+
+    align-items: center;
+    /* Alinha todos os elementos filhos do contêiner ao 
+            centro na direção transversal (neste caso, 
+            horizontalmente), garantindo que estejam 
+            centralizados. */
+
+}
+
+
+#info-nivel {
+
+    display: flex;
+    /* Ativa o layout flexível, permitindo a disposição 
+            flexível dos elementos filhos (como moedas e 
+            nível) dentro deste contêiner. */
+
+    justify-content: space-between;
+    /* Distribui o espaço entre os elementos filhos 
+            igualmente, colocando o primeiro elemento no 
+            início e o último no final do contêiner, 
+            maximizando o espaço entre eles. Isso é útil 
+            para separar visualmente as informações de 
+            nível e moedas. */
+
+    align-items: center;
+    /* Alinha verticalmente todos os elementos filhos ao 
+            centro, garantindo que eles estejam alinhados 
+            no eixo transversal. */
+
+    width: 100%;
+    /* Define a largura do contêiner para ocupar 100% da 
+            largura do seu contêiner pai, ajudando a manter 
+            um layout responsivo e consistente. */
+
+    padding: 10px 0;
+    /* Adiciona um preenchimento vertical de 10 pixels na 
+            parte superior e inferior do contêiner, mas 
+            mantém 0 pixels nas laterais, criando um 
+            espaço confortável sem afetar a largura. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte dos textos dentro deste 
+            contêiner para 18 pixels, garantindo que a 
+            informação seja legível e clara. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito aos textos dentro 
+            deste contêiner, destacando as informações 
+            importantes como o nível e as moedas. */
+
+}
+
+
+#conteudo-jogo {
+
+    display: flex;
+    /* Utiliza o layout flexível para facilitar o 
+            alinhamento e a distribuição dos elementos internos, 
+            como a grade de palavras e o círculo de letras. */
+
+    justify-content: space-between;
+    /* Alinha os elementos filhos espaçando-os igualmente ao 
+            longo do eixo principal, colocando o primeiro e o 
+            último elementos nas extremidades do contêiner. */
+
+    align-items: center;
+    /* Alinha os elementos filhos no centro do eixo transversal, 
+            garantindo que estejam todos alinhados verticalmente 
+            no centro. */
+
+    width: 100%;
+    /* Estabelece a largura do contêiner para ocupar 100% da 
+            largura do contêiner pai, ajudando na criação de 
+            um layout responsivo. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, criando 
+            espaço entre este contêiner e qualquer elemento 
+            acima dele, melhorando a organização visual. */
+
+}
+
+
+#grade-palavras {
+
+    display: flex;
+    /* Ativa o layout flexível, facilitando o alinhamento 
+            vertical dos elementos (linhas de palavras) 
+            dentro deste contêiner. */
+
+    flex-direction: column;
+    /* Define a direção principal do layout flexível como 
+            coluna, organizando os elementos filhos 
+            verticalmente. */
+
+    gap: 10px;
+    /* Define um espaço de 10 pixels entre cada elemento 
+            filho (linhas de palavras), garantindo uma 
+            separação clara e organizada. */
+
+    margin-right: 20px;
+    /* Adiciona uma margem à direita de 20 pixels, 
+            criando um espaço entre este contêiner e 
+            qualquer elemento adjacente à direita. */
+
+}
+
+
+.linha-palavra {
+
+    display: flex;
+    /* Utiliza o layout flexível para facilitar o 
+            alinhamento horizontal das células de 
+            palavras dentro desta linha. */
+
+    justify-content: center;
+    /* Centraliza os elementos filhos (células de 
+            palavras) horizontalmente dentro desta linha, 
+            ajudando a manter o alinhamento 
+            simétrico e organizado. */
+
+    gap: 5px;
+    /* Define um espaço de 5 pixels entre cada 
+            célula de palavra, garantindo que elas não 
+            se toquem e mantenham uma separação 
+            visual clara. */
+
+}
+
+
+.celula-palavra {
+
+    width: 60px;
+    /* Define a largura de cada célula de palavra 
+            como 60 pixels, garantindo uniformidade no 
+            tamanho das células em toda a grade de 
+            palavras. */
+
+    height: 60px;
+    /* Define a altura de cada célula de palavra 
+            como 60 pixels, mantendo a forma quadrada 
+            para cada célula, ideal para a exibição de 
+            letras individuais. */
+
+    background-color: #e0e0e0;
+    /* Estabelece a cor de fundo de cada célula de palavra 
+            como um cinza claro (#e0e0e0), proporcionando um 
+            contraste moderado com as letras. */
+
+    display: flex;
+    /* Ativa o layout flexível dentro de cada célula, 
+            facilitando o alinhamento central da letra 
+            dentro da célula. */
+
+    justify-content: center;
+    /* Centraliza o conteúdo (letra) horizontalmente dentro 
+            da célula, garantindo que a letra esteja 
+            sempre no meio. */
+
+    align-items: center;
+    /* Centraliza o conteúdo (letra) verticalmente dentro da 
+            célula, mantendo a letra alinhada ao centro 
+            em ambos os eixos. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte das letras dentro da 
+            célula como 24 pixels, tornando as letras 
+            facilmente legíveis. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito, destacando 
+            visualmente as letras dentro de cada célula. */
+
+    color: #ffffff;
+    /* Define a cor das letras como branco (#ffffff), criando um 
+            alto contraste com o fundo cinza para 
+            melhor legibilidade. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos das células com um raio 
+            de 5 pixels, suavizando a aparência geral 
+            das células na grade de palavras. */
+
+}
+
+.celula-palavra.vazio {
+
+    background-color: #e0e0e0;
+    /* Reafirma a cor de fundo cinza claro para 
+            células que ainda não foram preenchidas 
+            com uma letra pelo jogador. */
+
+    border: 2px solid #388e3c;
+    /* Adiciona uma borda sólida de 2 pixels em verde 
+            escuro (#388e3c) em volta da célula, indicando 
+            que a célula está vazia e disponível para 
+            ser preenchida. */
+
+}
+
+.celula-palavra.preenchido {
+    
+    background-color: #ff4081;
+    /* Altera a cor de fundo para rosa (#ff4081) quando a 
+            célula é preenchida com a letra correta, 
+            proporcionando feedback visual imediato 
+            ao jogador. */
+
+    color: #ffffff;
+    /* Mantém a cor das letras como branco, garantindo 
+            que a legibilidade seja preservada mesmo com a 
+            mudança de cor de fundo para rosa. */
+
+}
+
+#circulo-letras {
+
+    position: relative;
+    /* Define a posição do círculo de letras como 
+            relativa, permitindo que as letras posicionadas 
+            absolutamente dentro dele se baseiem 
+            na sua posição. */
+
+    height: 600px;
+    /* Define a altura do círculo de letras como 600 
+            pixels, assegurando que haja espaço suficiente 
+            para acomodar todas as letras em um 
+            layout circular. */
+
+    width: 600px;
+    /* Define a largura do círculo de letras como 600 
+            pixels, mantendo a forma perfeitamente 
+            circular (altura e largura iguais). */
+
+    border-radius: 50%;
+    /* Aplica um raio de borda de 50%, que transforma a 
+            forma quadrada do contêiner em um 
+            círculo perfeito. */
+
+    background-color: #fffb7c;
+    /* Define a cor de fundo do círculo como um 
+            amarelo claro (#fffb7c), destacando-o 
+            visualmente e tornando-o um ponto focal 
+            no layout do jogo. */
+
+    display: flex;
+    /* Utiliza o layout flexível para facilitar o 
+            alinhamento central das letras dentro 
+            do círculo. */
+
+    justify-content: center;
+    /* Centraliza o conteúdo (letras) horizontalmente 
+            dentro do círculo. */
+
+    align-items: center;
+    /* Centraliza o conteúdo (letras) verticalmente 
+            dentro do círculo, garantindo que as letras 
+            estejam alinhadas no centro do círculo. */
+
+}
+
+
+#circulo-letras div {
+
+    position: absolute;
+    /* Posiciona cada div dentro do círculo de 
+            letras de forma absoluta, o que permite 
+            posicionar cada letra exatamente onde ela 
+            precisa estar dentro do círculo, baseando-se 
+            nas coordenadas definidas. */
+
+    width: 80px;
+    /* Define a largura de cada div (contendo uma letra) 
+            como 80 pixels, garantindo tamanho suficiente 
+            para exibir a letra de forma clara. */
+
+    height: 80px;
+    /* Define a altura de cada div como 80 pixels, 
+            mantendo a forma quadrada que é transformada 
+            em círculo pelo border-radius. */
+
+    background-color: #ff4081;
+    /* Define a cor de fundo inicial de cada div como 
+            rosa (#ff4081), fazendo com que as letras se 
+            destaquem visualmente. */
+
+    display: flex;
+    /* Utiliza o layout flexível dentro de cada div 
+            para facilitar o alinhamento da letra 
+            no centro. */
+
+    justify-content: center;
+    /* Centraliza a letra horizontalmente 
+            dentro do div. */
+
+    align-items: center;
+    /* Centraliza a letra verticalmente dentro do 
+            div, assegurando que esteja perfeitamente 
+            centralizada em ambos os eixos. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte da letra como 24 pixels, 
+            que é suficientemente grande para leitura 
+            clara sem ocupar todo o espaço disponível. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito para aumentar a 
+            legibilidade e destacar as letras dentro 
+            do círculo. */
+
+    color: #ffffff;
+    /* Define a cor do texto como branco, oferecendo 
+            um contraste alto com o fundo rosa para 
+            melhorar a visibilidade. */
+
+    border: 2px solid #388e3c;
+    /* Adiciona uma borda sólida verde escura ao redor 
+            de cada div, ajudando a definir claramente os 
+            limites de cada letra. */
+
+    border-radius: 50%;
+    /* Arredonda os cantos do quadrado, 
+            transformando-o em um círculo perfeito. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o 
+            usuário passa o mouse sobre o div, 
+            indicando que o item é clicável. */
+
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave ao mudar a cor 
+            de fundo, que é ativada quando um div é 
+            selecionado ou desselecionado, melhorando a 
+            experiência visual do usuário. */
+
+}
+
+#circulo-letras div.selecionado {
+
+    background-color: #ffeb3b;
+    /* Altera a cor de fundo para amarelo (#ffeb3b) 
+            quando um div é selecionado, fornecendo 
+            feedback visual imediato ao usuário de 
+            que a letra foi selecionada. */
+
+}
+
+
+#linha-conexao {
+
+    position: absolute;
+    /* Posiciona o canvas de forma absoluta dentro 
+            de seu contêiner, permitindo que ele cubra 
+            todo o espaço disponível sem afetar a 
+            disposição de outros elementos. */
+
+    top: 0;
+    /* Posiciona o topo do canvas no topo 
+            de seu contêiner. */
+
+    left: 0;
+    /* Alinha o lado esquerdo do canvas com o 
+            lado esquerdo de seu contêiner. */
+
+    width: 100%;
+    /* Estica a largura do canvas para cobrir 100% 
+            da largura de seu contêiner. */
+
+    height: 100%;
+    /* Estica a altura do canvas para cobrir 100% 
+            da altura de seu contêiner. */
+
+    pointer-events: none;
+    /* Desativa a recepção de eventos de clique ou 
+            toque no canvas, permitindo que os eventos 
+            sejam capturados pelos elementos abaixo dele. */
+
+}
+
+#mensagem {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, 
+            separando visualmente a mensagem de 
+            outros elementos acima dela. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para 18 pixels, 
+            garantindo que a mensagem seja clara 
+            e legível. */
+
+    color: #388e3c;
+    /* Escolhe uma cor verde escura para o texto, que é 
+            consistente com a paleta de cores do jogo e 
+            oferece um contraste agradável com o 
+            fundo mais claro. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito para 
+            enfatizar a mensagem, tornando-a 
+            mais notável para o jogador. */
+
+}
+
+
+#botao-dica {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, 
+            separando o botão dos elementos acima 
+            dele e criando um espaço visual claro. */
+
+    padding: 10px 20px;
+    /* Define o preenchimento interno do botão para 10 
+            pixels na vertical e 20 pixels na horizontal, 
+            aumentando a área de clique e melhorando a 
+            ergonomia. */
+
+    background-color: #3b18a5;
+    /* Estabelece a cor de fundo do botão como um 
+            roxo escuro (#3b18a5), uma cor que se 
+            destaca no layout e atrai a atenção 
+            do usuário. */
+
+    color: #ffffff;
+    /* Define a cor do texto dentro do botão como 
+            branco (#ffffff), garantindo um alto 
+            contraste com o fundo roxo para 
+            excelente legibilidade. */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão, 
+            optando por um design mais limpo e 
+            moderno. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um raio de 5 
+            pixels, suavizando seu design e tornando-o 
+            mais esteticamente agradável. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário 
+            passa o mouse sobre o botão, indicando que 
+            ele é clicável. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para 18 pixels, 
+            garantindo que o texto seja fácil de ler e 
+            suficientemente grande para ser acionado 
+            facilmente. */
+
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave na mudança da 
+            cor de fundo, que é ativada quando o estado 
+            do botão muda (por exemplo, ao passar o 
+            mouse), melhorando a experiência visual do usuário. */
+
+}
+
+#botao-dica:hover {
+
+    background-color: #2e7d32;
+    /* Muda a cor de fundo do botão para um verde 
+            escuro (#2e7d32) quando o usuário passa o 
+            mouse sobre ele, fornecendo feedback visual 
+            imediato de que o botão é interativo. */
+
+}
+
+#modal-dica {
+
+    display: none;
+    /* Inicialmente esconde o modal de dicas, fazendo com 
+            que ele não seja visível até que seja 
+            programaticamente exibido pelo JavaScript. */
+
+    position: fixed;
+    /* Posiciona o modal de forma fixa em relação à 
+            viewport, o que significa que ele permanece no 
+            lugar mesmo se a página for rolada. */
+
+    top: 50%;
+    left: 50%;
+    /* Posiciona o centro do modal precisamente no 
+            meio da viewport, tanto horizontal 
+            quanto verticalmente. */
+
+    transform: translate(-50%, -50%);
+    /* Compensa a posição do modal movendo-o para 
+            trás em 50% da sua própria altura e largura, 
+            garantindo que ele seja centralizado 
+            perfeitamente na tela. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo do modal como 
+            branco (#ffffff), criando uma tela clara 
+            que facilita a leitura das dicas. */
+
+    border: 2px solid #388e3c;
+    /* Adiciona uma borda sólida verde escura ao 
+            redor do modal, que ajuda a definir seus 
+            limites e acentua o design. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20 pixels em todas as 
+            direções dentro do modal, criando espaço 
+            suficiente entre o conteúdo interno e as 
+            bordas para uma apresentação clara. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra sutil ao redor do modal, 
+            melhorando sua visibilidade contra o conteúdo do 
+            fundo e dando uma sensação de profundidade. */
+
+    z-index: 1000;
+    /* Define a ordem de empilhamento do modal como muito 
+            alta, garantindo que ele apareça sobre outros 
+            elementos na página. */
+
+}
+
+
+#modal-dica button {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, criando um 
+            espaço entre o conteúdo acima do botão dentro do 
+            modal e o próprio botão, ajudando a separar 
+            visualmente os elementos dentro do modal. */
+
+    padding: 10px 20px;
+    /* Define o preenchimento interno do botão para 10 
+            pixels na vertical e 20 pixels na horizontal. 
+            Isso não só melhora a estética do botão, mas 
+            também aumenta a área de clique, tornando-o 
+            mais acessível. */
+
+    background-color: #388e3c;
+    /* Estabelece a cor de fundo do botão como um verde 
+            escuro (#388e3c), que é visualmente distinto e 
+            fornece um contraste efetivo com a cor do texto. */
+
+    color: #ffffff;
+    /* Define a cor do texto dentro do botão como 
+            branco (#ffffff), garantindo um contraste alto 
+            com o fundo verde para excelente legibilidade. */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão para 
+            manter o design limpo e moderno. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um raio de 5 pixels, 
+            suavizando o design geral e proporcionando um 
+            visual mais amigável e moderno. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário 
+            passa o mouse sobre o botão, indicando que o 
+            elemento é interativo e pode ser clicado. */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte do texto dentro do botão 
+            como 18 pixels, o que é suficientemente grande 
+            para ser facilmente legível sem dominar o 
+            layout do botão. */
+
+    transition: background-color 0.3s;
+    /* Aplica uma transição suave na mudança da cor de 
+            fundo, que é ativada quando o estado do botão 
+            muda (por exemplo, ao passar o mouse), proporcionando 
+            uma experiência visual agradável e indicativa 
+            para o usuário. */
+
+}
+
+#modal-dica button:hover {
+
+    background-color: #2e7d32;
+    /* Altera a cor de fundo do botão para um verde 
+            mais escuro (#2e7d32) quando o mouse está 
+            sobre ele, fornecendo feedback visual imediato ao 
+            usuário e indicando interatividade. A mudança de 
+            cor também ajuda a reforçar a ação de clique, 
+            aumentando a usabilidade do botão. */
+
+}

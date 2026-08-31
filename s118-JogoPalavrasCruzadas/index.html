@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE informa ao navegador que esta é 
+        uma página HTML5, garantindo que ele interprete e 
+        renderize o conteúdo corretamente. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> envolve todo o conteúdo da página e o 
+        atributo 'lang' especifica o idioma principal do 
+        documento, que é português do Brasil (pt-BR). Isso ajuda os 
+        motores de busca e navegadores a entenderem o idioma do 
+        conteúdo e pode ser útil para acessibilidade. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de 
+            estilo e scripts, e outras instruções que não são 
+            exibidas diretamente na página web. Esses elementos 
+            influenciam o processamento e a apresentação do documento. -->
+
+    <meta charset="UTF-8">
+    <!-- A meta tag com o atributo 'charset' define o conjunto 
+            de caracteres usado no documento, que é UTF-8. UTF-8 
+            inclui a maioria dos caracteres de todos os sistemas de 
+            escrita do mundo e é a codificação de caracteres 
+            mais usada na web. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta meta tag controla a janela de visualização do 
+            navegador. O 'width=device-width' ajusta a largura da 
+            página para corresponder à largura do dispositivo de 
+            exibição, garantindo que a página seja dimensionada 
+            corretamente em diferentes dispositivos. 
+            O 'initial-scale=1.0' define o nível de zoom inicial 
+            quando a página é carregada pela primeira vez. -->
+
+    <title>Jogo de Palavras Cruzadas</title>
+    <!-- A tag <title> define o título do documento, que aparece na 
+            barra de título do navegador ou na guia da página. É um 
+            elemento crucial para SEO (Otimização para motores de 
+            busca) e acessibilidade. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> com o atributo 'rel' definido como 'stylesheet' é 
+            usada para vincular uma folha de estilo externa ao 
+            documento HTML. O atributo 'href' especifica o caminho 
+            para o arquivo CSS que contém os estilos que serão 
+            aplicados ao documento HTML. -->
+
+</head>
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível da 
+            página, como texto, imagens, vídeos, jogos, 
+            botões de navegação, etc. -->
+
+    <div id="container-jogo">
+    <!-- Este 'div' serve como o contêiner principal para o 
+                jogo. Ele agrupa todos os componentes visuais e 
+                funcionais do jogo de palavras cruzadas. O 'id' é 
+                usado para identificar unicamente este elemento 
+                dentro do documento, permitindo que ele seja 
+                estilizado e manipulado com CSS e JavaScript. -->
+
+        <div id="info-nivel">
+        <!-- Este 'div' exibe informações sobre o nível atual e 
+                    as moedas acumuladas pelo jogador. Serve como 
+                    um painel de informações para o usuário. -->
+
+            <span id="moedas">💰 <span id="total-moedas">0</span></span>
+            <!-- O primeiro 'span' exibe o ícone de moedas e o 
+                        total de moedas coletadas pelo jogador. 
+                        'total-moedas' é atualizado dinamicamente 
+                        via JavaScript conforme o jogador progride. -->
+
+            <span id="nivel">Nível <span id="nivel-atual">1</span></span>
+            <!-- Similar ao 'span' de moedas, este 'span' informa ao 
+                        jogador o nível atual do jogo. O 'nivel-atual' é 
+                        incrementado dinamicamente conforme o jogador 
+                        avança nos níveis. -->
+
+        </div>
+
+        <div>
+        <!-- Este 'div' é um contêiner genérico que envolve o 
+                    título do jogo. -->
+
+            <h1>Jogo de Palavras Cruzadas</h1>
+            <!-- A tag <h1> é usada aqui para o título do jogo, 
+                        que é importante para a acessibilidade e SEO, 
+                        pois informa aos usuários e aos mecanismos de 
+                        pesquisa sobre o conteúdo principal da página. -->
+
+        </div>
+
+        <div id="conteudo-jogo">
+        <!-- 'div' que agrupa os componentes principais do jogo, 
+                    incluindo a grade de palavras e o círculo de letras. -->
+
+            <div id="grade-palavras">
+            <!-- Este 'div' representa a área onde as palavras serão 
+                        formadas. Será preenchido dinamicamente com 
+                        células que representam letras durante o jogo. -->
+
+                <!-- Grade de palavras -->
+
+            </div>
+
+            <div id="circulo-letras">
+            <!-- 'div' que contém o círculo de letras, de onde o 
+                        jogador pode selecionar letras para 
+                        formar palavras. -->
+
+                <canvas id="linha-conexao"></canvas>
+                <!-- A tag <canvas> é usada aqui para desenhar 
+                        linhas dinâmicas que conectam as letras 
+                        selecionadas pelo jogador, proporcionando uma 
+                        visualização gráfica das escolhas. -->
+
+            </div>
+        </div>
+
+        <div id="mensagem"></div>
+        <!-- Este 'div' é usado para exibir mensagens de 
+                    feedback para o jogador, como "Correto!" ou 
+                    "Tente novamente!", dependendo da interação do 
+                    jogador com o jogo. -->
+
+        <button id="botao-dica">Dica</button>
+        <!-- Um botão que, quando clicado, fornece uma dica 
+                    ao jogador. As dicas podem ajudar a revelar 
+                    letras ou palavras para avançar no jogo. -->
+
+        <div id="modal-dica">
+        <!-- 'div' que funciona como um modal para mostrar as 
+                    dicas ao jogador. É exibido quando o botão 
+                    de dica é clicado. -->
+
+            <div id="palavras-dica"></div>
+            <!-- Dentro do modal, este 'div' é usado para 
+                        exibir as palavras que ainda podem ser 
+                        formadas, servindo como dica para 
+                        o jogador. -->
+
+            <button id="fechar-dica">Fechar</button>
+            <!-- Botão dentro do modal que permite ao 
+                        jogador fechar o modal de dica. -->
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta 
+                para 'scripts.js' vincula o arquivo JavaScript 
+                externo ao documento HTML. Este script contém a 
+                lógica do jogo e manipulações de DOM 
+                baseadas em eventos do jogo. -->
+                
+</body>
+</html>
