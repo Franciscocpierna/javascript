@@ -1,0 +1,558 @@
+body {
+
+    font-family: 'Arial', sans-serif;
+    /* Define 'Arial' como a fonte primária e 
+            'sans-serif' como a fonte alternativa 
+            caso 'Arial' não esteja disponível. */
+
+    display: flex;
+    /* Configura este elemento para usar o modelo de 
+            layout flexível, permitindo uma maneira mais 
+            eficiente de alinhar e distribuir espaço 
+            entre itens em um contêiner. */
+
+    flex-direction: column;
+    /* Os itens filhos deste contêiner são 
+            posicionados em uma coluna vertical. */
+
+    align-items: center;
+    /* Alinha os itens filhos ao centro horizontalmente 
+            dentro do contêiner. */
+
+    justify-content: center;
+    /* Alinha os itens filhos ao centro 
+            verticalmente dentro do contêiner. */
+
+    min-height: 100vh;
+    /* Define a altura mínima deste elemento para 
+            ser 100% da altura da janela de visualização, 
+            garantindo que o corpo ocupe pelo menos toda a 
+            altura da tela. */
+
+    margin: 0;
+    /* Remove as margens padrão do elemento 'body', 
+            fazendo com que ele ocupe todo o espaço 
+            disponível horizontalmente. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo do corpo para um 
+            cinza claro. */
+
+    color: #333;
+    /* Define a cor padrão do texto para 
+            um cinza escuro. */
+
+}
+
+h1 {
+
+    margin-top: 20px;
+    /* Aplica uma margem de 20 pixels na parte 
+            superior do cabeçalho h1. */
+
+    font-size: 2.5em;
+    /* Define o tamanho da fonte para 2.5 vezes o 
+            tamanho da fonte base do documento ou 
+            do elemento pai. */
+
+    color: #4CAF50;
+    /* Define a cor do texto para um 
+            verde claro. */
+
+}
+
+#container {
+
+    display: flex;
+    /* Configura o contêiner para usar o modelo de 
+            layout flexível, permitindo que os itens 
+            filhos sejam organizados de maneira 
+            flexível. */
+
+    justify-content: center;
+    /* Centraliza os itens filhos horizontalmente 
+            dentro do contêiner. */
+
+    align-items: flex-start;
+    /* Alinha os itens filhos ao topo do 
+            contêiner. */
+
+    margin: 20px;
+    /* Aplica uma margem de 20 pixels em todos os 
+            lados do contêiner. */
+
+    background: white;
+    /* Define a cor de fundo do contêiner 
+            para branco. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em 
+            todos os lados do contêiner, criando espaço 
+            entre o conteúdo interno e as bordas do 
+            contêiner. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner com um 
+            raio de 10 pixels. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Aplica uma sombra abaixo do contêiner para criar 
+            um efeito de elevação, usando uma cor 
+            preta com 20% de opacidade. */
+
+}
+
+#caça-palavras {
+
+    display: grid;
+    /* Configura o elemento para usar o modelo de 
+            layout de grade, permitindo uma organização 
+            precisa dos itens filhos em linhas e colunas. */
+
+    grid-template-columns: repeat(15, 30px);
+    /* Define 15 colunas iguais, cada uma com 30 
+            pixels de largura. */
+
+    grid-template-rows: repeat(15, 30px);
+    /* Define 15 linhas iguais, cada uma 
+            com 30 pixels de altura. */
+
+    gap: 2px;
+    /* Define um espaço de 2 pixels entre 
+            cada célula da grade. */
+
+}
+
+#caça-palavras-dica {
+
+    display: grid;
+    /* Configura o elemento para usar o modelo de 
+            layout de grade, permitindo uma organização 
+            precisa dos itens filhos em linhas e colunas. */
+
+    grid-template-columns: repeat(15, 30px);
+    /* Define 15 colunas iguais, cada uma 
+            com 30 pixels de largura. */
+
+    grid-template-rows: repeat(15, 30px);
+    /* Define 15 linhas iguais, cada uma 
+            com 30 pixels de altura. */
+
+    gap: 2px;
+    /* Define um espaço de 2 pixels entre 
+            cada célula da grade. */
+
+    margin: 20px auto;
+    /* Centraliza o elemento horizontalmente dentro 
+            de seu contêiner e aplica uma margem de 20 
+            pixels na parte superior e inferior. */
+
+}
+
+.celula {
+
+    width: 30px;
+    /* Define a largura de cada célula da 
+            grade como 30 pixels. */
+
+    height: 30px;
+    /* Define a altura de cada célula da grade 
+            como 30 pixels, garantindo que sejam 
+            quadradas. */
+
+    border: 1px solid #ccc;
+    /* Adiciona uma borda sólida com 1 pixel de 
+            espessura e cor cinza claro (#ccc) ao 
+            redor de cada célula. */
+
+    display: flex;
+    /* Utiliza o modelo de exibição flexível 
+            dentro da célula para facilitar o 
+            alinhamento do conteúdo. */
+
+    align-items: center;
+    /* Centraliza verticalmente o conteúdo 
+            dentro da célula. */
+
+    justify-content: center;
+    /* Centraliza horizontalmente o conteúdo 
+            dentro da célula. */
+
+    user-select: none;
+    /* Impede que o texto ou o conteúdo da 
+            célula seja selecionado, o que é útil 
+            em jogos interativos para evitar 
+            comportamentos inesperados durante a 
+            interação do usuário. */
+            
+    background-color: white;
+    /* Define a cor de fundo da célula 
+            para branco. */
+
+    color: #333;
+    /* Define a cor do texto dentro da célula 
+            para cinza escuro (#333). */
+
+    font-size: 1em;
+    /* Define o tamanho da fonte do texto dentro da 
+            célula como 1em, que é o tamanho padrão da 
+            fonte para o elemento pai. */
+
+}
+
+.selecionada {
+
+    background-color: #4CAF50;
+    /* Muda a cor de fundo para verde (#4CAF50) quando a 
+            célula está selecionada, como em uma célula que 
+            faz parte da palavra encontrada no caça-palavras. */
+
+    color: white;
+    /* Muda a cor do texto para branco quando a célula está 
+            selecionada, garantindo contraste com o fundo verde. */
+
+}
+
+.dica {
+    
+    background-color: yellow;
+    /* Define a cor de fundo das células que contêm 
+            dicas para amarelo, destacando-as como 
+            ajuda visual no jogo. */
+
+    color: black;
+    /* Define a cor do texto dentro das células de 
+            dica para preto, garantindo boa 
+            legibilidade contra o fundo amarelo. */
+
+}
+
+#informacoes {
+
+    margin-left: 30px;
+    /* Adiciona uma margem à esquerda de 30 pixels 
+            para o contêiner de informações, afastando-o 
+            de outros elementos ou da borda do 
+            contêiner pai. */
+
+    text-align: left;
+    /* Alinha o texto dentro do contêiner de 
+            informações à esquerda, mantendo a 
+            consistência na apresentação do conteúdo. */
+
+}
+
+
+#palavras {
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels abaixo do 
+            elemento para separá-lo de outros elementos 
+            subsequentes na página. */
+
+}
+
+#pontuacao {
+
+    margin-top: 20px;
+    /* Adiciona uma margem de 20 pixels acima do 
+            elemento para separá-lo de outros 
+            elementos precedentes na página. */
+
+}
+
+#mensagem {
+
+    display: none;
+    /* Oculta inicialmente o elemento #mensagem, que 
+            pode ser mostrado dinamicamente via 
+            JavaScript. */
+
+    position: fixed;
+    /* Posiciona o elemento de forma fixa em relação à 
+            janela do navegador, fazendo com que ele 
+            não se mova ao rolar a página. */
+            
+    top: 50%;
+    /* Posiciona o topo do elemento a 50% da 
+            altura da janela do navegador. */
+
+    left: 50%;
+    /* Posiciona a esquerda do elemento a 50% 
+            da largura da janela do navegador. */
+
+    transform: translate(-50%, -50%);
+    /* Usa transformação para ajustar o posicionamento 
+            do elemento de forma que ele seja centralizado 
+            precisamente, deslocando-o 50% para cima e 50% 
+            para a esquerda em relação à sua posição 
+            definida. */
+
+    background-color: white;
+    /* Define a cor de fundo do elemento 
+            para branco. */
+
+    border: 2px solid black;
+    /* Adiciona uma borda sólida preta com 2 
+            pixels de espessura ao redor do 
+            elemento. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todos os 
+            lados do conteúdo interno do elemento, 
+            criando espaço entre o conteúdo e a borda. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Adiciona uma sombra em volta do elemento para 
+            dar destaque e profundidade, usando uma 
+            cor preta com 50% de transparência. */
+
+    z-index: 2;
+    /* Define a ordem de empilhamento do elemento 
+            como 2, assegurando que ele fique acima de 
+            outros elementos na página que tenham um 
+            índice de empilhamento menor. */
+
+}
+
+#mensagem button {
+
+    margin-top: 20px;
+    /* Adiciona uma margem de 20 pixels acima do 
+            botão dentro do elemento #mensagem. */
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento de 10 pixels na vertical 
+            e 20 pixels na horizontal dentro do botão, 
+            aumentando a área clicável e o conforto 
+            visual. */
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo do botão para um 
+            verde vibrante. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão 
+            para branco, criando um contraste 
+            alto com o fundo verde. */
+
+    border: none;
+    /* Remove qualquer borda padrão que 
+            possa ter sido aplicada ao botão. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um 
+            raio de 5 pixels, suavizando sua 
+            aparência. */
+
+    cursor: pointer;
+    /* Muda o cursor para indicar que o 
+            botão é clicável. */
+
+    font-size: 1em;
+    /* Define o tamanho do texto dentro do botão 
+            para ser o mesmo que o tamanho de fonte 
+            base do documento ou do elemento pai. */
+
+}
+
+#mensagem button:hover {
+
+    background-color: #0f4e12;
+    /* Muda a cor de fundo do botão quando o 
+            mouse está sobre ele para um tom de 
+            verde ligeiramente mais escuro, 
+            proporcionando um feedback visual ao 
+            usuário. */
+
+}
+
+#botao-dica {
+
+    margin-top: 10px;
+    /* Adiciona uma margem de 10 pixels acima do 
+            botão, separando-o dos elementos acima. */
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento de 10 pixels na 
+            vertical e 20 pixels na horizontal dentro do 
+            botão, aumentando a área clicável e o 
+            conforto visual. */
+
+    background-color: #2196F3;
+    /* Define a cor de fundo do botão para um 
+            azul vibrante (#2196F3). */
+
+    color: white;
+    /* Define a cor do texto dentro do botão 
+            para branco, criando um contraste 
+            alto com o fundo azul. */
+
+    border: none;
+    /* Remove qualquer borda padrão que possa 
+            ter sido aplicada ao botão. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um 
+            raio de 5 pixels, suavizando sua aparência. */
+
+    cursor: pointer;
+    /* Muda o cursor para indicar que o botão é 
+            clicável. */
+
+    font-size: 1em;
+    /* Define o tamanho do texto dentro do botão para 
+            ser o mesmo que o tamanho de fonte base do 
+            documento ou do elemento pai. */
+
+}
+
+#botao-dica:hover {
+
+    background-color: #093d68;
+    /* Muda a cor de fundo do botão quando o 
+            mouse está sobre ele para um tom de azul 
+            ligeiramente mais escuro, proporcionando um 
+            feedback visual ao usuário. */
+
+}
+
+.modal {
+
+    display: none;
+    /* Oculta inicialmente o elemento .modal, que 
+            pode ser mostrado dinamicamente via 
+            JavaScript. */
+
+    position: fixed;
+    /* Posiciona o elemento de forma fixa em 
+            relação à janela do navegador, 
+            fazendo com que ele não se mova ao 
+            rolar a página. */
+
+    z-index: 1;
+    /* Define a ordem de empilhamento do 
+            elemento como 1, assegurando que 
+            ele fique acima de outros elementos na 
+            página que tenham um índice de 
+            empilhamento menor. */
+
+    left: 0;
+    /* Posiciona o lado esquerdo do modal na 
+            borda esquerda da janela do 
+            navegador. */
+
+    top: 0;
+    /* Posiciona o topo do modal na borda 
+            superior da janela do navegador. */
+
+    width: 100%;
+    /* Define a largura do modal para 
+            ocupar 100% da largura da janela 
+            do navegador. */
+
+    height: 100%;
+    /* Define a altura do modal para 
+            ocupar 100% da altura da 
+            janela do navegador. */
+
+    overflow: auto;
+    /* Adiciona uma barra de rolagem 
+            automática se o conteúdo do 
+            modal exceder a área visível. */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Define a cor de fundo do modal para preto 
+            com 50% de opacidade, criando um 
+            efeito de sobreposição escura que 
+            cobre o conteúdo da página atrás 
+            do modal. */
+
+}
+
+
+.modal-conteudo {
+    
+    background-color: #fefefe;
+    /* Define a cor de fundo do conteúdo do 
+            modal para um branco muito 
+            claro (#fefefe). */
+
+    margin: 15% auto;
+    /* Adiciona uma margem de 15% no topo 
+            e na base, e centraliza horizontalmente o 
+            conteúdo do modal. */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em 
+            todos os lados do conteúdo interno do 
+            modal, criando espaço entre o 
+            conteúdo e a borda. */
+
+    border: 1px solid #888;
+    /* Adiciona uma borda sólida de 1 pixel de 
+            espessura com cor cinza (#888) ao 
+            redor do conteúdo do modal. */
+
+    width: 80%;
+    /* Define a largura do conteúdo do modal 
+            para 80% da largura da janela do 
+            navegador. */
+
+    max-width: 600px;
+    /* Define uma largura máxima de 600 pixels 
+            para o conteúdo do modal, evitando 
+            que ele fique muito largo em telas 
+            maiores. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do conteúdo do modal 
+            com um raio de 10 pixels, suavizando 
+            sua aparência. */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra ao redor do conteúdo do 
+            modal para criar um efeito de elevação, 
+            usando uma cor preta com 20% de opacidade. */
+
+}
+
+.fechar {
+
+    color: #aaa;
+    /* Define a cor do texto do botão de 
+            fechar para cinza claro (#aaa). */
+
+    float: right;
+    /* Alinha o botão de fechar à direita do 
+            contêiner pai. */
+
+    font-size: 28px;
+    /* Define o tamanho da fonte do botão de 
+            fechar para 28 pixels. */
+
+    font-weight: bold;
+    /* Define o peso da fonte do botão de 
+            fechar para negrito. */
+
+}
+
+.fechar:hover,
+.fechar:focus {
+
+    color: black;
+    /* Muda a cor do texto para preto quando o 
+            botão de fechar é focado ou o mouse 
+            passa sobre ele, proporcionando um 
+            feedback visual ao usuário. */
+
+    text-decoration: none;
+    /* Remove qualquer sublinhado ou decoração de 
+            texto quando o botão de fechar é focado 
+            ou o mouse passa sobre ele. */
+
+    cursor: pointer;
+    /* Muda o cursor para indicar que o 
+            botão de fechar é clicável. */
+            
+}

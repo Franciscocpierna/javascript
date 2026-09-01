@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- Especifica que este documento é HTML5, 
+        que é a versão mais recente do HTML -->
+
+<html lang="pt-BR">
+<!-- Inicia o elemento raiz do documento HTML e 
+            define a linguagem como Português do Brasil -->
+
+<head>
+<!-- Abre a seção head, que contém metadados (dados 
+            sobre dados) que não são exibidos diretamente na 
+            página web, mas são úteis para o navegador -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres para UTF-8, que 
+                inclui a maioria dos caracteres usados em 
+                diversos idiomas -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Garante que a página seja exibida de forma 
+                adequada em diferentes dispositivos, ajustando a 
+                largura da página para a largura do dispositivo e 
+                definindo a escala inicial de zoom como 1 -->
+
+    <title>Caça Palavras</title>
+    <!-- Define o título da página, que aparece na 
+                aba do navegador -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Vincula uma folha de estilos externa ao documento. 
+                'estilos.css' é o arquivo que contém as 
+                regras de estilo CSS para a página -->
+
+</head>
+<!-- Fecha a seção head -->
+
+
+<body>
+<!-- Abre o corpo do documento HTML, onde todo o 
+            conteúdo visível da página é colocado -->
+
+    <h1>Caça Palavras</h1>
+    <!-- Cria um cabeçalho de nível 1, que geralmente é 
+            usado para o título principal da página ou seção -->
+
+    <div id="container">
+    <!-- Cria uma divisão ou seção na página com um 
+                identificador único 'container'. Este é 
+                frequentemente usado para agrupar elementos e 
+                aplicar estilos específicos. -->
+
+        <div id="caça-palavras"></div>
+        <!-- Cria uma divisão com o identificador 'caça-palavras'. 
+                    Esta área pode ser usada para implementar o 
+                    jogo caça palavras através de scripts. -->
+
+        <div id="informacoes">
+        <!-- Cria uma divisão com o identificador 'informacoes'. 
+                    É usado para agrupar e organizar informações 
+                    relacionadas ao jogo, como palavras a serem 
+                    encontradas e pontuação. -->
+
+            <div id="palavras">
+            <!-- Cria uma subdivisão dentro de 'informacoes' com o 
+                        identificador 'palavras', destinada a listar 
+                        as palavras que os jogadores precisam 
+                        encontrar no jogo. -->
+
+                <h2>Palavras a encontrar:</h2>
+                <!-- Adiciona um cabeçalho de nível 2 para rotular a 
+                        	lista de palavras a serem encontradas 
+                            no jogo. -->
+
+                <ul id="lista-palavras"></ul>
+                <!-- Cria uma lista desordenada com o identificador 
+                            'lista-palavras'. Este é o local onde as 
+                            palavras a serem encontradas serão listadas 
+                            dinamicamente pelo JavaScript. -->
+
+                <button id="botao-dica">Dica</button>
+                <!-- Adiciona um botão com o identificador 'botao-dica'. 
+                            Este botão pode ser usado para revelar uma 
+                            dica sobre como encontrar as palavras ou para 
+                            mostrar a localização de uma palavra no jogo. -->
+
+            </div>
+
+            <div id="pontuacao">
+            <!-- Cria outra subdivisão dentro de 'informacoes' com o 
+                        identificador 'pontuacao'. Esta área é usada para 
+                        exibir a pontuação do jogador. -->
+
+                <h2>Pontuação: <span id="valor-pontuacao">0</span></h2>
+                <!-- Adiciona um cabeçalho de nível 2 que inclui um 
+                            elemento 'span' com o identificador 'valor-pontuacao'. 
+                            O número dentro deste 'span' mostrará a pontuação 
+                            atual do jogador, que pode ser atualizada 
+                            dinamicamente pelo JavaScript. -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Fecha todas as divisões abertas anteriormente para 
+                manter uma boa organização estrutural do HTML -->
+
+    <div id="mensagem">
+    <!-- Cria uma divisão com o identificador 'mensagem'. Esta divisão é 
+                usada para exibir uma mensagem ao usuário, geralmente é 
+                ocultada e mostrada sob condições específicas 
+                através de JavaScript. -->
+
+        <h2>Parabéns!</h2>
+        <!-- Adiciona um cabeçalho de nível 2 que é usado para 
+                    felicitar o jogador por completar uma tarefa, 
+                    como encontrar todas as palavras no caça-palavras. -->
+
+        <p>Você encontrou todas as palavras!</p>
+        <!-- Insere um parágrafo para fornecer mais detalhes 
+                    sobre a conquista do jogador. -->
+
+        <button onclick="continuar()">Continuar</button>
+        <!-- Insere um botão que, quando clicado, executa a 
+                    função JavaScript 'continuar()'. Esta 
+                    função pode ser usada para prosseguir para a 
+                    próxima fase do jogo ou recarregar o jogo. -->
+
+    </div>
+
+    <div id="modal-dica" class="modal">
+    <!-- Cria uma divisão com o identificador 'modal-dica' e a 
+                classe 'modal'. Este é um contêiner para um 
+                modal que pode ser usado para mostrar dicas ou 
+                informações adicionais. Modais são geralmente 
+                ocultos e mostrados apenas quando necessários. -->
+
+        <div class="modal-conteudo">
+        <!-- Cria uma divisão com a classe 'modal-conteudo'. Esta 
+                    divisão é usada para conter o conteúdo que 
+                    será exibido dentro do modal. -->
+
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <!-- Cria um elemento 'span' com a classe 'fechar' que 
+                        contém um caractere '×'. Quando clicado, 
+                        executa a função 'fecharModal()' para fechar o 
+                        modal. Este é um padrão comum para botões de 
+                        fechar em interfaces de usuário. -->
+
+            <h2>Imagem do Caça Palavras</h2>
+            <!-- Insere um cabeçalho de nível 2 que descreve o 
+                        conteúdo do modal, neste caso, uma imagem 
+                        do caça-palavras. -->
+
+            <div id="caça-palavras-dica"></div>
+            <!-- Cria uma divisão com o identificador 'caça-palavras-dica'. 
+                        Este elemento pode ser usado para exibir uma 
+                        imagem ou representação gráfica das palavras a 
+                        serem encontradas como uma dica para o jogador. -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Vincula um arquivo de script externo chamado 'script.js' ao 
+                documento. Este script contém o JavaScript que manipula a 
+                lógica do jogo, eventos e interações do usuário. -->
+
+</body>
+<!-- Fecha a tag do corpo do documento HTML. Todo o conteúdo visível 
+            deve ser colocado dentro desta tag. -->
+
+</html>
+<!-- Fecha a tag raiz do HTML, que deve envolver todo o 
+            conteúdo do documento. -->
+            
