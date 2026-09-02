@@ -1,0 +1,591 @@
+body {
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Define a família de fontes para o texto do 
+          corpo. 'Segoe UI', Tahoma, Geneva, Verdana são as 
+          preferências em ordem; se não disponíveis, usa-se 
+          uma fonte sans-serif genérica. */
+
+  text-align: center;
+  /* Centraliza o texto dentro do elemento body. */
+
+  background-color: #8ee2d1;
+  /* Define a cor de fundo do corpo da página como 
+          um azul claro. */
+
+  margin: 0;
+  /* Remove as margens externas do elemento body, fazendo 
+          com que ele ocupe a largura total disponível. */
+
+  padding: 0;
+  /* Remove o preenchimento interno do elemento body, 
+          permitindo que o conteúdo estenda-se até as bordas. */
+
+  display: flex;
+  /* Define o modelo de caixa do corpo para flexbox, o que 
+          facilita o alinhamento dos itens filhos (como .container) 
+          de maneira flexível e eficiente. */
+
+  justify-content: center;
+  /* Alinha os itens filhos do body horizontalmente ao 
+          centro, usado aqui com flexbox. */
+
+  align-items: center;
+  /* Alinha os itens filhos do body verticalmente ao 
+          centro, também em contexto de flexbox. */
+
+  height: 100vh;
+  /* Define a altura do corpo para 100vh (viewport height), 
+          garantindo que ele ocupe toda a altura da janela de 
+          visualização. */
+
+}
+
+.container {
+
+  max-width: 900px;
+  /* Define a largura máxima do contêiner para 900 pixels 
+        para evitar que ele se torne demasiadamente largo 
+        em telas grandes. */
+
+  width: 100%;
+  /* Define a largura do contêiner para 100% do seu 
+        contêiner pai (neste caso, body), mas não 
+        excedendo 900px devido ao max-width. */
+
+  padding: 20px;
+  /* Adiciona um preenchimento de 20 pixels em todas as 
+        direções dentro do contêiner, criando espaço entre o 
+        conteúdo interno e as bordas do contêiner. */
+
+  background-color: #ffffff;
+  /* Define a cor de fundo do contêiner como branco. */
+
+  border-radius: 10px;
+  /* Arredonda os cantos do contêiner, cada um com um 
+        raio de 10 pixels. */
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Aplica uma sombra ao contêiner. A sombra tem um 
+        deslocamento de 0 pixels horizontalmente, 4 pixels 
+        verticalmente, com um desfoque de 12 pixels e uma 
+        cor preta com 10% de opacidade. */
+
+  transition: box-shadow 0.3s ease-in-out;
+  /* Adiciona uma transição para a sombra da caixa que 
+        dura 0,3 segundos. A transição suaviza a mudança de 
+        sombras quando são alteradas, usando um timing 'ease-in-out' 
+        para um início e fim suaves. */
+
+}
+
+.container:hover {
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+    /* Define uma sombra mais pronunciada para o contêiner 
+          quando o mouse passa sobre ele (hover). A sombra 
+          tem um deslocamento de 0 pixels horizontalmente, 8 
+          pixels verticalmente, um desfoque de 24 pixels, e uma 
+          cor preta com 80% de opacidade, aumentando a visibilidade e 
+          o foco visual no elemento. */
+  
+}
+
+
+h1 {
+
+  margin-top: 0;
+  /* Remove a margem superior do elemento <h1>, 
+        fazendo com que ele se alinhe mais de perto 
+        com os elementos acima dele. */
+
+  color: #333;
+  /* Define a cor do texto do cabeçalho para 
+        um cinza escuro (#333). */
+
+  font-size: 2.5em;
+  /* Define o tamanho da fonte para 2.5 vezes o 
+        tamanho da fonte base do elemento, aumentando a 
+        importância visual do cabeçalho. */
+
+  font-weight: bold;
+  /* Aplica o peso da fonte como negrito, 
+        aumentando a ênfase no texto do cabeçalho. */
+
+}
+
+#pontuacao {
+
+  font-size: 1.5em;
+  /* Define o tamanho da fonte do elemento com ID 'pontuacao' 
+        para 1.5 vezes o tamanho da fonte base, fazendo com 
+        que a pontuação seja destacada visualmente. */
+
+  margin-top: 10px;
+  /* Adiciona uma margem superior de 10 pixels para separar 
+        visualmente a pontuação dos elementos acima dela. */
+
+  color: #555;
+  /* Define a cor do texto para um cinza médio (#555), 
+        proporcionando uma leitura fácil sem ser muito 
+        agressivo visualmente. */
+
+}
+
+#palavra {
+
+  font-size: 5.5em;
+  /* Define o tamanho da fonte para 5.5 vezes o tamanho da 
+        fonte base, destacando a palavra que os jogadores 
+        devem adivinhar como uma parte central do jogo. */
+
+  margin-top: 20px;
+  /* Adiciona uma margem superior de 20 pixels, criando 
+        espaço entre a palavra e os elementos acima dela, 
+        ajudando a separar visualmente as seções da 
+        interface do usuário. */
+
+  color: #0a3766;
+  /* Define a cor do texto para um azul escuro (#0a3766), 
+        que proporciona uma aparência distinta e agradável 
+        visualmente. */
+
+  font-weight: bold;
+  /* Aplica o peso da fonte como negrito, tornando a palavra 
+        mais dominante e visível na interface do usuário. */
+
+  text-transform: uppercase;
+  /* Transforma todo o texto do elemento 'palavra' em 
+        maiúsculas, aumentando a sua visibilidade e impacto. */
+
+}
+
+#resultado {
+
+  font-size: 2.5em;
+  /* Define o tamanho da fonte do elemento com ID 'resultado' 
+        para 2.5 vezes o tamanho da fonte base, garantindo 
+        que as mensagens de feedback sejam grandes e claras. */
+
+  margin-top: 20px;
+  /* Adiciona uma margem superior de 20 pixels para distanciar o 
+        feedback dos elementos acima dele, ajudando a segmentar 
+        visualmente a interface. */
+
+  color: #333;
+  /* Define a cor do texto para um cinza escuro (#333), o 
+        que ajuda a manter a legibilidade enquanto fornece 
+        contraste suficiente com o fundo. */
+
+  min-height: 40px;
+  /* Define uma altura mínima de 40 pixels para o 
+        elemento 'resultado', garantindo que o espaço seja 
+        reservado para mensagens de feedback mesmo quando 
+        estão vazias. */
+
+}
+
+#teclado-virtual {
+
+  display: flex;
+  /* Estabelece que o contêiner do teclado virtual usa o 
+        modelo de layout Flexbox, permitindo um alinhamento 
+        eficiente dos itens filhos (teclas). */
+
+  flex-wrap: wrap;
+  /* Permite que os itens filhos (teclas) do contêiner se 
+        ajustem em múltiplas linhas conforme necessário, baseado 
+        no tamanho do contêiner e dos próprios itens. */
+
+  justify-content: center;
+  /* Alinha os itens filhos (teclas) horizontalmente ao 
+        centro do contêiner, proporcionando um alinhamento 
+        visual centrado para o teclado virtual. */
+
+  margin-top: 20px;
+  /* Adiciona uma margem superior de 20 pixels ao contêiner do 
+        teclado, criando espaço entre ele e qualquer elemento 
+        que esteja acima no layout. */
+
+}
+
+.tecla {
+
+  margin: 5px;
+  /* Adiciona margens de 5 pixels em torno de cada tecla 
+        para garantir espaço entre elas, evitando que 
+        toquem umas nas outras. */
+
+  padding: 15px 20px;
+  /* Aplica um preenchimento interno de 15 pixels na 
+        vertical e 20 pixels na horizontal em cada tecla, 
+        aumentando a área de clique e melhorando a 
+        aparência visual. */
+
+  font-size: 1.2em;
+  /* Define o tamanho da fonte das teclas para 1.2 vezes o 
+        tamanho da fonte base do elemento pai, tornando o 
+        texto nas teclas mais legível. */
+
+  background-color: #007bff;
+  /* Define a cor de fundo das teclas para um azul 
+        brilhante (#007bff), o que ajuda a tecla a se 
+        destacar visualmente. */
+
+  color: #fff;
+  /* Define a cor do texto das teclas para branco (#fff), 
+        garantindo um bom contraste com o fundo azul para 
+        facilidade de leitura. */
+
+  border: none;
+  /* Remove qualquer borda padrão das teclas, 
+        contribuindo para um design mais limpo e moderno. */
+
+  border-radius: 5px;
+  /* Arredonda os cantos das teclas com um raio de 5 pixels, 
+        suavizando o design geral e melhorando a estética. */
+
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando sobrevoado, 
+        indicando que a tecla é clicável. */
+
+  transition: background-color 0.3s, transform 0.3s;
+  /* Aplica uma transição suave para mudanças na cor de 
+        fundo e transformações da tecla, como quando é 
+        sobrevoada, melhorando a resposta visual interativa. */
+
+}
+
+.tecla:hover {
+
+  background-color: #078b23;
+  /* Muda a cor de fundo das teclas para um verde 
+        escuro (#078b23) quando são sobrevoadas, fornecendo um 
+        feedback visual imediato que a tecla é interativa. */
+
+  transform: scale(1.05);
+  /* Aumenta ligeiramente o tamanho da tecla em 5% quando 
+        sobrevoada, adicionando um efeito visual sutil que 
+        destaca a tecla sob o cursor do usuário. */
+
+}
+
+#btn-verificar, #btn-dica {
+
+  margin-top: 20px;
+  /* Adiciona uma margem superior de 20 pixels para 
+        ambos os botões, criando espaço entre eles e 
+        qualquer elemento que esteja acima. */
+
+  padding: 15px 30px;
+  /* Define um preenchimento de 15 pixels na vertical e 30 
+        pixels na horizontal para ambos os botões, aumentando 
+        a área de clique e conforto visual. */
+
+  font-size: 1.2em;
+  /* Aumenta o tamanho da fonte para 1.2 vezes o tamanho 
+        padrão da fonte do documento, fazendo com que o 
+        texto dentro dos botões seja mais legível. */
+
+  color: #fff;
+  /* Define a cor do texto dentro dos botões como 
+        branco (#fff), garantindo um contraste adequado com 
+        as cores de fundo dos botões para uma boa 
+        legibilidade. */
+
+  border: none;
+  /* Remove as bordas dos botões, contribuindo para um 
+        design mais limpo e moderno. */
+
+  border-radius: 5px;
+  /* Arredonda os cantos dos botões com um raio de 5 
+        pixels, criando um visual mais suave e 
+        esteticamente agradável. */
+
+  cursor: pointer;
+  /* Muda o cursor para um ponteiro quando o usuário 
+        passa o mouse sobre os botões, indicando que 
+        são clicáveis. */
+
+  transition: background-color 0.3s, transform 0.3s;
+  /* Adiciona efeitos de transição suaves para as 
+        mudanças de cor de fundo e escala dos botões, 
+        melhorando a interatividade visual ao interagir 
+        com eles. */
+
+}
+
+#btn-verificar {
+
+  background-color: #28a745;
+  /* Define a cor de fundo do botão 'Verificar' como 
+        verde (#28a745), uma cor associada a ações 
+        positivas como confirmar ou prosseguir. */
+
+}
+
+#btn-verificar:hover {
+
+  background-color: #218838;
+  /* Muda a cor de fundo do botão 'Verificar' para um 
+        tom de verde mais escuro (#218838) quando o mouse 
+        está sobre ele, fornecendo um feedback visual 
+        de interatividade. */
+
+  transform: scale(1.05);
+  /* Aumenta ligeiramente a escala do botão 'Verificar' 
+        em 5% ao passar o mouse, dando um efeito de 
+        destaque e aumentando a sensação de interatividade. */
+
+}
+
+#btn-dica {
+
+  background-color: #ffc107;
+  /* Define a cor de fundo do botão 'Dica' como 
+        amarelo (#ffc107), uma cor que chama atenção e é 
+        frequentemente usada para destacar elementos 
+        importantes ou ferramentas auxiliares. */
+
+}
+
+#btn-dica:hover {
+
+  background-color: #e0a800;
+  /* Altera a cor de fundo do botão 'Dica' para um 
+        amarelo mais escuro (#e0a800) quando o mouse 
+        está sobre ele, fornecendo um feedback visual 
+        de que o botão é interativo. */
+
+  transform: scale(1.05);
+  /* Aumenta ligeiramente a escala do botão 'Dica' 
+        em 5% ao passar o mouse, aumentando sua 
+        visibilidade e interatividade. */
+
+}
+
+/* Estilos do Modal */
+.modal {
+
+  display: none;
+  /* Inicialmente esconde o modal, definindo display 
+        como none. O modal só será exibido mediante 
+        ação específica (como clicar em um botão). */
+
+  position: fixed;
+  /* O modal é posicionado em relação à janela do 
+        navegador, e não se move ao rolar a página. */
+
+  z-index: 1;
+  /* Define a pilha de ordem do modal. Um z-index mais 
+        alto traz o modal para frente de outros 
+        elementos na página. */
+
+  left: 0;
+  top: 0;
+  /* Posiciona o modal exatamente no topo e à 
+        esquerda da janela do navegador, cobrindo 
+        toda a área visível quando exibido. */
+
+  width: 100%;
+  height: 100%;
+  /* Define a largura e a altura do modal para 
+        cobrir toda a tela, desde que position 
+        esteja como fixed. */
+
+  overflow: auto;
+  /* Permite que o conteúdo dentro do modal seja 
+        rolável se o conteúdo exceder o tamanho 
+        da janela. */
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Define a cor de fundo do modal. Primeiro é 
+        declarado um fundo preto sólido e então 
+        substituído por preto com transparência (40% de 
+        opacidade), permitindo que o conteúdo por 
+        trás do modal seja parcialmente visível. */
+
+  justify-content: center;
+  align-items: center;
+  /* Utiliza Flexbox para centralizar o conteúdo do 
+        modal (definido em .modal-content) tanto 
+        horizontal quanto verticalmente dentro do 
+        contêiner .modal. */
+
+}
+
+.modal-content {
+
+  background-color: #fefefe;
+  /* Define a cor de fundo do conteúdo do modal 
+        para branco quase completo. */
+
+  margin: 15% auto;
+  /* Centraliza o conteúdo do modal horizontalmente e 
+        o posiciona a 15% do topo da página. */
+
+  padding: 20px;
+  /* Adiciona um preenchimento interno de 20 pixels em 
+        todas as direções dentro do contêiner de 
+        conteúdo do modal, criando espaço entre o 
+        conteúdo e as bordas do modal. */
+
+  border: 1px solid #888;
+  /* Adiciona uma borda sólida com 1 pixel de 
+        espessura e cor cinza (#888) ao redor do 
+        contêiner do conteúdo do modal. */
+
+  width: 80%;
+  /* Define a largura do conteúdo do modal para 80% 
+        da largura do seu contêiner pai (.modal), 
+        ajudando a manter o conteúdo responsivo e 
+        gerenciável em diferentes tamanhos de tela. */
+
+  max-width: 500px;
+  /* Estabelece uma largura máxima de 500 pixels 
+        para o conteúdo do modal, garantindo que 
+        não se torne muito largo em telas grandes. */
+
+  border-radius: 10px;
+  /* Aplica um raio de borda de 10 pixels para 
+        arredondar os cantos do conteúdo do modal, 
+        suavizando sua aparência visual. */
+
+  text-align: center;
+  /* Centraliza o texto e outros elementos dentro 
+        do conteúdo do modal, proporcionando um 
+        layout equilibrado e fácil de ler. */
+
+  font-size: 4.2em;
+  /* Aumenta o tamanho da fonte para 4.2 vezes o 
+        tamanho padrão da fonte do documento, 
+        fazendo com que o texto dentro seja 
+        mais legível. */
+
+}
+
+
+.close {
+
+  color: #aaa;
+  /* Define a cor do texto para um cinza 
+        claro (#aaa), que é sutil mas ainda legível. */
+
+  float: right;
+  /* Posiciona o elemento `.close` à direita do 
+        seu contêiner, geralmente usado para botões 
+        de fechar em modais ou componentes interativos. */
+
+  font-size: 28px;
+  /* Estabelece o tamanho da fonte para 28 pixels, 
+        garantindo que o ícone de fechamento seja 
+        facilmente clicável e visível. */
+
+  font-weight: bold;
+  /* Aplica um peso de fonte negrito para tornar o 
+        elemento `.close` mais proeminente e claro 
+        para o usuário. */
+
+}
+
+.close:hover,
+.close:focus {
+
+  color: black;
+  /* Muda a cor do texto para preto ao passar o 
+        mouse ou ao focar (por exemplo, via teclado ou 
+        interação de acessibilidade), proporcionando 
+        um feedback visual claro. */
+
+  text-decoration: none;
+  /* Remove qualquer decoração de texto (como 
+        sublinhado) que possa ser aplicada por padrão 
+        pelo navegador ao focar ou passar o mouse. */
+
+  cursor: pointer;
+  /* Muda o estilo do cursor para 'pointer', 
+        indicando que o elemento é clicável. */
+
+}
+
+
+@media (max-width: 600px) {
+  /* Esta media query aplica as seguintes regras CSS 
+        quando a largura da janela do navegador é igual ou 
+        inferior a 600 pixels. É comumente usada para 
+        adaptar estilos a telas de dispositivos móveis. */
+
+  .container {
+    padding: 15px;
+    /* Reduz o preenchimento dentro do elemento com a 
+        classe `.container` para 15 pixels em todos os 
+        lados. Essa redução ajuda a maximizar o espaço 
+        disponível para o conteúdo dentro de containers em 
+        telas menores, essencial para manter o conteúdo 
+        legível e acessível sem ocupar espaço excessivo. */
+        
+  }
+
+  h1 {
+
+    font-size: 2em;
+    /* Ajusta o tamanho da fonte do cabeçalho (elemento <h1>) 
+          para 2 vezes o tamanho da fonte base do documento. 
+          Essa redução é proporcional e mantém a hierarquia 
+          visual importante, garantindo que os cabeçalhos 
+          continuem a se destacar sem dominar o espaço 
+          visualmente restrito. */
+
+  }
+
+  #palavra {
+
+    font-size: 2em;
+    /* Define o tamanho da fonte para a palavra-chave que 
+          os usuários devem adivinhar (elemento com ID `#palavra`) 
+          para 2 vezes o tamanho da fonte base, mantendo sua 
+          proeminência na interface do jogo, garantindo que 
+          seja facilmente legível mesmo em telas menores. */
+
+  }
+
+  .tecla {
+
+    font-size: 1em;
+    padding: 10px;
+    /* Ajusta as teclas (elementos com classe `.tecla`) para 
+          terem um tamanho de fonte igual ao tamanho base da 
+          fonte do documento e um preenchimento de 10 pixels. 
+          Isso as torna acessíveis e fáceis de interagir em 
+          telas pequenas, enquanto maximiza o uso do espaço 
+          disponível no teclado virtual. */
+
+  }
+
+  #btn-verificar, #btn-dica {
+
+    font-size: 1em;
+    padding: 10px 20px;
+    /* Define o tamanho da fonte dos botões 'Verificar' 
+        e 'Dica' (elementos com IDs `#btn-verificar` e `#btn-dica`) 
+        para o tamanho padrão da fonte e ajusta o preenchimento 
+        para 10 pixels verticalmente e 20 pixels horizontalmente. 
+        Essas dimensões asseguram que os botões sejam fáceis de 
+        pressionar sem causar erros de toque, importantes para a 
+        interatividade do usuário em dispositivos móveis. */
+
+  }
+
+  #resultado {
+
+    font-size: 1.2em;
+    /* Aumenta ligeiramente o tamanho da fonte do elemento 
+        que mostra os resultados (elemento com ID `#resultado`) 
+        para 1.2 vezes o tamanho da fonte base, permitindo que 
+        feedbacks, como acertos ou erros, sejam facilmente visíveis 
+        sem ocupar espaço desnecessário na tela. */
+
+  }
+  
+}

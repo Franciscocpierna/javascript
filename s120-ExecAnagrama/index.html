@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- Declara que este documento é um documento HTML5. -->
+
+<html lang="pt-BR">
+<!-- O elemento raiz <html> inicia o documento HTML, 
+      especificando o idioma (português do Brasil) 
+      com o atributo 'lang'. -->
+
+<head>
+<!-- O elemento <head> contém metadados (dados sobre dados) 
+        que geralmente não são exibidos diretamente 
+        na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> define a codificação de caracteres 
+            para o documento como UTF-8, que inclui quase 
+            todos os caracteres e símbolos do mundo. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag <meta> configura a viewport (área de 
+            visualização) para controlar o layout em dispositivos 
+            móveis, ajustando a largura da viewport para a 
+            largura do dispositivo e definindo o nível 
+            inicial de zoom como 1.0. -->
+
+    <title>Jogo de Anagrama</title>
+    <!-- Define o título do documento, que é exibido 
+            na aba do navegador. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- O elemento <link> é usado aqui para vincular um 
+            arquivo CSS externo chamado 'style.css', que 
+            contém os estilos para formatar o documento HTML. -->
+
+</head>
+<!-- Fecha o elemento <head>. -->
+
+
+<body>
+<!-- O elemento <body> contém todo o conteúdo da página, 
+          como texto, imagens, links, etc., que são exibidos 
+          diretamente no navegador. -->
+
+  <div class="container">
+  <!-- A tag <div> é usada para criar uma seção ou um 
+            contêiner genérico para conteúdo em bloco 
+            com uma classe 'container'. 
+      Esta classe normalmente é usada para aplicar estilos 
+            específicos definidos no CSS, como dimensionamento, 
+            margens, paddings, etc. -->
+
+      <h1>Exercício Jogo de Anagrama</h1>
+      <!-- O elemento <h1> define um cabeçalho de nível 1, o 
+                mais importante dos cabeçalhos HTML. 
+          Neste caso, ele é usado para dar título à página 
+                ou seção, 'Jogo de Anagrama'. -->
+
+      <div id="pontuacao">Pontuação: 0</div>
+      <!-- A tag <div> cria um contêiner genérico com o ID 'pontuacao', 
+                utilizado para exibir a pontuação do usuário no jogo.
+          O ID é único e pode ser usado para manipulação ou 
+                estilização específica no CSS e JavaScript. -->
+
+      <div id="palavra"></div>
+      <!-- Outro <div> com o ID 'palavra' serve como local 
+                para mostrar a palavra atual que o usuário 
+                precisa adivinhar no jogo.
+          Inicialmente, está vazio e será preenchido 
+                dinamicamente via JavaScript. -->
+
+      <div id="resultado"></div>
+      <!-- Esta <div> com o ID 'resultado' é usada para 
+                mostrar o resultado das ações do usuário, 
+                como acertos ou erros nas tentativas. 
+          O conteúdo é gerado e atualizado dinamicamente 
+                via JavaScript. -->
+
+      <div id="teclado-virtual"></div>
+      <!-- <div> com o ID 'teclado-virtual' age como um 
+                contêiner para o teclado virtual que será 
+                gerado dinamicamente através de JavaScript.
+          Este teclado é usado para inserir respostas no jogo. -->
+
+      <button id="btn-verificar" onclick="verificarTentativa()">Verificar</button>
+      <!-- O elemento <button> cria um botão com o ID 'btn-verificar'. 
+                O atributo 'onclick' está configurado para chamar a 
+                função JavaScript 'verificarTentativa()' 
+                quando o botão é clicado. Este botão é usado para 
+                submeter a resposta do usuário para verificação. -->
+
+      <button id="btn-dica" onclick="mostrarDica()">Dica</button>
+      <!-- Similar ao botão acima, este <button> com ID 'btn-dica' 
+                possui um manipulador de eventos 'onclick' que 
+                ativa a função 'mostrarDica()'.
+        Este botão é utilizado para fornecer uma dica ao usuário. -->
+
+  </div>
+  <!-- Fecha a tag <div> que começou com a classe 'container', 
+                encapsulando todos os elementos acima como parte de 
+                um único agrupamento lógico de conteúdo. -->
+
+
+  <!-- Modal Dica -->
+  <!-- Comentário descrevendo o propósito do próximo bloco de 
+                código, indicando que este é um modal para a 'Dica'. -->
+
+  <div id="modal-dica" class="modal">
+  <!-- Início de uma <div> que define um contêiner para o modal da 
+                dica, usando o ID 'modal-dica' para identificação 
+                única e a classe 'modal' para aplicar estilos 
+                específicos definidos no CSS. -->
+
+    <div class="modal-content">
+    <!-- Uma <div> interna com a classe 'modal-content', que é 
+                usada para encapsular e estilizar o conteúdo do 
+                modal, como o fundo, margens, padding, etc. -->
+
+      <span class="close" onclick="fecharModal('modal-dica')">&times;</span>
+      <!-- Elemento <span> com a classe 'close', contendo um 
+                caractere de multiplicação (&times;) que funciona 
+                como um botão de fechar.
+          O atributo 'onclick' chama a função JavaScript 'fecharModal()' 
+                com o ID deste modal como argumento, permitindo que o 
+                modal seja fechado dinamicamente. -->
+
+      <p id="dica-palavra"></p>
+      <!-- Uma tag <p> (parágrafo) com o ID 'dica-palavra', que 
+                será usada para exibir a palavra ou dica no modal. 
+                Inicialmente está vazio e seu conteúdo será inserido 
+                dinamicamente via JavaScript. -->
+
+    </div>
+    <!-- Fim da <div> com classe 'modal-content'. -->
+
+  </div>
+  <!-- Fim da <div> do modal 'modal-dica'. -->
+
+  <!-- Modal Erro -->
+  <!-- Comentário descrevendo o propósito do próximo bloco de 
+            código, indicando que este é um modal para 'Erro'. -->
+
+  <div id="modal-erro" class="modal">
+  <!-- Início de uma <div> que define um contêiner para o modal 
+            de erro, usando o ID 'modal-erro' para identificação 
+            única e a classe 'modal' para aplicar estilos 
+            específicos definidos no CSS. -->
+
+    <div class="modal-content">
+    <!-- Uma <div> interna com a classe 'modal-content', que é 
+            usada para encapsular e estilizar o conteúdo do modal. -->
+
+      <span class="close" onclick="fecharModal('modal-erro')">&times;</span>
+      <!-- Elemento <span> com a classe 'close', contendo um 
+                caractere de multiplicação (&times;) que 
+                funciona como um botão de fechar.
+          O atributo 'onclick' chama a função JavaScript 'fecharModal()' 
+                com o ID deste modal como argumento, permitindo que o 
+                modal seja fechado dinamicamente. -->
+
+      <p>Tente novamente.</p>
+      <!-- Tag <p> (parágrafo) contendo a mensagem 'Tente novamente.', 
+                que é exibida quando o usuário comete um erro no jogo. -->
+
+    </div>
+    <!-- Fim da <div> com classe 'modal-content'. -->
+
+  </div>
+  <!-- Fim da <div> do modal 'modal-erro'. -->
+
+  <script src="script.js"></script>
+  <!-- A tag <script> com o atributo 'src' que aponta 
+            para 'script.js'. Este script contém o JavaScript 
+            necessário para o funcionamento das funcionalidades 
+            interativas da página, incluindo a lógica do jogo e o 
+            controle dos modais. -->
+
+</body>
+<!-- Fim do elemento <body>, que contém todos os 
+            elementos visíveis da página. -->
+
+</html>
+<!-- Fim do documento HTML. -->
