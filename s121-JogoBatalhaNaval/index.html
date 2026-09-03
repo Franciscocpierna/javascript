@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- Especifica que este documento é HTML5, ajudando o 
+            navegador a entender como processar o 
+            conteúdo corretamente. -->
+
+<html lang="pt-BR">
+<!-- Abre a tag HTML definindo o idioma do documento 
+            como Português do Brasil, que influencia como alguns 
+            elementos serão tratados pelo navegador. -->
+
+<head>
+<!-- Início da seção head, que contém metadados (dados sobre 
+            dados) e links para scripts ou folhas de estilo. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres usado no documento 
+                para UTF-8, que inclui quase todos os caracteres de 
+                todos os idiomas humanos, garantindo a correta 
+                exibição dos textos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a viewport (área de visualização) do documento para se 
+                adaptar ao dispositivo. 'width=device-width' faz a largura 
+                da página igual à largura do dispositivo. 'initial-scale=1.0' 
+                define o zoom inicial quando a página é carregada. -->
+
+    <title>Exercício Batalha Naval</title>
+    <!-- Define o título da página, que é exibido na aba do navegador. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Inclui uma folha de estilos externa chamada 'styles.css', 
+                que contém as regras de estilo para o layout e 
+                design da página. -->
+
+</head>
+<!-- Fim da seção head. -->
+
+
+<body>
+<!-- Início do corpo do documento HTML, onde todo o 
+            conteúdo visível da página é inserido. -->
+
+    <h1>Exercício Batalha Naval</h1>
+    <!-- Título principal da página, exibido na parte 
+                superior do conteúdo da página. -->
+
+    <div id="informacoes-jogo">
+    <!-- Divisão ou seção para agrupar as informações do 
+                jogo. O id é um identificador único que pode ser 
+                usado para referenciar ou estilizar este elemento 
+                específico com CSS ou JavaScript. -->
+
+        <div>Vidas: <span id="vidas">15</span></div>
+        <!-- Exibe o número de vidas do jogador. A tag <span> é 
+                    usada aqui para isolar o número de vidas para 
+                    manipulação ou estilização específica. -->
+
+        <div>Pontuação: <span id="pontuacao">0</span></div>
+        <!-- Similar à linha acima, mas para exibir a pontuação do jogador. -->
+
+    </div>
+    <!-- Fim da divisão de informações do jogo. -->
+
+    <div id="container-jogo">
+    <!-- Divisão que serve como container principal para o jogo, 
+                ajudando na organização e estilização do layout do jogo. -->
+
+        <div id="tabuleiro-inimigo" class="tabuleiro"></div>
+        <!-- Elemento que representa o tabuleiro do inimigo 
+                    no jogo. 'class=tabuleiro' é usada para aplicar 
+                    estilos específicos a todos os elementos que 
+                    compartilham esta classe. -->
+
+    </div>
+    <!-- Fim do container do jogo. -->
+
+    <button id="mostrar-navais-btn">Mostrar Navios</button>
+    <!-- Botão que quando clicado pode mostrar a posição dos 
+                navios. 'id' é usado para referência única 
+                em CSS ou JavaScript. -->
+
+    <!-- Início do modal para mostrar navios -->
+    <div id="modal" class="modal">
+    <!-- 'modal' é uma janela que pode ser aberta sobre o 
+                conteúdo principal da página. É usado para fornecer 
+                informações adicionais ou interações sem sair da página atual. -->
+
+        <div class="modal-content">
+        <!-- Container que mantém o conteúdo dentro do modal. -->
+
+            <span class="close">&times;</span>
+            <!-- Botão de fechar o modal, com um símbolo '×'. A 
+                    classe 'close' é usada para estilização específica. -->
+
+            <h2>Posição dos Navios</h2>
+            <!-- Título dentro do modal indicando o que será 
+                    exibido (posições dos navios). -->
+
+            <div id="tabuleiro-modal" class="tabuleiro"></div>
+            <!-- Elemento para exibir um tabuleiro no modal, similar ao 
+                        tabuleiro do inimigo mas com 
+                        informações diferentes. -->
+
+        </div>
+    </div>
+    <!-- Fim do modal para mostrar navios. -->
+
+    <!-- Início do modal para reiniciar o jogo -->
+    <div id="modal-reiniciar" class="modal">
+    <!-- Outro modal, usado para oferecer a opção de 
+                reiniciar o jogo. Funciona de forma semelhante 
+                ao modal anterior. -->
+
+        <div class="modal-content">
+        <!-- Container do conteúdo do modal. -->
+
+            <h2 id="mensagem-final"></h2>
+            <!-- Local para exibir a mensagem final, como 'Você venceu' 
+                        ou 'Você perdeu'. -->
+
+            <button id="reiniciar-jogo-btn">Reiniciar Jogo</button>
+            <!-- Botão para reiniciar o jogo. 'id' é usado para 
+                        referência única em JavaScript. -->
+
+        </div>
+    </div>
+    <!-- Fim do modal para reiniciar o jogo. -->
+
+    <script src="script.js"></script>
+    <!-- Link para o arquivo JavaScript externo que 
+            contém a lógica do jogo. -->
+
+</body>
+<!-- Fim do corpo do documento HTML. -->
+
+</html>
+<!-- Fim do documento HTML. -->

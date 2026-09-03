@@ -1,0 +1,351 @@
+body {
+
+    display: flex;
+    /* Define o modelo de layout deste elemento como 
+            flexível, o que permite que você organize 
+            seus filhos (elementos dentro de body) de 
+            maneira mais controlada. */
+
+    flex-direction: column;
+    /* Direciona os elementos filhos do body a se 
+            organizarem em uma coluna (um acima do outro). */
+
+    align-items: center;
+    /* Centraliza os elementos filhos na direção 
+            transversal (neste caso, horizontalmente, já que a 
+            direção principal é a coluna). */
+
+    font-family: Arial, sans-serif;
+    /* Define a família da fonte que será usada para o 
+            texto dentro do body. 'Arial' é a fonte primária, 
+            e 'sans-serif' é a fonte secundária caso 'Arial' 
+            não esteja disponível. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo do body como um cinza 
+            claro (#f0f0f0). */
+
+    margin: 0;
+    /* Define a margem externa do body como 0, removendo 
+            qualquer espaço entre o body e os limites da página. */
+
+    padding: 0;
+    /* Define o preenchimento interno do body como 0, assegurando 
+            que não haja espaço entre as bordas do body e seus 
+            elementos filhos. */
+
+}
+
+h1 {
+
+    margin-top: 20px;
+    /* Aplica uma margem de 20px no topo do elemento h1, 
+            criando espaço entre este e qualquer elemento 
+            acima dele. */
+
+    color: #333;
+    /* Define a cor do texto do elemento h1 para um cinza 
+            escuro (#333), facilitando a leitura. */
+
+}
+
+#informacoes-jogo {
+
+    display: flex;
+    /* Configura o elemento com id 'informacoes-jogo' para 
+            utilizar Flexbox, um método de layout que facilita o 
+            alinhamento de elementos filhos. */
+
+    flex-direction: column;
+    /* Os elementos filhos são organizados em 
+            coluna (um abaixo do outro). */
+
+    align-items: center;
+    /* Centraliza os elementos filhos horizontalmente 
+            dentro do contêiner. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20px abaixo do 
+            elemento 'informacoes-jogo' para separá-lo dos 
+            elementos que estão abaixo. */
+
+}
+
+#informacoes-jogo div {
+
+    margin: 5px 0;
+    /* Aplica uma margem de 5px acima e abaixo de 
+            cada div dentro de 'informacoes-jogo', ajudando a 
+            separar visualmente os divs entre si. */
+
+}
+
+#container-jogo {
+
+    display: flex;
+    /* Utiliza Flexbox para organizar os 
+            elementos filhos de 'container-jogo'. */
+
+    justify-content: center;
+    /* Centraliza os elementos filhos horizontalmente 
+            dentro de 'container-jogo'. */
+
+    gap: 20px;
+    /* Cria um espaço de 20px entre cada elemento filho 
+            dentro de 'container-jogo'. */
+
+}
+
+.tabuleiro {
+
+    display: grid;
+    /* Configura os elementos com classe 'tabuleiro' para 
+            usar o layout de grade, permitindo um 
+            alinhamento mais preciso e flexível dos itens. */
+
+    grid-template-columns: repeat(15, 30px);
+    /* Define 15 colunas no tabuleiro, cada uma 
+            com 30px de largura. */
+
+    grid-template-rows: repeat(15, 30px);
+    /* Define 15 linhas no tabuleiro, cada uma com 30px de altura. */
+
+    gap: 2px;
+    /* Define um espaço de 2px entre cada 
+            célula da grade. */
+
+    border: 2px solid #333;
+    /* Adiciona uma borda sólida de 2px de espessura e 
+            cor cinza escuro (#333) ao redor do tabuleiro. */
+
+    background-color: #e0e0e0;
+    /* Define a cor de fundo do tabuleiro como cinza claro (#e0e0e0). */
+
+}
+
+.celula {
+
+    width: 30px;
+    /* Define a largura de cada célula do 
+            tabuleiro como 30 pixels. */
+
+    height: 30px;
+    /* Define a altura de cada célula do tabuleiro 
+            como 30 pixels, tornando-a quadrada. */
+
+    background-color: #add8e6;
+    /* Define a cor de fundo inicial de cada célula 
+            como um azul claro (#add8e6). */
+
+    display: flex;
+    /* Ativa o Flexbox para esta célula, que é 
+            útil para alinhar conteúdo interno, se necessário. */
+
+    align-items: center;
+    /* Centraliza verticalmente qualquer conteúdo 
+            dentro da célula. */
+
+    justify-content: center;
+    /* Centraliza horizontalmente qualquer conteúdo 
+            dentro da célula. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário 
+            passa o mouse sobre a célula, indicando 
+            que é clicável. */
+
+}
+
+.celula.acerto {
+
+    background-color: #ff0000;
+    /* Muda a cor de fundo da célula para vermelho (#ff0000) 
+            quando um acerto é registrado. */
+
+}
+
+.celula.erro {
+
+    background-color: #ffffff;
+    /* Muda a cor de fundo da célula para branco (#ffffff) 
+            quando um tiro erra todos os navios, 
+            indicando um erro. */
+
+}
+
+.celula.navio {
+
+    background-color: #0000ff;
+    /* Muda a cor de fundo da célula para azul (#0000ff) 
+            para indicar que há um navio posicionado 
+            naquela célula. */
+
+}
+
+
+.modal {
+
+    display: none;
+    /* Inicialmente esconde o modal, que só aparecerá 
+            através de uma ação específica no JavaScript. */
+
+    position: fixed;
+    /* Posiciona o modal em relação à janela do navegador, e 
+            não ao conteúdo rolável. */
+
+    z-index: 1;
+    /* Define a pilha de ordem do elemento. Um valor 
+            mais alto está na frente de um valor mais 
+            baixo. Aqui, garante que o modal apareça 
+            sobre outros conteúdos. */
+
+    left: 0;
+    /* Posiciona o lado esquerdo do modal no lado 
+            esquerdo da janela do navegador. */
+
+    top: 0;
+    /* Posiciona o topo do modal no topo da 
+            janela do navegador. */
+
+    width: 100%;
+    /* Faz o modal esticar-se para cobrir toda a 
+            largura da janela do navegador. */
+
+    height: 100%;
+    /* Faz o modal esticar-se para cobrir toda a 
+            altura da janela do navegador. */
+
+    overflow: auto;
+    /* Permite rolagem dentro do modal se o 
+            conteúdo exceder o tamanho do mesmo. */
+
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Define a cor de fundo do modal para preto 
+            com uma opacidade de 40%, criando um 
+            efeito de sobreposição escura. */
+
+    display: flex;
+    /* Utiliza Flexbox para alinhar elementos 
+            filhos do modal. Isso é redeclarado para 
+            assegurar que o layout flex seja aplicado 
+            após outras propriedades. */
+
+    justify-content: center;
+    /* Centraliza os elementos filhos do modal 
+            horizontalmente. */
+            
+    align-items: center;
+    /* Centraliza os elementos filhos do modal 
+            verticalmente. */
+
+}
+
+.modal-content {
+
+    background-color: #fefefe;
+    /* Define a cor de fundo do conteúdo do modal 
+            como branco quase puro. */
+
+    margin: auto;
+    /* Centraliza o modal-content na página tanto 
+            vertical quanto horizontalmente. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno de 20px em 
+            todas as direções dentro do modal-content, 
+            dando espaço entre o conteúdo e as bordas do modal. */
+
+    border: 1px solid #888;
+    /* Adiciona uma borda sólida de 1px em volta do 
+            conteúdo do modal, com a cor cinza. */
+
+    width: fit-content;
+    /* Define a largura do modal-content para se 
+            ajustar ao conteúdo que ele contém. */
+
+    max-width: 80%;
+    /* Limita a largura máxima do modal-content a 80% da 
+            largura do seu contêiner pai. */
+
+    text-align: center;
+    /* Alinha o texto dentro do modal-content ao centro. */
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Aplica uma sombra ao redor do modal-content para um 
+            efeito visual elevado. A sombra se espalha de forma 
+            sutil para dar uma sensação de profundidade. */
+
+}
+
+
+.close {
+
+    color: #aaa;
+    /* Define a cor do texto do botão de fechar como 
+            cinza claro (#aaa). */
+
+    float: right;
+    /* Posiciona o botão de fechar à direita do seu 
+            contêiner pai, fazendo-o flutuar para esse lado. */
+
+    font-size: 28px;
+    /* Define o tamanho da fonte do botão de fechar 
+            para 28 pixels, tornando-o mais visível e acessível. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte em negrito ao texto do 
+            botão de fechar, destacando-o ainda mais. */
+
+}
+
+.close:hover,
+.close:focus {
+
+    color: black;
+    /* Muda a cor do texto para preto quando o botão de 
+            fechar é focado ou quando o mouse passa sobre 
+            ele, aumentando a visibilidade. */
+
+    text-decoration: none;
+    /* Remove qualquer decoração de texto, como sublinhado, 
+            que pode ser padrão em links ou botões quando 
+            em foco ou hover. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro, indicando que o 
+            elemento é clicável. */
+
+}
+
+.explosao {
+
+    /* Adicione a URL da imagem de explosão */
+    background-image: url('explosao.png'); 
+    /* Define a imagem de fundo para a classe '.explosao' 
+            como 'explosao.png', que deve ser uma imagem 
+            representando uma explosão. */
+
+    /* Faz com que a imagem de fundo cubra completamente o 
+            espaço do elemento, ajustando-se ao tamanho sem 
+            preservar sua proporção. */
+    background-size: cover;
+    
+    /* Aplica a animação chamada 'explodir' que dura 1 segundo, 
+            com um efeito de desaceleração ('ease-out') no final. */
+    animation: explodir 1s ease-out;
+    
+}
+
+@keyframes explodir {
+
+    /* Inicia a animação com a escala normal (1) e 
+            completamente opaca (opacity: 1). */
+    from { transform: scale(1); opacity: 1; }
+    
+    /* Termina a animação com a escala dobrada (2) e totalmente 
+            transparente (opacity: 0), criando um efeito de 
+            explosão que se expande e desaparece. */
+    to { transform: scale(2); opacity: 0; }
+    
+}
+
