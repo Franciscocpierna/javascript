@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- Define que o documento está usando HTML5 -->
+
+<html lang="pt-BR">
+<!-- Abre o elemento raiz do HTML e define a 
+            linguagem do conteúdo como Português 
+            do Brasil -->
+
+<head>
+<!-- Cabeçalho do documento HTML. Contém metadados e 
+            links para recursos externos, como 
+            arquivos de CSS -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres do 
+            documento como UTF-8, que suporta a 
+            maioria dos caracteres de todos os 
+            idiomas escritos -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a janela de visualização para 
+            garantir que a página tenha a largura 
+            correta em dispositivos móveis. 
+        'width=device-width' faz a largura da 
+            página ser igual à largura da tela do 
+            dispositivo. 
+        'initial-scale=1.0' define o nível inicial 
+            de zoom quando a página é carregada -->
+
+    <title>Termo</title>
+    <!-- Define o título da página, que aparece 
+            na aba do navegador -->
+
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Link para o arquivo de folha de estilos 
+            CSS externo chamado 'estilo.css'. Isso 
+            aplica estilos definidos nesse arquivo ao 
+            conteúdo HTML -->
+    
+</head>
+<!-- Fecha o cabeçalho do documento HTML -->
+
+
+<body>
+<!-- Início do corpo do documento HTML, onde todo o 
+            conteúdo visível é colocado -->
+
+    <div id="jogo">
+    <!-- Div principal do jogo, identificada 
+                pelo ID 'jogo' -->
+
+        <div id="titulo">TERMO</div>
+        <!-- Div para o título do jogo, com o texto 'TERMO' -->
+
+        <div id="instrucoes">
+        <!-- Div para as instruções do jogo -->
+
+            <p>Descubra a palavra certa em 6 tentativas. Depois de cada tentativa, as peças mostram o quão perto você está da solução.</p>
+            <!-- Parágrafo que explica as regras básicas do jogo -->
+
+        </div>
+
+        <div id="tabuleiro"></div>
+        <!-- Div que conterá o tabuleiro do jogo, 
+                    onde as palavras serão inseridas -->
+
+        <div id="teclado"></div>
+        <!-- Div que conterá o teclado virtual para o 
+                    jogador inserir letras -->
+
+        <div id="controles">
+        <!-- Div que agrupa os botões de controle do jogo -->
+
+            <button id="apagar">Apagar</button>
+            <!-- Botão para apagar a última letra inserida -->
+
+            <button id="enviar">Enviar</button>
+            <!-- Botão para enviar a tentativa atual -->
+
+            <button id="ver-palavra">Ver Palavra</button>
+            <!-- Botão para ver a palavra correta (
+                        uma dica ou solução) -->
+
+            <button id="dificuldade">Aumentar Dificuldade</button>
+            <!-- Botão para aumentar a dificuldade do jogo -->
+
+            <button id="regras">Regras</button>
+            <!-- Botão para visualizar as regras do jogo -->
+        </div>
+
+        <div id="mensagem" class="hidden">
+        <!-- Div para exibir mensagens ao jogador, oculta 
+                    inicialmente com a classe 'hidden' -->
+
+            <div id="modal">
+            <!-- Div para o conteúdo do modal de mensagem -->
+
+                <p>Parabéns! Você acertou a palavra!</p>
+                <!-- Parágrafo com a mensagem de parabéns 
+                            quando o jogador acerta a palavra -->
+
+                <button id="proxima-palavra">Próxima Palavra</button>
+                <!-- Botão para iniciar uma nova 
+                            palavra após acertar -->
+
+            </div>
+        </div>
+        <!-- Fim da div 'mensagem' -->
+   
+        <div id="fim-jogo" class="hidden">
+        <!-- Div para a mensagem de fim de jogo, com 
+                    o ID 'fim-jogo' e inicialmente 
+                    oculta pela classe 'hidden' -->
+        
+        <div id="modal-fim">
+            <!-- Div para o conteúdo do modal de fim de jogo -->
+            
+            <p>Fim de Jogo! Você usou todas as suas tentativas.</p>
+            <!-- Parágrafo com a mensagem informando ao 
+                        jogador que ele usou todas as tentativas -->
+            
+            <button id="tentar-novamente">Tentar Novamente</button>
+            <!-- Botão para o jogador tentar novamente 
+                        após o fim de jogo -->
+                        
+        </div>
+        <!-- Fim da div 'modal-fim' -->
+    </div>
+    <!-- Fim da div 'fim-jogo' -->
+
+    <div id="modal-regras" class="hidden">
+        <!-- Div para o modal das regras do jogo, com 
+                    o ID 'modal-regras' e inicialmente 
+                    oculta pela classe 'hidden' -->
+        
+        <div id="modal-conteudo">
+            <!-- Div para o conteúdo do modal das regras -->
+
+            <h2>Regras do Jogo</h2>
+            <!-- Cabeçalho para o título das regras do jogo -->
+
+            <p>Descubra a palavra certa em 6 tentativas. Depois de cada tentativa, as peças mostram o quão perto você está da solução:</p>
+            <!-- Parágrafo explicando as regras básicas do jogo -->
+
+            <ul>
+                <!-- Lista não ordenada para os detalhes das regras -->
+
+                <li><span class="correta exemplo">Verde</span>: Letra correta na posição correta.</li>
+                <!-- Item de lista explicando que a cor 
+                            verde indica que a letra está 
+                            correta e na posição correta -->
+
+                <li><span class="incerta exemplo">Amarelo</span>: Letra correta na posição errada.</li>
+                <!-- Item de lista explicando que a cor 
+                            amarela indica que a letra está 
+                            correta mas na posição errada -->
+
+                <li><span class="errada exemplo">Cinza</span>: Letra incorreta.</li>
+                <!-- Item de lista explicando que a cor cinza 
+                            indica que a letra está incorreta -->
+
+            </ul>
+            <!-- Fim da lista não ordenada -->
+
+            <button id="fechar-regras">Fechar</button>
+            <!-- Botão para fechar o modal das regras -->
+
+        </div>
+        <!-- Fim da div 'modal-conteudo' -->
+
+    </div>
+    <!-- Fim da div 'modal-regras' -->
+
+    <div id="pontuacao">
+        <!-- Div para exibir a pontuação do jogador, 
+                    com o ID 'pontuacao' -->
+
+        <p>Pontuação: <span id="pontos">0</span></p>
+        <!-- Parágrafo exibindo o texto 'Pontuação:' 
+                    seguido por um elemento 'span' que 
+                    mostrará a pontuação atual do jogador. 
+            O ID 'pontos' permite que o JavaScript atualize 
+                    esse valor dinamicamente -->
+
+    </div>
+    <!-- Fim da div 'pontuacao' -->
+
+    <script src="script.js"></script>
+    <!-- Link para o arquivo de script JavaScript externo 
+                    chamado 'script.js'. Isso adiciona a 
+                    funcionalidade do jogo definida 
+                    nesse arquivo -->
+
+</body>
+</html>

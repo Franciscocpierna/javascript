@@ -1,0 +1,618 @@
+body {
+
+    display: flex;
+    /* Define o layout do corpo da página como flexível, 
+            permitindo a centralização dos elementos filhos */
+
+    justify-content: center;
+    /* Centraliza os elementos filhos
+             horizontalmente */
+
+    align-items: center;
+    /* Centraliza os elementos filhos verticalmente */
+
+    height: 100vh;
+    /* Define a altura do corpo da página para 
+            ocupar 100% da altura da janela do navegador */
+
+    background-color: #3a3a3c;
+    /* Define a cor de fundo do corpo da página 
+            como cinza escuro */
+
+    margin: 0;
+    /* Remove a margem padrão do corpo da página */
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte do texto como Arial, ou 
+            sans-serif como alternativa */
+
+    color: white;
+    /* Define a cor do texto como branco */
+
+}
+
+#jogo {
+
+    display: flex;
+    /* Define o layout do contêiner 'jogo' 
+            como flexível */
+
+    flex-direction: column;
+    /* Alinha os elementos filhos em uma 
+            coluna (de cima para baixo) */
+
+    align-items: center;
+    /* Centraliza os elementos filhos horizontalmente 
+            dentro do contêiner */
+
+    background-color: #6a6a6d;
+    /* Define a cor de fundo do contêiner 'jogo' 
+            como cinza médio */
+
+    padding: 20px;
+    /* Adiciona um preenchimento de 20 pixels ao 
+            redor do conteúdo interno do contêiner */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do contêiner com um 
+            raio de 10 pixels */
+
+    width: 90%;
+    /* Define a largura do contêiner para 90% da 
+            largura da janela do navegador */
+
+    max-width: 900px;
+    /* Define a largura máxima do contêiner como 900 
+            pixels, para que ele não fique muito 
+            largo em telas maiores */
+
+}
+
+#titulo {
+    /* Estilo para o elemento com id 'titulo', que é 
+            o título do jogo */
+    
+    font-size: 36px;
+    /* Define o tamanho da fonte como 36 pixels, 
+            fazendo o texto do título grande e 
+            destacado */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels abaixo 
+            do título, separando-o do conteúdo abaixo */
+
+}
+
+#instrucoes {
+    /* Estilo para o elemento com id 'instrucoes', 
+            que contém as instruções do jogo */
+    
+    font-size: 14px;
+    /* Define o tamanho da fonte como 14 pixels, 
+            tornando o texto das instruções menor e 
+            fácil de ler */
+
+    text-align: center;
+    /* Centraliza o texto horizontalmente 
+            dentro do elemento */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels abaixo 
+            das instruções, separando-as do 
+            conteúdo abaixo */
+
+}
+
+#tabuleiro {
+    /* Estilo para o elemento com id 'tabuleiro', 
+            que contém a grade do jogo */
+
+    display: grid;
+    /* Define o layout do elemento como um grid, 
+            permitindo a criação de uma grade de células */
+
+    grid-template-columns: repeat(5, 1fr);
+    /* Define que a grade terá 5 colunas, cada uma 
+            ocupando uma fração igual do espaço disponível */
+
+    gap: 5px;
+    /* Define um espaço de 5 pixels entre cada 
+            célula da grade */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels abaixo do 
+            tabuleiro, separando-o do conteúdo abaixo */
+
+}
+
+.letra {
+    /* Estilo para os elementos com a classe 'letra', 
+            que representam cada célula do tabuleiro */
+
+    width: 60px;
+    /* Define a largura de cada célula como 60 pixels */
+
+    height: 60px;
+    /* Define a altura de cada célula como 60 pixels */
+
+    display: flex;
+    /* Define o layout da célula como flexível, 
+            permitindo centralizar o conteúdo */
+
+    justify-content: center;
+    /* Centraliza o conteúdo da célula horizontalmente */
+
+    align-items: center;
+    /* Centraliza o conteúdo da célula verticalmente */
+
+    background-color: #818384;
+    /* Define a cor de fundo da célula como um 
+            cinza médio (#818384) */
+
+    color: white;
+    /* Define a cor do texto dentro da célula 
+            como branco, para contraste com o fundo */
+
+    font-size: 32px;
+    /* Define o tamanho da fonte do texto dentro da 
+            célula como 32 pixels, tornando-o 
+            grande e legível */
+
+    font-weight: bold;
+    /* Define o peso da fonte como negrito, 
+            fazendo o texto parecer mais forte e 
+            destacado */
+
+    border-radius: 5px;
+    /* Arredonda os cantos da célula com um raio 
+            de 5 pixels, suavizando a aparência */
+
+}
+
+.letra.correta {
+    /* Estilo adicional para as células com a 
+            classe 'correta', indicando que a letra 
+            está correta e na posição correta */
+
+    background-color: #538d4e;
+    /* Muda a cor de fundo da célula para 
+            verde (#538d4e), indicando uma letra 
+            correta na posição correta */
+
+}
+
+.letra.incerta {
+    /* Estilo adicional para as células com a 
+            classe 'incerta', indicando que a 
+            letra está correta mas na posição errada */
+
+    background-color: #b59f3b;
+    /* Muda a cor de fundo da célula para 
+            amarelo (#b59f3b), indicando uma letra 
+            correta na posição errada */
+
+}
+
+
+.letra.errada {
+    /* Estilo adicional para as células com a 
+            classe 'errada', indicando que a letra 
+            está incorreta */
+
+    background-color: #3a3a3c;
+    /* Define a cor de fundo da célula como um 
+            cinza escuro (#3a3a3c), indicando uma 
+            letra incorreta */
+
+}
+
+#teclado {
+    /* Estilo para o elemento com id 'teclado', que 
+            contém o teclado virtual do jogo */
+
+    display: grid;
+    /* Define o layout do elemento como um grid, 
+            permitindo a criação de uma grade de teclas */
+
+    grid-template-columns: repeat(10, 1fr);
+    /* Define que a grade terá 10 colunas, cada uma 
+            ocupando uma fração igual do espaço disponível */
+
+    gap: 5px;
+    /* Define um espaço de 5 pixels entre cada 
+            tecla do teclado */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels abaixo do 
+            teclado, separando-o do conteúdo abaixo */
+
+}
+
+.tecla {
+    /* Estilo para os elementos com a classe 'tecla', 
+            que representam cada tecla do teclado virtual */
+
+    width: 40px;
+    /* Define a largura de cada tecla como 40 pixels */
+
+    height: 40px;
+    /* Define a altura de cada tecla como 40 pixels */
+
+    display: flex;
+    /* Define o layout da tecla como flexível, 
+            permitindo centralizar o conteúdo */
+
+    justify-content: center;
+    /* Centraliza o conteúdo da tecla horizontalmente */
+
+    align-items: center;
+    /* Centraliza o conteúdo da tecla verticalmente */
+
+    background-color: #818384;
+    /* Define a cor de fundo da tecla como um 
+            cinza médio (#818384) */
+
+    color: white;
+    /* Define a cor do texto dentro da tecla como 
+            branco, para contraste com o fundo */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte do texto dentro da 
+            tecla como 18 pixels, tornando-o legível */
+
+    font-weight: bold;
+    /* Define o peso da fonte como negrito, fazendo o 
+            texto parecer mais forte e destacado */
+
+    border-radius: 5px;
+    /* Arredonda os cantos da tecla com um raio 
+            de 5 pixels, suavizando a aparência */
+
+    cursor: pointer;
+    /* Muda o cursor para uma mãozinha (pointer) ao 
+            passar sobre a tecla, indicando que é clicável */
+
+}
+
+.tecla.correta {
+    /* Estilo adicional para as teclas com a classe 'correta', 
+            indicando que a letra está correta e na 
+            posição correta */
+
+    background-color: #538d4e;
+    /* Muda a cor de fundo da tecla para verde (#538d4e), 
+            indicando uma letra correta na posição correta */
+
+}
+
+
+.tecla.incerta {
+    /* Estilo adicional para as teclas com a 
+            classe 'incerta', indicando que a letra 
+            está correta mas na posição errada */
+
+    background-color: #b59f3b;
+    /* Define a cor de fundo da tecla como 
+            amarelo (#b59f3b), indicando uma letra 
+            correta na posição errada */
+
+}
+
+.tecla.errada {
+    /* Estilo adicional para as teclas com a 
+            classe 'errada', indicando que a 
+            letra está incorreta */
+
+    background-color: #3a3a3c;
+    /* Define a cor de fundo da tecla como um 
+            cinza escuro (#3a3a3c), indicando 
+            uma letra incorreta */
+
+}
+
+#controles {
+    /* Estilo para o elemento com id 'controles', 
+            que contém os botões de controle do jogo */
+
+    display: flex;
+    /* Define o layout do elemento como flexível, 
+            permitindo a organização dos botões em linha */
+
+    justify-content: space-between;
+    /* Distribui os botões com espaços iguais 
+            entre eles */
+
+    width: 100%;
+    /* Define a largura do contêiner de controles 
+            como 100% da largura do elemento pai */
+
+    max-width: 600px;
+    /* Define a largura máxima do contêiner de 
+            controles como 600 pixels, evitando que 
+            fique muito largo em telas grandes */
+
+    margin-top: 20px;
+    /* Adiciona uma margem de 20 pixels acima dos 
+            controles, separando-os do conteúdo acima */
+
+}
+
+button {
+    /* Estilo para os elementos 'button', que 
+            são os botões de controle do jogo */
+
+    width: 100px;
+    /* Define a largura de cada botão como 100 pixels */
+
+    height: 40px;
+    /* Define a altura de cada botão como 40 pixels */
+
+    background-color: #818384;
+    /* Define a cor de fundo dos botões como um 
+            cinza médio (#818384) */
+
+    color: white;
+    /* Define a cor do texto dentro dos botões 
+            como branco, para contraste com o fundo */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte do texto dentro dos 
+            botões como 18 pixels, tornando-o legível */
+
+    font-weight: bold;
+    /* Define o peso da fonte como negrito, fazendo o 
+            texto parecer mais forte e destacado */
+
+    border: none;
+    /* Remove qualquer borda padrão dos botões */
+
+    border-radius: 5px;
+    /* Arredonda os cantos dos botões com um raio 
+            de 5 pixels, suavizando a aparência */
+
+    cursor: pointer;
+    /* Muda o cursor para uma mãozinha (pointer) ao 
+            passar sobre o botão, indicando que é clicável */
+
+}
+
+button:active {
+    /* Estilo para os botões quando estão 
+            sendo clicados */
+
+    background-color: #595957;
+    /* Muda a cor de fundo dos botões para um 
+            cinza mais escuro (#575759) enquanto são 
+            clicados, fornecendo feedback visual ao usuário */
+
+}
+
+#mensagem, #fim-jogo, #modal-regras {
+    /* Estilos aplicados aos elementos com 
+            id 'mensagem', 'fim-jogo' e 'modal-regras' */
+
+    position: fixed;
+    /* Define a posição dos elementos como fixa em 
+            relação à janela do navegador, permanecendo 
+            no mesmo lugar mesmo ao rolar a página */
+
+    top: 0;
+    /* Posiciona o elemento no topo da 
+            janela do navegador */
+
+    left: 0;
+    /* Posiciona o elemento na extremidade 
+            esquerda da janela do navegador */
+
+    width: 100%;
+    /* Define a largura do elemento para 
+            ocupar 100% da largura da janela do navegador */
+
+    height: 100%;
+    /* Define a altura do elemento para ocupar 100% 
+            da altura da janela do navegador */
+
+    display: flex;
+    /* Define o layout do elemento como flexível, 
+            permitindo a centralização dos 
+            elementos filhos */
+
+    justify-content: center;
+    /* Centraliza os elementos filhos horizontalmente */
+
+    align-items: center;
+    /* Centraliza os elementos filhos verticalmente */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Define a cor de fundo como preto com 50% de 
+            opacidade, criando um efeito de 
+            sobreposição escura */
+
+}
+
+#mensagem.hidden, #fim-jogo.hidden, #modal-regras.hidden {
+    /* Estilos aplicados aos elementos 'mensagem', 'fim-jogo' 
+            e 'modal-regras' quando possuem a classe 'hidden' */
+
+    display: none;
+    /* Oculta o elemento, removendo-o do fluxo de 
+            layout e não o exibindo na página */
+
+}
+
+#modal, #modal-fim, #modal-conteudo {
+    /* Estilos aplicados aos elementos com 
+            id 'modal', 'modal-fim' e 'modal-conteudo' */
+
+    background-color: #6a6a6d;
+    /* Define a cor de fundo dos elementos como 
+            um cinza médio (#6a6a6d) */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno de 20 
+            pixels ao redor do conteúdo do elemento */
+
+    border-radius: 10px;
+    /* Arredonda os cantos dos elementos com um 
+            raio de 10 pixels, suavizando a aparência */
+
+    text-align: center;
+    /* Centraliza o texto dentro do elemento */
+
+}
+
+#pontuacao {
+    /* Estilo para o elemento com id 'pontuacao', que 
+            exibe a pontuação do jogador */
+
+    margin-top: 20px;
+    /* Adiciona uma margem de 20 pixels acima do 
+            elemento, separando-o do conteúdo acima */
+
+    font-size: 18px;
+    /* Define o tamanho da fonte do texto dentro do 
+            elemento como 18 pixels, tornando-o legível */
+
+}
+
+
+#modal-conteudo h2 {
+    /* Estilo para os elementos <h2> dentro do 
+            elemento com id 'modal-conteudo' */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte como 24 pixels, 
+            tornando o título grande e destacado */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels abaixo do 
+            título, separando-o do conteúdo abaixo */
+
+}
+
+#modal-conteudo p {
+    /* Estilo para os elementos <p> (parágrafos) 
+            dentro do elemento com id 'modal-conteudo' */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte como 16 pixels, 
+            tornando o texto legível */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels abaixo do 
+            parágrafo, separando-o do conteúdo abaixo */
+
+}
+
+#modal-conteudo ul {
+    /* Estilo para os elementos <ul> (listas não 
+            ordenadas) dentro do elemento com 
+            id 'modal-conteudo' */
+
+    list-style-type: none;
+    /* Remove os marcadores padrão da lista (bolinhas, 
+            números, etc.) */
+
+    padding: 0;
+    /* Remove o preenchimento interno padrão da lista */
+}
+
+#modal-conteudo ul li {
+    /* Estilo para os elementos <li> (itens de lista) 
+            dentro das listas não ordenadas no elemento 
+            com id 'modal-conteudo' */
+
+    margin-bottom: 10px;
+    /* Adiciona uma margem de 10 pixels abaixo de 
+            cada item da lista, separando-os do item abaixo */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte como 16 pixels, 
+            tornando o texto legível */
+
+}
+
+
+#modal-conteudo ul li span {
+    /* Estilo para os elementos <span> dentro dos 
+            itens de lista <li> em listas não 
+            ordenadas <ul> no elemento com id 
+            'modal-conteudo' */
+
+    display: inline-block;
+    /* Define o <span> como um bloco em linha, 
+            permitindo definir dimensões enquanto 
+            permanece na linha com o texto */
+
+    width: 60px;
+    /* Define a largura do <span> como 60 pixels */
+
+    height: 30px;
+    /* Define a altura do <span> como 30 pixels */
+
+    line-height: 30px;
+    /* Define a altura da linha como 30 pixels, 
+            centralizando verticalmente o texto 
+            dentro do <span> */
+
+    text-align: center;
+    /* Centraliza o texto horizontalmente dentro do <span> */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do <span> com um raio 
+            de 5 pixels, suavizando a aparência */
+
+    margin-right: 10px;
+    /* Adiciona uma margem de 10 pixels à direita 
+            do <span>, separando-o do texto adjacente */
+
+    font-weight: bold;
+    /* Define o peso da fonte como negrito, 
+            tornando o texto mais forte e destacado */
+
+}
+
+.exemplo {
+    /* Estilo para os elementos com a 
+            classe 'exemplo' */
+
+    color: white;
+    /* Define a cor do texto como branco */
+
+}
+
+.exemplo.correta {
+    /* Estilo adicional para os elementos com a 
+            classe 'correta' dentro dos elementos 
+            com a classe 'exemplo' */
+
+    background-color: #538d4e;
+    /* Define a cor de fundo como verde (#538d4e), 
+            indicando um exemplo de letra correta 
+            na posição correta */
+
+}
+
+.exemplo.incerta {
+    /* Estilo adicional para os elementos com a 
+            classe 'incerta' dentro dos elementos 
+            com a classe 'exemplo' */
+
+    background-color: #b59f3b;
+    /* Define a cor de fundo como amarelo (#b59f3b), 
+            indicando um exemplo de letra correta na 
+            posição errada */
+
+}
+
+.exemplo.errada {
+    /* Estilo adicional para os elementos com a 
+            classe 'errada' dentro dos elementos 
+            com a classe 'exemplo' */
+
+    background-color: #3a3a3c;
+    /* Define a cor de fundo como cinza
+             escuro (#3a3a3c), indicando um 
+             exemplo de letra incorreta */
+             
+}
