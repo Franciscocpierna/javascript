@@ -1,0 +1,492 @@
+/* styles.css */
+body {
+
+    font-family: 'Arial', sans-serif;
+    /* Define a família de fontes para o texto 
+            do corpo do documento. 'Arial' é a fonte 
+            primária e 'sans-serif' é a fonte de 
+            reserva caso 'Arial' não esteja disponível. */
+
+    background-color: #f0f0f0;
+    /* Configura a cor de fundo de todo o corpo do 
+            documento para um cinza claro (#f0f0f0). */
+
+    display: flex;
+    /* Estabelece um contexto de layout flexível para os 
+            elementos filhos diretos do body, permitindo 
+            que sejam dispostos de forma flexível. */
+
+    justify-content: center;
+    /* Alinha os elementos filhos horizontalmente 
+            ao centro do container body. */
+
+    align-items: center;
+    /* Alinha os elementos filhos verticalmente ao 
+            centro do container body. */
+
+    height: 100vh;
+    /* Define a altura do body para ser igual a 100% 
+            da altura da viewport, garantindo que o body 
+            ocupe toda a altura visível da tela do navegador. */
+
+    margin: 0;
+    /* Remove as margens padrão do body, garantindo que 
+            não haja espaço extra em torno dos elementos 
+            internos no início da página. */
+
+}
+
+.container {
+
+    text-align: center;
+    /* Alinha o texto dentro dos elementos com a 
+            classe 'container' ao centro. */
+
+    background-color: #ffffff;
+    /* Define a cor de fundo dos elementos com a 
+            classe 'container' para branco. */
+
+    padding: 20px;
+    /* Aplica um preenchimento interno de 20 pixels em 
+            todos os lados dos elementos com a 
+            classe 'container', aumentando o espaço 
+            entre o conteúdo interno e as bordas 
+            do container. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos dos elementos com a 
+            classe 'container', dando-lhes um raio 
+            de 10 pixels. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor dos elementos com a 
+            classe 'container'. A sombra é suave (10% de 
+            opacidade) e se espalha 10 pixels em todas 
+            as direções. */
+
+    width: 90%;
+    /* Define a largura dos elementos com a classe 'container' 
+            para ser 90% da largura do seu elemento pai, permitindo 
+            uma certa flexibilidade em diferentes tamanhos de tela. */
+
+    max-width: 600px;
+    /* Assegura que a largura dos elementos com a 
+            classe 'container' não exceda 600 pixels, mantendo a 
+            consistência do layout em telas maiores. */
+
+}
+
+
+h1 {
+
+    color: #333;
+    /* Define a cor do texto de todos os elementos <h1> 
+            para um cinza escuro (#333333), oferecendo boa 
+            legibilidade e um design sóbrio. */
+
+}
+
+.pontuacao {
+
+    font-size: 20px;
+    /* Ajusta o tamanho da fonte para 20 pixels nos 
+            elementos com a classe "pontuacao", tornando o 
+            texto suficientemente grande para fácil leitura. */
+
+    margin-bottom: 10px;
+    /* Aplica uma margem inferior de 10 pixels para separar 
+            visualmente a pontuação dos elementos que a seguem. */
+
+}
+
+.forca-container {
+
+    display: flex;
+    /* Estabelece um contexto de flexbox para o container do 
+            jogo da forca, permitindo um layout flexível dos 
+            itens internos. */
+
+    justify-content: center;
+    /* Centraliza horizontalmente os itens dentro 
+            do "forca-container", alinhando-os ao 
+            centro do container. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels para 
+            criar espaço entre o "forca-container" e 
+            outros elementos abaixo dele. */
+
+}
+
+#forca {
+
+    position: relative;
+    /* Define a posição do elemento com ID "forca" 
+            como relativa, o que permite que os elementos 
+            filhos posicionados absolutamente se alinhem 
+            em relação a ele. */
+
+    width: 200px;
+    /* Estabelece uma largura fixa de 200 pixels 
+            para o elemento "forca". */
+
+    height: 250px;
+    /* Estabelece uma altura fixa de 250 pixels para o 
+            elemento "forca", definindo o espaço suficiente 
+            para desenhar a forca e as partes do corpo. */
+
+}
+
+.parte {
+    
+    display: none;
+    /* Inicialmente oculta os elementos com a 
+            classe "parte", que representam as diferentes 
+            partes do corpo no jogo da forca. */
+
+    position: absolute;
+    /* Posiciona absolutamente as partes da forca, 
+            permitindo que sejam colocadas em locais 
+            específicos dentro do elemento "forca". */
+
+    background-color: black;
+    /* Define a cor de fundo das partes da forca como 
+            preto, destacando-as contra o fundo mais claro. */
+
+}
+
+#corda {
+
+    width: 2px;
+    /* Define a largura da corda para 2 pixels, 
+            criando uma linha fina e vertical. */
+
+    height: 40px;
+    /* Define a altura da corda para 40 pixels, 
+            suficiente para simular uma corda pendurada. */
+
+    top: 0;
+    /* Posiciona a parte superior da corda no 
+            topo do elemento "forca". */
+
+    left: 50%;
+    /* Posiciona a corda no centro horizontal do 
+            elemento "forca". */
+
+    transform: translateX(-50%);
+    /* Ajusta a posição horizontal da corda para que 
+            sua linha central fique exatamente no meio, 
+            corrigindo o posicionamento pelo deslocamento 
+            da própria largura. */
+
+    background-color: brown;
+    /* Define a cor da corda para marrom, simulando a 
+            cor de uma corda real. */
+
+}
+
+#cabeça {
+
+    width: 30px;
+    /* Define a largura da cabeça para 30 pixels. */
+
+    height: 30px;
+    /* Define a altura da cabeça para 30 pixels, 
+            criando uma forma circular perfeita quando 
+            combinada com a largura igual. */
+
+    border-radius: 50%;
+    /* Configura o raio da borda para 50%, o que 
+            transforma a div em um círculo completo. */
+
+    top: 40px;
+    /* Posiciona a cabeça 40 pixels abaixo do topo 
+            do elemento pai, que é a forca. */
+
+    left: 50%;
+    /* Posiciona a cabeça horizontalmente no 
+            centro do elemento pai. */
+
+    transform: translateX(-50%);
+    /* Ajusta a posição da cabeça movendo-a 50% para 
+            a esquerda de sua própria largura, 
+            centralizando-a perfeitamente. */
+
+}
+
+#corpo {
+
+    width: 10px;
+    /* Define a largura do corpo para 10 pixels, 
+            criando uma barra vertical estreita. */
+
+    height: 60px;
+    /* Define a altura do corpo para 60 pixels, 
+            estendendo-se verticalmente abaixo da cabeça. */
+
+    top: 70px;
+    /* Posiciona o corpo 70 pixels abaixo do topo 
+            do elemento pai, começando logo abaixo da cabeça. */
+
+    left: 50%;
+    /* Posiciona o corpo horizontalmente no 
+            centro do elemento pai. */
+
+    transform: translateX(-50%);
+    /* Ajusta a posição do corpo movendo-o 50% para 
+            a esquerda de sua própria largura, 
+            centralizando-o perfeitamente. */
+
+}
+
+#braçoEsquerdo {
+
+    width: 10px;
+    /* Define a largura do braço esquerdo para 10 pixels. */
+
+    height: 50px;
+    /* Define a altura do braço esquerdo para 50 pixels. */
+
+    top: 70px;
+    /* Posiciona o braço esquerdo 70 pixels abaixo do 
+            topo do elemento pai, no mesmo nível que o 
+            topo do corpo. */
+
+    left: calc(50% - 25px);
+    /* Posiciona o braço esquerdo para a esquerda do 
+            centro do corpo usando uma operação 
+            de cálculo. */
+
+    transform: rotate(-45deg);
+    /* Rotaciona o braço esquerdo 45 graus para 
+            cima, criando um ângulo ascendente 
+            para a esquerda. */
+
+}
+
+#braçoDireito {
+
+    width: 10px;
+    /* Define a largura do braço direito para 10 pixels. */
+
+    height: 50px;
+    /* Define a altura do braço direito para 50 pixels. */
+
+    top: 70px;
+    /* Posiciona o braço direito 70 pixels abaixo do 
+            topo do elemento pai, alinhado com o 
+            braço esquerdo. */
+
+    left: calc(50% + 15px);
+    /* Posiciona o braço direito para a direita do 
+            centro do corpo usando uma operação 
+            de cálculo. */
+
+    transform: rotate(45deg);
+    /* Rotaciona o braço direito 45 graus para 
+            cima, criando um ângulo ascendente 
+            para a direita. */
+
+}
+
+#pernaEsquerda {
+
+    width: 10px;
+    /* Define a largura da perna esquerda para 10 pixels. */
+
+    height: 50px;
+    /* Define a altura da perna esquerda para 50 pixels. */
+
+    top: 123px;
+    /* Posiciona a perna esquerda 123 pixels abaixo 
+            do topo do elemento pai, abaixo do corpo. */
+
+    left: calc(50% - 20px);
+    /* Posiciona a perna esquerda para a esquerda do 
+            centro do corpo usando uma operação 
+            de cálculo. */
+
+    transform: rotate(45deg);
+    /* Rotaciona a perna esquerda 45 graus para cima, 
+            criando um ângulo ascendente para a direita, 
+            oposto ao braço esquerdo. */
+
+}
+
+
+#pernaDireita {
+
+    width: 10px;
+    /* Define a largura da perna direita para 10 pixels, 
+            mantendo a consistência com as outras 
+            partes do corpo. */
+
+    height: 50px;
+    /* Define a altura da perna direita para 50 pixels, 
+            garantindo que seja longa o suficiente para ser 
+            visualmente equilibrada com o resto do corpo. */
+
+    top: 123px;
+    /* Posiciona a perna direita a 123 pixels do topo do 
+            elemento pai, alinhando-a verticalmente com a 
+            perna esquerda. */
+
+    left: calc(50% + 10px);
+    /* Posiciona a perna direita um pouco à direita do 
+            centro do corpo. O 'calc' é usado para 
+            adicionar 10 pixels ao deslocamento central, 
+            ajustando a posição horizontalmente. */
+
+    transform: rotate(-45deg);
+    /* Rotaciona a perna direita 45 graus para cima e 
+            para a esquerda, criando um ângulo que é 
+            simetricamente oposto ao da perna esquerda. */
+
+}
+
+
+#palavraSecreta {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte para 24 pixels, tornando as 
+            letras da palavra secreta grandes e fáceis de ler. */
+
+    letter-spacing: 15px;
+    /* Aumenta o espaçamento entre as letras da palavra secreta 
+            para 15 pixels, ajudando a separar visualmente cada 
+            caractere sublinhado ou revelado. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels, criando 
+            espaço entre a área da palavra secreta e qualquer 
+            conteúdo abaixo dela. */
+
+    font-weight: bold;
+    /* Deixa o texto da palavra secreta em negrito, 
+            destacando-o na interface do usuário. */
+
+}
+
+#alfabeto button {
+
+    margin: 5px;
+    /* Define uma margem em torno de cada botão do 
+            alfabeto para garantir que eles não fiquem 
+            muito próximos um do outro. */
+
+    padding: 10px;
+    /* Aplica um preenchimento interno de 10 pixels em 
+            cada botão, aumentando a área de clique e 
+            melhorando a usabilidade. */
+
+    background-color: #007BFF;
+    /* Define a cor de fundo dos botões para um azul 
+            brilhante (#007BFF), tornando-os visualmente 
+            atraentes e fáceis de identificar. */
+
+    color: white;
+    /* Define a cor do texto dentro dos botões para branco, 
+            garantindo um contraste alto com o fundo azul 
+            para legibilidade. */
+
+    border: none;
+    /* Remove qualquer borda padrão dos botões, contribuindo 
+            para um design mais limpo e moderno. */
+
+    border-radius: 5px;
+    /* Arredonda as bordas dos botões com um raio de 
+            5 pixels, suavizando sua aparência geral. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário 
+            passa o mouse sobre os botões, indicando 
+            que eles são interativos. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte dos botões para 16 
+            pixels, garantindo que o texto seja 
+            suficientemente grande para ser lido 
+            facilmente. */
+
+}
+
+
+#alfabeto button:disabled {
+
+    background-color: #ccc;
+    /* Define a cor de fundo dos botões do alfabeto que 
+            estão desabilitados para cinza claro (#ccc). 
+            Isso indica visualmente que o botão não está 
+            mais ativo ou interativo. */
+
+    cursor: not-allowed;
+    /* Muda o cursor para o ícone 'não permitido' quando o 
+            usuário passa o mouse sobre um botão desabilitado, 
+            reforçando que o botão não pode ser clicado ou 
+            utilizado. */
+            
+}
+
+.btn-reiniciar {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, 
+            separando o botão dos elementos acima 
+            dele no layout. */
+
+    padding: 10px 20px;
+    /* Define o preenchimento interno do botão, 
+            com 10 pixels na vertical e 20 pixels na 
+            horizontal, aumentando a área de clique e 
+            conforto visual. */
+
+    background-color: #28a745;
+    /* Estabelece a cor de fundo do botão para um 
+            verde vibrante (#28a745), tornando-o 
+            facilmente identificável como um botão 
+            de ação positiva ou de início. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para
+            branco, garantindo um contraste alto com o 
+            fundo verde para melhor legibilidade. */
+
+    border: none;
+    /* Remove qualquer borda padrão do botão, 
+            mantendo o design limpo e moderno. */
+
+    border-radius: 5px;
+    /* Arredonda as bordas do botão com um raio de 5 
+            pixels, suavizando a aparência geral e 
+            tornando o design mais amigável. */
+
+    cursor: pointer;
+    /* Altera o cursor para um ponteiro quando o 
+            usuário passa o mouse sobre o botão, 
+            indicando que é clicável. */
+
+    font-size: 16px;
+    /* Ajusta o tamanho da fonte para 16 pixels, 
+            fazendo com que o texto dentro do botão 
+            seja grande o suficiente para ser lido 
+            facilmente. */
+
+}
+
+#mensagemFinal {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte para 24 pixels, tornando o 
+            texto grande e proeminente, adequado para mensagens 
+            finais importantes. */
+
+    color: green;
+    /* Define a cor do texto para verde, geralmente associado a 
+            mensagens de sucesso ou conclusão positiva. */
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels, 
+            proporcionando espaço entre a mensagem final e 
+            quaisquer elementos acima dela. */
+            
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento (DOCTYPE), 
+        informando ao navegador que esta é 
+        uma página HTML5. -->
+
+<html lang="pt-br">
+<!-- Tag de abertura do HTML com o atributo 'lang', 
+        especificando que o idioma principal da 
+        página é o português do Brasil. -->
+
+<head>
+<!-- Tag que contém metadados (informações que 
+            descrevem a página) e links para scripts e 
+            folhas de estilo. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres UTF-8 para o 
+                documento HTML, suportando uma ampla gama 
+                de caracteres de vários idiomas. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a área visível da página web de acordo com o 
+                dispositivo usado para visualizá-la, assegurando 
+                responsividade. 'initial-scale=1.0' configura o 
+                zoom inicial quando a página é carregada pela 
+                primeira vez. -->
+
+    <title>Jogo da Forca</title>
+    <!-- Define o título da página, que é exibido na 
+                aba do navegador. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link para uma folha de estilos externa chamada 'styles.css', 
+                que contém as regras de estilização para a página. -->
+
+</head>
+<!-- Fecha a tag 'head', indicando o fim da seção de 
+            metadados e links. -->
+
+
+<body>
+<!-- Tag 'body' que contém todo o conteúdo visível 
+            da página. -->
+
+    <div class="container">
+    <!-- Um contêiner 'div' com a classe 'container' que 
+                serve como um bloco de construção para 
+                agrupar e estilizar conteúdos relacionados. -->
+
+        <h1>Jogo da Forca</h1>
+        <!-- Cabeçalho principal 'h1' que fornece o título ou o 
+                    tópico principal da página: 'Jogo da Forca'. -->
+
+        <div class="pontuacao">
+        <!-- Divisão com a classe 'pontuacao', usada para 
+                    exibir a pontuação do jogador. -->
+
+            <p>Pontuação: <span id="pontuacao">0</span></p>
+            <!-- Parágrafo que mostra a pontuação do jogador. 
+                        O valor inicial é mostrado dentro de um 'span' 
+                        com o ID 'pontuacao', que pode ser facilmente 
+                        acessado e atualizado por scripts. -->
+
+        </div>
+        <!-- Fecha a 'div' de pontuação. -->
+
+        <div class="forca-container">
+        <!-- 'div' com a classe 'forca-container', usada para 
+                    conter a representação visual do jogo 
+                    da forca. -->
+
+            <div id="forca">
+            <!-- 'div' com o ID 'forca', que atua como o espaço 
+                        principal onde as partes do corpo da 
+                        forca serão exibidas. -->
+
+                <div id="corda" class="parte"></div>
+                <!-- 'div' representando a corda no jogo da 
+                            forca, com a classe 'parte' para 
+                            aplicação de estilos específicos. -->
+
+                <div id="cabeça" class="parte"></div>
+                <!-- 'div' representando a cabeça na forca, 
+                            também com a classe 'parte'. -->
+
+                <div id="corpo" class="parte"></div>
+                <!-- 'div' para o corpo da forca. -->
+
+                <div id="braçoEsquerdo" class="parte"></div>
+                <!-- 'div' para o braço esquerdo da figura da forca. -->
+
+                <div id="braçoDireito" class="parte"></div>
+                <!-- 'div' para o braço direito da figura da forca. -->
+
+                <div id="pernaEsquerda" class="parte"></div>
+                <!-- 'div' para a perna esquerda da figura da forca. -->
+
+                <div id="pernaDireita" class="parte"></div>
+                <!-- 'div' para a perna direita da figura da forca. -->
+
+            </div>
+            <!-- Fecha a 'div' de forca. -->
+
+        </div>
+        <!-- Fecha a 'div' de forca-container. -->
+
+        <p>Adivinhe a palavra:</p>
+        <!-- Parágrafo que fornece instruções ao jogador 
+                    para adivinhar a palavra. -->
+
+        <div id="palavraSecreta"></div>
+        <!-- 'div' vazio com o ID 'palavraSecreta', destinado a 
+                    exibir as letras da palavra secreta à medida 
+                    que são adivinhadas ou inicialmente com 
+                    sublinhados. -->
+
+        <div id="letras">
+        <!-- 'div' com o ID 'letras', usado para conter e 
+                    organizar a área onde o jogador pode escolher 
+                    letras para adivinhar a palavra secreta. -->
+
+            <p>Escolha uma letra:</p>
+            <!-- Parágrafo que fornece instruções ao jogador 
+                        para escolher uma letra do alfabeto abaixo. -->
+
+            <div id="alfabeto"></div>
+            <!-- 'div' com o ID 'alfabeto', onde os botões ou 
+                        links representando cada letra do 
+                        alfabeto serão gerados dinamicamente 
+                        via JavaScript. -->
+
+        </div>
+        <!-- Fecha a 'div' de letras. -->
+
+        <button class="btn-reiniciar" onclick="resetGame()">Reiniciar Jogo</button>
+        <!-- Botão com a classe 'btn-reiniciar' que, quando 
+                    clicado, aciona a função 'resetGame()' 
+                    definida no JavaScript para reiniciar 
+                    o jogo. -->
+
+        <p id="mensagemFinal"></p>
+        <!-- Parágrafo com o ID 'mensagemFinal', usado para 
+                    exibir mensagens finais do jogo, como 
+                    "Você venceu!" ou "Você perdeu!". -->
+
+    </div>
+    <!-- Fecha a 'div' container que agrupa todos os 
+                elementos relacionados ao jogo. -->
+
+    <script src="script.js"></script>
+    <!-- Inclui o arquivo JavaScript 'script.js', que 
+                contém a lógica do jogo, manipulações do DOM e 
+                interações do usuário. -->
+
+</body>
+<!-- Fecha a tag 'body', que contém todo o 
+            conteúdo visível da página. -->
+
+</html>
+<!-- Fecha a tag 'html', que delimita o 
+            fim do documento HTML. -->
