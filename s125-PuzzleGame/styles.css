@@ -1,0 +1,537 @@
+/* styles.css */
+
+body {
+
+    display: flex;
+    /* Configura o layout do <body> para usar Flexbox, um 
+            método que oferece mais controle sobre o alinhamento e 
+            distribuição do espaço entre os itens em um container. */
+
+    flex-direction: column;
+    /* Define a direção principal do eixo flexível como 
+            vertical (de cima para baixo). */
+
+    align-items: center;
+    /* Centraliza os itens flexíveis horizontalmente dentro do 
+            container, ou seja, todos os itens dentro do <body> 
+            serão centralizados no meio da página. */
+
+    height: 100vh;
+    /* Define a altura do <body> para ser 100% do viewport 
+            height (altura da janela de visualização do navegador). 
+            Isso garante que o <body> ocupe toda a altura 
+            da tela visível. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo do <body> para um 
+            cinza claro. */
+
+    margin: 0;
+    /* Remove todas as margens externas do <body>, fazendo 
+            com que ele ocupe completamente a largura disponível. */
+
+    text-align: center;
+    /* Centraliza o texto de todos os elementos dentro do <body>, a 
+            menos que seja sobrescrito por configurações 
+            mais específicas. */
+
+    font-family: 'Arial', sans-serif;
+    /* Define a fonte dos textos para Arial, uma fonte sans-serif. 
+            Se Arial não estiver disponível, uma fonte sans-serif 
+            genérica será usada. */
+
+}
+
+h1 {
+
+    margin-top: 20px;
+    /* Adiciona uma margem de 20px no topo do elemento <h1>, 
+            criando um espaço entre o <h1> e qualquer 
+            conteúdo que esteja acima dele. */
+
+    font-size: 36px;
+    /* Define o tamanho da fonte do <h1> para 36 pixels, o 
+            que o torna mais destacado e legível como um 
+            título principal. */
+
+    color: #333;
+    /* Define a cor do texto do <h1> para um cinza escuro, o 
+            que proporciona um contraste suficiente com o 
+            fundo claro para uma leitura confortável. */
+
+}
+
+
+#interface {
+
+    margin: 20px 0;
+    /* Aplica uma margem vertical de 20px acima e abaixo do 
+            elemento com o id 'interface'. Isso separa 
+            visualmente a 'interface' dos elementos que 
+            estão acima e abaixo dela na página. */
+
+}
+
+#pontuacao {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte para 24 pixels. Esse 
+            tamanho é suficientemente grande para destacar o 
+            texto, facilitando a leitura rápida dos pontos 
+            pelo usuário. */
+
+    margin-bottom: 20px;
+    /* Aplica uma margem de 20 pixels abaixo do elemento #pontuacao, 
+            separando-o visualmente dos elementos que estão abaixo 
+            dele. Isso ajuda a organizar o layout e melhorar 
+            a clareza. */
+
+    color: #555;
+    /* Define a cor do texto para um cinza médio. Isso proporciona 
+            um contraste suave com o fundo, adequado para leitura 
+            sem causar desconforto visual excessivo. */
+
+}
+
+#controles {
+
+    display: flex;
+    /* Estabelece um contexto Flexbox para o container #controles, o 
+            que permite um layout mais flexível e responsivo para os 
+            elementos internos, como labels, selects e buttons. */
+
+    align-items: center;
+    /* Alinha verticalmente os itens no centro. Isso é útil 
+            quando os elementos filhos têm alturas diferentes, 
+            garantindo que eles sejam centralizados verticalmente 
+            dentro do container. */
+
+    justify-content: center;
+    /* Centraliza os itens horizontalmente dentro do container. Isso 
+            garante que todos os controles fiquem centralizados na 
+            página, melhorando a estética e a usabilidade. */
+
+    gap: 10px;
+    /* Define um espaço de 10 pixels entre cada item dentro do 
+            container flexível. Isso separa visualmente os 
+            controles, evitando um layout apertado e confuso. */
+
+}
+
+label {
+
+    font-size: 16px;
+    /* Define o tamanho da fonte do elemento <label> para 16 
+            pixels, que é um tamanho padrão para texto acessível 
+            e legível em interfaces web. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro. Isso garante 
+            excelente legibilidade contra fundos mais claros, 
+            mantendo a consistência visual com outras cores 
+            de texto na interface. */
+
+}
+
+select {
+
+    padding: 10px;
+    /* Aplica um preenchimento de 10 pixels em todas as 
+            direções dentro do elemento <select>. Isso aumenta a 
+            área de clique e melhora a experiência do usuário, 
+            tornando a interface mais confortável para interagir. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte dentro do elemento <select> 
+            para 16 pixels. Este tamanho é consistente com outros 
+            controles de formulário, proporcionando uma experiência 
+            de usuário uniforme. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do elemento <select> com um raio 
+            de 5 pixels. Isso suaviza as bordas, dando ao controle 
+            uma aparência mais moderna e amigável. */
+
+    border: 1px solid #ccc;
+    /* Define a borda do elemento <select> com uma linha sólida 
+            de 1 pixel de espessura na cor cinza claro. Isso ajuda a 
+            definir os limites do elemento, mantendo o 
+            design leve e limpo. */
+
+}
+
+
+button {
+
+    padding: 10px 20px;
+    /* Define o preenchimento interno do botão para 10 pixels 
+            na vertical e 20 pixels na horizontal, oferecendo 
+            espaço suficiente dentro do botão para tornar o 
+            texto facilmente clicável e visualmente equilibrado. */
+
+    font-size: 16px;
+    /* Estabelece o tamanho da fonte do texto dentro do botão 
+            como 16 pixels, garantindo legibilidade enquanto 
+            mantém uma proporção harmoniosa com outros 
+            elementos da interface. */
+
+    cursor: pointer;
+    /* Muda o cursor do mouse para um ponteiro quando ele 
+            passa sobre o botão, indicando que o 
+            botão é clicável. */
+
+    background-color: #4CAF50;
+    /* Define a cor de fundo do botão para um verde 
+            vibrante, que é atraente e também oferece um 
+            bom contraste com o texto branco, 
+            facilitando a leitura. */
+
+    color: white;
+    /* Define a cor do texto dentro do botão como branco, 
+            garantindo alta legibilidade contra o 
+            fundo verde. */
+
+    border: none;
+    /* Remove qualquer borda do botão, proporcionando 
+            um design mais limpo e moderno. */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um raio de 5 pixels, 
+            suavizando a aparência geral do botão e tornando-o 
+            visualmente mais amigável. */
+
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave de 0.3 segundos para a 
+            cor de fundo quando o botão é interagido pelo 
+            usuário, melhorando a experiência do usuário 
+            com feedback visual agradável. */
+
+}
+
+button:hover {
+
+    background-color: #0b430e;
+    /* Muda a cor de fundo do botão para um verde um 
+            pouco mais escuro quando o mouse passa sobre 
+            ele. Esta mudança sutil indica interatividade, 
+            incentivando o usuário a clicar. */
+
+}
+
+#container-puzzle {
+
+    display: grid;
+    /* Define o layout do container do puzzle para usar o 
+            modelo de layout de grade, permitindo um alinhamento 
+            preciso e flexível dos itens de quebra-cabeça. */
+
+    gap: 10px;
+    /* Estabelece um espaço de 10 pixels entre cada item de 
+            grade (peças do puzzle), garantindo que haja 
+            espaço suficiente entre eles para uma 
+            distinção clara. */
+
+    background-color: #8b5a2b;
+    /* Define a cor de fundo do container do puzzle para 
+            um marrom médio, oferecendo um contraste visual 
+            eficaz com as peças do puzzle, facilitando a 
+            visualização das peças. */
+
+    padding: 10px;
+    /* Aplica um preenchimento de 10 pixels ao redor do 
+            interior do container do puzzle, criando uma 
+            margem entre o conteúdo da grade e as bordas 
+            do container. */
+
+    border-radius: 10px;
+    /* Arredonda as bordas do container do puzzle com um 
+            raio de 10 pixels, suavizando a aparência geral e 
+            tornando-o esteticamente mais agradável. */
+
+}
+
+.peca {
+
+    display: flex;
+    /* Utiliza o Flexbox para alinhar os elementos filhos (conteúdo 
+            de texto ou outros elementos) dentro da peça. Permite 
+            alinhamento fácil e centralizado de conteúdo. */
+
+    justify-content: center;
+    /* Alinha horizontalmente o conteúdo da peça no centro, 
+            garantindo que o texto ou qualquer outro conteúdo 
+            esteja centralizado dentro da peça. */
+
+    align-items: center;
+    /* Alinha verticalmente o conteúdo da peça no centro, 
+            assegurando que o conteúdo esteja no meio da 
+            peça em todas as dimensões. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do texto dentro da 
+            peça para 24 pixels, tornando-o 
+            facilmente legível. */
+
+    font-weight: bold;
+    /* Aplica um peso de fonte negrito ao texto 
+            dentro da peça, destacando-o e tornando-o 
+            mais visível contra o fundo. */
+
+    background-color: #ffdab9;
+    /* Define a cor de fundo da peça para um tom claro 
+            de pêssego. Esta cor é suave para os olhos e 
+            oferece bom contraste com o texto escuro. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da peça com um raio de 10 
+            pixels para um visual mais suave e 
+            esteticamente agradável. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o 
+            usuário move o mouse sobre a peça, indicando 
+            que a peça é interativa e pode ser clicada. */
+
+    user-select: none;
+    /* Desabilita a seleção do texto ou do conteúdo da 
+            peça, impedindo que o usuário selecione 
+            acidentalmente o texto ao tentar mover 
+            as peças. */
+
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave de 0.3 segundos 
+            para mudanças na cor de fundo, melhorando a 
+            interatividade visual ao modificar a peça. */
+
+}
+
+.peca:active {
+
+    background-color: #f0e68c;
+    /* Muda a cor de fundo da peça para um amarelo claro 
+            quando a peça é clicada (estado "active"). Essa 
+            mudança visual imediata dá um feedback ao usuário 
+            de que sua ação (clicar na peça) foi reconhecida. */
+
+}
+
+#peca-vazia {
+
+    background-color: #8b5a2b;
+    /* Define a cor de fundo da peça vazia para um marrom 
+            médio, diferenciando visualmente a peça vazia 
+            das demais peças do puzzle. */
+
+    cursor: default;
+    /* Define o cursor como padrão quando o mouse passa 
+            sobre a peça vazia, indicando que ela não é 
+            interativa como as outras peças. */
+
+}
+
+.modal {
+
+    display: none;
+    /* Oculta o modal inicialmente, não será visível até 
+            que seja programaticamente ativado  por JavaScript. */
+
+    position: fixed;
+    /* Fixa a posição do modal em relação à viewport, o 
+            que significa que ele permanecerá no lugar 
+            mesmo se a página for rolada. */
+
+    z-index: 1;
+    /* Define a ordem de empilhamento do modal em 
+            relação a outros elementos posicionados na 
+            página. Um z-index maior faz com que o modal 
+            fique acima de outros elementos com z-index menor. */
+
+    left: 0;
+    /* Posiciona a borda esquerda do modal ao longo do 
+            lado esquerdo da viewport. */
+
+    top: 0;
+    /* Posiciona a borda superior do modal ao longo 
+            do topo da viewport. */
+
+    width: 100%;
+    /* Define a largura do modal para ocupar 100% 
+            da largura da viewport. */
+
+    height: 100%;
+    /* Define a altura do modal para ocupar 100% 
+            da altura da viewport. */
+
+    overflow: auto;
+    /* Permite que o conteúdo dentro do modal seja 
+            rolável se o conteúdo exceder o tamanho 
+            da área visível. */
+
+    background-color: rgba(0,0,0,0.5);
+    /* Define a cor de fundo do modal para preto 
+            com 50% de transparência, criando um efeito de 
+            escurecimento para o conteúdo por 
+            trás do modal. */
+
+    display: flex;
+    /* Utiliza Flexbox para posicionar os filhos do 
+            modal, permitindo um alinhamento fácil 
+            dos elementos internos. */
+
+    justify-content: center;
+    /* Alinha os elementos filhos (horizontalmente) no 
+            centro do modal usando Flexbox. */
+
+    align-items: center;
+    /* Alinha os elementos filhos (verticalmente) no 
+            centro do modal usando Flexbox. */
+
+    animation: fadeIn 0.5s;
+    /* Aplica uma animação chamada 'fadeIn' que dura 0.5 
+            segundos ao tornar o modal visível, melhorando a 
+            experiência do usuário com uma transição suave. */
+
+}
+
+
+@keyframes fadeIn {
+
+    from {opacity: 0;}
+    /* Inicia a animação de 'fadeIn' com a opacidade do 
+            modal em 0 (completamente transparente). */
+
+    to {opacity: 1;}
+    /* Termina a animação de 'fadeIn' com a opacidade do 
+            modal em 1 (completamente opaco). */
+
+}
+
+
+.conteudo-modal {
+
+    background-color: #fff;
+    /* Define a cor de fundo do conteúdo do 
+            modal para branco. */
+
+    padding: 30px;
+    /* Adiciona um preenchimento de 30 pixels em 
+            todos os lados dentro do conteúdo do modal, 
+            criando espaço entre o conteúdo e as 
+            bordas do modal. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do conteúdo do modal 
+            com um raio de 10 pixels. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do conteúdo do modal. */
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    /* Aplica uma sombra ao redor do conteúdo do 
+            modal para dar profundidade e destaque. */
+
+    position: relative;
+    /* Define a posição do conteúdo do modal como 
+            relativa, permitindo o posicionamento preciso 
+            de elementos internos em relação a ele. */
+
+    animation: slideIn 0.5s;
+    /* Aplica uma animação chamada 'slideIn' que dura 0.5 
+            segundos ao exibir o conteúdo, dando um efeito 
+            de entrada suave. */
+
+    width: 50%;
+    /* Define a largura do conteúdo do modal para ser 50% da 
+            largura do modal pai, centralizando e dando 
+            foco ao conteúdo. */
+
+}
+
+
+@keyframes slideIn {
+
+    from {transform: translateY(-20px);}
+    /* Inicia a animação com o conteúdo do modal movendo-se 
+            de 20 pixels acima de sua posição final, criando um 
+            efeito de "deslizamento para dentro". */
+
+    to {transform: translateY(0);}
+    /* Termina a animação com o conteúdo do modal em sua posição 
+            final, onde a transformação no eixo Y é zero. */
+
+}
+
+
+.fechar {
+
+    position: absolute;
+    /* Posiciona o elemento de forma absoluta em relação ao 
+            seu container mais próximo não estático, permitindo 
+            que seja posicionado precisamente dentro de 
+            containers como modais. */
+
+    top: 10px;
+    /* Posiciona o elemento a 10 pixels do topo de seu 
+            container, criando um espaçamento consistente 
+            com a borda superior. */
+
+    right: 10px;
+    /* Posiciona o elemento a 10 pixels da direita de seu 
+            container, mantendo-o alinhado à direita dentro 
+            do espaço designado. */
+
+    color: #aaa;
+    /* Define a cor do elemento para um cinza claro, o 
+            que o faz se destacar contra um fundo geralmente 
+            mais escuro, mas não de forma muito agressiva. */
+
+    font-size: 28px;
+    /* Configura o tamanho da fonte para 28 pixels, tornando o 
+            ícone ou texto facilmente visível e legível, 
+            adequado para um botão de fechar. */
+
+    font-weight: bold;
+    /* Deixa o texto ou ícone mais grosso e mais notável, 
+            ajudando a enfatizar a função de fechamento. */
+
+    cursor: pointer;
+    /* Muda o cursor para um ponteiro quando o usuário 
+            passa o mouse sobre o elemento, indicando que o 
+            elemento é clicável. */
+
+    transition: color 0.3s;
+    /* Aplica uma transição suave para mudanças de cor que 
+            ocorrem em 0.3 segundos, aumentando a 
+            interatividade visual ao interagir 
+            com o botão. */
+
+}
+
+.fechar:hover,
+.fechar:focus {
+
+    color: black;
+    /* Muda a cor do texto para preto quando o mouse 
+            está sobre o elemento ou quando ele está focado, 
+            indicando ao usuário que o elemento está 
+            ativo ou selecionado, e pode ser uma 
+            ação de fechar. */
+
+}
+
+
+p {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte para 24 pixels para 
+            texto de parágrafo, que é geralmente considerado 
+            um tamanho legível para leitura confortável em 
+            dispositivos digitais. */
+
+    color: #333;
+    /* Define a cor do texto para um cinza escuro, que 
+            oferece alto contraste com a maioria dos 
+            fundos claros, garantindo boa legibilidade 
+            sem ser tão duro quanto o preto puro. */
+            
+}

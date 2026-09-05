@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+<!-- A linha acima define que este documento é 
+            um documento HTML5. -->
+
+<html lang="pt-BR"> 
+<!-- Esta linha inicia o documento HTML e define o idioma 
+            principal do documento como português do Brasil. -->
+
+<head>
+<!-- O elemento <head> contém metadados (informações sobre 
+            dados) que não são exibidos diretamente na página 
+            web, mas são processados pelo navegador. -->
+
+    <meta charset="UTF-8">
+    <!-- Esta linha define a codificação de caracteres para o 
+            documento como UTF-8, que inclui a maioria dos 
+            caracteres de todos os alfabetos escritos e é 
+            eficaz para otimização do SEO e compatibilidade 
+            do navegador. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta tag de metadados controla a área de visualização do 
+                navegador, tornando o site responsivo. 
+        'width=device-width' define a largura da área de 
+                visualização para seguir a largura da tela do 
+                dispositivo, e 'initial-scale=1.0' define o 
+                nível de zoom inicial quando a página é 
+                carregada pela primeira vez. -->
+
+    <title>Jogo de Puzzle de Números</title>
+    <!-- O elemento <title> define o título da página, que é 
+                exibido na aba do navegador e usado pelos motores 
+                de busca. Aqui, ele está definido como "Jogo 
+                de Puzzle de Números". -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Esta linha liga um arquivo CSS externo, chamado styles.css, 
+                ao documento HTML. Este arquivo contém os estilos 
+                que serão aplicados ao documento HTML. O atributo 'rel' 
+                especifica o relacionamento entre o documento HTML e 
+                o arquivo vinculado. Neste caso, é uma folha 
+                de estilo. -->
+
+</head>
+
+<body>
+<!-- A tag <body> representa o corpo do documento HTML. Todo o 
+                conteúdo visível da página, como texto, imagens, 
+                links e mais, deve ser inserido dentro desta tag. -->
+
+    <h1>Jogo de Puzzle de Números</h1>
+    <!-- A tag <h1> é usada para definir o título principal da 
+                página. É importante para SEO, pois ajuda os 
+                motores de busca a entenderem o principal tópico do 
+                conteúdo da página. Neste caso, o título 
+                é "Jogo de Puzzle de Números". -->
+
+    <div id="interface">
+    <!-- A tag <div> com o id="interface" é usada como um 
+                contêiner para agrupar elementos relacionados à 
+                interface do usuário. O uso de id garante que 
+                este elemento pode ser referenciado de forma 
+                única dentro do documento e estilizado especificamente 
+                via CSS ou manipulado com JavaScript. -->
+
+        <div id="pontuacao">Pontos: 0</div>
+        <!-- Outra tag <div> para mostrar a pontuação do usuário. O 
+                    texto inicial "Pontos: 0" indica que o usuário 
+                    começa o jogo sem pontos. Este elemento pode 
+                    ser atualizado dinamicamente via JavaScript 
+                    conforme o usuário avança no jogo. -->
+
+        <div id="controles">
+        <!-- Esta <div> agrupa os controles do usuário, como a 
+                    seleção do tamanho do tabuleiro e o botão para 
+                    testar ou iniciar o jogo. A classificação e 
+                    organização desses elementos facilita a 
+                    manipulação e estilização. -->
+
+            <label for="tamanho-tabuleiro">Escolha o tamanho do tabuleiro:</label>
+            <!-- A tag <label> é associada a um elemento de 
+                        formulário através do atributo 'for', que 
+                        deve corresponder ao id do elemento de 
+                        formulário. Este rótulo é para acessibilidade e 
+                        usabilidade, melhorando a experiência do usuário 
+                        ao permitir que cliques no texto do rótulo atuem 
+                        sobre o controle de formulário associado. -->
+
+            <select id="tamanho-tabuleiro">
+            <!-- A tag <select> define um menu suspenso. O id 
+                        "tamanho-tabuleiro" permite que este elemento 
+                        seja facilmente acessado por scripts para 
+                        manipulação ou estilos. -->
+
+                <option value="3">3 x 3</option>
+                <option value="4">4 x 4</option>
+                <option value="5">5 x 5</option>
+                <option value="6">6 x 6</option>
+                <!-- Cada tag <option> representa uma opção 
+                            dentro do menu suspenso. O atributo 'value' é 
+                            o valor enviado ao servidor quando uma opção é 
+                            selecionada. O texto entre as tags é o que o 
+                            usuário vê disponível para escolha no menu. -->
+
+            </select>
+
+            <button id="botao-testar">Testar</button>
+            <!-- A tag <button> cria um botão clicável. O id "botao-testar" 
+                            permite que este botão seja estilizado ou 
+                            manipulado especificamente. O texto "Testar" 
+                            indica a ação que o botão realizará, iniciando 
+                            uma instância de jogo com o tabuleiro 
+                            configurado para testes. -->
+
+        </div>
+    </div>
+
+    <div id="container-puzzle"></div>
+    <!-- Uma <div> vazia com o id "container-puzzle" serve como um 
+                    contêiner para o tabuleiro do jogo. Elementos 
+                    podem ser adicionados dinamicamente aqui via 
+                    JavaScript baseando-se nas escolhas do usuário 
+                    e na lógica do jogo. -->
+
+    <!-- Modal -->
+    <div id="modal-vitoria" class="modal">
+    <!-- A <div> modal é usada para exibir uma mensagem ou conteúdo 
+                    que sobrepõe a página principal, geralmente usada 
+                    para capturar a atenção do usuário. O class="modal" 
+                    está associado a estilos específicos 
+                    que definem como o modal aparece e se comporta (como 
+                    visibilidade e animações). -->
+
+        <div class="conteudo-modal">
+        <!-- Dentro do modal, uma <div> classificada como "conteudo-modal" 
+                     contém o conteúdo que é mostrado ao usuário. 
+                     Estilos específicos podem ser aplicados para 
+                    formatar este conteúdo. -->
+
+            <span id="fechar-modal" class="fechar">&times;</span>
+            <!-- Um <span> com a class "fechar" e um conteúdo 
+                        de "&times;" (um caractere 'X') é usado 
+                        frequentemente como um botão para fechar o 
+                        modal. O id "fechar-modal" permite que este 
+                        elemento seja facilmente acessado para adicionar 
+                        funcionalidades interativas, como fechar o 
+                        modal quando clicado. -->
+
+            <p>Parabéns! Você completou o jogo!</p>
+            <!-- A tag <p> é usada para texto de parágrafo, aqui 
+                        informando ao usuário que ele completou o jogo. 
+                        Este texto é parte do conteúdo que o modal 
+                        exibe quando ativado. -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo src aponta para um arquivo 
+                    JavaScript externo chamado "script.js". Este script  
+                    contém a lógica interativa do jogo, manipulando o DOM 
+                    baseado em ações do usuário e atualizando a 
+                    interface de acordo. -->
+
+</body>
+</html>
+<!-- Fim do documento HTML. -->
