@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- Define o tipo do documento como HTML5, que é 
+            o padrão para documentos HTML modernos. -->
+
+<html lang="pt-BR">
+<!-- Abre a tag raiz do HTML, definindo o idioma do 
+            documento como português do Brasil (pt-BR). 
+        Isso ajuda os navegadores e tecnologias assistivas a 
+            fornecer recursos localizados corretamente. -->
+
+<head>
+<!-- A tag <head> contém metadados (informações sobre 
+            os dados) e é onde você vincula recursos 
+            externos como CSS, define metatags, etc. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres utilizado no 
+            documento como UTF-8, que inclui quase todos os 
+            caracteres de todos os idiomas humanos, 
+            garantindo que o texto seja exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta meta tag garante que a página seja dimensionada 
+            corretamente em diferentes dispositivos, 
+            estabelecendo a largura do viewport igual à 
+            largura do dispositivo e a escala inicial 
+            igual a 1. Isso é crucial para a responsividade 
+            em mobile. -->
+
+    <title>Jogo de Pong</title>
+    <!-- Define o título do documento, que é exibido na aba do 
+                navegador. Aqui, indica que a aba 
+                mostrará "Jogo de Pong". -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Vincula um arquivo CSS externo chamado 'style.css' ao 
+                documento, que contém as regras de estilo 
+                para apresentar o documento HTML. -->
+
+</head>
+<!-- Fecha a tag <head>. O que segue é a abertura da tag <body>, 
+                onde o conteúdo visível da página seria colocado. -->
+
+
+
+<body>
+    <!-- Abre a tag <body>, onde o conteúdo visível da 
+                página será colocado. -->
+
+    <div class="game-container">
+        <!-- Cria um div com a classe 'game-container', que  
+                será estilizado com CSS para definir o 
+                layout do jogo. -->
+
+        <canvas id="pongCanvas"></canvas>
+        <!-- Define um elemento <canvas> com o id 'pongCanvas'. 
+                    O <canvas> é usado para desenhar gráficos 
+                    com JavaScript, neste caso, o campo do 
+                    jogo de Pong. -->
+
+        <div class="info">
+            <!-- Cria um div com a classe 'info', que será usado 
+                    para exibir informações sobre o jogo, como a 
+                    pontuação e as vidas restantes. -->
+
+            <span id="pontuacaoJogador">Jogador: 0</span>
+            <!-- Exibe a pontuação do jogador com o 
+                        id 'pontuacaoJogador'. O valor inicial é 0. -->
+
+            <span id="pontuacaoComputador">Computador: 0</span>
+            <!-- Exibe a pontuação do computador com o 
+                        id 'pontuacaoComputador'. O valor 
+                        inicial é 0. -->
+
+            <span id="vidasJogador">Vidas: 3</span>
+            <!-- Exibe o número de vidas restantes do jogador 
+                        com o id 'vidasJogador'. O valor 
+                        inicial é 3. -->
+
+            <span id="totalPontos">Total de Pontos: 0</span>
+            <!-- Exibe o total de pontos acumulados com o 
+                        id 'totalPontos'. O valor inicial é 0. -->
+
+        </div>
+        <!-- Fecha a tag <div> da classe 'info'. -->
+
+    </div>
+    <!-- Fecha a tag <div> da classe 'game-container'. -->
+
+    <div id="modal" class="modal">
+        <!-- Cria um div com o id 'modal' e a classe 'modal', que  
+                    será estilizado e usado como um modal (pop-up) 
+                    para mensagens de vitória/derrota e outras 
+                    interações. -->
+
+        <div class="modal-content">
+            <!-- Cria um div com a classe 'modal-content', 
+                    que contém o conteúdo do modal. -->
+
+            <p id="mensagem"></p>
+            <!-- Define um parágrafo com o id 'mensagem', onde 
+                    mensagens dinâmicas serão exibidas. -->
+
+            <button id="jogarNovamente">Jogar Novamente</button>
+            <!-- Define um botão com o id 'jogarNovamente', 
+                    que permite reiniciar o jogo. -->
+
+            <button id="continuarJogo" style="display: none;">Continuar</button>
+            <!-- Define um botão com o id 'continuarJogo', 
+                    inicialmente oculto, que permite continuar o 
+                    jogo após uma pausa ou interrupção. -->
+
+        </div>
+        <!-- Fecha a tag <div> da classe 'modal-content'. -->
+
+    </div>
+    <!-- Fecha a tag <div> do id 'modal'. -->
+
+    <script src="script.js"></script>
+    <!-- Vincula um arquivo JavaScript externo chamado 'script.js', 
+                que contém a lógica do jogo. -->
+
+</body>
+<!-- Fecha a tag <body>. -->
+
+</html>
+<!-- Fecha a tag <html>, encerrando o documento HTML. -->

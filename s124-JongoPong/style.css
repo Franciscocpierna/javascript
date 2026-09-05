@@ -1,0 +1,237 @@
+body {
+
+    display: flex;
+    /* Define o layout do corpo da página como flexível, 
+                permitindo a organização dos elementos filhos 
+                em linha ou coluna. */
+
+    justify-content: center;
+    /* Alinha horizontalmente os elementos filhos do 
+                corpo no centro da página. */
+
+    align-items: center;
+    /* Alinha verticalmente os elementos filhos do 
+                corpo no centro da página. */
+
+    height: 100vh;
+    /* Define a altura do corpo para 100% da altura da 
+                janela de visualização (viewport). Isso garante 
+                que o corpo ocupe toda a altura da tela, 
+                independentemente do tamanho do conteúdo. */
+
+    background-color: #000;
+    /* Define a cor de fundo do corpo como preto (#000). */
+
+    margin: 0;
+    /* Remove as margens padrão ao redor do corpo, garantindo que 
+                o conteúdo ocupe toda a área disponível na 
+                janela de visualização. */
+
+    color: #fff;
+    /* Define a cor do texto dentro do corpo como branco (#fff). 
+                Isso afetará todo o texto não especificado 
+                dentro do corpo. */
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte padrão do texto como Arial, ou se 
+                Arial não estiver disponível, uma fonte 
+                sem serifa (sans-serif). */
+
+}
+
+.game-container {
+
+    position: relative;
+    /* Define o posicionamento do contêiner do jogo como 
+                relativo, permitindo o uso de posicionamento 
+                absoluto para os elementos filhos em relação a 
+                este contêiner. */
+
+    width: 800px;
+    /* Define a largura do contêiner do jogo 
+                como 800 pixels. */
+
+    height: 600px;
+    /* Define a altura do contêiner do jogo como 600 pixels. */
+
+    border: 2px solid #fff;
+    /* Adiciona uma borda de 2 pixels de espessura e 
+                de cor branca (#fff) ao redor do 
+                contêiner do jogo. */
+
+}
+
+canvas {
+
+    display: block;
+    /* Define o elemento <canvas> como um bloco, eliminando o 
+                espaço em branco abaixo dele que geralmente 
+                aparece com elementos inline-block. */
+
+    background-color: #000;
+    /* Define a cor de fundo do <canvas> como preto (#000). Isso 
+                garante que a área do canvas tenha um fundo preto. */
+
+}
+
+.info {
+
+    position: absolute;
+    /* Define o posicionamento do contêiner de informações 
+                como absoluto, permitindo que ele seja 
+                posicionado em relação ao contêiner pai 
+                mais próximo com posição relativa. */
+
+    top: 10px;
+    /* Define a posição superior do contêiner de 
+                informações a 10 pixels do topo do 
+                contêiner pai. */
+
+    left: 50%;
+    /* Define a posição esquerda do contêiner de 
+                informações a 50% da largura do contêiner 
+                pai, centralizando-o horizontalmente. */
+
+    transform: translateX(-50%);
+    /* Transforma o contêiner de informações para 
+                deslocar 50% para a esquerda, ajustando 
+                sua posição para estar exatamente no 
+                centro horizontal do contêiner pai. */
+
+    display: flex;
+    /* Define o layout do contêiner de informações como 
+                flexível, permitindo a organização dos 
+                elementos filhos em linha ou coluna. */
+
+    justify-content: space-between;
+    /* Distribui o espaço disponível entre os elementos 
+                filhos de forma igual, colocando o primeiro 
+                elemento no início e o último no final 
+                do contêiner. */
+
+    width: 500px;
+    /* Define a largura do contêiner de informações 
+                como 500 pixels. */
+
+}
+
+.modal {
+
+    display: none;
+    /* Inicialmente oculta o modal. Ele será exibido 
+                através de JavaScript quando necessário. */
+
+    position: fixed;
+    /* Define o posicionamento do modal como fixo, 
+                permitindo que ele permaneça na mesma 
+                posição na janela de visualização mesmo 
+                durante o scroll. */
+
+    z-index: 1;
+    /* Define a ordem de empilhamento do modal para 1, 
+                garantindo que ele fique acima da maioria 
+                dos outros elementos na página. */
+
+    left: 0;
+    /* Define a posição esquerda do modal para 0, alinhando-o 
+                à borda esquerda da janela de visualização. */
+
+    top: 0;
+    /* Define a posição superior do modal para 0, alinhando-o 
+                à borda superior da janela de visualização. */
+
+    width: 100%;
+    /* Define a largura do modal para 100% da largura da 
+                janela de visualização, garantindo que ele 
+                cubra toda a largura da tela. */
+
+    height: 100%;
+    /* Define a altura do modal para 100% da altura da 
+                janela de visualização, garantindo que ele 
+                cubra toda a altura da tela. */
+
+    overflow: auto;
+    /* Adiciona barras de rolagem automáticas se o 
+                conteúdo do modal exceder a altura da 
+                janela de visualização. */
+
+    background-color: rgb(0,0,0);
+    /* Define a cor de fundo do modal como preto (rgb(0,0,0)). */
+
+    background-color: rgba(0,0,0,0.4);
+    /* Define a cor de fundo do modal como preto com 40% 
+                de opacidade (rgba(0,0,0,0.4)), criando um 
+                efeito de sobreposição escura transparente. */
+
+    justify-content: center;
+    /* Alinha horizontalmente os elementos filhos do 
+                modal no centro da tela. */
+
+    align-items: center;
+    /* Alinha verticalmente os elementos filhos do 
+                modal no centro da tela. */
+
+}
+
+
+
+.modal-content {
+
+    background-color: #fefefe;
+    /* Define a cor de fundo do conteúdo do modal como 
+                um branco quase puro (#fefefe). Isso 
+                garante que o conteúdo seja claramente 
+                visível contra o fundo mais escuro do modal. */
+
+    margin: 15% auto;
+    /* Define as margens do conteúdo do modal. A margem 
+                superior é de 15% da altura da janela de 
+                visualização, centralizando-o verticalmente. 
+                As margens esquerda e direita são automáticas, 
+                centralizando-o horizontalmente. */
+
+    padding: 20px;
+    /* Adiciona um preenchimento interno de 20 pixels ao redor 
+                do conteúdo do modal, criando espaço interno 
+                entre o conteúdo e as bordas do contêiner. */
+
+    border: 1px solid #888;
+    /* Adiciona uma borda de 1 pixel de espessura e de cor 
+                cinza (#888) ao redor do conteúdo do modal, 
+                dando um leve destaque à área do modal. */
+
+    width: 80%;
+    /* Define a largura do conteúdo do modal como 80% da 
+                largura da janela de visualização, garantindo 
+                que o modal não ocupe toda a largura da tela. */
+
+    max-width: 300px;
+    /* Define a largura máxima do conteúdo do modal como 300 
+                pixels, impedindo que ele se expanda além desse 
+                valor, mesmo em telas maiores. */
+
+    text-align: center;
+    /* Centraliza o texto e outros conteúdos dentro do modal, 
+                alinhando-os horizontalmente ao centro. */
+
+}
+
+
+button {
+
+    padding: 10px 20px;
+    /* Adiciona um preenchimento interno de 10 pixels no 
+                eixo vertical (superior e inferior) e 20 pixels 
+                no eixo horizontal (esquerda e direita), aumentando 
+                a área clicável do botão. */
+
+    margin-top: 10px;
+    /* Adiciona uma margem superior de 10 pixels, criando 
+                espaço entre o botão e o elemento acima dele. */
+
+    cursor: pointer;
+    /* Define o cursor do mouse como um ponteiro (mãozinha) 
+                quando estiver sobre o botão, indicando que o 
+                elemento é clicável. */
+                
+}
