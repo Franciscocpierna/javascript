@@ -1,0 +1,125 @@
+body {
+
+    display: flex;
+    /* Configura o modelo de layout do corpo para Flexbox. 
+            O Flexbox é um método de layout que facilita o alinhamento e a 
+            distribuição do espaço entre os itens em um contêiner, mesmo 
+            quando seus tamanhos são desconhecidos ou dinâmicos. */
+
+    flex-direction: column;
+    /* Define a direção principal do eixo flexível como vertical (coluna). 
+    Isso faz com que todos os itens flexíveis (filhos diretos do corpo) 
+            sejam empilhados verticalmente, de cima para baixo. */
+
+    align-items: center;
+    /* Centraliza os itens flexíveis horizontalmente dentro do 
+            contêiner (neste caso, o corpo da página). Isso é útil para 
+            garantir que todos os elementos, como cabeçalhos, conteúdo do 
+            jogo e scripts, estejam alinhados ao centro. */
+
+    justify-content: flex-start;
+    /* Alinha os itens flexíveis ao início do contêiner ao longo do 
+            eixo principal (vertical). Isso significa que os itens 
+            começarão a ser posicionados a partir do topo do contêiner e 
+            serão distribuídos para baixo. */
+
+    height: 100vh;
+    /* Define a altura do corpo para 100% da altura da janela de 
+            visualização (viewport height). Isso garante que o corpo ocupe 
+            toda a altura visível da janela do navegador, criando uma 
+            experiência de tela cheia para o jogo. */
+
+    margin: 0;
+    /* Remove todas as margens padrão do corpo. Navegadores geralmente 
+            adicionam algumas margens ao redor do elemento <body>, 
+            então esta regra as zera para evitar espaços indesejados ao 
+            redor dos elementos da página. */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para Arial, com um fallback para 
+            qualquer fonte sans-serif genérica caso Arial não esteja 
+            disponível. Arial é uma escolha popular por ser clara e 
+            legível, adequada para interfaces de usuário de jogos. */
+
+    background-color: #2c3e50;
+    /* Define a cor de fundo do corpo para um azul marinho escuro (#2c3e50). 
+    Essa cor de fundo proporciona um contraste alto com o texto e outros 
+            elementos claros, contribuindo para a estética visual do jogo. */
+
+    color: white;
+    /* Define a cor padrão do texto para branco. Isso garante que 
+            todo o texto no corpo tenha alta legibilidade contra o fundo 
+            escuro, essencial para instruções e pontuações no jogo. */
+
+}
+
+.cabecalho {
+
+    display: flex;
+    /* Configura o modelo de caixa do cabeçalho para Flexbox. 
+            Flexbox é ideal para alinhar itens de forma 
+            eficiente e flexível. */
+
+    flex-direction: column;
+    /* Define a orientação dos itens no cabeçalho para serem 
+            empilhados verticalmente (um acima do outro). */
+
+    align-items: center;
+    /* Centraliza os itens no cabeçalho ao longo do eixo 
+            transversal (horizontalmente), o que é útil para garantir 
+            que o título e qualquer conteúdo estejam alinhados ao centro. */
+
+    justify-content: center;
+    /* Centraliza os itens no cabeçalho ao longo do eixo 
+            principal (verticalmente), ajudando a manter o conteúdo 
+            bem organizado e visualmente atraente no centro do cabeçalho. */
+
+    margin-top: 20px;
+    /* Aplica uma margem na parte superior do cabeçalho de 20 pixels, 
+            criando um espaço entre o cabeçalho e quaisquer elementos 
+            acima dele, como a borda superior do navegador ou 
+            outro conteúdo. */
+
+}
+
+
+h1 {
+
+    margin: 20px;
+    /* Define a margem em todas as direções para o elemento <h1> 
+            para 20 pixels, garantindo que haja um espaçamento adequado em 
+            torno do título do jogo, evitando que ele fique muito 
+            próximo de outros elementos. */
+
+}
+
+
+canvas {
+
+    border: 1px solid #000;
+    /* Adiciona uma borda sólida de 1 pixel ao redor do elemento <canvas>, 
+            usando a cor preta (#000). Isso define claramente a área de jogo, 
+            separando-a visualmente do restante da página. */
+
+    background-color: #34495e;
+    /* Define a cor de fundo do <canvas> para um azul acinzentado (#34495e), 
+            proporcionando um contraste agradável com os elementos do jogo, 
+            como bolas e tijolos, que aparecerão em cima desta cor de fundo. */
+
+    margin-top: 20px;
+    /* Aplica uma margem superior de 20 pixels, criando um espaço vertical 
+            entre o <canvas> e os elementos acima dele, como o cabeçalho, 
+            melhorando a organização visual. */
+
+}
+
+
+#pontuacao {
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para o elemento com ID 'pontuacao' 
+            para 18 pixels, garantindo que o texto seja grande o suficiente 
+            para ser lido facilmente durante o jogo, essencial para que os 
+            jogadores vejam sua pontuação atual. */
+            
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- Esta declaração define que este documento é um 
+               documento HTML5, que é a versão atual do HTML.
+     É importante porque diz ao navegador para usar as 
+               regras de análise e renderização do HTML5,
+     garantindo que os recursos modernos do HTML, CSS e 
+               JavaScript sejam interpretados corretamente. -->
+
+<html lang="pt-BR">
+<!-- A tag <html> é a raiz de todo o documento HTML. Ela 
+               contém todo o conteúdo da página.
+     O atributo 'lang="pt-BR"' especifica que o idioma principal do 
+               documento é o Português do Brasil.
+     Isso é útil para motores de busca e tecnologias assistivas 
+               entenderem e classificarem o conteúdo do site 
+               de acordo com o idioma. -->
+
+<head>
+    <!-- A tag <head> contém metadados, links para folhas de 
+               estilo, scripts e outras instruções que não são 
+               exibidas diretamente na visualização da página.
+         Essas informações são usadas pelo navegador para renderizar e 
+               funcionar a página corretamente. -->
+
+    <meta charset="UTF-8">
+    <!-- A tag <meta> com o atributo 'charset' define o conjunto de 
+               caracteres para o documento HTML.
+         'UTF-8' é um conjunto de caracteres universal que suporta 
+               quase todos os idiomas conhecidos.
+         Isso assegura que qualquer texto dentro do documento seja 
+               exibido corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outra tag <meta> importante para tornar a página web responsiva.
+         O atributo 'content="width=device-width, initial-scale=1.0"' 
+               configura a largura da viewport (área de visualização) 
+               para corresponder à largura do dispositivo.
+         'initial-scale=1.0' define o nível de zoom inicial quando a 
+               página é carregada, garantindo que a página seja 
+               exibida em um tamanho apropriado. -->
+
+    <title>Breakout Game</title>
+    <!-- A tag <title> define o título do documento, que é 
+               exibido na aba do navegador.
+         Isso é útil para os usuários identificarem sobre o que é a 
+               aba e também ajuda na SEO (Search Engine Optimization) 
+               para melhorar o ranking da página nos resultados de busca. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- A tag <link> é usada para vincular recursos 
+               externos ao documento HTML.
+         Aqui, ela está vinculando uma folha de estilo CSS externa 
+               localizada no caminho 'styles.css'.
+         Isso permite separar o conteúdo (HTML) da apresentação (CSS), 
+               tornando o gerenciamento do design da página mais 
+               eficiente e organizado. -->
+
+</head>
+<!-- Fecha a tag <head>. Todo o conteúdo que foi definido dentro 
+               desta seção é meta-informação que instrui o navegador 
+               sobre como tratar o documento. -->
+
+
+<body>
+<!-- A tag <body> contém todo o conteúdo visível da página web. 
+               Tudo o que o usuário interage diretamente, como textos, 
+               imagens, vídeos, jogos e outros elementos de mídia, é 
+               inserido aqui. -->
+
+    <div class="cabecalho">
+    <!-- A tag <div> com a classe 'cabecalho' é usada para agrupar 
+               elementos que formam o cabeçalho visual do jogo.
+         'class="cabecalho"' ajuda a aplicar estilos específicos 
+               definidos no CSS para diferenciar esta seção das 
+               outras partes da página. -->
+
+        <h1>Breakout Game</h1>
+        <!-- A tag <h1> é usada aqui para o título principal da 
+                    página, que é "Breakout Game".
+             O uso de <h1> é importante para a acessibilidade e SEO, 
+                    pois define o contexto e o propósito 
+                    principal da página. -->
+
+        <p id="pontuacao"></p>
+        <!-- A tag <p> com o id 'pontuacao' serve como um contêiner 
+                    para exibir a pontuação do jogador.
+             O 'id="pontuacao"' é um identificador único que será 
+                    utilizado pelo JavaScript para atualizar 
+                    dinamicamente o conteúdo deste parágrafo
+             com a pontuação do jogador à medida que o jogo progride. -->
+
+    </div>
+
+    <canvas id="meuCanvas"></canvas>
+    <!-- A tag <canvas> é usada para desenhar gráficos via 
+               scripting (normalmente JavaScript).
+         O 'id="meuCanvas"' identifica este elemento de canvas de 
+               forma única para que possa ser referenciado pelo 
+               JavaScript para renderizar o jogo.
+         Este é o elemento onde o jogo Breakout é visualmente 
+               desenhado e interagido pelo usuário. -->
+
+    <script src="script.js"></script>
+    <!-- A tag <script> com o atributo 'src' que aponta para 'script.js' 
+               vincula o arquivo JavaScript externo que contém a lógica do jogo.
+         Esse script controla a dinâmica do jogo, manipulando os 
+               elementos do DOM como o canvas e o texto de 
+               pontuação, e gerencia a lógica de jogo,
+               eventos de entrada do usuário e atualização dos 
+               estados do jogo. -->
+
+</body>
+<!-- Fecha a tag <body>, que encapsula todo o conteúdo que o 
+               usuário pode ver e interagir na página. -->
+               
+</html>
+<!-- Fecha a tag <html>, que encapsula todo o documento HTML. -->
