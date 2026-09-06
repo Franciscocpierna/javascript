@@ -1,0 +1,101 @@
+body {
+
+    display: flex;
+    /* Define o modelo de caixa do elemento 'body' para 'flex', 
+            permitindo o uso de flexbox para alinhar e distribuir 
+            seus elementos filhos. */
+
+    flex-direction: column;
+    /* Define a direção principal do flexbox como 'column', 
+            fazendo com que os elementos filhos sejam organizados 
+            verticalmente. */
+
+    align-items: center;
+    /* Alinha os elementos filhos horizontalmente ao 
+            centro do elemento 'body'. */
+
+    justify-content: center;
+    /* Alinha os elementos filhos verticalmente ao 
+            centro do elemento 'body'. */
+
+    height: 100vh;
+    /* Define a altura do 'body' para ser igual a 100% da 
+            altura da viewport, garantindo que o corpo ocupe 
+            toda a altura visível da janela do navegador. */
+
+    margin: 0;
+    /* Remove a margem padrão do 'body', ajudando a evitar 
+            espaços indesejados ao redor dos elementos dentro dele. */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do texto dentro do 'body' para 
+            Arial, com fallback para qualquer fonte sans-serif, se o 
+            Arial não estiver disponível. */
+
+    background-color: #000;
+    /* Define a cor de fundo do 'body' para preto. */
+
+    color: white;
+    /* Define a cor do texto dentro do 'body' para branco, 
+            garantindo contraste com o fundo preto. */
+
+}
+
+.telajogo {
+
+    display: flex;
+    /* Define o modelo de caixa do elemento com a classe 'telajogo' 
+            para 'flex', permitindo o uso de flexbox para alinhar e 
+            distribuir seus elementos filhos. */
+
+    flex-direction: column;
+    /* Define a direção principal do flexbox como 'column', fazendo 
+            com que os elementos filhos sejam organizados verticalmente. */
+
+    align-items: center;
+    /* Alinha os elementos filhos horizontalmente ao centro do 
+            elemento com a classe 'telajogo'. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem de 20 pixels na parte inferior do 
+            elemento com a classe 'telajogo', criando um espaço 
+            entre ele e qualquer elemento abaixo. */
+
+}
+
+.informacoes {
+
+    display: flex;
+    /* Aplica o modelo de caixa flexível ao elemento com a 
+                classe 'informacoes', o que facilita o alinhamento e a 
+                distribuição dos elementos filhos. */
+
+    gap: 20px;
+    /* Define um espaço de 20 pixels entre cada elemento filho 
+                dentro do elemento 'informacoes', garantindo que 
+                não fiquem colados uns nos outros. */
+
+}
+
+canvas {
+
+    border: 1px solid #fff;
+    /* Define uma borda sólida branca de 1 pixel de espessura ao 
+                redor do elemento 'canvas', melhorando sua 
+                visibilidade na página. */
+
+    background-color: #000;
+    /* Define a cor de fundo do elemento 'canvas' para preto, 
+                criando um contraste com a borda branca e elementos 
+                dentro do canvas. */
+
+}
+
+#pontuacao, #vidas {
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para os elementos com os 
+                IDs 'pontuacao' e 'vidas' para 18 pixels, 
+                garantindo que o texto seja facilmente legível. */
+                
+}

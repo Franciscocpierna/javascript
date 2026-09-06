@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- A linha acima declara o tipo de documento como HTML5, que é a 
+            versão mais recente e recomendada do HTML. -->
+
+<html lang="pt-BR">
+<!-- O elemento 'html' é a raiz do documento HTML, com o atributo 'lang' 
+            definido como 'pt-BR' para indicar que o conteúdo está em 
+            Português do Brasil. -->
+
+<head>
+<!-- O elemento 'head' contém metadados, scripts, estilos e outras 
+            informações que não são exibidas diretamente na página web. -->
+
+    <meta charset="UTF-8">
+    <!-- O elemento 'meta' com o atributo 'charset' define o conjunto de 
+            caracteres usado no documento, neste caso, UTF-8, que inclui 
+            quase todos os caracteres de todos os alfabetos humanos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Outro 'meta' elemento usado para configurar a janela de 
+            visualização da página para ser responsiva. 
+        'width=device-width' faz com que a largura da página 
+                siga a largura do dispositivo. 
+        'initial-scale=1.0' define o nível inicial de zoom quando a 
+                página é carregada pela primeira vez. -->
+
+    <title>Asteroids Game</title>
+    <!-- O elemento 'title' define o título da página, que é 
+                exibido na aba do navegador. Este título é útil para a 
+                usabilidade e SEO. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- O elemento 'link' é usado aqui para conectar uma folha de 
+                estilos CSS externa ao documento HTML. 'href="styles.css"' 
+                especifica o caminho para o arquivo CSS que contém os 
+                estilos a serem aplicados à página. -->
+
+</head>
+<!-- Fim do elemento 'head'. -->
+
+<body>
+<!-- O elemento 'body' contém todo o conteúdo visível da página, 
+            como texto, imagens, vídeos, jogos, entre outros 
+            elementos navegáveis. -->
+
+    <div class="telajogo">
+    <!-- Um 'div' com a classe 'telajogo' é usado para agrupar 
+                visualmente e semanticamente elementos relacionados ao 
+                jogo "Asteroids", facilitando a aplicação de estilos e 
+                scripts específicos. -->
+
+        <h1>Asteroids Game</h1>
+        <!-- O elemento 'h1' apresenta o título principal da página, 
+                    neste caso, o nome do jogo, que é importante para 
+                    acessibilidade e SEO. -->
+
+        <div class="informacoes">
+        <!-- Um 'div' com a classe 'informacoes' para agrupar elementos 
+                    que exibirão as informações do jogo, como pontuação e vidas. -->
+
+            <p id="pontuacao"></p>
+            <!-- Parágrafo com 'id' de 'pontuacao' onde a pontuação do jogo 
+                        será exibida. A identificação única permite manipular 
+                        facilmente este elemento com CSS e JavaScript. -->
+
+            <p id="vidas"></p>
+            <!-- Parágrafo com 'id' de 'vidas' para mostrar as vidas 
+                        restantes do jogador no jogo. Similar ao parágrafo de 
+                        pontuação, é facilmente manipulável. -->
+
+        </div>
+        <!-- Fim do 'div' que contém as informações do jogo. -->
+
+    </div>
+    <!-- Fim do 'div' principal que encapsula o conteúdo relacionado ao jogo. -->
+
+    <canvas id="telaJogo"></canvas>
+    <!-- O elemento 'canvas' com 'id' 'telaJogo' é usado para desenhar 
+                gráficos via scripting (por exemplo, com JavaScript). 
+                É aqui que o jogo será renderizado. -->
+
+    <script src="script.js"></script>
+    <!-- O elemento 'script' com o atributo 'src' que aponta para 'script.js', 
+                onde o JavaScript que controla as funcionalidades do jogo 
+                está contido. Este script gerencia a lógica do jogo, eventos, e 
+                interações do usuário. -->
+
+</body>
+<!-- Fim do elemento 'body', que encerra todo o conteúdo principal da página. -->
+
+</html>
+<!-- Fim do documento HTML. Esta tag indica que todos os 
+            elementos HTML introduzidos devem ser considerados como 
+            parte do documento. -->
