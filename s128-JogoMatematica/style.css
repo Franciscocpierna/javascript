@@ -1,0 +1,181 @@
+/* Estilos aplicados ao corpo do documento HTML 
+        para formatação básica da página. */
+body {
+
+    /* Define a família de fontes padrão para Arial, ou 
+            qualquer fonte sem serifa se Arial não estiver disponível. */
+    font-family: Arial, sans-serif;
+
+    /* Define a cor de fundo do corpo da página para um cinza claro. */
+    background-color: #f0f0f0;
+
+    /* Remove as margens padrão do corpo para garantir 
+            que o conteúdo se estenda até as bordas da janela. */
+    margin: 0;
+
+    /* Estabelece um contexto de flexbox para alinhar os
+            itens dentro do corpo da página. */
+    display: flex;
+
+    /* Alinha os itens flexíveis horizontalmente no centro. */
+    justify-content: center;
+
+    /* Alinha os itens flexíveis verticalmente no centro. */
+    align-items: center;
+
+    /* Define a altura do corpo para ser igual à altura da 
+            janela de visualização do navegador. */
+    height: 100vh;
+
+}
+
+/* Estilos aplicados ao contêiner principal dentro do 
+        corpo, que agrupa todos os elementos do jogo. */
+.container {
+
+    /* Alinha o texto de todos os elementos filhos ao 
+            centro do contêiner. */
+    text-align: center;
+
+    /* Define a cor de fundo do contêiner para branco. */
+    background-color: #ffffff;
+
+    /* Adiciona um preenchimento de 20px em todos os lados 
+            dentro do contêiner para espaço interno ao 
+            redor do conteúdo. */
+    padding: 20px;
+
+    /* Aplica um raio de borda de 10px para arredondar 
+            os cantos do contêiner. */
+    border-radius: 10px;
+
+    /* Aplica uma sombra leve abaixo do contêiner para 
+            um efeito visual de elevação. */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* Estiliza o cabeçalho principal (h1) do jogo. */
+h1 {
+
+    /* Define o tamanho da fonte do cabeçalho para 36 
+            pixels, tornando-o grande e destacado. */
+    font-size: 36px;
+
+    /* Define a cor do texto do cabeçalho para um cinza 
+            escuro (#333), proporcionando boa legibilidade. */
+    color: #333;
+}
+
+/* Estiliza o parágrafo usado para exibir a questão 
+        do jogo de matemática. */
+.questao {
+
+    /* Define o tamanho da fonte para 24 pixels, tornando o 
+            texto da questão claramente visível. */
+    font-size: 24px;
+
+    /* Aplica o estilo de fonte em negrito, destacando a 
+            questão no contexto do jogo. */
+    font-weight: bold;
+
+    /* Define uma margem superior e inferior de 20 pixels 
+            para separar visualmente a questão de outros elementos. */
+    margin: 20px 0;
+}
+
+/* Estiliza os campos de entrada para respostas, ajustando 
+        seu tamanho e aparência. */
+.input {
+
+    /* Define o tamanho da fonte para 18 pixels, assegurando 
+            que o texto dentro do campo de entrada seja 
+            facilmente legível. */
+    font-size: 18px;
+
+    /* Adiciona um preenchimento de 10 pixels em todas as 
+            direções dentro do campo de entrada, melhorando a 
+            interação visual. */
+    padding: 10px;
+
+    /* Define a largura do campo de entrada para 200 pixels, 
+            garantindo espaço suficiente para inserção de números. */
+    width: 200px;
+
+    /* Adiciona uma margem na parte inferior de 10 pixels para 
+            separar o campo de entrada dos elementos 
+            que estão abaixo. */
+    margin-bottom: 10px;
+}
+
+/* Estiliza os botões dentro do jogo, ajustando fonte, cor de 
+        fundo, e outras propriedades para uma interação 
+        visual clara e atraente. */
+.btn {
+
+    /* Define o tamanho da fonte dos botões para 18 
+            pixels, garantindo legibilidade. */
+    font-size: 18px;
+
+    /* Define a cor de fundo dos botões para um verde 
+            vibrante (#4CAF50), tornando-os visualmente 
+            distintos e convidativos. */
+    background-color: #4CAF50;
+
+    /* Define a cor do texto dentro dos botões para branco, 
+            criando um alto contraste que facilita a leitura. */
+    color: white;
+
+    /* Remove a borda do botão para um design mais limpo e moderno. */
+    border: none;
+
+    /* Adiciona um preenchimento interno de 10 pixels 
+            verticalmente e 20 pixels horizontalmente para 
+            melhorar a ergonomia e a estética do botão. */
+    padding: 10px 20px;
+
+    /* Muda o cursor para o estilo 'pointer', indicando 
+            que o botão é clicável. */
+    cursor: pointer;
+
+}
+
+/* Estiliza o botão quando o mouse está sobre ele, 
+        mudando a cor de fundo para um tom de verde 
+        ligeiramente mais escuro. */
+.btn:hover {
+
+    /* Define a cor de fundo quando o cursor do mouse 
+            passa sobre o botão para um verde mais 
+            escuro (#45a049), proporcionando um feedback 
+            visual imediato. */
+    background-color: #45a049;
+
+}
+
+/* Aplica estilo ao texto que mostra as vidas restantes 
+        do jogador, usando a cor vermelha para indicar a 
+        urgência ou o perigo. */
+.vidas {
+
+    /* Define a cor do texto para vermelho, uma cor 
+            frequentemente associada a alertas ou avisos 
+            importantes, reforçando a importância 
+            das vidas no jogo. */
+    color: red;
+
+}
+
+/* Estiliza o texto que mostra o tempo restante para 
+        responder a questão, usando a cor azul para 
+        destacar a informação de tempo. */
+.tempo {
+
+    /* Define a cor do texto para azul, uma cor que 
+            transmite calma e clareza, ajudando a 
+            destacar a informação do tempo restante 
+            sem causar ansiedade. */
+    color: blue;
+
+}
