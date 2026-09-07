@@ -1,0 +1,90 @@
+<!-- Declaração de DOCTYPE informando ao navegador 
+        que este é um documento HTML5 -->
+<!DOCTYPE html>
+
+<!-- Abre a tag html definindo o idioma do documento 
+        como português do Brasil -->
+<html lang="pt-BR">
+
+<!-- Abre a tag head, que contém metadados e 
+        referências a recursos externos -->
+<head>
+
+    <!-- Define a codificação de caracteres do documento 
+            como UTF-8, que inclui a maioria dos caracteres 
+            usados em vários idiomas -->
+    <meta charset="UTF-8">
+
+    <!-- Define configurações de visualização para dispositivos
+            móveis, garantindo que a largura seja definida pelo 
+            dispositivo e a escala inicial seja 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título do documento, que aparecerá 
+            na aba do navegador -->
+    <title>Jogo de Seleção de Frutas Iguais</title>
+
+    <!-- Vincula uma folha de estilos externa ao documento, 
+            especificando o caminho relativo ao arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+
+<!-- Fecha a tag head -->
+</head>
+
+
+<!-- Inicia o corpo do documento HTML, onde o conteúdo 
+        visível da página é colocado -->
+<body>
+
+    <!-- Divisão principal que engloba todo o jogo, 
+            identificada por um ID 'game' -->
+    <div id="game">
+
+        <!-- Título principal da página, exibido 
+                no topo do jogo -->
+        <h1>Jogo de Seleção de Frutas Iguais</h1>
+
+        <!-- Divisão contendo as informações do jogo como 
+                vidas, pontuação, fase, tempo e frutas coletadas -->
+        <div id="info">
+
+            <!-- Parágrafo mostrando a quantidade de vidas do 
+                    jogador, iniciando com 3 -->
+            <p id="vidas">Vidas: 3</p>
+
+            <!-- Parágrafo mostrando a pontuação do 
+                    jogador, iniciando com 0 -->
+            <p id="pontuacao">Pontuação: 0</p>
+
+            <!-- Parágrafo mostrando a fase atual do jogo,
+                    começando pela fase 1 -->
+            <p id="fase">Fase: 1</p>
+
+            <!-- Parágrafo mostrando o tempo restante para a 
+                    fase, iniciando com 60 segundos -->
+            <p id="tempo">Tempo: 60s</p>
+
+            <!-- Parágrafo mostrando quantas frutas foram 
+                    coletadas na fase atual, começando 
+                    de 0 de um total de 20 -->
+            <p id="coletadas">Coletadas: 0/20</p>
+
+        </div>
+
+        <!-- Divisão que servirá como a grade de jogo
+                onde as frutas serão exibidas -->
+        <div id="grid"></div>
+
+    </div>
+
+    <!-- Inclui o arquivo JavaScript que 
+            contém a lógica do jogo -->
+    <script src="script.js"></script>
+
+<!-- Encerra a tag body, finalizando o 
+        conteúdo visível da página -->
+</body>
+
+<!-- Encerra a tag html, finalizando o 
+        documento HTML -->
+</html>
