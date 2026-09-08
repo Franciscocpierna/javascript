@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento. Isso informa ao navegador 
+        que o arquivo segue as regras do HTML5. -->
+
+<html lang="pt-BR">
+<!-- Define o início do documento HTML. O atributo "lang=pt-BR" 
+        especifica que o idioma principal da página é Português do Brasil. -->
+
+<head>
+    <!-- Início da seção de cabeçalho. Contém informações sobre a
+            página que não são exibidas diretamente ao usuário. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres usado na página como UTF-8, o 
+            que permite o uso de caracteres especiais, como acentos. -->
+
+    <title>Pac-Man</title>
+    <!-- Define o título da página. Este texto aparecerá na 
+            aba do navegador ou no título da janela. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Inclui um arquivo de estilos CSS externo chamado "styles.css". 
+     Ele contém as regras de aparência da página. -->
+
+</head>
+
+<body>
+    <!-- Início do corpo da página. Tudo dentro dessa tag 
+            será exibido ao usuário. -->
+
+    <canvas id="gameCanvas" width="448" height="496"></canvas>
+    <!-- Define um elemento de "canvas" onde os gráficos do 
+                jogo serão desenhados. 
+         - O atributo "id" identifica o canvas como "gameCanvas", 
+                    permitindo que ele seja manipulado por JavaScript.
+         - Os atributos "width" e "height" definem a largura (448 pixels) e 
+                    a altura (496 pixels) do canvas. -->
+
+    <script src="script.js" defer></script>
+    <!-- Inclui um arquivo JavaScript chamado "script.js". 
+         - O atributo "defer" garante que o script será executado 
+                    apenas após a página ser completamente carregada. -->
+
+</body>
+</html>
+<!-- Fim do documento HTML. -->

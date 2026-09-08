@@ -1,0 +1,33 @@
+/* Estilo para o corpo da página */
+body {
+
+    margin: 0;
+    /* Remove as margens padrão do navegador para que o 
+          conteúdo ocupe toda a tela. */
+  
+    background-color: black;
+    /* Define o fundo do corpo da página como preto. 
+          Isso ajuda a criar um visual consistente com o jogo. */
+  
+    overflow: hidden;
+    /* Impede que barras de rolagem apareçam, mesmo que o 
+          conteúdo exceda o tamanho da tela. */
+  
+  }
+  
+  /* Estilo específico para o elemento <canvas> */
+  canvas {
+  
+    display: block;
+    /* Exibe o canvas como um bloco, o que faz com que ele se 
+            comporte como um elemento de nível de bloco (ocupando 
+            toda a largura disponível). */
+  
+    margin: 0 auto;
+    /* Centraliza o canvas horizontalmente no corpo da página. */
+  
+    background-color: black;
+    /* Define o fundo do canvas como preto para combinar 
+          com o fundo da página. */
+  
+  }
