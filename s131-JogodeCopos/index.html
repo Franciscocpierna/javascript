@@ -1,0 +1,61 @@
+<!-- Esta linha declara que o documento é um HTML5, o 
+        que é essencial para que o navegador saiba como 
+        processar corretamente o conteúdo da página. -->
+<!DOCTYPE html>
+
+<!-- A tag <html> inicia o documento HTML, com o 
+        atributo 'lang' definindo o idioma como português 
+        do Brasil, o que ajuda os navegadores a aplicar as 
+        configurações de localização corretas. -->
+<html lang="pt-BR">
+
+<!-- A tag <head> contém metadados e links para scripts ou 
+        folhas de estilo que não são exibidos diretamente na 
+        página da web, mas que são essenciais para o 
+        processamento da página. -->
+<head>
+
+    <!-- A tag <meta> com o atributo charset 'UTF-8' 
+            especifica a codificação de caracteres usada para o 
+            texto no documento, garantindo que caracteres 
+            especiais e acentos sejam exibidos corretamente. -->
+    <meta charset="UTF-8">
+
+    <!-- A tag <title> define o título da página, que é exibido 
+                na aba do navegador e usado em resultados de 
+                busca e bookmarks. -->
+    <title>Jogo de Copos</title>
+
+    <!-- A tag <link> aqui é usada para conectar uma folha de 
+            estilos externa ao documento, permitindo a 
+            estilização da página. 
+    O 'href' especifica o caminho para o arquivo de estilos. -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fecha a tag <head>, indicando o fim do 
+            cabeçalho do documento. -->
+</head>
+
+
+<!-- A tag <body> delimita o conteúdo principal da página, 
+            onde elementos visíveis ao usuário são colocados. -->
+<body>
+
+    <!-- A tag <canvas> é usada para desenho gráfico via 
+            scripting (geralmente JavaScript), aqui definida com 
+            um ID único 'tela' e dimensões específicas de 800x600 pixels. -->
+    <canvas id="tela" width="800" height="600"></canvas>
+
+    <!-- A tag <script> é usada para carregar um arquivo JavaScript 
+            externo, que contém lógica ou funcionalidades para a página. 
+        O 'src' aponta para o caminho do arquivo JavaScript. -->
+    <script src="script.js"></script>
+
+<!-- Fecha a tag <body>, indicando que todos os elementos a 
+        serem exibidos na página foram definidos. -->
+
+</body>
+
+<!-- Fecha a tag <html>, marcando o fim 
+            do documento HTML. -->
+</html>

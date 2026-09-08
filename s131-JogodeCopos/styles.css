@@ -1,0 +1,40 @@
+/* Seleciona o elemento <body> e aplica as seguintes 
+        regras de estilo. O <body> contém todo o 
+        conteúdo visível da página. */
+body {
+
+    /* Define a margem do elemento <body> para 0, removendo 
+            qualquer espaço entre os limites do elemento e os 
+            limites da janela do navegador. */
+    margin: 0;
+    
+    /* Define o preenchimento (padding) do elemento <body> para 0, 
+            garantindo que não haja espaço entre os limites do 
+            elemento e seu conteúdo interno. */
+    padding: 0;
+    
+    /* Define a cor de fundo do elemento <body> 
+            para branco (#FFFFFF). */
+    background-color: #FFFFFF;
+
+}
+
+/* Seleciona o elemento com o ID 'tela', que é um elemento <canvas> 
+            usado nesta página. IDs são únicos dentro de uma página, 
+            então isso aplica estilos diretamente ao canvas do jogo. */
+#tela {
+
+    /* Define o modelo de caixa do <canvas> para 'block', o que significa 
+            que ele ocupará toda a largura disponível em sua linha no layout, 
+            começando em uma nova linha e forçando os seguintes conteúdos a 
+            também começarem em uma nova linha. */
+    display: block;
+    
+    /* Centraliza o <canvas> horizontalmente dentro de seu contêiner ao 
+            configurar as margens esquerda e direita como 'auto'. */
+    margin: 0 auto;
+    
+    /* Define a cor de fundo do <canvas> para branco (#FFFFFF). */
+    background-color: #FFFFFF;
+
+}
