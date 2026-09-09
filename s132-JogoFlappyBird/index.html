@@ -1,0 +1,50 @@
+<!-- Declaração do tipo de documento como HTML5, 
+          que é a versão mais recente do HTML -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML, o atributo "lang" especifica o 
+          idioma principal da página como português do Brasil -->
+<html lang="pt-BR">
+
+<head>
+    
+    <!-- Define o conjunto de caracteres como UTF-8, garantindo 
+               suporte a caracteres especiais como acentos -->
+    <meta charset="UTF-8">
+    
+    <!-- Configurações para a viewport, garantindo que a página 
+               seja responsiva em dispositivos móveis. 
+         A largura é definida como a largura do dispositivo, e a 
+                    escala inicial é 1.0 para zoom padrão -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página, exibido na aba do navegador ou
+               na visualização do histórico -->
+    <title>Flappy Bird em JavaScript</title>
+    
+    <!-- Link para o arquivo de estilos CSS externo, que 
+               define o layout e aparência do jogo -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Elemento canvas onde o jogo será renderizado.
+         O atributo "id" identifica o canvas como "canvasJogo".
+         Os atributos "width" e "height" definem o tamanho do 
+               canvas em pixels: 400 de largura e 600 de altura -->
+    <canvas id="canvasJogo" width="400" height="600"></canvas>
+    
+    <!-- Botão que inicia o jogo. 
+         "id" é usado para identificar o botão como "botaoComecar".
+         O texto exibido no botão é "Começar" -->
+    <button id="botaoComecar">Começar</button>
+    
+    <!-- Inclusão do arquivo JavaScript externo, responsável 
+               pela lógica e mecânica do jogo.
+         O navegador carrega e executa o código presente 
+                    no arquivo "game.js" -->
+    <script src="game.js"></script>
+
+</body>
+</html>

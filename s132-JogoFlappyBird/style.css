@@ -1,0 +1,97 @@
+/* Define o estilo básico do corpo da página (body) */
+body {
+
+    /* Utiliza display flex para centralizar elementos 
+            horizontalmente e verticalmente */
+    display: flex;
+    
+    /* Alinha os itens no centro do eixo horizontal */
+    justify-content: center;
+    
+    /* Alinha os itens no centro do eixo vertical */
+    align-items: center;
+    
+    /* Define a altura da página como 100% da altura 
+            da janela do navegador */
+    height: 100vh;
+    
+    /* Remove margens padrão do body */
+    margin: 0;
+    
+    /* Define a cor de fundo como azul claro (#87CEEB), 
+            simulando um céu */
+    background-color: #87CEEB;
+    
+    /* Define a fonte padrão como Arial ou, se 
+            indisponível, uma fonte sans-serif */
+    font-family: Arial, sans-serif;
+    
+    /* Esconde a barra de rolagem, caso o conteúdo 
+            ultrapasse os limites */
+    overflow: hidden;
+    
+    /* Posiciona os elementos relativos ao corpo da página */
+    position: relative;
+
+}
+
+/* Estilo para o canvas onde o jogo será renderizado */
+#canvasJogo {
+
+    /* Adiciona uma borda preta com 2px de espessura 
+            ao redor do canvas */
+    border: 2px solid #000;
+
+    /* Define a cor de fundo do canvas como azul (#70c5ce), 
+            levemente diferente do corpo */
+    background-color: #70c5ce;
+
+}
+
+/* Estilo para o botão de início do jogo */
+#botaoComecar {
+
+    /* Exibe o botão como um bloco para permitir 
+            controle de posicionamento */
+    display: block;
+    
+    /* Posiciona o botão de forma absoluta em relação ao body */
+    position: absolute;
+    
+    /* Centraliza verticalmente o botão na metade 
+            da altura da página */
+    top: 50%;
+    
+    /* Centraliza horizontalmente o botão na metade 
+            da largura da página */
+    left: 50%;
+    
+    /* Usa transform para ajustar o botão, movendo-o 
+            para o centro real com -50% */
+    transform: translate(-50%, -50%);
+    
+    /* Define a cor de fundo do botão como cinza escuro (#333) */
+    background-color: #333;
+    
+    /* Define a cor do texto do botão como branco (#FFF) */
+    color: #FFF;
+    
+    /* Adiciona preenchimento interno ao botão (10px em 
+            cima/baixo e 20px nas laterais) */
+    padding: 10px 20px;
+    
+    /* Define o tamanho da fonte como 20px para 
+            boa legibilidade */
+    font-size: 20px;
+    
+    /* Remove bordas padrão do botão */
+    border: none;
+    
+    /* Define o cursor como "ponteiro" ao passar sobre o 
+            botão, indicando interatividade */
+    cursor: pointer;
+    
+    /* Adiciona bordas arredondadas com raio de 5px */
+    border-radius: 5px;
+
+}
