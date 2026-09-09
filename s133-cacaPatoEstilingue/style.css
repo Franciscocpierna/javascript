@@ -1,0 +1,34 @@
+/* Estilos aplicados ao elemento <body> */
+body {
+
+    /* Configura o layout do body para usar o modelo Flexbox */
+    display: flex;
+
+    /* Centraliza horizontalmente o conteúdo dentro do body */
+    justify-content: center;
+
+    /* Centraliza verticalmente o conteúdo dentro do body */
+    align-items: center;
+
+    /* Define a altura total do body para ocupar 100% da 
+            altura da janela do navegador */
+    height: 100vh;
+
+    /* Remove as margens padrão ao redor do body */
+    margin: 0;
+
+    /* Define a cor de fundo do body como azul claro */
+    background-color: #87CEEB; /* Representa um céu limpo */
+
+}
+
+/* Estilos aplicados ao elemento <canvas> */
+canvas {
+
+    /* Define a cor de fundo do canvas como branco */
+    background-color: #FFFFFF;
+
+    /* Adiciona uma borda preta ao redor do canvas */
+    border: 2px solid black;
+    
+}
