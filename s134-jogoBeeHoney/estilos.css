@@ -1,0 +1,206 @@
+/* Estilos gerais do corpo da página */
+body {
+
+    /* Remove as margens padrão do navegador */
+    margin: 0;
+
+    /* Remove o preenchimento padrão do navegador */
+    padding: 0;
+
+    /* Define a cor de fundo do corpo como amarelo */
+    background-color: #FFD75A; /* Cor amarela */
+
+    /* Configura o layout como flexbox para centralizar o conteúdo */
+    display: flex;
+
+    /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
+
+    /* Centraliza o conteúdo verticalmente */
+    align-items: center;
+
+    /* Define a altura do corpo para ocupar 100% 
+            da altura da janela */
+    height: 100vh;
+
+    /* Define a fonte padrão como Arial, com fallback 
+            para fontes sans-serif */
+    font-family: 'Arial', sans-serif;
+
+    /* Posiciona o corpo em relação ao viewport para 
+            permitir elementos posicionados dentro */
+    position: relative;
+
+}
+
+
+/* Estilos aplicados ao elemento <canvas>, onde o 
+        jogo será renderizado */
+canvas {
+
+    /* Adiciona uma borda preta de 2 pixels ao redor do canvas */
+    border: 2px solid #000;
+
+    /* Define o fundo do canvas com a mesma cor amarela do corpo */
+    background-color: #FFD75A; /* Cor amarela */
+
+    /* Posiciona o canvas de forma absoluta, permitindo 
+            posicionamento preciso */
+    position: absolute;
+
+    /* Centraliza verticalmente o canvas em relação ao corpo */
+    top: 50%;
+
+    /* Centraliza horizontalmente o canvas em relação ao corpo */
+    left: 50%;
+
+    /* Move o elemento 50% para trás nas direções X e Y 
+            para garantir centralização exata */
+    transform: translate(-50%, -50%);
+
+    /* Garante que o canvas seja exibido como um 
+            bloco (não inline) */
+    display: block;
+
+}
+
+/* Estilos aplicados aos menus, incluindo o Menu 
+        Inicial e a Tela de Game Over */
+.menu {
+
+    /* Posiciona os menus de forma absoluta dentro do corpo */
+    position: absolute;
+
+    /* Centraliza o menu verticalmente em relação ao corpo */
+    top: 50%;
+
+    /* Centraliza o menu horizontalmente em relação ao corpo */
+    left: 50%;
+
+    /* Define a largura do menu como 400 pixels */
+    width: 400px;
+
+    /* Define a altura do menu como 600 pixels */
+    height: 600px;
+
+    /* Define a cor de fundo do menu como amarelo 
+            com uma leve transparência */
+    background-color: rgba(255, 223, 90, 0.95); /* Amarelo com transparência */
+
+    /* Utiliza flexbox para alinhar e organizar os 
+            elementos dentro do menu */
+    display: flex;
+
+    /* Alinha os itens dentro do menu em uma 
+            coluna (de cima para baixo) */
+    flex-direction: column;
+
+    /* Centraliza os itens horizontalmente no centro do menu */
+    justify-content: center;
+
+    /* Centraliza os itens verticalmente no centro do menu */
+    align-items: center;
+
+    /* Ajusta a posição do menu para que seu 
+            centro fique no meio da tela */
+    transform: translate(-50%, -50%);
+
+    /* Garante que o menu fique acima de outros 
+            elementos no layout */
+    z-index: 1;
+
+}
+
+/* Classe utilizada para ocultar elementos */
+.oculto {
+
+    /* Remove a exibição do elemento ao aplicá-la, 
+            tornando-o invisível */
+    display: none;
+
+}
+
+
+/* Estilos aplicados aos elementos de título (<h1>) */
+h1 {
+
+    /* Define o tamanho da fonte para 48 pixels, 
+            tornando o título bem destacado */
+    font-size: 48px;
+
+    /* Define a cor do texto como preto */
+    color: #000; /* Preto */
+
+    /* Adiciona um espaço de 20 pixels abaixo do título 
+            para separação de outros elementos */
+    margin-bottom: 20px;
+
+    /* Centraliza o texto horizontalmente dentro 
+            de seu contêiner */
+    text-align: center;
+
+}
+
+/* Estilos aplicados aos parágrafos (<p>) */
+p {
+
+    /* Define o tamanho da fonte para 24 pixels, 
+            garantindo boa legibilidade */
+    font-size: 24px;
+
+    /* Define a cor do texto como preto */
+    color: #000; /* Preto */
+
+    /* Adiciona um espaço de 30 pixels abaixo do parágrafo 
+            para separação de outros elementos */
+    margin-bottom: 30px;
+
+    /* Centraliza o texto horizontalmente dentro 
+            de seu contêiner */
+    text-align: center;
+
+}
+
+
+/* Estilos aplicados aos botões (<button>) */
+button {
+
+    /* Define o espaço interno do botão com 10px de 
+            altura e 20px de largura */
+    padding: 10px 20px;
+
+    /* Define o tamanho da fonte do texto do botão para 24px, 
+            garantindo boa legibilidade */
+    font-size: 24px;
+
+    /* Altera o cursor para o formato de "mão" ao passar o 
+            mouse sobre o botão, indicando interatividade */
+    cursor: pointer;
+
+    /* Define a cor de fundo do botão como preto */
+    background-color: #000; /* Preto */
+
+    /* Define a cor do texto do botão como amarelo */
+    color: #FFD75A; /* Amarelo */
+
+    /* Remove qualquer borda padrão do botão */
+    border: none;
+
+    /* Adiciona bordas arredondadas com raio de 5px, 
+            dando um visual mais amigável */
+    border-radius: 5px;
+
+    /* Configura uma transição suave para a alteração 
+            da cor de fundo ao passar o mouse */
+    transition: background-color 0.3s;
+
+}
+
+/* Estilos aplicados ao botão quando o mouse está sobre ele (hover) */
+button:hover {
+
+    /* Altera a cor de fundo para um preto mais claro 
+            ao passar o mouse */
+    background-color: #333; /* Preto mais claro */
+
+}

@@ -1,0 +1,89 @@
+<!-- Declaração do tipo de documento como HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início da tag raiz do documento HTML -->
+<html lang="pt-BR"> 
+
+<!-- Define o idioma principal do conteúdo da página 
+        como português do Brasil -->
+<head>
+
+    <!-- Define o conjunto de caracteres do documento como UTF-8, 
+            garantindo suporte a caracteres especiais -->
+    <meta charset="UTF-8">
+
+    <!-- Configura o viewport para que a página seja responsiva, 
+            ajustando-se corretamente em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título da página que será exibido 
+            na aba do navegador -->
+    <title>Bee Honey</title>
+
+    <!-- Link externo para o arquivo de estilo CSS, 
+            responsável pela aparência da página -->
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <!-- Início do corpo da página, onde o conteúdo 
+            visível e interativo será inserido -->
+
+    <!-- Elemento canvas usado para desenhar os gráficos do jogo -->
+    <!-- O atributo `id` permite acessar este elemento via 
+            JavaScript para manipulação -->
+    <!-- Atributos `width` e `height` definem as dimensões 
+            do canvas em pixels -->
+    <canvas id="canvasJogo" width="400" height="600"></canvas>
+
+    <!-- Div que representa o menu inicial do jogo -->
+    <!-- O atributo `id` é usado para identificar e 
+            manipular o menu via JavaScript -->
+    <!-- A classe `menu` aplica estilos específicos definidos no CSS -->
+    <div id="menuInicial" class="menu">
+        
+        <!-- Título principal do menu inicial -->
+        <h1>Bee Honey</h1>
+        
+        <!-- Parágrafo para exibir a pontuação no menu inicial -->
+        <!-- O atributo `id` permite que a pontuação seja 
+                atualizada dinamicamente via JavaScript -->
+        <p id="exibirPontuacaoMenu">Pontuação: 0</p>
+        
+        <!-- Botão para iniciar o jogo -->
+        <!-- O atributo `id` identifica o botão para que possa 
+                ser manipulado via JavaScript -->
+        <button id="botaoIniciar">Clique para Jogar</button>
+
+    </div>
+
+    <!-- Div que representa a tela de Game Over, exibida ao 
+            final do jogo -->
+    <!-- A classe `menu` aplica estilos gerais, enquanto `oculto` 
+            oculta este elemento inicialmente -->
+    <div id="telaGameOver" class="menu oculto">
+
+        <!-- Título principal exibido na tela de Game Over -->
+        <h1>Game Over</h1>
+        
+        <!-- Parágrafo que mostra a pontuação final do jogador -->
+        <!-- O atributo `id` permite que o valor seja atualizado 
+                dinamicamente via JavaScript -->
+        <p id="pontuacaoFinal">Pontuação Final: 0</p>
+        
+        <!-- Botão para reiniciar o jogo -->
+        <!-- O atributo `id` permite identificar o botão para 
+                manipulações via JavaScript -->
+        <button id="botaoReiniciar">Reiniciar Jogo</button>
+
+    </div>
+
+    <!-- Inclusão do arquivo JavaScript que contém a 
+            lógica do jogo -->
+    <!-- O atributo `src` aponta para o arquivo externo 
+            que será carregado -->
+    <script src="script.js"></script>
+
+</body>
+</html>
