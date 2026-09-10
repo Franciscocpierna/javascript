@@ -1,0 +1,150 @@
+body {
+    /* Estilo do corpo da página. Configurações gerais 
+                para alinhar e centralizar os elementos do jogo. */
+    
+    display: flex;
+    /* Define que os elementos dentro do corpo serão 
+                organizados como um "container flexível". */
+
+    justify-content: center;
+    /* Centraliza os elementos horizontalmente no corpo da página. */
+
+    align-items: center;
+    /* Centraliza os elementos verticalmente no corpo da página. */
+
+    height: 100vh;
+    /* Define a altura do corpo como 100% da altura da janela de 
+                visualização (viewport height). */
+
+    margin: 0;
+    /* Remove margens padrão ao redor do corpo da página. */
+
+    background-color: #FFFFFF;
+    /* Define a cor de fundo do corpo como branco. */
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte padrão para o texto do corpo como Arial. 
+    Caso não esteja disponível, usa uma fonte genérica sem serifa. */
+
+    position: relative;
+    /* Configura o corpo como um contêiner posicionado relativamente, 
+                permitindo que elementos internos usem posicionamento 
+                absoluto baseado nele. */
+
+}
+
+canvas {
+    /* Estilo aplicado ao elemento `<canvas>` onde o 
+                jogo será renderizado. */
+    
+    border: 2px solid #000;
+    /* Adiciona uma borda preta de 2px ao redor do canvas 
+                para destacá-lo visualmente. */
+
+}
+
+#pontuacao, #pontuacao-acumulada {
+    /* Estilo compartilhado pelos elementos com IDs 
+                `pontuacao` e `pontuacao-acumulada`. */
+
+    position: absolute;
+    /* Posiciona os elementos de forma absoluta em relação ao 
+                contêiner pai, que é o corpo da página. */
+
+    top: 10px;
+    /* Define que ambos os elementos devem ficar a 10px 
+                do topo da página. */
+
+    font-size: 20px;
+    /* Define o tamanho da fonte para o texto exibido 
+                nos elementos como 20px. */
+
+    color: #FF8C00;
+    /* Define a cor do texto como laranja escuro (#FF8C00). */
+
+}
+
+#pontuacao {
+    /* Estilo específico para o elemento com ID `pontuacao`. */
+
+    left: 10px;
+    /* Posiciona este elemento a 10px do lado 
+                esquerdo da tela. */
+
+}
+
+#pontuacao-acumulada {
+    /* Estilo específico para o elemento com ID 
+                `pontuacao-acumulada`. */
+
+    right: 10px;
+    /* Posiciona este elemento a 10px do lado direito da tela. */
+
+}
+
+#fim-jogo {
+    /* Estilo aplicado à div com ID `fim-jogo`, que é 
+                exibida quando o jogo termina. */
+
+    display: none;
+    /* Inicialmente, o elemento não é exibido na página. */
+
+    position: absolute;
+    /* Posiciona o elemento de forma absoluta em relação ao 
+                contêiner pai (o corpo da página). */
+
+    top: 50%;
+    left: 50%;
+    /* Centraliza o elemento verticalmente e horizontalmente 
+                em relação à página. */
+
+    transform: translate(-50%, -50%);
+    /* Ajusta o ponto de ancoragem para o centro do elemento, 
+                garantindo que ele fique perfeitamente centralizado. */
+
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Define o fundo como preto com 80% de opacidade,
+                permitindo uma leve transparência. */
+
+    color: white;
+    /* Define a cor do texto como branco, garantindo 
+                contraste com o fundo escuro. */
+
+    padding: 20px;
+    /* Adiciona 20px de espaço interno ao redor do conteúdo, 
+                dando espaçamento dentro do elemento. */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do elemento em 10px, dando um 
+                efeito visual mais suave. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do elemento. */
+    
+}
+
+#fim-jogo button {
+    /* Estilo aplicado ao botão dentro da div `fim-jogo`. */
+
+    margin-top: 10px;
+    /* Adiciona um espaçamento de 10px entre o botão e os 
+                elementos acima dele. */
+
+    padding: 10px;
+    /* Adiciona 10px de espaço interno ao redor do texto do botão, 
+                aumentando seu tamanho e tornando-o mais clicável. */
+
+    background-color: #FF8C00;
+    /* Define a cor de fundo do botão como laranja escuro (#FF8C00). */
+
+    border: none;
+    /* Remove a borda padrão do botão. */
+
+    color: white;
+    /* Define a cor do texto do botão como branco. */
+
+    cursor: pointer;
+    /* Altera o cursor para uma mão ao passar o mouse sobre o 
+                botão, indicando que ele é clicável. */
+                
+}

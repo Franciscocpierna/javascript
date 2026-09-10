@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Declara que o documento está no formato HTML5 e 
+          especifica que o idioma da página é português do 
+          Brasil com o atributo `lang="pt-BR"`. -->
+
+<head>
+    <!-- Início do cabeçalho da página. Contém meta-informações e 
+               links externos. -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres do documento como UTF-8, 
+               permitindo a exibição correta de caracteres 
+               especiais, como acentos e símbolos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define que a página deve ser responsiva, ajustando-se 
+                    automaticamente ao tamanho da tela do dispositivo. 
+         - `width=device-width`: Usa a largura da tela do dispositivo.
+         - `initial-scale=1.0`: Define o nível de zoom inicial como 100%. -->
+
+    <title>Solte o Objeto na Lixeira</title>
+    <!-- Define o título da página, que será exibido na aba do 
+               navegador ou como rótulo do favorito. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Faz referência a um arquivo CSS externo chamado `style.css`, 
+               que será usado para estilizar a página. -->
+
+</head>
+
+<body>
+    <!-- Início do corpo da página. É onde os elementos 
+               visíveis do jogo são adicionados. -->
+
+    <div id="pontuacao">Pontuação: 0</div>
+    <!-- Div para exibir a pontuação atual do jogador. 
+         - A pontuação começa em 0 e é atualizada 
+               dinamicamente durante o jogo. -->
+
+    <div id="pontuacao-acumulada">Pontuação Acumulada: 0</div>
+    <!-- Div para exibir a pontuação acumulada, que soma os
+                    pontos de várias partidas.
+         - Este valor é armazenado no `localStorage` e exibido 
+                    mesmo após a página ser recarregada. -->
+
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <!-- Canvas onde o jogo acontece.
+         - `id="gameCanvas"`: Permite identificar o 
+                    canvas no JavaScript.
+         - `width="400"` e `height="600"`: Define as dimensões 
+                    do canvas em pixels. -->
+
+    <div id="fim-jogo">
+        <!-- Div que aparece quando o jogo termina. Inicialmente, está oculta. -->
+        
+        <h2>Fim de Jogo!</h2>
+        <!-- Exibe uma mensagem indicando o fim do jogo. -->
+
+        <p id="pontuacao-final"></p>
+        <!-- Parágrafo onde será exibida a pontuação final do 
+                    jogador após o término do jogo. -->
+
+        <button onclick="reiniciarJogo()">Jogar Novamente</button>
+        <!-- Botão para reiniciar o jogo.
+             - O evento `onclick` chama a função `reiniciarJogo()` 
+                         definida no JavaScript. -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Inclui o arquivo JavaScript externo chamado `script.js`, 
+               onde a lógica do jogo está implementada. -->
+
+</body>
+</html>
