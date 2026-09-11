@@ -1,0 +1,57 @@
+<!-- Declaração do tipo de documento HTML5. -->
+<!DOCTYPE html>
+
+<!-- Elemento principal do documento HTML, configurado com o 
+        idioma como português do Brasil. -->
+<html lang="pt-BR">
+
+<!-- Cabeçalho do documento HTML, onde estão os metadados e 
+        os links para recursos externos. -->
+<head>
+
+    <!-- Define o conjunto de caracteres como UTF-8 para 
+            permitir a exibição de caracteres especiais. -->
+    <meta charset="UTF-8">
+    
+    <!-- Define o viewport para ajustar o layout da 
+            página em dispositivos móveis. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Define o título da página, exibido na 
+            aba do navegador. -->
+    <title>Helicóptero no Túnel</title>
+    
+    <!-- Vincula o arquivo CSS externo para 
+            estilização da página. -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<!-- Corpo do documento HTML, onde o conteúdo 
+        visível é exibido. -->
+<body>
+
+    <!-- Div que representa o menu principal do jogo. -->
+    <div id="menu">
+
+        <!-- Título do jogo, exibido no menu. -->
+        <h1>Helicóptero no Túnel</h1>
+        
+        <!-- Parágrafo exibindo a pontuação inicial do jogador. -->
+        <p id="pontuacao">Pontos: 0</p>
+        
+        <!-- Botão para iniciar o jogo. -->
+        <button id="botaoJogar">Jogar</button>
+
+    </div>
+    
+    <!-- Canvas onde o jogo será renderizado. -->
+    <canvas id="gameCanvas"></canvas>
+    
+    <!-- Script JavaScript externo que contém a lógica do jogo. -->
+    <script src="script.js"></script>
+
+</body>
+
+<!-- Fim do documento HTML. -->
+</html>

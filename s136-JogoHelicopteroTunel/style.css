@@ -1,0 +1,116 @@
+/* Estilo para o corpo e o elemento principal 
+        do documento HTML. */
+body, html {
+
+    /* Remove margens padrão dos navegadores para 
+            ocupar toda a tela. */
+    margin: 0;
+
+    /* Remove o preenchimento interno padrão dos navegadores. */
+    padding: 0;
+
+    /* Oculta a barra de rolagem para garantir que o 
+            jogo ocupe toda a tela visível. */
+    overflow: hidden;
+
+    /* Configura o layout do corpo como flexbox para 
+            centralizar os elementos na tela. */
+    display: flex;
+
+    /* Alinha o conteúdo horizontalmente ao centro da tela. */
+    justify-content: center;
+
+    /* Alinha o conteúdo verticalmente ao centro da tela. */
+    align-items: center;
+
+    /* Define a altura do corpo e do HTML para ocupar 
+            toda a altura da janela do navegador. */
+    height: 100vh;
+
+    /* Define o fundo da página com a cor preta para criar 
+            contraste com os elementos do jogo. */
+    background-color: black;
+    
+}
+
+/* Estilo aplicado ao elemento <canvas>, onde o 
+        jogo será renderizado. */
+canvas {
+
+    /* Configura o canvas como um bloco, eliminando 
+            espaços extras ao redor. */
+    display: block;
+
+}
+
+/* Estilo aplicado ao menu principal do jogo, 
+        identificado pelo ID "menu". */
+#menu {
+
+    /* Define a posição do menu como absoluta para que ele 
+            possa ser posicionado diretamente sobre o canvas. */
+    position: absolute;
+
+    /* Configura o layout do menu como flexbox para 
+            organizar os elementos dentro dele. */
+    display: flex;
+
+    /* Define a direção do layout flex como coluna, 
+            alinhando os elementos verticalmente. */
+    flex-direction: column;
+
+    /* Centraliza os elementos dentro do menu horizontalmente. */
+    align-items: center;
+
+    /* Define um fundo semitransparente preto para o menu. 
+       O valor `0.8` no canal alfa cria um efeito de opacidade. */
+    background-color: rgba(0, 0, 0, 0.8);
+
+    /* Define a cor do texto dentro do menu como branca 
+            para contraste com o fundo escuro. */
+    color: white;
+
+    /* Adiciona um preenchimento interno ao menu, criando 
+            espaço ao redor do conteúdo. */
+    padding: 20px;
+
+    /* Adiciona bordas arredondadas ao menu para um 
+            visual mais moderno. */
+    border-radius: 8px;
+
+    /* Centraliza o texto dentro do menu. */
+    text-align: center;
+
+}
+
+/* Estilo aplicado ao título do menu, representado 
+        pelo elemento <h1>. */
+#menu h1 {
+
+    /* Remove a margem padrão do elemento <h1> para 
+            alinhar melhor o título. */
+    margin: 0;
+
+}
+
+/* Estilo aplicado ao botão de jogar, identificado 
+        pelo ID "botaoJogar". */
+#botaoJogar {
+
+    /* Adiciona uma margem no topo para separar o 
+            botão do conteúdo acima. */
+    margin-top: 20px;
+
+    /* Define o preenchimento interno do botão, aumentando 
+            sua área clicável. */
+    padding: 10px 20px;
+
+    /* Ajusta o tamanho da fonte do texto dentro do botão 
+            para torná-lo mais legível. */
+    font-size: 16px;
+
+    /* Muda o cursor para uma mão ao passar o mouse sobre o 
+            botão, indicando interatividade. */
+    cursor: pointer;
+
+}
