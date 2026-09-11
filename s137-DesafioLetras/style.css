@@ -1,0 +1,380 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte padrão do corpo do documento para Arial, com 
+            fallback para qualquer fonte sans-serif disponível */
+    
+    background-color: #f8f9fa;
+    /* Define a cor de fundo do corpo do documento para um cinza claro */
+    
+    color: #333;
+    /* Define a cor padrão do texto para um cinza escuro, proporcionando 
+            contraste suficiente com o fundo claro */
+    
+    text-align: center;
+    /* Centraliza o texto dentro do corpo do documento, afetando todos os
+            textos que não têm alinhamento específico definido */
+    
+    margin: 0;
+    /* Remove as margens externas do corpo, fazendo com que o conteúdo se 
+            estenda até as bordas do navegador */
+    
+    padding: 0;
+    /* Remove o preenchimento interno do corpo, garantindo que não haja 
+            espaço extra dentro da borda do navegador */
+
+}
+
+.container {
+
+    max-width: 600px;
+    /* Define a largura máxima do container para 600px, permitindo que ele 
+            se ajuste a telas menores, mas não ultrapasse 600px 
+            em telas maiores */
+    
+    margin: 50px auto;
+    /* Define a margem superior e inferior do container para 50px e centraliza 
+            horizontalmente dentro do seu container pai usando 'auto' 
+            para as margens laterais */
+    
+    padding: 20px;
+    /* Aplica um preenchimento interno de 20px em todos os lados do 
+            container, criando espaço entre o conteúdo interno e as 
+            bordas do container */
+    
+    background: #ffffff;
+    /* Define a cor de fundo do container para branco, destacando-o 
+            contra o fundo cinza claro do corpo */
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra abaixo do container para criar um efeito de 
+            elevação, melhorando a percepção visual de profundidade */
+    
+    border-radius: 10px;
+    /* Arredonda os cantos do container com um raio de 10px para 
+            suavizar a aparência e dar um toque moderno ao design */
+
+}
+
+
+h1 {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte do título principal (h1) para 24 pixels, 
+            garantindo que seja destacado visualmente */
+    
+    color: #0073e6;
+    /* Altera a cor do texto do título para um azul vívido (#0073e6), 
+            adicionando um elemento de cor e destaque ao design */
+    
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20 pixels, separando o título dos 
+            elementos de conteúdo abaixo dele */
+}
+
+#exemplos {
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para 18 pixels, tornando o texto dentro 
+            da div #exemplos claro e legível */
+    
+    text-align: left;
+    /* Alinha o texto à esquerda dentro da div, proporcionando uma 
+            leitura mais natural em línguas que se leem da esquerda 
+            para a direita */
+    
+    margin: 20px 0;
+    /* Aplica uma margem vertical de 20 pixels acima e abaixo da div, 
+            ajudando a separá-la visualmente de outros conteúdos */
+    
+    padding: 10px;
+    /* Adiciona um preenchimento de 10 pixels em todos os lados dentro 
+            da div, criando espaço entre o conteúdo e as bordas da div */
+    
+    background: #f1f1f1;
+    /* Define uma cor de fundo cinza claro (#f1f1f1) para a div, diferenciando-a 
+            visualmente do resto da página */
+    
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida de 1 pixel com cor cinza clara (#ddd) ao 
+            redor da div, ajudando na definição dos limites da div */
+    
+    border-radius: 8px;
+    /* Arredonda os cantos da div com um raio de 8 pixels, suavizando 
+            sua aparência geral */
+    
+    line-height: 1.8;
+    /* Aumenta a altura da linha para 1.8 vezes o tamanho da fonte, melhorando a 
+            legibilidade do texto ao criar mais espaço vertical 
+            entre as linhas de texto */
+
+}
+
+.resposta {
+
+    margin-top: 20px;
+    /* Adiciona uma margem superior de 20 pixels à div que contém os 
+            elementos de resposta, separando-a dos conteúdos acima */
+
+}
+
+
+input {
+
+    padding: 10px;
+    /* Adiciona um preenchimento interno de 10 pixels em todos os lados do 
+            campo de entrada, aumentando a área clicável e 
+            melhorando a estética */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte para 16 pixels, garantindo que o texto 
+            dentro do campo de entrada seja fácil de ler */
+
+    width: 200px;
+    /* Define a largura do campo de entrada para 200 pixels, assegurando 
+            que ele tenha espaço suficiente para a entrada de dados 
+            sem ser muito largo ou estreito */
+
+    margin-right: 10px;
+    /* Aplica uma margem à direita de 10 pixels, criando espaço 
+            entre o campo de entrada e qualquer elemento à sua direita */
+
+    border: 1px solid #ccc;
+    /* Define uma borda sólida de 1 pixel ao redor do campo de 
+            entrada com a cor cinza clara (#ccc), ajudando a 
+            definir visualmente seus limites */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do campo de entrada com um raio de 5 pixels 
+            para suavizar sua aparência e torná-lo esteticamente 
+            mais agradável */
+
+}
+
+button {
+
+    padding: 10px 20px;
+    /* Aplica um preenchimento de 10 pixels no topo e na base, e 20 
+            pixels nos lados do botão, aumentando a área clicável e 
+            proporcionando uma melhor experiência de usuário */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte dos botões para 16 pixels para manter a 
+            consistência com os campos de entrada e garantir legibilidade */
+
+    background-color: #0073e6;
+    /* Define a cor de fundo do botão para um azul vívido (#0073e6), 
+            tornando-o visualmente distinto e atraente */
+
+    color: white;
+    /* Define a cor do texto dentro do botão para branco, criando um alto 
+            contraste com o fundo azul, o que facilita a leitura */
+
+    border: none;
+    /* Remove qualquer borda do botão, optando por uma aparência 
+            mais limpa e moderna */
+
+    border-radius: 5px;
+    /* Arredonda os cantos do botão com um raio de 5 pixels, alinhando-se 
+            esteticamente com o estilo dos campos de entrada */
+
+    cursor: pointer;
+    /* Muda o cursor para o ícone de ponteiro quando o mouse passa 
+            sobre o botão, indicando que ele é clicável */
+
+}
+
+button:hover {
+
+    background-color: #005bb5;
+    /* Muda a cor de fundo do botão para um azul mais escuro (#005bb5) 
+            quando o mouse está sobre ele, proporcionando feedback 
+            visual de que o botão é interativo */
+
+}
+
+
+#resultado {
+
+    font-size: 18px;
+    /* Define o tamanho da fonte do texto do resultado para 18 pixels, 
+            garantindo clareza e legibilidade */
+
+    margin-top: 20px;
+    /* Estabelece uma margem superior de 20 pixels, criando espaço entre o 
+            elemento de resultado e quaisquer elementos acima dele */
+
+}
+
+#score {
+
+    font-size: 18px;
+    /* Define o tamanho da fonte para a pontuação, mantendo-a consistente 
+            com o tamanho do texto de resultado para uniformidade visual */
+
+    margin-top: 20px;
+    /* Aplica uma margem superior de 20 pixels, separando visualmente a 
+            pontuação de outros conteúdos acima */
+
+    color: #0073e6;
+    /* Muda a cor do texto da pontuação para um azul vívido, tornando-o 
+            visualmente destacado e fácil de localizar na interface */
+
+}
+
+.modal {
+
+    display: none;
+    /* Inicialmente oculta o modal, não sendo visível até que seja 
+            programaticamente ativado por uma ação do usuário */
+
+    position: fixed;
+    /* Fixa o modal na posição na tela, fazendo com que ele permaneça 
+            visível mesmo ao rolar a página */
+
+    z-index: 1000;
+    /* Define um alto valor para z-index para garantir que o modal 
+            apareça acima de outros elementos da página */
+
+    left: 0;
+    top: 0;
+    /* Posiciona o modal no topo esquerdo da janela do navegador, 
+            cobrindo toda a tela */
+
+    width: 100%;
+    height: 100%;
+    /* Estende o modal para cobrir completamente a largura e a altura da 
+            janela do navegador, formando um fundo sobre a página existente */
+
+    overflow: auto;
+    /* Permite rolagem dentro do modal se o conteúdo exceder a altura da tela */
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Define a cor de fundo do modal para preto com 50% de opacidade, 
+            criando um efeito de escurecimento da página ao redor, 
+            focando a atenção no conteúdo do modal */
+
+    justify-content: center;
+    align-items: center;
+    /* Centraliza o conteúdo dentro do modal tanto horizontal quanto 
+            verticalmente, usando propriedades de flexbox */
+
+}
+
+
+.modal-content {
+
+    background-color: white;
+    /* Define a cor de fundo do conteúdo do modal para branco, proporcionando 
+            um contraste claro com o modal em si */
+
+    margin: auto;
+    /* Centraliza o conteúdo do modal horizontalmente dentro do modal pai, 
+            usando margens automáticas */
+
+    padding: 20px;
+    /* Aplica um preenchimento de 20 pixels em todos os lados do conteúdo do
+            modal, criando espaço entre o conteúdo e as bordas do modal */
+
+    border: 1px solid #ddd;
+    /* Adiciona uma borda sólida de 1 pixel com cor cinza clara (#ddd) ao 
+            redor do conteúdo do modal, delimitando-o visualmente */
+
+    border-radius: 10px;
+    /* Arredonda os cantos do conteúdo do modal com um raio de 10 pixels, 
+            suavizando sua aparência geral */
+
+    width: 80%;
+    /* Define a largura do conteúdo do modal para 80% do seu container, 
+            garantindo que ele ocupe a maior parte, mas não toda, da 
+            largura disponível */
+
+    max-width: 500px;
+    /* Estabelece uma largura máxima de 500 pixels para o conteúdo do modal, 
+            garantindo que ele não se torne excessivamente largo em telas maiores */
+
+    text-align: left;
+    /* Alinha o texto dentro do conteúdo do modal à esquerda, proporcionando 
+            uma apresentação mais natural e fácil leitura */
+
+}
+
+.close {
+
+    color: #aaa;
+    /* Define a cor do ícone de fechar para um cinza médio (#aaa), 
+            tornando-o visível, mas não excessivamente proeminente */
+
+    float: right;
+    /* Posiciona o ícone de fechar à direita dentro do seu container, 
+            permitindo que ele apareça no canto superior direito do modal-content */
+
+    font-size: 28px;
+    /* Aumenta o tamanho da fonte para 28 pixels, tornando o ícone de fechar 
+            claramente visível e fácil de interagir */
+
+    font-weight: bold;
+    /* Torna o ícone de fechar em negrito, aumentando a visibilidade e a 
+            importância visual dentro do layout do modal */
+
+    cursor: pointer;
+    /* Muda o cursor para o ícone de ponteiro quando o mouse passa sobre o 
+            ícone de fechar, indicando que ele é clicável */
+
+}
+
+
+.close:hover {
+
+    color: red;
+    /* Altera a cor do ícone de fechar para vermelho quando o mouse 
+            passa sobre ele, indicando uma ação de fechar ou cancelar, e 
+            aumentando a visibilidade e o alerta ao usuário */
+
+}
+
+#detalhesResposta {
+
+    font-size: 18px;
+    /* Define o tamanho da fonte do conteúdo dentro de #detalhesResposta 
+            para 18 pixels, assegurando que o texto seja grande e claro o 
+            suficiente para ser facilmente lido */
+
+    line-height: 1.8;
+    /* Aumenta a altura da linha para 1.8 vezes o tamanho da fonte, 
+            melhorando a legibilidade ao criar mais espaço vertical 
+            entre as linhas de texto */
+
+}
+
+#detalhesResposta p {
+
+    margin: 5px 0;
+    /* Aplica uma pequena margem vertical de 5 pixels acima e abaixo de cada 
+            parágrafo dentro de #detalhesResposta, ajudando a separar 
+            visualmente os parágrafos uns dos outros */
+
+    padding: 10px;
+    /* Adiciona um preenchimento de 10 pixels em todos os lados de cada 
+            parágrafo, criando espaço entre o texto e as bordas do parágrafo */
+
+    background-color: #f9f9f9;
+    /* Define a cor de fundo de cada parágrafo para um cinza muito claro (#f9f9f9), 
+            diferenciando visualmente o parágrafo do fundo do conteúdo do modal */
+
+    border: 1px solid #ddd;
+    /* Inclui uma borda sólida de 1 pixel de espessura ao redor de cada parágrafo 
+            com uma cor cinza clara (#ddd), delimitando claramente os 
+            limites do parágrafo */
+
+    border-radius: 5px;
+    /* Arredonda os cantos de cada parágrafo com um raio de 5 pixels, 
+            suavizando a aparência geral e tornando o design mais 
+            amigável e moderno */
+
+    color: #333;
+    /* Define a cor do texto de cada parágrafo para um cinza escuro (#333), 
+            garantindo um contraste suficiente com o fundo claro para 
+            uma leitura confortável */
+
+}

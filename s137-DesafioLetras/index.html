@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<!-- Define que o documento é do tipo HTML5, garantindo a 
+        correta interpretação pelo navegador -->
+
+<html lang="pt-BR">
+<!-- Abre a tag HTML, definindo o idioma do documento como 
+        Português do Brasil para auxiliar na acessibilidade e 
+        nos mecanismos de busca -->
+
+<head>
+<!-- Abre a tag head que contém metadados e links para scripts e 
+        folhas de estilo que não são exibidos diretamente na página -->
+
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres do documento para UTF-8, que 
+            inclui a maioria dos caracteres usados em diversos idiomas -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Assegura que a largura da página será igual à largura do 
+            dispositivo e a escala inicial será 1, otimizando a 
+            visualização em dispositivos móveis -->
+
+    <title>Desafio de Letras</title>
+    <!-- Define o título da página, que é exibido na aba do navegador -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Inclui um arquivo de folha de estilo externo chamado style.css 
+            para formatar a aparência da página -->
+
+</head>
+<!-- Fecha a tag head -->
+
+
+<body>
+<!-- Abre a tag body, que contém todo o conteúdo visível da página web -->
+
+    <div class="container">
+    <!-- Div container que centraliza e contém todo o conteúdo da página 
+                para melhor organização e estilo -->
+
+        <h1>Desafio de Letras</h1>
+        <!-- Título principal da página, exibido como o cabeçalho 
+                maior e mais proeminente -->
+
+        <div id="exemplos">
+
+        <!-- Div onde os exemplos de operações ou desafios serão inseridos 
+                dinamicamente pelo JavaScript -->
+            <!-- Exemplos aparecerão aqui -->
+
+        </div>
+        
+        <div class="resposta">
+        <!-- Div que agrupa os elementos de interação com o usuário 
+                    para responder ao desafio -->
+
+            <p id="pergunta"></p>
+            <!-- Parágrafo que será utilizado para mostrar a pergunta 
+                    ou desafio atual -->
+
+            <input type="number" id="resposta" placeholder="Digite sua resposta">
+            <!-- Campo de entrada para que o usuário insira sua 
+                    resposta, aceita apenas números -->
+
+            <button id="verificar">Verificar</button>
+            <!-- Botão que quando clicado verifica a resposta do usuário 
+                    através de um script JavaScript -->
+
+            <button id="verResposta" style="display: none;">Ver Resposta</button>
+            <!-- Botão oculto que pode ser exibido para mostrar a resposta 
+                    correta, será controlado via JavaScript -->
+
+        </div>
+        
+        <p id="resultado"></p>
+        <!-- Parágrafo que será usado para mostrar o resultado da verificação 
+                da resposta (correta ou incorreta) -->
+
+        <p id="score">Pontuação: 0</p>
+        <!-- Parágrafo inicializado com a pontuação do usuário, que será 
+                atualizado dinamicamente pelo JavaScript -->
+
+    </div>
+    <!-- Fecha a div container -->
+
+    <!-- Modal para exibir respostas -->
+    <div id="modal" class="modal">
+    <!-- Div que funciona como um modal para mostrar detalhes ou 
+            respostas adicionais, inicialmente oculto -->
+
+        <div class="modal-content">
+        <!-- Conteúdo interno do modal, com estilo específico para destacá-lo 
+                visualmente no centro da tela -->
+
+            <span id="fechar" class="close">&times;</span>
+            <!-- Botão para fechar o modal, com um símbolo de 'X' -->
+
+            <h2>Resultados das Equações</h2>
+            <!-- Título do modal para contextos onde os resultados 
+                    detalhados são exibidos -->
+
+            <div id="detalhesResposta"></div>
+            <!-- Div onde os detalhes das respostas serão 
+                    inseridos dinamicamente -->
+
+        </div>
+    </div>
+    <!-- Fecha o modal -->
+
+    <script src="script.js"></script>
+    <!-- Link para o arquivo JavaScript externo que contém a lógica 
+            para manipular os elementos da página -->
+            
+</body>
+<!-- Fecha a tag body -->
+
+</html>
+<!-- Fecha a tag html, que encerra o documento -->
