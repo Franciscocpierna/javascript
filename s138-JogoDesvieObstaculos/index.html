@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Declara o tipo de documento como HTML5, garantindo que o 
+        navegador interprete o conteúdo corretamente -->
+
+<html lang="pt-BR">
+<!-- Define o idioma principal do documento como português do 
+        Brasil, útil para SEO e ferramentas de acessibilidade -->
+
+<head>
+
+    <!-- Define o conjunto de caracteres como UTF-8, permitindo o 
+            uso de caracteres especiais como acentos -->
+    <meta charset="UTF-8">
+
+    <!-- Configura a página para ser responsiva, ajustando-se ao 
+            tamanho da tela do dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título da página, que aparece na 
+            aba do navegador -->
+    <title>Desvie dos Obstáculos</title>
+
+    <!-- Link para o arquivo de estilos CSS externo, responsável 
+            pela aparência da página -->
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+    <!-- Corpo principal do documento, onde o conteúdo visível e 
+            interativo será renderizado -->
+
+    <!-- Canvas onde o jogo será renderizado -->
+    <!-- O elemento `<canvas>` cria uma área gráfica para desenhos e 
+                animações. O jogo será exibido nesta área -->
+    <canvas id="canvasJogo" width="400" height="600"></canvas>
+    <!-- Atributo `id` identifica o elemento como "canvasJogo" 
+            para manipulação via JavaScript -->
+    <!-- Atributos `width` e `height` definem as dimensões da 
+            área de desenho em pixels -->
+
+    <!-- Menu Inicial -->
+    <!-- Menu exibido ao carregar a página, antes 
+            do jogo começar -->
+    <div id="menuInicial" class="menu">
+        <!-- Atributo `id` identifica este menu como "menuInicial" -->
+        <!-- A classe "menu" aplica estilos definidos no CSS -->
+        
+        <!-- Título principal do menu inicial -->
+        <h1>Desvie dos Obstáculos</h1>
+        <!-- Elemento `<h1>` para o título, com estilização de 
+                    destaque no CSS -->
+
+        <!-- Parágrafo exibindo a pontuação total do jogador -->
+        <p id="exibirPontuacaoMenu">Pontos Totais: 0</p>
+        <!-- Atributo `id` identifica este parágrafo como "exibirPontuacaoMenu" 
+                para atualizações via JavaScript -->
+
+        <!-- Botão para iniciar o jogo -->
+        <button id="botaoIniciar">Clique para Jogar</button>
+        <!-- Atributo `id` identifica o botão como "botaoIniciar" 
+                para manipulação com JavaScript -->
+    
+    </div>
+
+    <!-- Tela de Game Over -->
+    <!-- Div exibida quando o jogador perde o jogo -->
+    <div id="telaGameOver" class="menu oculto">
+        <!-- Atributo `id` identifica este menu como "telaGameOver" -->
+        <!-- Classe "menu" aplica estilos gerais de menu; 
+                classe "oculto" oculta inicialmente este elemento -->
+
+        <!-- Título exibido no Game Over -->
+        <h1>Game Over</h1>
+        <!-- Elemento `<h1>` usado para o título desta tela -->
+
+        <!-- Parágrafo exibindo a pontuação final do jogador -->
+        <p id="pontuacaoFinal">Pontuação Final: 0</p>
+        <!-- Atributo `id` identifica o parágrafo como "pontuacaoFinal" 
+                para atualizações via JavaScript -->
+
+        <!-- Botão para reiniciar o jogo -->
+        <button id="botaoReiniciar">Reiniciar Jogo</button>
+        <!-- Atributo `id` identifica o botão como "botaoReiniciar" 
+                para manipulação com JavaScript -->
+    
+    </div>
+
+    <!-- Inclusão do arquivo JavaScript -->
+    <!-- O arquivo "script.js" contém a lógica do jogo e 
+            manipula os elementos acima -->
+    <script src="script.js"></script>
+
+</body>
+</html>

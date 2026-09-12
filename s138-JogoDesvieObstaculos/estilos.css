@@ -1,0 +1,234 @@
+/* Estilos gerais do corpo */
+body {
+
+    margin: 0;
+    /* Remove margens padrão do navegador ao redor do corpo */
+
+    padding: 0;
+    /* Remove preenchimento interno padrão do corpo */
+
+    background-color: #FFD75A;
+    /* Define o fundo do corpo com uma cor amarela */
+
+    display: flex;
+    /* Utiliza o modelo de layout flexbox para alinhar 
+            elementos filhos */
+
+    justify-content: center;
+    /* Centraliza os elementos filhos horizontalmente no corpo */
+
+    align-items: center;
+    /* Centraliza os elementos filhos verticalmente no corpo */
+
+    height: 100vh;
+    /* Define a altura do corpo como 100% da altura da 
+            janela do navegador */
+
+    font-family: 'Arial', sans-serif;
+    /* Define a fonte padrão do corpo como Arial, com 
+            fallback para sans-serif */
+
+    position: relative;
+    /* Torna o corpo um elemento posicionado, permitindo 
+            posicionamento absoluto de filhos */
+
+}
+
+/* Estilos do canvas */
+canvas {
+
+    border: 2px solid #000;
+    /* Adiciona uma borda preta de 2px ao redor do canvas */
+
+    background-color: #FFD75A;
+    /* Define o fundo do canvas com a mesma cor amarela do corpo */
+
+    position: absolute;
+    /* Permite que o canvas seja posicionado em relação ao corpo */
+
+    top: 50%;
+    /* Alinha o topo do canvas no centro vertical do corpo */
+
+    left: 50%;
+    /* Alinha a esquerda do canvas no centro horizontal do corpo */
+
+    transform: translate(-50%, -50%);
+    /* Centraliza o canvas ao mover 50% para cima e para a 
+            esquerda em relação ao seu centro */
+
+    display: block;
+    /* Garante que o canvas seja exibido como um bloco */
+
+}
+
+/* Estilos dos menus (Inicial e Game Over) */
+.menu {
+
+    position: absolute;
+    /* Define o menu como posicionado de forma absoluta em 
+               relação ao elemento pai posicionado (o `<body>` neste caso). 
+       Isso permite que ele seja posicionado em coordenadas 
+               específicas na página. */
+
+    top: 50%;
+    /* Posiciona o topo do menu no meio da altura da página, 
+               calculado como 50% da altura total. */
+
+    left: 50%;
+    /* Posiciona a esquerda do menu no meio da largura da página, 
+               calculado como 50% da largura total. */
+
+    width: 400px;
+    /* Define a largura fixa do menu como 400 pixels. Isso garante 
+               que o menu tenha sempre o mesmo tamanho horizontal. */
+
+    height: 600px;
+    /* Define a altura fixa do menu como 600 pixels. Isso garante 
+               que o menu tenha sempre o mesmo tamanho vertical. */
+
+    background-color: rgba(255, 223, 90, 0.95);
+    /* Define a cor de fundo como amarelo (RGB: 255, 223, 90) 
+               com uma transparência de 95% (opacidade de 0.95). 
+       Essa transparência permite que o fundo seja levemente 
+               visível através do menu. */
+
+    display: flex;
+    /* Define o container do menu como um flexbox, facilitando o 
+               alinhamento dos itens filhos. */
+
+    flex-direction: column;
+    /* Organiza os elementos filhos do menu em uma coluna, ou 
+               seja, empilhados verticalmente. */
+
+    justify-content: center;
+    /* Alinha os itens filhos do menu verticalmente no centro do menu. */
+
+    align-items: center;
+    /* Alinha os itens filhos do menu horizontalmente no centro do menu. */
+
+    transform: translate(-50%, -50%);
+    /* Move o menu 50% para cima e para a esquerda em 
+               relação ao seu próprio tamanho, 
+               centralizando-o perfeitamente na página. 
+      Sem este ajuste, o menu ficaria deslocado para 
+               baixo e para a direita. */
+
+    z-index: 1;
+    /* Define a ordem de empilhamento deste menu como 1, 
+               garantindo que ele fique acima de outros elementos 
+               com `z-index` inferior. Isso é útil para sobrepor 
+               outros conteúdos, como o canvas do jogo. */
+
+}
+
+/* Classe para ocultar elementos */
+.oculto {
+
+    display: none;
+    /* Remove o elemento da exibição na página. Elementos com 
+               esta classe aplicam o estilo `display: none`, 
+               ficando invisíveis e sem ocupar espaço na tela. 
+      Essa classe é utilizada para alternar visibilidade em menus 
+               como o Game Over ou o Menu Inicial. */
+
+}
+
+/* Estilos dos títulos */
+h1 {
+
+    font-size: 48px;
+    /* Define o tamanho da fonte dos títulos como 48 pixels, 
+               tornando-os grandes e destacados. 
+       Isso ajuda a atrair a atenção do jogador, principalmente 
+               para mensagens importantes como "Game Over". */
+
+    color: #000;
+    /* Define a cor do texto como preto, garantindo um 
+               contraste claro com o fundo amarelo. 
+       Isso melhora a legibilidade do título. */
+
+    margin-bottom: 20px;
+    /* Adiciona um espaçamento inferior de 20 pixels, 
+               criando uma separação entre o título e outros 
+               elementos abaixo, como parágrafos ou botões. */
+
+    text-align: center;
+    /* Centraliza o texto horizontalmente no elemento pai, 
+               garantindo alinhamento visual simétrico. */
+
+}
+
+/* Estilos dos parágrafos */
+p {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte dos parágrafos como 24 pixels, 
+               menor do que os títulos, mas ainda suficientemente 
+               grande para ser facilmente legível. */
+
+    color: #000;
+    /* Define a cor do texto como preto para manter a 
+               consistência visual e legibilidade. */
+
+    margin-bottom: 30px;
+    /* Adiciona um espaçamento inferior de 30 pixels, 
+               separando os parágrafos de outros elementos 
+               abaixo, como botões ou títulos. */
+
+    text-align: center;
+    /* Centraliza o texto dentro do elemento pai, 
+               garantindo um alinhamento equilibrado no 
+               design geral. */
+
+}
+
+
+/* Estilos dos botões */
+button {
+
+    padding: 10px 20px;
+    /* Adiciona espaçamento interno ao botão: 
+       - 10px na parte superior e inferior.
+       - 20px nas laterais.
+       Isso aumenta a área clicável e melhora a usabilidade. */
+
+    font-size: 24px;
+    /* Define o tamanho da fonte como 24 pixels, tornando o 
+               texto do botão claramente visível. */
+
+    cursor: pointer;
+    /* Altera o cursor para uma "mãozinha" ao passar sobre o 
+               botão, indicando que ele é clicável. */
+
+    background-color: #000;
+    /* Define o fundo do botão como preto, garantindo 
+               contraste com o texto amarelo. */
+
+    color: #FFD75A;
+    /* Define a cor do texto como amarelo, criando um 
+               contraste visual claro com o fundo preto. */
+
+    border: none;
+    /* Remove qualquer borda padrão que possa ser aplicada ao 
+               botão pelos navegadores. */
+
+    border-radius: 5px;
+    /* Adiciona bordas arredondadas ao botão, deixando-o 
+               com um visual mais moderno e suave. */
+
+    transition: background-color 0.3s;
+    /* Adiciona uma transição suave ao alterar a cor de 
+               fundo (`background-color`) ao passar o mouse (hover), 
+               tornando a interação visual mais agradável. */
+
+}
+
+button:hover {
+
+    background-color: #333;
+    /* Altera o fundo do botão para um tom de preto mais 
+               claro (cinza escuro) quando o mouse está sobre ele. 
+       Isso dá um feedback visual ao usuário de que o 
+               botão está interativo. */
+
+}
