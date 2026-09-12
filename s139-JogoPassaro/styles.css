@@ -1,0 +1,43 @@
+/* Estiliza o corpo da página, que é a área 
+        principal onde todos os elementos serão exibidos. */
+body {
+
+    /* Remove a margem padrão aplicada pelos 
+            navegadores ao corpo da página. */
+    margin: 0;
+
+    /* Remove o preenchimento interno padrão do corpo da página. */
+    padding: 0;
+
+    /* Impede que as barras de rolagem apareçam, garantindo 
+            que o conteúdo do canvas ocupe toda a área visível. */
+    overflow: hidden;
+
+    /* Define a cor de fundo da página como um azul 
+            claro, semelhante ao céu. */
+    /* Um azul claro para o fundo da página */
+    background-color: #87CEEB; 
+
+}
+
+/* Estiliza o elemento <canvas>, que será usado 
+        para renderizar o jogo. */
+canvas {
+
+    /* Exibe o canvas como um elemento de bloco, o que 
+            permite controlar seu alinhamento na página. */
+    display: block;
+
+    /* Centraliza o canvas horizontalmente e adiciona um 
+            espaço superior de 20 pixels. */
+    margin: 20px auto;
+
+    /* Define a cor de fundo do canvas como branco, 
+            proporcionando contraste com o fundo da página. */
+    background-color: #FFFFFF;
+
+    /* Adiciona uma borda preta de 2 pixels ao redor 
+            do canvas para destacá-lo. */
+    border: 2px solid #000000;
+    
+}
