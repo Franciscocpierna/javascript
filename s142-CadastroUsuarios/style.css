@@ -1,0 +1,465 @@
+/* Define o estilo global para o corpo da página */
+body {
+
+    /* Define a fonte padrão do texto como Arial.
+       Caso Arial não esteja disponível, usa uma
+            fonte genérica sem serifa. */
+    font-family: 'Arial', sans-serif;
+
+    /* Define a cor de fundo da página como um tom 
+            claro de cinza (#f8f9fa).
+       Isso torna a leitura mais confortável e dá um 
+            visual mais moderno. */
+    background-color: #f8f9fa;
+
+    /* Remove qualquer margem externa padrão do navegador,
+       garantindo que o conteúdo comece exatamente 
+            do topo da página. */
+    margin: 0;
+
+    /* Adiciona um espaçamento interno de 20px ao redor do conteúdo,
+       evitando que os elementos fiquem colados nas bordas da tela. */
+    padding: 20px;
+
+    /* Centraliza todo o texto dentro do body,
+       afetando elementos como títulos, parágrafos e botões. */
+    text-align: center;
+
+}
+
+/* Estilização do container e da tabela */
+
+/*  Define o estilo da classe .container, que é o bloco 
+      principal onde o conteúdo da página será exibido. */
+.container {
+
+    /* Define a largura do container como 100%, fazendo com 
+            que ele ocupe toda a largura da tela. */
+    width: 100%;
+
+    /* Garante que a largura máxima do container não 
+            ultrapasse 100% da tela, evitando que ele fique 
+            maior do que o esperado. */
+    max-width: 100%;
+
+    /* Define o fundo do container como branco para destacar o 
+            conteúdo sobre o fundo cinza da página. */
+    background: white;
+
+    /* Adiciona um espaçamento interno de 20px, criando espaço 
+            entre o conteúdo e as bordas do container. */
+    padding: 20px;
+
+    /* Remove qualquer margem externa do container para evitar 
+            espaços desnecessários ao redor dele. */
+    margin: 0;
+
+    /* Remove qualquer arredondamento dos cantos do container, 
+            mantendo um design mais reto. */
+    border-radius: 0;
+
+    /* Remove qualquer sombra aplicada ao container, 
+            deixando um design mais plano e simples. */
+    box-shadow: none;
+
+}
+
+/*  Define o estilo dos títulos <h2>, usados para destacar 
+         seções importantes, como "Lista de Usuários". */
+h2 {
+
+    /* Define a cor do texto como um cinza escuro (#333), 
+            tornando-o mais visível e elegante. */
+    color: #333;
+
+}
+
+
+/* Define o estilo da barra superior, que contém o 
+      campo de busca e o botão de cadastrar. */
+.barra-superior {
+
+    /* Usa o modelo de layout flexível, permitindo melhor 
+            controle sobre o alinhamento dos elementos 
+            dentro da barra. */
+    display: flex;
+
+    /* Distribui os elementos dentro da barra, empurrando-os 
+            para as extremidades opostas, garantindo que o 
+            campo de busca fique à esquerda e o botão de 
+            cadastrar à direita. */
+    justify-content: space-between;
+
+    /* Alinha os itens verticalmente ao centro, para que o 
+            botão e o campo de busca fiquem nivelados. */
+    align-items: center;
+
+    /* Adiciona um espaço de 15px abaixo da barra, separando-a 
+         visualmente do restante da página. */
+    margin-bottom: 15px;
+
+}
+
+
+/* Estiliza o campo de busca onde o usuário digita 
+      para filtrar os usuários. */
+#campoFiltro {
+
+    /* Faz com que o campo de busca ocupe todo o espaço 
+            disponível dentro da barra, permitindo que ele se
+            expanda automaticamente para preencher a área disponível. */
+    flex: 1;
+
+    /* Adiciona um espaçamento interno de 10px, garantindo que o 
+            texto digitado não fique colado nas bordas do campo. */
+    padding: 10px;
+
+    /* Arredonda levemente as bordas do campo de entrada, 
+            deixando um visual mais suave. */
+    border-radius: 5px;
+
+    /* Adiciona uma borda cinza clara ao redor do campo 
+            para destacá-lo sem ser muito chamativo. */
+    border: 1px solid #ccc;
+
+    /* Define o tamanho da fonte como 16px, tornando o texto 
+            dentro do campo mais legível. */
+    font-size: 16px;
+
+}
+
+
+/* Estiliza todos os botões da página. */
+button {
+
+    /* Define um espaçamento interno (padding) no botão:
+       - 10px na parte superior e inferior.
+       - 15px nas laterais.
+       Isso deixa o botão maior e mais confortável para clicar. */
+    padding: 10px 15px;
+
+    /* Define o tamanho da fonte dentro do botão como 16px,
+       garantindo que o texto fique legível. */
+    font-size: 16px;
+
+    /* Remove qualquer borda ao redor do botão, deixando-o 
+            com um design mais limpo. */
+    border: none;
+
+    /* Arredonda levemente os cantos do botão (5px),
+       tornando o visual mais suave e moderno. */
+    border-radius: 5px;
+
+    /* Define o cursor do mouse como "pointer" quando passa sobre o botão,
+       indicando que ele é clicável. */
+    cursor: pointer;
+
+}
+
+/* Define o efeito quando o usuário passa o mouse 
+      sobre o botão (efeito hover). */
+button:hover {
+
+    /* Reduz ligeiramente a opacidade (transparência) 
+            do botão para 90% (0.9), criando um efeito 
+            visual que indica que o botão está sendo destacado. */
+    opacity: 0.9;
+
+}
+
+
+/*  Estiliza o botão de edição. 
+    Esse botão será usado para editar um usuário na lista. */
+button.editar {
+
+    /* Define a cor de fundo do botão como amarelo (#ffc107), 
+       que indica uma ação de edição/alteração. */
+    background-color: #ffc107;
+
+    /* Define a cor do texto como branca, para criar um bom contraste 
+       e facilitar a leitura sobre o fundo amarelo. */
+    color: white;
+
+}
+
+/*  Estiliza o botão de exclusão. 
+    Esse botão será usado para excluir um usuário da lista. */
+button.excluir {
+
+    /* Define a cor de fundo do botão como vermelho escuro (#dc3545), 
+       indicando que é uma ação de exclusão, um alerta visual. */
+    background-color: #dc3545;
+
+    /* Define a cor do texto como branca, garantindo boa legibilidade 
+       sobre o fundo vermelho. */
+    color: white;
+
+}
+
+/*  Estiliza o botão de cadastrar um novo usuário. */
+button.botao-cadastrar {
+
+    /* Define a cor de fundo do botão como azul (#007bff), 
+            que remete a ações positivas e de progresso, como 
+            adicionar um novo usuário. */
+    background-color: #007bff;
+
+    /* Define a cor do texto como branca para garantir um bom contraste 
+       e facilitar a leitura sobre o fundo azul. */
+    color: white;
+
+}
+
+
+/* Estilizando a tabela */
+
+/* Estiliza a tabela que exibe a lista de usuários. */
+table {
+
+    /* Define que a tabela ocupará 100% da largura 
+            disponível no container, 
+            garantindo que ela se ajuste ao espaço disponível. */
+    width: 100%;
+
+    /* Faz com que as bordas das células se fundam em uma única borda, 
+       criando um visual mais limpo e organizado. Sem essa propriedade, 
+       cada célula teria sua própria borda separada. */
+    border-collapse: collapse;
+
+    /* Adiciona um espaçamento superior de 15px, 
+            separando a tabela do 
+            conteúdo acima para melhorar a organização visual. */
+    margin-top: 15px;
+
+}
+
+/* Estiliza o cabeçalho da tabela (linha onde ficam os 
+      títulos das colunas). */
+thead {
+
+    /* Define a cor de fundo do cabeçalho como azul (#007bff), 
+       destacando-o em relação às linhas da tabela. */
+    background-color: #007bff;
+
+    /* Define a cor do texto do cabeçalho como branco, 
+       garantindo um bom contraste com o fundo azul. */
+    color: white;
+
+}
+
+/* Define o estilo das células do cabeçalho (<th>) e 
+      das células comuns (<td>). */
+th, td {
+
+    /* Adiciona um espaçamento interno de 12px dentro das células, 
+       tornando o conteúdo mais legível e bem distribuído. */
+    padding: 12px;
+
+    /* Adiciona uma borda de 1px sólida e cinza claro (#ccc) 
+            em volta de cada célula, melhorando a separação 
+            entre os dados e deixando a tabela mais organizada. */
+    border: 1px solid #ccc;
+
+    /* Alinha o conteúdo das células à esquerda, garantindo 
+            uma leitura natural dos dados. */
+    text-align: left;
+
+}
+
+
+/*  Alterna a cor de fundo das linhas da tabela para 
+         melhorar a legibilidade.
+    Este estilo afeta todas as linhas pares da tabela (<tr>) 
+        para criar um efeito zebrado. */
+tr:nth-child(even) {
+
+    /* Define um fundo cinza claro (#f2f2f2) para as 
+            linhas pares da tabela, tornando os dados mais 
+            fáceis de visualizar e diferenciando melhor as linhas. */
+    background-color: #f2f2f2;
+
+}
+
+
+/* Estiliza a classe .acoes, que contém os botões "Editar" e "Excluir" 
+    dentro da tabela de usuários. */
+.acoes {
+
+    /* Usa o modelo de layout flexível para organizar os 
+            botões na horizontal. */
+    display: flex;
+
+    /* Centraliza os botões horizontalmente dentro da 
+         célula da tabela. */
+    justify-content: center;
+
+    /* Define um espaçamento de 5px entre os botões,
+       garantindo que eles não fiquem muito próximos. */
+    gap: 5px;
+
+}
+
+/* Estiliza o contêiner da tela de cadastro de usuários. */
+.cadastro-container {
+
+    /* Define uma largura máxima de 500px para o formulário de cadastro,
+       evitando que ele fique muito largo em telas grandes. */
+    max-width: 500px;
+
+    /* Define a cor de fundo como branca, destacando o 
+            formulário sobre o fundo da página. */
+    background: white;
+
+    /* Adiciona um espaçamento interno de 25px, criando espaço 
+            entre o conteúdo e as bordas do contêiner. */
+    padding: 25px;
+
+    /* Define as margens automaticamente para centralizar o 
+            formulário na tela. */
+    margin: auto;
+
+    /* Arredonda os cantos do contêiner em 10px, deixando um 
+            visual mais moderno e suave. */
+    border-radius: 10px;
+
+    /* Aplica uma sombra leve ao contêiner, criando um 
+            efeito de elevação sutil.
+       Isso dá um aspecto mais profissional e destaca o 
+            formulário do fundo da página. */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* Estiliza todos os títulos <h2> da página, 
+    que são usados para seções importantes, como
+          "Lista de Usuários" e "Cadastrar Usuário". */
+h2 {
+    
+    /* Define a cor do texto como um tom escuro de cinza (#333),
+       tornando-o mais visível e elegante. */
+    color: #333;
+
+    /* Adiciona um espaço de 20px abaixo do título,
+         separando-o dos elementos seguintes para 
+         melhor organização visual. */
+    margin-bottom: 20px;
+
+}
+
+/* Estiliza os grupos de formulário, que contêm 
+      rótulos (<label>) e campos de entrada (<input>). */
+.grupo-formulario {
+
+    /* Alinha o texto dentro do grupo à esquerda,
+       garantindo que rótulos e campos fiquem bem organizados. */
+    text-align: left;
+
+    /* Adiciona um espaço de 15px abaixo de cada grupo de formulário,
+       criando uma separação entre os campos para melhor legibilidade. */
+    margin-bottom: 15px;
+
+}
+
+/* Estiliza os rótulos (<label>) dentro do formulário,
+    que indicam o que cada campo representa. */
+.grupo-formulario label {
+    
+    /* Faz com que o rótulo ocupe toda a largura disponível,
+       garantindo que ele fique acima do campo de entrada. */
+    display: block;
+
+    /* Define o texto do rótulo como negrito,
+       tornando-o mais destacado e fácil de ler. */
+    font-weight: bold;
+
+    /* Adiciona um espaço de 5px abaixo do rótulo,
+         separando-o do campo de entrada para melhorar a 
+         organização visual. */
+    margin-bottom: 5px;
+
+}
+
+
+/* Estiliza os campos de entrada (<input>) dentro dos 
+         grupos de formulário.
+    Estes campos são usados para digitar informações 
+         como nome, e-mail e idade. */
+.grupo-formulario input {
+
+    /* Define que o campo de entrada ocupará 100% da 
+            largura disponível dentro do grupo,
+            garantindo que ele se ajuste ao tamanho 
+            do contêiner. */
+    width: 100%;
+
+    /* Adiciona um espaçamento interno de 10px,
+       tornando o texto digitado mais confortável e visível. */
+    padding: 10px;
+
+    /* Arredonda levemente os cantos do campo de entrada,
+       deixando um visual mais moderno e agradável. */
+    border-radius: 5px;
+
+    /* Define uma borda de 1px sólida e cinza claro (#ccc),
+         criando uma separação sutil entre o campo de 
+         entrada e o fundo do formulário. */
+    border: 1px solid #ccc;
+
+    /* Define o tamanho da fonte como 16px,
+       garantindo que o texto dentro do campo fique legível. */
+    font-size: 16px;
+
+}
+
+/* Estiliza a seção que contém os botões de ação do formulário,
+      como "Salvar" e "Cancelar". */
+.acoes-formulario {
+
+    /* Usa o modelo de layout flexível para organizar os
+         botões lado a lado. */
+    display: flex;
+
+    /* Distribui os botões igualmente dentro da linha,
+       garantindo que fiquem afastados um do outro. */
+    justify-content: space-between;
+
+    /* Adiciona um espaçamento de 20px acima dos botões,
+         separando-os dos campos de entrada para melhorar a 
+         organização visual. */
+    margin-top: 20px;
+
+}
+
+
+/* Estiliza o botão "Salvar".
+   Esse botão é utilizado para confirmar o cadastro ou 
+         edição de um usuário. */
+button.salvar {
+
+    /* Define a cor de fundo do botão como verde (#28a745),
+            que geralmente representa ações positivas, 
+            como confirmar ou salvar. */
+    background-color: #28a745;
+
+    /* Define a cor do texto como branco para garantir um bom contraste
+       e facilitar a leitura sobre o fundo verde. */
+    color: white;
+
+}
+
+/* Estiliza o botão "Cancelar".
+   Esse botão é utilizado para descartar a operação e 
+         voltar para a lista de usuários. */
+button.cancelar {
+    
+    /* Define a cor de fundo do botão como vermelho (#dc3545),
+            que geralmente representa ações de 
+            cancelamento ou exclusão. */
+    background-color: #dc3545;
+
+    /* Define a cor do texto como branco para criar um bom contraste
+       e facilitar a leitura sobre o fundo vermelho. */
+    color: white;
+
+}

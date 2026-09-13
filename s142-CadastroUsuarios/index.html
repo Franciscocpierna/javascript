@@ -1,0 +1,194 @@
+<!-- Declaração do tipo de documento. 
+
+    O `<!DOCTYPE html>` informa ao navegador que este documento 
+            segue o padrão HTML5, que é a versão mais moderna do HTML.
+    Isso garante que o navegador interprete 
+            o código corretamente. -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML. 
+
+    A tag `<html>` é a raiz de um documento HTML. 
+    Tudo que faz parte da página deve estar dentro dessa tag.
+
+    O atributo `lang="pt"` define o idioma do documento como português. 
+    Isso ajuda os mecanismos de busca e leitores de tela a 
+            entenderem melhor o conteúdo.-->
+<html lang="pt">
+
+<!-- 
+    Cabeçalho do documento HTML.
+
+    A tag `<head>` contém informações sobre a página que 
+            não são visíveis diretamente no conteúdo, 
+            mas que são importantes para o funcionamento 
+            correto da página.-->
+<head>
+
+    <!-- 
+        Define o conjunto de caracteres como UTF-8.
+
+        UTF-8 é um padrão de codificação de texto que 
+                suporta vários caracteres especiais, 
+                como acentos (á, é, í, ó, ú), cedilha (ç) e 
+                outros símbolos especiais. 
+        Isso evita erros na exibição de textos que contenham 
+                esses caracteres.-->
+    <meta charset="UTF-8">
+
+    <!-- 
+        Configura a visualização em dispositivos móveis.
+
+        A meta tag `viewport` controla como a página será 
+                exibida em diferentes dispositivos 
+                (computadores, tablets, celulares). 
+
+        - `width=device-width`: Faz com que a largura da página
+                se ajuste automaticamente à largura da tela do dispositivo.
+        - `initial-scale=1.0`: Define o nível inicial de zoom 
+                para 1 (sem zoom), garantindo que a página seja 
+                exibida corretamente em celulares e tablets.
+
+        Essa configuração é essencial para que a página fique 
+                responsiva (se adapte a qualquer tela). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        Define o título da página.
+
+        O conteúdo dentro da tag `<title>` será exibido na 
+                aba do navegador e nos resultados de busca. 
+        Escolher um título adequado ajuda os usuários a 
+                entenderem sobre o que é a página. -->
+    <title>Lista de Usuários</title>
+
+    <!-- 
+        Importa a folha de estilos CSS externa.
+
+        A tag `<link>` com `rel="stylesheet"` indica que estamos 
+                vinculando um arquivo CSS à página HTML. 
+        Esse arquivo chamado "style.css" contém regras que 
+                definem a aparência (cores, tamanhos, fontes, etc.)
+                dos elementos da página.
+
+        Quando o navegador carregar esta página, ele também irá 
+                carregar e aplicar os estilos do "style.css". -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<!-- Início do corpo da página.
+
+    A tag `<body>` contém todo o conteúdo visível da página, ou seja, 
+    tudo o que será mostrado ao usuário quando ele acessar o site.-->
+<body>
+
+    <!-- Divisão principal da página.
+
+        A tag `<div>` é um contêiner genérico usado para agrupar elementos 
+        e aplicar estilos ou funcionalidades específicas.
+
+        A classe `container` será usada no CSS para definir a aparência e 
+        estrutura da página. -->
+    <div class="container">
+
+        <!-- Título principal da página.
+
+            A tag `<h2>` representa um título de segundo nível. O número 2 
+            indica sua importância (1 é o mais importante, 6 o menos importante). 
+            
+            Aqui, o título indica que a página exibe uma 
+                    lista de usuários. -->
+        <h2>Lista de Usuários</h2>
+
+        <!-- Barra superior contendo um campo de busca e um botão de cadastro.
+
+            Essa `<div>` agrupa esses dois elementos para facilitar a organização 
+            e estilização no CSS. -->
+        <div class="barra-superior">
+            
+            <!-- Campo de entrada para buscar usuários.
+
+                - O elemento `<input>` permite ao usuário digitar um texto.
+                - O atributo `type="text"` indica que este é um campo de entrada de texto.
+                - O atributo `id="campoFiltro"` dá um identificador único para esse campo, 
+                  permitindo que ele seja acessado pelo JavaScript para buscar usuários.
+                - O atributo `placeholder="Buscar por nome ou email"` exibe um texto dentro do 
+                  campo como uma dica para o usuário sobre o que ele deve digitar. -->
+            <input type="text" id="campoFiltro" placeholder="Buscar por nome ou email">
+
+            <!-- Botão para cadastrar um novo usuário.
+
+                - O elemento `<button>` cria um botão clicável.
+                - A classe `botao-cadastrar` será usada no CSS para estilizar este botão.
+                - O atributo `onclick="window.location.href='cadastro.html'"` 
+                        faz com que, ao clicar no botão, 
+                        o usuário seja redirecionado para a página `cadastro.html`, 
+                        onde ele poderá adicionar um novo usuário. -->
+            <button class="botao-cadastrar" onclick="window.location.href='cadastro.html'">+ Cadastrar</button>
+            
+        </div>
+
+        <!-- Tabela que exibe a lista de usuários.
+
+            - A tag `<table>` cria uma tabela para organizar os
+                    dados em linhas e colunas. -->
+        <table>
+
+            <!-- Cabeçalho da tabela.
+
+                A tag `<thead>` contém as informações de cabeçalho, ou seja, 
+                os títulos das colunas da tabela. -->
+            <thead>
+
+                <!-- Início da linha do cabeçalho da tabela -->
+                <tr> 
+                    
+                    <!-- Título da primeira coluna: Nome do usuário.
+                        
+                    A tag `<th>` representa um título de coluna 
+                            dentro de uma tabela. -->
+                    <th>Nome</th>
+
+                    <!-- Título da segunda coluna: Email do usuário -->
+                    <th>Email</th>
+
+                    <!-- Título da terceira coluna: Idade do usuário -->
+                    <th>Idade</th>
+
+                    <!-- Título da quarta coluna: Ações que o usuário pode realizar, 
+                         como editar ou excluir um usuário -->
+                    <th>Ações</th>
+
+                <!-- Fim da linha do cabeçalho -->
+                </tr> 
+
+            </thead>
+
+            <!-- Corpo da tabela.
+
+                A tag `<tbody>` contém os dados que serão inseridos dinamicamente 
+                via JavaScript. O JavaScript buscará a lista de usuários e criará 
+                as linhas automaticamente dentro deste `<tbody>`. -->
+            <tbody id="tabelaUsuarios"></tbody>
+
+        </table>
+
+    <!-- Fim da div.container -->
+    </div> 
+
+    <!-- Importa o arquivo JavaScript.
+
+        A tag `<script>` inclui um arquivo externo de JavaScript na página. 
+        Esse arquivo chamado `script.js` contém os códigos 
+                que carregam a lista de usuários e adicionam 
+                funcionalidades como buscar, editar e excluir usuários.
+
+    O JavaScript será executado automaticamente quando a 
+            página carregar. -->
+    <script src="script.js"></script>
+
+</body> <!-- Fim do corpo da página -->
+
+</html> <!-- Fim do documento HTML -->

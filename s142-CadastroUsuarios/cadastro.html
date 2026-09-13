@@ -1,0 +1,155 @@
+<!-- Declara que este é um documento HTML5, garantindo 
+        que o navegador interprete corretamente o código. -->
+<!DOCTYPE html>
+
+<!-- Inicia o documento HTML e define o idioma da página como 
+        português, auxiliando mecanismos de busca e leitores de tela. -->
+<html lang="pt">
+
+<!-- Início do cabeçalho do documento HTML, onde são 
+        definidas configurações e metadados da página. -->
+<head>
+
+    <!-- Define a codificação de caracteres como UTF-8, permitindo a 
+            exibição correta de acentos, cedilha e símbolos especiais. -->
+    <meta charset="UTF-8">
+
+    <!-- Configura a viewport para tornar o site responsivo, ajustando-se 
+            automaticamente a diferentes tamanhos de tela. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Define o título da página, que será exibido na aba do 
+            navegador e nos resultados de pesquisa do Google. -->
+    <title>Cadastro de Usuário</title>
+    
+    <!-- Importa a folha de estilos CSS para definir a 
+            aparência visual da página. -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<!-- Início do corpo da página. 
+     Todo o conteúdo visível do site estará dentro da tag <body>. -->
+<body>
+
+    <!-- Cria um contêiner principal para o formulário de cadastro de usuários. 
+         A classe "container" serve para definir a estrutura geral do layout e 
+         "cadastro-container" é usada para estilizar 
+                especificamente a área de cadastro. -->
+    <div class="container cadastro-container">
+
+        <!-- Título principal da página. 
+             O ID "tituloPagina" será usado pelo JavaScript 
+                    para modificar este título dinamicamente 
+                    caso a página seja usada para editar um usuário ao 
+                    invés de cadastrá-lo. -->
+        <h2 id="tituloPagina">Cadastrar Usuário</h2>
+
+        <!-- Início do formulário de cadastro de usuários. 
+             O ID "formularioCadastro" permite que o JavaScript 
+                    manipule os dados do formulário. -->
+        <form id="formularioCadastro">
+
+            <!-- Campo oculto que armazena o ID do usuário quando a 
+                        página estiver no modo de edição. 
+                Esse campo não será visível para o usuário na tela, 
+                        mas será usado pelo JavaScript para diferenciar
+                        entre uma edição (quando há um ID) e um novo 
+                        cadastro (quando está vazio). -->
+            <input type="hidden" id="idUsuario">
+
+            <!-- Grupo de formulário para o campo de Nome. 
+                Este <div> agrupa o rótulo (<label>) e o campo de entrada (<input>), 
+                facilitando a organização do layout e a aplicação de estilos no CSS. -->
+            <div class="grupo-formulario">
+
+                <!-- Rótulo do campo de nome.
+                    O atributo "for" indica que este rótulo está vinculado ao 
+                            campo de entrada com o ID "nome",
+                            o que melhora a acessibilidade e permite que o 
+                            usuário clique no rótulo para ativar o campo de entrada. -->
+                <label for="nome">Nome</label>
+
+                <!-- Campo de entrada onde o usuário digita seu nome.
+                    Este input permite que o usuário forneça seu 
+                            nome no formulário. -->
+
+                <!-- Atributos do <input>:
+                    - type="text" → Define que este campo aceitará apenas texto.
+                    - id="nome" → Fornece um identificador exclusivo para este 
+                            campo, permitindo que JavaScript e CSS interajam com ele.
+                    - placeholder="Digite o nome" → Exibe um texto dentro do 
+                            campo antes do usuário digitar, servindo como orientação.
+                    - required → Indica que este campo é obrigatório, impedindo o 
+                            envio do formulário se estiver vazio. -->
+                <input type="text" id="nome" placeholder="Digite o nome" required>
+
+            </div> <!-- Fim do grupo de formulário para o nome -->
+
+
+            <!-- Grupo de formulário para o campo de Email. -->
+            <div class="grupo-formulario">
+
+                <!-- Rótulo do campo de email, associado ao input 
+                        pelo atributo "for". -->
+                <label for="email">Email</label>
+
+                <!-- Campo de entrada para digitar o email do usuário.
+                     - type="email" obriga que o usuário insira um email válido.
+                     - id="email" permite que o JavaScript acesse o campo.
+                     - placeholder="Digite o email" exibe um texto de ajuda dentro do campo.
+                     - required impede o envio do formulário caso o campo esteja vazio. -->
+                <input type="email" id="email" placeholder="Digite o email" required>
+
+            </div>
+
+            <!-- Grupo de formulário para o campo de Idade. -->
+            <div class="grupo-formulario">
+
+                <!-- Rótulo do campo de idade, associado ao input 
+                        pelo atributo "for". -->
+                <label for="idade">Idade</label>
+
+                <!-- Campo de entrada para digitar a idade do usuário.
+                     - type="number" obriga que o usuário insira apenas números.
+                     - id="idade" permite que o JavaScript acesse este campo.
+                     - placeholder="Digite a idade" exibe um texto de ajuda dentro do campo.
+                     - required impede o envio do formulário caso o campo esteja vazio. -->
+                <input type="number" id="idade" placeholder="Digite a idade" required>
+
+            </div>
+
+            <!-- Seção que agrupa os botões de ação do formulário. -->
+            <div class="acoes-formulario">
+
+                <!-- Botão que envia o formulário. 
+                     - type="submit" faz com que o botão envie os 
+                            dados do formulário quando clicado.
+                     - class="salvar" será usada no CSS para estilizar o botão. -->
+                <button type="submit" class="salvar">Salvar</button>
+
+                <!-- Botão que cancela a operação e retorna à página 
+                            principal (index.html). 
+                     - type="button" impede que o formulário seja 
+                            enviado ao clicar neste botão.
+                     - onclick="window.location.href='index.html'" faz 
+                            com que o botão redirecione o usuário para a 
+                            página inicial. -->
+                <button type="button" class="cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+
+            </div>
+
+        </form> <!-- Fim do formulário -->
+
+    </div> <!-- Fim do contêiner do formulário -->
+
+    <!-- Importa o arquivo JavaScript para a página.
+         O script "script.js" contém as funções responsáveis 
+                por carregar os usuários, 
+                preencher o formulário ao editar e enviar os 
+                dados ao backend. -->
+    <script src="script.js"></script>
+
+</body> <!-- Fim do corpo da página -->
+
+</html> <!-- Fim do documento HTML -->
