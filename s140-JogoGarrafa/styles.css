@@ -1,0 +1,32 @@
+/* Seleciona o elemento <body> para aplicar 
+        estilos que afetam toda a página */
+body {
+
+    /* Remove as margens padrão do navegador ao redor do <body> */
+    margin: 0;
+
+    /* Remove o preenchimento padrão do navegador dentro do <body> */
+    padding: 0;
+
+    /* Define a cor de fundo de toda a página para branco */
+    background-color: #FFFFFF;
+
+}
+
+/* Seleciona o elemento canvas com o ID 'tela' para 
+        aplicar estilos específicos */
+#tela {
+
+    /* Define o canvas para ser um bloco, o que permite mais 
+            controle sobre posicionamento e dimensionamento */
+    display: block;
+
+    /* Centraliza o canvas horizontalmente dentro de seu 
+            contêiner (normalmente o <body>) */
+    margin: 0 auto;
+
+    /* Define a cor de fundo do canvas para branco, útil se o 
+            canvas não preencher com imagens ou desenhos completamente */
+    background-color: #FFFFFF;
+    
+}
