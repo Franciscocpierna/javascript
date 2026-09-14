@@ -1,0 +1,585 @@
+/* Importa a fonte 'Roboto' do Google Fonts para ser usada na página. 
+   Isso permite que o texto na página use esta fonte, garantindo 
+         uma aparência consistente em diferentes navegadores e dispositivos. */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+  /* Este bloco de estilo aplica-se a todos os elementos na 
+         página (* é um seletor universal). 
+    Ele remove as margens padrão e o preenchimento de todos os elementos, 
+         o que ajuda a evitar inconsistências entre diferentes navegadores. */
+  * {
+
+  /* Define a margem externa dos elementos para 0, removendo 
+         espaço extra ao redor dos elementos. */
+    margin: 0; 
+
+    /* Define o preenchimento interno dos elementos para 0, 
+         removendo espaço extra dentro dos elementos. */
+    padding: 0; 
+    
+    /* box-sizing: border-box faz com que as dimensões definidas 
+         para um elemento (largura e altura) incluam o preenchimento e 
+         as bordas. Isso simplifica o cálculo de tamanhos de 
+         elementos, pois não é necessário adicionar o preenchimento e 
+         a borda às dimensões especificadas. */
+    box-sizing: border-box;
+
+}
+   
+
+/* Define estilos para o elemento <body> da página HTML, que é o 
+      contêiner de todo o conteúdo visível. */
+body {
+
+  /* font-family define a família de fontes usada para o texto. 
+     'Roboto', sans-serif significa que o navegador tentará 
+            usar a fonte 'Roboto' primeiro, e se não estiver disponível, 
+            usará qualquer fonte sans-serif padrão do sistema. */
+  font-family: 'Roboto', sans-serif;
+
+  /* background define o fundo do elemento. Aqui, usa-se um 
+         gradiente linear que começa em 135 graus,
+         indo do azul claro (#74ABE2) ao azul escuro (#5563DE). 
+      Gradientes criam uma transição suave entre duas ou mais cores. */
+  background: linear-gradient(135deg, #74ABE2, #5563DE);
+
+  /* color define a cor do texto dentro do elemento <body>. 
+         #333 é um cinza escuro, proporcionando um contraste 
+         suficiente contra o fundo claro para uma boa legibilidade. */
+  color: #333;
+
+}
+
+/* Define estilos para qualquer elemento com a classe 'container'. 
+   Esta classe é usada para estilizar uma divisão 
+         específica da página que agrupa conteúdo. */
+.container {
+
+  /* max-width define a largura máxima do contêiner. 
+   Se a janela do navegador for maior que 900px, o contêiner 
+         terá 900px de largura; se for menor, o contêiner 
+         encolherá para se ajustar. */
+  max-width: 900px;
+
+  /* margin define as margens externas do contêiner. 
+   '30px auto' configura as margens superior e inferior 
+         para 30px, e as margens laterais para 'auto', que 
+         centraliza o contêiner horizontalmente na página. */
+  margin: 30px auto;
+
+  /* padding define o preenchimento interno do contêiner, 
+         que é o espaço entre o conteúdo interno e a 
+         borda do contêiner. */
+  padding: 20px;
+
+  /* background define a cor de fundo do contêiner. #fff é branco, 
+         que destaca o contêiner contra o fundo gradiente. */
+  background: #fff;
+
+  /* border-radius arredonda os cantos do contêiner. 
+  8px é o raio da curvatura, criando cantos suavemente arredondados. */
+  border-radius: 8px;
+
+  /* box-shadow adiciona uma sombra ao redor do contêiner. 
+  '0 2px 8px rgba(0, 0, 0, 0.1)' configura a sombra para ser
+         sutil e quase transparente (10% de opacidade), com um 
+         deslocamento vertical de 2px e um desfoque de 8px. */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* Esta regra CSS aplica-se a todos os elementos <header> na página. 
+O elemento <header> é geralmente usado para conter conteúdo 
+         introdutório ou navegação. */
+header {
+
+  /* text-align: center; centraliza o texto dentro do elemento <header>. 
+  Isso afeta todos os textos dentro de <header>, alinhando-os ao 
+         centro do elemento. */
+  text-align: center;
+
+  /* margin-bottom: 20px; adiciona uma margem na parte 
+         inferior do <header>. Isso cria um espaço de 20 pixels 
+         entre o final do <header> e o próximo elemento na página, 
+         ajudando a separar visualmente as seções da página. */
+  margin-bottom: 20px;
+
+}
+
+/* Esta regra CSS aplica-se especificamente aos elementos <h1> 
+         que estão dentro de um <header>. 
+   <h1> é tipicamente usado para o título principal da página, o 
+         que é muito importante para a estrutura e SEO. */
+header h1 {
+
+  /* font-size: 2rem; define o tamanho da fonte do <h1> para 2 rem. 
+     'rem' é uma unidade relativa ao tamanho da fonte do elemento 
+            raiz (html), o que torna o tamanho da fonte escalável e acessível. */
+  font-size: 2rem;
+
+  /* color: #333; define a cor do texto para um cinza escuro (#333). 
+     Isso fornece um contraste adequado em um fundo claro, 
+            garantindo que o título seja facilmente legível. */
+  color: #333;
+
+}
+
+/* Esta regra CSS aplica-se a todos os elementos <section> na página. 
+   As <section>s são usadas para agrupar conteúdo temático que se 
+            relaciona com uma única narrativa. */
+section {
+
+  /* margin-bottom: 30px; adiciona uma margem na parte 
+            inferior de cada <section>. 
+     Isso cria um espaço de 30 pixels entre seções, ajudando a 
+            clarear a separação entre diferentes conteúdos ou 
+            temas na página. */
+  margin-bottom: 30px;
+
+}
+
+
+/* Esta regra CSS é aplicada a todos os elementos <h2> 
+         dentro de <section>. 
+   O <h2> é tipicamente usado para títulos de seções menores 
+         dentro de uma página, e é importante para a 
+         estrutura do documento. */
+section h2 {
+
+  /* Define o tamanho da fonte para 1.5 vezes o tamanho da 
+         fonte base do documento. 
+     'rem' é uma unidade relativa ao tamanho da fonte do 
+         elemento raiz (html). */
+  font-size: 1.5rem;
+
+  /* Define a cor do texto para um cinza médio escuro (#444). 
+  Esta cor é menos intensa que o preto puro, 
+         oferecendo uma leitura confortável sem 
+         grande contraste. */
+  color: #444;
+
+  /* Adiciona uma margem de 15 pixels na parte inferior do 
+         elemento <h2>, criando espaço entre o título e o 
+         conteúdo subsequente. */
+  margin-bottom: 15px;
+
+  /* Adiciona uma borda sólida na parte inferior do título 
+         com 2 pixels de espessura. A cor da borda é um 
+         cinza claro (#e0e0e0), que serve para separar 
+         visualmente o título do conteúdo abaixo dele. */
+  border-bottom: 2px solid #e0e0e0;
+
+  /* Adiciona um preenchimento de 5 pixels na parte inferior 
+         do título, aumentando o espaço entre o texto do 
+         título e a borda inferior. */
+  padding-bottom: 5px;
+
+}
+
+/* Esta regra CSS é aplicada a todos os elementos <form>. 
+   Um <form> é usado para coletar entradas do usuário, 
+         como dados em campos de texto, seleções e botões. */
+form {
+
+  /* Define o display do formulário para flexbox, um modelo 
+         de layout que permite controlar o alinhamento, espaçamento e 
+         tamanho de itens filhos de forma eficiente. */
+  display: flex;
+
+  /* Define a direção dos itens filhos do formulário para 
+         uma coluna vertical. 
+     Isso faz com que todos os elementos filhos do formulário 
+         sejam organizados um abaixo do outro. */
+  flex-direction: column;
+
+}
+
+/* Esta regra CSS é aplicada a todas as <div>s dentro de qualquer <form>. 
+   <div> é frequentemente usada para agrupar elementos 
+         relacionados para fins de estilização ou semânticos. */
+form div {
+
+  /* Adiciona uma margem de 15 pixels na parte inferior de 
+         cada <div> dentro de um formulário. 
+     Isso cria um espaço visual entre grupos de campos dentro do 
+         formulário, tornando-o mais organizado e fácil de usar. */
+  margin-bottom: 15px;
+
+}
+
+
+/* Esta regra CSS é aplicada a todos os elementos <label> 
+         dentro de qualquer <form>. 
+   Os rótulos (<label>) são usados para definir descrições 
+         para campos de entrada, melhorando a acessibilidade e 
+         a usabilidade. */
+form label {
+
+  /* Define a espessura da fonte para 'bold' (negrito), o que 
+         faz com que o texto do rótulo se destaque mais, facilitando a 
+         associação visual com os campos de entrada correspondentes. */
+  font-weight: bold;
+
+  /* Adiciona uma margem de 5 pixels na parte inferior de cada rótulo. 
+     Isso cria um pequeno espaço entre o rótulo e o campo de 
+         entrada que ele descreve, ajudando a separar 
+         visualmente os elementos do formulário. */
+  margin-bottom: 5px;
+
+  /* Define a cor do texto para um cinza médio (#555). 
+  Esta cor é suficientemente escura para boa legibilidade, mas 
+         mais suave que o preto puro, o que pode ser menos 
+         cansativo para os olhos em sessões longas de uso. */
+  color: #555;
+
+}
+
+/* Esta regra CSS é aplicada a todos os elementos <textarea> e
+         <input type="text"> dentro de qualquer <form>. 
+   <textarea> é usado para entrada de texto multilinha, 
+         enquanto <input type="text"> é usado para entrada de 
+         texto de uma única linha. */
+form textarea,
+form input[type="text"] {
+
+  /* Adiciona um preenchimento de 10 pixels em todas as 
+         direções dentro dos campos de texto. 
+     Isso aumenta a área clicável e melhora a legibilidade do 
+         texto inserido, oferecendo mais espaço ao redor do texto. */
+  padding: 10px;
+
+  /* Aplica uma borda sólida com 1 pixel de espessura e cor 
+            cinza claro (#ccc) ao redor dos campos de texto. 
+     A borda define claramente a área dos campos de entrada, 
+            separando-os visualmente de outros elementos do formulário. */
+  border: 1px solid #ccc;
+
+  /* Define um raio de borda de 4 pixels para os campos de 
+            texto, arredondando levemente os cantos. 
+     Cantos arredondados são geralmente percebidos como mais 
+            amigáveis e esteticamente agradáveis, melhorando a 
+            experiência do usuário. */
+  border-radius: 4px;
+  
+}
+
+
+/* Esta regra CSS é aplicada a todos os elementos <button> 
+         dentro de qualquer <form>. 
+  Botões em formulários são geralmente usados para 
+         submeter dados ou iniciar uma ação. */
+form button {
+  
+  /* Adiciona um preenchimento de 10 pixels em todas as 
+            direções dentro do botão, aumentando a área clicável e 
+            melhorando a visibilidade do texto. */
+  padding: 10px;
+
+  /* Define a cor de fundo do botão para um azul profundo (#5563DE). 
+      Esta cor é atraente e oferece um bom contraste com o 
+            texto branco, facilitando a leitura. */
+  background: #5563DE;
+
+  /* Define a cor do texto dentro do botão para branco (#fff), 
+         garantindo alto contraste contra o fundo azul, o 
+         que melhora a acessibilidade e a legibilidade. */
+  color: #fff;
+
+  /* Remove qualquer borda do botão, criando um visual 
+         mais limpo e moderno. */
+  border: none;
+
+  /* Arredonda os cantos do botão com um raio de 4 pixels, 
+      tornando o design mais suave e visualmente agradável. */
+  border-radius: 4px;
+
+  /* Define o tamanho da fonte do texto dentro do botão para 1 rem, 
+         que é uma unidade relativa ao tamanho da fonte do 
+         elemento raiz (html), mantendo a consistência no design. */
+  font-size: 1rem;
+
+  /* Muda o cursor para um ponteiro quando o mouse 
+         está sobre o botão, indicando que o elemento é clicável. */
+  cursor: pointer;
+
+  /* Adiciona uma transição suave para mudanças na 
+         propriedade de fundo, ocorrendo ao longo de 0.3 segundos. 
+   Isso faz com que mudanças de cor sejam mais suaves visualmente. */
+  transition: background 0.3s;
+  
+}
+
+/* Esta pseudo-classe CSS afeta o elemento <button> 
+         quando o mouse está sobre ele (hover). */
+form button:hover {
+
+  /* Muda a cor de fundo do botão para um azul mais 
+            escuro (#3f50b5) quando o mouse está sobre ele. 
+      Isso fornece um feedback visual imediato de interatividade, 
+            indicando que o botão é interativo. */
+  background: #3f50b5;
+
+}
+  
+
+/* Esta regra CSS é aplicada a todos os elementos com a 
+         classe 'post' dentro do contêiner com o id 'postsContainer'.
+   Essa abordagem é usada para estilizar individualmente 
+         cada post dentro do contêiner de postagens. */
+#postsContainer .post {
+
+  /* Define a cor de fundo de cada post para branco (#fff). 
+  Isso ajuda os posts a se destacarem contra um fundo 
+         colorido ou imagem de fundo do site. */
+  background: #fff;
+
+  /* Adiciona uma borda sólida de 1 pixel de espessura com a 
+         cor cinza claro (#ddd) ao redor de cada post.
+     Isso delimita visualmente o post do resto do conteúdo. */
+  border: 1px solid #ddd;
+
+  /* Arredonda os cantos de cada post com um raio de 6 pixels.
+     Cantos arredondados são esteticamente agradáveis e modernos. */
+  border-radius: 6px;
+
+  /* Adiciona um preenchimento de 15 pixels em todos os lados 
+            dentro de cada post.
+     Isso cria espaço entre o conteúdo do post (texto, imagens) e 
+            as bordas do elemento. */
+  padding: 15px;
+
+  /* Define uma margem na parte inferior de cada post para 20 pixels.
+     Isso garante que haja um espaço claro entre os posts 
+            consecutivos, melhorando a legibilidade e 
+            a organização do layout. */
+  margin-bottom: 20px;
+
+  /* Aplica uma sombra leve abaixo de cada post (0 pixel para a 
+            direita, 1 pixel para baixo, 4 pixels de desfoque) com 
+            uma cor preta translúcida (opacidade 10%).
+     Isso dá um efeito de elevação ao post, fazendo com que 
+            pareça ligeiramente elevado sobre o plano de fundo. */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Esta regra CSS é aplicada a todos os parágrafos (<p>) 
+      dentro de um elemento com a classe 'post'. */
+.post p {
+
+  /* Define a margem na parte inferior de cada parágrafo para 10 pixels.
+     Isso separa visualmente os parágrafos dentro do post, 
+            tornando o texto mais fácil de seguir. */
+  margin-bottom: 10px;
+
+  /* Ajusta o espaçamento entre as linhas do texto para 1.5 
+            vezes o tamanho da fonte padrão.
+     Isso melhora a legibilidade do texto, especialmente em 
+            blocos de texto mais longos. */
+  line-height: 1.5;
+
+}
+
+/* Esta regra CSS é aplicada a todas as imagens (<img>) 
+         dentro de um elemento com a classe 'post'. */
+.post img {
+
+  /* Define a largura máxima da imagem para 100% do seu contêiner.
+     Isso garante que a imagem nunca se estenda além do tamanho 
+            do post, responsivamente se ajustando ao espaço disponível. */
+  max-width: 100%;
+
+  /* Arredonda os cantos da imagem com um raio de 4 pixels.
+     Isso dá às imagens um toque suave e é consistente 
+            com o estilo geral dos posts. */
+  border-radius: 4px;
+
+  /* Define uma margem na parte inferior da imagem para 10 pixels.
+     Isso separa a imagem de qualquer texto ou outro conteúdo 
+            que venha depois dela dentro do post. */
+  margin-bottom: 10px;
+
+}
+
+
+/* Esta regra CSS é aplicada a todos os elementos <button> 
+         dentro de elementos com a classe 'post'.
+   Esses botões são frequentemente usados para ações 
+         como deletar ou editar postagens. */
+.post button {
+
+  /* Adiciona preenchimento ao redor do texto dentro do botão, 
+            especificamente 8 pixels na parte superior e 
+            inferior e 12 pixels nos lados esquerdos e direitos.
+     Isso torna o botão maior e mais fácil de clicar, 
+            melhorando a usabilidade. */
+  padding: 8px 12px;
+
+  /* Define a cor de fundo do botão para um vermelho vivo (#E74C3C).
+     Esta cor chama atenção para o botão, tornando-o 
+            facilmente identificável como uma opção de ação. */
+  background: #E74C3C;
+
+  /* Define a cor do texto dentro do botão para branco (#fff).
+     O contraste de texto branco sobre fundo vermelho 
+            garante alta legibilidade e destaque. */
+  color: #fff;
+
+  /* Remove qualquer borda do botão para um design 
+            mais limpo e moderno. */
+  border: none;
+
+  /* Arredonda os cantos do botão para um design suave, 
+            com um raio de 4 pixels. */
+  border-radius: 4px;
+
+  /* Altera o cursor para um ponteiro quando o usuário 
+            passa o mouse sobre o botão,
+            indicando que o botão é clicável. */
+  cursor: pointer;
+
+  /* Adiciona uma margem à direita do botão de 10 pixels.
+     Isso separa visualmente este botão de outros botões ou 
+            elementos adjacentes, se houver. */
+  margin-right: 10px;
+
+  /* Aplica uma transição suave à mudança de cor de fundo do 
+            botão que ocorre quando o estado hover é ativado.
+     A transição ocorre ao longo de 0.3 segundos, criando um 
+            efeito visual agradável ao interagir com o botão. */
+  transition: background 0.3s;
+
+}
+
+/* Esta pseudo-classe CSS afeta o botão quando o usuário 
+         passa o mouse sobre ele. */
+.post button:hover {
+
+  /* Muda a cor de fundo para um tom mais escuro de 
+         vermelho (#c0392b) quando o mouse está sobre o botão.
+     Este efeito destaca o botão ainda mais e indica 
+            interatividade, incentivando o usuário a clicar. */
+  background: #c0392b;
+
+}
+
+/* Aplica estilos ao elemento <footer>, que geralmente contém 
+         informações de rodapé como direitos autorais, links de 
+         contato, ou referências. É uma prática comum colocar o 
+         <footer> no final das páginas web. */
+footer {
+
+  /* text-align: center; - Esta propriedade alinha todo o 
+         conteúdo textual do <footer> ao centro horizontalmente. 
+   Isso é útil para garantir que o conteúdo, como texto de 
+         direitos autorais ou links, seja facilmente localizado e 
+         visualmente balanceado no rodapé. */
+  text-align: center;
+
+  /* margin-top: 20px; - Adiciona uma margem superior de 20 pixels 
+         ao <footer>, criando um espaço separador entre o conteúdo da 
+         página e o rodapé. Isso ajuda a delimitar claramente o final 
+         do conteúdo principal da página e o início do rodapé. */
+  margin-top: 20px;
+
+  /* color: #777; - Define a cor do texto para um cinza médio. 
+  Esta cor é escolhida para dar um contraste menos agressivo 
+         que o preto, o que é ideal para texto que não requer 
+         destaque primário, mantendo o foco no conteúdo principal da 
+         página enquanto mantém a legibilidade. */
+  color: #777;
+
+}
+
+/* Estilos para um botão customizado, identificado pela classe 
+      .botao-arquivo, que é geralmente usado para iniciar 
+      uma ação de upload de arquivo. A terminologia em português 
+      torna o site mais acessível para usuários que falam português. */
+.botao-arquivo {
+
+  /* display: inline-block; - Permite que o botão flua 
+         dentro do layout da página como um bloco, mas alinhado em 
+         linha com outros elementos. Isso é essencial para posicionar o 
+         botão ao lado de outros elementos sem quebrar o fluxo do layout, 
+         como ao lado de um campo de entrada ou outro botão. */
+  display: inline-block;
+
+  /* padding: 8px 12px; - Especifica o preenchimento interno do 
+         botão com 8 pixels na vertical e 12 pixels na horizontal. 
+   Este preenchimento torna o botão mais fácil de clicar e 
+         visualmente mais agradável, destacando o texto ou 
+         ícone dentro dele. */
+  padding: 8px 12px;
+
+  /* background: #5563DE; - Atribui uma cor de fundo azul forte ao botão. 
+  Este tom de azul é vibrante e capaz de atrair atenção, o que é útil 
+         para ações de interface do usuário como uploads, incentivando 
+         interações do usuário. */
+  background: #5563DE;
+
+  /* color: #fff; - Estabelece a cor do texto dentro do botão 
+         como branco. 
+   O contraste entre o fundo azul e o texto branco é 
+         alto, o que facilita a leitura rápida e melhora a 
+         acessibilidade. */
+  color: #fff;
+
+  /* border-radius: 4px; - Arredonda os cantos do botão com um 
+         raio de 4 pixels. Cantos arredondados são 
+         frequentemente usados para suavizar o design dos 
+         elementos interativos, tornando-os mais amigáveis e modernos. */
+  border-radius: 4px;
+
+  /* cursor: pointer; - Muda o cursor para a forma de 
+         ponteiro quando um usuário passa o mouse sobre o botão. 
+   Isso indica que o elemento é clicável, uma dica visual 
+         importante para a interatividade. */
+  cursor: pointer;
+
+  /* margin-right: 10px; - Adiciona uma margem à direita do botão. 
+  Isso é útil quando múltiplos botões ou elementos estão 
+         alinhados horizontalmente, pois cria um espaço visual 
+         entre eles, evitando uma aparência aglomerada. */
+  margin-right: 10px;
+
+}
+
+/* Modifica a cor de fundo do botão quando o mouse está sobre ele. 
+Este efeito é conhecido como hover, e é usado para fornecer 
+         feedback visual imediato sobre a interatividade do botão. */
+.botao-arquivo:hover {
+
+  /* background: #3f50b5; - Escurece a cor de fundo para um azul mais 
+         profundo quando o botão é passado pelo mouse. Essa mudança 
+         sutil mas visível reforça a interatividade, incentivando o clique e 
+         melhorando a experiência do usuário. */
+  background: #3f50b5;
+
+}
+
+
+/* Esta regra CSS aplica-se ao elemento HTML com o id 'nomeArquivo'. 
+   IDs são identificadores únicos na página, o que significa que esta 
+         regra afetará especificamente o elemento que tem o id 'nomeArquivo'. */
+#nomeArquivo {
+
+  /* font-size: 0.9rem; - Define o tamanho da fonte para 0.9 vezes o 
+            tamanho da fonte raiz. 
+     A unidade 'rem' é relativa ao tamanho da fonte do elemento 
+            raiz do documento, geralmente o elemento <html>. 
+     Escolher 0.9 rem faz com que o texto seja ligeiramente menor 
+            que o texto padrão, adequado para informações menos críticas 
+            como o nome de um arquivo, o que não precisa ser o foco 
+            principal da atenção. */
+  font-size: 0.9rem;
+
+  /* color: #666; - Define a cor do texto para um cinza médio. 
+     Este tom de cinza (#666) é sutil e usado frequentemente para 
+            texto informativo que é secundário ao conteúdo principal. 
+     É escuro o suficiente para ser facilmente legível, mas não tão 
+            dominante quanto o preto, mantendo o foco no conteúdo 
+            mais importante. */
+  color: #666;
+  
+}

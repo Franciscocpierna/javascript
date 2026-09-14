@@ -1,0 +1,175 @@
+<!-- Declara que o documento está em HTML5, a versão 
+      mais recente do HTML -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML, especificando que o idioma       
+      principal é o Português do Brasil -->
+<html lang="pt-BR">
+
+<!-- Início da seção de cabeçalho do documento, que contém 
+      informações sobre o documento, como metadados, títulos e 
+      links para scripts ou folhas de estilo -->
+<head>
+
+  <!-- Define o conjunto de caracteres para UTF-8, que suporta a  
+        maioria dos caracteres usados em vários idiomas -->
+  <meta charset="UTF-8" />
+
+  <!-- Configura a viewport para escalar o site de acordo com a 
+        largura do dispositivo e definir o zoom inicial como 1.0, 
+        essencial para sites responsivos -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Define o título da página, que aparece na aba do navegador -->
+  <title>Blog Simples</title>
+
+  <!-- Link para a folha de estilos externa, que 
+        define a aparência visual da página -->
+  <link rel="stylesheet" href="style.css" />
+
+<!-- Fecha a tag head, indicando o fim da seção de 
+      cabeçalho do documento -->
+</head>
+
+
+<!-- Início do corpo do documento HTML. Aqui vão todos os 
+      elementos visíveis na página web. -->
+<body>
+
+  <!-- 'div' é uma tag usada para agrupar blocos de conteúdo. 
+   Aqui, ela é usada para criar um contêiner centralizado 
+        para todo o conteúdo do blog. 'class' é um atributo 
+        que permite aplicar estilos específicos definidos no CSS. -->
+  <div class="container">
+
+    <!-- 'header' é uma seção que geralmente contém cabeçalhos e 
+          elementos de navegação. Aqui, é usado para agrupar o 
+          título principal do blog. -->
+    <header>
+
+      <!-- 'h1' é uma tag de cabeçalho usada para títulos 
+            principais, é o maior tamanho de fonte por padrão e é 
+            importante para SEO (Search Engine Optimization) porque 
+            diz aos motores de busca sobre o conteúdo principal da página. -->
+      <h1>Blog Simples</h1>
+
+    </header>
+    
+    <!-- 'section' é uma tag usada para definir uma seção do 
+          documento. 
+      Aqui, ela especifica a área do formulário para criar 
+          novas postagens. O 'id' é um identificador único 
+          que pode ser usado para referenciar este elemento 
+          especificamente no CSS e JavaScript. -->
+    <section id="post-form">
+
+      <!-- 'h2' é uma tag de cabeçalho usada para subtítulos, 
+            indicando uma nova seção de conteúdo, menor que 'h1' 
+            mas ainda significativa. -->
+      <h2>Criar uma nova postagem</h2>
+
+      <!-- 'form' é uma tag que define um formulário HTML para 
+            entrada do usuário. É usado aqui para permitir aos 
+            usuários inserir dados que podem ser enviados a um servidor. 
+        'id' dá ao formulário um identificador único para referência. -->
+      <form id="createPostForm">
+
+        <!-- Esta 'div' serve como um contêiner para organizar 
+              visualmente os campos de entrada dentro do formulário. -->
+        <div>
+
+          <!-- 'label' especifica um rótulo para um elemento 'input'. 
+           O atributo 'for' deve ser o mesmo que o 'id' do elemento 
+                  que está rotulando para melhorar a acessibilidade, 
+                  permitindo que cliques no rótulo ativem o campo de 
+                  entrada correspondente. -->
+          <label for="postText">Texto:</label>
+
+          <!-- 'textarea' é um campo de entrada para texto mais 
+                  longo que pode ser digitado em várias linhas. 'id' e 'name' 
+                  ajudam a identificar e coletar os dados no formulário. 
+            'rows' especifica quantas linhas o campo deve mostrar por padrão. -->
+          <textarea id="postText" name="postText" rows="3"></textarea>
+
+        </div>
+
+        <!-- Outra 'div' para um segundo conjunto de entrada, desta 
+              vez para adicionar imagens. -->
+        <div>
+
+          <!-- Um 'label' para o campo de upload de imagens, com a 
+                  informação adicional de que a imagem é opcional. -->
+          <label for="postImage">Imagem (opcional):</label>
+
+          <!-- Um 'label' estilizado que atua como um botão para selecionar 
+                  arquivos, com estilos aplicados para parecer mais atraente. -->
+          <label for="postImage" class="botao-arquivo">Escolher Imagem</label>
+
+          <!-- Um 'span' para mostrar o nome do arquivo escolhido. 
+           Inicialmente mostra que nenhum arquivo foi escolhido. 
+           É atualizado dinamicamente com JavaScript quando um arquivo é selecionado. -->
+          <span id="nomeArquivo">Nenhum arquivo escolhido</span>
+
+          <!-- Um campo de 'input' do tipo 'file', que permite aos 
+                usuários escolherem um arquivo do seu dispositivo. 
+          Está oculto ('display: none;') porque estamos usando um 'label' 
+                estilizado para acioná-lo. -->
+          <input type="file" id="postImage" name="postImage" accept="image/*" style="display: none;" />
+
+        </div>
+
+        <!-- Um botão para submeter o formulário. Quando clicado, 
+                envia os dados do formulário para serem processados. -->
+        <button type="submit">Postar</button>
+
+      </form>
+    </section>
+    
+    <!-- 'section' é uma tag usada para definir uma seção temática de 
+            conteúdo. Aqui, ela agrupa a área onde as postagens serão exibidas. -->
+    <section id="posts">
+
+      <!-- 'h2' é usado para títulos de seções, fornecendo uma hierarquia 
+            clara de conteúdo na página. Este título anuncia a seção 
+            onde as postagens aparecerão. -->
+      <h2>Postagens</h2>
+      
+      <!-- 'div' é uma tag de divisão usada para agrupar conteúdo. 
+       'id' permite identificar unicamente este contêiner no CSS e JavaScript. 
+       Este contêiner específico será usado para inserir as postagens 
+              dinamicamente via JavaScript. -->
+      <div id="postsContainer"></div>
+
+    </section>
+
+    <!-- 'footer' é uma tag que define o rodapé do documento ou seção. 
+     É comum incluir informações de direitos autorais, links para 
+            termos de serviço ou informações de contato aqui. -->
+    <footer>
+      
+      <!-- 'p' é uma tag para parágrafos de texto. O conteúdo aqui 
+            indica que os direitos autorais são reservados para o 
+            'Blog Simples' e inclui o ano de 2025. -->
+      <p>&copy; 2025 - Blog Simples</p>
+
+    </footer>
+
+    <!-- Final do 'div' contêiner que começou após a tag 'body'. 
+     Todo o conteúdo principal da página foi incluído 
+            dentro deste contêiner. -->
+    </div>
+
+    <!-- 'script' é usado para incorporar ou referenciar um 
+            script executável, como JavaScript. 
+      'src' aponta para o arquivo de script que contém o código 
+            JavaScript que controla a funcionalidade dinâmica da 
+            página, como carregar postagens. -->
+    <script src="script.js"></script>
+
+<!-- Final do corpo do documento HTML, onde todo o conteúdo   
+      visível da página deve estar contido. -->
+</body>
+
+<!-- Final do documento HTML, indicando que todos os 
+      elementos da página foram definidos. -->
+</html>
