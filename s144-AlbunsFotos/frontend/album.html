@@ -1,0 +1,245 @@
+<!-- Declaração do tipo de documento -->
+<!-- Define que este documento segue o padrão HTML5, garantindo 
+      compatibilidade com navegadores modernos -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML -->
+<!-- Define que o idioma principal do conteúdo é português  
+      do Brasil (pt-BR) -->
+<html lang="pt-BR">
+
+<!-- Início do cabeçalho da página -->
+<head>
+
+  <!-- Define a codificação de caracteres do documento como UTF-8 -->
+  <!-- Isso permite o uso de caracteres especiais e 
+        acentos (ç, ã, é, etc.) corretamente -->
+  <meta charset="UTF-8">
+
+  <!-- Define o título da página, que será exibido na aba do navegador -->
+  <!-- Esse título também pode ser utilizado pelos motores de 
+        busca para indexação da página -->
+  <title>Fotos do Álbum</title>
+
+  <!-- Importa um arquivo externo de folha de estilos (CSS) 
+        chamado "estilo.css" -->
+  <!-- Esse arquivo contém todas as regras de design e 
+        formatação da página -->
+  <link rel="stylesheet" href="estilo.css">
+
+<!-- Fim da seção de cabeçalho -->
+</head>
+
+<!-- Início do corpo da página -->
+<!-- O <body> contém todo o conteúdo visível da página, 
+        como textos, imagens e interações -->
+<body>
+
+  <!-- Início do cabeçalho da página -->
+  <!-- O <header> geralmente contém informações importantes 
+          como título e navegação -->
+  <header>
+
+    <!-- Título principal da página -->
+    <!-- O <h1> representa o título mais importante da página e 
+            tem um identificador (id) "tituloAlbum" -->
+    <!-- O JavaScript pode usar esse id para modificar dinamicamente o 
+            nome do álbum carregado -->
+    <h1 id="tituloAlbum">Fotos do Álbum</h1>
+
+    <!-- Link para voltar à página principal -->
+    <!-- O elemento <a> é um link que redireciona o usuário 
+            para "index.html", onde estão todos os álbuns -->
+    <!-- A classe "voltar" é usada para estilizar esse link 
+            no CSS, tornando-o semelhante a um botão -->
+    <a href="index.html" class="voltar">Voltar aos Álbuns</a>
+
+  <!-- Fim do cabeçalho -->
+  </header>
+  
+  <!-- Início da área principal da página -->
+  <!-- O <main> contém o conteúdo mais importante da página -->
+  <main>
+
+    <!-- Seção responsável por adicionar uma nova foto ao álbum -->
+    <!-- O elemento <section> agrupa conteúdos relacionados -->
+    <!-- A classe "nova-foto" é usada no CSS para estilizar essa seção -->
+    <section class="nova-foto">
+
+      <!-- Título da seção para indicar que o usuário pode  
+              adicionar uma nova foto -->
+      <!-- O <h2> é um título de nível 2, hierarquicamente 
+              abaixo do <h1> do cabeçalho -->
+      <h2>Adicionar Foto</h2>
+
+      <!-- Formulário para adicionar uma nova foto ao álbum -->
+      <!-- O atributo "id" define um identificador único 
+              para o formulário -->
+      <!-- Esse id será usado pelo JavaScript para 
+              processar o envio da foto -->
+      <form id="formFoto">
+
+        <!-- Rótulo do campo de entrada de texto -->
+        <!-- O atributo "for" associa este rótulo ao campo de 
+                entrada identificado pelo id "descricaoFoto" -->
+        <!-- Isso permite que, ao clicar no rótulo, o campo de 
+                entrada seja ativado automaticamente -->
+        <label for="descricaoFoto">Descrição:</label>
+
+        <!-- Campo de entrada de texto para a descrição da foto -->
+        <!-- O usuário pode escrever uma legenda para a 
+                imagem antes de enviá-la -->
+        <!-- O id "descricaoFoto" permite manipular esse 
+                campo via JavaScript -->
+        <input type="text" id="descricaoFoto" />
+
+        <!-- Contêiner para agrupar a seleção do arquivo de imagem -->
+        <div>
+
+          <!-- Rótulo personalizado que funciona como um botão 
+                  para selecionar uma imagem -->
+          <!-- O atributo "for" está vinculado ao campo de entrada do tipo "file" -->
+          <!-- Isso permite que ao clicar neste rótulo, o usuário 
+                  possa escolher um arquivo -->
+          <label for="imagemFoto" class="botao-arquivo">Escolher Imagem</label>
+
+          <!-- Texto que exibe o nome do arquivo selecionado -->
+          <!-- Inicialmente, exibe "Nenhum arquivo escolhido" -->
+          <!-- Esse texto será atualizado dinamicamente via JavaScript 
+                  quando o usuário escolher um arquivo -->
+          <span id="nomeArquivo">Nenhum arquivo escolhido</span>
+
+          <!-- Campo de entrada para upload de arquivos -->
+          <!-- O tipo "file" permite que o usuário selecione uma 
+                  imagem do seu dispositivo -->
+          <!-- O atributo "id" permite a manipulação desse campo via JavaScript -->
+          <!-- O atributo "accept" restringe os arquivos aceitos 
+                  apenas a imagens -->
+          <!-- O estilo "display: none;" oculta esse campo, pois o 
+                  usuário usará o rótulo acima como botão -->
+          <input type="file" id="imagemFoto" accept="image/*" style="display: none;" />
+
+        </div>
+
+        <!-- Botão para enviar a foto -->
+        <!-- Ao clicar nesse botão, o formulário será 
+                processado pelo JavaScript -->
+        <button type="submit">Enviar Foto</button>
+
+      <!-- Fim do formulário -->
+      </form>
+
+    <!-- Fim da seção de adicionar nova foto -->
+    </section>
+
+    <!-- Seção responsável por exibir as fotos do álbum -->
+    <!-- O elemento <section> agrupa conteúdos relacionados -->
+    <!-- A classe "lista-fotos" é usada no CSS para 
+            estilizar essa seção -->
+    <section class="lista-fotos">
+
+      <!-- Título da seção -->
+      <!-- O <h2> indica que esta seção contém as fotos já 
+                adicionadas ao álbum -->
+      <h2>Fotos</h2>
+
+      <!-- Contêiner onde as fotos do álbum serão exibidas -->
+      <!-- Este <div> será preenchido dinamicamente pelo 
+              JavaScript com as imagens do álbum -->
+      <!-- O atributo "id" permite que esse elemento seja 
+              identificado e manipulado no código -->
+      <div id="containerFotos"></div>
+
+    <!-- Fim da seção de lista de fotos -->
+    </section>
+
+  <!-- Fim da área principal do site -->
+  </main>
+
+  <!-- Modal de tela cheia -->
+  <!-- Contêiner do modal -->
+  <!-- O modal é uma janela que aparece sobre o site 
+          quando o usuário clica em uma foto -->
+  <!-- Ele exibe a imagem ampliada e permite navegar 
+          entre as fotos do álbum -->
+  <div id="modal" class="modal">
+
+    <!-- Botão para fechar o modal -->
+    <!-- O elemento <span> é usado para exibir um "X" que 
+            permite fechar a visualização da foto -->
+    <!-- O id="fecharModal" permite que esse botão seja 
+            identificado e manipulado pelo JavaScript -->
+    <!-- A classe "fechar" é usada no CSS para definir a 
+            posição e aparência do botão -->
+    <span id="fecharModal" class="fechar">&times;</span>
+
+    <!-- Contêiner da imagem dentro do modal -->
+    <!-- Esse <div> mantém a organização da imagem e da 
+            descrição dentro do modal -->
+    <!-- A classe "modal-imagem-container" permite aplicar 
+            estilos específicos no CSS -->
+    <div class="modal-imagem-container">
+
+      <!-- Imagem ampliada dentro do modal -->
+      <!-- O <img> exibe a foto que foi clicada, permitindo 
+              vê-la em tamanho maior -->
+      <!-- O id="imagemModal" permite que essa imagem seja 
+              alterada dinamicamente via JavaScript -->
+      <!-- A classe "modal-conteudo" é usada no CSS para 
+              estilizar a imagem no modal -->
+      <img id="imagemModal" class="modal-conteudo" />
+
+      <!-- Descrição sobreposta na imagem dentro do modal -->
+      <!-- Essa descrição pode conter um texto informativo sobre a foto -->
+      <!-- O id="descricaoSobreposta" permite que esse texto 
+              seja alterado dinamicamente via JavaScript -->
+      <!-- A classe "descricao-sobreposta" é usada no CSS para 
+              definir a posição do texto sobre a imagem -->
+      <div id="descricaoSobreposta" class="descricao-sobreposta"></div>
+
+    <!-- Fim do contêiner da imagem dentro do modal -->
+    </div>
+
+    <!-- Botão para baixar a imagem -->
+    <!-- Esse botão permite que o usuário faça o download 
+            da foto visualizada -->
+    <!-- O id="baixar" é usado no JavaScript para adicionar a 
+            funcionalidade de download -->
+    <!-- A classe "navegacao" estiliza o botão para manter um 
+            padrão visual com os outros botões do modal -->
+    <button id="baixar" class="navegacao">Baixar</button>
+
+    <!-- Botão para visualizar a imagem anterior no modal -->
+    <!-- O id="anterior" permite que o JavaScript reconheça esse 
+            botão para navegar para a foto anterior -->
+    <!-- A classe "navegacao" estiliza esse botão para mantê-lo 
+            visualmente coerente com os demais -->
+    <button id="anterior" class="navegacao">Anterior</button>
+
+    <!-- Botão para visualizar a próxima imagem no modal -->
+    <!-- O id="proximo" permite que o JavaScript reconheça esse 
+            botão para avançar para a próxima foto -->
+    <!-- A classe "navegacao" mantém a padronização visual 
+            dos botões dentro do modal -->
+    <button id="proximo" class="navegacao">Próxima</button>
+
+  <!-- Fim do contêiner do modal -->
+  </div>
+
+
+  <!-- Importação do arquivo de script JavaScript -->
+  <!-- O <script> permite que o código JavaScript seja 
+          executado nesta página -->
+  <!-- Ele carrega um arquivo externo chamado "scriptAlbum.js", 
+          que contém funcionalidades -->
+  <!-- Esse script gerencia a exibição das fotos, o funcionamento 
+          do modal e os botões de navegação -->
+  <script src="scriptAlbum.js"></script>
+
+<!-- Fim do corpo da página -->
+<!-- O <body> contém todo o conteúdo visível da página, 
+          incluindo texto, imagens e interações -->
+</body>
+
+<!-- Fim do documento HTML -->
+</html>

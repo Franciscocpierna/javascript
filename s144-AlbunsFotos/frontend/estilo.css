@@ -1,0 +1,1048 @@
+/* Importa uma fonte do Google Fonts chamada "Roboto" */
+/* Isso permite que o site utilize uma fonte externa e 
+      moderna para o texto */
+/* O parâmetro "display=swap" melhora o carregamento da 
+      fonte, garantindo uma exibição mais rápida */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Reset e configuração geral do estilo da página */
+/* O objetivo dessa regra é garantir uma base consistente de 
+      estilos em todos os navegadores */
+
+/* O seletor "*" (asterisco) aplica os estilos abaixo para 
+      TODOS os elementos da página */
+* {
+  
+  /* Remove qualquer margem externa que os elementos 
+        possam ter por padrão */
+  /* Isso evita espaços indesejados ao redor dos elementos */
+  margin: 0;
+
+  /* Remove qualquer preenchimento interno padrão dos elementos */
+  /* Isso impede que elementos, como botões e inputs, 
+        tenham espaçamentos inesperados */
+  padding: 0;
+
+  /* Define a maneira como o tamanho dos elementos é calculado */
+  /* "border-box" faz com que a largura e altura dos elementos 
+        incluam a borda e o preenchimento */
+  /* Isso ajuda a evitar que os elementos fiquem maiores 
+        do que o esperado */
+  box-sizing: border-box;
+  
+}
+
+/* Estilização do corpo da página (body) */
+/* O <body> contém todo o conteúdo visível da página */
+body {
+  
+  /* Define a fonte principal do site como "Roboto" */
+  /* Se "Roboto" não estiver disponível, será usada uma 
+        fonte genérica sem serifa (sans-serif) */
+  font-family: 'Roboto', sans-serif;
+  
+  /* Define a cor de fundo da página */
+  /* A cor "#f5f5f5" é um tom claro de cinza, deixando o 
+        fundo levemente acinzentado */
+  background: #f5f5f5;
+  
+  /* Define a cor do texto do site */
+  /* "#333" é um tom de cinza escuro, garantindo uma 
+        boa legibilidade */
+  color: #333;
+
+}
+
+
+/* Estilização do cabeçalho da página (header) */
+/* O <header> geralmente contém o título principal e pode 
+      incluir menus de navegação */
+header {
+
+  /* Define a cor de fundo do cabeçalho */
+  /* "#2c3e50" é um tom de azul escuro, dando um visual 
+        elegante e profissional */
+  background: #2c3e50;
+
+  /* Define a cor do texto dentro do cabeçalho */
+  /* A cor branca (#fff) garante um bom contraste 
+        com o fundo escuro */
+  color: #fff;
+
+  /* Adiciona um espaçamento interno de 15 pixels ao 
+        redor do conteúdo do cabeçalho */
+  /* Isso evita que o texto fique muito colado nas 
+        bordas do elemento */
+  padding: 15px;
+
+}
+
+/* Estilização do título dentro do cabeçalho */
+/* O <h1> é o título principal da página e está 
+      dentro do <header> */
+header h1 {
+
+  /* Remove qualquer margem externa do título */
+  /* Isso garante que o título fique bem posicionado sem 
+        espaçamentos inesperados */
+  margin: 0;
+
+}
+
+/* Estilização do link de "Voltar" dentro do cabeçalho */
+/* Esse link é exibido na página do álbum e permite ao usuário 
+      voltar para a lista de álbuns */
+header .voltar {
+
+  /* Faz com que o link seja alinhado à direita dentro do cabeçalho */
+  /* Isso posiciona o botão no canto direito superior da tela */
+  float: right;
+
+  /* Move o botão para cima em 28 pixels */
+  /* Esse ajuste é feito para alinhar corretamente o 
+        botão dentro do cabeçalho */
+  margin-top: -28px;
+
+  /* Define a cor do texto do link como branco puro (#ffffff) */
+  /* Isso melhora a visibilidade e o contraste contra o 
+        fundo escuro do cabeçalho */
+  color: #ffffff;
+
+  /* Remove a linha sublinhada padrão dos links */
+  /* Isso faz com que o link pareça mais um botão do 
+        que um link tradicional */
+  text-decoration: none;
+
+  /* Define a cor de fundo do botão como um tom escuro de 
+        azul acinzentado (#34495e) */
+  /* Essa cor combina bem com o restante do esquema de 
+        cores do cabeçalho */
+  background: #34495e; /* Azul petróleo escuro */
+
+  /* Define um espaçamento interno ao redor do texto do botão */
+  /* O primeiro valor (8px) define o espaçamento na 
+        parte superior e inferior */
+  /* O segundo valor (12px) define o espaçamento nas laterais 
+        esquerda e direita */
+  padding: 8px 12px;
+
+  /* Adiciona um leve arredondamento nos cantos do botão */
+  /* O valor de 4px suaviza as bordas e deixa o botão 
+        mais agradável visualmente */
+  border-radius: 4px;
+
+  /* Adiciona um efeito de transição suave quando a 
+        cor de fundo do botão muda */
+  /* A transição dura 0.3 segundos e evita mudanças 
+        bruscas ao passar o mouse */
+  transition: background 0.3s;
+
+}
+
+/* Efeito ao passar o mouse sobre o botão "Voltar" */
+/* Essa regra altera a aparência do botão quando o 
+      usuário passa o cursor sobre ele */
+header .voltar:hover {
+
+  /* Altera a cor de fundo para um azul acinzentado um 
+        pouco mais claro (#3f5870) */
+  /* Esse efeito ajuda a indicar interatividade e melhora a 
+        experiência do usuário */
+  background: #3f5870; /* Azul petróleo médio */
+
+}
+
+
+/* Área principal */
+/* Estilização da área principal do conteúdo da página */
+/* O elemento <main> contém a parte principal e mais 
+      relevante do site */
+main {
+  
+  /* Define a largura máxima da área principal como 900 pixels */
+  /* Isso impede que o conteúdo fique muito espalhado em telas grandes */
+  max-width: 900px;
+
+  /* Centraliza a área principal horizontalmente na tela */
+  /* O primeiro valor (20px) adiciona um espaçamento superior e inferior */
+  /* O valor "auto" nas laterais faz com que o elemento
+        fique centralizado */
+  margin: 20px auto;
+
+  /* Adiciona um espaçamento interno de 10 pixels 
+        dentro da área principal */
+  /* Isso evita que o conteúdo fique colado nas 
+        bordas do elemento */
+  padding: 10px;
+
+  /* Define a cor de fundo como branco puro (#ffffff) */
+  /* Isso cria um contraste agradável com o fundo 
+        cinza-claro do body */
+  background: #ffffff; /* Branco */
+
+  /* Arredonda as bordas do elemento, deixando-as 
+        suavemente curvadas */
+  /* O valor de 8px cria um efeito visual mais 
+        elegante e moderno */
+  border-radius: 8px;
+
+}
+
+/* Estilização dos títulos de nível 2 (<h2>) */
+/* O <h2> é usado para marcar seções importantes    
+      dentro do site */
+h2 {
+
+  /* Remove qualquer margem na parte superior do título */
+  /* Isso evita espaços desnecessários antes do título */
+  margin-top: 0;
+
+  /* Adiciona uma margem na parte inferior do título */
+  /* Isso cria um espaçamento de 15 pixels entre o 
+        título e o conteúdo seguinte */
+  margin-bottom: 15px;
+
+  /* Adiciona uma linha horizontal abaixo do título */
+  /* A linha tem 2 pixels de espessura e a cor 
+        cinza-claro (#cccccc) */
+  /* Isso ajuda a separar visualmente o título do 
+        restante do conteúdo */
+  border-bottom: 2px solid #cccccc; /* Cinza-claro */
+
+  /* Adiciona um espaçamento abaixo do título, 
+        separando-o melhor da linha */
+  padding-bottom: 5px;
+
+}
+
+/* Estilização dos formulários */
+/* Essa regra aplica estilos básicos para qualquer 
+      formulário na página */
+form {
+
+  /* Adiciona um espaçamento na parte inferior do formulário */
+  /* Isso evita que o formulário fique muito próximo 
+        dos elementos seguintes */
+  margin-bottom: 20px;
+
+}
+
+/* Estilização dos rótulos (<label>) dentro dos formulários */
+/* O <label> é usado para identificar e associar um texto 
+      descritivo a um campo de entrada de dados */
+form label {
+
+  /* Faz com que o rótulo ocupe toda a largura disponível */
+  /* Isso garante que o rótulo fique posicionado acima do 
+        campo de entrada, ao invés de ao lado */
+  display: block;
+
+  /* Adiciona um espaçamento inferior de 5 pixels abaixo do rótulo */
+  /* Isso separa visualmente o rótulo do campo de entrada, 
+        melhorando a organização */
+  margin-bottom: 5px;
+
+  /* Deixa o texto do rótulo em negrito, aumentando 
+        sua visibilidade */
+  font-weight: bold;
+
+}
+
+/* Estilização dos campos de entrada de texto (<input type="text">) e 
+      da área de texto (<textarea>) */
+/* Essas regras se aplicam a qualquer <input> do tipo "text" e 
+      ao elemento <textarea> */
+form input[type="text"],
+form textarea {
+
+  /* Define a largura total do campo para ocupar 100% do 
+        espaço disponível */
+  /* Isso faz com que o campo de entrada acompanhe o 
+        tamanho do contêiner pai */
+  width: 100%;
+
+  /* Adiciona um espaçamento interno de 8 pixels dentro do campo */
+  /* Isso evita que o texto digitado fique colado nas bordas do campo */
+  padding: 8px;
+
+  /* Adiciona um espaçamento inferior de 10 pixels 
+        entre os campos de entrada */
+  /* Isso impede que os campos fiquem muito próximos 
+        um do outro */
+  margin-bottom: 10px;
+
+  /* Adiciona uma borda ao redor do campo de entrada */
+  /* A borda tem 1 pixel de espessura e a cor cinza-claro (#cccccc) */
+  border: 1px solid #cccccc; /* Cinza-claro */
+
+  /* Arredonda levemente os cantos do campo, deixando-o 
+        visualmente mais agradável */
+  /* O valor de 4 pixels cria uma borda suavemente arredondada */
+  border-radius: 4px;
+
+}
+
+/* Estilização do botão dentro dos formulários */
+/* Essa regra se aplica a qualquer botão (<button>) 
+      dentro de um <form> */
+form button {
+
+  /* Define a cor de fundo do botão como azul médio (#2980b9) */
+  /* Essa cor cria um botão chamativo e harmonioso com o 
+        design geral da página */
+  background: #2980b9; /* Azul royal escuro */
+
+  /* Define a cor do texto dentro do botão como 
+        branco puro (#ffffff) */
+  /* Isso garante um bom contraste, tornando o texto 
+        legível sobre o fundo azul */
+  color: #ffffff;
+
+  /* Remove qualquer borda ao redor do botão */
+  /* Isso dá um visual mais limpo e moderno ao botão */
+  border: none;
+
+  /* Adiciona um espaçamento interno dentro do botão */
+  /* O primeiro valor (10px) define o espaçamento na 
+        parte superior e inferior */
+  /* O segundo valor (15px) define o espaçamento nas 
+        laterais esquerda e direita */
+  padding: 10px 15px;
+
+  /* Arredonda levemente os cantos do botão, deixando-o mais 
+        esteticamente agradável */
+  /* O valor de 4 pixels cria um efeito sutil e moderno */
+  border-radius: 4px;
+
+  /* Muda o cursor do mouse para uma "mãozinha" ao 
+        passar sobre o botão */
+  /* Isso indica ao usuário que o botão é clicável e interativo */
+  cursor: pointer;
+
+  /* Adiciona um efeito de transição suave quando a cor 
+        de fundo do botão muda */
+  /* A transição dura 0.3 segundos para evitar mudanças bruscas */
+  transition: background 0.3s;
+
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+/* Essa regra altera a aparência do botão quando o 
+      usuário passa o cursor sobre ele */
+form button:hover {
+
+  /* Muda a cor de fundo do botão para um tom de azul 
+        mais claro (#3498db) */
+  /* Esse efeito visual melhora a experiência do usuário, 
+        indicando que o botão está interativo */
+  background: #3498db; /* Azul royal claro */
+
+}
+
+
+/* Seções específicas */
+/* Estilização das seções principais da página */
+/* Essas regras se aplicam às seções onde são criados e 
+      exibidos os álbuns e fotos */
+/* O seletor inclui as classes .novo-album, .lista-albuns,
+      .lista-fotos e .nova-foto */
+.novo-album,
+.lista-albuns,
+.lista-fotos,
+.nova-foto {
+
+  /* Adiciona um espaçamento superior de 30 pixels acima dessas seções */
+  /* Isso cria uma separação visual entre as diferentes áreas da 
+        página, melhorando a organização */
+  margin-top: 30px;
+
+}
+
+/* Estilização dos contêineres que armazenam os álbuns e as fotos */
+/* O seletor aplica estilos aos elementos com os IDs 
+      #containerAlbuns e #containerFotos */
+#containerAlbuns,
+#containerFotos {
+
+  /* Ativa o modelo de layout flexível (Flexbox) para 
+        organizar os itens dentro do contêiner */
+  /* Isso permite um melhor controle do posicionamento e 
+        espaçamento dos álbuns e fotos */
+  display: flex;
+
+  /* Permite que os itens dentro do contêiner quebrem para a 
+        próxima linha quando o espaço não for suficiente */
+  /* Isso evita que os álbuns e fotos fiquem comprimidos em 
+        uma única linha em telas menores */
+  flex-wrap: wrap;
+
+  /* Adiciona um espaçamento de 15 pixels entre os itens dentro do contêiner */
+  /* Esse espaçamento é aplicado horizontalmente e verticalmente, 
+        garantindo um melhor alinhamento visual */
+  gap: 15px;
+
+}
+
+
+/* Cartão do álbum */
+/* Estilização do cartão do álbum */
+/* O elemento com a classe .album-card representa um 
+      álbum individual na lista */
+.album-card {
+
+  /* Define a cor de fundo do cartão do álbum como um tom de 
+        cinza muito claro (#fafafa) */
+  /* Isso cria um efeito sutil que destaca o cartão em 
+        relação ao fundo branco */
+  background: #fafafa; /* Cinza muito claro */
+
+  /* Adiciona uma borda ao redor do cartão */
+  /* A borda tem 1 pixel de espessura e a cor cinza-claro (#ddd) */
+  /* Isso ajuda a separar visualmente os cartões na interface */
+  border: 1px solid #ddd; /* Cinza-claro */
+
+  /* Arredonda levemente os cantos do cartão, deixando-o 
+        com um design mais suave */
+  /* O valor de 6 pixels proporciona um efeito estético agradável */
+  border-radius: 6px;
+
+  /* Adiciona um espaçamento interno de 15 pixels dentro do cartão */
+  /* Isso evita que o conteúdo do cartão fique colado nas bordas */
+  padding: 15px;
+
+  /* Centraliza o texto dentro do cartão */
+  /* Isso garante que os títulos dos álbuns e botões 
+        fiquem centralizados */
+  text-align: center;
+
+  /* Define a largura fixa do cartão em 200 pixels */
+  /* Isso mantém os cartões com um tamanho padronizado, 
+        garantindo um layout mais organizado */
+  width: 200px;
+
+}
+
+/* Estilização da imagem de capa do álbum */
+/* O elemento com a classe .album-capa representa a 
+      imagem de destaque do álbum */
+.album-capa {
+
+  /* Define a largura fixa da imagem da capa como 200 pixels */
+  /* Isso garante que todas as capas tenham o mesmo 
+        tamanho, padronizando a interface */
+  width: 200px;
+
+  /* Define a altura fixa da imagem da capa como 150 pixels */
+  /* Isso mantém uma proporção adequada entre largura e altura */
+  height: 150px;
+
+  /* Controla o ajuste da imagem dentro do contêiner */
+  /* "cover" faz com que a imagem preencha completamente o 
+        espaço definido, cortando partes se necessário */
+  /* Isso evita distorções e garante que a imagem fique 
+        sempre bem enquadrada */
+  object-fit: cover;
+
+  /* Arredonda levemente os cantos da imagem da capa, 
+        deixando um efeito visual mais suave */
+  /* O valor de 4 pixels cria um leve arredondamento nos 
+        cantos da imagem */
+  border-radius: 4px;
+
+  /* Adiciona um espaçamento de 10 pixels abaixo da imagem */
+  /* Isso separa a imagem do restante do conteúdo do 
+        cartão, como o título do álbum */
+  margin-bottom: 10px;
+
+}
+
+
+/* Título do álbum */
+/* Estilização do título dentro do cartão do álbum */
+/* O elemento <h3> dentro de .album-card 
+      representa o nome do álbum */
+.album-card h3 {
+
+  /* Adiciona um espaçamento de 10 pixels abaixo do título */
+  /* Isso separa o título do botão "Ver Fotos", deixando o 
+        layout mais organizado */
+  margin-bottom: 10px;
+
+}
+
+/* Estilização do link para ver as fotos do álbum */
+/* O elemento <a> dentro de .album-card funciona como um 
+      botão que leva à página do álbum */
+.album-card a {
+
+  /* Define o link como um elemento do tipo bloco inline */
+  /* Isso permite que o link se comporte como um botão sem 
+        ocupar toda a largura disponível */
+  display: inline-block;
+
+  /* Remove a decoração padrão do link (como sublinhado) */
+  /* Isso deixa o link visualmente mais parecido com um botão */
+  text-decoration: none;
+
+  /* Define a cor de fundo do botão como um tom de 
+        roxo escuro (#8e44ad) */
+  /* Essa cor contrasta bem com o fundo cinza do 
+        cartão e destaca o botão */
+  background: #8e44ad; /* Roxo escuro */
+
+  /* Define a cor do texto do link como branco puro (#ffffff) */
+  /* Isso garante um contraste adequado para facilitar a leitura */
+  color: #ffffff;
+
+  /* Adiciona um espaçamento interno ao botão */
+  /* O primeiro valor (5px) define o espaçamento superior e inferior */
+  /* O segundo valor (10px) define o espaçamento lateral */
+  padding: 5px 10px;
+
+  /* Arredonda os cantos do botão para criar um efeito mais suave */
+  /* O valor de 4 pixels mantém um leve arredondamento, 
+        deixando o botão mais agradável */
+  border-radius: 4px;
+
+  /* Adiciona um espaçamento de 10 pixels acima do botão */
+  /* Isso separa visualmente o botão do título do álbum */
+  margin-top: 10px;
+
+  /* Adiciona um efeito de transição suave ao mudar a cor de fundo */
+  /* O efeito dura 0.3 segundos, tornando a interação mais agradável */
+  transition: background 0.3s;
+
+}
+
+/* Efeito ao passar o mouse sobre o link "Ver Fotos" 
+      dentro do cartão do álbum */
+/* Essa regra altera a aparência do botão quando o 
+      usuário passa o cursor sobre ele */
+.album-card a:hover {
+
+  /* Muda a cor de fundo do botão para um tom de 
+        roxo mais claro (#9b59b6) */
+  /* Isso cria um efeito visual de realce, indicando 
+        que o botão é interativo */
+  background: #9b59b6; /* Roxo médio */
+
+}
+
+/* Estilização do cartão da foto */
+/* O elemento com a classe .foto-card representa um bloco 
+      individual para exibir uma foto dentro do álbum */
+.foto-card {
+
+  /* Define a cor de fundo do cartão como um tom de cinza 
+        muito claro (#fafafa) */
+  /* Isso diferencia o cartão da foto do fundo branco do site, 
+        criando uma leve separação visual */
+  background: #fafafa; /* Cinza muito claro */
+
+  /* Adiciona uma borda ao redor do cartão para destacá-lo */
+  /* A borda tem 1 pixel de espessura e a cor cinza-claro (#ddd) */
+  /* Isso ajuda a dar uma leve separação entre os cartões de fotos */
+  border: 1px solid #ddd; /* Cinza-claro */
+
+  /* Arredonda levemente os cantos do cartão, deixando-o 
+        com um design mais moderno e agradável */
+  /* O valor de 6 pixels suaviza as bordas do cartão */
+  border-radius: 6px;
+
+  /* Adiciona um espaçamento interno de 15 pixels dentro do cartão */
+  /* Isso evita que o conteúdo (imagem e descrição) 
+        fique colado nas bordas do cartão */
+  padding: 15px;
+
+  /* Centraliza todo o conteúdo do cartão da foto */
+  /* Isso garante que as imagens e textos dentro do 
+        cartão fiquem bem alinhados */
+  text-align: center;
+
+  /* Define uma largura fixa de 200 pixels para cada cartão */
+  /* Isso mantém os cartões padronizados, 
+        garantindo um layout organizado */
+  width: 200px;
+
+}
+
+
+/* Miniatura da foto */
+/* Estilização da miniatura da foto dentro do álbum */
+/* O elemento com a classe .foto-thumb representa a 
+        imagem da foto dentro do cartão da foto */
+.foto-thumb {
+
+  /* Define a largura fixa da imagem como 200 pixels */
+  /* Isso garante que todas as miniaturas de fotos tenham o 
+        mesmo tamanho e fiquem alinhadas */
+  width: 200px;
+
+  /* Define a altura fixa da imagem como 150 pixels */
+  /* Mantém uma proporção uniforme entre todas as imagens */
+  height: 150px;
+
+  /* Ajusta o comportamento da imagem dentro do contêiner */
+  /* "cover" faz com que a imagem ocupe completamente o 
+        espaço definido, cortando partes se necessário */
+  /* Isso evita distorções e mantém a estética uniforme das fotos */
+  object-fit: cover;
+
+  /* Arredonda levemente os cantos da miniatura da foto */
+  /* O valor de 4 pixels cria um efeito sutil e agradável nas bordas */
+  border-radius: 4px;
+
+  /* Altera o cursor do mouse para uma "mãozinha" ao 
+        passar sobre a imagem */
+  /* Isso indica que a miniatura pode ser clicada para 
+        abrir a foto em tamanho maior */
+  cursor: pointer;
+
+}
+
+
+/* Estilização do botão personalizado para upload de arquivos */
+/* Esse botão é estilizado para substituir o botão 
+        padrão do input de arquivos */
+.botao-arquivo {
+
+  /* Faz com que o botão tenha comportamento de bloco inline */
+  /* Isso permite que ele ocupe apenas o espaço necessário, 
+        sem quebrar a linha do layout */
+  display: inline-block;
+
+  /* Adiciona um espaçamento interno para tornar o botão 
+        maior e mais fácil de clicar */
+  /* O primeiro valor (8px) define o espaçamento 
+        vertical (superior e inferior) */
+  /* O segundo valor (12px) define o espaçamento 
+        horizontal (laterais esquerda e direita) */
+  padding: 8px 12px;
+
+  /* Define a cor de fundo do botão como azul escuro (#2980b9) */
+  /* Essa cor cria um contraste forte e torna o botão chamativo */
+  background: #2980b9; /* Azul royal escuro */
+
+  /* Define a cor do texto dentro do botão como 
+        branco puro (#ffffff) */
+  /* Isso melhora a legibilidade e cria um bom 
+        contraste com o fundo azul */
+  color: #ffffff;
+
+  /* Arredonda levemente os cantos do botão para 
+        deixá-lo mais agradável visualmente */
+  /* O valor de 4 pixels cria um leve efeito de 
+        bordas arredondadas */
+  border-radius: 4px;
+
+  /* Muda o cursor do mouse para uma "mãozinha" ao 
+        passar sobre o botão */
+  /* Isso indica que o botão é interativo e pode ser clicado */
+  cursor: pointer;
+
+  /* Adiciona um pequeno espaçamento à direita do botão */
+  /* Isso evita que o botão fique colado em 
+        outros elementos próximos */
+  margin-right: 10px;
+
+}
+
+/* Efeito ao passar o mouse sobre o botão de upload */
+/* Essa regra altera a aparência do botão quando o 
+      usuário passa o cursor sobre ele */
+.botao-arquivo:hover {
+
+  /* Altera a cor de fundo do botão para um tom de 
+        azul mais claro (#3498db) */
+  /* Isso dá um efeito visual de realce e melhora a 
+        experiência do usuário */
+  background: #3498db; /* Azul royal claro */
+
+}
+
+/* Exibição do nome do arquivo selecionado */
+/* Estilização do texto que exibe o nome do arquivo selecionado */
+/* Essas regras se aplicam tanto ao nome do arquivo de 
+        capa (#nomeArquivoCapa) */
+/*      quanto ao nome do arquivo da foto (#nomeArquivo) */
+#nomeArquivo,
+#nomeArquivoCapa {
+
+  /* Define o tamanho da fonte como 0.9rem (equivalente a 
+        90% do tamanho padrão) */
+  /* Isso mantém o texto legível, mas ligeiramente 
+        menor que o padrão */
+  font-size: 0.9rem;
+
+  /* Define a cor do texto como cinza médio (#666) */
+  /* Essa cor é usada para indicar informações secundárias, 
+        sem chamar muita atenção */
+  color: #666666; /* Cinza médio */
+
+}
+
+/* Estilização do modal de tela cheia */
+/* O modal é uma caixa de diálogo que exibe a foto em 
+      tamanho grande quando clicada */
+.modal {
+
+  /* Inicialmente, o modal está oculto, pois sua exibição 
+        será controlada via JavaScript */
+  display: none;
+
+  /* Define a posição do modal como fixa na tela, 
+        impedindo que ele role junto com a página */
+  /* Isso garante que o modal sempre apareça sobre todo o 
+        conteúdo da página */
+  position: fixed;
+
+  /* Define uma alta prioridade de exibição (z-index: 9999) */
+  /* Isso garante que o modal fique acima de todos os 
+        outros elementos da página */
+  z-index: 9999;
+
+  /* Posiciona o modal no canto superior esquerdo da tela */
+  /* Isso garante que ele ocupe toda a área visível */
+  left: 0;
+  top: 0;
+
+  /* Define a largura do modal para ocupar 100% da largura da tela */
+  /* Isso faz com que o modal cubra toda a tela */
+  width: 100%;
+
+  /* Define a altura do modal para ocupar 100% da altura da tela */
+  /* Isso faz com que ele cubra completamente o espaço 
+        visível do usuário */
+  height: 100%;
+
+  /* Define um fundo preto sólido para o modal */
+  /* O valor "rgba(0,0,0,1)" significa preto total sem transparência */
+  background-color: rgba(0, 0, 0, 1); /* Fundo totalmente preto */
+
+  /* Permite que a área do modal tenha rolagem, caso a 
+        imagem seja maior que a tela */
+  /* Isso evita que a imagem fique cortada e garante que o 
+        usuário possa vê-la completamente */
+  overflow: auto;
+
+}
+
+
+/* Define a posição como relativa para que elementos 
+      internos possam ser posicionados corretamente */
+.modal-imagem-container {
+  
+  /* Define a posição relativa, permitindo o posicionamento 
+        absoluto de elementos dentro dele */
+  position: relative;
+
+  /* Define a largura máxima do container como 80% da 
+        largura da tela (viewport width) */
+  /* Isso evita que a imagem fique muito grande 
+        em telas grandes */
+  max-width: 80vw;
+
+  /* Define a altura máxima do container como 80% da 
+        altura da tela (viewport height) */
+  /* Isso impede que a imagem ocupe toda a tela e 
+        mantém uma proporção equilibrada */
+  max-height: 80vh;
+
+  /* Ativa o modelo de layout flexível (Flexbox) 
+        dentro do container */
+  /* Isso facilita a centralização da imagem e outros 
+        elementos dentro do modal */
+  display: flex;
+
+  /* Centraliza a imagem horizontalmente dentro do container */
+  justify-content: center;
+
+  /* Centraliza a imagem verticalmente dentro do container */
+  align-items: center;
+
+}
+
+
+/* Estilização da imagem dentro do modal */
+/* A classe .modal-conteudo representa a foto ampliada 
+      quando o usuário clica em uma miniatura */
+.modal-conteudo {
+
+  /* Faz com que a imagem seja exibida como um bloco */
+  /* Isso impede que elementos ao lado interfiram nela, 
+        garantindo que seja exibida corretamente */
+  display: block;
+
+  /* Arredonda levemente os cantos da imagem, 
+        deixando um visual mais agradável */
+  /* O valor de 4 pixels cria um leve efeito de 
+        suavização nas bordas da imagem */
+  border-radius: 4px;
+
+}
+
+
+/* Descrição sobreposta na parte superior da imagem */
+/* Estilização da descrição sobreposta à imagem no modal */
+/* Esse elemento exibe um texto explicativo sobre a 
+      imagem ampliada dentro do modal */
+.descricao-sobreposta {
+
+  /* Define a posição como absoluta para que o elemento 
+        fique posicionado em relação ao contêiner pai */
+  /* O pai desse elemento é .modal-imagem-container, 
+        garantindo que a descrição fique sobre a imagem */
+  position: absolute;
+
+  /* Posiciona a descrição no topo da imagem */
+  /* O valor "0" faz com que o elemento fique 
+        encostado no topo do contêiner pai */
+  top: 0;
+
+  /* Alinha a descrição ao lado esquerdo do contêiner pai */
+  /* O valor "0" faz com que o elemento se inicie a 
+        partir da borda esquerda */
+  left: 0;
+
+  /* Define a largura da descrição para ocupar 100% da  
+        largura da imagem */
+  /* Isso faz com que o texto se estenda por toda a   
+        parte superior da imagem */
+  width: 100%;
+
+  /* Define um fundo semitransparente preto para a descrição */
+  /* "rgba(0,0,0,0.5)" significa preto com 50% de transparência */
+  /* Isso garante que o texto seja visível, mas sem 
+        esconder completamente a imagem */
+  background-color: rgba(0, 0, 0, 0.5); /* Preto semi-transparente */
+
+  /* Define a cor do texto como branco puro (#ffffff) */
+  /* Isso melhora a legibilidade do texto sobre o fundo escuro */
+  color: #ffffff;
+
+  /* Centraliza o texto dentro da descrição */
+  /* Isso faz com que o texto fique alinhado no 
+        centro da barra sobreposta */
+  text-align: center;
+
+  /* Adiciona um espaçamento interno de 10 pixels ao redor do texto */
+  /* Isso evita que o texto fique colado nas bordas do elemento */
+  padding: 10px;
+
+  /* Define o tamanho da fonte do texto como 1.1rem 
+        (aproximadamente 110% do tamanho padrão) */
+  /* Isso torna o texto mais legível sem ser muito grande */
+  font-size: 1.1rem;
+
+  /* Garante que o preenchimento e a borda do elemento 
+        sejam incluídos na largura total */
+  /* Isso impede que o elemento fique maior do que o 
+        esperado e distorça o layout */
+  box-sizing: border-box;
+
+}
+
+/* Estilização do botão de fechar dentro do modal */
+/* Esse botão permite ao usuário fechar a 
+      visualização da imagem ampliada */
+.fechar {
+
+  /* Define a posição como absoluta para permitir 
+        posicionamento livre dentro do modal */
+  /* Isso faz com que o botão fique em uma posição 
+        fixa no canto superior direito */
+  position: absolute;
+
+  /* Define a distância do botão em relação ao topo do modal */
+  /* O valor de 20 pixels garante que ele fique 
+        visível sem se sobrepor à imagem */
+  top: 20px;
+
+  /* Define a distância do botão em relação à 
+        borda direita do modal */
+  /* O valor de 35 pixels impede que o botão 
+        fique muito colado no canto */
+  right: 35px;
+
+  /* Define a cor do botão como branco puro (#ffffff) */
+  /* Isso cria um contraste forte contra o fundo escuro do modal */
+  color: #ffffff;
+
+  /* Define o tamanho da fonte do botão como 35 pixels */
+  /* Isso torna o botão grande e fácil de visualizar e clicar */
+  font-size: 35px;
+
+  /* Define o peso da fonte como "bold" (negrito) */
+  /* Isso deixa o botão mais chamativo e visível */
+  font-weight: bold;
+
+  /* Muda o cursor do mouse para uma "mãozinha" ao 
+        passar sobre o botão */
+  /* Isso indica ao usuário que o botão é 
+        interativo e pode ser clicado */
+  cursor: pointer;
+
+}
+
+
+/* Botões de navegação e download no modal */
+/* Estilização dos botões de navegação dentro do modal */
+/* Esses botões permitem que o usuário navegue entre as 
+      imagens do álbum ampliadas */
+.navegacao {
+
+  /* Define a posição como absoluta para que os botões sejam 
+        posicionados livremente dentro do modal */
+  /* Isso garante que eles possam ser colocados nos 
+        cantos da tela ou sobre a imagem */
+  position: absolute;
+
+  /* Define a cor de fundo do botão como azul escuro (#2980b9) */
+  /* Esse tom de azul proporciona um bom contraste 
+        com o fundo preto do modal */
+  background: #2980b9; /* Azul royal escuro */
+
+  /* Define a cor do texto do botão como branco puro (#ffffff) */
+  /* Isso garante alta visibilidade do texto 
+        sobre o fundo azul escuro */
+  color: #ffffff;
+
+  /* Adiciona um espaçamento interno ao botão */
+  /* O primeiro valor (10px) define o espaçamento 
+        superior e inferior */
+  /* O segundo valor (15px) define o espaçamento 
+        lateral (esquerda e direita) */
+  padding: 10px 15px;
+
+  /* Muda o cursor do mouse para uma "mãozinha" ao 
+        passar sobre o botão */
+  /* Isso indica ao usuário que o botão é 
+        clicável e interativo */
+  cursor: pointer;
+
+  /* Remove qualquer borda ao redor do botão */
+  /* Isso dá um visual mais limpo e moderno */
+  border: none;
+
+  /* Arredonda levemente os cantos do botão, deixando-o       
+        mais agradável visualmente */
+  /* O valor de 4 pixels cria um efeito sutil e elegante */
+  border-radius: 4px;
+
+  /* Adiciona um efeito de transição suave ao mudar a 
+        cor de fundo do botão */
+  /* A transição dura 0.3 segundos para evitar 
+        mudanças bruscas */
+  transition: background 0.3s;
+
+}
+
+/* Efeito ao passar o mouse sobre os botões de navegação */
+/* Essa regra altera a aparência do botão quando o 
+      usuário passa o cursor sobre ele */
+.navegacao:hover {
+
+  /* Muda a cor de fundo do botão para um tom de azul 
+        mais claro (#3498db) */
+  /* Esse efeito visual melhora a experiência do usuário, 
+        indicando que o botão está ativo */
+  background: #3498db; /* Azul royal claro */
+
+}
+
+/* Estilização do botão "Anterior" */
+/* Esse botão permite ao usuário navegar para a 
+      imagem anterior dentro do modal */
+#anterior {
+
+  /* Posiciona o botão na metade da altura da tela */
+  /* O valor "50%" significa que o botão começará na 
+        metade da altura do modal */
+  top: 50%;
+
+  /* Define a posição horizontal do botão a 20 pixels 
+        da borda esquerda do modal */
+  /* Isso coloca o botão próximo ao lado esquerdo da tela */
+  left: 20px;
+
+  /* Move o botão 50% para cima em relação ao seu       
+        próprio tamanho */
+  /* Isso centraliza o botão verticalmente, garantindo 
+        que fique no meio da imagem */
+  transform: translateY(-50%);
+
+}
+
+/* Estilização do botão "Próximo" */
+/* Esse botão permite ao usuário avançar para a 
+      próxima imagem dentro do modal */
+#proximo {
+
+  /* Posiciona o botão na metade da altura da tela, 
+        assim como o botão "Anterior" */
+  top: 50%;
+
+  /* Define a posição horizontal do botão a 20 pixels da 
+        borda direita do modal */
+  /* Isso coloca o botão próximo ao lado direito da tela */
+  right: 20px;
+
+  /* Move o botão 50% para cima em relação ao
+        seu próprio tamanho */
+  /* Isso centraliza o botão verticalmente na tela */
+  transform: translateY(-50%);
+
+}
+
+/* Estilização do botão "Baixar" */
+/* Esse botão permite ao usuário fazer o download da 
+      imagem exibida no modal */
+#baixar {
+
+  /* Posiciona o botão 20 pixels acima da parte 
+        inferior do modal */
+  /* Isso mantém o botão visível, mas sem ficar 
+        muito próximo da borda */
+  bottom: 20px;
+
+  /* Posiciona o botão no centro horizontal da tela */
+  /* O valor "50%" significa que o botão começará 
+        no meio do modal */
+  left: 50%;
+
+  /* Move o botão 50% para a esquerda em relação ao 
+        seu próprio tamanho */
+  /* Isso garante que o botão fique completamente 
+        centralizado horizontalmente */
+  transform: translateX(-50%);
+
+  /* Define que a posição superior do botão será automática */
+  /* Isso impede que o botão tenha um valor fixo para "top" e 
+        permite o alinhamento correto com "bottom" */
+  top: auto;
+
+}
+
+/* Rodapé (opcional) */
+/* Estilização do rodapé da página */
+/* O <footer> geralmente contém informações adicionais, 
+      como créditos, links ou avisos */
+footer {
+
+  /* Centraliza todo o conteúdo do rodapé */
+  /* Isso faz com que qualquer texto ou elemento dentro do 
+        <footer> fique alinhado no centro */
+  text-align: center;
+
+  /* Adiciona um espaçamento superior de 20 pixels entre o 
+        rodapé e o conteúdo acima dele */
+  /* Isso evita que o rodapé fique muito colado na parte 
+        inferior da página principal */
+  margin-top: 20px;
+
+  /* Define a cor do texto como um cinza médio (#777) */
+  /* Esse tom de cinza é menos intenso do que o preto (#000), 
+        criando um efeito mais suave */
+  color: #777777; /* Cinza médio */
+  
+}

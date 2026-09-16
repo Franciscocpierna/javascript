@@ -1,0 +1,154 @@
+<!-- Declara que este documento segue o padrão HTML5, garantindo 
+      compatibilidade com navegadores modernos -->
+<!DOCTYPE html>
+
+<!-- Inicia o elemento raiz do documento HTML -->
+<!-- Define que o idioma principal do conteúdo é 
+      português do Brasil (pt-BR) -->
+<html lang="pt-BR">
+
+<!-- Início do cabeçalho do documento -->
+<head>
+
+  <!-- Define a codificação de caracteres do documento como UTF-8 -->
+  <!-- Isso garante que caracteres acentuados (ç, ã, é, etc.) e 
+      símbolos especiais sejam exibidos corretamente -->
+  <meta charset="UTF-8">
+
+  <!-- Define o título da página, que será exibido na aba do navegador -->
+  <!-- Esse título também pode ser utilizado pelos motores de 
+      busca para indexação da página -->
+  <title>Álbuns de Fotos</title>
+
+  <!-- Vincula um arquivo externo de folha de estilos (CSS) 
+      chamado "estilo.css" -->
+  <!-- Isso permite aplicar estilos visuais ao conteúdo da página, 
+      como cores, tamanhos e espaçamentos -->
+  <link rel="stylesheet" href="estilo.css">
+
+<!-- Fim da seção de cabeçalho -->
+</head>
+
+
+<!-- Início do corpo da página, onde o conteúdo 
+    visível será exibido -->
+<body>
+
+    <!-- Início do cabeçalho da página -->
+    <!-- Normalmente contém elementos como logotipo, título e 
+          menus de navegação -->
+    <header>
+
+      <!-- Título principal da página -->
+      <!-- <h1> define um título de nível 1, geralmente o título 
+              mais importante da página -->
+      <h1>Álbuns de Fotos</h1>
+
+    <!-- Fim do cabeçalho -->
+    </header>
+
+    <!-- Início da área principal da página -->
+    <!-- O elemento <main> indica o conteúdo central e mais 
+            importante do site -->
+    <main>
+
+    <!-- Seção dedicada à criação de um novo álbum -->
+    <!-- O elemento <section> é usado para agrupar conteúdos relacionados -->
+    <!-- A classe "novo-album" permite aplicar estilos específicos no CSS -->
+    <section class="novo-album">
+
+      <!-- Título secundário da seção -->
+      <!-- <h2> é um título de nível 2, usado para dividir o 
+              conteúdo em seções menores -->
+      <h2>Criar Novo Álbum</h2>
+
+      <!-- Formulário para criação de um novo álbum -->
+      <!-- O atributo "id" define um identificador único para o 
+              formulário, permitindo manipulação via JavaScript -->
+      <form id="formAlbum">
+
+        <!-- Rótulo para o campo de entrada do nome do álbum -->
+        <!-- O atributo "for" associa este rótulo ao campo de 
+              entrada com o id correspondente -->
+        <label for="nomeAlbum">Nome do Álbum:</label>
+
+        <!-- Campo de entrada de texto onde o usuário digita o nome do álbum -->
+        <!-- O atributo "id" permite que esse campo seja acessado e 
+              manipulado no JavaScript -->
+        <input type="text" id="nomeAlbum" />
+
+        <!-- Contêiner para agrupar a seleção da foto de capa -->
+        <div>
+
+          <!-- Rótulo personalizado que funciona como um botão para 
+                escolher a imagem -->
+          <!-- O atributo "for" está vinculado ao campo de entrada do 
+                tipo "file", permitindo que ao clicar neste rótulo, o 
+                usuário possa selecionar um arquivo -->
+          <label for="capaAlbum" class="botao-arquivo">Escolher Foto de Capa</label>
+
+          <!-- Texto que exibe o nome do arquivo selecionado -->
+          <!-- Inicialmente, exibe "Nenhum arquivo escolhido" -->
+          <!-- Esse texto será atualizado via JavaScript quando o 
+                usuário selecionar uma imagem -->
+          <span id="nomeArquivoCapa">Nenhum arquivo escolhido</span>
+
+          <!-- Campo de entrada para upload de arquivos -->
+          <!-- O tipo "file" permite que o usuário selecione um 
+                arquivo do seu computador -->
+          <!-- O atributo "id" identifica esse campo no JavaScript -->
+          <!-- O atributo "name" é utilizado quando o formulário é 
+                enviado para o servidor -->
+          <!-- O atributo "accept" restringe os arquivos aceitos apenas a imagens -->
+          <!-- O estilo "display: none;" oculta esse campo da interface, 
+                pois o usuário usará o rótulo acima como botão -->
+          <input type="file" id="capaAlbum" name="capaAlbum" accept="image/*" style="display: none;" />
+
+        </div>
+
+        <!-- Botão de envio do formulário -->
+        <!-- Ao clicar nesse botão, os dados do formulário serão 
+              enviados para o JavaScript para processamento -->
+        <button type="submit">Criar</button>
+
+      <!-- Fim do formulário -->
+      </form>
+
+    <!-- Fim da seção de criação de novo álbum -->
+    </section>
+
+    <!-- Seção responsável por exibir a lista de álbuns criados -->
+    <!-- O elemento <section> agrupa esse conteúdo de forma organizada -->
+    <!-- A classe "lista-albuns" pode ser usada no CSS para aplicar 
+          estilos específicos a essa seção -->
+    <section class="lista-albuns">
+
+      <!-- Título da seção que indica que aqui serão exibidos os 
+            álbuns do usuário -->
+      <!-- <h2> é um título de nível 2, hierarquicamente abaixo do <h1> -->
+      <h2>Meus Álbuns</h2>
+
+      <!-- Div onde os álbuns serão exibidos dinamicamente -->
+      <!-- O JavaScript usará esse elemento para adicionar os 
+            álbuns criados pelo usuário -->
+      <!-- O atributo "id" permite que o elemento seja manipulado 
+            diretamente no código JavaScript -->
+      <div id="containerAlbuns"></div>
+
+    <!-- Fim da seção de lista de álbuns -->
+    </section>
+
+    <!-- Fim da área principal do site -->
+    </main>
+
+    <!-- Importação do arquivo de script JavaScript que 
+          controla a lógica da página -->
+    <!-- Esse script adicionará funcionalidades interativas, 
+          como carregar e exibir os álbuns -->
+    <script src="scriptIndex.js"></script>
+
+<!-- Fim do corpo da página -->
+</body>
+
+<!-- Fim do documento HTML -->
+</html>
