@@ -1,0 +1,1167 @@
+<!-- Define o tipo de documento como HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML -->
+ <!-- Define o idioma da página como Português do Brasil -->
+<html lang="pt-BR"> 
+
+<!-- Início da seção de configurações e 
+      metadados da página -->
+<head> 
+
+  <!-- Define a codificação de caracteres como UTF-8, 
+         garantindo suporte a acentuação e caracteres especiais -->
+  <meta charset="UTF-8">
+
+  <!-- Define a configuração da viewport para tornar a 
+         página responsiva em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Define o título da página, que aparecerá na 
+         aba do navegador -->
+  <title>Cadastro de Usuário</title>
+
+  <!-- Início da seção de estilos CSS para definir a 
+         aparência da página -->
+  <style>
+
+    /* Define o estilo geral do corpo (body) da página */
+    body {
+    
+      /* Define a fonte principal como Arial ou uma 
+            fonte sans-serif alternativa */
+      font-family: Arial, sans-serif;
+
+      /* Define a cor de fundo da página como um tom de cinza claro */
+      background-color: #f4f4f4;
+
+      /* Define a cor do texto como um tom de cinza escuro */
+      color: #333;
+
+      /* Remove as margens padrão do corpo da página */
+      margin: 0;
+
+      /* Remove o preenchimento interno do corpo da página */
+      padding: 0;
+
+      /* Usa o modelo de layout flexível para alinhar 
+            os elementos filhos */
+      display: flex;
+
+      /* Centraliza os elementos verticalmente */
+      align-items: center;
+
+      /* Define a direção dos elementos como coluna, 
+            organizando-os verticalmente */
+      flex-direction: column;
+
+      /* Garante que a altura do corpo ocupe toda a 
+            altura visível da tela */
+      min-height: 100vh;
+
+    }
+
+    /* Estilização do contêiner principal da página.
+       Ele é responsável por envolver e centralizar o 
+            conteúdo da tela. */
+    .container {
+
+      /* Define a largura máxima do contêiner como 1200 pixels. 
+         Isso impede que o conteúdo se expanda além   
+               desse valor em telas maiores. */
+      max-width: 1200px;
+
+      /* Define a largura do contêiner como 95% da largura 
+               disponível na tela. 
+         Isso permite que ele seja responsivo, se adaptando a 
+               diferentes tamanhos de tela. */
+      width: 95%;
+
+      /* Define o fundo do contêiner como branco. 
+         Isso garante contraste com a cor de fundo da página. */
+      background: white;
+
+      /* Adiciona um espaçamento interno de 20 pixels 
+               em todos os lados.
+         Isso evita que o conteúdo fique muito próximo 
+               das bordas do contêiner. */
+      padding: 20px;
+
+      /* Arredonda os cantos do contêiner com um raio de 8 pixels.
+         Isso cria um efeito visual mais agradável e moderno. */
+      border-radius: 8px;
+
+      /* Adiciona uma leve sombra ao redor do contêiner.
+         O efeito shadow melhora a estética e cria uma 
+               sensação de profundidade. */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+      /* Centraliza o texto dentro do contêiner.
+         Isso garante que todos os textos e elementos dentro 
+               dele fiquem alinhados ao centro. */
+      text-align: center;
+
+      /* Adiciona um espaçamento inferior de 20 pixels.
+         Isso separa o contêiner de outros elementos abaixo dele. */
+      margin-bottom: 20px;
+
+    }
+
+    /* Estilização dos títulos <h1> e <h2>.
+       Esses títulos são usados para destacar as 
+            principais informações na tela.
+    */
+    h1, h2 {
+
+      /* Define a cor do texto em um tom de cinza escuro (#444).
+         Isso melhora a leitura e reduz a fadiga visual. */
+      color: #444;
+
+      /* Adiciona um espaçamento inferior de 15 pixels.
+         Isso garante que o título não fique colado 
+               no elemento seguinte. */
+      margin-bottom: 15px;
+
+    }
+
+
+    /* Estilização do formulário.
+       O formulário contém os campos de entrada 
+            para o cadastro do usuário. */
+    form {
+
+      /* Define a exibição do formulário como flexível (Flexbox).
+         Isso facilita o posicionamento dos elementos internos. */
+      display: flex;
+
+      /* Permite que os elementos dentro do formulário 
+               quebrem para a linha de baixo 
+               quando não houver espaço suficiente na tela. */
+      flex-wrap: wrap;
+
+      /* Define um espaçamento de 10 pixels entre os 
+               elementos dentro do formulário.
+         Isso evita que os campos fiquem muito 
+               próximos uns dos outros. */
+      gap: 10px;
+
+      /* Distribui os elementos ao longo do eixo principal, 
+               garantindo que fiquem bem espaçados. */
+      justify-content: space-between;
+
+      /* Adiciona um espaçamento inferior de 15 pixels.
+         Isso separa o formulário de outros elementos que 
+               possam estar abaixo dele. */
+      margin-bottom: 15px;
+
+    }
+
+    /* Estilização do contêiner de cada campo do formulário.
+       Cada campo inclui um rótulo (label) e um 
+            campo de entrada (input). */
+    .campo {
+
+      /* Define um comportamento flexível, permitindo que os 
+               campos se ajustem automaticamente.
+         Aqui, cada campo ocupa aproximadamente um terço 
+               da largura disponível. */
+      flex: 1 1 calc(33.33% - 10px);
+
+      /* Define a largura mínima do campo como 250 pixels.
+         Isso impede que os campos fiquem muito pequenos 
+               em telas menores. */
+      min-width: 250px;
+
+      /* Define a exibição do campo como flexível.
+         Isso permite que os elementos dentro do campo 
+               fiquem organizados. */
+      display: flex;
+
+      /* Altera a direção do layout para coluna.
+         O rótulo do campo (label) ficará acima do 
+               campo de entrada (input). */
+      flex-direction: column;
+
+    }
+
+
+    /* Estilização do rótulo (label).
+       O rótulo identifica o campo de entrada 
+               correspondente e ajuda na acessibilidade. */
+    label {
+
+      /* Define o peso da fonte como negrito, tornando o 
+               rótulo mais visível. */
+      font-weight: bold;
+
+      /* Alinha o texto do rótulo à esquerda, 
+               garantindo uma melhor leitura. */
+      text-align: left;
+
+      /* Adiciona um espaçamento inferior de 5 pixels.
+         Isso evita que o rótulo fique colado no campo de entrada. */
+      margin-bottom: 5px;
+      
+    }
+
+    /* Estilização dos campos de entrada (input).
+       Inclui campos de texto, e-mail e senha. */
+    input {
+      
+      /* Define a largura do campo de entrada como 100%,
+         garantindo que ele ocupe toda a largura 
+               disponível do contêiner pai. */
+      width: 100%;
+
+      /* Adiciona um preenchimento interno de 10 pixels.
+         Isso melhora a usabilidade e torna a digitação 
+               mais confortável. */
+      padding: 10px;
+
+      /* Define uma borda cinza de 1 pixel ao redor do campo de entrada.
+         Isso melhora a visibilidade do campo. */
+      border: 1px solid #ccc;
+
+      /* Arredonda as bordas do campo de entrada em 6 pixels,
+         deixando um visual mais suave e moderno. */
+      border-radius: 6px;
+
+      /* Define o tamanho da fonte como 16 pixels,
+         garantindo que o texto digitado seja legível. */
+      font-size: 16px;
+
+      /* Define o fundo do campo de entrada como um cinza claro (#f9f9f9).
+         Isso melhora a diferenciação entre o fundo da 
+               página e os campos de entrada. */
+      background: #f9f9f9;
+
+    }
+
+
+    /* Estilização do contêiner do grupo de botões (.btn-group).
+       Este grupo organiza os botões para ficarem 
+            alinhados horizontalmente e centralizados. */
+    .btn-group {
+
+      /* Usa flexbox para alinhar os botões lado a 
+            lado de forma responsiva. */
+      display: flex;
+
+      /* Adiciona um espaçamento de 10 pixels entre os botões,
+         garantindo que eles não fiquem colados um no outro. */
+      gap: 10px;
+
+      /* Centraliza os botões horizontalmente dentro do contêiner. */
+      justify-content: center;
+
+      /* Faz com que o grupo ocupe toda a largura 
+            disponível do contêiner pai. */
+      width: 100%;
+
+    }
+
+    /* Estilização geral dos botões (button).
+       Aplica um design padronizado para todos os 
+            botões da página. */
+    button {
+
+      /* Adiciona um espaçamento interno de 12 pixels nos botões,
+         tornando-os maiores e mais fáceis de clicar. */
+      padding: 12px;
+
+      /* Define o tamanho da fonte como 16 pixels,
+         garantindo que o texto do botão seja legível. */
+      font-size: 16px;
+
+      /* Remove a borda padrão dos botões, deixando-os mais modernos. */
+      border: none;
+
+      /* Arredonda as bordas do botão em 6 pixels,
+         criando um design mais suave e visualmente agradável. */
+      border-radius: 6px;
+
+      /* Muda o cursor para "pointer" quando o usuário 
+            passa o mouse sobre o botão,
+            indicando que ele é clicável. */
+      cursor: pointer;
+
+      /* Adiciona uma transição suave de 0.3 segundos 
+               para qualquer mudança de estilo,
+               criando um efeito visual agradável ao passar o mouse. */
+      transition: 0.3s;
+
+    }
+
+
+    /* Estilização do botão de voltar para a página principal.
+       Esse botão tem uma cor cinza escura e um efeito 
+            de hover para melhor usabilidade. */
+    #btnVoltarPrincipal {
+
+      /* Define a cor de fundo do botão como um tom de 
+               cinza escuro (#6c757d),
+               dando um aspecto neutro e discreto. */
+      background: #6c757d;
+
+      /* Define a cor do texto como branco para criar 
+            um contraste adequado
+            e garantir boa legibilidade. */
+      color: white;
+
+    }
+
+    /* Efeito quando o usuário passa o mouse 
+            sobre o botão de voltar.
+       O fundo escurece um pouco para indicar interatividade. */
+    #btnVoltarPrincipal:hover {
+
+      /* Define uma tonalidade um pouco mais escura do 
+               cinza original (#5a6268), criando um efeito de 
+               realce quando o usuário passa o mouse sobre o botão. */
+      background: #5a6268;
+
+    }
+
+    /* Estilização do botão de envio do formulário (botão de cadastro).
+       Esse botão tem um tom azul para indicar ação principal. */
+    button[type="submit"] {
+
+      /* Define a cor de fundo do botão como azul (#007bff),
+            tornando-o visualmente destacado em relação ao 
+            restante da interface. */
+      background: #007bff;
+
+      /* Define a cor do texto como branca para garantir um 
+            bom contraste e legibilidade. */
+      color: white;
+
+    }
+
+
+    /* Efeito de hover para o botão de envio do formulário.
+       Altera a cor de fundo para um azul mais escuro ao 
+            passar o mouse sobre ele. */
+    button[type="submit"]:hover {
+
+      /* Define um tom de azul mais escuro (#0056b3) 
+               quando o usuário passa o mouse,
+               proporcionando um efeito visual que indica 
+               interatividade. */
+      background: #0056b3;
+
+    }
+
+    /* Define um espaçamento entre elementos através da 
+            linha horizontal <hr>.
+       Essa linha pode ser usada para separar seções 
+            dentro da página. */
+    hr {
+
+      /* Define um espaçamento vertical de 20px acima e abaixo da linha,
+         garantindo um melhor espaçamento entre os elementos. */
+      margin: 20px 0;
+
+    }
+
+    /* Estilização do contêiner da tabela para organizar os 
+            dados dos usuários cadastrados.
+       Essa classe ajuda a melhorar a apresentação e 
+            responsividade da tabela. */
+    .tabela-container {
+
+      /* Define que o contêiner da tabela ocupará toda a 
+            largura disponível da página. */
+      width: 100%;
+
+      /* Define um limite máximo de largura de 1200px para 
+            evitar que a tabela fique muito grande
+            em telas grandes e mantenha um design organizado. */
+      max-width: 1200px;
+
+      /* Adiciona uma barra de rolagem horizontal caso a tabela 
+               seja maior do que a largura do contêiner,
+               garantindo que os usuários consigam visualizar 
+               todas as informações mesmo em telas menores. */
+      overflow-x: auto;
+
+      /* Adiciona um espaço abaixo da tabela para evitar que 
+               ela fique colada em outros elementos da página. */
+      margin-bottom: 20px;
+
+    }
+
+
+    /* Estilização da tabela para organizar a exibição de 
+               dados dos usuários cadastrados.
+       A tabela é projetada para ser visualmente 
+               agradável e legível. */
+    table {
+
+      /* Define a largura total da tabela para ocupar 
+               todo o espaço disponível do contêiner. */
+      width: 100%;
+
+      /* Remove os espaços entre as bordas das células 
+               para uma aparência mais limpa. */
+      border-collapse: collapse;
+
+      /* Define a cor de fundo da tabela como branca, 
+               garantindo um contraste claro entre o 
+               texto e o fundo. */
+      background: white;
+
+      /* Aplica um arredondamento de 8px nos cantos da tabela 
+               para um design mais moderno e suave. */
+      border-radius: 8px;
+
+      /* Garante que os cantos arredondados sejam visíveis ao 
+               esconder qualquer parte que ultrapasse os 
+               limites da tabela. */
+      overflow: hidden;
+
+      /* Adiciona uma leve sombra na tabela, tornando-a 
+               visualmente destacada da página. */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+    /* Estilização das células do cabeçalho (th) e do 
+            corpo da tabela (td).
+       As configurações abaixo garantem uma melhor 
+            legibilidade dos dados. */
+    th, td {
+
+      /* Define um espaçamento interno de 12px em todas as 
+               direções dentro das células, garantindo um 
+               espaçamento confortável entre o conteúdo e as bordas. */
+      padding: 12px;
+
+      /* Aplica uma borda fina de 1px em torno de cada 
+               célula para separar visualmente os dados. */
+      border: 1px solid #ddd;
+
+      /* Alinha o texto das células à esquerda para manter a 
+               formatação padrão dos dados textuais. */
+      text-align: left;
+
+    }
+
+
+    /* Estilização do cabeçalho da tabela (th).
+       Essas configurações garantem que o cabeçalho 
+               tenha um destaque visual adequado. */
+    th {
+
+      /* Define a cor de fundo do cabeçalho como azul (#007bff), 
+               garantindo contraste com o texto branco. */
+      background-color: #007bff;
+
+      /* Define a cor do texto no cabeçalho como branco, 
+               melhorando a legibilidade. */
+      color: white;
+
+      /* Centraliza o texto dentro das células do cabeçalho, 
+               tornando os títulos mais alinhados. */
+      text-align: center;
+
+    }
+
+    /* Estilização para linhas alternadas da tabela.
+       Essa abordagem melhora a leitura dos dados, tornando as 
+               tabelas visualmente organizadas. */
+    tr:nth-child(even) {
+
+      /* Aplica uma cor de fundo cinza claro (#f9f9f9) para 
+               todas as linhas pares da tabela. */
+      background-color: #f9f9f9;
+
+    }
+
+    /* Efeito de destaque ao passar o mouse sobre uma linha da tabela.
+       Esse efeito melhora a experiência do usuário ao 
+            visualizar os dados. */
+    tr:hover {
+
+      /* Altera a cor de fundo para um tom mais escuro (#f1f1f1) 
+            quando o usuário passa o mouse sobre uma linha da tabela. */
+      background-color: #f1f1f1;
+
+    }
+
+
+    /* Estilização do botão de edição (btnEditar).
+       Este botão permite a edição dos dados cadastrados na tabela. */
+    .btnEditar {
+
+      /* Define a cor de fundo do botão como amarelo (#ffc107), 
+               tornando-o chamativo. */
+      background: #ffc107;
+
+      /* Define a cor do texto como um cinza escuro (#333), 
+               garantindo um bom contraste. */
+      color: #333;
+
+      /* Define um espaçamento interno de 6px verticalmente e 10px 
+               horizontalmente, deixando o botão confortável de clicar. */
+      padding: 6px 10px;
+
+      /* Define o tamanho da fonte do texto no botão como 14px, 
+               garantindo legibilidade. */
+      font-size: 14px;
+
+      /* Remove qualquer borda padrão do botão para um 
+               visual mais limpo. */
+      border: none;
+
+      /* Define o cursor do mouse como ponteiro ao passar 
+               sobre o botão, indicando que é clicável. */
+      cursor: pointer;
+
+      /* Adiciona um arredondamento de 4px nos cantos do 
+               botão para um design mais moderno. */
+      border-radius: 4px;
+
+    }
+
+    /* Estilização do botão de edição ao passar o mouse sobre ele.
+       Esse efeito visual melhora a usabilidade e indica a 
+               interatividade do botão. */
+    .btnEditar:hover {
+
+      /* Muda a cor de fundo do botão para um amarelo mais 
+               escuro (#e0a800) ao passar o mouse, criando um 
+               efeito visual de realce. */
+      background: #e0a800;
+
+    }
+
+
+    /* Estilização do botão de exclusão (btnExcluir).
+       Este botão permite a exclusão de um usuário da 
+               tabela de cadastrados. */
+    .btnExcluir {
+
+      /* Define a cor de fundo do botão como vermelho (#dc3545), 
+               destacando-o como uma ação de remoção. */
+      background: #dc3545;
+
+      /* Define a cor do texto como branco, garantindo um forte 
+               contraste com o fundo vermelho. */
+      color: white;
+
+      /* Define um espaçamento interno de 6px verticalmente e 10px 
+               horizontalmente, deixando o botão confortável de clicar. */
+      padding: 6px 10px;
+
+      /* Define o tamanho da fonte do texto no botão como 14px 
+               para manter uma boa legibilidade. */
+      font-size: 14px;
+
+      /* Remove qualquer borda padrão do botão para um visual 
+               mais limpo e moderno. */
+      border: none;
+
+      /* Define o cursor do mouse como ponteiro ao passar 
+               sobre o botão, indicando que é clicável. */
+      cursor: pointer;
+
+      /* Adiciona um arredondamento de 4px nos cantos do 
+               botão para um design mais suave. */
+      border-radius: 4px;
+
+    }
+
+    /* Estilização do botão de exclusão ao passar o mouse sobre ele.
+       Esse efeito visual melhora a usabilidade e 
+               indica a interatividade do botão. */
+    .btnExcluir:hover {
+
+      /* Muda a cor de fundo do botão para um vermelho mais 
+               escuro (#c82333) ao passar o mouse, criando um 
+               efeito visual de realce. */
+      background: #c82333;
+
+    }
+
+
+    /* Define estilos específicos para telas menores que 768px de largura.
+       Isso melhora a responsividade e a experiência do 
+               usuário em dispositivos móveis.*/
+    @media (max-width: 768px) {
+      
+      /* Ajusta o container principal para ocupar 95% da largura disponível.
+         Isso evita que o conteúdo fique muito comprimido ou 
+               com margens excessivas. */
+      .container {
+        width: 95%;
+
+        /* Reduz o espaçamento interno do container para 15px, 
+               garantindo melhor uso do espaço. */
+        padding: 15px;
+
+      }
+
+      /* Define que os campos do formulário ocuparão toda a 
+               largura disponível (100%). */
+      /* Isso melhora a usabilidade em telas menores, evitando 
+               que campos fiquem muito estreitos. */
+      .campo {
+
+        /* Define a largura dos campos como 100% do contêiner pai, 
+               para que eles se ajustem ao espaço disponível. */
+        flex: 1 1 100%;
+
+      }
+
+      /* Define o tamanho da fonte dos inputs para 14px. */
+      /* Isso melhora a legibilidade sem ocupar muito espaço em 
+               telas pequenas, garantindo um texto confortável de ler. */
+      input {
+
+          /* Define a fonte com 14px de tamanho, padrão para boa 
+                  leitura em dispositivos móveis. */
+          font-size: 14px;  
+
+          /* Define o preenchimento interno dos campos de input para 8px. */
+          /* O padding ajuda a garantir que o texto não fique "grudado" 
+                  nas bordas do campo de entrada. */
+          /* Ajuste de espaçamento interno para tornar os 
+                  campos mais "arejados". */
+          padding: 8px;  
+          
+      }
+
+
+      /* Define o tamanho da fonte dos botões para 14px. */
+      button {
+
+        /* Ajuste do tamanho da fonte dentro do botão para um 
+               valor confortável em dispositivos móveis. */
+        font-size: 14px;  
+
+        /* Define o preenchimento interno do botão para 10px. */
+        /* O padding cria um espaço extra dentro do botão, tornando-o 
+               mais clicável e visualmente agradável. */
+        padding: 10px;  
+
+      }
+
+      /* Define o tamanho da fonte das células da tabela para 12px. */
+      table {
+
+        /* Ajuste o tamanho da fonte para 12px, adequado para  
+               tabelas onde a legibilidade é importante, 
+               mas o espaço é limitado. */
+        font-size: 12px;  
+
+      }
+
+
+      /* Define o preenchimento interno das células da 
+               tabela (th e td) para 8px. */
+      th, td {
+
+          /* O padding de 8px cria um espaço interno, melhorando a 
+                  legibilidade dos dados nas células da tabela. */
+          padding: 8px;
+
+      }
+
+      /* Define o estilo dos botões de edição e exclusão. */
+      .btnEditar, .btnExcluir {
+
+          /* Define o tamanho da fonte para 12px, ajustando para um 
+                  visual mais compacto em telas menores. */
+          font-size: 12px;  
+
+          /* Define o preenchimento do botão com 4px de altura e 8px de largura. 
+          Isso torna o botão mais acessível e fácil de clicar. */
+          padding: 4px 8px;  
+
+      }
+
+    }
+  </style>
+</head>
+
+
+<!-- Inicia o corpo da página HTML -->
+<body>
+
+  <!-- Cria uma div com a classe 'container' que serve como 
+         contêiner principal do conteúdo. -->
+  <div class="container">
+  
+    <!-- Cabeçalho principal da página com o título do sistema -->
+    <h1>Sistema de Controle de Estacionamento</h1>
+    
+    <!-- Subtítulo que indica a funcionalidade da 
+         página (Cadastro de Usuário) -->
+    <h2>Cadastro de Usuário</h2>
+
+    <!-- Formulário para cadastro de usuário com id 'formCadastro' 
+         para referência no JavaScript -->
+    <form id="formCadastro">
+
+      <!-- Início de uma div com a classe 'campo', que é usada para 
+               estruturar o layout e separar visualmente os 
+               campos do formulário -->
+      <div class="campo">
+
+        <!-- O elemento <label> é utilizado para criar o rótulo do 
+               campo de entrada. Ele melhora a acessibilidade e a usabilidade -->
+        <!-- O atributo 'for' está associado ao 'id' do campo de 
+               entrada, ligando o rótulo ao campo de forma que, ao 
+               clicar no rótulo, o foco vai para o campo -->
+        <label for="nomeUsuario">Nome:</label>
+
+        <!-- O campo de entrada para o nome do usuário -->
+        <!-- O tipo 'text' especifica que o campo aceita 
+               texto como entrada -->
+        <!-- O atributo 'id' é usado para identificar o campo e 
+               também vincular o rótulo a ele -->
+        <!-- O atributo 'required' torna o campo obrigatório, ou 
+               seja, o usuário não pode enviar o formulário sem 
+               preencher este campo -->
+        <input type="text" id="nomeUsuario" required />
+        
+      </div>
+
+
+      <!-- Início de uma div com a classe 'campo' -->
+      <div class="campo">
+        
+        <!-- O elemento <label> é utilizado para criar o 
+               rótulo do campo de entrada -->
+        <!-- O atributo 'for' conecta o rótulo ao campo de 
+               entrada correspondente -->
+        <label for="emailUsuario">E-mail:</label>
+
+        <!-- O campo de entrada para o e-mail do usuário -->
+        <!-- O tipo 'email' especifica que o campo deve aceitar 
+               um e-mail como entrada -->
+        <!-- O atributo 'id' é utilizado para vincular o campo ao 
+               rótulo e pode ser usado para identificar o campo -->
+        <!-- O atributo 'required' torna o campo obrigatório, ou seja, o 
+               formulário não será enviado sem preenchê-lo -->
+        <input type="email" id="emailUsuario" required />
+
+      </div>
+
+
+      <!-- Início de uma div com a classe 'campo' -->
+      <div class="campo">
+        
+        <!-- O elemento <label> é utilizado para criar o rótulo 
+               do campo de entrada -->
+        <!-- O atributo 'for' conecta o rótulo ao campo de 
+               entrada correspondente -->
+        <label for="senhaUsuario">Senha:</label>
+
+        <!-- O campo de entrada para a senha do usuário -->
+        <!-- O tipo 'password' especifica que o campo deve ocultar a 
+               entrada (mostrar caracteres como asteriscos) -->
+        <!-- O atributo 'id' é utilizado para vincular o campo ao 
+               rótulo e pode ser usado para identificar o campo -->
+        <!-- O atributo 'required' torna o campo obrigatório, ou 
+               seja, o formulário não será enviado sem preenchê-lo -->
+        <input type="password" id="senhaUsuario" required />
+
+      </div>
+
+
+      <!-- Início do agrupamento de botões dentro de uma div 
+               com a classe 'btn-group' -->
+      <div class="btn-group">
+        
+        <!-- Botão de tipo 'submit', que envia o formulário -->
+        <!-- Este botão será clicado para submeter as 
+               informações do cadastro -->
+        <button type="submit">Cadastrar Usuário</button>
+        
+        <!-- Botão com ID 'btnVoltarPrincipal' -->
+        <!-- Esse botão será utilizado para redirecionar o 
+               usuário para a página principal -->
+        <!-- O botão não possui um tipo específico, portanto, 
+               ele é tratado como um botão comum -->
+        <button id="btnVoltarPrincipal">Voltar à Principal</button>
+        
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Linha de separação horizontal. Usada para separar 
+         visualmente seções do conteúdo. -->
+  <hr />
+
+  <!-- Início de uma div com a classe 'tabela-container', que 
+         vai envolver a tabela de usuários cadastrados -->
+  <div class="tabela-container">
+    
+    <!-- Título da seção que exibe os usuários cadastrados -->
+    <!-- 'h3' é um título de terceiro nível, usado para 
+         indicar uma seção importante -->
+    <h3>Usuários Cadastrados</h3>
+    
+    <!-- Início da tabela para exibir os usuários -->
+    <!-- O ID 'tabelaUsuarios' pode ser utilizado para selecionar 
+            essa tabela em JavaScript ou para aplicar estilos via CSS -->
+    <table id="tabelaUsuarios">
+      
+      <!-- Cabeçalho da tabela (th - table header) -->
+      <!-- 'thead' contém as células de cabeçalho da tabela, 
+               que são os títulos das colunas -->
+      <thead>
+
+        <tr>
+
+          <!-- Cada 'th' dentro de 'thead' define uma 
+                  coluna da tabela -->
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Ações</th>
+          
+        </tr>
+      </thead>
+      
+      <!-- Corpo da tabela (tbody - table body), onde as linhas 
+               de dados serão inseridas dinamicamente -->
+      <tbody></tbody>
+    </table>
+  </div>
+
+
+  <script>
+
+      // A constante 'formCadastro' seleciona o formulário de 
+      //       cadastro pelo seu ID 'formCadastro'.
+      // Esse formulário será utilizado para coletar e enviar as 
+      //       informações de cadastro do usuário.
+      const formCadastro = document.getElementById('formCadastro');
+
+      // A constante 'tabelaUsuarios' seleciona o corpo da 
+      //       tabela com o ID 'tabelaUsuarios' e
+      //       especificamente seu elemento <tbody> 
+      //       onde as linhas de dados dos usuários serão inseridas.
+      const tabelaUsuarios = document.querySelector('#tabelaUsuarios tbody');
+
+      // A constante 'btnVoltarPrincipal' seleciona o 
+      //       botão com o ID 'btnVoltarPrincipal',
+      //       que é usado para redirecionar o usuário 
+      //       de volta para a página principal.
+      const btnVoltarPrincipal = document.getElementById('btnVoltarPrincipal');
+
+      // A linha abaixo adiciona um ouvinte de evento 
+      //       para a janela do navegador. 
+      // O evento 'load' ocorre quando a página e todos os 
+      //       seus recursos (como imagens, 
+      // folhas de estilo, scripts, etc.) foram totalmente carregados.
+      // Quando esse evento ocorrer, a função 'listarUsuarios' será executada, 
+      // que irá preencher a tabela com os 
+      //       dados dos usuários cadastrados.
+      window.addEventListener('load', listarUsuarios);
+
+      // Adiciona um ouvinte de evento ao formulário 'formCadastro'.
+      // Quando o formulário for submetido (com o clique no 
+      //       botão de "Cadastrar Usuário"), 
+      //       o evento será disparado e a função assíncrona será executada.
+      formCadastro.addEventListener('submit', async (evento) => {
+
+        // O método 'preventDefault' impede o comportamento 
+        //       padrão do formulário, 
+        //       que seria recarregar a página ao ser submetido.
+        // Isso permite que o formulário seja processado 
+        //       sem recarregar a página.
+        evento.preventDefault();
+
+        // Aqui, a variável 'nome' coleta o valor que o 
+        //       usuário digitou no campo de nome 
+        //       através do 'id' do elemento ('nomeUsuario'). 
+        // Esse valor será usado posteriormente 
+        //       para enviar ao servidor ou ser manipulado.
+        const nome = document.getElementById('nomeUsuario').value;
+
+        // Da mesma forma, a variável 'email' pega o 
+        //       valor que o usuário digitou no campo 
+        //       de e-mail ('emailUsuario'). Esse dado 
+        //       será usado para o cadastro do usuário.
+        const email = document.getElementById('emailUsuario').value;
+
+        // A variável 'senha' pega o valor digitado pelo 
+        //       usuário no campo de senha 
+        // ('senhaUsuario'). Este valor também será enviado 
+        //       para o servidor como parte do cadastro.
+        const senha = document.getElementById('senhaUsuario').value;
+
+
+        // O bloco try-catch é usado para capturar e tratar 
+        //       possíveis erros durante a execução da requisição.
+        // Caso haja algum erro na execução do código dentro do 
+        //       try, o controle é passado para o bloco catch.
+        try {
+          
+          // A constante 'resposta' armazena a resposta de 
+          //       uma requisição feita com a função 'fetch'.
+          // 'fetch' é uma função assíncrona que realiza uma 
+          //       requisição HTTP para o servidor. 
+          // Neste caso, estamos fazendo uma requisição 'POST' 
+          //       para cadastrar um novo usuário na URL especificada.
+          // O método 'POST' é usado para enviar dados ao servidor.
+          const resposta = await fetch('http://127.0.0.1:3000/api/usuarios/cadastrar', {
+            
+            // Definimos o método como 'POST' porque estamos 
+            //       enviando dados ao servidor.
+            method: 'POST',
+            
+            // As 'headers' especificam que o corpo da 
+            //       requisição será enviado no formato JSON.
+            headers: { 'Content-Type': 'application/json' },
+            
+            // O corpo da requisição contém os dados a serem 
+            //       enviados para o servidor.
+            // Aqui, estamos enviando um objeto com as 
+            //       propriedades 'nome', 'email' e 'senha',
+            //       que foram obtidas nos campos de entrada do formulário.
+            body: JSON.stringify({ nome, email, senha })
+
+          });
+
+          // 'await resposta.json()' faz a conversão da resposta 
+          //       do servidor para um objeto JavaScript.
+          // O servidor geralmente retorna dados em formato JSON, 
+          //       então usamos '.json()' para convertê-los.
+          const dados = await resposta.json();
+
+          // Verifica se a resposta do servidor foi bem-sucedida (status 200).
+          // 'resposta.ok' será 'true' se o status da resposta 
+          //       for um código de sucesso, como 200.
+          if (resposta.ok) {
+            
+            // Se a resposta for positiva, mostra um alerta 
+            //       com a mensagem de sucesso do servidor.
+            alert(dados.mensagem);
+            
+            // Reseta os campos do formulário, limpando o 
+            //       que o usuário digitou.
+            formCadastro.reset();
+            
+            // A função 'listarUsuarios' é chamada para atualizar a 
+            //       lista de usuários cadastrados na página.
+            listarUsuarios();
+
+          } else {
+
+            // Se a resposta do servidor não for positiva (exemplo: 
+            //       erro de validação), um alerta com a mensagem 
+            //       de erro retornada pelo servidor será mostrado.
+            alert(dados.mensagem);
+
+          }
+
+        } catch (erro) {
+
+          // Se ocorrer algum erro durante o processo (por exemplo, 
+          //       se o servidor não puder ser alcançado),
+          //       ele será capturado pelo bloco 'catch'.
+          // Aqui, estamos apenas mostrando uma mensagem de 
+          //       erro no console para depuração.
+          console.error('Erro ao cadastrar usuário:', erro);
+          
+          // Também mostramos um alerta na página para informar ao 
+          //       usuário que houve um erro.
+          alert('Erro no cadastro.');
+          
+        }
+
+      });
+
+      // Adiciona um ouvinte de evento ao botão 'btnVoltarPrincipal'. 
+      // Esse ouvinte vai aguardar o evento 'click'.
+      // Ou seja, quando o usuário clicar no botão, o 
+      //       código dentro da função será executado.
+      btnVoltarPrincipal.addEventListener('click', () => {
+
+        // Aqui, estamos dizendo ao navegador para redirecionar o 
+        //       usuário para a página 'principal.html'
+        // O 'window.location.href' altera a URL da página, 
+        //       provocando a navegação para a nova página.
+        window.location.href = 'principal.html';
+
+      });
+
+      // Declaração de uma função assíncrona chamada 'listarUsuarios'.
+      // A palavra-chave 'async' antes da função indica que 
+      //       ela pode ter operações assíncronas, como 
+      //       chamadas de rede (requisições).
+      // Ou seja, a função poderá "esperar" por respostas de 
+      //       servidores sem bloquear a execução do restante do código.
+      async function listarUsuarios() {
+
+        // A instrução 'try' tenta executar um bloco de código. 
+        // Se algum erro ocorrer, o 'catch' será executado (não mostrado aqui).
+        // Isso é útil quando estamos fazendo operações que 
+        //       podem falhar, como buscar dados de um 
+        //       servidor (requisição à API).
+        try {
+
+          // 'fetch' é utilizado para fazer uma requisição HTTP para um servidor.
+          // No caso, estamos buscando os usuários a partir da 
+          //       URL 'http://127.0.0.1:3000/api/usuarios'.
+          // Essa URL é de um servidor local (API). 'fetch' retorna 
+          //       uma promessa (Promise), que vamos esperar com 'await'.
+          const resp = await fetch('http://127.0.0.1:3000/api/usuarios');
+          
+          // Agora que a requisição foi bem-sucedida, tentamos 
+          //       transformar a resposta que recebemos em JSON.
+          // A função 'json()' converte a resposta em um objeto JavaScript.
+          // Esse objeto será a lista de usuários que queremos exibir na página.
+          const usuarios = await resp.json();
+          
+          // Limpa qualquer conteúdo já existente dentro da 
+          //       tabela onde vamos exibir os usuários.
+          // Isso é feito para garantir que a tabela comece 
+          //       vazia antes de adicionar novos dados.
+          tabelaUsuarios.innerHTML = '';
+
+          // 'forEach' é um método que percorre todos os usuários 
+          //       que recebemos e executa a função dentro dele.
+          // Para cada 'usuario' da lista, criamos uma linha de 
+          //       tabela (tr) com o nome e e-mail desse usuário.
+          usuarios.forEach(usuario => {
+
+            // Criamos uma nova linha de tabela (tr) para 
+            //       adicionar na tabela de usuários.
+            const tr = document.createElement('tr');
+
+            // Preenchemos a nova linha com o nome e o e-mail do usuário.
+            // Também adicionamos os botões de 'Editar' e 'Excluir'.
+            tr.innerHTML = `
+              <td>${usuario.nome}</td>  <!-- Exibe o nome do usuário -->
+              <td>${usuario.email}</td> <!-- Exibe o e-mail do usuário -->
+              <td> <!-- Aqui, criamos botões para editar e excluir -->
+                <button class="btnEditar" data-id="${usuario._id}">Editar</button> <!-- Botão de editar -->
+                <button class="btnExcluir" onclick="excluirUsuario('${usuario._id}')">Excluir</button> <!-- Botão de excluir -->
+              </td>
+            `;
+
+            // Após criar a linha (tr), adicionamos ela 
+            //       dentro do corpo da tabela.
+            // 'appendChild' adiciona a nova linha ao final da tabela.
+            tabelaUsuarios.appendChild(tr);
+          });
+
+          // Agora os botões de editar funcionam corretamente!
+          // 'document.querySelectorAll('.btnEditar')' seleciona 
+          //       todos os elementos com a classe 'btnEditar'.
+          // Isso é útil quando temos múltiplos botões de editar, e 
+          //       queremos adicionar um ouvinte de evento em todos eles.
+          document.querySelectorAll('.btnEditar').forEach(btn => {
+            
+            // Para cada botão encontrado, adicionamos um 
+            //       "ouvinte de evento" para o evento de 'click'.
+            // O evento 'click' é disparado quando o botão é clicado.
+            btn.addEventListener('click', function () {
+              
+              // 'this' refere-se ao botão que foi clicado.
+              // 'getAttribute('data-id')' busca o valor do 
+              //       atributo 'data-id' do botão clicado.
+              // Esse atributo 'data-id' contém o ID do usuário, que 
+              //       será usado para editar esse usuário específico.
+              const id = this.getAttribute('data-id');
+              
+              // Após pegar o ID do usuário, redirecionamos o 
+              //       navegador para a página 'editarUsuario.html'.
+              // Passamos o ID do usuário como um parâmetro na 
+              //       URL usando query string (?id=ID).
+              // Isso permite que a página de edição saiba 
+              //       qual usuário será editado.
+              window.location.href = `editarUsuario.html?id=${id}`;
+
+            });
+          });
+
+
+        // O bloco 'try' abaixo contém o código que tenta listar os 
+        //       usuários a partir de uma requisição à API. 
+        // Se algo der errado durante a execução do código dentro 
+        //       do 'try', o erro será capturado pelo 'catch'.
+        } catch (erro) {
+
+          // A função 'console.error' exibe uma mensagem de 
+          //       erro no console do navegador.
+          // Ela é útil para depuração e ajuda os desenvolvedores a 
+          //       entender o que deu errado.
+          // A primeira parte da mensagem é uma string 
+          //       explicativa: 'Erro ao listar usuários:', 
+          //       que ajuda a identificar qual processo falhou.
+          // A segunda parte ('erro') é um objeto que contém 
+          //       detalhes sobre o erro ocorrido, 
+          //       como o tipo de erro, a mensagem de erro e 
+          //       informações sobre a linha em que o erro ocorreu.
+          console.error('Erro ao listar usuários:', erro);
+
+        }
+
+      }
+
+      // Função assíncrona 'excluirUsuario' que recebe um parâmetro 'id'.
+      // Esta função é responsável por excluir um usuário 
+      //       com base no ID fornecido.
+      async function excluirUsuario(id) {
+        
+          // A primeira linha dentro da função exibe uma janela 
+          //       de confirmação para o usuário.
+          // A função 'confirm' exibe uma caixa de diálogo com uma 
+          //       mensagem e dois botões: "OK" e "Cancelar".
+          // Se o usuário clicar em "OK", 'confirm' retorna 
+          //       true; caso contrário, retorna false.
+          // Se o usuário cancelar a operação, o código termina com 'return', 
+          // e nenhuma ação adicional será executada.
+          if (!confirm('Confirma a exclusão?')) return;
+
+          // O bloco 'try' é utilizado para tentar executar a 
+          //       operação de exclusão. Caso algo falhe, 
+          // o erro será capturado pelo bloco 'catch'.
+          try {
+
+              // A função 'fetch' é usada para fazer uma 
+              //       requisição HTTP. 
+              // Aqui, ela faz uma requisição para excluir um usuário 
+              //       específico com o método 'DELETE'.
+              // A URL é formada usando a base 'http://127.0.0.1:3000/api/usuarios/' 
+              //       seguida do ID do usuário.
+              // Isso garante que estamos removendo o usuário correto.
+              await fetch(`http://127.0.0.1:3000/api/usuarios/${id}`, { method: 'DELETE' });
+
+              // Após a exclusão, a função 'listarUsuarios' é 
+              //       chamada para atualizar a lista de usuários.
+              // Isso pode ser útil para exibir a lista de usuários 
+              //       atualizada, sem o usuário excluído.
+              listarUsuarios();
+
+          } catch (erro) {
+
+              // Caso ocorra um erro durante a exclusão do usuário, o 
+              //       erro será capturado aqui.
+              // 'console.error' exibe o erro no console do navegador 
+              //       para ajudar na depuração.
+              // A mensagem 'Erro ao excluir usuário:' é exibida 
+              //       antes do erro para tornar mais claro o contexto do problema.
+              console.error('Erro ao excluir usuário:', erro);
+
+          }
+      }
+
+      
+  // Fim da seção de script onde o código 
+  //       JavaScript é executado
+  </script> 
+
+<!-- Fim da seção "body", que contém todo o 
+         conteúdo visível da página -->
+</body> 
+
+<!-- Fim do documento HTML, encerrando a 
+         estrutura do código -->
+</html> 

@@ -1,0 +1,835 @@
+<!-- Declara que este é um documento HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML e definição do idioma 
+      como português do Brasil -->
+<html lang="pt-BR">
+
+<head>
+
+  <!-- Define a codificação de caracteres para UTF-8, 
+        permitindo acentuação e caracteres especiais -->
+  <meta charset="UTF-8">
+
+  <!-- Configuração para tornar a página responsiva em 
+        dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Define o título da aba do navegador -->
+  <title>Editar Veículo</title>
+
+  <!-- Início da seção de estilos CSS para personalizar a 
+        aparência da página -->
+  <style>
+
+    /* Define a estilização do corpo (body) da página */
+    body {
+
+      /* Define a fonte principal do texto como Arial, com 
+            fallback para fontes sans-serif */    
+      font-family: Arial, sans-serif;
+
+      /* Define a cor de fundo da página como um tom de 
+            cinza claro (#f4f4f4) */
+      background-color: #f4f4f4;
+
+      /* Define a cor padrão do texto como um tom de cinza escuro (#333) */
+      color: #333;
+
+      /* Remove qualquer margem externa padrão do navegador */
+      margin: 0;
+
+      /* Remove qualquer espaçamento interno padrão do navegador */
+      padding: 0;
+
+      /* Ativa o modelo de layout flexível para centralizar os 
+            elementos filhos */
+      display: flex;
+
+      /* Alinha os elementos filhos ao centro horizontalmente */
+      align-items: center;
+
+      /* Alinha os elementos filhos ao centro verticalmente */
+      justify-content: center;
+
+      /* Define a altura total da tela para ocupar 100% da 
+            altura do viewport */
+      height: 100vh;
+
+    }
+
+
+    /* Estilização do contêiner principal que envolve o 
+          formulário e o conteúdo */
+
+    /* Define o contêiner que centraliza o conteúdo na tela */
+    .container {
+      
+      /* Define a largura máxima do contêiner para evitar 
+            que ele fique muito largo */
+      max-width: 400px;
+
+      /* Define a largura do contêiner como 90% da tela, 
+            garantindo responsividade */
+      width: 90%;
+
+      /* Define o fundo do contêiner como branco para destacar o conteúdo */
+      background: white;
+
+      /* Adiciona um espaçamento interno de 20px para evitar que o 
+            conteúdo encoste nas bordas */
+      padding: 20px;
+
+      /* Arredonda os cantos do contêiner em 8px para um 
+            design mais suave */
+      border-radius: 8px;
+
+      /* Adiciona uma sombra sutil para destacar o contêiner na tela */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+      /* Centraliza o texto dentro do contêiner */
+      text-align: center;
+
+    }
+
+    /* Estilização do título principal da página */
+
+    /* Define a aparência do título principal dentro do contêiner */
+    h1 {
+
+      /* Define o tamanho da fonte do título para 22px */
+      font-size: 22px;
+
+      /* Adiciona um espaçamento inferior de 20px para separar o 
+            título dos elementos abaixo */
+      margin-bottom: 20px;
+
+      /* Define a cor do texto como um tom de cinza escuro 
+            para melhor legibilidade */
+      color: #444;
+
+    }
+
+
+    /* Estilização dos campos de entrada do formulário */
+
+    /* Define a aparência dos campos de entrada */
+    .campo {
+      
+      /* Define a largura total do campo de entrada para 
+            ocupar 100% do espaço disponível */
+      width: 100%;
+
+      /* Adiciona um preenchimento interno de 10px para 
+            melhorar a experiência do usuário ao digitar */
+      padding: 10px;
+
+      /* Define um espaçamento externo vertical de 8px para 
+            separar os campos entre si */
+      margin: 8px 0;
+
+      /* Adiciona uma borda de 1px sólida com cor cinza 
+            claro (#ccc) para destacar o campo */
+      border: 1px solid #ccc;
+
+      /* Arredonda os cantos do campo em 6px para um 
+            design mais moderno e suave */
+      border-radius: 6px;
+
+      /* Define o tamanho da fonte dentro do campo 
+            como 16px para melhor legibilidade */
+      font-size: 16px;
+
+      /* Define um fundo cinza claro para o campo, 
+            diferenciando-o da área ao redor */
+      background: #f9f9f9;
+
+    }
+
+    /* Estilização das etiquetas (labels) dos campos */
+
+    /* Define a aparência dos rótulos (labels) 
+          para os campos de entrada */
+    .labelCampo {
+
+      /* Define o peso da fonte como negrito para destacar os rótulos */
+      font-weight: bold;
+
+      /* Exibe o rótulo como um bloco, garantindo que ele 
+            fique acima do campo de entrada */
+      display: block;
+
+      /* Adiciona um espaçamento superior de 10px para 
+            separar o rótulo do campo anterior */
+      margin-top: 10px;
+
+      /* Alinha o texto do rótulo à esquerda para facilitar a leitura */
+      text-align: left;
+
+    }
+
+
+    /* Estilização do botão padrão */
+
+    /* Define a aparência geral dos botões */
+    button {
+
+      /* Define a largura do botão como 100%, garantindo que 
+            ele ocupe toda a largura disponível */
+      width: 100%;
+
+      /* Adiciona um preenchimento interno de 12px para aumentar a 
+            área clicável e melhorar a usabilidade */
+      padding: 12px;
+
+      /* Define o tamanho da fonte como 16px para manter o 
+            texto do botão legível */
+      font-size: 16px;
+
+      /* Adiciona um espaçamento superior de 10px para separar o 
+            botão dos elementos anteriores */
+      margin-top: 10px;
+
+      /* Remove qualquer borda do botão para um design 
+            mais moderno e limpo */
+      border: none;
+
+      /* Arredonda os cantos do botão em 6px para um visual 
+            mais suave e agradável */
+      border-radius: 6px;
+
+      /* Define o cursor como "pointer" para indicar que o 
+            elemento é clicável */
+      cursor: pointer;
+
+      /* Adiciona um efeito de transição suave de 0.3s para 
+            qualquer alteração visual */
+      transition: 0.3s;
+
+    }
+
+    /* Estilização específica para o botão de voltar */
+
+    /* Define o estilo para o botão de voltar à página anterior */
+    #btnVoltar {
+
+      /* Define a cor de fundo do botão como um tom de 
+            cinza escuro (#6c757d) */
+      background: #6c757d;
+
+      /* Define a cor do texto como branca para melhor 
+            contraste e legibilidade */
+      color: white;
+
+    }
+
+
+    /* Estilização do botão de voltar quando o usuário 
+          passa o mouse sobre ele */
+    
+    /* O seletor ":hover" aplica estilos quando o 
+          cursor está sobre o botão */
+    #btnVoltar:hover {
+
+      /* Altera a cor de fundo do botão para um tom de 
+          cinza mais escuro (#5a6268) */
+      background: #5a6268;
+
+    }
+
+    /* Estilização do botão de envio (submit) */
+
+    /* Aplica estilos específicos ao botão de submissão do formulário */
+    button[type="submit"] {
+
+      /* Define a cor de fundo do botão como azul (#007bff) 
+            para chamar atenção */
+      background: #007bff;
+
+      /* Define a cor do texto como branca para melhor visibilidade */
+      color: white;
+
+    }
+
+    /* Estilização do botão de envio quando o usuário 
+          passa o mouse sobre ele */
+
+    /* Quando o cursor passa sobre o botão de envio, 
+          aplicamos um tom de azul mais escuro */
+    button[type="submit"]:hover {
+
+      /* Muda a cor de fundo do botão para um azul mais 
+          escuro (#0056b3) */
+      background: #0056b3;
+
+    }
+
+
+    /* Responsividade */
+
+    /* Aplica estilos específicos para telas com largura 
+          máxima de 450 pixels */
+    @media (max-width: 450px) {
+
+      /* Ajusta a largura e o espaçamento do contêiner 
+            principal para telas menores */
+      .container {
+
+        /* Define a largura do contêiner para 95% da tela, 
+              garantindo melhor adaptação */
+        width: 95%;
+
+        /* Reduz o espaçamento interno para 15 pixels, 
+              otimizando o espaço na tela */
+        padding: 15px;
+
+      }
+
+      /* Ajusta os campos de entrada para telas menores */
+
+      /* Aplica um tamanho de fonte menor e reduz o 
+            padding dos campos de entrada */
+      .campo {
+
+        /* Reduz o tamanho da fonte para 14 pixels, tornando o 
+              texto mais compacto */
+        font-size: 14px;
+
+        /* Diminui o preenchimento interno para 8 pixels, 
+              reduzindo o espaço ocupado */
+        padding: 8px;
+
+      }
+
+      /* Ajusta os botões para melhor adaptação em telas pequenas */
+
+      /* Aplica um tamanho de fonte menor e ajusta o 
+            espaçamento dos botões */
+      button {
+
+        /* Reduz o tamanho da fonte para 14 pixels para 
+              manter a proporção */
+        font-size: 14px;
+
+        /* Define um preenchimento interno de 10 pixels para um 
+              toque mais confortável */
+        padding: 10px;
+
+      }
+    }
+
+  </style>
+</head>
+
+
+<!-- Início do corpo da página -->
+<body>
+
+  <!-- Div que contém todo o conteúdo da interface de 
+          edição de veículo -->
+  <div class="container">
+
+    <!-- Título principal da página, indicando que esta seção é 
+          para editar um veículo -->
+    <h1>Editar Veículo</h1>
+
+    <!-- Formulário que será usado para editar os dados do veículo -->
+    <form id="formEditarVeiculo">
+
+      <!-- Campo oculto que armazena o ID do veículo a ser editado.
+           Esse campo é importante para garantir que a edição 
+                seja feita no veículo correto, pois o usuário não 
+                precisa visualizar ou alterar esse ID diretamente. -->
+      <input type="hidden" id="idVeiculo" />
+
+
+      <!-- Rótulo para o campo de entrada da placa do veículo.
+           O atributo 'for' associa o rótulo ao campo de 
+                entrada correspondente, melhorando a acessibilidade e 
+                a usabilidade do formulário. -->
+      <label class="labelCampo" for="placa">Placa:</label>
+
+      <!-- Campo de entrada para a placa do veículo.
+           Atributo 'id' define um identificador único para 
+                manipulação via JavaScript.
+           A classe 'campo' aplica estilos definidos no CSS.
+           O atributo 'required' garante que esse campo deve ser 
+                preenchido antes do envio do formulário. -->
+      <input type="text" id="placa" class="campo" required />
+
+      <!-- Rótulo para o campo de entrada do modelo do veículo.
+           Segue o mesmo padrão do rótulo anterior, garantindo 
+                clareza na interface. -->
+      <label class="labelCampo" for="modelo">Modelo:</label>
+
+      <!-- Campo de entrada para o modelo do veículo.
+           O usuário deve inserir o modelo do veículo, 
+                como "Gol", "Civic", "Fiesta", etc.
+           Possui os mesmos atributos de acessibilidade e 
+                validação do campo de placa. -->
+      <input type="text" id="modelo" class="campo" required />
+
+
+      <!-- Define um rótulo (label) para o campo de entrada da cor do veículo.
+      O atributo 'for' vincula esse rótulo ao campo de entrada de ID 'cor'.
+      Quando o usuário clica no rótulo, o campo de entrada 
+            correspondente é ativado automaticamente.
+      A classe 'labelCampo' aplica estilos CSS específicos para 
+            melhorar a aparência e o alinhamento do rótulo. -->
+      <label class="labelCampo" for="cor">Cor:</label>
+
+      <!-- Campo de entrada para o usuário digitar a cor do veículo.
+          O tipo 'text' permite que o usuário insira qualquer valor textual.
+          O atributo 'id' fornece um identificador único para que o 
+                campo possa ser acessado e manipulado via JavaScript.
+          A classe 'campo' aplica estilos visuais padronizados, como 
+                margens, espaçamento e formatação da borda.
+          O atributo 'required' força o preenchimento do campo, 
+                impedindo o envio do formulário caso esteja vazio.
+          O usuário pode digitar cores como "Azul", "Cinza", "Prata", "Verde", 
+                entre outras. -->
+      <input type="text" id="cor" class="campo" required />
+     
+
+      <!-- Define um rótulo (label) para o campo de seleção do 
+                proprietário do veículo.
+           O atributo 'for' vincula esse rótulo ao campo de 
+                seleção com ID 'proprietario'.
+           A classe 'labelCampo' aplica estilos CSS para melhorar o 
+                alinhamento e a aparência do rótulo. -->
+      <label class="labelCampo" for="proprietario">Proprietário:</label>
+
+      <!-- Campo de seleção (dropdown) para o usuário escolher um 
+                proprietário para o veículo.
+           O elemento 'select' cria uma lista suspensa de opções.
+           O atributo 'id' permite a manipulação do campo via JavaScript, 
+                como o preenchimento dinâmico de opções.
+           A classe 'campo' aplica estilos padronizados ao campo de seleção.
+           O atributo 'required' impede que o formulário seja enviado 
+                sem uma seleção válida.
+           Inicialmente, o campo estará vazio, mas poderá ser preenchido 
+                dinamicamente via JavaScript. -->
+      <select id="proprietario" class="campo" required></select>
+
+      <!-- Botão para salvar as alterações feitas no formulário.
+           O atributo 'type="submit"' faz com que, ao ser clicado, o 
+                botão envie os dados do formulário para processamento.
+           O texto dentro do botão ("Salvar") informa ao usuário 
+                sua funcionalidade.
+           Estilos CSS aplicados podem mudar a aparência e comportamento 
+                ao passar o mouse sobre ele. -->
+      <button type="submit">Salvar</button>
+
+      <!-- Botão para voltar à página anterior ou a uma página específica 
+                sem enviar o formulário.
+           O atributo 'type="button"' impede que o botão envie o 
+                formulário quando clicado.
+           O atributo 'id="btnVoltar"' permite que o botão seja 
+                identificado e manipulado via JavaScript.
+           O texto "Voltar" indica ao usuário que esse botão serve 
+                para retornar a uma página anterior. -->
+      <button type="button" id="btnVoltar">Voltar</button>
+
+    </form>
+  </div>
+
+  <script>
+    
+    // Seleciona o formulário de edição de veículo pelo ID 'formEditarVeiculo'.
+    // Este formulário será usado para atualizar os dados de um veículo existente.
+    const formEditarVeiculo = document.getElementById('formEditarVeiculo');
+
+    // Seleciona o campo oculto que armazena o ID do veículo sendo editado.
+    // Isso é necessário para identificar qual veículo será 
+    //    atualizado no banco de dados.
+    const idVeiculoHidden = document.getElementById('idVeiculo');
+
+    // Seleciona o campo de entrada onde o usuário digita a placa do veículo.
+    // O valor inserido será enviado ao backend para atualização.
+    const placaInput = document.getElementById('placa');
+
+    // Seleciona o campo de entrada onde o usuário digita o 
+    //    modelo do veículo.
+    // Este campo é obrigatório e seu valor será salvo 
+    //    no banco de dados.
+    const modeloInput = document.getElementById('modelo');
+
+    // Seleciona o campo de entrada onde o usuário informa a cor do veículo.
+    // O usuário precisa preencher este campo antes de 
+    //    salvar as alterações.
+    const corInput = document.getElementById('cor');
+
+    // Seleciona o campo de seleção (dropdown) onde o usuário 
+    //    escolhe o proprietário do veículo.
+    // As opções deste campo podem ser carregadas 
+    //    dinamicamente do banco de dados.
+    const proprietarioSelect = document.getElementById('proprietario');
+
+    // Seleciona o botão de voltar pelo ID 'btnVoltar'.
+    // Esse botão permitirá ao usuário retornar à tela 
+    //    anterior sem salvar alterações.
+    const btnVoltar = document.getElementById('btnVoltar');
+
+
+    // Carregar dados do veículo e popular combo de usuários
+    // O objeto "window" representa a janela do navegador, 
+    //    ou seja, a própria página web.
+    // Ele permite acessar e manipular elementos da página, 
+    //    interagir com o histórico do navegador, entre outras coisas.
+
+    // A função "addEventListener" é usada para adicionar 
+    //    um "ouvinte de evento" a um elemento da página.
+    // Um ouvinte de evento aguarda que algo aconteça (como um 
+    //    clique ou o carregamento da página) para executar um código específico.
+
+    // O evento "load" é acionado quando toda a página foi 
+    //    completamente carregada, incluindo HTML, CSS, imagens e scripts.
+    // O código dentro da função será executado somente 
+    //    após esse evento ocorrer.
+
+    // A palavra-chave "async" (assíncrona) significa que essa 
+    //    função pode conter operações que levam tempo para serem concluídas, 
+    // como buscar dados do servidor. Isso permite que a página 
+    //    continue funcionando enquanto aguarda a resposta.
+    window.addEventListener('load', async () => {
+
+      // "URLSearchParams" é uma ferramenta do JavaScript que 
+      //    permite acessar parâmetros dentro da URL da página.
+      // Parâmetros da URL são valores que aparecem depois do 
+      //    símbolo "?" em um link.
+      // Exemplo: em "editarVeiculo.html?id=123", "id=123" é um parâmetro.
+      const params = new URLSearchParams(window.location.search);
+
+      // A função "get" é usada para pegar o valor de um 
+      //    parâmetro específico dentro da URL.
+      // Aqui, estamos pegando o valor do parâmetro "id". 
+      // Se a URL for "editarVeiculo.html?id=123", a 
+      //    variável "id" terá o valor "123".
+      const id = params.get('id');
+
+      // Verificamos se o "id" não foi encontrado na URL.
+      // Isso pode acontecer se o usuário entrou na página 
+      //    diretamente sem passar um ID válido.
+      if (!id) {
+
+          // Se o ID não for encontrado, mostramos um alerta para o 
+          //    usuário informando que o ID do veículo não foi passado.
+          alert('ID de veículo não informado!');
+
+          // "return" faz com que a função pare a execução imediatamente.
+          // Isso evita que o restante do código seja executado sem um ID válido.
+          return;
+
+      }
+
+      // "await" indica que essa operação pode levar um 
+      //    tempo para ser concluída.
+      // Como estamos carregando uma lista de usuários do 
+      //    servidor, precisamos esperar essa operação terminar antes de continuar.
+      // Sem "await", o código poderia tentar preencher a 
+      //    lista antes mesmo de receber os dados, causando erros.
+      await carregarUsuariosCombo();
+
+      // Carrega dados do veículo
+      // "try" é uma estrutura de controle usada para executar um 
+      //    bloco de código e capturar erros caso algo dê errado.
+      // Se um erro ocorrer dentro do bloco "try", ele 
+      //    será tratado pelo bloco "catch".
+      try {
+          
+        // "await fetch(url)" é usado para fazer uma requisição HTTP ao servidor.
+        // Aqui, estamos solicitando os dados de um veículo 
+        //    específico usando seu "id".
+        // "fetch" é a função que faz essa requisição, e "await" 
+        //    garante que o código espere a resposta antes de continuar.
+        const resp = await fetch(`http://127.0.0.1:3000/api/veiculos/${id}`);
+
+        // "resp.ok" verifica se a requisição foi bem-sucedida.
+        // Se o servidor retornar um código de erro (como 404 
+        //    ou 500), "resp.ok" será falso.
+        if (!resp.ok) {
+
+            // Se a resposta do servidor indicar um erro, mostramos 
+            //    um alerta informando o usuário sobre o problema.
+            alert('Erro ao buscar dados do veículo.');
+
+            // "return" faz com que a função pare a execução imediatamente,
+            // impedindo que o código abaixo seja executado 
+            //    sem os dados corretos.
+            return;
+
+        }
+
+        // "await resp.json()" converte a resposta do 
+        //    servidor para um objeto JavaScript.
+        // Como a resposta é um JSON (JavaScript Object Notation), 
+        //    essa conversão é necessária para que possamos 
+        //    acessar os dados do veículo.
+        const veiculo = await resp.json();
+
+        // Atribui o ID do veículo ao campo oculto "idVeiculoHidden".
+        // Isso é útil para garantir que o ID do veículo seja 
+        //    enviado corretamente ao editar os dados.
+        idVeiculoHidden.value = veiculo._id;
+
+        // Define o valor do campo "placaInput" com a placa do 
+        //    veículo retornada pela API.
+        // Se "veiculo.placa" for "null" ou "undefined", ele 
+        //    define um valor vazio ('') para evitar erros.
+        placaInput.value = veiculo.placa || '';
+
+        // Define o valor do campo "modeloInput" com o modelo do veículo.
+        // Caso o modelo seja "null" ou "undefined", o campo 
+        //    será preenchido com uma string vazia.
+        modeloInput.value = veiculo.modelo || '';
+
+        // Define a cor do veículo no campo de entrada "corInput".
+        // Se "veiculo.cor" estiver vazio ou for "null", 
+        //    será atribuído um valor padrão vazio ('').
+        corInput.value = veiculo.cor || '';
+
+        // Seleciona o proprietário do veículo na lista suspensa (select).
+        // O método [...proprietarioSelect.options] transforma a 
+        //    lista de opções em um array para podermos usar "find".
+        // "find(o => o.value === veiculo.proprietario)" busca a 
+        //    opção cujo valor corresponde ao ID do proprietário do veículo.
+        const optExistente = [...proprietarioSelect.options].find(o => o.value === veiculo.proprietario);
+
+        // Verifica se a opção do proprietário já existe no 
+        //    <select> de proprietários.
+        // Se o proprietário do veículo estiver na lista, 
+        //    ele será selecionado automaticamente.
+        if (optExistente) {
+
+          // Define a opção existente como selecionada.
+          optExistente.selected = true;
+
+        } else {
+
+          // Se o proprietário do veículo não estiver na lista de 
+          //    opções do <select>, adicionamos uma nova opção.
+
+          // Criamos um novo elemento <option> com o nome e 
+          //    valor do proprietário do veículo.
+          // O primeiro argumento define o texto visível na 
+          //    opção (nome do proprietário).
+          // O segundo argumento define o valor da 
+          //    opção (ID ou nome do proprietário).
+          // O terceiro e quarto argumentos "true" indicam 
+          //    que esta nova opção já será selecionada por padrão.
+          const novaOpt = new Option(veiculo.proprietario, veiculo.proprietario, true, true);
+
+          // Adiciona a nova opção ao <select> de proprietários.
+          proprietarioSelect.appendChild(novaOpt);
+
+        }
+
+      // Captura erros que possam ocorrer durante a requisição e 
+      //    processamento dos dados do veículo.
+      } catch (erro) {
+
+          // Exibe no console do navegador uma mensagem de 
+          //    erro detalhada para depuração.
+          console.error('Erro ao carregar veículo:', erro);
+
+          // Exibe um alerta para o usuário informando que 
+          //    ocorreu um erro ao carregar os dados do veículo.
+          alert('Erro ao carregar dados do veículo.');
+
+      }
+
+    });
+
+    // Função para carregar lista de usuários (dono)
+    // Define uma função assíncrona chamada 'carregarUsuariosCombo'.
+    // Essa função será responsável por buscar os 
+    //    usuários cadastrados no banco de dados
+    // e preencher a lista suspensa (<select>) de 
+      //    proprietários com essas informações.
+    async function carregarUsuariosCombo() {
+        
+      try {
+        
+        // Envia uma requisição HTTP para a API que 
+        //    retorna a lista de usuários cadastrados.
+        // O método 'fetch' é usado para fazer essa 
+        //    requisição assíncrona.
+        // O 'await' faz com que o código aguarde a 
+        //    resposta da requisição antes de continuar.
+        const resp = await fetch('http://127.0.0.1:3000/api/usuarios');
+
+        // Verifica se a resposta da requisição não foi 
+        //    bem-sucedida (código diferente de 200).
+        // Caso a resposta não seja "ok", a função simplesmente 
+        //    retorna sem continuar a execução.
+        if (!resp.ok) return;
+
+        // Converte a resposta da API para um formato JSON.
+        // Isso transforma os dados brutos da resposta HTTP em 
+        //    um array de objetos JavaScript.
+        // O 'await' é necessário porque a conversão para JSON 
+        //    também é uma operação assíncrona.
+        const usuarios = await resp.json();
+
+        // Limpa qualquer conteúdo existente dentro do 
+        //    elemento <select> de proprietários.
+        // Isso garante que não haja duplicação de opções ao 
+        //    atualizar a lista de usuários.
+        proprietarioSelect.innerHTML = '';
+
+        // Percorre a lista de usuários retornada pela API 
+        //    utilizando a função 'forEach'.
+        // O parâmetro 'u' representa cada usuário 
+        //    presente no array 'usuarios'.
+        usuarios.forEach(u => {
+
+          // Cria um novo elemento <option> para ser inserido 
+            //    no <select> de proprietários.
+          const opt = document.createElement('option');
+
+          // Define o valor da opção como o nome do usuário.
+          // Isso significa que, ao selecionar um usuário no 
+          //    formulário, seu nome será armazenado.
+          opt.value = u.nome;
+
+          // Define o texto visível da opção, ou seja, o nome 
+          //    que será exibido na lista suspensa.
+          opt.textContent = u.nome;
+
+          // Adiciona a opção criada ao elemento <select> de proprietários.
+          // Isso efetivamente adiciona cada usuário como uma 
+          //    escolha disponível na lista.
+          proprietarioSelect.appendChild(opt);
+
+        });
+
+      // Captura erros que possam ocorrer durante a execução do bloco 'try'.
+      // Se houver qualquer problema ao carregar os 
+      //    usuários, o erro será tratado aqui.
+      } catch (erro) {
+
+          // Exibe no console do navegador um erro 
+          //    detalhado sobre o problema ocorrido.
+          // Isso ajuda no diagnóstico caso algo dê errado.
+          console.error('Erro ao carregar usuários para combo:', erro);
+
+      }
+
+    }
+
+    // Adiciona um ouvinte de evento ao formulário 'formEditarVeiculo'.
+    // Ele será acionado quando o usuário tentar enviar o formulário.
+    formEditarVeiculo.addEventListener('submit', async (e) => {
+
+      // Previne o comportamento padrão do formulário, que 
+      //    recarregaria a página ao ser enviado.
+      // Isso permite processar os dados via JavaScript 
+      //    sem sair da tela.
+      e.preventDefault();
+
+      // Captura o ID do veículo que está oculto no formulário.
+      // Esse ID é necessário para identificar qual 
+      //    veículo será atualizado.
+      const id = idVeiculoHidden.value;
+
+      // Obtém o valor digitado no campo de placa do veículo.
+      // Esse valor será enviado para atualização no banco de dados.
+      const placa = placaInput.value;
+
+      // Obtém o valor digitado no campo de modelo do veículo.
+      // Esse campo identifica o modelo do veículo a ser editado.
+      const modelo = modeloInput.value;
+
+      // Obtém o valor digitado no campo de cor do veículo.
+      // Esse valor define a cor do veículo registrado.
+      const cor = corInput.value;
+
+      // Obtém o valor selecionado no campo de proprietário do veículo.
+      // Esse campo identifica quem é o dono do veículo cadastrado.
+      const proprietario = proprietarioSelect.value;
+
+
+      try {
+
+        // Faz uma requisição HTTP para atualizar os dados do veículo no servidor.
+        // Usa o método 'PUT', que é o padrão para atualização de registros.
+        const resp = await fetch(`http://127.0.0.1:3000/api/veiculos/${id}`, {
+          
+          // Define que a requisição será do tipo PUT, ou 
+          //    seja, uma atualização de dados.
+          method: 'PUT',
+    
+          // Define os cabeçalhos da requisição. 
+          // Aqui especificamos que os dados enviados
+          //    estarão no formato JSON (application/json).
+          headers: { 'Content-Type': 'application/json' },
+    
+          // Converte os dados do veículo (placa, modelo, cor, 
+          //    proprietário) para o formato JSON
+          //    antes de enviá-los para a API.
+          body: JSON.stringify({ placa, modelo, cor, proprietario })
+
+        });
+    
+        // Aguarda a resposta do servidor e a converte para 
+        //    um objeto JavaScript.
+        // A resposta pode conter uma mensagem informando se a 
+        //    atualização foi bem-sucedida ou não.
+        const dados = await resp.json();
+    
+        // Verifica se a resposta da requisição foi bem-sucedida (código 
+        //    de status HTTP 200 a 299).
+        if (resp.ok) {
+
+            // Exibe uma mensagem de sucesso com o conteúdo 
+            //    retornado pela API.
+            alert(dados.mensagem);
+
+            // Redireciona o usuário para a página 'veiculos.html' 
+            //    após a atualização bem-sucedida.
+            window.location.href = 'veiculos.html';
+
+        } else {
+
+            // Caso a requisição não tenha sido bem-sucedida (por 
+            //    exemplo, erro de validação),
+            //    exibe a mensagem de erro retornada pela API.
+            alert(dados.mensagem);
+
+        }
+
+      // Captura qualquer erro que ocorra durante a requisição à API.
+      } catch (erro) {
+
+        // Exibe no console do navegador o erro detalhado 
+        //    para fins de depuração.
+        console.error('Erro ao editar veículo:', erro);
+
+        // Exibe um alerta ao usuário informando que ocorreu um 
+        //    erro ao tentar editar o veículo.
+        alert('Erro ao editar veículo.');
+
+      }
+
+    });
+
+    // Adiciona um evento de clique ao botão de voltar.
+    btnVoltar.addEventListener('click', () => {
+
+        // Quando o botão for clicado, redireciona o usuário 
+        //    para a página 'veiculos.html'.
+        window.location.href = 'veiculos.html';
+
+    });
+
+    
+  // Fim da seção de script onde o código JavaScript é executado
+  </script> 
+
+<!-- Fim da seção "body", que contém todo o conteúdo 
+      visível da página -->
+</body> 
+
+<!-- Fim do documento HTML, encerrando a 
+      estrutura do código -->
+</html>

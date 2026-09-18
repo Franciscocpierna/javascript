@@ -1,0 +1,19 @@
+{
+  "name": "parking-system",
+  "version": "1.0.0",
+  "description": "Sistema de Controle de Estacionamento",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js"
+  },
+  "author": "Seu Nome",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^6.13.8"
+  },
+  "keywords": [],
+  "type": "commonjs"
+}

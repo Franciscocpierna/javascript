@@ -1,0 +1,1476 @@
+<!-- Declaração do tipo de documento, informando ao 
+      navegador que este arquivo é um documento HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML, definindo o idioma 
+      principal como português do Brasil -->
+<html lang="pt-BR">
+
+<head>
+  <!-- Define a codificação de caracteres como UTF-8, 
+        permitindo o uso de acentos e caracteres especiais -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página, que será exibido na aba do navegador -->
+  <title>Painel Principal - Estacionamento</title>
+
+  <!-- Link para um arquivo externo de estilos CSS, que 
+        contém a formatação visual da página -->
+  <link rel="stylesheet" href="css/estilos.css" />
+
+  <!-- Início da seção de estilos CSS dentro do próprio documento -->
+  <style>
+
+    /* Define a classe .modal-container, que representa o 
+          contêiner do modal (janela pop-up) */
+    .modal-container {
+        
+      /* Define a posição como fixa, garantindo que o 
+            modal fique sobreposto na tela, 
+            independentemente do scroll da página */
+      position: fixed;
+      
+      /* Posiciona o modal no canto superior esquerdo da 
+            tela (0px do topo e 0px da esquerda) */
+      top: 0; 
+      left: 0;
+
+      /* Define que o modal ocupará toda a largura (100%) e 
+            toda a altura (100%) da tela */
+      width: 100%;
+      height: 100%;
+
+      /* Aplica um fundo semitransparente preto (rgba), 
+            permitindo visualizar levemente 
+            o conteúdo atrás do modal */
+      background: rgba(0,0,0,0.5);
+
+      /* Define que o modal será um contêiner flexível, permitindo um 
+            alinhamento dinâmico dos elementos filhos */
+      display: flex;
+
+      /* Centraliza horizontalmente os elementos filhos do 
+            modal dentro do contêiner */
+      justify-content: center;
+
+      /* Centraliza verticalmente os elementos filhos do 
+            modal dentro do contêiner */
+      align-items: center;
+
+    }
+
+    /* Define a classe .modal-content, que representa a área 
+            interna do modal (janela de diálogo) */
+    .modal-content {
+        
+        /* Define o fundo do modal como branco (#fff), garantindo um 
+              contraste adequado com o fundo escuro */
+        background: #fff;
+
+        /* Adiciona um preenchimento interno (padding) de 20px, 
+              garantindo um espaço entre o conteúdo e as bordas */
+        padding: 20px;
+
+        /* Define uma borda sutil de 1px de espessura, cor 
+              cinza (#ccc), para melhorar a distinção do modal */
+        border: 1px solid #ccc;
+
+        /* Arredonda os cantos do modal em 4px, deixando o 
+              design mais suave e moderno */
+        border-radius: 4px;
+
+        /* Define uma largura fixa de 300px, garantindo um 
+              tamanho padrão para o modal */
+        width: 300px;
+
+        /* Define a posição relativa, permitindo o posicionamento de 
+              elementos filhos dentro do modal */
+        position: relative;
+
+    }
+
+    /* Define a classe .fechar-modal, que representa o 
+          botão para fechar o modal */
+    .fechar-modal {
+
+        /* Define a posição absoluta, permitindo posicionar o 
+              botão dentro do modal de forma independente */
+        position: absolute;
+
+        /* Posiciona o botão no canto superior direito do modal, a 
+              5px do topo e 10px da borda direita */
+        top: 5px;
+        right: 10px;
+
+        /* Muda o cursor para um ponteiro ao passar sobre o 
+              botão, indicando que é clicável */
+        cursor: pointer;
+
+        /* Define o tamanho da fonte do botão como 20px, 
+              tornando o ícone de fechar bem visível */
+        font-size: 20px;
+
+        /* Remove qualquer fundo do botão, deixando apenas o ícone visível */
+        background: none;
+
+        /* Remove qualquer borda do botão, mantendo apenas o texto/ícone */
+        border: none;
+
+        /* Define a cor do texto/ícone como cinza escuro (#333), 
+              garantindo legibilidade */
+        color: #333;
+
+    }
+
+    /* Define o estilo quando o usuário passa o mouse 
+          sobre o botão de fechar do modal */
+    .fechar-modal:hover {
+
+        /* Altera a cor do ícone/texto para vermelho ao 
+              passar o mouse sobre ele, indicando que a 
+              ação de fechar está ativa */
+        color: red;
+    }
+
+  </style>
+</head>
+
+<!-- Início do corpo do documento HTML -->
+<body>
+
+  <!-- Container principal que agrupa todo o conteúdo da página -->
+  <div class="container">
+
+    <!-- Cabeçalho principal da página -->
+    <h1>Sistema de Controle de Estacionamento</h1>
+    
+    <!-- Subtítulo indicando que este é o painel 
+          principal do sistema -->
+    <h2>Painel Principal</h2>
+
+    <!-- Início da barra de navegação que contém os botões 
+          das funcionalidades principais do sistema -->
+    <nav class="menu-funcionalidades">
+
+      <!-- Botão para exibir a seção do mapa de vagas do estacionamento -->
+      <!-- O atributo 'data-target="secaoMapa"' indica que, ao 
+            clicar, a seção específica do mapa será mostrada -->
+      <button class="menu-btn" data-target="secaoMapa">Mapa de Vagas</button>
+
+      <!-- Botão responsável por abrir a seção de 
+            gerenciamento de veículos -->
+      <!-- Essa funcionalidade permite que os usuários consultem, 
+            cadastrem, editem e excluam veículos do sistema -->
+      <button class="menu-btn" id="btnVeiculos">Veículos</button>
+
+      <!-- Botão que redireciona o usuário para a tela de 
+            gerenciamento de usuários cadastrados -->
+      <!-- Essa opção possibilita adicionar novos usuários, 
+            editar informações e remover usuários do sistema -->
+      <button class="menu-btn" id="btnUsuarios">Usuários</button>
+
+      <!-- Botão que leva para a seção de relatórios do sistema -->
+      <!-- A seção de relatórios exibe estatísticas do estacionamento, 
+            como tempo de permanência dos veículos e ocupação das vagas -->
+      <button class="menu-btn" id="btnRelatorio">Relatório</button>
+
+    <!-- Fim da barra de navegação das funcionalidades principais -->
+    </nav>
+
+    <!-- Seção Mapa de Vagas -->
+    <!-- Início da seção que exibe o mapa de vagas do estacionamento -->
+    <section id="secaoMapa" class="secao-ativa">
+
+      <!-- Título da seção indicando que o mapa de vagas 
+            pode ser filtrado por data -->
+      <h3>Mapa de Vagas por Data</h3>
+
+      <!-- Campo de entrada para selecionar uma data -->
+      <!-- O usuário pode escolher uma data específica para 
+            visualizar as vagas disponíveis naquele dia -->
+      <input type="date" id="dataMapa" />
+
+      <!-- Botão para carregar o mapa de vagas com base na data selecionada -->
+      <!-- Ao clicar, o sistema buscará os dados das vagas 
+            ocupadas e disponíveis na data escolhida -->
+      <button id="btnCarregarMapa">Carregar Mapa</button>
+
+      <!-- Área onde o mapa de vagas será exibido -->
+      <!-- Aqui será gerado dinamicamente um layout 
+            representando as vagas do estacionamento -->
+      <div id="areaMapaVagas" class="mapa-vagas"></div>
+
+    <!-- Fim da seção do mapa de vagas -->
+    </section>
+    
+  </div>
+
+  <!-- Modal de Reserva -->
+  <!-- Modal de Reserva: Este elemento representa um pop-up 
+        modal para permitir que os usuários façam reservas -->
+  <!-- A classe "modal-container" define o estilo básico do modal -->
+  <!-- O atributo "style='display: none;'" garante que o 
+        modal esteja oculto por padrão -->
+  <div id="modalReserva" class="modal-container" style="display: none;">
+
+    <!-- Conteúdo interno do modal, que será exibido  
+          quando ativado -->
+    <div class="modal-content">
+
+      <!-- Botão para fechar o modal -->
+      <!-- O botão contém o símbolo "&times;", que 
+            representa um "X" para fechar -->
+      <!-- A classe "fechar-modal" estiliza este botão 
+            para um posicionamento adequado -->
+      <button id="btnFecharModal" class="fechar-modal">&times;</button>
+
+      <!-- Título do modal indicando que o usuário está 
+            fazendo uma reserva -->
+      <h2>Fazer Reserva</h2>
+
+      <!-- Formulário dentro do modal que permitirá que o usuário 
+            insira as informações para realizar a reserva -->
+      <form id="formReservaModal">
+
+        <!-- Rótulo (label) para o campo de data da reserva -->
+        <!-- O atributo "for" está associado ao "id" do campo 
+              correspondente, garantindo acessibilidade e melhor usabilidade -->
+        <label for="dataReservaModal">Data da Reserva:</label>
+
+        <!-- Campo de entrada (input) para a data da reserva -->
+        <!-- O tipo "date" permite que o usuário selecione 
+              uma data em um calendário -->
+        <!-- O atributo "id" identifica o campo para manipulação via JavaScript -->
+        <!-- O atributo "required" torna este campo obrigatório 
+              para evitar envios sem preenchimento -->
+        <input type="date" id="dataReservaModal" required />
+
+        <!-- Rótulo (label) para o campo de hora de início da reserva -->
+        <!-- Segue o mesmo padrão do rótulo anterior para 
+              garantir uma estrutura consistente -->
+        <label for="horaReservaModal">Hora de Início:</label>
+
+        <!-- Campo de entrada (input) para selecionar a hora de 
+              início da reserva -->
+        <!-- O tipo "time" permite que o usuário escolha um horário 
+              sem precisar digitá-lo manualmente -->
+        <!-- O atributo "required" também é usado aqui para garantir 
+              que o usuário preencha esse campo antes de enviar -->
+        <input type="time" id="horaReservaModal" required />
+
+
+        <!-- Rótulo (label) para o campo de entrada da placa do veículo -->
+        <!-- O atributo "for" está vinculado ao "id" do campo 
+              correspondente, garantindo acessibilidade -->
+        <label for="placaModal">Placa:</label>
+
+        <!-- Campo de entrada (input) onde o usuário digita a placa do veículo -->
+        <!-- O tipo "text" permite que o usuário insira caracteres alfanuméricos -->
+        <!-- O atributo "id" permite que o campo seja identificado e 
+              manipulado via JavaScript -->
+        <!-- O atributo "list" vincula o campo a um elemento <datalist>, 
+              permitindo sugestões automáticas -->
+        <!-- O atributo "required" obriga o usuário a preencher esse 
+              campo antes de enviar o formulário -->
+        <input type="text" id="placaModal" list="listaPlacas" required />
+
+        <!-- Elemento <datalist> para fornecer sugestões 
+                automáticas de placas cadastradas -->
+        <!-- O "id" deve ser o mesmo usado no atributo "list" 
+                do campo de entrada -->
+        <!-- Esse elemento armazena opções dinâmicas que podem 
+                ser adicionadas via JavaScript -->
+        <datalist id="listaPlacas"></datalist>
+
+
+        <!-- Rótulo (label) para o campo de entrada do modelo do veículo -->
+        <!-- O atributo "for" associa este rótulo ao campo de 
+              entrada com "id=modeloModal" -->
+        <label for="modeloModal">Modelo:</label>
+
+        <!-- Campo de entrada (input) onde o usuário pode 
+              digitar o modelo do veículo -->
+        <!-- O tipo "text" permite inserir caracteres 
+              alfanuméricos (letras e números) -->
+        <!-- O "id" torna esse campo acessível via JavaScript 
+              para manipulação futura -->
+        <input type="text" id="modeloModal" />
+
+        <!-- Rótulo (label) para o campo de entrada da cor do veículo -->
+        <!-- Assim como o rótulo anterior, esse é vinculado ao 
+              campo de entrada com "id=corModal" -->
+        <label for="corModal">Cor:</label>
+
+        <!-- Campo de entrada para que o usuário insira a cor do veículo -->
+        <!-- Tipo "text" permite entrada livre de caracteres -->
+        <!-- O "id" facilita a identificação desse campo no código JavaScript -->
+        <input type="text" id="corModal" />
+
+
+        <!-- Rótulo (label) para o campo de entrada do nome do proprietário -->
+        <!-- O atributo "for" vincula este rótulo ao campo de 
+              entrada com "id=proprietarioModal" -->
+        <label for="proprietarioModal">Proprietário:</label>
+
+        <!-- Campo de entrada (input) onde o usuário pode digitar o 
+              nome do proprietário do veículo -->
+        <!-- O tipo "text" permite inserir caracteres alfanuméricos -->
+        <!-- O "id" torna esse campo acessível via JavaScript 
+              para manipulação futura -->
+        <input type="text" id="proprietarioModal" />
+
+        <!-- Campo oculto (hidden) para armazenar a vaga escolhida pelo usuário -->
+        <!-- Este campo não é visível na tela, mas seu valor pode 
+              ser utilizado no formulário -->
+        <!-- O ID "vagaEscolhida" permite que o valor seja preenchido 
+              dinamicamente via JavaScript -->
+        <input type="hidden" id="vagaEscolhida" />
+
+        <!-- Botão para submeter (enviar) o formulário de reserva -->
+        <!-- O tipo "submit" faz com que o formulário seja 
+              processado quando clicado -->
+        <button type="submit">Salvar Reserva</button>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    
+    // ----------------------------
+    // 1) Carregar dados iniciais
+    // ----------------------------
+
+    // Adiciona um ouvinte de evento para o carregamento da página
+    // Isso significa que o código dentro da função será executado
+    // assim que toda a página for carregada no navegador.
+    window.addEventListener('load', () => {
+      
+      // Cria um objeto "Date" representando a data e hora atuais.
+      // O método "toISOString()" converte a data para o 
+      //    formato ISO 8601 (AAAA-MM-DDTHH:mm:ss.sssZ).
+      // O método "split('T')[0]" divide a string no caractere 'T' e 
+      //    pega apenas a parte da data (AAAA-MM-DD).
+      const dataHoje = new Date().toISOString().split('T')[0];
+
+      // Obtém a referência ao campo de entrada (input) da data do mapa de vagas
+      // Esse campo é utilizado para selecionar uma data específica e 
+      //    visualizar as vagas disponíveis.
+      const inputDataMapa = document.getElementById('dataMapa');
+
+      // Define o valor do campo de entrada como a data de hoje,
+      // garantindo que, ao carregar a página, o mapa seja 
+      //    exibido com a data atual.
+      inputDataMapa.value = dataHoje;
+
+      // Chama a função que carrega o mapa de vagas com base na data selecionada.
+      // Isso garante que ao abrir a página, as vagas 
+      //    disponíveis sejam carregadas automaticamente.
+      carregarMapaVagas();
+
+    });
+
+
+    // ----------------------------
+    // 2) Navegação (Usuários, Veículos, Relatório)
+    // ----------------------------
+
+    // Obtém a referência ao botão "Usuários" na interface.
+    // Esse botão é responsável por direcionar o usuário 
+    //    para a página de cadastro de usuários.
+    const btnUsuarios = document.getElementById('btnUsuarios');
+
+    // Verifica se o botão "Usuários" existe na página.
+    // Isso evita erros caso o script seja executado em uma 
+    //    página onde esse botão não esteja presente.
+    if (btnUsuarios) {
+
+      // Adiciona um ouvinte de evento para o clique no botão "Usuários".
+      // Quando o botão for clicado, o navegador redirecionará 
+      //    para a página "cadastro.html".
+      btnUsuarios.addEventListener('click', () => {
+        window.location.href = 'cadastro.html';
+      });
+
+    }
+
+    // Obtém a referência ao botão com o ID "btnVeiculos"
+    // Esse botão está presente na interface e, quando clicado,
+    // leva o usuário para a página onde ele pode visualizar e 
+    //    gerenciar veículos cadastrados no sistema.
+    const btnVeiculos = document.getElementById('btnVeiculos');
+
+    // Verifica se o botão "Veículos" realmente existe na 
+    //    página antes de adicionar o evento.
+    // Essa verificação evita erros caso o código seja 
+    //    executado em uma página que não contenha esse botão.
+    if (btnVeiculos) {
+
+      // Adiciona um evento de clique ao botão "Veículos".
+      // Quando o usuário clicar no botão, a página será 
+      //    redirecionada para "veiculos.html".
+      // Isso permite que o usuário acesse rapidamente a 
+      //    área de gerenciamento de veículos.
+      btnVeiculos.addEventListener('click', () => {
+        
+        // Modifica a propriedade "window.location.href" 
+        //    para alterar a URL da página atual.
+        // O navegador automaticamente carrega a página "veiculos.html" 
+        //    como se o usuário tivesse clicado em um link.
+        window.location.href = 'veiculos.html';
+
+      });
+    }
+
+    // Obtém a referência ao botão com o ID "btnRelatorio"
+    // Esse botão é responsável por redirecionar o usuário 
+    //    para a página de relatórios.
+    const btnRelatorio = document.getElementById('btnRelatorio');
+
+    // Verifica se o botão "Relatório" existe na página 
+    //    antes de adicionar o evento.
+    // Isso previne erros caso o código seja executado 
+    //    em uma página sem esse botão.
+    if (btnRelatorio) {
+
+      // Adiciona um evento de clique ao botão "Relatório".
+      // Quando o usuário clicar no botão, ele será 
+      //    levado para a página de relatórios.
+      btnRelatorio.addEventListener('click', () => {
+
+        // Modifica a propriedade "window.location.href" 
+        //    para redirecionar o usuário.
+        // O navegador carregará a página "relatorio.html", 
+        //    onde os dados do estacionamento serão exibidos.
+        window.location.href = 'relatorio.html';
+        
+      });
+    }
+
+
+    // ----------------------------
+    // 3) Troca de seções (Mapa / Outros)
+    // ----------------------------
+
+    // Seleciona todos os botões do menu que possuem a classe 'menu-btn'.
+    // Esses botões são usados para alternar entre 
+    //    diferentes seções da página.
+    const botoesMenu = document.querySelectorAll('.menu-btn');
+
+    // Seleciona todas as seções da página (exemplo: Mapa, 
+    //    Veículos, Usuários, Relatório).
+    // As seções são alternadas quando o usuário 
+    //    clica em um dos botões do menu.
+    const secoes = document.querySelectorAll('section');
+
+    // Percorre todos os botões do menu 
+    //    armazenados em 'botoesMenu'.
+    botoesMenu.forEach((botao) => {
+
+      // Obtém o valor do atributo 'data-target' de cada botão.
+      // Esse atributo indica qual seção o botão 
+      //    deve exibir ao ser clicado.
+      const alvo = botao.getAttribute('data-target');
+
+      // Se o botão não tiver um 'data-target' definido, a 
+      //    função simplesmente retorna e não faz nada.
+      if (!alvo) return;
+
+      // Adiciona um evento de clique para cada botão do menu.
+      botao.addEventListener('click', () => {
+
+        // Para garantir que apenas uma seção fique 
+        //    visível por vez, primeiro ocultamos todas.
+        secoes.forEach((sec) => {
+
+          // Remove a classe que exibe a seção.
+          sec.classList.remove('secao-ativa'); 
+
+          // Adiciona a classe que esconde a seção.
+          sec.classList.add('secao-inativa');  
+
+        });
+
+        // Após ocultar todas, exibe a seção correspondente ao botão clicado.
+
+        // Remove a classe que esconde.
+        document.getElementById(alvo).classList.remove('secao-inativa'); 
+
+        // Adiciona a classe que exibe.
+        document.getElementById(alvo).classList.add('secao-ativa'); 
+
+      });
+
+    });
+
+    // ----------------------------
+    // 4) Mapa de Vagas
+    // ----------------------------
+
+    // Obtém a referência do botão "Carregar Mapa" pelo ID 'btnCarregarMapa'.
+    const btnCarregarMapa = document.getElementById('btnCarregarMapa');
+
+    // Verifica se o botão foi encontrado no DOM.
+    // Isso evita erros caso o script seja carregado em 
+    //    uma página que não contenha esse botão.
+    if (btnCarregarMapa) {
+
+      // Adiciona um evento de clique ao botão.
+      // Quando o usuário clicar no botão, a
+      //    função 'carregarMapaVagas' será executada.
+      btnCarregarMapa.addEventListener('click', carregarMapaVagas);
+
+    }
+
+    // Função assíncrona para carregar o mapa de vagas
+    async function carregarMapaVagas() {
+
+      // Obtém a data selecionada no campo de entrada (input) com ID 'dataMapa'
+      // A função .value retorna o valor atual do campo, 
+      //    que é a data escolhida pelo usuário
+      const dataMapa = document.getElementById('dataMapa').value;
+
+      // Verifica se a data foi selecionada pelo usuário
+      // Se não houver uma data selecionada, mostra um alerta e 
+      //    retorna, impedindo o carregamento do mapa
+      if (!dataMapa) {
+
+        alert('Selecione uma data.');
+
+        // Interrompe a execução da função, não permitindo o 
+        //    carregamento do mapa sem uma data
+        return; 
+
+      }
+
+
+      // Início de um bloco de código assíncrono que tenta 
+      //    obter e manipular os dados das reservas.
+      try {
+          
+        // Faz uma requisição HTTP assíncrona para buscar as 
+        //    reservas para uma data específica.
+        // O valor de 'dataMapa' é passado como um 
+        //    parâmetro na URL da requisição.
+        const resp = await fetch(`http://127.0.0.1:3000/api/reservas?data=${dataMapa}`);
+
+        // Aguardando a resposta e convertendo-a em formato JSON
+        const reservas = await resp.json();
+
+        // Aqui selecionamos o elemento da página onde o 
+        //    mapa de vagas será exibido.
+        const areaMapa = document.getElementById('areaMapaVagas');
+
+        // Limpa o conteúdo da área do mapa antes de 
+        //    adicionar novos elementos, 
+        // para garantir que informações antigas não 
+        //    permaneçam visíveis ao carregar novas.
+        areaMapa.innerHTML = ''; 
+
+        // Criando um objeto 'reservasMap' que vai mapear 
+        //    cada vaga para a respectiva reserva.
+        // Isso nos permitirá associar rapidamente uma vaga à 
+        //    sua reserva correspondente.
+        const reservasMap = {};
+
+        // Aqui, estamos preenchendo o objeto reservasMap, 
+        //    onde a chave é a vaga e o valor é o objeto da reserva. 
+        reservas.forEach((r) => {
+
+          // A vaga (r.vaga) é a chave e a reserva (r) é o valor.
+          reservasMap[r.vaga] = r;  
+
+        });
+
+        // Definindo o número total de vagas disponíveis no estacionamento
+        const TOTAL_VAGAS = 10;
+    
+        // Laço de repetição que percorre todas as vagas 
+        //    disponíveis, do número 1 até o TOTAL_VAGAS (que é 10 no nosso caso).
+        for (let vaga = 1; vaga <= TOTAL_VAGAS; vaga++) {
+          
+          // Cria um botão para cada vaga no mapa. Cada botão 
+          //    será representado por uma vaga.
+          const btnVaga = document.createElement('button');
+
+          // Verifica se a vaga está reservada, consultando se já 
+          //    existe uma reserva para esta vaga no objeto 'reservasMap'.
+          // O 'reservasMap[vaga]' contém a reserva da vaga específica. 
+          // Se a vaga estiver reservada e o status for 'reservado', a 
+          //    vaga terá o estilo de 'vaga-reservada'.
+          if (reservasMap[vaga] && reservasMap[vaga].status === 'reservado') {
+            
+            // Se a vaga estiver reservada, adiciona a classe 'vaga-reservada' 
+            //    para aplicar o estilo de reserva (com cores e 
+            //    estilo definidos no CSS).
+            btnVaga.classList.add('vaga-reservada');
+            
+            // Define o texto do botão, mostrando que a vaga está 
+            //    reservada e qual o número da vaga.
+            btnVaga.textContent = `Vaga ${vaga} (Reservada)`;
+
+            // Adiciona um ouvinte de evento ao botão, que será acionado 
+            //    quando o usuário clicar na vaga reservada.
+            // O evento irá redirecionar o usuário para a página de 
+            //    'finalizar.html' com a ID da reserva da vaga específica, 
+            //    para que ele possa finalizar o processo de reserva.
+            btnVaga.addEventListener('click', () => {
+              window.location.href = `finalizar.html?id=${reservasMap[vaga]._id}`;
+            });
+
+          } else {
+
+            // Caso a vaga não esteja reservada, ela será marcada como 
+            //    disponível, com a classe 'vaga-disponivel'.
+            btnVaga.classList.add('vaga-disponivel');
+            
+            // Define o texto do botão, mostrando que a vaga está 
+            //    disponível para o usuário reservar.
+            btnVaga.textContent = `Vaga ${vaga} (Disponível)`;
+
+            // Se a vaga estiver disponível, ao clicar, será 
+            //    aberto o modal de reserva.
+            // 'abrirModalReserva' é uma função que, 
+            //    abre um formulário para o usuário preencher os dados da reserva.
+            btnVaga.addEventListener('click', () => {
+              
+              // Passa a data e a vaga para o modal
+              abrirModalReserva(dataMapa, vaga); 
+
+            });
+          }
+          
+          // Adiciona o botão da vaga recém-criada à área do
+          //    mapa (à div com id 'areaMapa').
+          areaMapa.appendChild(btnVaga);
+
+        }
+
+      // O bloco `catch` é usado para capturar erros que ocorrem 
+      //    dentro do bloco `try`. 
+      // Caso ocorra um erro na execução do código dentro do `try`, o 
+      //    código aqui dentro do `catch` será executado.
+      } catch (erro) {
+
+          // `erro` é um parâmetro que contém as informações sobre o 
+          //    erro que ocorreu no bloco `try`.
+          // Aqui estamos capturando o erro e utilizando a 
+          //    variável `erro` para exibir mais detalhes sobre o problema.
+
+          // O comando `console.error()` exibe o erro no console do 
+          //    navegador ou ferramenta de desenvolvimento.
+          // Isso é útil para os desenvolvedores poderem ver o erro 
+          //    detalhado durante o processo de depuração.
+          console.error('Erro ao carregar mapa:', erro);
+
+          // A função `alert()` exibe uma janela pop-up para o 
+          //    usuário, alertando sobre o erro ocorrido.
+          // Neste caso, ele informa que houve um erro ao 
+          //    tentar carregar o mapa de vagas.
+          alert('Erro ao carregar mapa de vagas.');
+
+      }
+
+    }
+
+    // ----------------------------
+    // 5) Modal de Reserva
+    // ----------------------------
+
+    // Aqui estamos selecionando o elemento `modalReserva` pelo 
+    //    seu ID, que representa o modal (caixa de diálogo) 
+    // onde a reserva será feita. Este modal está 
+    //    escondido na interface até ser ativado.
+    const modalReserva = document.getElementById('modalReserva');
+
+    // Seleciona o botão `btnFecharModal` pelo seu ID. Esse botão 
+    //    será utilizado para fechar o modal, 
+    // ou seja, esconder a janela de reserva.
+    const btnFecharModal = document.getElementById('btnFecharModal');
+
+    // Aqui selecionamos o formulário dentro do modal com o ID 
+    //    `formReservaModal`. Este formulário é onde o usuário 
+    //    irá inserir os dados para realizar uma reserva (como placa, data, etc).
+    const formReservaModal = document.getElementById('formReservaModal');
+
+    // A variável `veiculosCadastrados` é declarada como um array vazio. 
+    // Esse array será preenchido 
+    //    com os veículos que estão cadastrados no sistema, ou 
+    //    será utilizado para armazenar os dados dos veículos 
+    //    disponíveis para reserva.
+    let veiculosCadastrados = [];
+
+
+    // Função 'abrirModalReserva' é chamada quando o usuário clica em 
+    //    uma vaga para fazer uma reserva. 
+    // Ela exibe o modal (caixa de diálogo) e preenche os campos do 
+    //    formulário com as informações relevantes para a reserva.
+    function abrirModalReserva(dataEscolhida, vaga) {
+      
+      // Modifica o estilo do modal para exibi-lo. Aqui, estamos alterando a 
+      //    propriedade `display` para 'flex', 
+      //    o que torna o modal visível. 
+      modalReserva.style.display = 'flex';
+
+      // Preenche o campo de data de reserva no modal com a data 
+      //    recebida como parâmetro (`dataEscolhida`).
+      document.getElementById('dataReservaModal').value = dataEscolhida;
+
+      // Limpa o valor do campo de hora de reserva, pois o usuário 
+      //    precisa escolher a hora ao fazer a reserva.
+      document.getElementById('horaReservaModal').value = '';
+
+      // Limpa os campos de entrada de placa, modelo, cor e 
+      //    proprietário, para garantir que o usuário preencha esses dados.
+      document.getElementById('placaModal').value = '';
+      document.getElementById('modeloModal').value = '';
+      document.getElementById('corModal').value = '';
+      document.getElementById('proprietarioModal').value = '';
+
+      // Define o valor do campo oculto 'vagaEscolhida' com a 
+      //    vaga selecionada pelo usuário, 
+      //    para que possamos identificar qual vaga está sendo reservada.
+      document.getElementById('vagaEscolhida').value = vaga;
+
+      // Chama a função 'carregarPlacasParaDatalist' para carregar as 
+      //    placas de veículos no campo de placa do modal.
+      carregarPlacasParaDatalist();
+
+    }
+
+    // Função 'fecharModalReserva' é responsável por 
+    //    fechar o modal quando chamada. 
+    // Ela altera a propriedade `display` do modal 
+    //    para 'none', tornando-o invisível na tela.
+    function fecharModalReserva() {
+
+      // Aqui estamos alterando a propriedade de estilo do modal 
+      //    para 'none', o que efetivamente o oculta da tela.
+      modalReserva.style.display = 'none';
+
+    }
+
+    // Verifica se o botão de fechar modal (btnFecharModal) existe na página. 
+    // Caso o botão exista, adiciona um ouvinte de evento de 
+    //    clique para chamar a função 'fecharModalReserva' 
+    //    quando o botão for clicado.
+    if (btnFecharModal) {
+
+      // O 'addEventListener' escuta o evento de clique no botão e, ao 
+      //    clicar, executa a função 'fecharModalReserva' para fechar o modal.
+      btnFecharModal.addEventListener('click', fecharModalReserva);
+
+    }
+
+    // Adiciona um ouvinte de evento para a janela (window) que 
+    //    escuta cliques em qualquer parte da tela.
+    window.addEventListener('click', (e) => {
+
+      // Verifica se o clique foi feito fora do conteúdo do modal, ou 
+      //    seja, se o alvo do clique (e.target) é o próprio modal.
+      // Se for, chama a função 'fecharModalReserva' para fechar o modal.
+      if (e.target === modalReserva) {
+        fecharModalReserva();
+      }
+
+    });
+
+
+    // Definindo uma função assíncrona chamada 'carregarPlacasParaDatalist'.
+    // A palavra 'async' permite que essa função use a palavra-chave 'await' 
+    //    dentro dela, o que significa que ela pode esperar por 
+    //    operações assíncronas, como uma requisição HTTP, sem bloquear o código.
+    async function carregarPlacasParaDatalist() {
+
+      try {
+    
+        // Fazendo uma requisição HTTP usando a função 'fetch' para 
+        //    obter dados da API localizada em 'http://127.0.0.1:3000/api/veiculos'.
+        // A função 'fetch' retorna uma Promise, ou seja, um valor 
+        //    que será resolvido no futuro.
+        const resp = await fetch('http://127.0.0.1:3000/api/veiculos');
+
+        // Quando a requisição for concluída, chamamos o método '.json()' 
+        //    para transformar a resposta em formato JSON em um objeto JavaScript.
+        // Esse objeto é armazenado na variável 'veiculosCadastrados'.
+        veiculosCadastrados = await resp.json();
+
+        // Seleciona o elemento <datalist> com o id 'listaPlacas' no 
+        //    HTML onde as opções de placas serão exibidas.
+        const dataListPlacas = document.getElementById('listaPlacas');
+
+        // Limpa o conteúdo atual do <datalist> (caso já haja opções 
+        //    de placas previamente carregadas).
+        dataListPlacas.innerHTML = '';
+
+        // Para cada veículo (v) que está dentro da lista de 'veiculosCadastrados', 
+        //    criamos uma nova opção no <datalist>.
+        veiculosCadastrados.forEach((v) => {
+
+          // Cria um novo elemento <option> que será adicionado ao 
+          //    <datalist> para cada veículo.
+          const opt = document.createElement('option');
+
+          // Atribui o valor da placa do veículo (v.placa) à 
+          //    propriedade 'value' do <option>.
+          // Isso significa que o valor exibido e retornado no 
+          //    campo de input será a placa do veículo.
+          opt.value = v.placa;
+
+          // Adiciona a opção criada ao <datalist> selecionado.
+          dataListPlacas.appendChild(opt);
+
+        });
+
+      } catch (erro) {
+
+        // Caso ocorra algum erro ao fazer a requisição (como o 
+        //    servidor não responder), o erro será capturado aqui e 
+        //    exibido no console, para que o desenvolvedor possa 
+        //    investigar o que deu errado.
+        console.error('Erro ao carregar lista de placas:', erro);
+
+      }
+    }
+
+    // A constante 'placaModalInput' armazena o elemento HTML de ID 'placaModal',
+    // que é um campo de entrada de texto onde o usuário 
+    //    vai digitar a placa do veículo.
+    const placaModalInput = document.getElementById('placaModal');
+
+    // Verifica se o campo de entrada de placa existe no HTML.
+    // Isso é importante para garantir que o código só execute 
+    //    se o elemento existir na página.
+    if (placaModalInput) {
+
+      // Adiciona um ouvinte de evento para o campo 'placaModal', de tipo 'input'.
+      // O evento 'input' é disparado sempre que o valor do 
+      //    campo de entrada é alterado.
+      placaModalInput.addEventListener('input', () => {
+        
+        // 'placaModalInput.value' é o valor que o usuário 
+        //    digita no campo de entrada.
+        // 'trim()' remove espaços em branco extras antes e 
+        //    depois do texto digitado, e
+        // 'toUpperCase()' converte o texto digitado para maiúsculas, 
+        //    garantindo que a pesquisa seja insensível a maiúsculas e minúsculas.
+        const placaDigitada = placaModalInput.value.trim().toUpperCase();
+
+        // A função 'find' é usada para procurar um veículo na 
+        //    lista 'veiculosCadastrados' onde a placa do veículo
+        // (convertida para maiúsculas) seja igual à placa digitada. 
+        // Se encontrar, retorna o primeiro veículo encontrado.
+        const encontrado = veiculosCadastrados.find((v) => v.placa.toUpperCase() === placaDigitada);
+
+        // Se um veículo com a placa digitada for encontrado na 
+        //    lista de veículos cadastrados, faz o seguinte:
+        if (encontrado) {
+
+          // Preenche o campo 'modeloModal' com o modelo do 
+          //    veículo encontrado, caso o modelo exista.
+          // Se não houver modelo registrado, deixa o campo 
+          //    em branco (por causa do '|| ""').
+          document.getElementById('modeloModal').value = encontrado.modelo || '';
+          
+          // Preenche o campo 'corModal' com a cor do 
+          //    veículo encontrado, caso a cor exista.
+          // Se não houver cor registrada, o campo ficará em branco.
+          document.getElementById('corModal').value = encontrado.cor || '';
+          
+          // Preenche o campo 'proprietarioModal' com o nome do 
+          //    proprietário do veículo, caso esse valor exista.
+          // Se não houver proprietário registrado, o 
+          //    campo ficará em branco.
+          document.getElementById('proprietarioModal').value = encontrado.proprietario || '';
+
+        } else {
+
+          // Caso não tenha sido encontrado nenhum veículo com a 
+          //    placa digitada, limpa os campos de modelo, cor e proprietário.
+          // Isso garante que, se a placa não for encontrada, os 
+          //    campos não fiquem com dados antigos ou errados.
+          document.getElementById('modeloModal').value = '';
+          document.getElementById('corModal').value = '';
+          document.getElementById('proprietarioModal').value = '';
+
+        }
+      });
+    }
+
+
+    // ----------------------------
+    // 5.1) SALVAR RESERVA (Verificação de Conflito)
+    // ----------------------------
+
+    // 'formReservaModal' é o formulário onde o usuário irá 
+    //    preencher os dados para fazer uma nova reserva.
+    // Estamos adicionando um ouvinte de evento para o 
+    //    'submit' (envio do formulário).
+    // O evento 'submit' é disparado quando o usuário tenta 
+    //    enviar o formulário, seja clicando no botão de "Salvar" ou pressionando Enter.
+    // Ao interceptar o evento, podemos processar os dados 
+    //    antes de enviá-los para o servidor.
+    formReservaModal.addEventListener('submit', async (e) => {
+      
+      // 'e.preventDefault()' evita que o formulário seja enviado da 
+      //    forma tradicional, ou seja, sem fazer nada com os dados.
+      // Isso é necessário para que possamos processar os dados via 
+      //    JavaScript antes de qualquer outra ação.
+      e.preventDefault();
+
+      // Aqui, estamos pegando os valores dos campos do formulário:
+      
+      // 'dataReserva' pega o valor da data selecionada no 
+      //    campo de entrada 'dataReservaModal'.
+      // A função 'value' nos dá o conteúdo atual do campo de input.
+      const dataReserva = document.getElementById('dataReservaModal').value;
+
+      // 'horaReserva' pega o valor da hora selecionada no 
+      //    campo de entrada 'horaReservaModal'.
+      const horaReserva = document.getElementById('horaReservaModal').value;
+
+      // 'placa' pega o valor do campo de entrada de placa de 
+      //    veículo, identificado pelo ID 'placaModal'.
+      const placa = document.getElementById('placaModal').value;
+
+      // 'modelo' pega o valor do campo 'modeloModal', que 
+      //    contém o modelo do veículo.
+      const modelo = document.getElementById('modeloModal').value;
+
+      // 'cor' pega o valor do campo 'corModal', que contém a cor do veículo.
+      const cor = document.getElementById('corModal').value;
+
+      // 'proprietario' pega o valor do campo 'proprietarioModal', 
+      //    que contém o nome do proprietário do veículo.
+      const proprietario = document.getElementById('proprietarioModal').value;
+
+      // 'vaga' pega o valor da vaga escolhida, armazenada 
+      //    no campo 'vagaEscolhida'.
+      // Este valor é passado de outro código que armazena a 
+      //    vaga selecionada pelo usuário.
+      const vaga = document.getElementById('vagaEscolhida').value;
+
+      // Verificação de campos obrigatórios. Estamos checando se 
+      //    algum dos campos essenciais (data, hora, placa ou vaga) está vazio.
+      // Caso algum desses campos não tenha sido preenchido, 
+      //    mostramos um alerta para o usuário e paramos a execução com 'return'.
+      // O 'return' interrompe a função e impede o envio dos dados para o servidor.
+      if (!dataReserva || !horaReserva || !placa || !vaga) {
+        alert('Preencha todos os campos obrigatórios.');
+
+        // Interrompe a execução da função se algum 
+        //    campo obrigatório estiver vazio.
+        return;  
+
+      }
+
+      // Agora estamos criando um novo objeto 'Date' que combina a 
+      //    data e a hora fornecidas pelo usuário.
+      // Usamos o formato 'YYYY-MM-DDTHH:MM:00' para que o 
+      //    JavaScript consiga interpretar corretamente como uma data/hora válida.
+      // O 'T' é o separador padrão entre data e hora no formato ISO 8601.
+      const novaReserva = new Date(`${dataReserva}T${horaReserva}:00`);
+
+
+      // A partir daqui estamos tentando fazer uma chamada para o 
+      //    servidor a fim de verificar se há conflitos de reservas 
+      //    para a data selecionada pelo usuário.
+      // Usamos o método 'fetch' para enviar uma solicitação 
+      //    ao servidor. 
+      // O servidor irá buscar as reservas feitas para o 
+      //    dia específico informado.
+      // O 'await' faz com que o JavaScript espere a resposta do 
+      //    servidor antes de continuar, evitando problemas de 
+      //    execução assíncrona.
+      try {
+
+        // A URL `http://127.0.0.1:3000/api/reservas?data=${dataReserva}` 
+        //    faz uma solicitação GET ao servidor, passando a data da 
+        //    reserva como parâmetro na URL.
+        // O servidor vai responder com todas as reservas 
+        //    feitas para a data fornecida.
+        const respCheck = await fetch(`http://127.0.0.1:3000/api/reservas?data=${dataReserva}`);
+        
+        // A resposta do servidor é transformada em um formato JSON 
+        //    para ser manipulada mais facilmente.
+        const reservasDoDia = await respCheck.json();  
+
+        // Aqui, estamos verificando se já existe uma reserva 
+        //    para a mesma vaga e no mesmo horário.
+        const jaReservada = reservasDoDia.some((r) => {
+
+          // A função 'some' verifica se algum item no array 'reservasDoDia' 
+          //    atende à condição especificada.
+          // A primeira parte verifica se a vaga reservada é a mesma 
+          //    que o usuário escolheu. Caso contrário, 
+          //    retorna 'false' e o loop continua.
+          if (r.vaga != vaga) return false;
+
+          // Caso a vaga seja a mesma, transformamos a data e hora de 
+          //    início da reserva existente ('r.dataHoraInicio') em um objeto Date.
+          const reservaExistente = new Date(r.dataHoraInicio);
+
+          // Comparando a data/hora da reserva existente com a 
+          //    data/hora da nova reserva (novaReserva).
+          // Se as duas datas forem iguais, o 'getTime' retorna o
+          //    mesmo valor, indicando que a vaga já está reservada para o mesmo horário.
+          return reservaExistente.getTime() === novaReserva.getTime();
+
+        });
+
+        // Se a função 'some' encontrar uma reserva com o mesmo 
+        //    horário, a variável 'jaReservada' será verdadeira.
+        if (jaReservada) {
+
+          // Se a vaga já estiver reservada para o horário escolhido, 
+          //    mostramos um alerta para o usuário.
+          alert('Essa vaga já está reservada para esse horário!');
+          
+          // E, em seguida, interrompemos o processo, retornando da função.
+          return;
+
+        }
+
+
+        // Se estiver livre, cadastrar a reserva
+        // A função fetch é utilizada para realizar uma requisição HTTP. 
+        // Nesse caso, estamos enviando uma requisição 'POST' 
+        //    para a URL especificada, que é o endpoint '/api/reservas' no 
+        //    servidor local (http://127.0.0.1:3000/api/reservas).
+        // O método POST é utilizado quando queremos enviar dados ao 
+        //    servidor para criar ou salvar informações.
+        const respCadastro = await fetch('http://127.0.0.1:3000/api/reservas', {
+
+          // O 'method' é o método da requisição HTTP. Estamos utilizando 'POST' 
+          // para criar ou salvar uma nova reserva no servidor.
+          method: 'POST',
+          
+          // 'headers' é onde especificamos os cabeçalhos da requisição.
+          // O cabeçalho 'Content-Type' é importante porque ele diz ao servidor 
+          // que os dados que estamos enviando estão no formato JSON.
+          headers: { 'Content-Type': 'application/json' },
+
+          // 'body' é onde colocamos os dados que estamos enviando para o servidor.
+          // Usamos JSON.stringify() para converter os dados do objeto JavaScript 
+          // em uma string JSON, que o servidor pode entender.
+          body: JSON.stringify({
+
+            // 'data' representa a data da reserva, que foi coletada do 
+            //    campo de entrada do formulário.
+            data: dataReserva,  // A variável 'dataReserva' contém a 
+                                // data escolhida pelo usuário.
+            
+            // 'hora' representa a hora da reserva, também 
+            //    coletada do formulário.
+            hora: horaReserva,  // A variável 'horaReserva' contém a 
+                                // hora selecionada pelo usuário.
+            
+            // 'vaga' representa o número da vaga que o usuário 
+            //    escolheu para realizar a reserva.
+            vaga,  // A variável 'vaga' armazena o número da 
+                   // vaga selecionada.
+            
+            // 'placaVeiculo' contém a placa do veículo que será 
+            //    registrado na reserva.
+            placaVeiculo: placa,  // A variável 'placa' contém a placa informada pelo usuário.
+            
+            // 'modeloVeiculo' armazena o modelo do veículo a 
+            //    ser registrado na reserva.
+            modeloVeiculo: modelo,  // A variável 'modelo' contém o modelo do veículo.
+            
+            // 'corVeiculo' armazena a cor do veículo 
+            //    para a reserva.
+            corVeiculo: cor,  // A variável 'cor' contém a cor do 
+                              // veículo fornecida pelo usuário.
+            
+            // 'proprietarioVeiculo' representa o nome do 
+            //    proprietário do veículo que está sendo registrado.
+            proprietarioVeiculo: proprietario  // A variável 'proprietario' contém o 
+                                               // nome do proprietário do veículo.
+            
+          })
+        });
+
+
+        // Aqui, a resposta da requisição 'POST' é convertida de JSON 
+        //    para um objeto JavaScript com o método .json().
+        // O método .json() retorna uma Promise que resolve 
+        //    com os dados da resposta no formato JSON, 
+        //    o que significa que os dados recebidos do 
+        //    servidor são transformados em um objeto JavaScript.
+        const dados = await respCadastro.json();
+
+        // O 'respCadastro.ok' verifica se a resposta da requisição 
+        //    foi bem-sucedida (status HTTP 200-299).
+        // Se a resposta foi bem-sucedida, executa o código 
+        //    dentro do bloco 'if'. Caso contrário, o 
+        //    código dentro do 'else' será executado.
+        if (respCadastro.ok) {
+
+          // Exibe uma mensagem de sucesso usando 'alert' para o usuário.
+          // 'dados.mensagem' contém a mensagem de sucesso que 
+          //    foi enviada pelo servidor como resposta.
+          alert(dados.mensagem);
+          
+          // Após o cadastro, limpa os campos do formulário com 'reset()', 
+          // que zera todos os valores preenchidos no formulário de reserva.
+          formReservaModal.reset();
+          
+          // Fecha o modal chamando a função 'fecharModalReserva()'.
+          // Isso oculta a janela modal de cadastro da tela.
+          fecharModalReserva();
+          
+          // Chama a função 'carregarMapaVagas()', 
+          //    para atualizar o mapa de vagas e mostrar a nova reserva 
+          //    no mapa, com os dados mais recentes após o cadastro.
+          carregarMapaVagas();
+
+        } else {
+
+          // Caso a resposta não tenha sido bem-sucedida, 
+          //    exibe a mensagem de erro para o usuário.
+          // 'dados.mensagem' contém a mensagem de erro 
+          //    retornada pelo servidor.
+          alert(dados.mensagem);
+
+        }
+
+      // O bloco 'try' é usado para tentar executar um conjunto 
+      //    de instruções que podem lançar um erro. 
+      // Se algum erro ocorrer durante a execução do código 
+      //    dentro do 'try', a execução é transferida para o bloco 'catch'.
+      // 'catch' captura o erro (que é passado como parâmetro 'erro' para a função) 
+      //    e permite que você trate ou registre o erro de forma apropriada.
+      } catch (erro) {
+        
+          // 'console.error' é usado para exibir a mensagem de 
+          //    erro detalhada no console do navegador.
+          // Isso ajuda os desenvolvedores a depurar o código, 
+          //    mostrando o erro no console para que eles possam 
+          //    entender o que deu errado.
+          console.error('Erro ao criar reserva:', erro);
+
+          // 'alert' é usado para exibir uma mensagem de erro ao 
+          //    usuário na interface. 
+          // Nesse caso, é uma mensagem simples informando que 
+          //    houve um erro ao tentar criar a reserva, 
+          //    e sugerindo que o usuário verifique o console para 
+          //    mais detalhes técnicos, caso queira.
+          alert('Erro ao criar reserva. Verifique o console.');
+
+      }
+
+    });
+
+    // ----------------------------
+    // 6) Cadastro de Veículos (Parte não alterada)
+    // ----------------------------
+    // A variável 'formCadastroVeiculo' obtém o formulário 
+    //    com o ID 'formCadastroVeiculo'.
+    // A linha a seguir verifica se o formulário realmente existe na página.
+    const formCadastroVeiculo = document.getElementById('formCadastroVeiculo');
+
+    // Se o formulário existe, um ouvinte de evento será adicionado 
+    //    para escutar o evento 'submit' (envio do formulário).
+    // Quando o formulário for enviado (com o clique no botão "submit" ou 
+    //    com pressionamento de tecla Enter), o evento é disparado.
+    if (formCadastroVeiculo) {
+
+      // O evento 'submit' é ouvido e a função anônima será executada.
+      formCadastroVeiculo.addEventListener('submit', async (e) => {
+
+        // O método 'preventDefault()' é chamado para evitar que a 
+        //    ação padrão do formulário aconteça (que seria recarregar a página).
+        // Isso é útil para que possamos manipular a submissão do 
+        //    formulário de forma assíncrona e sem recarregar a página.
+        e.preventDefault();
+        
+        // Aqui, obtemos os valores dos campos do formulário. 
+        // Cada campo é acessado pelo seu 'id', que é único no documento.
+        // O valor de cada campo é obtido através de '.value', 
+        //    que retorna o conteúdo inserido pelo usuário.
+        const placa = document.getElementById('placaVeiculo').value;  // A placa do veículo.
+        const modelo = document.getElementById('modeloVeiculo').value;  // O modelo do veículo.
+        const cor = document.getElementById('corVeiculo').value;  // A cor do veículo.
+        const proprietario = document.getElementById('proprietarioVeiculo').value;  // O nome do proprietário do veículo.
+
+        // Começa o bloco try-catch para tratar erros e garantir 
+        //    que qualquer falha no processo seja capturada.
+        // O "try" é usado para tentar executar o código dentro dele, e 
+        //    se algo der errado, o "catch" lidará com isso.
+        try {
+
+          // Faz uma requisição para o servidor usando o método POST.
+          // A URL de destino é a API de cadastro de veículos (http://127.0.0.1:3000/api/veiculos/cadastrar).
+          // O método 'POST' é usado porque estamos enviando dados ao servidor.
+          // Dentro da requisição, os dados do veículo serão 
+          //    enviados no corpo da requisição (body).
+          // Esses dados são transformados em uma string JSON 
+          //    usando 'JSON.stringify()'.
+          const resp = await fetch('http://127.0.0.1:3000/api/veiculos/cadastrar', {
+
+              // Define o método da requisição como 'POST', que é 
+              //    usado para criar novos dados.
+              method: 'POST', 
+
+              // Define o tipo de conteúdo como 'application/json', indicando que
+              //    estamos enviando dados no formato JSON.
+              headers: { 'Content-Type': 'application/json' }, 
+
+              // Os dados do veículo (placa, modelo, cor, e proprietário) são 
+              //    convertidos em uma string JSON e enviados no corpo da requisição.
+              body: JSON.stringify({ placa, modelo, cor, proprietario }) 
+
+          });
+
+          // Aguarda a resposta da requisição e transforma o 
+          //    corpo da resposta em um objeto JSON.
+          const dados = await resp.json();
+
+          // Verifica se a resposta foi bem-sucedida (código de status 200).
+          // A propriedade 'ok' da resposta é 'true' se o código de 
+          //    status da resposta for 2xx.
+          if (resp.ok) {
+
+              // Se a resposta for bem-sucedida, exibe a mensagem de sucesso.
+              alert(dados.mensagem);
+
+              // Após o cadastro ser bem-sucedido, o formulário é limpo usando 'reset()'.
+              formCadastroVeiculo.reset();
+
+              // Chama a função 'listarVeiculos' para atualizar a lista de 
+              //    veículos cadastrados na página.
+              listarVeiculos();
+
+          } else {
+
+              // Se a resposta não for bem-sucedida, exibe a mensagem de erro.
+              alert(dados.mensagem);
+
+          }
+
+        } catch (erro) {
+
+          // Caso ocorra um erro na requisição, o erro será 
+          //    capturado pelo 'catch'.
+          // O erro será mostrado no console para depuração.
+          console.error('Erro ao cadastrar veículo:', erro);
+
+          // Exibe um alerta na página, informando que houve um 
+          //    erro ao tentar cadastrar o veículo.
+          alert('Erro ao cadastrar veículo.');
+
+        }
+
+      });
+    }
+
+    // ----------------------------
+    // 7) Listar / Editar / Excluir Veículos (Parte não alterada)
+    // ----------------------------
+
+    // Função assíncrona que vai listar os veículos cadastrados
+    async function listarVeiculos() {
+
+      try {
+
+        // Envia uma requisição para a API para buscar os veículos cadastrados
+        // 'fetch' é utilizado para realizar requisições HTTP.
+        // Neste caso, estamos fazendo uma requisição GET para a 
+        //    rota '/api/veiculos', que deve retornar todos os veículos cadastrados.
+        const resp = await fetch('http://127.0.0.1:3000/api/veiculos');
+        
+        // Converte a resposta da requisição para o formato JSON
+        // Isso permite trabalhar com os dados que a API 
+        //    retorna (geralmente em formato JSON).
+        const veiculos = await resp.json();
+        
+        // Seleciona o elemento <tbody> da tabela onde os dados dos 
+        //    veículos serão exibidos
+        // Utilizamos o querySelector para pegar o primeiro elemento que 
+        //    corresponde ao seletor '#tabelaVeiculos tbody'.
+        const tbody = document.querySelector('#tabelaVeiculos tbody');
+        
+        // Limpa o conteúdo da tabela antes de adicionar os novos dados
+        // Isso evita que as linhas antigas permaneçam na tabela 
+        //    quando novos dados são carregados.
+        tbody.innerHTML = '';
+
+        // Itera sobre todos os veículos retornados pela API
+        // 'forEach' é um método que permite executar uma função em 
+        //    cada item do array 'veiculos'.
+        veiculos.forEach((veic) => {
+
+            // Cria uma nova linha da tabela (<tr>) para cada veículo
+            const tr = document.createElement('tr');
+            
+            // Preenche o conteúdo da linha com as informações do veículo
+            // A variável 'veic' é o objeto que contém os dados de um veículo.
+            // Para cada campo do veículo, criamos uma célula de 
+            //    tabela (<td>) com a respectiva informação.
+            tr.innerHTML = `
+                <td>${veic.placa}</td>          <!-- Exibe a placa do veículo -->
+                <td>${veic.modelo}</td>         <!-- Exibe o modelo do veículo -->
+                <td>${veic.cor}</td>            <!-- Exibe a cor do veículo -->
+                <td>${veic.proprietario}</td>   <!-- Exibe o nome do proprietário do veículo -->
+                <td>
+                    <button class="btnEditar" data-id="${veic._id}">Editar</button>  <!-- Botão para editar o veículo -->
+                    <button class="btnExcluir" data-id="${veic._id}">Excluir</button> <!-- Botão para excluir o veículo -->
+                </td>
+            `;
+            
+            // Adiciona a linha da tabela criada ao corpo da tabela
+            // O tbody selecionado antes vai conter todas as 
+            //    linhas de veículos, sendo populado aqui.
+            tbody.appendChild(tr);
+
+        });
+
+
+        // Seleciona todos os botões com a classe 'btnEditar' na página
+        // 'querySelectorAll' retorna uma lista de todos os 
+        //    elementos que correspondem ao seletor fornecido.
+        document.querySelectorAll('.btnEditar').forEach((btn) => {
+
+            // Para cada botão encontrado, adiciona um evento de 'click'.
+            btn.addEventListener('click', (e) => {
+
+                // Quando o botão for clicado, o evento 'click' é disparado.
+                
+                // 'e.target' se refere ao elemento que foi clicado, que 
+                //    neste caso é o próprio botão.
+                // 'getAttribute' pega o valor do atributo 'data-id' do 
+                //    botão, que contém o ID do veículo.
+                const id = e.target.getAttribute('data-id');
+                
+                // Após pegar o ID, a página é redirecionada para a 
+                //    página 'editarVeiculo.html', passando o ID como 
+                //    parâmetro na URL para que a página de edição saiba qual veículo editar.
+                window.location.href = `editarVeiculo.html?id=${id}`;
+
+            });
+        });
+
+
+        // Seleciona todos os botões com a classe 'btnExcluir' na página
+        // 'querySelectorAll' retorna uma lista de todos os elementos 
+        //    que correspondem ao seletor fornecido.
+        document.querySelectorAll('.btnExcluir').forEach((btn) => {
+
+            // Para cada botão encontrado, adiciona um evento de 'click'.
+            btn.addEventListener('click', excluirVeiculo);
+
+            // 'excluirVeiculo' é a função que será chamada quando o 
+            //    botão for clicado.
+            // A função 'excluirVeiculo' irá realizar a 
+            //    exclusão do veículo ao ser acionada.
+
+        });
+
+      // Captura erros que podem ocorrer no bloco de código acima
+      // Caso um erro ocorra enquanto tenta listar os 
+      //    veículos (dentro da função 'listarVeiculos'), 
+      //    ele será capturado pelo 'catch' e será exibido 
+      //    no console para análise.
+      } catch (erro) {
+
+          // 'erro' é o objeto que contém informações sobre o 
+          //    erro ocorrido durante a execução da função.
+          // O erro é exibido no console, ajudando a 
+          //    diagnosticar o problema.
+          console.error('Erro ao listar veículos:', erro);
+
+      }
+
+    }
+
+    // A função 'excluirVeiculo' é chamada quando o usuário 
+    //    clica no botão de exclusão de um veículo.
+    async function excluirVeiculo(e) {
+
+        // 'e.target' é o botão que foi clicado. O 'getAttribute' 
+        //    busca o valor do atributo 'data-id' 
+        //    que contém o identificador único do veículo a ser excluído.
+        const id = e.target.getAttribute('data-id');
+        
+        // Exibe um alerta de confirmação para o usuário. 
+        // Se o usuário confirmar a exclusão, o código prossegue, caso 
+        //    contrário, a função é interrompida e o veículo não é excluído.
+        if (!confirm('Confirma a exclusão deste veículo?')) return;
+
+      // Inicia o bloco de código que tentará executar a 
+      //    exclusão do veículo no backend.
+      try {
+
+          // Realiza uma requisição HTTP do tipo DELETE para a API do servidor,
+          // passando o 'id' do veículo na URL. O método 'DELETE' é 
+          //    usado para excluir o recurso no servidor.
+          const resp = await fetch(`http://127.0.0.1:3000/api/veiculos/${id}`, { method: 'DELETE' });
+
+          // O servidor retorna uma resposta, e o método 'json()' 
+          //    converte a resposta para um formato JSON.
+          const dados = await resp.json();
+
+          // Verifica se a resposta foi bem-sucedida (status HTTP 200-299).
+          // Se a resposta for ok, significa que o veículo 
+          //    foi excluído com sucesso.
+          if (resp.ok) {
+
+              // Exibe uma mensagem de sucesso com o conteúdo de 'dados.mensagem'.
+              alert(dados.mensagem);
+              
+              // Atualiza a lista de veículos exibidos, chamando a 
+              //    função que lista os veículos novamente.
+              listarVeiculos();
+
+          } else {
+
+              // Caso a resposta não seja ok, exibe a mensagem de 
+              //    erro que foi retornada pelo servidor.
+              alert(dados.mensagem);
+
+          }
+
+      } catch (erro) {
+
+          // Caso ocorra algum erro na execução da requisição, ele 
+          //    será capturado e exibido no console.
+          console.error('Erro ao excluir veículo:', erro);
+
+      }
+
+    }
+  </script>
+
+  <style>
+
+    /* CSS mínimo para testes se o estilos.css não existir */
+
+    /* Define que a seção estará visível */
+    /* 'display: block' garante que a seção será exibida na tela */
+    .secao-ativa { 
+
+      /* Exibe a seção na tela */
+        display: block; 
+
+    }
+
+    /* Define que a seção estará oculta */
+    /* 'display: none' faz com que a seção não ocupe espaço 
+          nem seja visível na tela */
+    .secao-inativa { 
+
+      /* Oculta a seção */
+        display: none; 
+
+    }
+    
+  </style>
+
+<!-- Fim da seção "body", que contém todo o 
+      conteúdo visível da página -->
+</body> 
+
+<!-- Fim do documento HTML, encerrando a 
+      estrutura do código -->
+</html>

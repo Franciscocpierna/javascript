@@ -1,0 +1,801 @@
+<!-- Declara que este é um documento HTML5. Isso informa ao 
+        navegador que a página está usando a versão mais recente de HTML. -->
+<!DOCTYPE html>
+
+<!-- A tag <html> é o elemento raiz de um documento HTML. 
+  O atributo lang="pt-BR" especifica que o idioma da 
+        página é o português brasileiro. -->
+<html lang="pt-BR">
+
+<!-- A tag <head> contém metadados sobre a página, como o 
+        título, o charset, links para folhas de estilo, etc. -->
+<head>
+  
+  <!-- A tag <meta> com charset="UTF-8" especifica que a codificação 
+        de caracteres utilizada será UTF-8, o que permite representar 
+        caracteres especiais, como acentos e outros símbolos 
+        usados na língua portuguesa. -->
+  <meta charset="UTF-8">
+  
+  <!-- Esta meta tag define as configurações de visualização para 
+        dispositivos móveis. "width=device-width" garante que a 
+        largura da página será ajustada para a largura da tela do 
+        dispositivo, e "initial-scale=1" define o nível inicial 
+        de zoom para a página. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- A tag <title> define o título da página. 
+    Este título é exibido na aba do navegador. -->
+  <title>Relatório de Reservas</title>
+  
+  <!-- A tag <style> permite incluir estilos CSS diretamente no HTML. 
+    Se um arquivo de CSS externo não for fornecido, esse 
+          código será aplicado diretamente. -->
+  <style>
+
+    /* A tag <body> define o estilo para o corpo da página. */
+    body {
+
+      /* A propriedade 'font-family' define a fonte que será usada 
+            para o texto na página. Aqui, estamos usando a fonte Arial e, 
+            se não estiver disponível, a fonte sans-serif será utilizada. */
+      font-family: Arial, sans-serif;
+      
+      /* A propriedade 'margin' define uma margem de 20px em 
+            torno de todo o conteúdo do corpo da página, criando um 
+            espaço entre o conteúdo e as bordas da janela. */
+      margin: 20px;
+      
+      /* A cor de fundo da página é definida como #f4f4f4, que é 
+            um tom claro de cinza, dando uma aparência suave e neutra. */
+      background-color: #f4f4f4;
+      
+      /* A cor do texto é definida como #333, um tom escuro de cinza, 
+            que é suave para os olhos, mas ainda assim legível. */
+      color: #333;
+      
+      /* A propriedade 'display' com valor 'flex' transforma o 
+            <body> em um contêiner flexível, permitindo alinhar e 
+            distribuir os itens facilmente dentro dele. */
+      display: flex;
+      
+      /* 'flex-direction: column' organiza os itens dentro do 
+            contêiner na direção vertical, empilhando-os. */
+      flex-direction: column;
+      
+      /* 'align-items: center' alinha os itens ao centro da 
+            linha horizontal, fazendo com que o conteúdo da 
+            página fique centralizado. */
+      align-items: center;
+
+    }
+
+    /* A tag <h1> define o estilo para o título principal da página. */
+    h1 {
+
+      /* 'text-align: center' garante que o título seja centralizado 
+            dentro da área do seu elemento pai. */
+      text-align: center;
+      
+      /* A cor do título é definida como #444, um tom um pouco 
+            mais claro que a cor do texto geral, para diferenciar o 
+            título do restante do conteúdo. */
+      color: #444;
+
+    }
+
+    /* O seletor '#form-filtros' aplica estilos ao formulário de 
+            filtros, usando o ID 'form-filtros' como referência. */
+    #form-filtros {
+
+      /* 'display: flex' transforma o contêiner em um flexbox, 
+            permitindo a organização dos itens de forma 
+            flexível e alinhada. */
+      display: flex;
+      
+      /* 'justify-content: center' centraliza os itens ao 
+            longo do eixo principal (horizontal). Isso faz com 
+            que os itens do formulário fiquem alinhados no centro. */
+      justify-content: center;
+      
+      /* 'gap: 10px' adiciona um espaço de 10px entre os 
+            elementos dentro do formulário. */
+      gap: 10px;
+      
+      /* 'flex-wrap: wrap' permite que os itens dentro do formulário 
+            se movam para uma nova linha, caso o espaço 
+            disponível seja insuficiente. */
+      flex-wrap: wrap;
+      
+      /* 'margin-bottom: 15px' adiciona uma margem inferior de 15px, 
+            criando um espaçamento entre o formulário e o 
+            conteúdo abaixo dele. */
+      margin-bottom: 15px;
+      
+      /* 'background: #fff' define o fundo do formulário como 
+            branco, criando um contraste agradável com o 
+            restante da página. */
+      background: #fff;
+      
+      /* 'padding: 15px' adiciona um preenchimento interno 
+            de 15px ao redor de todos os elementos dentro do formulário. */
+      padding: 15px;
+      
+      /* 'border-radius: 8px' arredonda os cantos do formulário, 
+            tornando a aparência mais suave e moderna. */
+      border-radius: 8px;
+      
+      /* 'box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)' cria uma leve 
+            sombra ao redor do formulário, proporcionando uma 
+            sensação de profundidade e destacando o elemento na página. */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+    /* O seletor '#form-filtros label' aplica estilos às 
+          etiquetas (labels) dentro do formulário de filtros. */
+    #form-filtros label {
+
+      /* 'font-weight: bold' deixa o texto das etiquetas em negrito, 
+            destacando-as em relação aos campos de entrada. */
+      font-weight: bold;
+
+    }
+
+    /* O seletor 'input' aplica estilos a todos os campos de 
+          entrada de dados (como caixas de texto, 
+          seletores de data, etc.). */
+    input {
+
+      /* 'padding: 8px' adiciona um preenchimento interno de 8px nas 
+            laterais e nas partes superior e inferior do 
+            campo de entrada. 
+        Isso melhora a legibilidade e facilita a interação 
+            com o campo. */
+      padding: 8px;
+      
+      /* 'border: 1px solid #ccc' define a borda do campo de entrada. 
+      O valor '1px' indica a espessura da borda (1 pixel), 'solid' 
+            define que a borda será contínua e '#ccc' é a cor 
+            da borda, um tom de cinza claro. */
+      border: 1px solid #ccc;
+      
+      /* 'border-radius: 5px' arredonda os cantos do campo de 
+            entrada, criando uma borda mais suave e estética. */
+      border-radius: 5px;
+      
+      /* 'font-size: 14px' define o tamanho da fonte dentro do 
+            campo de entrada, facilitando a leitura e 
+            tornando o texto mais visível. */
+      font-size: 14px;
+
+    }
+
+    /* O seletor 'button' aplica estilos a todos os botões na página. */
+    button {
+
+      /* 'background-color: #007BFF' define a cor de 
+            fundo do botão. 
+      O valor '#007BFF' é um tom de azul. */
+      background-color: #007BFF;
+      
+      /* 'color: white' define a cor do texto dentro do botão 
+            como branca, criando um bom contraste com o fundo azul. */
+      color: white;
+      
+      /* 'padding: 8px 12px' define o preenchimento dentro do botão. 
+      O valor '8px' se aplica às partes superior e inferior do 
+            botão, enquanto '12px' se aplica às laterais, 
+            criando um botão mais espaçoso. */
+      padding: 8px 12px;
+      
+      /* 'border: none' remove a borda padrão do botão, 
+            criando um visual mais limpo e moderno. */
+      border: none;
+      
+      /* 'border-radius: 5px' arredonda os cantos do botão, 
+            deixando-o com um visual mais suave e agradável. */
+      border-radius: 5px;
+      
+      /* 'cursor: pointer' altera o cursor do mouse para uma 
+            mãozinha (indicado que o item é clicável) quando o 
+            usuário passa o mouse sobre o botão. */
+      cursor: pointer;
+      
+      /* 'transition: 0.3s' aplica uma transição suave de 0.3 segundos 
+            em mudanças de propriedades (por exemplo, mudança de cor) 
+            quando o botão for interagido (como passar o mouse sobre ele). */
+      transition: 0.3s;
+
+    }
+
+
+    /* O seletor 'button:hover' aplica estilos aos botões 
+          quando o cursor do mouse passa sobre eles. */
+    button:hover {
+
+      /* 'background-color: #0056b3' altera a cor de fundo do botão 
+              quando o cursor passa sobre ele.
+        '#0056b3' é um tom mais escuro de azul, criando um efeito 
+              visual de destaque quando o botão é interagido. */
+      background-color: #0056b3;
+
+    }
+
+    /* O seletor 'table' aplica estilos a todas as 
+          tabelas da página. */
+    table {
+
+      /* 'width: 100%' faz a tabela ocupar toda a largura disponível 
+            dentro de seu contêiner pai. Isso garante que ela se 
+            estenda até as bordas do espaço disponível. */
+      width: 100%;
+      
+      /* 'border-collapse: collapse' remove os espaços entre as bordas 
+            das células da tabela, fazendo com que elas fiquem juntas, 
+            dando uma aparência mais compacta e limpa. */
+      border-collapse: collapse;
+      
+      /* 'background: white' define o fundo da tabela como branco, o 
+            que ajuda a melhorar o contraste e a legibilidade 
+            dos dados na tabela. */
+      background: white;
+      
+      /* 'border-radius: 8px' arredonda os cantos da tabela, 
+            suavizando as bordas e criando um visual mais 
+            moderno e amigável. */
+      border-radius: 8px;
+      
+      /* 'overflow: hidden' garante que qualquer conteúdo que ultrapasse a 
+            borda da tabela seja ocultado, evitando que a tabela "vaze" ou 
+            que apareçam barras de rolagem inesperadas. */
+      overflow: hidden;
+      
+      /* 'box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)' aplica uma 
+            sombra suave à tabela, com um deslocamento de 2px na 
+            direção vertical e 4px de difusão, criando um leve 
+            efeito de profundidade.
+        'rgba(0, 0, 0, 0.1)' define a cor da sombra como preta, 
+            com uma transparência de 10%, dando um efeito mais suave. */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+    /* O seletor 'th, td' aplica estilos tanto às células de 
+          cabeçalho (th) quanto às células de dados (td) da tabela. */
+    th, td {
+
+      /* 'padding: 10px' adiciona um preenchimento de 10px dentro das 
+            células, criando um espaçamento entre o conteúdo da 
+            célula e a borda, o que melhora a legibilidade. */
+      padding: 10px;
+      
+      /* 'border: 1px solid #ddd' define uma borda fina de 1px 
+            com a cor '#ddd' (um cinza claro) ao redor de cada célula, 
+            criando uma separação visual entre as células da tabela. */
+      border: 1px solid #ddd;
+      
+      /* 'text-align: left' alinha o conteúdo de cada célula à 
+            esquerda, o que é comum para textos e números em 
+            tabelas, proporcionando um layout organizado. */
+      text-align: left;
+      
+    }
+
+    /* O seletor 'th' aplica estilos especificamente às células de 
+          cabeçalho da tabela (aquelas com a tag <th>). */
+    th {
+
+      /* 'background-color: #007BFF' define a cor de fundo do 
+            cabeçalho como um tom de azul (#007BFF), destacando a 
+            linha do cabeçalho em relação às outras células. */
+      background-color: #007BFF;
+      
+      /* 'color: white' altera a cor do texto dentro das células de 
+            cabeçalho para branco, o que oferece um bom contraste 
+            com o fundo azul, melhorando a legibilidade. */
+      color: white;
+
+    }
+
+
+    /* O seletor 'tr:nth-child(even)' seleciona todas as 
+          linhas da tabela (tr) em posições pares. */
+    tr:nth-child(even) {
+
+      /* 'background-color: #f9f9f9' define um fundo cinza 
+            claro (#f9f9f9) para as linhas de número par, proporcionando 
+            um efeito de listras alternadas na tabela. */
+      background-color: #f9f9f9; 
+
+    }
+
+    /* O seletor 'tr:hover' aplica um estilo quando o usuário passa o 
+          mouse sobre uma linha da tabela (tr). */
+    tr:hover {
+
+      /* 'background-color: #f1f1f1' altera a cor de fundo para um 
+            tom de cinza muito claro (#f1f1f1) quando o usuário passa o 
+            mouse sobre a linha, destacando visualmente a linha selecionada. */
+      background-color: #f1f1f1;
+
+    }
+
+    /* A classe '.total' é usada para estilizar um elemento que 
+          exibe o total ou resumo em um bloco específico, 
+          como o valor total. */
+    .total {
+
+      /* 'margin-top: 15px' adiciona um espaçamento de 15px acima do 
+            elemento, separando-o visualmente de outros elementos. */
+      margin-top: 15px;
+      
+      /* 'font-size: 18px' aumenta o tamanho da fonte para 18px, 
+            tornando o texto mais visível e destacando-o. */
+      font-size: 18px;
+      
+      /* 'font-weight: bold' aplica negrito ao texto, enfatizando 
+            ainda mais o valor total. */
+      font-weight: bold;
+      
+      /* 'text-align: center' centraliza o texto dentro do bloco, 
+            criando um layout mais organizado e visualmente equilibrado. */
+      text-align: center;
+      
+      /* 'background: white' define o fundo do elemento como branco, 
+            destacando-o de outros elementos que possam ter 
+            um fundo diferente. */
+      background: white;
+      
+      /* 'padding: 10px' adiciona preenchimento de 10px ao redor do 
+            conteúdo, proporcionando espaço entre o texto e a 
+            borda do bloco. */
+      padding: 10px;
+      
+      /* 'border-radius: 8px' aplica bordas arredondadas de 8px,  
+            dando um visual mais suave e moderno ao elemento. */
+      border-radius: 8px;
+      
+      /* 'box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)' adiciona uma 
+            leve sombra ao redor do elemento, criando um efeito de 
+            profundidade e destacando-o mais. */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+    /* A classe '.btn-voltar' é usada para estilizar o botão de 
+          voltar, adicionando um espaçamento e uma cor de fundo inicial. */
+    .btn-voltar {
+
+      /* 'margin-top: 15px' adiciona um espaçamento de 15px acima do 
+            botão, separando-o de outros elementos acima dele. */
+      margin-top: 15px;
+      
+      /* 'background-color: #6c757d' define a cor de fundo do 
+            botão como um tom cinza escuro (#6c757d). */
+      background-color: #6c757d;
+
+    }
+
+    /* A classe '.btn-voltar:hover' define o estilo do botão quando o 
+          usuário passa o mouse sobre ele (efeito de hover). */
+    .btn-voltar:hover {
+
+      /* 'background-color: #5a6268' altera a cor de fundo para um tom 
+            de cinza mais escuro (#5a6268) quando o botão é "hovered", 
+            proporcionando um feedback visual. */
+      background-color: #5a6268;
+
+    }
+
+
+    /* Responsividade */
+    /* A regra abaixo aplica estilos quando a largura da 
+          tela for de 600px ou menor. */
+    @media (max-width: 600px) {
+      
+      /* Modifica o estilo do formulário de filtros. */
+      #form-filtros {
+        
+        /* 'flex-direction: column' muda o layout dos itens dentro do 
+              formulário para serem exibidos em uma coluna, ou seja, 
+              um abaixo do outro. */
+        flex-direction: column;
+        
+        /* 'align-items: center' alinha os itens ao centro na 
+              direção do eixo transversal (horizontal) dentro do 
+              container do formulário. */
+        align-items: center;
+
+      }
+
+      /* Reduz o tamanho da fonte dentro da tabela para torná-la 
+            mais legível em telas menores. */
+      table {
+
+        /* 'font-size: 12px' define o tamanho da fonte das células da 
+              tabela para 12px, o que ajuda a caber 
+              mais texto em telas pequenas. */
+        font-size: 12px;
+
+      }
+
+      /* Modifica o padding das células da tabela para dar um 
+            pouco mais de espaçamento em telas menores. */
+      th, td {
+
+        /* 'padding: 8px' aplica um padding de 8px dentro das células de 
+              tabela (th e td), aumentando o espaçamento interno para 
+              melhorar a legibilidade em telas menores. */
+        padding: 8px;
+
+      }
+    }
+
+  </style>
+</head>
+
+<!-- Início do corpo da página -->
+<body>
+  
+  <!-- Título da página, que exibe o nome da 
+        seção ou o propósito da página. -->
+  <h1>Relatório de Reservas</h1>
+
+  <!-- Formulário de filtros para a pesquisa de reservas -->
+  <form id="form-filtros">
+    
+    <!-- Label e campo de entrada para a data inicial do filtro -->
+    <label>Data Inicial: 
+
+      <!-- Campo de entrada para selecionar uma data inicial -->
+       <!-- O tipo 'date' permite que o usuário escolha uma data. -->
+      <input type="date" id="dataInicio"> 
+
+    </label>
+    
+    <!-- Label e campo de entrada para a data final do filtro -->
+    <label>Data Final: 
+
+      <!-- Campo de entrada para selecionar uma data final -->
+       <!-- O tipo 'date' permite que o usuário escolha uma data. -->
+      <input type="date" id="dataFim"> 
+
+    </label>
+    
+    <!-- Label e campo de entrada para a placa do veículo -->
+    <label>Placa: 
+
+      <!-- Campo de entrada para a placa do veículo -->
+       <!-- O campo 'text' é para entrada manual de texto. -->
+      <input type="text" id="placa" placeholder="Ex: ABC-1234"> 
+
+    </label>
+    
+    <!-- Label e campo de entrada para o nome do proprietário -->
+    <label>Proprietário: 
+
+      <!-- Campo de entrada para o nome do proprietário -->
+       <!-- O campo 'text' é para entrada manual de texto. -->
+      <input type="text" id="proprietario" placeholder="Ex: João"> 
+
+    </label>
+    
+    <!-- Botão para submeter o formulário e aplicar o filtro -->
+     <!-- O tipo 'submit' envia o formulário para ser processado. -->
+    <button type="submit">Filtrar</button> 
+
+  </form>
+
+  <!-- Início da tabela que exibe o relatório de reservas -->
+  <table id="tabela-relatorio">
+    
+    <!-- Cabeçalho da tabela, onde as colunas são definidas -->
+    <thead>
+
+        <tr>
+
+          <!-- Coluna para Data/Hora de Início -->
+          <th>Data/Hora Início</th>
+          
+          <!-- Coluna para Data/Hora de Fim -->
+          <th>Data/Hora Fim</th>
+          
+          <!-- Coluna para a Vaga de Estacionamento -->
+          <th>Vaga</th>
+          
+          <!-- Coluna para a Placa do veículo -->
+          <th>Placa</th>
+          
+          <!-- Coluna para o Proprietário do veículo -->
+          <th>Proprietário</th>
+          
+          <!-- Coluna para o Valor Pago pela reserva -->
+          <th>Valor Pago</th>
+          
+          <!-- Coluna para o Status da reserva -->
+          <th>Status</th>
+          
+        </tr>
+    </thead>
+    
+    <!-- Corpo da tabela onde as linhas de dados 
+          serão inseridas dinamicamente -->
+    <tbody></tbody>
+
+  </table>
+
+
+  <!-- Container que exibe o valor total calculado. 
+   A classe 'total' é utilizada para a estilização visual dessa área -->
+  <div class="total">
+
+    <!-- Texto estático "Total: R$" que será exibido antes do valor calculado -->
+    Total: R$ 
+
+    <!-- <span> é um elemento inline usado para exibir o valor 
+          dinâmico do total. O id 'valorTotal' é utilizado para 
+          acessar e manipular esse valor via JavaScript -->
+    <span id="valorTotal">0.00</span>
+
+  </div>
+
+  <!-- Botão de ação para voltar à página principal -->
+  <!-- Quando o botão é clicado, ele chama a função 'voltarParaPrincipal' 
+        que realiza um redirecionamento para a 
+        página principal -->
+  <button class="btn-voltar" onclick="voltarParaPrincipal()">Voltar à Principal</button>
+
+
+  <script>
+
+    // A função 'carregarRelatorio' é uma função assíncrona (async), ou 
+    //    seja, ela pode lidar com operações que demoram para ser 
+    //    concluídas, como chamadas de rede.
+    // Ela recebe quatro parâmetros, todos com valores padrão 
+    //    vazios ('') caso não sejam fornecidos ao chamar a função. 
+    // Esses parâmetros são: dataInicio, dataFim, placa e 
+    //    proprietario, que serão usados para filtrar os dados do relatório.
+    async function carregarRelatorio(dataInicio = '', dataFim = '', placa = '', proprietario = '') {
+      
+      try{
+
+        // Dentro da função, a primeira linha cria um objeto 'params' 
+        //    utilizando a classe 'URLSearchParams'.
+        // O 'URLSearchParams' é utilizado para construir uma 
+        //    string de consulta (query string) que pode ser usada em uma URL.
+        // Ele ajuda a construir e manipular os parâmetros da 
+        //    URL de forma mais simples.
+        const params = new URLSearchParams();
+        
+
+        // Verifica se a variável 'dataInicio' foi fornecida. 
+        // Se ela for verdadeira (ou seja, não vazia), 
+        //    o parâmetro 'dataInicio' será adicionado à URL de 
+        //    consulta com o valor de 'dataInicio'.
+        if (dataInicio) params.append('dataInicio', dataInicio);
+
+        // Verifica se a variável 'dataFim' foi fornecida. 
+        // Se ela for verdadeira, o parâmetro 'dataFim' será 
+        //    adicionado à URL de consulta com o valor de 'dataFim'.
+        if (dataFim) params.append('dataFim', dataFim);
+
+        // Verifica se a variável 'placa' foi fornecida. 
+        // Se ela for verdadeira, o parâmetro 'placa' será 
+        //    adicionado à URL de consulta com o valor de 'placa'.
+        if (placa) params.append('placa', placa);
+
+        // Verifica se a variável 'proprietario' foi fornecida. 
+        // Se ela for verdadeira, o parâmetro 'proprietario' 
+        //    será adicionado à URL de consulta com o valor de 'proprietario'.
+        if (proprietario) params.append('proprietario', proprietario);
+
+        // Constrói a URL final para a requisição, incluindo 
+        //    todos os parâmetros adicionados acima. 
+        // A função 'toString()' converte os parâmetros para uma 
+        //    string de consulta, que será concatenada à URL base.
+        const url = `http://127.0.0.1:3000/api/reservas/relatorio?${params.toString()}`;
+
+        // Exibe a URL gerada no console para depuração, 
+        //    garantindo que todos os parâmetros estejam 
+        //    corretos antes de realizar a requisição.
+        console.log('Carregando:', url);
+
+
+        // Envia a requisição GET para a URL gerada 
+        //    com os parâmetros de filtro.
+        // A função 'fetch' retorna uma Promise, e 'await' 
+        //    aguarda a resolução dessa Promise.
+        const resp = await fetch(url);
+
+        // Verifica se a resposta da requisição foi 
+        //    bem-sucedida (status HTTP 200-299).
+        // Se a resposta não for bem-sucedida, lança um 
+        //    erro com uma mensagem personalizada contendo o 
+        //    status HTTP retornado.
+        if (!resp.ok) {
+          throw new Error(`Erro ao buscar relatório. HTTP Status: ${resp.status}`);
+        }
+
+        // Se a resposta for bem-sucedida, converte o corpo da 
+        //    resposta (em formato JSON) em um objeto JavaScript.
+        // O 'await' faz a espera da conversão para garantir 
+        //    que o código só prossiga depois de ter os dados necessários.
+        const reservas = await resp.json();
+
+        // Exibe os dados das reservas recebidas no console para depuração.
+        // Isso permite que o desenvolvedor visualize os 
+        //    dados retornados pela API antes de processá-los.
+        console.log('Reservas recebidas:', reservas);
+
+        // Seleciona o corpo da tabela onde os dados do 
+        //    relatório serão inseridos.
+        // 'querySelector' é usado para pegar o primeiro 
+        //    elemento que corresponde ao seletor CSS fornecido.
+        const tabela = document.querySelector('#tabela-relatorio tbody');
+
+        // Limpa o conteúdo atual da tabela para garantir 
+        //    que não existam dados antigos antes de inserir novos.
+        tabela.innerHTML = '';
+
+        // Inicializa a variável 'soma' com valor 0. 
+        // Essa variável será usada para somar os valores totais.
+        let soma = 0;
+
+        // Itera sobre cada item da lista 'reservas' recebida da API.
+        // 'forEach' é um método de array que executa a 
+        //    função fornecida para cada item da lista.
+        reservas.forEach((res) => {
+          
+          // Cria uma nova linha (tr) para a tabela de resultados.
+          // Cada linha representará uma reserva.
+          const tr = document.createElement('tr');
+          
+          // Verifica se a propriedade 'dataHoraInicio' 
+          //    existe na reserva (res).
+          // Se existir, converte a data para o formato 'pt-BR' (formato brasileiro). 
+          // Caso contrário, coloca 'Sem registro' como valor.
+          // 'toLocaleString('pt-BR')' formata a data para o padrão brasileiro.
+          const dtIni = res.dataHoraInicio ? new Date(res.dataHoraInicio).toLocaleString('pt-BR') : 'Sem registro';
+          
+          // Verifica se a propriedade 'dataHoraFim' existe na reserva (res).
+          // Se existir, converte a data para o formato 'pt-BR'. 
+          // Caso contrário, coloca 'Em aberto' como valor.
+          const dtFim = res.dataHoraFim ? new Date(res.dataHoraFim).toLocaleString('pt-BR') : 'Em aberto';
+          
+          // Soma o valor pago pela reserva à variável 'soma'.
+          // Se 'res.valorPago' for undefined ou null, utiliza 0 como valor.
+          soma += (res.valorPago || 0);
+
+          // Definindo o conteúdo HTML da linha (tr) criada para a tabela.
+          // Cada <td> representa uma célula da tabela, onde 
+          //    serão exibidos os dados de cada reserva.
+          tr.innerHTML = `
+          <td>${dtIni}</td> 
+          <td>${dtFim}</td> 
+          <td>${res.vaga || '-'}</td> 
+          <td>${res.placaVeiculo || '-'}</td> 
+          <td>${res.proprietarioVeiculo || '-'}</td> 
+          <td>R$ ${(res.valorPago || 0).toFixed(2)}</td> 
+          <td>${res.status || '-'}</td> 
+          `;
+
+          // Adiciona a linha (tr) criada na tabela, 
+          //    dentro do corpo (tbody).
+          tabela.appendChild(tr);
+
+        });
+
+        // Atualiza o valor total exibido no elemento com o ID 'valorTotal'.
+        // 'soma.toFixed(2)' formata a soma acumulada de 
+        //    todos os valores pagos para 2 casas decimais, 
+        //    garantindo que o valor mostrado seja sempre no 
+        //    formato monetário correto (R$ XX.XX).
+        document.getElementById('valorTotal').textContent = soma.toFixed(2); 
+
+      // Caso ocorra algum erro durante a execução do código 
+      //    dentro do try, ele será capturado aqui no bloco catch.
+      // O erro será registrado no console para diagnóstico ('console.error') e 
+      //    também será mostrado ao usuário através de um alert, 
+      //    exibindo a mensagem de erro que descreve o que aconteceu.
+      // O erro é capturado na variável 'erro', e 'erro.message' 
+      //    acessa a mensagem do erro para ser exibida na interface.
+      } catch (erro) {
+
+        // Registra o erro no console para debug.
+        console.error('Erro ao carregar relatório:', erro); 
+
+        // Mostra um alerta para o usuário com a descrição do erro.
+        alert('Erro ao carregar relatório:\n' + erro.message); 
+
+      }
+
+    }
+
+    // Adiciona um ouvinte de evento para o formulário de 
+    //    filtros (identificado por 'form-filtros').
+    // O evento 'submit' é acionado quando o usuário envia o formulário. 
+    document.getElementById('form-filtros').addEventListener('submit', (event) => {
+      
+      // Previne o comportamento padrão do formulário, 
+      //    que seria recarregar a página ao enviar.
+      event.preventDefault(); 
+      
+      // Coleta os valores dos campos do formulário (dataInicio, 
+      //    dataFim, placa e proprietario).
+      const dataInicio = document.getElementById('dataInicio').value; // Pega o valor da data inicial.
+      const dataFim = document.getElementById('dataFim').value; // Pega o valor da data final.
+      const placa = document.getElementById('placa').value; // Pega o valor da placa do veículo.
+      const proprietario = document.getElementById('proprietario').value; // Pega o valor do nome do proprietário.
+
+      // Chama a função 'carregarRelatorio' passando os dados 
+      //    coletados como parâmetros para filtrar o relatório.
+      carregarRelatorio(dataInicio, dataFim, placa, proprietario); 
+
+    });
+
+
+    // Função que redireciona o usuário para a página 
+    //    principal (principal.html).
+    // Quando chamada, ela altera a URL da página atual 
+    //    para 'principal.html', fazendo com que o navegador 
+    //    carregue essa página.
+    function voltarParaPrincipal() {
+
+      // Altera a localização da janela para a página principal.
+      window.location.href = 'principal.html'; 
+
+    }
+
+
+    // 'DOMContentLoaded' é um evento que é disparado quando o 
+    //    HTML foi completamente carregado e processado,
+    //    mas antes de imagens, folhas de estilo e outros 
+    //    recursos serem carregados. 
+    // Isso garante que a manipulação do DOM será feita assim 
+    //    que os elementos da página estiverem prontos.
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // Cria uma nova data representando o momento atual
+      const hoje = new Date();
+      
+      // Cria uma nova data representando 7 dias atrás a 
+      //    partir da data atual
+      const seteDiasAtras = new Date();
+      seteDiasAtras.setDate(hoje.getDate() - 7); // Subtrai 7 dias da data atual
+
+      // Converte a data de sete dias atrás para o 
+      //    formato 'yyyy-MM-dd' (padrão de data para o input)
+      // 'toISOString()' gera a data no formato ISO 8601 (ex: 2023-05-01T12:00:00Z)
+      const dataInicio = seteDiasAtras.toISOString().split('T')[0]; 
+
+      // Converte a data atual para o formato 'yyyy-MM-dd'
+      // Também usa 'toISOString' para gerar o formato desejado
+      const dataFim = hoje.toISOString().split('T')[0]; 
+
+      // Define o valor do campo de data de início ('dataInicio') 
+      //    no formulário para 7 dias atrás
+      document.getElementById('dataInicio').value = dataInicio;
+      
+      // Define o valor do campo de data de fim ('dataFim') 
+      //    no formulário para a data atual
+      document.getElementById('dataFim').value = dataFim;
+
+      // Chama a função 'carregarRelatorio' com as datas 
+      //    inicial e final para carregar o relatório com 
+      //    esse intervalo de datas
+      carregarRelatorio(dataInicio, dataFim);
+
+    });
+
+  // Fim da seção de script onde o código JavaScript é executado
+  </script> 
+
+<!-- Fim da seção "body", que contém todo o 
+      conteúdo visível da página -->
+</body> 
+
+<!-- Fim do documento HTML, encerrando a 
+      estrutura do código -->
+</html>

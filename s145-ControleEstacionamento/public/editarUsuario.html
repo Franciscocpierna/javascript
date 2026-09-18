@@ -1,0 +1,809 @@
+<!-- Declara o tipo de documento como HTML5, o que 
+      significa que este é um documento HTML válido. -->
+<!DOCTYPE html>
+
+<!-- Inicia o elemento HTML e define o idioma da 
+      página como português do Brasil. -->
+<html lang="pt-BR">
+
+<head>
+
+  <!-- Define o conjunto de caracteres como UTF-8, o que 
+        garante suporte a todos os caracteres especiais e 
+        acentos usados em português. -->
+  <meta charset="UTF-8">
+
+  <!-- Define as configurações de viewport, ou seja, ajusta a página
+        para diferentes tamanhos de tela. Isso é especialmente 
+        importante para dispositivos móveis. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Define o título da página, que aparece na aba do navegador 
+        quando o usuário visita a página. -->
+  <title>Editar Usuário</title>
+
+  <!-- Inicia a seção de estilos CSS para a página, onde podemos    
+        definir a aparência visual dos elementos. -->
+  <style>
+
+        body {
+
+            /* Define a fonte que será usada para o texto da página. 
+            A fonte primária é a Arial, e a fonte secundária é qualquer 
+                    uma sans-serif caso a Arial não esteja disponível. */
+            font-family: Arial, sans-serif;
+
+            /* Define a cor de fundo da página. O código #f4f4f4 é um 
+                    tom de cinza claro, que ajuda a dar um fundo suave 
+                    para a página. */
+            background-color: #f4f4f4;
+
+            /* Define a cor do texto da página. O código #333 representa um 
+                    cinza escuro, garantindo bom contraste com o fundo claro 
+                    para facilitar a leitura. */
+            color: #333;
+
+            /* Remove a margem padrão que o navegador aplica à página, 
+                    fazendo com que o conteúdo ocupe toda a área da tela 
+                    sem espaçamento externo. */
+            margin: 0;
+
+            /* Remove o preenchimento (padding) padrão da página para que o 
+                    conteúdo ocupe toda a área disponível sem espaçamento 
+                    interno desnecessário. */
+            padding: 0;
+
+            /* Define que o layout da página será baseado no modelo Flexbox. 
+            Isso permite maior controle sobre o alinhamento e distribuição de 
+                    elementos na página. */
+            display: flex;
+
+            /* Alinha os itens de forma vertical no centro da página, ou 
+                    seja, ao longo do eixo principal (vertical, neste caso). */
+            align-items: center;
+
+            /* Alinha os itens de forma horizontal no centro da página, ou 
+                    seja, ao longo do eixo transversal (horizontal, neste caso). */
+            justify-content: center;
+
+            /* Organiza os itens na página de forma empilhada, ou seja, em 
+                    uma coluna. Isso permite um layout simples e limpo. */
+            flex-direction: column;
+
+            /* Garante que o corpo da página ocupe toda a altura da janela do 
+                    navegador, garantindo que o conteúdo preencha toda a tela. */
+            min-height: 100vh;
+
+        }   
+
+
+        /* A classe .container aplica estilos para a caixa onde o 
+          conteúdo principal do formulário estará. A ideia é centralizar e 
+          deixar o conteúdo bem estruturado. */
+        .container {
+
+            /* Define que a largura máxima da .container será de 400px. 
+            Isso significa que, independentemente do tamanho da tela, a 
+                    .container nunca ultrapassará 400px de largura. */
+            max-width: 400px;
+
+            /* Define que a largura da .container será 90% da largura 
+                    disponível do elemento pai (normalmente a tela ou a div pai). 
+            Isso permite que ela ocupe 90% do espaço disponível na tela, 
+                    mas não ultrapasse 400px. */
+            width: 90%;
+
+            /* Define o fundo da .container como branco. Isso ajuda a 
+                    destacar o conteúdo da caixa, deixando-o visualmente 
+                    separado do fundo da página. */
+            background: white;
+
+            /* Adiciona um preenchimento de 25px em todos os lados da .container. 
+            O padding cria um espaço interno, evitando que o conteúdo 
+                    fique colado nas bordas da caixa. */
+            padding: 25px;
+
+            /* Aplica bordas arredondadas com um raio de 8px. Isso suaviza os 
+                    cantos da caixa e dá um visual mais moderno e agradável. */
+            border-radius: 8px;
+
+            /* Aplica uma sombra sutil para a .container. A sombra é de 2px de 
+                    desfoque e 6px de deslocamento, com uma opacidade de 0.2. 
+            Isso dá um efeito de profundidade, como se a caixa estivesse 
+                    flutuando sobre o fundo da página. */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+            /* Centraliza o texto dentro da .container. Isso significa que 
+                    todos os textos, como títulos e botões, aparecerão 
+                    centralizados dentro da caixa. */
+            text-align: center;
+
+        }
+
+
+        /* Estilo para o título principal (h1) */
+        h1 {
+
+            /* Define a cor do texto do título como um tom de cinza (#444). 
+            Isso ajuda a criar um contraste suave e evita que o texto fique 
+                    muito forte, proporcionando uma leitura mais agradável. */
+            color: #444;
+
+            /* Adiciona uma margem inferior de 20px abaixo do título. 
+            Isso cria um espaço entre o título e o conteúdo abaixo dele, 
+                    garantindo que os elementos não fiquem colados, 
+                    melhorando a legibilidade. */
+            margin-bottom: 20px;
+
+        }
+
+        /* Estilo para o formulário */
+        form {
+
+            /* Define o layout do formulário como um flex container. 
+            Isso permite o controle flexível do alinhamento e da disposição 
+                dos elementos dentro do formulário. */
+            display: flex;
+
+            /* Define que os itens dentro do formulário serão dispostos 
+                verticalmente (em uma coluna), em vez de horizontalmente (padrão 
+                do flexbox). Isso organiza os campos e botões de forma 
+                limpa e fácil de seguir. */
+            flex-direction: column;
+
+            /* Adiciona um espaço de 10px entre cada item dentro do formulário. 
+            Isso garante que cada campo de entrada e botão não fiquem colados 
+                uns aos outros, melhorando a experiência do usuário. */
+            gap: 10px;
+
+            /* Adiciona uma margem inferior de 15px abaixo do formulário, 
+                criando um espaço entre o formulário e o conteúdo abaixo 
+                dele (como botões ou texto adicional). */
+            margin-bottom: 15px;
+
+            }
+
+        /* Estilo para os rótulos (label) */
+        label {
+
+            /* Define o peso da fonte como negrito. Isso garante que o texto do 
+                rótulo se destaque e seja mais fácil de ler. */
+            font-weight: bold;
+
+            /* Alinha o texto do rótulo à esquerda. Isso garante que o rótulo 
+                do campo fique alinhado corretamente com o campo de entrada. */
+            text-align: left;
+
+            /* Define o elemento <label> como um bloco. Isso faz com que o 
+                rótulo ocupe toda a largura disponível, e o próximo 
+                elemento (como o campo de entrada) será posicionado 
+                abaixo dele. */
+            display: block;
+
+            /* Adiciona uma margem inferior de 5px abaixo do rótulo. 
+            Isso cria um pequeno espaço entre o rótulo e o campo de entrada, 
+                garantindo que os elementos não fiquem colados. */
+            margin-bottom: 5px;
+
+        }
+
+        /* Estilo para os campos de entrada (input) e campos 
+            de seleção (select) */
+        input, select {
+
+            /* Define a largura dos campos como 100%, o que faz com que eles 
+                ocupem toda a largura disponível do elemento pai (normalmente 
+                um contêiner). Isso ajuda a manter uma estrutura de layout 
+                responsiva e consistente. */
+            width: 100%;
+
+            /* Define o preenchimento interno de 10px para os campos, o que 
+                garante que o texto dentro dos campos tenha uma margem 
+                interna, proporcionando um espaço adequado entre o texto e 
+                as bordas do campo. */
+            padding: 10px;
+
+            /* Define uma borda de 1px com uma cor cinza (#ccc). Isso cria 
+                uma borda sutil e não intrusiva ao redor dos campos, 
+                delimitando claramente sua área. */
+            border: 1px solid #ccc;
+
+            /* Adiciona um raio de borda de 6px, o que arredonda ligeiramente os 
+                cantos dos campos de entrada e seleção. Isso contribui para um 
+                visual mais moderno e suave. */
+            border-radius: 6px;
+
+            /* Define o tamanho da fonte dentro dos campos para 16px. 
+            Isso garante que o texto seja grande o suficiente para ser 
+                legível em diferentes dispositivos e tamanhos de tela. */
+            font-size: 16px;
+
+            /* Define o fundo dos campos como um tom de cinza claro (#f9f9f9). 
+            Isso cria um contraste suave e ajuda a destacar os campos 
+                sem torná-los muito intensos. */
+            background: #f9f9f9;
+
+        }
+
+        
+        /* Estilo para os botões em geral */
+        button {
+
+            /* Define o preenchimento interno do botão em 12px, o que cria uma 
+                área de clique confortável para o usuário. */
+            padding: 12px;
+
+            /* Define o tamanho da fonte dentro do botão como 16px, garantindo 
+                que o texto do botão seja legível. */
+            font-size: 16px;
+
+            /* Remove a borda padrão do botão (quando o botão é estilizado, ele 
+                pode ter bordas de estilo padrão do navegador). */
+            border: none;
+
+            /* Define o raio da borda como 6px, o que cria cantos arredondados no 
+                botão para um visual mais suave e moderno. */
+            border-radius: 6px;
+
+            /* Define o cursor como "pointer" (mãozinha) quando o usuário passa o 
+                mouse sobre o botão, indicando que é um elemento clicável. */
+            cursor: pointer;
+
+            /* Aplica uma transição suave de 0,3 segundos em qualquer propriedade 
+                que mudar no botão. Isso cria um efeito visual suave ao 
+                passar o mouse ou ao clicar no botão, como uma mudança de 
+                cor de fundo ou borda. */
+            transition: 0.3s;
+
+        }
+
+        /* Estilo específico para o botão de "Voltar" */
+        #btnVoltar {
+
+            /* Define o fundo do botão com uma cor cinza suave (#6c757d). 
+            Essa cor é frequentemente usada para botões secundários ou de 
+                ação menos destacada. */
+            background: #6c757d;
+
+            /* Define a cor do texto do botão como branco, garantindo 
+                contraste adequado e tornando o texto legível 
+                contra o fundo cinza. */
+            color: white;
+
+        }
+
+        /* Estilo para o botão 'Voltar' quando o usuário passa o 
+            mouse sobre ele */
+        #btnVoltar:hover {
+
+            /* Altera o fundo do botão para um tom mais escuro (#5a6268) 
+                quando o usuário passa o mouse sobre ele, criando um efeito 
+                visual que indica interatividade. */
+            background: #5a6268;
+
+        }
+
+        /* Estilo para o botão de 'submit' (botão de 
+            envio do formulário) */
+        button[type="submit"] {
+
+            /* Define o fundo do botão de submit com uma cor azul (#007bff), 
+                que é uma cor comum para botões de ação principal, 
+                como enviar ou confirmar. */
+            background: #007bff;
+
+            /* Define a cor do texto do botão como branca, garantindo um 
+                bom contraste e legibilidade contra o fundo azul. */
+            color: white;
+
+        }
+
+        /* Efeito ao passar o mouse sobre o botão de 'submit' */
+        button[type="submit"]:hover {
+
+            /* Quando o usuário passa o mouse sobre o botão de submit, o fundo 
+                do botão muda para um tom de azul mais escuro (#0056b3), 
+                indicando que o botão está sendo interagido. */
+            background: #0056b3;
+
+        }
+
+
+        /* Define a estrutura do grupo de botões, garantindo que os botões 
+            dentro dele sejam exibidos de forma horizontal, e 
+            distribuídos adequadamente. */
+        .btn-group {
+
+            /* Utiliza a propriedade 'flex' para criar um layout flexível, 
+                onde os itens dentro do 'btn-group' podem ser distribuídos e 
+                alinhados facilmente. */
+            display: flex;
+
+            /* A propriedade 'justify-content' distribui o espaço disponível 
+                    entre os itens dentro do 'btn-group', garantindo que os 
+                    botões fiquem com espaçamento adequado entre si. 
+            Aqui, 'space-between' coloca o máximo de espaço 
+                    possível entre os botões. */
+            justify-content: space-between;
+
+            /* Adiciona uma margem superior de 20px para separar o grupo de 
+                botões dos outros elementos acima dele. */
+            margin-top: 20px;
+
+        }
+
+        /* Responsividade */
+        /* Responsividade - Ajustes para telas pequenas (até 500px de 
+            largura, como em dispositivos móveis) */
+        @media (max-width: 500px) {
+
+            /* Quando a largura da tela for 500px ou menor (como em smartphones), a 
+                    largura da '.container' será ajustada para 95% da largura da tela.
+            Isso garante que a 'container' ocupe a maior parte da tela, mas 
+                    não fique muito apertada nas laterais. */
+            .container {
+
+                /* Ajusta a largura da .container para 95% da largura da tela. */
+                width: 95%;  
+                
+                /* Define um padding (espaçamento interno) de 15px para garantir 
+                        que o conteúdo não fique colado nas bordas da 'container'. */
+                padding: 15px;
+
+            }
+
+            /* Ajusta o estilo dos elementos de entrada (inputs) e de 
+                seleção (select) para telas pequenas */
+            input, select {
+
+                /* Aumenta o tamanho da fonte para 14px, tornando-a mais 
+                        legível em dispositivos pequenos. */
+                font-size: 14px;
+                
+                /* Define um padding de 8px para garantir que os campos de 
+                        entrada e seleção não fiquem muito apertados e 
+                        proporcionem uma melhor experiência ao usuário. */
+                padding: 8px; 
+
+            }
+
+            /* Estilos para os botões da página */
+            button {
+
+                /* Ajusta o tamanho da fonte do texto dentro do botão para 14px */
+                font-size: 14px; 
+
+                /* Define o espaçamento interno do botão (o espaço entre o 
+                        texto e as bordas do botão) como 10px */
+                padding: 10px; 
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<!-- A tag <body> é onde todo o conteúdo visível da página 
+        vai ser exibido no navegador -->
+<body>
+  
+  <!-- A tag <div> é usada para agrupar o conteúdo e a classe 'container' 
+          vai ser usada para definir a estrutura dessa área -->
+  <div class="container">
+    
+    <!-- A tag <h1> é utilizada para exibir o título principal da 
+            página, nesse caso, "Editar Usuário" -->
+    <h1>Editar Usuário</h1>
+
+    <!-- A tag <form> é usada para criar um formulário na página. 
+      O atributo 'id' é utilizado para referenciar o 
+            formulário no JavaScript -->
+    <form id="formEditarUsuario">
+  
+      <!-- O campo <input type="hidden"> é usado para armazenar um 
+              valor que não será mostrado ao usuário. 
+          O ID 'idUsuario' vai ser usado para armazenar o ID do 
+                usuário que está sendo editado -->
+      <input type="hidden" id="idUsuario" />
+
+      <!-- A tag <label> é usada para associar uma descrição a um 
+              campo de entrada. O atributo 'for' associa o texto da 
+              label ao input abaixo, facilitando a acessibilidade e a 
+              navegação do usuário. Neste caso, estamos informando ao 
+              usuário que ele deve preencher o "Nome" -->
+      <label for="nome">Nome:</label>
+
+      <!-- O <input> com tipo 'text' permite que o usuário insira um texto. 
+       O 'id="nome"' serve para associar o campo com a label 'Nome', 
+              e 'required' indica que este campo é obrigatório 
+              para enviar o formulário -->
+      <input type="text" id="nome" required />
+
+      <!-- A tag <label> associada ao campo de entrada para e-mail, 
+              facilitando a navegação e acessibilidade -->
+      <label for="email">E-mail:</label>
+
+      <!-- O <input> com tipo 'email' indica que o campo é específico 
+              para e-mail. O navegador pode validar automaticamente o 
+              formato de e-mail. 
+        O atributo 'required' torna o preenchimento deste 
+              campo obrigatório -->
+      <input type="email" id="email" required />
+
+
+      <!-- A tag <label> aqui está associando o texto "Senha" ao 
+                campo de entrada abaixo.
+          O atributo 'for' é usado para garantir que o campo de
+                entrada 'senha' seja acessado ao clicar sobre a 
+                palavra 'Senha' -->
+      <label for="senha">Senha:</label>
+
+      <!-- O campo <input> com o tipo 'password' é utilizado para 
+                permitir ao usuário digitar uma senha. 
+          Quando o tipo é 'password', os caracteres digitados ficam 
+                ocultos (substituídos por pontos ou asteriscos) 
+                para maior segurança.
+          O atributo 'id="senha"' é usado para associar este campo à 
+                label 'Senha', e o atributo 'required' torna o 
+                preenchimento obrigatório -->
+      <input type="password" id="senha" required />
+
+      <!-- A tag <label> aqui está associando o texto "Tipo de 
+                Usuário" ao campo de seleção abaixo. 
+          'for="tipoUsuario"' indica que a label se refere ao campo 
+                de seleção (select) com o ID 'tipoUsuario' -->
+      <label for="tipoUsuario">Tipo de Usuário:</label>
+
+      <!-- A tag <select> cria um campo de lista suspensa (dropdown), 
+                onde o usuário pode selecionar uma opção.
+          O atributo 'id="tipoUsuario"' é utilizado para associar o 
+                campo ao <label> acima e também para que
+                seja possível acessar o campo via JavaScript mais 
+                facilmente. 
+          O atributo 'required' faz com que o usuário
+                tenha que selecionar uma opção antes de 
+                submeter o formulário. -->
+      <select id="tipoUsuario" required>
+        
+        <!-- A tag <option> define as opções que o usuário pode 
+                escolher dentro da lista suspensa.
+            O atributo 'value="operador"' determina o valor que 
+                será enviado ao servidor caso o usuário escolha esta opção. -->
+        <option value="operador">Operador</option>
+
+        <!-- Aqui, a opção é "admin". O valor que será enviado é 
+                "admin" caso essa opção seja selecionada. -->
+        <option value="admin">Admin</option>
+
+      </select>
+
+
+      <!-- A tag <div> com a classe 'btn-group' agrupa os botões 
+              para garantir que fiquem alinhados e com 
+              espaçamento entre eles. -->
+      <div class="btn-group">
+
+        <!-- Este botão tem o tipo 'button', o que significa que 
+              ele não envia o formulário quando clicado.
+          O id 'btnVoltar' é usado para poder associar o botão a um 
+              manipulador de evento (por exemplo, para navegar 
+              para outra página). -->
+        <button type="button" id="btnVoltar">Voltar</button>
+
+        <!-- Este botão tem o tipo 'submit', o que significa que ao 
+              ser clicado, ele submeterá o formulário (formulário com 
+              id 'formEditarUsuario').
+        O texto exibido no botão é "Salvar", indicando que ele 
+              salva os dados quando pressionado. -->
+        <button type="submit">Salvar</button>
+
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+
+    // Seleciona o formulário de edição de usuário pelo 
+    //    seu ID 'formEditarUsuario'.
+    // A constante 'formEditar' agora faz referência ao 
+    //    formulário onde o usuário irá editar as informações.
+    const formEditar = document.getElementById('formEditarUsuario');
+
+    // Seleciona o campo oculto onde o ID do usuário será armazenado.
+    // Este campo é utilizado para guardar o identificador 
+    //    único do usuário que está sendo editado.
+    const idUsuarioHidden = document.getElementById('idUsuario');
+
+    // Seleciona o campo de input onde o nome do usuário será inserido.
+    // 'nomeInput' agora faz referência ao campo onde o 
+    //    usuário irá editar seu nome.
+    const nomeInput = document.getElementById('nome');
+
+    // Seleciona o campo de input onde o e-mail do 
+    //    usuário será inserido.
+    // 'emailInput' agora faz referência ao campo onde o 
+    //    usuário irá editar seu e-mail.
+    const emailInput = document.getElementById('email');
+
+    // Seleciona o campo de input onde a senha do 
+    //    usuário será inserida.
+    // 'senhaInput' agora faz referência ao campo onde o 
+    //    usuário irá editar sua senha.
+    const senhaInput = document.getElementById('senha');
+
+    // Seleciona o campo de seleção (dropdown) onde o 
+    //    tipo de usuário será escolhido.
+    // 'tipoUsuarioSelect' agora faz referência ao campo 
+    //    onde o usuário irá selecionar seu tipo de 
+    //    conta (operador ou admin).
+    const tipoUsuarioSelect = document.getElementById('tipoUsuario');
+
+    // Seleciona o botão de "Voltar" pelo seu ID 'btnVoltar'.
+    // 'btnVoltar' agora faz referência ao botão que, quando 
+    //    clicado, levará o usuário de volta para a página anterior.
+    const btnVoltar = document.getElementById('btnVoltar');
+
+
+    // Carrega os dados do usuário ao abrir a página
+    // Adiciona um ouvinte de evento à janela, que será 
+    //    executado quando a página e todos os recursos da 
+    //    página forem carregados.
+    // O evento 'load' é disparado quando toda a estrutura HTML,
+    //    CSS e os scripts estão prontos para interação.
+    window.addEventListener('load', async () => {
+      
+      // Cria uma nova instância de URLSearchParams usando os 
+      //    parâmetros da URL atual.
+      // A URLSearchParams permite extrair facilmente os 
+      //    parâmetros da query string da URL.
+      const params = new URLSearchParams(window.location.search);
+      
+      // Obtém o valor do parâmetro 'id' da URL. O 'get' busca o 
+      //    valor do parâmetro que foi passado na query string.
+      // Se o parâmetro não existir, ele retorna null.
+      const id = params.get('id');
+      
+      // Verifica se o parâmetro 'id' foi encontrado na URL.
+      // Se não encontrar o id, exibe uma mensagem de alerta e 
+      //    interrompe a execução do código com 'return'.
+      if (!id) {
+        alert('Usuário não especificado!');
+        return;
+      }
+
+      try {
+
+        // Tenta fazer uma requisição 'GET' para a API utilizando o 
+        //    'fetch' para buscar os dados do usuário.
+        // A URL é montada dinamicamente, usando o id do usuário (obtido 
+        //    anteriormente) para buscar os dados do usuário específico.
+        const resp = await fetch(`http://127.0.0.1:3000/api/usuarios/${id}`);
+        
+        // Verifica se a resposta da requisição foi bem-sucedida. 
+        // O 'resp.ok' retorna 'true' se o status da resposta for 
+        //    entre 200 e 299 (resposta bem-sucedida).
+        // Caso contrário, exibe um alerta com uma mensagem de erro e 
+        //    interrompe a execução do código com 'return'.
+        if (!resp.ok) {
+          alert('Erro ao buscar dados do usuário.');
+          return;
+        }
+      
+        // Caso a resposta tenha sido bem-sucedida, converte a 
+        //    resposta JSON em um objeto JavaScript.
+        const usuario = await resp.json();
+      
+        // Preenche o campo oculto com o valor do id do usuário 
+        //    recuperado da API (usado para identificação do usuário).
+        idUsuarioHidden.value = usuario._id;
+      
+        // Preenche os campos de formulário com os dados do 
+        //    usuário retornados pela API.
+        // Caso o valor de algum campo não seja encontrado, ele é 
+        //    substituído por uma string vazia ('').
+        // Se o nome não existir, o campo será preenchido com uma string vazia.
+        nomeInput.value = usuario.nome || ''; 
+
+        // Se o e-mail não existir, o campo será preenchido com uma string vazia.
+        emailInput.value = usuario.email || ''; 
+
+        // Se a senha não existir, o campo será preenchido com uma string vazia.
+        senhaInput.value = usuario.senha || ''; 
+        
+        // Define o valor do campo 'tipoUsuario' com o valor 
+        //    retornado da API. 
+        // Caso o valor não exista, ele define 'operador' como valor padrão.
+        tipoUsuarioSelect.value = usuario.tipoUsuario || 'operador';
+            
+      // O bloco 'try' é usado para tentar executar o 
+      //    código que pode gerar erros. 
+      // Se algum erro ocorrer, o fluxo de execução será 
+      //    transferido para o bloco 'catch'.
+      } catch (erro) {
+
+          // Se houver um erro no bloco 'try', o controle entra aqui.
+          
+          // Exibe no console de desenvolvedor a mensagem de erro.
+          // 'console.error' é usado para mostrar erros de forma 
+          //    destacada, facilitando a depuração.
+          console.error('Erro ao carregar usuário:', erro);
+
+          // Exibe uma mensagem para o usuário informando que 
+          //    ocorreu um erro ao carregar os dados.
+          // Isso serve como feedback para o usuário, 
+          //    mostrando que algo deu errado.
+          alert('Erro ao carregar dados do usuário.');
+
+      }
+
+    });
+
+    // Atualiza os dados do usuário ao salvar
+    // 'formEditar.addEventListener('submit', async (e) => {' 
+    // Aqui estamos adicionando um "ouvinte" de evento ao 
+    //    formulário (com id 'formEditar').
+    // Esse ouvinte irá esperar até que o evento de 'submit' 
+    //    (envio do formulário) aconteça.
+    // Quando o formulário for enviado, a função que segue será executada.
+    formEditar.addEventListener('submit', async (e) => {
+      
+      // 'e.preventDefault();' 
+      // O 'preventDefault()' é chamado para evitar o comportamento 
+      //    padrão do formulário de recarregar a página ao ser enviado.
+      // Dessa forma, conseguimos fazer o processamento assíncrono 
+      //    dos dados sem recarregar a página.
+      e.preventDefault();
+
+      // 'const id = idUsuarioHidden.value;' 
+      // Aqui estamos pegando o valor do campo escondido (input 
+      //    do tipo hidden) que contém o ID do usuário.
+      // O 'idUsuarioHidden' é uma variável que já foi definida 
+      //    para se referir ao campo com esse id.
+      // Isso é importante para identificar o usuário que está sendo editado.
+      const id = idUsuarioHidden.value;
+
+      // 'const nome = nomeInput.value.trim();' 
+      // Pegamos o valor do campo de input 'nome', que 
+      //    contém o nome do usuário.
+      // O 'trim()' é usado para remover espaços em branco 
+      //    no início e no fim da string.
+      // Assim, garantimos que o nome não tenha espaços 
+      //    indesejados que poderiam causar erros.
+      const nome = nomeInput.value.trim();
+
+      // 'const email = emailInput.value.trim();' 
+      // Similar ao anterior, pegamos o valor do campo 'email', e 
+      //    usamos 'trim()' para garantir que não haja 
+      //    espaços desnecessários.
+      const email = emailInput.value.trim();
+
+      // 'const senha = senhaInput.value.trim();' 
+      // Aqui pegamos o valor do campo 'senha'. Assim como o 
+      //    nome e o e-mail, usamos 'trim()' para remover espaços extras.
+      // Esse campo geralmente contém uma senha, que será 
+      //    enviada de forma segura para o backend.
+      const senha = senhaInput.value.trim();
+
+      // 'const tipoUsuario = tipoUsuarioSelect.value;' 
+      // Finalmente, pegamos o valor da seleção de tipo de 
+      //    usuário (se é 'operador' ou 'admin').
+      // 'tipoUsuarioSelect' faz referência ao campo <select> 
+        //    do HTML, e '.value' captura o valor selecionado.
+      const tipoUsuario = tipoUsuarioSelect.value;
+
+      // Tentando realizar a requisição PUT para 
+      //    atualizar os dados do usuário.
+      try {
+
+        // 'const resp = await fetch(`http://127.0.0.1:3000/api/usuarios/${id}`, {'
+        // A função 'fetch' realiza uma requisição HTTP, neste caso 
+        //    uma requisição 'PUT' para atualizar dados do usuário.
+        // O URL para a requisição é `http://127.0.0.1:3000/api/usuarios/${id}` 
+        //    onde o ${id} é o identificador único do usuário.
+        // O método 'PUT' é utilizado quando se deseja atualizar os 
+        //    dados de um recurso existente.
+        // O 'await' é usado para esperar que a requisição seja 
+        //    completada antes de continuar a execução do código.
+        const resp = await fetch(`http://127.0.0.1:3000/api/usuarios/${id}`, {
+            
+            // Especificando o método da requisição: 'PUT', que é o 
+            //    método usado para atualizar um recurso.
+            method: 'PUT',
+            
+            // 'headers: { 'Content-Type': 'application/json' },'
+            // Define o tipo de conteúdo da requisição, indicando que os 
+            //    dados enviados estão no formato JSON.
+            headers: { 'Content-Type': 'application/json' },
+            
+            // 'body: JSON.stringify({ nome, email, senha, tipoUsuario })'
+            // O 'body' contém os dados que estamos enviando na requisição.
+            // Usamos 'JSON.stringify' para converter os dados (nome, email,
+            //    senha, tipoUsuario) em uma string JSON.
+            body: JSON.stringify({ nome, email, senha, tipoUsuario })
+
+        });
+        
+        // 'const dados = await resp.json();'
+        // Após a requisição ser completada, a resposta é 
+        //    convertida para JSON com '.json()'.
+        // O 'await' garante que a execução do código aguarde a 
+        //    conversão do conteúdo para JSON antes de continuar.
+        const dados = await resp.json();
+
+        // 'if (resp.ok) {'
+        // Verifica se a resposta da requisição foi bem-sucedida, ou 
+        //    seja, se o status da resposta indica sucesso.
+        // O 'resp.ok' é verdadeiro se o código de status da 
+        //    resposta for 2xx (sucesso).
+        if (resp.ok) {
+            
+            // 'alert(dados.mensagem);'
+            // Exibe uma mensagem de sucesso que foi recebida da 
+            //    resposta do servidor.
+            alert(dados.mensagem);
+            
+            // 'window.location.href = 'cadastro.html';'
+            // Redireciona o usuário para a página de cadastro (cadastro.html) 
+            //    após a atualização ser realizada com sucesso.
+            window.location.href = 'cadastro.html';
+        
+        } else {
+
+            // 'alert(dados.mensagem);'
+            // Se a resposta não for bem-sucedida, exibe a mensagem de 
+            //    erro recebida do servidor.
+            alert(dados.mensagem);
+
+        }
+
+      // 'catch (erro) {'
+      // Se ocorrer algum erro durante a execução da requisição (por 
+      //    exemplo, erro de rede), ele será capturado aqui.
+      } catch (erro) {
+
+        // A mensagem de erro será exibida no console.
+        console.error('Erro ao atualizar usuário:', erro);
+        
+        // Exibe um alerta ao usuário informando que houve um 
+        //    erro ao tentar atualizar os dados.
+        alert('Erro ao atualizar dados do usuário.');
+        
+      }
+
+    });
+
+    // Voltar para a tela de usuários
+    // 'btnVoltar.addEventListener('click', () => {'
+    // Aqui estamos adicionando um ouvinte de evento (evento do 
+    //    tipo "click") ao elemento com o id 'btnVoltar'.
+    // O 'btnVoltar' é um botão no HTML, e estamos dizendo ao 
+    //    JavaScript para "escutar" quando o usuário clicar nele.
+    // O evento 'click' é disparado quando o botão é clicado pelo usuário.
+    btnVoltar.addEventListener('click', () => {
+
+      // A instrução 'window.location.href' altera a URL atual do navegador.
+      // Nesse caso, estamos dizendo ao navegador para navegar 
+      //    para a página 'cadastro.html'.
+      // Ou seja, quando o botão 'Voltar' for clicado, o usuário 
+      //    será redirecionado para a página de cadastro.
+      // O 'window.location.href' é uma forma simples de alterar a 
+      //    página que o usuário está visualizando, fazendo com que o 
+      //    navegador carregue o novo endereço especificado.     
+      window.location.href = 'cadastro.html';
+      
+    });
+
+  // Fim da seção de script onde o código JavaScript é executado
+  </script> 
+
+<!-- Fim da seção "body", que contém todo o 
+ //    conteúdo visível da página -->
+</body> 
+
+<!-- Fim do documento HTML, encerrando a 
+ //    estrutura do código -->
+</html>

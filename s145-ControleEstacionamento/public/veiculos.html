@@ -1,0 +1,975 @@
+<!-- Declaração do tipo de documento: Define que 
+      este é um documento HTML5. 
+Isso informa ao navegador que a página deve ser 
+      renderizada como HTML moderno. -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML. O atributo 'lang="pt-BR"' 
+      define que o idioma principal da página é português do Brasil,
+      o que melhora a acessibilidade e otimiza para motores de busca. -->
+<html lang="pt-BR">
+
+<!-- Início da seção 'head', que contém metadados e 
+      configurações da página. -->
+<head>
+
+  <!-- Define o conjunto de caracteres da página como UTF-8. 
+  Isso garante que caracteres especiais, como acentos e 
+        cedilhas, sejam exibidos corretamente. -->
+  <meta charset="UTF-8">
+
+  <!-- Configuração da visualização responsiva. 
+  'width=device-width' ajusta a largura da página ao 
+        tamanho da tela do dispositivo.
+  'initial-scale=1' define um nível de zoom inicial padrão, 
+        garantindo uma boa leitura em dispositivos móveis. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Define o título da página, que será exibido na aba do 
+        navegador e nos resultados de busca.
+  É importante escolher um título descritivo para melhorar a 
+        experiência do usuário e o SEO. -->
+  <title>Cadastro de Veículo</title>
+
+  <!-- Início da seção de estilos internos (CSS). 
+  Aqui serão definidas regras de formatação para personalizar a 
+        aparência dos elementos da página. -->
+  <style>
+
+      /* Define a estilização global do corpo da página (elemento <body>) */
+      body {
+
+        /* Define a fonte do texto como Arial ou, caso não esteja 
+                disponível, uma fonte sans-serif genérica.
+            Isso garante que o texto fique legível e com 
+                aparência moderna. */
+        font-family: Arial, sans-serif;
+
+        /* Define a cor de fundo da página como um tom 
+              de cinza claro (#f4f4f4), proporcionando um 
+              fundo neutro e agradável para leitura. */
+        background-color: #f4f4f4;
+
+        /* Define a cor padrão do texto como um tom de cinza escuro (#333), 
+            garantindo boa legibilidade. */
+        color: #333;
+
+        /* Remove margens externas do corpo da página, eliminando 
+              espaços indesejados ao redor do conteúdo. */
+        margin: 0;
+
+        /* Remove espaçamentos internos do corpo da página, garantindo 
+              que os elementos fiquem bem alinhados. */
+        padding: 0;
+
+        /* Define o sistema de layout como flexível, permitindo 
+              alinhar elementos facilmente. */
+        display: flex;
+
+        /* Centraliza os elementos filhos horizontalmente na página. */
+        align-items: center;
+
+        /* Define que os elementos filhos serão dispostos em uma 
+              coluna (de cima para baixo),
+              ao invés do layout padrão em linha. */
+        flex-direction: column;
+
+        /* Define que a altura mínima da página será 100% da 
+                  altura da tela do dispositivo.
+            Isso garante que o conteúdo ocupe toda a altura disponível, 
+                  independentemente do conteúdo dentro. */
+        min-height: 100vh;
+      
+    }
+  
+
+    /* Define a estilização do contêiner principal da 
+          página (elemento com classe .container) */
+    .container {
+
+      /* Define a largura máxima do contêiner para 800 pixels, 
+            evitando que ele fique muito largo 
+            em telas grandes e garantindo melhor leitura do conteúdo. */
+      max-width: 800px;
+
+      /* Define que o contêiner terá uma largura de 100% da tela disponível,
+            garantindo responsividade em telas menores. */
+      width: 100%;
+
+      /* Define o fundo do contêiner como branco para 
+            destacar o conteúdo dentro dele. */
+      background: white;
+
+      /* Adiciona um espaçamento interno de 20 pixels ao redor 
+            do conteúdo do contêiner, garantindo melhor organização visual. */
+      padding: 20px;
+
+      /* Aplica um arredondamento de 8 pixels nas bordas do contêiner,
+            proporcionando um visual mais moderno e agradável. */
+      border-radius: 8px;
+
+      /* Adiciona uma leve sombra ao redor do contêiner,
+            criando um efeito tridimensional sutil para 
+            destacá-lo do fundo. */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+      /* Centraliza o texto dentro do contêiner. */
+      text-align: center;
+
+      /* Adiciona um espaçamento inferior de 20 pixels para 
+            evitar que outros elementos fiquem muito 
+            próximos abaixo do contêiner. */
+      margin-bottom: 20px;
+
+    }
+
+    /* Define a estilização dos elementos <h1> e <h2> 
+            dentro da página */
+    h1, h2 {
+
+      /* Define a cor do texto dos títulos principais (h1 e h2) 
+            como um tom de cinza escuro (#444),
+            garantindo um contraste adequado e melhor leitura. */
+      color: #444;
+
+    }
+
+
+    /* Estiliza o formulário de cadastro de veículo */
+    form {
+
+      /* Utiliza um layout de grid para organizar os 
+            campos do formulário em duas colunas */
+      display: grid;
+
+      /* Define duas colunas de largura igual (1fr significa que cada 
+            coluna ocupa uma fração igual do espaço disponível) */
+      grid-template-columns: 1fr 1fr;
+
+      /* Adiciona um espaçamento de 10 pixels entre os 
+            elementos dentro do formulário */
+      gap: 10px;
+
+      /* Adiciona um espaçamento inferior de 15 pixels para separar o 
+            formulário de outros elementos abaixo dele */
+      margin-bottom: 15px;
+
+      /* Define que o formulário ocupará toda a largura disponível 
+            dentro do contêiner pai */
+      width: 100%;
+      
+    }
+
+    /* Estiliza os rótulos (labels) dos campos do formulário */
+    /* Faz com que os rótulos fiquem visíveis acima dos 
+            campos de entrada de texto */
+    label {
+
+      /* Define o peso da fonte como 'bold' para deixar o 
+            texto mais destacado */
+      font-weight: bold;
+
+      /* Alinha o texto do rótulo à esquerda para melhorar a leitura */
+      text-align: left;
+
+      /* Faz com que o rótulo ocupe toda a largura da coluna,
+         garantindo que ele apareça corretamente acima do 
+              campo de entrada correspondente */
+      display: block;
+
+    }
+
+
+    /* Estiliza os campos de entrada de texto */
+
+    /* Aplica estilos padrão a todos os campos de entrada 
+          dentro do formulário */
+    input {
+
+      /* Define que os campos ocuparão toda a largura 
+            disponível dentro da célula da grade */
+      width: 100%;
+
+      /* Adiciona um preenchimento interno de 10 pixels para 
+            tornar a interação mais confortável */
+      padding: 10px;
+
+      /* Adiciona uma borda cinza clara ao redor dos campos para 
+            diferenciá-los do fundo */
+      border: 1px solid #ccc;
+
+      /* Adiciona cantos arredondados de 6 pixels para um design mais suave */
+      border-radius: 6px;
+
+      /* Define o tamanho da fonte dentro dos campos de 
+            entrada para 16 pixels */
+      font-size: 16px;
+
+      /* Define o fundo do campo como um tom de cinza claro para 
+            destacar a área de digitação */
+      background: #f9f9f9;
+
+    }
+
+    /* Estiliza a seção de botões de ação dentro do formulário */    
+    .btnAcao {
+
+      /* Define um layout flexível para organizar os 
+            botões horizontalmente */
+      display: flex;
+
+      /* Distribui os botões de maneira uniforme dentro da 
+            largura do contêiner */
+      justify-content: space-between;
+
+      /* Faz com que a área dos botões ocupe duas colunas 
+            dentro do grid do formulário */
+      grid-column: span 2;
+
+    }
+
+
+    /* Estiliza todos os botões dentro do formulário */
+
+    /* Define um estilo padrão para todos os botões */
+    button {
+
+      /* Adiciona um preenchimento interno de 12 pixels 
+            para melhorar a acessibilidade */
+      padding: 12px;
+
+      /* Define o tamanho da fonte como 16 pixels para 
+            garantir boa legibilidade */
+      font-size: 16px;
+
+      /* Remove as bordas padrão dos botões para um design mais moderno */
+      border: none;
+
+      /* Aplica um arredondamento de 6 pixels nas bordas 
+            para um visual mais suave */
+      border-radius: 6px;
+
+      /* Muda o cursor para indicar que o botão é interativo */
+      cursor: pointer;
+
+      /* Adiciona uma transição suave de 0.3 segundos ao 
+            passar o mouse sobre o botão */
+      transition: 0.3s;
+
+    }
+
+    /* Estiliza especificamente o botão de voltar à 
+          página principal */
+    #btnVoltarPrincipal {
+
+      /* Aplica um fundo cinza escuro ao botão de voltar */
+      background: #6c757d;
+
+      /* Define a cor do texto como branco para 
+          contraste e melhor leitura */
+      color: white;
+
+    }
+
+
+    /* Estiliza o botão de voltar quando o mouse 
+          passa sobre ele */
+
+    /* Define um efeito de hover para o botão de voltar */
+    #btnVoltarPrincipal:hover {
+
+      /* Muda a cor de fundo para um tom mais escuro de 
+            cinza para indicar interatividade */
+      background: #5a6268;
+
+    }
+
+    /* Estiliza os botões de submissão do formulário */
+
+    /* Define o estilo padrão para botões do tipo "submit" */
+    button[type="submit"] {
+
+      /* Define um fundo azul vibrante para chamar a atenção do usuário */
+      background: #007bff;
+
+      /* Define a cor do texto como branco para um contraste forte */
+      color: white;
+
+    }
+
+    /* Estiliza o botão de submissão quando o mouse passa sobre ele */
+
+    /* Adiciona um efeito ao passar o mouse sobre o 
+          botão de submissão */
+    button[type="submit"]:hover {
+
+      /* Muda a cor de fundo para um azul mais escuro, 
+            indicando interatividade */
+      background: #0056b3;
+
+    }
+
+
+    /* Estiliza a linha horizontal (hr) */
+
+    /* Define o espaçamento vertical da linha horizontal 
+          para separação visual */
+    hr {
+
+      /* Adiciona margem superior e inferior de 20px para 
+            criar um espaçamento adequado */
+      margin: 20px 0;
+
+    }
+
+    /* Estiliza o contêiner da tabela */
+
+    /* Define a aparência e o comportamento do contêiner da tabela */
+    .tabela-container {
+
+      /* Faz com que o contêiner ocupe toda a largura disponível */
+      width: 100%;
+
+      /* Define uma largura máxima de 900px para evitar que a 
+            tabela fique muito extensa */
+      max-width: 900px;
+
+      /* Adiciona rolagem horizontal caso a tabela 
+            ultrapasse a largura do contêiner */
+      overflow-x: auto;
+
+      /* Adiciona margem inferior para espaçamento entre a 
+            tabela e outros elementos */
+      margin-bottom: 20px;
+
+    }
+
+
+    /* Estiliza a tabela */
+
+    /* Define o estilo geral da tabela */
+    table {
+
+      /* Faz com que a tabela ocupe toda a largura disponível do contêiner */
+      width: 100%;
+
+      /* Remove o espaçamento entre as bordas das células 
+            para um design mais compacto */
+      border-collapse: collapse;
+
+      /* Define o fundo da tabela como branco para melhor contraste */
+      background: white;
+
+      /* Aplica um arredondamento nas bordas da tabela 
+            para um visual mais suave */
+      border-radius: 8px;
+
+      /* Garante que elementos internos respeitem os 
+            limites da borda arredondada */
+      overflow: hidden;
+
+      /* Adiciona uma leve sombra na tabela para destacar do fundo */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+    /* Estiliza os cabeçalhos e células da tabela */
+
+    /* Define um estilo uniforme para os 
+          cabeçalhos (<th>) e células (<td>) */
+    th, td {
+
+      /* Adiciona espaçamento interno de 12px para 
+            melhorar a legibilidade */
+      padding: 12px;
+
+      /* Aplica uma borda fina ao redor das células 
+            para separação visual */
+      border: 1px solid #ddd;
+
+      /* Alinha o texto à esquerda dentro das células */
+      text-align: left;
+
+      /* Evita que o texto dentro das células seja 
+            quebrado em várias linhas */
+      white-space: nowrap;
+
+    }
+
+
+    /* Estiliza os cabeçalhos da tabela */
+
+    /* Define o estilo do cabeçalho da tabela (<th>) */
+    th {
+
+      /* Define a cor de fundo do cabeçalho como azul para destaque */
+      background-color: #007bff;
+
+      /* Define a cor do texto como branco para 
+            contraste com o fundo azul */
+      color: white;
+
+      /* Centraliza o texto dentro das células do cabeçalho */
+      text-align: center;
+
+    }
+
+    /* Alterna a cor de fundo das linhas para melhor legibilidade */
+
+    /* Aplica um fundo diferenciado para linhas pares da tabela */
+    tr:nth-child(even) {
+
+      /* Define uma cor de fundo cinza claro para linhas pares */
+      background-color: #f9f9f9;
+
+    }
+
+    /* Estiliza a linha quando o usuário passa o mouse sobre ela */
+
+    /* Altera a cor de fundo ao passar o mouse sobre 
+          qualquer linha da tabela */
+    tr:hover {
+
+      /* Define um fundo cinza levemente mais 
+            escuro ao passar o mouse */
+      background-color: #f1f1f1;
+
+    }
+
+
+    /* Estiliza o botão de edição */
+
+    /* Define a aparência padrão do botão de edição */
+    .btnEditar {
+
+      /* Define a cor de fundo amarela para indicar ação de edição */
+      background: #ffc107;
+
+      /* Define a cor do texto como um tom escuro 
+            para melhor visibilidade */
+      color: #333;
+
+      /* Adiciona um espaçamento interno ao botão 
+            para torná-lo mais clicável */
+      padding: 6px 10px;
+
+      /* Define o tamanho da fonte do botão para melhor leitura */
+      font-size: 14px;
+
+      /* Remove a borda padrão do botão para um design mais limpo */
+      border: none;
+
+      /* Muda o cursor para "pointer" ao passar o 
+            mouse, indicando interatividade */
+      cursor: pointer;
+
+      /* Arredonda levemente os cantos do botão para 
+            um visual mais suave */
+      border-radius: 4px;
+
+    }
+
+    /* Altera o estilo do botão quando o usuário 
+          passa o mouse sobre ele */
+
+    /* Modifica a cor do fundo ao passar o mouse 
+          sobre o botão de edição */
+    .btnEditar:hover {
+
+      /* Define um tom de amarelo mais escuro 
+            para efeito de destaque */
+      background: #e0a800;
+
+    }
+
+
+    /* Estiliza o botão de exclusão */
+
+    /* Define a aparência padrão do botão de exclusão */
+    .btnExcluir {
+
+      /* Define a cor de fundo vermelha para indicar 
+            ação de exclusão */
+      background: #dc3545;
+
+      /* Define a cor do texto como branco para alto 
+            contraste e melhor legibilidade */
+      color: white;
+
+      /* Adiciona um espaçamento interno ao botão para 
+            torná-lo mais clicável */
+      padding: 6px 10px;
+
+      /* Define o tamanho da fonte do botão para melhor leitura */
+      font-size: 14px;
+
+      /* Remove a borda padrão do botão para um design mais limpo */
+      border: none;
+
+      /* Muda o cursor para "pointer" ao passar o mouse,    
+            indicando interatividade */
+      cursor: pointer;
+
+      /* Arredonda levemente os cantos do botão para 
+            um visual mais suave */
+      border-radius: 4px;
+
+    }
+
+    /* Altera o estilo do botão quando o usuário 
+          passa o mouse sobre ele */
+
+    /* Modifica a cor do fundo ao passar o mouse 
+          sobre o botão de exclusão */
+    .btnExcluir:hover {
+
+      /* Define um tom de vermelho mais escuro para 
+            efeito de destaque */
+      background: #c82333;
+      
+    }
+
+
+    /* Responsividade */
+    /* Aplica as regras de estilo somente para telas 
+          com largura máxima de 768px */
+    @media (max-width: 768px) {
+
+      /* Ajusta a largura do container para ocupar 95% da largura da tela */
+      /* Isso garante que o conteúdo fique visível sem 
+            exceder a tela em dispositivos menores */
+      .container {
+
+          /* Reduz a largura do container para melhor adaptação */
+          width: 95%; 
+
+          /* Diminui o espaçamento interno para economizar espaço */
+          padding: 15px; 
+
+      }
+
+      /* Modifica o layout do formulário para melhor 
+            adaptação em telas pequenas */
+      form {
+
+          /* Mantém a organização flexível dos elementos */
+          display: flex; 
+
+          /* Organiza os campos do formulário verticalmente */
+          flex-direction: column; 
+
+      }
+
+      /* Ajusta os campos de entrada para melhor 
+            visualização e usabilidade em telas menores */
+      input {
+
+          /* Reduz o tamanho da fonte para otimizar espaço */
+          font-size: 14px;
+          
+          /* Ajusta o preenchimento interno para evitar 
+                  cortes em telas pequenas */
+          padding: 8px; 
+
+      }
+
+      /* Ajusta os botões para ficarem proporcionais ao layout reduzido */
+      button {
+
+          /* Diminui ligeiramente a fonte para melhor encaixe */
+          font-size: 14px; 
+
+          /* Mantém um tamanho confortável para cliques */
+          padding: 10px; 
+
+      }
+
+      /* Reduz o tamanho da fonte da tabela para melhor 
+              adaptação a telas pequenas */
+      table {
+
+          /* Ajusta a fonte para que a tabela não ocupe muito espaço */
+          font-size: 12px; 
+
+      }
+
+      /* Reduz o espaçamento das células da tabela para 
+            melhor aproveitamento do espaço */
+      th, td {
+
+          /* Diminui o preenchimento interno para 
+                ajustar melhor as colunas */
+          padding: 8px; 
+
+      }
+
+      /* Ajusta os botões de edição e exclusão dentro da 
+            tabela para não ficarem desproporcionais */
+      .btnEditar, .btnExcluir {
+
+          /* Diminui o tamanho da fonte para se adequar ao layout menor */
+          font-size: 12px; 
+
+          /* Ajusta a área de clique sem prejudicar a usabilidade */
+          padding: 4px 8px; 
+
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Container principal que envolve todo o conteúdo da página -->
+  <div class="container">
+    
+    <!-- Título principal do sistema -->
+    <h1>Sistema de Controle de Estacionamento</h1>
+    
+    <!-- Subtítulo da seção que indica a funcionalidade atual -->
+    <h2>Cadastro de Veículo</h2>
+
+    <!-- Formulário para cadastro de veículos -->
+    <!-- O ID 'formCadastroVeiculo' será usado para 
+            manipular o formulário via JavaScript -->
+    <form id="formCadastroVeiculo">
+
+      <!-- Rótulo (label) para o campo de entrada da placa do veículo -->
+      <!-- O atributo 'for' associa o label ao input correspondente -->
+      <label for="placaVeiculo">Placa:</label>
+      
+      <!-- Campo de entrada para a placa do veículo -->
+      <!-- O ID 'placaVeiculo' permite sua identificação no JavaScript -->
+      <!-- O atributo 'required' torna este campo obrigatório -->
+      <input type="text" id="placaVeiculo" required />
+
+      <!-- Rótulo (label) para o campo de entrada do modelo do veículo -->
+      <label for="modeloVeiculo">Modelo:</label>
+
+      <!-- Campo de entrada para o modelo do veículo -->
+      <!-- O ID 'modeloVeiculo' permite sua identificação no JavaScript -->
+      <!-- O atributo 'required' torna este campo obrigatório -->
+      <input type="text" id="modeloVeiculo" required />
+
+      <!-- Rótulo (label) para o campo de entrada da cor do veículo -->
+      <!-- O atributo 'for' vincula o label ao input correspondente -->
+      <label for="corVeiculo">Cor:</label>
+
+      <!-- Campo de entrada para a cor do veículo -->
+      <!-- O ID 'corVeiculo' permite sua identificação no JavaScript -->
+      <!-- O atributo 'required' torna este campo obrigatório -->
+      <input type="text" id="corVeiculo" required />
+
+      <!-- Rótulo (label) para o campo de entrada do 
+            nome do proprietário do veículo -->
+      <!-- O atributo 'for' vincula o label ao input correspondente -->
+      <label for="proprietarioVeiculo">Proprietário:</label>
+
+      <!-- Campo de entrada para o nome do proprietário do veículo -->
+      <!-- O ID 'proprietarioVeiculo' permite sua 
+              identificação no JavaScript -->
+      <!-- O atributo 'required' torna este campo obrigatório -->
+      <input type="text" id="proprietarioVeiculo" required />
+
+      <!-- Container para os botões de ação -->
+      <!-- A classe 'btnAcao' organiza os botões lado a lado -->
+      <div class="btnAcao">
+        
+        <!-- Botão de envio do formulário -->
+        <!-- O tipo 'submit' faz com que os dados do 
+              formulário sejam enviados -->
+        <button type="submit">Cadastrar Veículo</button>
+
+        <!-- Botão para voltar à página principal -->
+        <!-- O ID 'btnVoltarPrincipal' permite manipulação via JavaScript -->
+        <button id="btnVoltarPrincipal">Voltar à Principal</button>
+
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Linha horizontal para separar visualmente as seções -->
+  <hr />
+
+  <!-- Container da tabela para melhor organização e responsividade -->
+  <div class="tabela-container">
+
+    <!-- Título indicando a listagem dos veículos cadastrados -->
+    <h3>Veículos Cadastrados</h3>
+
+    <!-- Tabela para exibir os veículos registrados no sistema -->
+    <table id="tabelaVeiculos">
+
+      <!-- Cabeçalho da tabela -->
+      <thead>
+
+        <tr>
+
+          <!-- Coluna para exibir a placa do veículo -->
+          <th>Placa</th>
+
+          <!-- Coluna para exibir o modelo do veículo -->
+          <th>Modelo</th>
+
+          <!-- Coluna para exibir a cor do veículo -->
+          <th>Cor</th>
+
+          <!-- Coluna para exibir o nome do proprietário do veículo -->
+          <th>Proprietário</th>
+
+          <!-- Coluna para exibir botões de ações como editar e excluir -->
+          <th>Ações</th>
+
+        </tr>
+      </thead>
+
+      <!-- Corpo da tabela onde os veículos cadastrados serão 
+              inseridos dinamicamente via JavaScript -->
+      <tbody></tbody>
+
+    </table>
+  </div>
+
+
+  <script>
+
+    // Obtém a referência do formulário de cadastro de veículos pelo seu ID
+    const formCadastroVeiculo = document.getElementById('formCadastroVeiculo');
+
+    // Obtém a referência do corpo da tabela onde os 
+    //    veículos serão inseridos dinamicamente
+    const tabelaVeiculos = document.querySelector('#tabelaVeiculos tbody');
+
+    // Obtém a referência do botão de voltar para a 
+    //    página principal pelo seu ID
+    const btnVoltarPrincipal = document.getElementById('btnVoltarPrincipal');
+
+    // Adiciona um evento que será disparado quando a 
+    //    página for carregada completamente
+    // A função 'listarVeiculos' será chamada para 
+    //    carregar e exibir os veículos cadastrados
+    window.addEventListener('load', listarVeiculos);
+
+
+    // Adiciona um evento ao formulário de cadastro de 
+    //    veículos, que será executado quando o usuário 
+    //    clicar no botão "Cadastrar Veículo"
+    // A palavra-chave "async" no início da função significa 
+    //    que ela trabalha de forma assíncrona.
+    // Isso permite que o código espere respostas de operações 
+    //    que podem demorar, como requisições para um servidor,
+    //    sem bloquear a execução de outras partes do programa.
+    formCadastroVeiculo.addEventListener('submit', async (e) => {
+
+      // Impede que a página seja recarregada ao enviar o formulário, 
+      //    permitindo que os dados sejam processados via JavaScript
+      e.preventDefault();
+
+      // Obtém o valor inserido no campo de entrada "Placa" pelo seu ID. 
+      // Esse valor será usado para identificar o veículo de forma única.
+      const placa = document.getElementById('placaVeiculo').value;
+
+      // Obtém o valor inserido no campo de entrada "Modelo" pelo seu ID.
+      // O modelo representa a marca e o tipo do veículo (ex: Honda Civic, Ford Focus).
+      const modelo = document.getElementById('modeloVeiculo').value;
+
+      // Obtém o valor inserido no campo de entrada "Cor" pelo seu ID.
+      // A cor será armazenada como parte dos dados do veículo.
+      const cor = document.getElementById('corVeiculo').value;
+
+      // Obtém o valor inserido no campo de entrada "Proprietário" pelo seu ID.
+      // Esse campo armazena o nome do dono do veículo, facilitando a identificação.
+      const proprietario = document.getElementById('proprietarioVeiculo').value;
+
+
+      try {
+
+          // Realiza uma requisição HTTP assíncrona para a API do 
+          //    servidor, enviando os dados do veículo para cadastro.
+          // O "fetch" é usado para se comunicar com a API RESTful no backend.
+          // O uso de "await" faz com que o código aguarde a resposta 
+          //    antes de continuar para a próxima instrução.
+          const resp = await fetch('http://127.0.0.1:3000/api/veiculos/cadastrar', {
+              
+              // Define o método da requisição como "POST", pois 
+              //    estamos enviando novos dados para serem 
+              //    cadastrados no servidor.
+              method: 'POST',
+
+              // Define o cabeçalho HTTP para indicar que os dados 
+              //    enviados estão no formato JSON.
+              headers: { 'Content-Type': 'application/json' },
+
+              // Converte os dados do veículo (placa, modelo, cor e 
+              //    proprietário) em formato JSON para serem enviados na requisição.
+              // O método JSON.stringify() transforma o objeto 
+              //    JavaScript em uma string JSON válida.
+              body: JSON.stringify({ placa, modelo, cor, proprietario })
+
+          });
+
+          // Aguarda a resposta da API e a converte de JSON para um objeto JavaScript.
+          // Isso permite que os dados retornados pela API possam 
+          //    ser manipulados diretamente no código.
+          const dados = await resp.json();
+
+          // Verifica se a resposta da API indica sucesso (status HTTP 200-299).
+          if (resp.ok) {
+              
+              // Se o veículo foi cadastrado com sucesso, exibe um 
+              //    alerta para o usuário com a mensagem retornada pela API.
+              alert(dados.mensagem);
+
+              // Após o cadastro bem-sucedido, limpa os campos do 
+              //    formulário para permitir um novo cadastro sem recarregar a página.
+              formCadastroVeiculo.reset();
+
+              // Chama a função "listarVeiculos()" para atualizar a 
+              //    lista de veículos cadastrados na tabela da interface.
+              listarVeiculos();
+          
+          } else {
+
+              // Se a resposta da API não for bem-sucedida (exemplo: 
+              //    erro na validação de dados),
+              //    exibe um alerta com a mensagem de erro retornada pela API.
+              alert(dados.mensagem);
+          }
+
+      } catch (erro) {
+
+          // Caso ocorra um erro durante a requisição (exemplo: 
+          //    falha na conexão com o servidor),
+          //    exibe uma mensagem de erro no console do 
+          //    navegador para ajudar na depuração.
+          console.error('Erro ao cadastrar veículo:', erro);
+          
+      }
+
+    });
+
+    // Adiciona um evento de clique ao botão "Voltar à Principal".
+    // Quando o usuário clicar no botão, a função será executada.
+    btnVoltarPrincipal.addEventListener('click', () => {
+
+        // Altera a URL da página atual para 'principal.html'.
+        // Isso faz com que o navegador redirecione o 
+        //    usuário para a página principal do sistema.
+        window.location.href = 'principal.html';
+
+    });
+
+
+    // Define uma função assíncrona chamada "listarVeiculos".
+    // Essa função será responsável por buscar a lista de 
+    //    veículos cadastrados e exibi-los na tabela.
+    async function listarVeiculos() {
+
+        try {
+      
+            // Faz uma requisição HTTP do tipo GET para a API na rota '/api/veiculos'.
+            // O objetivo é buscar todos os veículos cadastrados no banco de dados.
+            const resp = await fetch('http://127.0.0.1:3000/api/veiculos');
+
+            // Converte a resposta da requisição para o formato JSON.
+            // O resultado será uma lista de objetos 
+            //    representando os veículos cadastrados.
+            const veiculos = await resp.json();
+
+            // Limpa o conteúdo atual da tabela antes de 
+            //    adicionar os novos veículos.
+            // Isso evita a duplicação de dados ao atualizar a listagem.
+            tabelaVeiculos.innerHTML = '';
+
+            // Percorre a lista de veículos retornada pela API.
+            veiculos.forEach((v) => {
+
+                // Cria um novo elemento de linha (<tr>) para adicionar na tabela.
+                const tr = document.createElement('tr');
+
+                // Define o conteúdo HTML da linha com os dados do veículo.
+                // Cada veículo terá seus dados exibidos em 
+                //    uma célula (<td>) correspondente.
+                tr.innerHTML = `
+                    <td>${v.placa}</td>  <!-- Exibe a placa do veículo -->
+                    <td>${v.modelo}</td> <!-- Exibe o modelo do veículo -->
+                    <td>${v.cor}</td>    <!-- Exibe a cor do veículo -->
+                    <td>${v.proprietario}</td> <!-- Exibe o nome do proprietário do veículo -->
+
+                    <td>
+
+                        <!-- Botão de edição que chama a função 'editarVeiculo' passando o ID do veículo -->
+                        <button class="btnEditar" onclick="editarVeiculo('${v._id}')">Editar</button>
+                        
+                        <!-- Botão de exclusão que chama a função 'excluirVeiculo' passando o ID do veículo -->
+                        <button class="btnExcluir" onclick="excluirVeiculo('${v._id}')">Excluir</button>
+
+                    </td>
+                `;
+
+                // Adiciona a nova linha na tabela, exibindo os 
+                //    dados do veículo na interface do usuário.
+                tabelaVeiculos.appendChild(tr);
+
+            });
+
+        } catch (erro) {
+
+            // Captura qualquer erro que ocorra durante a execução do código.
+            // Se houver falha ao buscar os dados, exibe um erro no console.
+            console.error('Erro ao listar veículos:', erro);
+
+        }
+    }
+
+
+    // Define uma função assíncrona chamada "excluirVeiculo" 
+    //    que recebe o ID do veículo como parâmetro.
+    // Essa função será responsável por excluir um veículo 
+    //    específico do banco de dados.
+    async function excluirVeiculo(id) {
+        
+        // Exibe uma caixa de confirmação para o usuário 
+        //    antes de prosseguir com a exclusão.
+        // Se o usuário clicar em "Cancelar", a função é 
+        //    interrompida e não executa a exclusão.
+        if (!confirm('Tem certeza que deseja excluir este veículo?')) return;
+
+        // Faz uma requisição HTTP do tipo DELETE para a API na rota '/api/veiculos/{id}'.
+        // O método DELETE indica ao servidor que o recurso 
+        //    identificado pelo ID deve ser removido.
+        await fetch(`http://127.0.0.1:3000/api/veiculos/${id}`, { method: 'DELETE' });
+
+        // Após a exclusão bem-sucedida, a função "listarVeiculos" é chamada novamente.
+        // Isso atualiza a lista de veículos na interface do 
+        //    usuário, removendo o veículo excluído.
+        listarVeiculos();
+
+    }
+
+
+    // Define uma função chamada "editarVeiculo" que recebe um ID como parâmetro.
+    // Essa função é utilizada para redirecionar o usuário para a 
+    //    página de edição de um veículo específico.
+    function editarVeiculo(id) {
+
+        // Atualiza a URL da página atual, redirecionando para "editarVeiculo.html",
+        // passando o ID do veículo como um parâmetro de consulta 
+        //    na URL (?id=ID_DO_VEICULO).
+        // Isso permite que a página de edição carregue os dados do 
+        //    veículo correspondente ao ID fornecido.
+        window.location.href = `editarVeiculo.html?id=${id}`;
+
+    }
+
+  // Fim da seção de script onde o código JavaScript é executado
+  </script> 
+
+<!-- Fim da seção "body", que contém todo o 
+      conteúdo visível da página -->
+</body> 
+
+<!-- Fim do documento HTML, encerrando a estrutura do código -->
+</html>

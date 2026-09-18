@@ -1,0 +1,554 @@
+<!-- Declara que este é um documento HTML5, uma versão 
+        moderna da linguagem HTML -->
+<!DOCTYPE html>
+
+<!-- Início do código HTML, onde a página começa -->
+<!-- O atributo `lang="pt-BR"` define o idioma principal da 
+        página como português do Brasil -->
+<html lang="pt-BR">
+
+<!-- Início do cabeçalho da página -->
+<head>
+
+  <!-- Define a codificação de caracteres como UTF-8 -->
+  <!-- Isso permite que acentos e caracteres 
+        especiais (ç, ã, é, etc.) sejam exibidos corretamente -->
+  <meta charset="UTF-8" />
+
+  <!-- Define como a página deve se comportar em dispositivos móveis -->
+  <!-- `width=device-width` faz com que a largura da página 
+        se ajuste ao tamanho da tela -->
+  <!-- `initial-scale=1` mantém o nível de zoom padrão -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Define o título da página, que aparece na aba do navegador -->
+  <title>Login - Estacionamento</title>
+
+    <!-- Início da seção de estilos da página (CSS) -->
+    <style>
+
+        /* Aplica regras de estilo para todos os elementos da 
+            página (`*` significa "todos os elementos") */
+        * {
+
+            /* Garante que largura e altura incluam o conteúdo, a 
+                    borda e o preenchimento */
+            /* Isso evita problemas com o tamanho dos elementos ao 
+                    dicionar bordas ou margens */
+            box-sizing: border-box;
+
+            /* Remove todas as margens padrão dos elementos (exemplo: os 
+                    navegadores costumam adicionar margem automática ao `body`) */
+            margin: 0;
+
+            /* Remove o espaço interno (preenchimento) dos elementos */
+            padding: 0;
+
+            /* Define a fonte padrão do texto da página como Arial, ou 
+                    uma fonte genérica do tipo sans-serif */
+            font-family: Arial, sans-serif;
+
+        }
+
+
+        /* Estiliza o corpo da página (body) */
+        body {
+        
+            /* Define a cor de fundo da página como um tom de 
+                    cinza claro (#f4f4f4) */
+            background-color: #f4f4f4;
+
+            /* Usa o modelo de layout Flexbox para organizar os   
+                    elementos internos */
+            display: flex;
+
+            /* Centraliza os elementos horizontalmente dentro do body */
+            justify-content: center;
+
+            /* Centraliza os elementos verticalmente dentro do body */
+            align-items: center;
+
+            /* Faz com que o body ocupe 100% da altura da tela do navegador */
+            height: 100vh; /* vh = viewport height, ou seja, altura da tela */
+
+        }
+
+        
+        /* Estiliza a classe `.container`, que será usada para 
+          envolver o formulário de login */
+        .container {
+
+            /* Define a largura total do container como 100% do 
+                espaço disponível */
+            width: 100%;
+
+            /* Define a largura máxima do container para 400 pixels, 
+                evitando que fique muito grande */
+            max-width: 400px;
+
+            /* Define a cor de fundo do container como branco */
+            background: white;
+
+            /* Adiciona um preenchimento interno de 30 pixels 
+                dentro do container */
+            padding: 30px;
+
+            /* Arredonda os cantos do container em 10 pixels */
+            border-radius: 10px;
+
+            /* Adiciona uma sombra ao redor do container para um 
+                    efeito de elevação */
+            /* `0 4px 10px rgba(0, 0, 0, 0.1)` significa: 
+            - 0 = deslocamento horizontal (sem deslocamento para os lados)
+            - 4px = deslocamento vertical (sombra abaixo do elemento)
+            - 10px = espalhamento da sombra (aumenta a área da sombra)
+            - rgba(0, 0, 0, 0.1) = cor preta com 10% de transparência */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+            /* Centraliza todo o conteúdo dentro do container */
+            text-align: center;
+
+        }
+
+
+        /* Estiliza o título principal <h1> dentro da página */
+        h1 {
+
+            /* Define a cor do texto como um tom de cinza escuro (#333) */
+            color: #333;
+
+            /* Adiciona um espaçamento inferior de 10 pixels 
+                para separar do elemento abaixo */
+            margin-bottom: 10px;
+
+        }
+
+        /* Estiliza o subtítulo <h2> dentro da página */
+        h2 {
+
+            /* Define a cor do texto como um tom de cinza um 
+                pouco mais claro (#555) */
+            color: #555;
+
+            /* Define o tamanho da fonte do subtítulo como 18 pixels */
+            font-size: 18px;
+
+            /* Adiciona um espaçamento inferior de 20 pixels para   
+                afastar o subtítulo dos próximos elementos */
+            margin-bottom: 20px;
+
+        }
+
+        /* Estiliza a tag <form>, que contém os campos de 
+            entrada do usuário */
+        form {
+
+            /* Usa o modelo de layout flexível (Flexbox) para 
+                organizar os elementos do formulário */
+            display: flex;
+
+            /* Define a direção dos elementos internos do formulário 
+                como coluna (empilhados verticalmente) */
+            flex-direction: column;
+
+            /* Adiciona um espaçamento de 15 pixels entre os 
+                elementos do formulário */
+            gap: 15px;
+
+        }
+
+
+        /* Estiliza a tag <label>, usada para descrever os 
+            campos de entrada do formulário */
+        label {
+
+            /* Define o peso da fonte como "bold" (negrito) 
+                    para destacar o texto */
+            font-weight: bold;
+
+            /* Alinha o texto à esquerda para manter um layout  
+                    mais organizado */
+            text-align: left;
+
+            /* Faz com que cada label ocupe toda a largura 
+                    disponível (quebrando linha automaticamente) */
+            display: block;
+
+            /* Adiciona um espaçamento inferior de 5 pixels para separar o 
+                    label do campo de entrada abaixo */
+            margin-bottom: 5px;
+
+        }
+
+        /* Estiliza os campos de entrada (<input>) do formulário */
+        input {
+
+            /* Define a largura do campo de entrada para 
+                    ocupar 100% do espaço disponível */
+            width: 100%;
+
+            /* Adiciona um preenchimento interno de 12 pixels para 
+                    aumentar o tamanho do campo e melhorar a usabilidade */
+            padding: 12px;
+
+            /* Define uma borda de 1 pixel ao redor do campo, com 
+                    uma cor cinza clara (#ccc) */
+            border: 1px solid #ccc;
+
+            /* Arredonda os cantos do campo com um raio de 5 pixels */
+            border-radius: 5px;
+
+            /* Define o tamanho da fonte dentro do campo como 16 pixels, 
+                    tornando o texto mais legível */
+            font-size: 16px;
+
+            /* Define um fundo de cor cinza claro (#f9f9f9) para 
+                    diferenciar o campo do fundo da página */
+            background: #f9f9f9;
+
+            /* Adiciona um efeito de transição suave de 0.3 segundos 
+                    para mudanças de estilo (como foco) */
+            transition: 0.3s;
+
+        }
+
+
+        /* Estiliza o campo de entrada (<input>) quando ele está 
+            em foco (quando o usuário clica nele) */
+        input:focus {
+
+            /* Altera a cor da borda para um tom de azul (#007bff) 
+                para destacar o campo ativo */
+            border-color: #007bff;
+
+            /* Remove o contorno padrão do navegador ao focar 
+                no campo de entrada */
+            outline: none;
+
+            /* Muda a cor de fundo do campo para branco (#fff), 
+                destacando-o do restante da página */
+            background: #fff;
+
+        }
+
+        /* Estiliza os botões (<button>) da página */
+        button {
+
+            /* Define a largura do botão para ocupar 100% da largura 
+                disponível no container */
+            width: 100%;
+
+            /* Adiciona um preenchimento interno de 12 pixels para aumentar o 
+                tamanho do botão e melhorar a experiência do usuário */
+            padding: 12px;
+
+            /* Define o tamanho da fonte do botão como 16 pixels, 
+                tornando o texto mais legível */
+            font-size: 16px;
+
+            /* Remove a borda do botão para um visual mais limpo */
+            border: none;
+
+            /* Arredonda os cantos do botão com um raio de 5 pixels */
+            border-radius: 5px;
+
+            /* Define o cursor do mouse como "pointer" (mãozinha) ao 
+                passar sobre o botão, indicando que ele é clicável */
+            cursor: pointer;
+
+            /* Adiciona um efeito de transição suave de 0.3 segundos 
+                para mudanças de estilo ao interagir com o botão */
+            transition: 0.3s;
+
+        }
+
+
+        /* Estiliza o botão de envio do formulário 
+            (<button type="submit">) */
+        button[type="submit"] {
+
+            /* Define a cor de fundo do botão como azul (#007bff) */
+            background: #007bff;
+
+            /* Define a cor do texto do botão como branco para contraste */
+            color: white;
+
+            /* Torna o texto do botão em negrito para destacá-lo */
+            font-weight: bold;
+
+        }
+
+        /* Estiliza o botão de envio quando o usuário passa o mouse sobre ele */
+        button[type="submit"]:hover {
+
+            /* Muda a cor de fundo do botão para um azul mais 
+                escuro (#0056b3), criando um efeito visual ao passar o mouse */
+            background: #0056b3;
+
+        }
+
+        /* Estiliza o botão de redirecionamento para a página de 
+            cadastro (um link estilizado) */
+        #btnIrCadastro {
+
+            /* Remove o fundo do botão, tornando-o transparente */
+            background: none;
+
+            /* Define a cor do texto do botão como azul (#007bff), 
+                destacando que ele é um link */
+            color: #007bff;
+
+            /* Torna o texto do botão em negrito para melhor visibilidade */
+            font-weight: bold;
+
+            /* Adiciona um espaçamento na parte superior de 10 pixels 
+                para separar este botão de outros elementos */
+            margin-top: 10px;
+
+            /* Adiciona um sublinhado ao texto, reforçando que ele 
+                se parece com um link */
+            text-decoration: underline;
+
+            /* Muda o cursor para "pointer" (mãozinha) ao passar 
+                sobre o botão, indicando que ele é clicável */
+            cursor: pointer;
+
+            /* Remove a borda do botão para um visual mais limpo */
+            border: none;
+
+            /* Define o tamanho da fonte como 14 pixels 
+                para melhor legibilidade */
+            font-size: 14px;
+
+        }
+
+
+        /* Seleciona o botão de cadastro (que tem o id 'btnIrCadastro') 
+            quando o usuário passa o mouse sobre ele */
+        #btnIrCadastro:hover {
+
+            /* Altera a cor do texto do botão para um azul 
+                mais escuro (#0056b3), proporcionando um 
+                efeito visual ao passar o mouse */
+            color: #0056b3;
+
+        }
+
+
+        /* A regra @media cria um estilo específico para telas pequenas.
+        Aqui, definimos que essas regras se aplicam apenas se a largura da tela 
+        for de no máximo 480 pixels, ou seja, celulares ou 
+            dispositivos pequenos. */
+        @media (max-width: 480px) {
+
+            /* Ajusta o estilo do elemento com a classe 'container' 
+            para melhorar a disposição do conteúdo em telas pequenas */
+            .container {
+            
+            /* Reduz o espaçamento interno do contêiner para 20 pixels 
+                para que ele ocupe menos espaço e fique mais compacto */
+            padding: 20px;
+            }
+
+            /* Aplica estilos para os elementos <input> (campos 
+                de entrada de texto) e <button> (botões) dentro 
+                do site quando a tela for pequena */
+            input, button {
+            
+            /* Diminui o tamanho da fonte para 14 pixels, 
+                garantindo que os textos fiquem legíveis em telas menores */
+            font-size: 14px;
+
+        }
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+  <!-- Cria um contêiner que centraliza o conteúdo da página -->
+  <div class="container">
+    
+    <!-- Cria um título principal (h1) para a página.
+         Neste caso, o título indica que o sistema é de 
+              controle de estacionamento. -->
+    <h1>Sistema de Controle de Estacionamento</h1>
+
+    <!-- Cria um subtítulo (h2), que indica que esta 
+          seção da página é a de login -->
+    <h2>Login</h2>
+
+
+    <!-- Início do formulário de login -->
+    <form id="formLogin">
+
+      <!-- Cria um rótulo (label) para o campo de entrada do e-mail.
+           O atributo "for" está associado ao ID do campo de 
+                entrada correspondente (emailLogin),
+                garantindo que ao clicar no rótulo, o campo de 
+                entrada seja selecionado automaticamente. -->
+      <label for="emailLogin">E-mail:</label>
+
+      <!-- Campo de entrada para o usuário digitar seu e-mail.
+           O atributo "type=email" garante que apenas e-mails 
+                válidos sejam aceitos.
+           O "id=emailLogin" serve para identificar esse 
+                campo no JavaScript ou CSS.
+           O "placeholder" exibe um texto temporário dentro do 
+                campo, ajudando o usuário.
+           O "required" torna esse campo obrigatório, impedindo o 
+                envio do formulário sem preenchê-lo. -->
+      <input type="email" id="emailLogin" placeholder="Digite seu e-mail" required />
+
+      <!-- Cria um rótulo (label) para o campo de entrada da senha.
+           Assim como o campo de e-mail, o atributo "for" vincula o 
+                rótulo ao campo correspondente (senhaLogin). -->
+      <label for="senhaLogin">Senha:</label>
+
+      <!-- Campo de entrada para a senha do usuário.
+           O atributo "type=password" oculta os caracteres digitados 
+                para manter a privacidade.
+           O "id=senhaLogin" identifica esse campo no código.
+           O "placeholder" mostra uma dica dentro do campo, 
+                incentivando o usuário a inserir a senha.
+           O "required" torna esse campo obrigatório para o 
+                envio do formulário. -->
+      <input type="password" id="senhaLogin" placeholder="Digite sua senha" required />
+
+      <!-- Botão para enviar o formulário e realizar o login.
+           O atributo "type=submit" faz com que o formulário 
+                seja enviado ao clicar neste botão. -->
+      <button type="submit">Entrar</button>
+
+    </form> <!-- Fim do formulário de login -->
+
+    <!-- Botão que redireciona o usuário para a página de 
+          cadastro caso ele ainda não tenha uma conta.
+      O ID "btnIrCadastro" pode ser usado no JavaScript para criar a 
+          funcionalidade de redirecionamento. -->
+    <button id="btnIrCadastro">Não possui conta? Cadastre-se</button>
+
+  </div>
+
+  <script>
+
+    // Obtém o formulário de login pelo seu ID 'formLogin' e 
+    //      armazena na constante 'formLogin'.
+    // Isso permite que possamos adicionar eventos e manipular o 
+    //      formulário através do JavaScript.
+    const formLogin = document.getElementById('formLogin');
+
+    // Obtém o botão de cadastro pelo seu ID 'btnIrCadastro' e 
+    //      armazena na constante 'btnIrCadastro'.
+    // Esse botão será usado para redirecionar o usuário 
+    //      para a página de cadastro.
+    const btnIrCadastro = document.getElementById('btnIrCadastro');
+
+    // Adiciona um ouvinte de evento ao formulário de login.
+    // O evento 'submit' é acionado quando o usuário 
+    //      tenta enviar o formulário.
+    formLogin.addEventListener('submit', async (evento) => {
+
+      // Impede o comportamento padrão do formulário, que seria 
+      //      recarregar a página ao enviar os dados.
+      evento.preventDefault();
+
+      // Obtém o valor digitado no campo de e-mail pelo 
+      //      usuário e armazena na variável 'email'.
+      // O '.value' pega o conteúdo do campo de entrada.
+      const email = document.getElementById('emailLogin').value;
+
+      // Obtém o valor digitado no campo de senha pelo 
+      //      usuário e armazena na variável 'senha'.
+      const senha = document.getElementById('senhaLogin').value;
+
+
+      // Inicia um bloco try para tentar executar o código dentro dele.
+      // Se houver algum erro, ele será capturado pelo bloco catch abaixo.
+      try {
+
+        // Faz uma requisição HTTP para a API de login.
+        // A função fetch é usada para enviar uma 
+        //      solicitação para o servidor.
+        // O 'await' faz com que o código espere a resposta 
+        //      da requisição antes de continuar.
+        const resposta = await fetch('http://127.0.0.1:3000/api/usuarios/logar', {
+
+          // Define o método da requisição como 'POST'.
+          // O método POST é usado para enviar dados para o servidor.
+          method: 'POST',
+
+          // Define os cabeçalhos da requisição.
+          // O cabeçalho 'Content-Type' informa ao servidor que os 
+          //      dados estão sendo enviados no formato JSON.
+          headers: { 'Content-Type': 'application/json' },
+
+          // Define o corpo da requisição, convertendo o 
+          //      objeto { email, senha } para o formato JSON.
+          body: JSON.stringify({ email, senha })
+
+        });
+
+        // Aguarda a resposta do servidor e a converte 
+        //      para um objeto JavaScript (JSON).
+        const dados = await resposta.json();
+
+        // Verifica se a resposta foi bem-sucedida (código 
+        //      de status HTTP 200-299).
+        if (resposta.ok) {
+
+          // Exibe uma mensagem ao usuário informando que o 
+          //      login foi realizado com sucesso.
+          alert(dados.mensagem);
+
+          // Redireciona o usuário para a página 'principal.html' 
+          //      após o login bem-sucedido.
+          window.location.href = 'principal.html';
+
+        } else {
+
+          // Se a resposta não foi bem-sucedida, exibe a 
+          //      mensagem de erro retornada pelo servidor.
+          alert(dados.mensagem);
+
+        }
+
+      // Captura qualquer erro que possa ocorrer na 
+      //      requisição e tratamento do JSON.
+      } catch (erro) {
+
+        // Exibe a mensagem de erro no console do 
+        //      navegador para depuração.
+        console.error('Erro no login:', erro);
+
+        // Exibe um alerta para o usuário informando que 
+        //      ocorreu um erro no login.
+        alert('Erro no login. Verifique o console.');
+
+      }
+
+    });
+
+    // Adiciona um evento de escuta ao botão com o ID "btnIrCadastro".
+    // Esse evento será acionado quando o usuário clicar no botão.
+    btnIrCadastro.addEventListener('click', () => {
+
+      // Redireciona o usuário para a página "cadastro_login.html".
+      // Ou seja, ao clicar no botão, o usuário será 
+      //      levado para a página de cadastro.
+      window.location.href = 'cadastro_login.html';
+
+    });
+
+  // Fim da seção de script onde o código JavaScript é executado
+  </script> 
+
+<!-- Fim da seção "body", que contém todo o 
+     conteúdo visível da página -->
+</body> 
+
+<!-- Fim do documento HTML, encerrando a 
+     estrutura do código -->
+</html> 

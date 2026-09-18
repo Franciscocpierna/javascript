@@ -1,0 +1,472 @@
+/* estilos.css */
+
+/* Seletor global (*): Aplica estilos a todos os elementos da página.
+  Isso garante um comportamento uniforme em diferentes navegadores. */
+* {
+
+  /* Remove qualquer margem padrão dos elementos, evitando 
+        espaços indesejados ao redor deles */
+  margin: 0;
+
+  /* Remove qualquer preenchimento interno dos elementos, 
+        garantindo um controle mais preciso do layout */
+  padding: 0;
+
+  /* Define a propriedade de dimensionamento da caixa. 
+     Isso faz com que a largura e altura do elemento 
+          incluam o padding e a borda,
+          evitando cálculos inesperados no tamanho final do elemento. */
+  box-sizing: border-box;
+
+}
+
+/* Estilização do corpo da página (<body>): Define a 
+      aparência geral da interface.
+  Escolhemos uma fonte padronizada e um fundo neutro 
+      para tornar o site mais legível e agradável. */
+body {
+
+  /* Define a família de fontes padrão do site. 
+     Arial é uma escolha comum por ser legível, e sans-serif é 
+          uma alternativa caso Arial não esteja disponível. */
+  font-family: Arial, sans-serif;
+
+  /* Define um fundo cinza-claro (#f2f2f2) para suavizar o 
+          contraste e melhorar a experiência visual do usuário. */
+  background: #f2f2f2;
+
+}
+
+
+/* Classe .container: Define a área principal onde os  
+        conteúdos serão exibidos.
+  Utilizada para centralizar e estruturar os 
+        elementos dentro da página. */
+.container {
+
+  /* Define a largura do contêiner como 80% da largura total da tela, 
+          garantindo um design responsivo sem ocupar 
+          toda a largura disponível. */
+  width: 80%;
+
+  /* Define uma margem automática nas laterais e um 
+          espaçamento superior de 30px, garantindo que o contêiner 
+          fique centralizado horizontalmente. */
+  margin: 30px auto;
+
+  /* Define a cor de fundo do contêiner como branco (#fff), 
+     garantindo um contraste adequado com o fundo da página. */
+  background: #fff;
+
+  /* Adiciona um espaçamento interno de 20px em todos os lados,
+          garantindo que o conteúdo não fique colado às 
+          bordas do contêiner. */
+  padding: 20px;
+
+  /* Adiciona uma sombra suave ao redor do contêiner 
+          para criar um efeito de elevação,
+          tornando a interface mais sofisticada e profissional. */
+  box-shadow: 0 0 5px #ccc;
+}
+
+/* Seletores h1, h2, h3: Estilizam títulos de diferentes níveis,
+          garantindo um layout harmonioso e organizado na 
+          hierarquia do conteúdo. */
+h1, h2, h3 {
+
+  /* Centraliza o texto dos títulos, criando um visual 
+          mais simétrico e agradável. */
+  text-align: center;
+
+  /* Adiciona um espaçamento inferior de 10px para separar os 
+          títulos dos elementos abaixo,
+          melhorando a legibilidade do conteúdo. */
+  margin-bottom: 10px;
+
+}
+
+
+/* Estilização do elemento <form>: Define o layout do formulário, 
+      organizando os elementos de entrada de dados. */
+form {
+
+  /* Define o comportamento de exibição do formulário 
+          como flexível (flex), permitindo um controle 
+          mais preciso sobre a organização dos elementos internos. */
+  display: flex;
+
+  /* Define a direção dos elementos internos do formulário como uma coluna, 
+          garantindo que os campos sejam exibidos um abaixo do outro. */
+  flex-direction: column;
+
+  /* Adiciona um espaçamento inferior de 20px ao formulário, 
+          criando um espaço entre ele e os elementos 
+          subsequentes na página. */
+  margin-bottom: 20px;
+
+}
+
+/* Estilização do <label> dentro do <form>: 
+  Define um espaçamento entre os rótulos dos campos e 
+          os próprios campos de entrada. */
+form label {
+
+  /* Adiciona um espaçamento superior de 10px, 
+          separando os rótulos dos campos anteriores 
+          para melhor organização visual. */
+  margin-top: 10px;
+
+}
+
+
+/* Estilização dos elementos <input> e <button> dentro do <form>: 
+  Define um espaçamento interno e superior para 
+        melhorar a usabilidade. */
+form input,
+form button {
+
+  /* Adiciona um preenchimento interno (padding) de 8px, 
+          tornando os campos de entrada e botões mais 
+          fáceis de interagir. */
+  padding: 8px;
+
+  /* Adiciona um espaçamento superior de 5px, 
+          separando os elementos entre si para 
+          melhor visualização. */
+  margin-top: 5px;
+
+}
+
+/* Estilização do elemento <button>: 
+  Define a aparência geral dos botões do formulário. */
+button {
+
+  /* Define o cursor do mouse como um ponteiro ao 
+        passar sobre o botão, indicando que ele é clicável. */
+  cursor: pointer;
+
+  /* Define a cor de fundo do botão como azul (#007bff), 
+        garantindo um destaque na interface. */
+  background-color: #007bff;
+
+  /* Define a cor do texto do botão como branco (#fff), 
+        garantindo um bom contraste e legibilidade. */
+  color: #fff;
+
+  /* Remove qualquer borda do botão para um visual mais limpo. */
+  border: none;
+
+  /* Adiciona um espaçamento superior de 10px, 
+        separando o botão de outros elementos. */
+  margin-top: 10px;
+
+  /* Aplica um arredondamento nos cantos do botão (4px), 
+        deixando um design mais suave e moderno. */
+  border-radius: 4px;
+
+}
+
+/* Estilização do botão no estado "hover" (quando o 
+        mouse passa por cima): 
+  Muda a cor de fundo para um tom mais escuro para 
+        indicar interatividade. */
+button:hover {
+
+  /* Altera a cor de fundo do botão para um azul 
+          mais escuro (#0056b3), criando um efeito 
+          visual ao passar o mouse sobre ele. */
+  background-color: #0056b3;
+
+}
+
+
+/* Menu */
+
+/* Estilização do menu de funcionalidades (.menu-funcionalidades): 
+  Organiza os botões em linha e adiciona espaçamentos entre eles. */
+.menu-funcionalidades {
+
+  /* Usa o modelo de exibição flexível para alinhar 
+        os elementos em linha. */
+  display: flex;
+
+  /* Adiciona um espaçamento de 10px entre os 
+        elementos dentro do menu. */
+  gap: 10px;
+
+  /* Centraliza os botões dentro do menu horizontalmente. */
+  justify-content: center;
+
+  /* Adiciona um espaçamento inferior de 20px, 
+        garantindo que o menu não fique colado em 
+        outros elementos abaixo. */
+  margin-bottom: 20px;
+
+}
+
+/* Estilização dos botões do menu (.menu-btn): 
+  Define cor, espaçamento e bordas arredondadas 
+        para um visual agradável. */
+.menu-btn {
+
+  /* Define a cor de fundo do botão como verde (#28a745), 
+        destacando a funcionalidade do botão. */
+  background-color: #28a745;
+
+  /* Define a cor do texto do botão como branco (#fff) para contraste. */
+  color: #fff;
+
+  /* Define um espaçamento interno (10px no topo/baixo e 15px nos lados) 
+        para aumentar a área de clique e melhorar a usabilidade. */
+  padding: 10px 15px;
+
+  /* Arredonda as bordas do botão em 4px, 
+        deixando um design mais suave e moderno. */
+  border-radius: 4px;
+
+}
+
+/* Efeito ao passar o mouse sobre o botão (.menu-btn:hover): 
+  Muda a cor de fundo para um tom mais escuro para 
+        indicar interatividade. */
+.menu-btn:hover {
+
+  /* Altera a cor de fundo para um verde mais escuro (#218838), 
+        criando um efeito visual ao passar o mouse sobre o botão. */
+  background-color: #218838;
+
+}
+
+
+/* Seções */
+
+/* Classe .secao-ativa: 
+  Exibe um elemento quando essa classe é aplicada. */
+.secao-ativa { 
+
+  /* Define que o elemento será visível na tela. */
+  display: block; 
+
+}
+
+/* Classe .secao-inativa: 
+  Esconde um elemento quando essa classe é aplicada. */
+.secao-inativa { 
+
+  /* Define que o elemento será oculto na tela. */
+  display: none; 
+
+}
+
+/* Estilização do contêiner do mapa de vagas (.mapa-vagas): 
+  Organiza os elementos em uma grade para representar 
+        as vagas disponíveis. */
+.mapa-vagas {
+
+  /* Adiciona um espaçamento superior de 20px para separar o 
+        mapa de outros elementos. */
+  margin-top: 20px;
+
+  /* Define um layout em grade (grid) para organizar as 
+        vagas visualmente. */
+  display: grid;
+
+  /* Define que o grid terá 5 colunas de tamanho igual. 
+     Isso cria uma disposição organizada das vagas. */
+  grid-template-columns: repeat(5, 1fr);
+
+  /* Define um espaçamento de 10px entre os itens da grade 
+        para garantir um layout mais espaçado e legível. */
+  gap: 10px;
+
+}
+
+/* Estilização dos botões dentro do mapa de vagas (.mapa-vagas button): 
+  Representam as vagas disponíveis no estacionamento e 
+        devem ser clicáveis. */
+.mapa-vagas button {
+
+  /* Adiciona um preenchimento interno de 20px para aumentar o 
+        tamanho do botão, tornando-o mais visível e acessível. */
+  padding: 20px;
+
+  /* Remove a borda padrão do botão, deixando-o com um 
+        design mais limpo. */
+  border: none;
+
+  /* Adiciona um arredondamento de 5px nas bordas, 
+        proporcionando um efeito visual mais suave. */
+  border-radius: 5px;
+
+  /* Define a cor do texto do botão como branco (#fff) 
+        para garantir contraste e legibilidade. */
+  color: #fff;
+
+  /* Define a espessura da fonte como negrito para que o 
+        texto dentro do botão se destaque. */
+  font-weight: bold;
+
+}
+
+/* Classe .vaga-disponivel:
+  Aplica a cor verde ao botão quando a vaga está disponível. */
+.vaga-disponivel {
+
+  /* Define o fundo do botão como verde, indicando 
+        que a vaga está livre. */
+  background-color: green;
+
+}
+
+
+/* PINTAR DE AMARELO */
+
+/* Classe .vaga-reservada:
+  Aplica a cor laranja ao botão quando a vaga está reservada, 
+  indicando que a vaga não está disponível para novos veículos. */
+.vaga-reservada {
+
+  /* Define a cor de fundo como laranja para indicar 
+        que a vaga está ocupada. */
+  background-color: orange;
+
+}
+
+/* Estilos para tabelas:
+  Utilizado para exibir informações formatadas, como 
+        listas de reservas e veículos cadastrados. */
+table {
+
+  /* Define a largura da tabela como 100% para ocupar 
+        toda a largura do container pai. */
+  width: 100%;
+
+  /* Remove os espaços entre as bordas das células para 
+        uma aparência mais uniforme. */
+  border-collapse: collapse;
+
+  /* Adiciona um espaçamento superior de 10px para 
+        separar a tabela dos elementos acima. */
+  margin-top: 10px;
+
+}
+
+/* Estilos para as bordas da tabela, cabeçalhos (th) e células (td):
+  Adicionam uma borda cinza clara para definir a 
+        separação entre os dados. */
+table, th, td {
+
+  /* Define uma borda de 1px sólida com a cor cinza claro (#ccc). */
+  border: 1px solid #ccc;
+  
+}
+
+/* Estilos para células do cabeçalho (th) e do corpo da tabela (td):
+  Define o preenchimento interno e o alinhamento dos textos. */
+th, td {
+
+  /* Adiciona um preenchimento interno de 8px para 
+        melhorar a legibilidade do conteúdo. */
+  padding: 8px;
+
+  /* Centraliza o conteúdo dentro das células da tabela. */
+  text-align: center;
+
+}
+
+
+/* Modal */
+
+/* Classe .modal-container:
+  Define o estilo do modal, uma janela flutuante que 
+        aparece sobre a interface quando o usuário precisa 
+        interagir com uma ação específica (como confirmação 
+        ou entrada de dados). */
+.modal-container {
+
+  /* Define a posição como fixa para que o modal fique 
+        sobre toda a tela, independente do scroll da página. */
+  position: fixed;
+
+  /* Posiciona o modal no topo da tela. */
+  top: 0;
+
+  /* Posiciona o modal no canto esquerdo da tela. */
+  left: 0;
+
+  /* Define a largura como 100% para cobrir toda a largura da tela. */
+  width: 100%;
+
+  /* Define a altura como 100% para cobrir toda a altura da tela. */
+  height: 100%;
+
+  /* Define um fundo semitransparente preto para 
+        destacar o modal e escurecer o fundo da página. */
+  background: rgba(0, 0, 0, 0.5);
+
+  /* Inicialmente, o modal não será exibido na tela. 
+    Ele será ativado via JavaScript. */
+  display: none; /* inicia oculto */
+
+  /* Centraliza o modal tanto na vertical quanto na 
+        horizontal dentro da tela. */
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* Classe .modal-content:
+  Define o estilo do conteúdo interno do modal, 
+        garantindo que a janela seja
+        visível e estilizada adequadamente. */
+.modal-content {
+
+  /* Define o fundo do modal como branco para 
+        destacar o conteúdo sobre o fundo escuro. */
+  background: #fff;
+
+  /* Adiciona um espaçamento interno de 20px para que o 
+        conteúdo não fique colado nas bordas. */
+  padding: 20px;
+
+  /* Define a largura da janela modal como 400px para 
+        manter um tamanho compacto. */
+  width: 400px;
+
+  /* Define a posição relativa para permitir o posicionamento 
+        de elementos filhos, como o botão de fechar. */
+  position: relative;
+
+  /* Adiciona bordas arredondadas de 5px para um 
+        visual mais moderno e suave. */
+  border-radius: 5px;
+
+  /* Adiciona uma sombra ao redor do modal para 
+        destacá-lo do fundo escuro. */
+  box-shadow: 0 0 10px #000;
+
+}
+
+/* Classe .fechar-modal:
+  Define o estilo do botão que permite fechar o modal. */
+.fechar-modal {
+
+  /* Define a posição absoluta para que o botão seja 
+        posicionado dentro do modal sem afetar o layout do conteúdo. */
+  position: absolute;
+
+  /* Posiciona o botão 5 pixels a partir do topo da janela modal. */
+  top: 5px;
+
+  /* Posiciona o botão 10 pixels a partir da borda direita da janela modal. */
+  right: 10px;
+
+  /* Define o tamanho da fonte como 24px para tornar o 
+        botão de fechar bem visível. */
+  font-size: 24px;
+
+  /* Muda o cursor para "pointer" ao passar o mouse, 
+        indicando que o elemento é clicável. */
+  cursor: pointer;
+
+}
