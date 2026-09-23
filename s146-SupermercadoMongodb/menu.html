@@ -1,0 +1,88 @@
+<!-- Declara que este documento segue o padrão do HTML5 -->
+<!-- O "DOCTYPE html" informa ao navegador que o 
+        código usa a versão mais moderna do HTML -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML -->
+<!-- O atributo "lang" define o idioma da página como português -->
+<html lang="pt">
+
+<!-- Cabeçalho da página (não visível diretamente, mas 
+        essencial para funcionamento correto) -->
+<head>
+
+  <!-- Define o conjunto de caracteres como UTF-8 -->
+  <!-- UTF-8 permite que o texto da página contenha caracteres 
+        especiais como acentos (á, é, í, ó, ú, ç) -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página que aparece na aba do navegador -->
+  <!-- Esse texto também pode ser usado por mecanismos de 
+        busca como Google para indexação -->
+  <title>Menu de Configurações</title>
+
+  <!-- Importa o arquivo CSS externo "style.css" -->
+  <!-- Esse arquivo contém todas as regras de estilo para 
+        personalizar a aparência da página -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<!-- Início do corpo da página -->
+<!-- Tudo o que for visível para o usuário estará dentro da tag <body> -->
+<body>
+
+  <!-- Criação de um contêiner principal para organizar os elementos na página -->
+  <!-- A classe "container" é utilizada no CSS para aplicar 
+        estilos e centralizar o conteúdo -->
+  <div class="container">
+
+    <!-- Cabeçalho da página com o título principal -->
+    <!-- A tag <h2> define um título de nível 2, menor que <h1>, 
+            usado para subtítulos -->
+    <h2>Menu de Configurações</h2>
+
+    <!-- Criação de um menu principal que agrupa as opções de gerenciamento -->
+    <!-- A classe "menu-principal" é usada no CSS para 
+            aplicar um estilo específico ao menu -->
+    <div class="menu-principal">
+
+      <!-- Botão para acessar a página de gerenciamento de usuários -->
+      <!-- Quando o botão for clicado, a página "listaUsuarios.html" será aberta -->
+      <button onclick="window.location.href='listaUsuarios.html'">Gerenciar Usuários</button>
+
+      <!-- Botão para acessar a página de gerenciamento de produtos -->
+      <!-- Direciona o usuário para "listaProdutos.html" ao ser clicado -->
+      <button onclick="window.location.href='listaProdutos.html'">Gerenciar Produtos</button>
+
+      <!-- Botão para acessar a página de gerenciamento de fornecedores -->
+      <!-- Abre a página "listaFornecedores.html" quando pressionado -->
+      <button onclick="window.location.href='listaFornecedores.html'">Gerenciar Fornecedores</button>
+
+      <!-- Botão para acessar a página de gerenciamento de clientes -->
+      <!-- Redireciona para "listaClientes.html" ao clicar -->
+      <button onclick="window.location.href='listaClientes.html'">Gerenciar Clientes</button>
+
+      <!-- Botão para acessar a página de relatórios do sistema -->
+      <!-- Direciona o usuário para "relatorio.html" ao ser clicado -->
+      <button onclick="window.location.href='relatorio.html'">Relatórios</button>
+      
+    </div>
+
+    <!-- Criação de um contêiner para posicionar o botão com margem superior -->
+    <!-- O atributo "style" define um espaçamento superior de 20 
+            pixels para separar o botão do restante do conteúdo -->
+    <div style="margin-top:20px;">
+
+      <!-- Botão para voltar para a tela principal -->
+      <!-- A classe "cancel" aplica um estilo específico ao botão, 
+              geralmente destacando-o como uma opção secundária -->
+      <!-- Quando o botão for clicado, o usuário será 
+              redirecionado para a página "telaPrincipal.html" -->
+      <button class="cancel" onclick="window.location.href='telaPrincipal.html'">Voltar</button>
+
+    </div>
+
+  </div>
+</body>
+</html>

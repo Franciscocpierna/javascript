@@ -1,0 +1,138 @@
+<!-- Define o tipo de documento como HTML5 -->
+<!DOCTYPE html>
+
+<!-- Inicia o documento HTML e define que o idioma 
+      principal da página é português -->
+<html lang="pt">
+
+<!-- Inicia a seção de configuração da página, onde 
+        são definidas informações essenciais -->
+<head>
+  
+
+  <!-- Define o conjunto de caracteres como UTF-8 para 
+          suportar acentuação e caracteres especiais -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página, que aparecerá na aba do navegador -->
+  <title>Cadastro de Cliente</title>
+
+  <!-- Importa um arquivo CSS chamado "style.css" para 
+          aplicar estilos visuais à página -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<!-- Início do corpo da página onde todo o conteúdo 
+          visível será exibido -->
+<body>
+
+  <!-- Cria um contêiner (div) que agrupa os elementos do formulário -->
+  <!-- A classe 'container' mantém a estrutura alinhada, e 
+          'cadastro-container' pode conter estilos 
+          específicos para esta seção -->
+  <div class="container cadastro-container">
+
+    <!-- Título da página que indica que estamos cadastrando um cliente -->
+    <!-- O ID 'tituloCliente' pode ser alterado via JavaScript 
+              para 'Editar Cliente' caso seja uma edição -->
+    <h2 id="tituloCliente">Cadastrar Cliente</h2>
+
+    <!-- Início do formulário onde serão preenchidos os dados do cliente -->
+    <!-- O ID 'cadastroClienteForm' será utilizado no 
+              JavaScript para manipular os dados -->
+    <form id="cadastroClienteForm">
+
+      <!-- Campo oculto que armazena o ID do cliente (caso seja uma edição) -->
+      <!-- Este campo não aparece para o usuário, mas é usado 
+              para saber se o formulário é de cadastro ou edição -->
+      <input type="hidden" id="clienteId" />
+
+      <!-- Início do campo de CPF -->
+      <!-- O rótulo (label) indica que este campo é para CPF -->
+      <div class="form-group">
+        <label for="cpfCliente">CPF</label>
+
+        <!-- Campo de entrada de texto onde o usuário digita o CPF -->
+        <!-- O atributo 'required' indica que o preenchimento é obrigatório -->
+        <input type="text" id="cpfCliente" required />
+
+      </div>
+
+      <!-- Início do campo de Nome -->
+      <!-- O rótulo (label) indica que este campo é para 
+              inserir o nome do cliente -->
+      <div class="form-group">
+
+        <label for="nomeCliente">Nome</label>
+
+        <!-- Campo de entrada de texto onde o usuário digita o nome do cliente -->
+        <!-- O atributo 'required' indica que este campo é obrigatório -->
+        <input type="text" id="nomeCliente" required />
+
+      </div>
+
+      <!-- Início do campo de Telefone -->
+      <!-- O rótulo (label) indica que este campo é para 
+              inserir o telefone do cliente -->
+      <div class="form-group">
+
+        <label for="telefoneCliente">Telefone</label>
+
+        <!-- Campo de entrada de texto onde o usuário 
+                digita o telefone do cliente -->
+        <!-- Neste caso, o campo não é obrigatório, pois 
+                não há o atributo 'required' -->
+        <input type="text" id="telefoneCliente" />
+
+      </div>
+
+      <!-- Início do campo de Endereço -->
+      <!-- O rótulo (label) informa que este campo é 
+                para inserir o endereço do cliente -->
+      <div class="form-group">
+      
+        <!-- Rótulo que identifica que o campo abaixo é 
+                  destinado ao endereço -->
+        <label for="enderecoCliente">Endereço</label>
+
+        <!-- Campo de entrada de texto onde o usuário digita o 
+                  endereço do cliente -->
+        <!-- Este campo não é obrigatório, pois não possui o 
+                  atributo 'required' -->
+        <input type="text" id="enderecoCliente" />
+      </div>
+
+      <!-- Início da seção de botões de ação -->
+      <!-- Esta div agrupa os botões de ação para salvar ou voltar -->
+      <div class="form-actions">
+      
+        <!-- Botão de salvar -->
+        <!-- Define o tipo como 'submit', ou seja, ao ser 
+                  clicado ele enviará o formulário -->
+        <!-- A classe 'save' pode ser usada para estilizar o 
+                  botão com uma cor diferente -->
+        <button type="submit" class="save">Salvar</button>
+
+        <!-- Botão de voltar -->
+        <!-- Define o tipo como 'button', pois ele não envia o formulário -->
+        <!-- Ao ser clicado, redireciona o usuário para a 
+                página 'listaClientes.html' -->
+        <!-- A classe 'cancel' pode ser usada para estilizar o 
+                botão de forma diferente -->
+        <button type="button" class="cancel" onclick="window.location.href='listaClientes.html'">Voltar</button>
+
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Importação do arquivo JavaScript -->
+  <!-- O arquivo 'script.js' contém as funcionalidades e 
+          interações do formulário -->
+  <!-- Ele será carregado e executado quando a página for 
+          aberta no navegador -->
+  <script src="script.js"></script>
+
+</body>
+</html>

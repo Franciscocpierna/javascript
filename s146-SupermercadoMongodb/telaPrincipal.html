@@ -1,0 +1,178 @@
+<!-- Declaração do tipo de documento como HTML5 -->
+<!DOCTYPE html>
+
+<!-- Abertura da tag HTML com definição do idioma como português -->
+<html lang="pt">
+
+<!-- Cabeçalho da página (contém informações de 
+        configuração, links e título) -->
+<head>
+
+  <!-- Definição do conjunto de caracteres da página para 
+        suportar acentos e caracteres especiais -->
+  <meta charset="UTF-8" />
+
+  <!-- Título da página que aparecerá na aba do navegador -->
+  <title>Tela Principal - Vendas</title>
+
+  <!-- Link para o arquivo de estilos CSS externo (style.css) 
+        para definir o design da página -->
+  <link rel="stylesheet" href="style.css" />
+
+<!-- Fim do cabeçalho -->
+</head>
+
+<!-- Início do corpo da página -->
+<body>
+
+  <!-- Div que contém todo o conteúdo principal da página -->
+  <div class="container">
+
+    <!-- Título principal do sistema de vendas que 
+            será exibido no topo da página -->
+    <h2>Sistema de Vendas</h2>
+
+    <!-- Barra fixa no topo da tela (sticky), usada para 
+            navegação e ações rápidas -->
+    <div class="pdv-top-bar">
+
+      <!-- Campo de entrada para o CPF do cliente, que é opcional e 
+              pode ser deixado em branco caso não seja necessário. -->
+      <!-- O rótulo (label) está associado ao campo de entrada através 
+              do atributo "for", o que melhora a acessibilidade. -->
+      <!-- Quando o usuário clica no rótulo, o foco é automaticamente 
+              direcionado para o campo de entrada do CPF. -->
+      <!-- O atributo "style" adiciona um espaçamento à direita de 10px, 
+              separando o rótulo do campo de entrada. -->
+      <label for="cpfClienteVenda" style="margin-right:10px;">CPF Cliente (opcional):</label>
+
+      <!-- Campo de entrada do tipo "text" onde o usuário pode 
+              digitar o CPF do cliente. -->
+      <!-- O atributo "id" permite que o campo seja manipulado 
+              pelo JavaScript quando necessário. -->
+      <!-- O atributo "placeholder" exibe um exemplo de CPF (11122233344) 
+              para guiar o usuário sobre o formato esperado. -->
+      <!-- O estilo "width:140px;" define uma largura fixa de 140 
+              pixels para manter a consistência do layout. -->
+      <input type="text" id="cpfClienteVenda" placeholder="Ex.: 11122233344" style="width:140px;" />
+
+
+      <!-- Rótulo (label) para o campo de entrada do código do produto. -->
+      <!-- O atributo "for" está associado ao campo de entrada com o 
+              mesmo "id", garantindo acessibilidade. -->
+      <!-- O "style" adiciona uma margem à esquerda de 20px, 
+              criando um espaçamento entre os elementos anteriores. -->
+      <label for="codigoProduto" style="margin-left:20px;">Cód. Produto:</label>
+
+      <!-- Campo de entrada onde o usuário pode digitar o código do produto. -->
+      <!-- O atributo "id" permite que esse campo seja acessado e 
+              manipulado pelo JavaScript. -->
+      <!-- O "placeholder" exibe um exemplo ("Ex.: 12345") para 
+              indicar ao usuário o formato do código do produto. -->
+      <!-- O "style" define uma largura fixa de 100 pixels, 
+              garantindo que o campo não fique muito largo ou muito estreito. -->
+      <input type="text" id="codigoProduto" placeholder="Ex.: 12345" style="width:100px;" />
+
+      <!-- Botão que permite adicionar o produto à lista de vendas. -->
+      <!-- O "id" é "btnAdicionar", permitindo que o JavaScript 
+              identifique e associe eventos ao botão. -->
+      <!-- A classe "save" pode estar definida no CSS para estilizar o 
+              botão, com uma cor específica. -->
+      <!-- Quando o botão for clicado, o JavaScript buscará o produto 
+              correspondente ao código digitado e o adicionará à lista. -->
+      <button id="btnAdicionar" class="save">Adicionar</button>
+
+
+      <!-- Botão para finalizar a venda. -->
+      <!-- O "id" permite que o JavaScript identifique e associe um 
+              evento de clique a ele. -->
+      <!-- A classe "save" estilizada no CSS para indicar 
+              uma ação de confirmação, uma cor verde. -->
+      <!-- O "style" adiciona uma margem à esquerda de 20px, 
+              criando espaçamento entre este botão e os elementos anteriores. -->
+      <button id="btnFinalizarVenda" class="save" style="margin-left:20px;">Finalizar Venda</button>
+
+      <!-- Botão para acessar as configurações do sistema. -->
+      <!-- O "id" permite que o JavaScript associe uma função a 
+              este botão quando for clicado. -->
+      <!-- A classe "edit" estar estilizada no CSS para indicar 
+              uma ação de edição ou configuração, com uma cor amarela. -->
+      <button id="btnConfiguracoes" class="edit">Configurações</button>
+
+    </div>
+
+    <!-- Tabela com os itens da venda -->
+    <!-- Início da tabela que exibirá os produtos adicionados à venda -->
+    <table>
+
+      <!-- Cabeçalho da tabela, onde os títulos de cada coluna são definidos -->
+      <thead>
+
+        <tr>
+
+          <!-- Coluna para exibir o nome do produto adicionado à venda -->
+          <th>Produto</th>
+
+          <!-- Coluna para mostrar o preço unitário do produto -->
+          <th>Preço</th>
+
+          <!-- Coluna para exibir a quantidade de unidades do 
+                  produto que foram adicionadas -->
+          <th>Qtd.</th>
+
+          <!-- Coluna que exibirá o valor total do produto na 
+                  venda (quantidade x preço unitário) -->
+          <th>Subtotal</th>
+
+          <!-- Coluna onde ficarão os botões de ação, como remover ou 
+                  editar a quantidade do produto -->
+          <th>Ações</th>
+          
+        </tr>
+      </thead>
+
+      <!-- Corpo da tabela onde os produtos adicionados à venda 
+              serão inseridos dinamicamente via JavaScript -->
+      <tbody id="tabelaVendasBody"></tbody>
+
+    </table>
+
+
+    <!-- Seção que exibe o valor total da compra -->
+    <!-- O valor será atualizado dinamicamente com base nos 
+            produtos adicionados -->
+
+    <!-- Elemento de título de nível 3 (h3) para destacar o total -->
+    <!-- style="text-align:right; margin-right:50px;" 
+            define a aparência do título -->
+
+    <!-- text-align: right; -> Alinha o texto à direita dentro do elemento h3 -->
+    <!-- margin-right: 50px; -> Adiciona um espaço (margem) de 
+            50 pixels à direita para afastar o título da borda da tela -->
+    <h3 style="text-align:right; margin-right:50px;">
+
+      <!-- Texto fixo indicando o total da compra em reais -->
+      Total: R$ 
+
+      <!-- Elemento <span> onde o valor total será inserido 
+                dinamicamente pelo JavaScript -->
+      <!-- O ID 'valorTotal' permite que o JavaScript atualize 
+                este valor conforme os produtos são adicionados -->
+      <span id="valorTotal">0.00</span>
+
+    </h3>
+
+  </div>
+
+  <!-- Importa o arquivo JavaScript externo chamado "script.js" -->
+  <!-- Esse script contém a lógica para manipular os 
+          dados do formulário -->
+  <!-- Ao incluir esse arquivo, todo o código JavaScript 
+          necessário para o funcionamento do cadastro será carregado -->
+  <script src="script.js"></script>
+
+<!-- Fecha a tag body, indicando o fim do conteúdo da página -->
+</body>
+
+<!-- Fecha a tag html, indicando o fim do documento HTML -->
+</html>

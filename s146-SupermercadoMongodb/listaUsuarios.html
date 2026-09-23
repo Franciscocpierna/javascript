@@ -1,0 +1,125 @@
+<!-- Declara que este documento é do tipo HTML5 -->
+<!-- Isso é essencial para garantir que os navegadores 
+      interpretem corretamente o código -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML -->
+<!-- A tag <html> define o início da estrutura da página -->
+<!-- O atributo "lang" define o idioma principal do conteúdo. 
+    Aqui, está configurado para "pt" (português) -->
+<html lang="pt"> 
+
+<head> <!-- Início da seção de metadados e configurações da página -->
+
+  <!-- Define o conjunto de caracteres da página como UTF-8 -->
+  <!-- UTF-8 é um padrão que suporta acentos e caracteres 
+          especiais, essencial para o idioma português -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página -->
+  <!-- Esse título aparece na aba do navegador e nos 
+          resultados dos mecanismos de busca -->
+  <title>Lista de Usuários</title>
+
+  <!-- Importa um arquivo CSS externo para aplicar estilos à página -->
+  <!-- O arquivo "style.css" contém todas as regras de 
+          design e formatação da página -->
+  <link rel="stylesheet" href="style.css" />
+
+<!-- Fim da seção <head>, onde ficam configurações e 
+          metadados da página -->
+</head> 
+
+
+<!-- Início do corpo da página -->
+<!-- Tudo que for visível na página será colocado 
+          dentro da tag <body> -->
+<body>
+
+  <!-- Criação de um contêiner para organizar o conteúdo da página -->
+  <!-- A classe "container" é usada para aplicar 
+          estilos como largura fixa e alinhamento central -->
+  <div class="container">
+
+    <!-- Cabeçalho principal da página -->
+    <!-- A tag <h2> define um título de nível 2, menor que <h1> -->
+    <!-- Este título indica que a página é destinada a 
+            exibir uma lista de usuários cadastrados -->
+    <h2>Lista de Usuários</h2>
+
+    <!-- Criação de uma barra superior (top-bar) para 
+            navegação e filtros -->
+    <div class="top-bar">
+
+      <!-- Botão de voltar -->
+      <!-- Quando o usuário clicar neste botão, ele será 
+            redirecionado para a página 'menu.html' -->
+      <!-- A classe "cancel" é usada para aplicar estilos 
+            específicos a este botão -->
+      <button class="cancel" onclick="window.location.href='menu.html'">Voltar</button>
+
+      <!-- Campo de entrada de texto para buscar usuários -->
+      <!-- O usuário pode digitar um nome ou email para filtrar a 
+              lista de usuários -->
+      <!-- O atributo "id" define um identificador único, 
+              permitindo que o JavaScript manipule este campo -->
+      <!-- O atributo "placeholder" exibe um texto dentro do 
+              campo antes do usuário digitar algo -->
+      <input type="text" id="filtroUsuario" placeholder="Buscar por nome ou email" />
+
+      <!-- Botão para cadastrar um novo usuário -->
+      <!-- Ao clicar, o usuário será redirecionado para a 
+              página 'cadastroUsuario.html' -->
+      <!-- A classe "register" é usada para estilizar este botão -->
+      <button class="register" onclick="window.location.href='cadastroUsuario.html'">+ Cadastrar</button>
+
+    </div>
+
+
+    <!-- Criação de uma tabela para exibir a lista de usuários -->
+    <table>
+
+      <!-- Cabeçalho da tabela (thead) -->
+      <thead>
+
+        <!-- Início de uma linha dentro do cabeçalho -->
+        <tr>
+
+          <!-- Coluna "Nome" -->
+          <!-- Esta coluna exibirá o nome de cada usuário na lista -->
+          <th>Nome</th>
+
+          <!-- Coluna "Email" -->
+          <!-- Esta coluna mostrará o email cadastrado de cada usuário -->
+          <th>Email</th>
+
+          <!-- Coluna "Idade" -->
+          <!-- Exibirá a idade de cada usuário -->
+          <th>Idade</th>
+
+          <!-- Coluna "Ações" -->
+          <!-- Aqui ficarão os botões para editar ou excluir cada usuário -->
+          <th>Ações</th>
+
+        </tr>
+      </thead>
+
+      <!-- Corpo da tabela onde os usuários serão 
+              inseridos dinamicamente pelo JavaScript -->
+      <tbody id="listaUsuarios"></tbody>
+
+    </table>
+
+  </div>
+
+  <!-- Importa o arquivo JavaScript externo chamado "script.js" -->
+  <!-- Esse script contém a lógica para manipular os dados do formulário -->
+  <!-- Ao incluir esse arquivo, todo o código JavaScript 
+          necessário para o funcionamento do cadastro será carregado -->
+  <script src="script.js"></script>
+
+<!-- Fecha a tag body, indicando o fim do conteúdo da página -->
+</body>
+
+<!-- Fecha a tag html, indicando o fim do documento HTML -->
+</html>

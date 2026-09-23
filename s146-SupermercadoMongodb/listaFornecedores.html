@@ -1,0 +1,116 @@
+<!-- Declaração do tipo de documento como HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML -->
+<html lang="pt"> <!-- Define o idioma da página como português -->
+
+<head>
+
+  <!-- Define a codificação de caracteres como UTF-8, 
+        permitindo acentuação e caracteres especiais -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página que aparecerá na aba do navegador -->
+  <title>Lista de Fornecedores</title>
+
+  <!-- Importa o arquivo CSS externo que contém os estilos da 
+          página, como cores, espaçamentos e fontes -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<!-- Início do corpo da página -->
+<body>
+
+  <!-- Criação de um contêiner para organizar o conteúdo da página -->
+  <div class="container">
+
+    <!-- Título da seção que indica que esta página 
+            exibe a lista de fornecedores -->
+    <h2>Lista de Fornecedores</h2>
+
+    <!-- Início da barra superior da página que contém os 
+            controles principais -->
+    <div class="top-bar">
+
+      <!-- Botão de voltar -->
+      <!-- Este botão tem a classe "cancel", que 
+              define sua aparência visual através do CSS -->
+      <!-- Quando o botão for clicado, o navegador será 
+              redirecionado para a página "menu.html" -->
+      <!-- Isso acontece porque a função `window.location.href='menu.html'` 
+              altera a URL da página -->
+      <button class="cancel" onclick="window.location.href='menu.html'">Voltar</button>
+
+      <!-- Campo de entrada de texto para busca de fornecedores -->
+      <!-- O usuário pode digitar o nome de um fornecedor nesse 
+              campo para filtrá-lo na lista -->
+      <!-- O atributo `id="filtroFornecedor"` permite que o JavaScript 
+              acesse esse campo e implemente a filtragem -->
+      <!-- O atributo `placeholder="Buscar por nome"` exibe um texto 
+              dentro do campo até que o usuário comece a digitar -->
+      <input type="text" id="filtroFornecedor" placeholder="Buscar por nome" />
+
+      <!-- Botão para cadastrar um novo fornecedor -->
+      <!-- O botão tem a classe "register", que 
+              estiliza sua aparência com CSS -->
+      <!-- Quando o botão é clicado, ele redireciona o usuário para a 
+              página "cadastroFornecedor.html" -->
+      <!-- O JavaScript embutido dentro do `onclick` altera a URL da 
+              página para carregar a tela de cadastro -->
+      <button class="register" onclick="window.location.href='cadastroFornecedor.html'">+ Cadastrar</button>
+
+    </div>
+
+    <!-- Início da tabela que exibe a lista de fornecedores -->
+    <table>
+
+      <!-- Cabeçalho da tabela -->
+      <thead>
+        
+        <!-- Início da linha do cabeçalho -->
+        <tr>
+
+          <!-- Coluna "Nome" -->
+          <!-- Esta coluna armazena e exibe o nome dos fornecedores -->
+          <th>Nome</th>
+
+          <!-- Coluna "Telefone" -->
+          <!-- Aqui será exibido o telefone de cada fornecedor -->
+          <th>Telefone</th>
+
+          <!-- Coluna "Email" -->
+          <!-- Exibe o email do fornecedor -->
+          <th>Email</th>
+
+          <!-- Coluna "Ações" -->
+          <!-- Nesta coluna, serão adicionados botões para 
+                  editar e excluir fornecedores -->
+          <th>Ações</th>
+
+        </tr>
+
+        <!-- Fim da linha do cabeçalho -->
+      </thead>
+
+      <!-- Corpo da tabela -->
+      <!-- Aqui os dados dos fornecedores serão inseridos 
+              dinamicamente pelo JavaScript -->
+      <tbody id="listaFornecedores"></tbody>
+
+    </table>
+    <!-- Fim da tabela -->
+
+  </div>
+  
+  <!-- Importa o arquivo JavaScript externo chamado "script.js" -->
+  <!-- Esse script contém a lógica para manipular os dados do formulário -->
+  <!-- Ao incluir esse arquivo, todo o código JavaScript 
+          necessário para o funcionamento do cadastro será carregado -->
+  <script src="script.js"></script>
+
+<!-- Fecha a tag body, indicando o fim do conteúdo da página -->
+</body>
+
+<!-- Fecha a tag html, indicando o fim do documento HTML -->
+</html>

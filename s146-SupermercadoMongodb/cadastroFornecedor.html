@@ -1,0 +1,117 @@
+<!-- Declaração do tipo de documento, informando ao 
+        navegador que este é um documento HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do código HTML e definição do idioma da 
+        página como português -->
+<html lang="pt">
+
+<head>
+
+  <!-- Define o conjunto de caracteres como UTF-8, garantindo 
+          suporte a caracteres acentuados e símbolos especiais -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página, que será exibido na aba do navegador -->
+  <title>Cadastro de Fornecedor</title>
+
+  <!-- Importa um arquivo CSS externo chamado "style.css" 
+          para aplicar estilos à página -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<!-- Início do corpo da página -->
+<body>
+
+  <!-- Div que contém todo o formulário, usada para 
+          centralizar e estilizar -->
+  <div class="container cadastro-container">
+
+    <!-- Cabeçalho do formulário, onde o título "Cadastrar Fornecedor" é exibido -->
+    <!-- Caso esteja editando um fornecedor, o título 
+            será alterado dinamicamente -->
+    <h2 id="tituloFornecedor">Cadastrar Fornecedor</h2>
+
+    <!-- Início do formulário para cadastrar ou 
+            editar um fornecedor -->
+    <form id="cadastroFornecedorForm">
+
+      <!-- Campo oculto que armazena o ID do fornecedor, 
+              caso esteja sendo editado -->
+      <!-- Esse campo é necessário para diferenciar entre um 
+              novo cadastro e uma edição -->
+      <input type="hidden" id="fornecedorId" />
+
+      <!-- Div que agrupa o campo de entrada do nome do fornecedor -->
+      <div class="form-group">
+
+        <!-- Rótulo para identificar que o campo abaixo é 
+                destinado ao nome do fornecedor -->
+        <label for="nomeFornecedor">Nome</label>
+        
+        <!-- Campo de entrada de texto onde o usuário digita o 
+                nome do fornecedor -->
+        <!-- O atributo "required" garante que esse campo não 
+                pode ser deixado em branco -->
+        <input type="text" id="nomeFornecedor" required />
+
+      </div>
+
+      <!-- Div que agrupa o campo de entrada do telefone do fornecedor -->
+      <div class="form-group">
+
+        <!-- Rótulo para indicar que o campo abaixo é destinado ao 
+                telefone do fornecedor -->
+        <label for="telefoneFornecedor">Telefone</label>
+
+        <!-- Campo de entrada de texto onde o usuário digita o 
+                telefone do fornecedor -->
+        <!-- O atributo "required" obriga o preenchimento do 
+                telefone antes de enviar o formulário -->
+        <input type="text" id="telefoneFornecedor" required />
+
+      </div>
+      
+      <!-- Div que agrupa o campo de entrada do email do fornecedor -->
+      <div class="form-group">
+      
+        <!-- Rótulo para indicar que o campo abaixo é 
+                destinado ao email do fornecedor -->
+        <label for="emailFornecedor">Email</label>
+      
+        <!-- Campo de entrada do tipo email onde o usuário 
+                digita o email do fornecedor -->
+        <!-- O tipo "email" ajuda a validar automaticamente se o 
+                usuário digitou um formato válido -->
+        <input type="email" id="emailFornecedor" />
+      
+      </div>
+
+      <!-- Div que agrupa os botões de ação do formulário -->
+      <div class="form-actions">
+        
+        <!-- Botão para salvar as informações do fornecedor -->
+        <!-- O atributo "type=submit" faz com que o formulário 
+                seja enviado quando clicado -->
+        <!-- A classe "save" pode ser usada no CSS para 
+                estilizar este botão -->
+        <button type="submit" class="save">Salvar</button>
+
+        <!-- Botão para voltar à página de listagem de fornecedores -->
+        <!-- O atributo "type=button" impede que ele envie o formulário -->
+        <!-- O evento "onclick" redireciona para a página "listaFornecedores.html" -->
+        <button type="button" class="cancel" onclick="window.location.href='listaFornecedores.html'">Voltar</button>
+        
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Importação do arquivo JavaScript -->
+  <!-- O arquivo "script.js" contém a lógica para manipular o 
+          formulário e interagir com o backend -->
+  <script src="script.js"></script>
+
+</body>
+</html>

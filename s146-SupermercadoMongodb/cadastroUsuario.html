@@ -1,0 +1,144 @@
+<!-- Declaração do tipo de documento como HTML5 -->
+<!DOCTYPE html>
+
+<!-- Abertura da tag <html> que define o início do documento HTML -->
+<!-- O atributo "lang" define o idioma da página como português -->
+<html lang="pt">
+
+<!-- Abertura da seção <head> que contém metadados da página -->
+<head>
+
+  <!-- Define a codificação de caracteres como UTF-8 para 
+          suportar caracteres especiais -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página, que aparecerá na aba do navegador -->
+  <title>Cadastro de Usuário</title>
+
+  <!-- Importa o arquivo CSS externo "style.css" para estilizar a página -->
+  <link rel="stylesheet" href="style.css" />
+
+<!-- Fechamento da seção <head> -->
+</head>
+
+
+<!-- Início da estrutura do corpo da página -->
+<body>
+
+  <!-- Criamos uma div com a classe 'container cadastro-container' 
+            para agrupar todo o conteúdo do formulário.
+       A classe 'container' serve para centralizar e organizar o 
+            layout, e 'cadastro-container' pode ser usada
+            para aplicar estilos específicos para telas de cadastro. -->
+  <div class="container cadastro-container">
+
+    <!-- Cabeçalho de nível 2 (<h2>) que exibe o título da 
+              página de cadastro de usuário.
+         O ID 'tituloUsuario' permite que o texto desse cabeçalho 
+              seja alterado dinamicamente pelo JavaScript,
+              por exemplo, mudando para 'Editar Usuário' caso o 
+              usuário esteja editando um registro já existente. -->
+    <h2 id="tituloUsuario">Cadastrar Usuário</h2>
+
+    <!-- Início do formulário de cadastro de usuário. 
+     O ID 'cadastroUsuarioForm' é usado no JavaScript para
+              manipular os dados do formulário, como validar as 
+              informações antes do envio e processar o cadastro. -->
+    <form id="cadastroUsuarioForm">
+
+      <!-- Campo de entrada oculto (<input type="hidden">) que 
+                  armazena o ID do usuário quando for uma edição.
+           Se o usuário estiver cadastrando um novo usuário, esse campo permanece vazio.
+           Se for uma edição, esse campo será preenchido com o ID do usuário existente. -->
+      <input type="hidden" id="usuarioId" />
+
+      <!-- Grupo de campos do formulário para entrada do nome do usuário -->
+      <div class="form-group">
+      
+        <!-- Rótulo (label) para o campo de entrada do nome, 
+                  vinculando ao campo pelo atributo 'for' -->
+        <label for="nomeUsuario">Nome</label>
+      
+        <!-- Campo de entrada para o nome do usuário. 
+             O atributo 'id' identifica o campo no JavaScript.
+             O atributo 'required' obriga o usuário a preencher 
+                    esse campo antes de enviar o formulário. -->
+        <input type="text" id="nomeUsuario" required />
+      </div>
+
+      <!-- Grupo de campos do formulário para entrada do email do usuário -->
+      <div class="form-group">
+
+        <!-- Rótulo (label) para o campo de email, vinculado ao 
+                  campo pelo atributo 'for' -->
+        <label for="emailUsuario">Email</label>
+
+        <!-- Campo de entrada do email. 
+             O atributo 'type="email"' faz com que o navegador 
+                    verifique se o valor digitado é um email válido.
+             O atributo 'required' garante que o campo não 
+                    possa ser enviado vazio. -->
+        <input type="email" id="emailUsuario" required />
+      </div>
+
+      <!-- Grupo de campos do formulário para entrada da senha do usuário -->
+      <div class="form-group">
+      
+        <!-- Rótulo (label) para o campo de senha, indicando ao 
+                usuário qual informação inserir -->
+        <label for="senhaUsuario">Senha</label>
+      
+        <!-- Campo de entrada para a senha do usuário.
+             O atributo 'type="password"' esconde os caracteres 
+                    digitados para segurança. 
+             O atributo 'id' permite acessar esse campo no JavaScript. -->
+        <input type="password" id="senhaUsuario" />
+      </div>
+
+      <!-- Grupo de campos do formulário para entrada da idade do usuário -->
+      <div class="form-group">
+
+        <!-- Rótulo (label) para o campo de idade, instruindo o 
+                usuário sobre qual informação fornecer -->
+        <label for="idadeUsuario">Idade</label>
+
+        <!-- Campo de entrada para a idade do usuário.
+             O atributo 'type="number"' faz com que apenas 
+                    números possam ser digitados.
+             O atributo 'required' garante que o usuário não 
+                    possa enviar o formulário sem preencher este campo. -->
+        <input type="number" id="idadeUsuario" required />
+      </div>
+
+      <!-- Div que agrupa os botões de ação do formulário -->
+      <div class="form-actions">
+        
+        <!-- Botão para salvar o usuário -->
+        <!-- O atributo 'type="submit"' faz com que ao ser 
+                clicado, o formulário seja enviado -->
+        <!-- A classe 'save' pode ser usada para estilizar o botão no CSS -->
+        <button type="submit" class="save">Salvar</button>
+
+        <!-- Botão para voltar à lista de usuários sem salvar -->
+        <!-- O atributo 'type="button"' impede que esse botão 
+                envie o formulário -->
+        <!-- O atributo 'onclick' redireciona o usuário para a 
+                página 'listaUsuarios.html' ao ser clicado -->
+        <button type="button" class="cancel" onclick="window.location.href='listaUsuarios.html'">Voltar</button>
+        
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Importação do arquivo JavaScript externo -->
+  <!-- Esse script contém a lógica para manipular o 
+          formulário de cadastro de usuário -->
+  <!-- O navegador executará o script após carregar a página -->
+  <script src="script.js"></script>
+
+<!-- Fim do corpo da página -->
+</body>
+
+<!-- Fim do documento HTML -->
+</html>

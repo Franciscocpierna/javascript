@@ -1,0 +1,125 @@
+<!-- Indica que este é um documento HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do código HTML -->
+<!-- O atributo "lang='pt'" define o idioma da 
+        página como Português -->
+<html lang="pt">
+
+<!-- Cabeçalho do documento HTML -->
+<head>
+
+  <!-- Define a codificação de caracteres como UTF-8 -->
+  <!-- Isso permite o uso de acentos, cedilha e outros 
+          caracteres especiais -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página -->
+  <!-- Esse título será exibido na aba do navegador e 
+          também nos favoritos -->
+  <title>Login - Supermercado</title>
+
+  <!-- Importa um arquivo CSS externo -->
+  <!-- O arquivo "style.css" contém as regras de 
+          estilo para esta página -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<!-- Início do corpo da página -->
+<body>
+
+  <!-- Criação de um contêiner (div) que agrupa os 
+          elementos da tela de login -->
+  <!-- A classe "container" define a estrutura da página -->
+  <!-- A classe "cadastro-container" adiciona estilos 
+          específicos para a área de login -->
+  <div class="container cadastro-container">
+
+    <!-- Título principal da página -->
+    <!-- O texto "Login" será exibido na tela para 
+            indicar que é a página de login -->
+    <h2>Login</h2>
+
+    <!-- Formulário de login -->
+    <!-- O atributo "id='loginForm'" identifica esse formulário 
+            para que o JavaScript possa manipulá-lo -->
+    <form id="loginForm">
+
+      <!-- Início de um grupo de formulário -->
+      <!-- Essa div agrupa um rótulo (label) e um campo de 
+              entrada (input) para o usuário digitar seu e-mail -->
+      <div class="form-group">
+
+        <!-- Rótulo para o campo de entrada do e-mail -->
+        <!-- O atributo "for" associa esse rótulo ao campo de 
+              entrada com o id correspondente -->
+        <label for="emailLogin">Email:</label>
+
+        <!-- Campo de entrada onde o usuário digita seu e-mail -->
+        <!-- O tipo "email" garante que o navegador valide 
+              automaticamente o formato do e-mail -->
+        <!-- O id "emailLogin" permite que o JavaScript encontre 
+              esse campo no código -->
+        <!-- O atributo "required" obriga o usuário a preencher 
+              esse campo antes de enviar o formulário -->
+        <input type="email" id="emailLogin" required />
+
+      </div>
+
+      <!-- Início de um novo grupo de formulário -->
+      <!-- Essa div agrupa um rótulo (label) e um campo de 
+              entrada (input) para o usuário digitar sua senha -->
+      <div class="form-group">
+
+        <!-- Rótulo para o campo de entrada da senha -->
+        <!-- O atributo "for" associa esse rótulo ao campo de 
+              entrada com o id correspondente -->
+        <label for="senhaLogin">Senha:</label>
+
+        <!-- Campo de entrada onde o usuário digita sua senha -->
+        <!-- O tipo "password" oculta os caracteres digitados para segurança -->
+        <!-- O id "senhaLogin" permite que o JavaScript encontre 
+              esse campo no código -->
+        <!-- O atributo "required" obriga o usuário a preencher 
+              esse campo antes de enviar o formulário -->
+        <input type="password" id="senhaLogin" required />
+
+      </div>
+
+      <!-- Início da seção de botões do formulário -->
+      <!-- Essa div agrupa os botões de ação do formulário -->
+      <div class="form-actions">
+
+        <!-- Botão de enviar o formulário -->
+        <!-- O tipo "submit" faz com que, ao clicar, os dados do 
+                formulário sejam enviados -->
+        <!-- A classe "save" pode ser usada no CSS para estilizar o botão -->
+        <button type="submit" class="save">Entrar</button>
+
+        <!-- Botão para redirecionar o usuário para a página de cadastro -->
+        <!-- O tipo "button" significa que esse botão NÃO envia o formulário -->
+        <!-- O atributo "onclick" define que, ao clicar, o 
+                navegador será redirecionado para a página "cadastroUsuarioPublico.html" -->
+        <!-- A classe "register" pode ser usada no CSS para 
+                estilizar o botão -->
+        <button type="button" class="register" onclick="window.location.href='cadastroUsuarioPublico.html'">
+          Cadastrar Usuário
+        </button>
+
+      </div>
+
+    </form>
+  </div>
+  
+  <!-- Importa o arquivo JavaScript externo chamado "script.js" -->
+  <!-- Esse script contém a lógica para manipular os dados do formulário -->
+  <!-- Ao incluir esse arquivo, todo o código JavaScript 
+          necessário para o funcionamento do cadastro será carregado -->
+  <script src="script.js"></script>
+
+<!-- Fecha a tag body, indicando o fim do conteúdo da página -->
+</body>
+
+<!-- Fecha a tag html, indicando o fim do documento HTML -->
+</html>

@@ -1,0 +1,142 @@
+<!-- Declaração do tipo de documento -->
+<!-- O DOCTYPE define que este é um documento HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML -->
+<!-- Define que o idioma principal do 
+          documento é Português -->
+<html lang="pt"> 
+
+<head> <!-- Início do cabeçalho da página -->
+
+  <!-- Define a codificação de caracteres como UTF-8 -->
+  <!-- Isso permite a utilização de caracteres especiais, 
+            como acentos e cedilhas corretamente -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página, que aparece na aba do navegador -->
+  <title>Cadastro de Usuário (Público)</title>
+
+  <!-- Importa o arquivo de estilos CSS externo chamado "style.css" -->
+  <!-- Este arquivo contém as regras de formatação da página, 
+          como cores, fontes e posicionamento -->
+  <link rel="stylesheet" href="style.css" />
+
+<!-- Fim do cabeçalho da página -->
+</head>
+
+
+<!-- Início do corpo da página -->
+<body>
+
+  <!-- Divisão principal da página com classes "container" e "cadastro-container" -->
+  <!-- "container" define um layout centralizado e organizado -->
+  <!-- "cadastro-container" pode ter estilos específicos 
+            para a área de cadastro -->
+  <div class="container cadastro-container">
+
+    <!-- Título principal do formulário de cadastro de usuário -->
+    <!-- "h2" é um título de nível 2, utilizado para 
+            destacar o cabeçalho da seção -->
+    <h2>Cadastrar Usuário</h2>
+
+    <!-- Formulário de cadastro de usuário público -->
+    <!-- O atributo "id" é "cadastroUsuarioPublicoForm", 
+            usado para referenciar este formulário no JavaScript -->
+    <form id="cadastroUsuarioPublicoForm">
+
+      <!-- Grupo do formulário responsável pelo campo "Nome" -->
+      <div class="form-group">
+      
+        <!-- Rótulo do campo "Nome" que indica ao usuário o que deve ser preenchido -->
+        <!-- O atributo "for" está associado ao id do campo de 
+                entrada para melhor acessibilidade -->
+        <label for="nomeUsuarioPub">Nome</label>
+        
+        <!-- Campo de entrada do nome do usuário -->
+        <!-- "type='text'" indica que o campo aceita apenas texto -->
+        <!-- "id='nomeUsuarioPub'" é um identificador único usado 
+                  para manipulação no JavaScript -->
+        <!-- "required" obriga o usuário a preencher esse 
+                  campo antes de enviar o formulário -->
+        <input type="text" id="nomeUsuarioPub" required />
+      </div>
+
+      <!-- Grupo do formulário responsável pelo campo "Email" -->
+      <div class="form-group">
+
+        <!-- Rótulo do campo "Email" -->
+        <label for="emailUsuarioPub">Email</label>
+
+        <!-- Campo de entrada para o email do usuário -->
+        <!-- "type='email'" exige que o usuário insira um endereço de e-mail válido -->
+        <!-- "id='emailUsuarioPub'" permite identificar o campo no JavaScript -->
+        <!-- "required" garante que esse campo não pode ficar vazio -->
+        <input type="email" id="emailUsuarioPub" required />
+      </div>
+
+      <!-- Grupo do formulário responsável pelo campo "Senha" -->
+      <div class="form-group">
+
+        <!-- Rótulo do campo "Senha" que informa ao usuário que 
+                  ele deve inserir sua senha -->
+        <!-- O atributo "for" está vinculado ao id do campo de 
+                  entrada, facilitando a acessibilidade -->
+        <label for="senhaUsuarioPub">Senha</label>
+        
+        <!-- Campo de entrada para a senha do usuário -->
+        <!-- "type='password'" oculta os caracteres digitados 
+                  para maior segurança -->
+        <!-- "id='senhaUsuarioPub'" permite que o campo seja 
+                  identificado no JavaScript -->
+        <!-- "required" significa que esse campo é obrigatório e 
+                  não pode ser deixado em branco -->
+        <input type="password" id="senhaUsuarioPub" required />
+      </div>
+
+      <!-- Grupo do formulário responsável pelo campo "Idade" -->
+      <div class="form-group">
+
+        <!-- Rótulo do campo "Idade" para informar ao usuário 
+                que deve inserir sua idade -->
+        <label for="idadeUsuarioPub">Idade</label>
+
+        <!-- Campo de entrada para a idade do usuário -->
+        <!-- "type='number'" restringe a entrada apenas para números -->
+        <!-- "id='idadeUsuarioPub'" é um identificador único 
+                  para ser utilizado no JavaScript -->
+        <!-- "required" torna obrigatório o preenchimento desse campo -->
+        <input type="number" id="idadeUsuarioPub" required />
+      </div>
+
+      <!-- Seção para os botões de ação do formulário -->
+      <div class="form-actions">
+
+        <!-- Botão de submissão do formulário -->
+        <!-- "type='submit'" faz com que ao clicar, o formulário seja enviado -->
+        <!-- "class='save'" aplica um estilo específico ao botão, 
+                geralmente relacionado à ação de salvar -->
+        <button type="submit" class="save">Salvar</button>
+
+        <!-- Botão de voltar para a tela de login -->
+        <!-- "type='button'" significa que esse botão não submete o 
+                formulário, apenas executa uma ação -->
+        <!-- "onclick" contém um comando JavaScript que redireciona o 
+                usuário para a página de login -->
+        <button type="button" class="cancel" onclick="window.location.href='login.html'">Voltar</button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Importa o arquivo JavaScript externo chamado "script.js" -->
+  <!-- Esse script contém a lógica para manipular os dados do formulário -->
+  <!-- Ao incluir esse arquivo, todo o código JavaScript necessário para o 
+          funcionamento do cadastro será carregado -->
+  <script src="script.js"></script>
+
+<!-- Fecha a tag body, indicando o fim do conteúdo da página -->
+</body>
+
+<!-- Fecha a tag html, indicando o fim do documento HTML -->
+</html>

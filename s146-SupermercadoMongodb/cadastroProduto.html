@@ -1,0 +1,191 @@
+<!-- Declaração do tipo de documento HTML -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML -->
+<!-- Define o idioma da página como português -->
+<html lang="pt"> 
+
+<head>
+
+  <!-- Define o conjunto de caracteres como UTF-8, 
+          permitindo acentos e caracteres especiais -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página que será exibido na aba do navegador -->
+  <title>Cadastro de Produto</title>
+
+  <!-- Importa um arquivo CSS externo chamado "style.css" 
+          para estilizar a página -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<!-- Início do corpo da página -->
+<body>
+
+  <!-- Div que serve como um contêiner para o formulário de 
+          cadastro de produtos -->
+  <div class="container cadastro-container">
+
+    <!-- Título da página que será alterado dinamicamente 
+            caso esteja editando um produto -->
+    <h2 id="tituloProduto">Cadastrar Produto</h2>
+
+    <!-- Formulário para cadastro de produto -->
+    <form id="cadastroProdutoForm">
+
+      <!-- Campo oculto para armazenar o ID do produto (usado 
+              para edição de produto existente) -->
+      <input type="hidden" id="produtoId" />
+
+      <!-- Início de um grupo de formulário, que agrupa o 
+              campo de entrada do código do produto -->
+      <div class="form-group">
+          
+        <!-- Rótulo (label) para o campo de entrada do código do produto -->
+        <!-- O atributo "for" indica que este rótulo está 
+                associado ao input com o ID correspondente -->
+        <label for="codigoProduto">Código</label>
+
+        <!-- Campo de entrada de texto onde o usuário digita o código do produto -->
+        <!-- O atributo "id" permite que o JavaScript e o CSS 
+                manipulem esse campo -->
+        <!-- O atributo "placeholder" exibe um exemplo de valor 
+                dentro do campo, ajudando o usuário -->
+        <!-- O atributo "required" significa que este campo é 
+                obrigatório e o formulário não pode ser enviado sem preenchê-lo -->
+        <input type="text" id="codigoProduto" placeholder="Ex.: 12345" required />
+
+      </div>
+
+      <!-- Início de outro grupo de formulário para o nome do produto -->
+      <div class="form-group">
+        
+        <!-- Rótulo (label) para o campo de entrada do nome do produto -->
+        <label for="nomeProduto">Nome</label>
+
+        <!-- Campo de entrada de texto onde o usuário digita o nome do produto -->
+        <!-- O atributo "id" é essencial para o JavaScript manipular 
+                este campo posteriormente -->
+        <!-- O atributo "required" obriga o usuário a preencher 
+                esse campo antes de enviar o formulário -->
+        <input type="text" id="nomeProduto" required />
+        
+      </div>
+
+      <!-- Início do grupo de formulário para a descrição do produto -->
+      <div class="form-group">
+
+        <!-- Rótulo (label) que identifica o campo de entrada da 
+                descrição do produto -->
+        <!-- O atributo "for" está associado ao input com o 
+                ID "descricaoProduto", garantindo acessibilidade -->
+        <label for="descricaoProduto">Descrição</label>
+
+        <!-- Campo de entrada de texto onde o usuário pode 
+                fornecer uma breve descrição do produto -->
+        <!-- O atributo "id" permite que esse campo seja manipulado 
+                no JavaScript e estilizado no CSS -->
+        <!-- Esse campo não é obrigatório, pois não possui o 
+                atributo "required", ou seja, pode ser deixado em branco -->
+        <input type="text" id="descricaoProduto" />
+      </div>
+
+      <!-- Início do grupo de formulário para o preço do produto -->
+      <div class="form-group">
+
+        <!-- Rótulo (label) que indica ao usuário que esse campo é 
+                para inserir o preço do produto -->
+        <label for="precoProduto">Preço</label>
+
+        <!-- Campo de entrada numérico para que o usuário insira o 
+                valor do produto -->
+        <!-- O atributo "type='number'" garante que apenas números 
+                possam ser digitados -->
+        <!-- O atributo "step='0.01'" define que o usuário pode inserir 
+                valores decimais com duas casas (exemplo: 19.99) -->
+        <!-- O atributo "id" permite que o campo seja identificado no 
+                JavaScript e modificado no CSS -->
+        <!-- O atributo "required" obriga o usuário a preencher esse 
+                campo antes de enviar o formulário -->
+        <input type="number" step="0.01" id="precoProduto" required />
+
+      </div>
+
+      <!-- Início do grupo de formulário para a quantidade 
+              de estoque do produto -->
+      <div class="form-group">
+
+        <!-- Rótulo (label) indicando que este campo é para 
+                inserir a quantidade em estoque -->
+        <label for="estoqueProduto">Estoque</label>
+
+        <!-- Campo de entrada numérico onde o usuário insere a 
+                quantidade disponível do produto -->
+        <!-- O atributo "type='number'" garante que apenas 
+                números possam ser inseridos -->
+        <!-- O atributo "id" permite manipulação via JavaScript e 
+                estilização via CSS -->
+        <!-- O atributo "required" torna esse campo obrigatório 
+                no formulário -->
+        <input type="number" id="estoqueProduto" required />
+      </div>
+
+      <!-- Início do grupo de formulário para seleção do 
+              fornecedor do produto -->
+      <div class="form-group">
+
+        <!-- Rótulo (label) indicando que este campo permite 
+                escolher um fornecedor para o produto -->
+        <label for="fornecedorProduto">Fornecedor</label>
+
+        <!-- Campo de seleção (dropdown) onde o usuário escolhe um 
+                fornecedor para o produto -->
+        <!-- O atributo "id" permite que esse elemento seja 
+                manipulado no JavaScript -->
+        <select id="fornecedorProduto">
+
+            <!-- Opção padrão inicial para orientar o usuário a 
+                    escolher um fornecedor -->
+            <!-- O atributo "value" está vazio para indicar que essa 
+                    opção não representa um fornecedor válido -->
+            <option value="">-- Selecione um fornecedor --</option>
+        </select>
+      </div>
+
+
+      <!-- Início da seção de ações do formulário, contendo os 
+              botões de interação -->
+      <div class="form-actions">
+
+        <!-- Botão para enviar o formulário e salvar o produto -->
+        <!-- "type='submit'" faz com que este botão envie os 
+                dados do formulário ao servidor -->
+        <!-- A classe "save" pode ser utilizada para estilização via CSS -->
+        <button type="submit" class="save">Salvar</button>
+
+        <!-- Botão para cancelar a operação e voltar para a lista de produtos -->
+        <!-- "type='button'" impede que este botão envie o formulário -->
+        <!-- "onclick" redireciona o usuário para a página 
+                "listaProdutos.html" ao ser clicado -->
+        <!-- A classe "cancel" pode ser usada para estilização via CSS -->
+        <button type="button" class="cancel" onclick="window.location.href='listaProdutos.html'">Voltar</button>
+
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Importação do arquivo de script JavaScript -->
+  <!-- Esse script será responsável por adicionar funcionalidades 
+          dinâmicas à página -->
+  <!-- O arquivo "script.js" deve conter a lógica necessária 
+          para manipulação dos dados -->
+  <script src="script.js"></script>
+
+<!-- Fechamento da tag <body>, indicando o final do conteúdo 
+          visível da página -->
+</body>
+
+<!-- Fechamento da tag <html>, marcando o final do documento HTML -->
+</html>

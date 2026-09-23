@@ -1,0 +1,138 @@
+<!-- Define que este é um documento HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML e definição do 
+        idioma como português -->
+<html lang="pt">
+
+<!-- Cabeçalho da página (contém metadados e configurações) -->
+<head>
+
+  <!-- Define a codificação de caracteres para UTF-8 -->
+  <!-- Isso permite que a página exiba corretamente 
+          acentos e caracteres especiais -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página, que será exibido na aba do navegador -->
+  <title>Lista de Produtos</title>
+
+  <!-- Link para o arquivo de estilos CSS externo chamado "style.css" -->
+  <!-- Este arquivo contém as regras de formatação da 
+          página, como cores, fontes e layout -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+  
+<!-- Início do corpo da página -->
+<body>
+
+  <!-- Criação de um contêiner principal que agrupa 
+        todos os elementos da página -->
+  <!-- O uso da classe "container" permite aplicar 
+        estilos uniformes via CSS -->
+  <div class="container">
+
+    <!-- Título da página exibido na tela -->
+    <!-- Este título indica que a página exibe a 
+            lista de produtos cadastrados -->
+    <h2>Lista de Produtos</h2>
+
+    <!-- Início da barra superior (top-bar), que fica 
+            fixa no topo da página -->
+    <!-- Esta barra contém botões e um campo de busca para 
+            ajudar o usuário a navegar e encontrar 
+            informações facilmente -->
+    <div class="top-bar">
+
+      <!-- Criação de um botão para voltar ao menu principal -->
+      <!-- O botão possui a classe "cancel", que pode ter um 
+              estilo específico definido no CSS -->
+      <!-- O atributo "onclick" define uma ação que será executada 
+              quando o botão for clicado -->
+      <!-- Neste caso, o "window.location.href" faz com que o 
+              usuário seja redirecionado para a página 'menu.html' -->
+      <button class="cancel" onclick="window.location.href='menu.html'">Voltar</button>
+
+      <!-- Criação de um campo de entrada de texto (input) para 
+              permitir que o usuário busque produtos pelo nome -->
+      <!-- O atributo "type" define que este é um campo de texto normal -->
+      <!-- O atributo "id" fornece um identificador único para 
+              este campo, permitindo que seja acessado pelo JavaScript -->
+      <!-- O atributo "placeholder" exibe um texto temporário 
+              dentro do campo, que some quando o usuário começa a digitar -->
+      <input type="text" id="filtroProduto" placeholder="Buscar por nome" />
+
+      <!-- Criação de um botão para cadastrar um novo produto -->
+      <!-- O botão possui a classe "register", que pode ter um 
+              estilo específico definido no CSS -->
+      <!-- O atributo "onclick" define que ao ser clicado, o 
+              usuário será redirecionado para 'cadastroProduto.html' -->
+      <!-- Isso significa que o sistema abrirá a tela onde um 
+              novo produto poderá ser cadastrado -->
+      <button class="register" onclick="window.location.href='cadastroProduto.html'">+ Cadastrar</button>
+
+    </div>
+
+
+    <!-- Início da tabela onde serão exibidos os produtos cadastrados -->
+    <table>
+
+      <!-- Cabeçalho da tabela (thead) -->
+      <!-- Esta seção define os títulos das colunas da tabela -->
+      <thead>
+
+          <!-- Início da linha do cabeçalho (tr significa "table row" - linha da tabela) -->
+          <tr>
+
+              <!-- Criação das colunas do cabeçalho da tabela -->
+              <!-- O elemento <th> (table header) define uma célula de 
+                        cabeçalho que, por padrão, é formatada em 
+                        negrito e centralizada -->
+
+              <!-- Coluna para exibir o código do produto -->
+              <th>Código</th>
+
+              <!-- Coluna para exibir o nome do produto -->
+              <th>Nome</th>
+
+              <!-- Coluna para exibir o nome do fornecedor do produto -->
+              <th>Fornecedor</th>
+
+              <!-- Coluna para exibir o preço do produto -->
+              <th>Preço</th>
+
+              <!-- Coluna para exibir a quantidade do produto 
+                      disponível no estoque -->
+              <th>Estoque</th>
+
+              <!-- Coluna para exibir as ações que o usuário pode 
+                      executar (exemplo: editar ou excluir um produto) -->
+              <th>Ações</th>
+
+          </tr> <!-- Fim da linha do cabeçalho -->
+
+      </thead> <!-- Fim do cabeçalho da tabela -->
+
+      <!-- Corpo da tabela (tbody) onde os produtos serão 
+              listados dinamicamente via JavaScript -->
+      <!-- O elemento <tbody> funciona como um recipiente onde os 
+              dados reais serão inseridos -->
+      <!-- O JavaScript adicionará os produtos dentro deste 
+              elemento quando a página carregar -->
+      <tbody id="listaProdutos"></tbody>
+
+    </table> <!-- Fim da tabela -->
+
+  </div>
+
+  <!-- Importa o arquivo JavaScript externo chamado "script.js" -->
+  <!-- Esse script contém a lógica para manipular os dados do formulário -->
+  <!-- Ao incluir esse arquivo, todo o código JavaScript 
+          necessário para o funcionamento do cadastro será carregado -->
+  <script src="script.js"></script>
+
+<!-- Fecha a tag body, indicando o fim do conteúdo da página -->
+</body>
+
+<!-- Fecha a tag html, indicando o fim do documento HTML -->
+</html>

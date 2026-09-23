@@ -1,0 +1,107 @@
+<!-- Define o tipo do documento como HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML -->
+<html lang="pt"> <!-- Define o idioma da página como português -->
+
+<head>
+
+  <!-- Define a codificação de caracteres para UTF-8, 
+        permitindo acentos e caracteres especiais -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o título da página, que aparece na aba do navegador -->
+  <title>Lista de Clientes</title>
+
+  <!-- Importa a folha de estilos externa chamada "style.css" -->
+  <!-- Esse arquivo contém a formatação visual da página, 
+          como cores, fontes e posicionamento dos elementos -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<!-- Início do corpo da página -->
+<body>
+
+  <!-- Cria um contêiner que agrupa os elementos da página -->
+  <!-- A classe "container" é usada para estilizar e 
+          organizar os conteúdos dentro desse espaço -->
+  <div class="container">
+
+    <!-- Cria um título de nível 2 (h2), que indica o 
+            nome da página ou seção -->
+    <!-- Neste caso, informa ao usuário que está 
+            visualizando a lista de clientes -->
+    <h2>Lista de Clientes</h2>
+
+    <!-- Criação de uma barra superior fixa para navegação e interações -->
+    <!-- A classe "top-bar" é usada para estilizar essa 
+            seção, mantendo os elementos alinhados -->
+    <div class="top-bar">
+
+      <!-- Botão de voltar para a tela do menu -->
+      <!-- Possui a classe "cancel" para estilização e um 
+              evento onclick que redireciona para "menu.html" -->
+      <button class="cancel" onclick="window.location.href='menu.html'">Voltar</button>
+
+      <!-- Campo de entrada de texto para buscar clientes por nome ou CPF -->
+      <!-- O atributo "id" identifica esse campo no código JavaScript -->
+      <!-- O "placeholder" orienta o usuário sobre o que deve ser digitado -->
+      <input type="text" id="filtroCliente" placeholder="Buscar por nome ou CPF" />
+
+      <!-- Botão para cadastrar um novo cliente -->
+      <!-- Possui a classe "register" para estilização -->
+      <!-- Ao ser clicado, redireciona o usuário para a 
+              página "cadastroCliente.html" -->
+      <button class="register" onclick="window.location.href='cadastroCliente.html'">+ Cadastrar</button>
+
+    </div>
+
+
+    <!-- Criação da tabela onde será exibida a lista de clientes -->
+    <table>
+
+      <!-- Cabeçalho da tabela, onde os títulos das colunas são definidos -->
+      <thead>
+
+        <tr>
+        
+          <!-- Coluna para exibir o CPF do cliente -->
+          <th>CPF</th>
+
+          <!-- Coluna para exibir o nome do cliente -->
+          <th>Nome</th>
+
+          <!-- Coluna para exibir o telefone do cliente -->
+          <th>Telefone</th>
+
+          <!-- Coluna para exibir o endereço do cliente -->
+          <th>Endereço</th>
+
+          <!-- Coluna para exibir os botões de ação, como editar e excluir -->
+          <th>Ações</th>
+          
+        </tr>
+      </thead>
+
+      <!-- Corpo da tabela, onde os dados dos clientes 
+            serão adicionados dinamicamente -->
+      <!-- O "id" listaClientes permite que essa seção seja 
+            preenchida via JavaScript -->
+      <tbody id="listaClientes"></tbody>
+
+    </table>
+
+  </div>
+
+  <!-- Importa o arquivo JavaScript externo chamado "script.js" -->
+  <!-- Esse script contém a lógica para manipular os dados do formulário -->
+  <!-- Ao incluir esse arquivo, todo o código JavaScript 
+          necessário para o funcionamento do cadastro será carregado -->
+  <script src="script.js"></script>
+
+<!-- Fecha a tag body, indicando o fim do conteúdo da página -->
+</body>
+
+<!-- Fecha a tag html, indicando o fim do documento HTML -->
+</html>

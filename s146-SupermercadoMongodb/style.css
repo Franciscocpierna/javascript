@@ -1,0 +1,703 @@
+body {
+
+  /* Define a fonte para todo o corpo do documento como Arial, 
+          que é uma fonte sans-serif clara e legível. */
+  font-family: 'Arial', sans-serif;
+  
+  /* Define a cor de fundo de todo o corpo do documento 
+          como um cinza muito claro (#f8f9fa). */
+  background-color: #f8f9fa;
+  
+  /* Define a margem ao redor do corpo do documento como 0, 
+          removendo qualquer espaço extra ao redor do conteúdo. */
+  margin: 0;
+  
+  /* Define o preenchimento interno do corpo do documento como 0, 
+          garantindo que não haja espaço extra dentro da borda do corpo. */
+  padding: 0;
+  
+  /* Centraliza o texto de todo o corpo do documento. */
+  text-align: center;
+
+}
+
+/* Seleciona elementos com a classe 'container', aplicando 
+        estilos que controlam a largura, preenchimento, 
+        margem, borda e sombra. */
+.container {
+
+  /* Define a largura do contêiner para ocupar 100% da 
+        largura do seu contêiner pai. */
+  width: 100%;
+  
+  /* Define a largura máxima do contêiner para 100% para 
+        evitar que ele se estenda além do tamanho do 
+        seu contêiner pai. */
+  max-width: 100%;
+  
+  /* Define a cor de fundo do contêiner para branco. */
+  background: white;
+  
+  /* Define o preenchimento interno do contêiner para 20 pixels em 
+        todos os lados, criando espaço entre o conteúdo 
+        interno e as bordas do contêiner. */
+  padding: 20px;
+  
+  /* Centraliza o contêiner horizontalmente dentro de seu 
+        contêiner pai, definindo as margens laterais 
+        automaticamente. */
+  margin: 0 auto;
+  
+  /* Define o raio da borda do contêiner como 0, resultando em 
+        bordas quadradas sem arredondamento. */
+  border-radius: 0;
+  
+  /* Define a sombra do contêiner para 'nenhuma', o que 
+        significa que não haverá sombra ao redor do contêiner. */
+  box-shadow: none;
+
+}
+
+
+/* Seleciona os elementos h1 e h2, que são comumente usados 
+        para títulos e subtítulos na página, aplicando 
+        estilos para cor e margem. */
+h1, h2 {
+
+  /* Define a cor do texto para um cinza escuro (#333), que é 
+        suave para leitura e proporciona bom contraste em 
+        fundos claros. */
+  color: #333;
+  
+  /* Define uma margem na parte inferior dos elementos h1 e h2 
+        para separá-los visualmente do conteúdo abaixo, 
+        ajudando a organizar o layout da página. */
+  margin-bottom: 15px;
+
+}
+
+/* Seleciona elementos com a classe 'menu-principal', que é 
+        usada para contêineres que agrupam botões ou links de 
+        navegação, aplicando estilos para layout, espaçamento e 
+        dimensionamento. */
+.menu-principal {
+
+  /* Define o display como 'flex', habilitando o layout 
+        flexível que permite um controle mais eficiente do 
+        alinhamento e distribuição dos itens dentro do contêiner. */
+  display: flex;
+  
+  /* Define a direção do layout flexível como 'column', 
+        fazendo com que os itens dentro do '.menu-principal' 
+        sejam organizados verticalmente. */
+  flex-direction: column;
+  
+  /* Define o espaço entre cada item dentro do '.menu-principal' 
+        como 10 pixels, garantindo uma separação uniforme entre eles. */
+  gap: 10px;
+  
+  /* Centraliza o '.menu-principal' horizontalmente na página e 
+        define uma margem vertical de 20 pixels para separá-lo 
+        de outros elementos na página. */
+  margin: 20px auto;
+  
+  /* Define a largura do '.menu-principal' para 250 pixels, o 
+        que garante que todos os itens dentro dele tenham uma 
+        largura uniforme e adequada para botões ou links. */
+  width: 250px;
+
+}
+
+
+/* Seleção geral de todos os elementos <button> na página, 
+        aplicando estilos de dimensionamento, fonte, borda, 
+        forma e comportamento do cursor. */
+button {
+
+  /* Define o preenchimento interno do botão para 10 pixels no 
+        topo e na base, e 15 pixels à esquerda e à direita, 
+        aumentando a área clicável e melhorando a estética. */
+  padding: 10px 15px;
+  
+  /* Define o tamanho da fonte dos textos dentro do botão 
+        para 16 pixels, garantindo legibilidade adequada. */
+  font-size: 16px;
+  
+  /* Remove qualquer borda padrão dos botões, permitindo um 
+        controle mais refinado do estilo visual. */
+  border: none;
+  
+  /* Aplica um arredondamento de 5 pixels nas bordas do botão 
+        para suavizar as bordas e dar um aspecto mais 
+        moderno e amigável. */
+  border-radius: 5px;
+  
+  /* Muda o cursor para o tipo 'pointer' (semelhante a uma 
+        mão apontando), indicando que o elemento é clicável. */
+  cursor: pointer;
+
+}
+
+/* Define um estilo para o botão quando o usuário passa o 
+        mouse sobre ele, aplicando um efeito de transparência. */
+button:hover {
+
+  /* Reduz a opacidade do botão para 0.9 quando o mouse está 
+        sobre ele, criando um feedback visual sutil de interação. */
+  opacity: 0.9;
+
+}
+
+/* Estilização específica para botões que possuem a 
+      classe 'edit', usados frequentemente para 
+      ações de edição. */
+button.edit {
+
+  /* Define a cor de fundo do botão para um amarelo (#ffc107), 
+          que é uma cor associada a ações de edição ou atenção. */
+  background-color: #ffc107;
+  
+  /* Define a cor do texto dentro do botão para branco, 
+          garantindo um contraste alto com o fundo amarelo 
+          para fácil leitura. */
+  color: white;
+
+}
+
+
+/* Estilização específica para botões que possuem a 
+      classe 'delete', geralmente usados para ações 
+      de exclusão ou remoção. */
+button.delete {
+
+  /* Define a cor de fundo do botão para um vermelho (#dc3545), 
+          que é uma cor comumente associada a ações de alerta ou 
+          perigo, indicando que a ação pode ser irreversível. */
+  background-color: #dc3545;
+  
+  /* Define a cor do texto dentro do botão para branco, 
+        proporcionando um contraste forte com o fundo 
+        vermelho para facilitar a leitura. */
+  color: white;
+
+}
+
+/* Estilização específica para botões que possuem a 
+      classe 'register', utilizados para ações de 
+      cadastro ou inscrição. */
+button.register {
+
+  /* Define a cor de fundo do botão para azul (#007bff), uma 
+        cor que transmite confiança e é frequentemente usada 
+        para botões que incentivam ações positivas, como 
+        registrar ou criar uma nova conta. */
+  background-color: #007bff;
+  
+  /* Define a cor do texto dentro do botão para branco, 
+        garantindo visibilidade e leitura clara 
+        contra o fundo azul. */
+  color: white;
+
+}
+
+/* Estilização específica para botões que possuem a 
+      classe 'save', normalmente usados para salvar 
+      informações ou confirmar operações. */
+button.save {
+
+  /* Define a cor de fundo do botão para um verde (#28a745), 
+        que é indicativo de sucesso, conclusão ou aprovação, 
+        sugerindo que a ação de salvar será bem-sucedida. */
+  background-color: #28a745;
+  
+  /* Define a cor do texto dentro do botão para branco, 
+        proporcionando uma leitura clara e destacada 
+        contra o fundo verde. */
+  color: white;
+
+}
+
+
+/* Estilização específica para botões que possuem a 
+      classe 'cancel', geralmente usados para ações de 
+      cancelamento ou fechamento de diálogos. */
+button.cancel {
+
+  /* Define a cor de fundo do botão para um vermelho (#dc3545), 
+        similar à cor usada nos botões 'delete', indicando ação 
+        potencialmente crítica ou para interromper um processo. */
+  background-color: #dc3545;
+  
+  /* Define a cor do texto dentro do botão para branco, 
+        garantindo alto contraste para uma leitura fácil e direta. */
+  color: white;
+
+}
+
+/* Seleciona elementos com a classe 'top-bar', que é usada 
+      para a barra no topo de um layout de página, 
+      comumente para navegação ou título. */
+.top-bar {
+
+  /* Define o modelo de caixa do elemento para 'flex', 
+        permitindo um layout flexível para alinhar itens 
+        horizontalmente de maneira eficiente. */
+  display: flex;
+  
+  /* Alinha os itens dentro da barra no centro verticalmente, 
+        garantindo que tudo fique centralizado. */
+  align-items: center;
+  
+  /* Define um espaço de 10 pixels entre cada item dentro da 'top-bar', 
+        criando uma separação visual clara entre os elementos. */
+  gap: 10px;
+  
+  /* Define a posição do elemento como 'sticky', ou seja, 
+        ele se fixa em uma posição específica na janela de 
+        visualização ao rolar a página. */
+  position: sticky;
+  
+  /* Posiciona a 'top-bar' no topo da janela de 
+        visualização (0 pixels do topo), garantindo que 
+        ela fique visível quando a página é rolada. */
+  top: 0;
+  
+  /* Define a cor de fundo da 'top-bar' para branco (#fff), 
+        oferecendo um fundo neutro e claro para os 
+        elementos contidos nela. */
+  background-color: #fff;
+  
+  /* Define um preenchimento de 10 pixels em todos os lados 
+        dentro da 'top-bar', aumentando a área de toque e 
+        melhorando a estética. */
+  padding: 10px;
+  
+  /* Adiciona uma borda na parte inferior da 'top-bar' com 1 
+        pixel de espessura e cor cinza claro (#ccc), o que 
+        ajuda a separar visualmente a barra do resto do 
+        conteúdo da página. */
+  border-bottom: 1px solid #ccc;
+  
+  /* Define um 'z-index' de 999, o que garante que a 'top-bar' 
+        fique acima de outros elementos na página que podem 
+        ter um z-index menor, mantendo-a visível. */
+  z-index: 999;
+
+}
+
+
+/* Estilização específica para elementos de entrada de 
+        texto (<input type="text">) dentro de elementos 
+        com a classe 'top-bar'. */
+.top-bar input[type="text"] {
+
+  /* Atribui à propriedade 'flex' o valor 1, o que permite 
+        que o campo de texto expanda para ocupar todo o espaço 
+        disponível em seu contêiner flexível, garantindo que 
+        ocupe proporcionalmente mais espaço do que outros itens 
+        que não possuem a propriedade 'flex' definida. */
+  flex: 1;
+  
+  /* Adiciona um preenchimento de 10 pixels em todos os lados 
+        do campo de texto, aumentando a área de interação e 
+        melhorando o conforto visual. */
+  padding: 10px;
+  
+  /* Aplica um arredondamento de 5 pixels às bordas do campo de 
+        texto, suavizando as bordas para um design mais 
+        amigável e moderno. */
+  border-radius: 5px;
+  
+  /* Define a borda do campo de texto com 1 pixel de 
+        espessura, sólida e na cor cinza claro (#ccc), 
+        delineando claramente os limites do campo e 
+        melhorando o foco visual. */
+  border: 1px solid #ccc;
+  
+  /* Estabelece o tamanho da fonte dos caracteres dentro do 
+        campo de texto em 16 pixels, o que ajuda na 
+        legibilidade do texto inserido. */
+  font-size: 16px;
+
+}
+
+/* Estilização específica para a barra superior na 
+      tela principal de ponto de venda (PDV), que é uma 
+      barra 'sticky' para facilitar o acesso às funcionalidades 
+      do PDV durante a rolagem da página. */
+.pdv-top-bar {
+
+  /* Utiliza o modelo de layout 'flex', permitindo um 
+        alinhamento eficiente e a distribuição espacial 
+        dos elementos contidos na barra. */
+  display: flex;
+  
+  /* Centraliza verticalmente os itens dentro da barra, 
+        garantindo que todos os elementos tenham 
+        alinhamento uniforme no centro. */
+  align-items: center;
+  
+  /* Define um espaço de 10 pixels entre cada elemento 
+          dentro da barra, ajudando a manter uma separação 
+          visual clara entre os controles. */
+  gap: 10px;
+  
+  /* Configura a barra para ser 'sticky', ou seja, ela se fixará 
+          no topo da viewport durante a rolagem da página. */
+  position: sticky;
+  
+  /* Posiciona a barra no topo da página (0 pixels do topo), 
+        assegurando que esteja sempre visível ao rolar a página. */
+  top: 0;
+  
+  /* Define a cor de fundo da barra para branco (#fff), 
+        proporcionando um fundo neutro e claro. */
+  background-color: #fff;
+  
+  /* Adiciona um preenchimento de 10 pixels em todos os 
+        lados dentro da barra, aumentando a área de 
+        toque e melhorando a estética. */
+  padding: 10px;
+  
+  /* Inclui uma borda na parte inferior da barra com 1 pixel 
+        de espessura e cor cinza claro (#ccc), que ajuda a 
+        separar visualmente a barra do resto do 
+        conteúdo abaixo dela. */
+  border-bottom: 1px solid #ccc;
+  
+  /* Define um 'z-index' de 999, assegurando que a barra 
+        permaneça acima de outros elementos na página. */
+  z-index: 999;
+  
+  /* Alinha os elementos dentro da barra ao centro, garantindo 
+        que todos os controles sejam agrupados e 
+        centrados horizontalmente. */
+  justify-content: center;
+
+}
+
+
+/* Tabelas */
+/* Seleção geral de todos os elementos <table> na página, 
+        aplicando estilos para dimensionamento, margem e 
+        comportamento da borda. */
+table {
+
+  /* Define a largura da tabela para ocupar 100% da largura do 
+        contêiner pai, garantindo que a tabela se estenda 
+        horizontalmente para aproveitar todo o espaço disponível. */
+  width: 100%;
+  
+  /* Define 'border-collapse' como 'collapse' para combinar as 
+        bordas de células adjacentes em uma única borda, resultando 
+        em um visual mais limpo e menos fragmentado. */
+  border-collapse: collapse;
+  
+  /* Define uma margem no topo da tabela de 15 pixels, criando um 
+        espaço entre qualquer conteúdo acima dela e a tabela em si. */
+  margin-top: 15px;
+
+}
+
+/* Seleção específica para o elemento <thead>, que é usado 
+      para definir o cabeçalho de uma tabela. */
+thead {
+
+  /* Define a cor de fundo do cabeçalho da tabela para azul (#007bff), 
+        uma cor vibrante que ajuda a destacar as informações do cabeçalho. */
+  background-color: #007bff;
+  
+  /* Define a cor do texto dentro do cabeçalho da tabela para 
+          branco, garantindo alto contraste com o fundo azul 
+          para fácil leitura. */
+  color: white;
+
+}
+
+/* Seleção conjunta de todos os elementos <th> (células de 
+      cabeçalho) e <td> (células de dados) em uma tabela. */
+th, td {
+
+  /* Adiciona um preenchimento de 12 pixels em todos os lados 
+        dentro das células, aumentando a área de toque e melhorando a 
+        legibilidade do conteúdo. */
+  padding: 12px;
+  
+  /* Define uma borda sólida de 1 pixel de espessura e na cor 
+        cinza claro (#ccc) ao redor de cada célula, delineando 
+        claramente os limites das células e melhorando a 
+        estrutura visual da tabela. */
+  border: 1px solid #ccc;
+  
+  /* Alinha o texto dentro das células à esquerda, o que é 
+        ideal para a maioria dos tipos de dados em tabelas, 
+        garantindo uma leitura fácil e organizada. */
+  text-align: left;
+
+}
+
+
+/* Seleção de todas as linhas pares (<tr>) dentro de uma 
+      tabela, utilizando o seletor :nth-child para aplicar 
+      estilos específicos às linhas pares. */
+tr:nth-child(even) {
+
+  /* Define a cor de fundo das linhas pares para um 
+        cinza claro (#f2f2f2), o que ajuda a melhorar a 
+        legibilidade da tabela alternando as cores de fundo 
+        das linhas, facilitando a distinção entre as linhas adjacentes. */
+  background-color: #f2f2f2;
+
+}
+
+/* Seleção de elementos com a classe '.actions', que 
+        são usados para agrupar botões ou links de 
+        ação dentro de um contêiner flexível. */
+.actions {
+
+  /* Utiliza o modelo de layout 'flex' para permitir um 
+        alinhamento eficiente e a distribuição dos elementos contidos. */
+  display: flex;
+  
+  /* Centraliza os itens dentro do contêiner '.actions' no 
+        eixo horizontal, garantindo que os botões ou links 
+        estejam alinhados ao centro. */
+  justify-content: center;
+  
+  /* Define um espaço de 5 pixels entre cada elemento dentro 
+        do '.actions', mantendo uma separação visual adequada 
+        entre os botões ou links. */
+  gap: 5px;
+
+}
+
+/* Seleção específica de elementos com a classe '.cadastro-container', 
+      utilizada para estilizar contêineres de formulários de cadastro. */
+.cadastro-container {
+
+  /* Define a largura máxima do contêiner para 500 pixels, 
+        garantindo que o formulário não se torne muito largo em 
+        telas maiores, mantendo uma largura adequada para a 
+        interação do usuário. */
+  max-width: 500px;
+  
+  /* Define a cor de fundo do contêiner para branco, oferecendo um 
+        fundo neutro e claro para os elementos de formulário. */
+  background: white;
+  
+  /* Adiciona um preenchimento de 25 pixels em todos os lados 
+        dentro do contêiner, aumentando a área de toque e 
+        melhorando a estética e o conforto durante a interação 
+        com os campos do formulário. */
+  padding: 25px;
+  
+  /* Centraliza o contêiner '.cadastro-container' horizontalmente 
+        na página e define uma margem vertical de 20 pixels para 
+        separá-lo de outros elementos. */
+  margin: 20px auto;
+  
+  /* Aplica um arredondamento de 10 pixels às bordas do 
+        contêiner, suavizando as bordas para um design 
+        mais amigável e moderno. */
+  border-radius: 10px;
+  
+  /* Aplica uma sombra suave ao redor do contêiner com uma 
+        cor preta semi-transparente (rgba(0, 0, 0, 0.1)), 
+        adicionando profundidade e um efeito visual sutil que 
+        destaca o contêiner sobre o resto da página. */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* Seleção de todos os elementos com a classe '.form-group', 
+      comumente usada para agrupar rótulos e campos de 
+      formulário (como inputs e selects) para melhor 
+      organização e apresentação. */
+.form-group {
+
+  /* Alinha o texto à esquerda dentro do contêiner '.form-group', 
+          garantindo que o conteúdo comece da margem esquerda, 
+          proporcionando uma aparência uniforme e fácil leitura. */
+  text-align: left;
+  
+  /* Adiciona uma margem na parte inferior de cada '.form-group' 
+        de 15 pixels, separando visualmente os grupos de formulário 
+        uns dos outros para evitar uma aparência amontoada e 
+        melhorar a clareza visual. */
+  margin-bottom: 15px;
+
+}
+
+/* Estilização específica para elementos <label> dentro de '.form-group', 
+      que são usados para descrever os campos de entrada adjacentes. */
+.form-group label {
+
+  /* Define o <label> para ser um bloco, o que significa que 
+        ele ocupará a largura total do contêiner, permitindo 
+        que qualquer conteúdo abaixo dele inicie em uma nova linha. */
+  display: block;
+  
+  /* Define o peso da fonte do rótulo para 'bold' (negrito), 
+        destacando-o visualmente para indicar claramente a 
+        que campo o rótulo se refere, ajudando na navegação e 
+        compreensão do formulário. */
+  font-weight: bold;
+  
+  /* Adiciona uma margem na parte inferior do rótulo 
+        de 5 pixels, criando um espaço entre o rótulo e o 
+        campo de entrada correspondente, ajudando a definir 
+        claramente as áreas separadas para o rótulo e o campo. */
+  margin-bottom: 5px;
+
+}
+
+/* Estilização específica para elementos <input> e <select> 
+      dentro de '.form-group', definindo como os campos de 
+      entrada e seleção são apresentados dentro do formulário. */
+.form-group input, .form-group select {
+
+  /* Define a largura dos elementos <input> e <select> 
+        para 100%, fazendo com que preencham completamente o 
+        espaço horizontal do seu contêiner '.form-group', 
+        proporcionando uma interface coesa e alinhada. */
+  width: 100%;
+  
+  /* Adiciona um preenchimento de 10 pixels em todas as 
+        direções dentro dos campos de entrada e seleção, 
+        melhorando a interatividade ao aumentar a área 
+        clicável e a legibilidade ao afastar o texto das bordas. */
+  padding: 10px;
+  
+  /* Aplica um arredondamento de borda de 5 pixels, 
+        suavizando os cantos dos campos de entrada, o que 
+        melhora a estética e a sensação de modernidade do design. */
+  border-radius: 5px;
+  
+  /* Define uma borda sólida de 1 pixel de espessura e cor 
+        cinza claro (#ccc) para os campos de entrada, 
+        delineando claramente os limites dos campos e 
+        mantendo o design limpo e organizado. */
+  border: 1px solid #ccc;
+  
+  /* Estabelece o tamanho da fonte dentro dos campos de 
+        entrada e seleção em 16 pixels, assegurando que o 
+        texto seja fácil de ler e acessível. */
+  font-size: 16px;
+
+}
+
+
+/* Seleção de todos os elementos com a classe '.form-actions', 
+      comumente usada para agrupar botões de ação em formulários, 
+      como 'Salvar' ou 'Cancelar'. */
+.form-actions {
+  
+  /* Utiliza o modelo de layout 'flex' para permitir um 
+        alinhamento eficiente e a distribuição dos 
+        elementos contidos. */
+  display: flex;
+  
+  /* Distribui o espaço entre os elementos internos, 
+        colocando-os uniformemente separados ao longo do 
+        eixo horizontal. Isso é ideal para separar claramente 
+        botões em formulários, como botões de 'Salvar' e
+        'Cancelar' em lados opostos. */
+  justify-content: space-between;
+  
+  /* Adiciona uma margem no topo de 20 pixels, separando 
+        visualmente este grupo de botões de elementos do 
+        formulário acima, ajudando a evitar uma aparência 
+        amontoada e melhorando a clareza visual. */
+  margin-top: 20px;
+
+}
+
+/* Seleção específica para a classe '.relatorio-filtros', 
+        utilizada para estilizar contêineres de filtros em 
+        uma página de relatórios, estruturando-os em uma grade 
+        de 2 linhas por 4 colunas. */
+.relatorio-filtros {
+
+  /* Define o modelo de layout para 'grid', permitindo um 
+        controle preciso sobre a colocação e o dimensionamento de 
+        elementos de filtro em uma estrutura de grade. */
+  display: grid;
+  
+  /* Configura as colunas da grade para ter quatro colunas de 
+        igual largura, utilizando '1fr' como unidade de fração 
+        para distribuir o espaço disponível igualmente entre 
+        as quatro colunas. */
+  grid-template-columns: repeat(4, 1fr);
+  
+  /* Define um espaço vertical entre as linhas da grade 
+        de 10 pixels, ajudando a separar visualmente os 
+        elementos de filtro em linhas diferentes. */
+  grid-row-gap: 10px;
+  
+  /* Define um espaço horizontal entre as colunas da grade 
+        de 10 pixels, mantendo os filtros claramente 
+        separados e evitando uma sensação de congestionamento. */
+  grid-column-gap: 10px;
+  
+  /* Estabelece uma largura máxima para o contêiner de filtros 
+        de 1200 pixels, garantindo que os filtros não se 
+        estendam excessivamente em telas muito largas e 
+        permaneçam manuseáveis. */
+  max-width: 1200px;
+  
+  /* Centraliza o contêiner de filtros horizontalmente na 
+        página e adiciona uma margem de 20 pixels abaixo, 
+        ajudando a centralizar visualmente e a separar 
+        dos outros conteúdos da página. */
+  margin: 0 auto 20px;
+  
+  /* Alinha o texto dentro dos elementos de filtro à 
+        esquerda, proporcionando uma apresentação consistente e 
+        fácil de seguir, especialmente útil em interfaces 
+        onde a clareza na leitura dos filtros é crucial. */
+  text-align: left;
+
+}
+
+/* Seleção de elementos <label> dentro do contêiner '.relatorio-filtros',
+        usado para identificar e descrever campos de entrada 
+        adjacentes (inputs e selects) em uma interface de relatório. */
+.relatorio-filtros label {
+
+  /* Define o peso da fonte para 'bold' (negrito), 
+        fazendo com que os rótulos se destaquem visualmente, 
+        indicando claramente a que campo eles se referem, o 
+        que é útil para ajudar os usuários a navegar pelos 
+        filtros de relatório de forma eficiente. */
+  font-weight: bold;
+  
+  /* Adiciona uma margem na parte inferior de cada <label> 
+        de 5 pixels, criando um espaço visual entre o rótulo e o 
+        campo de entrada ou seleção que ele descreve, ajudando a 
+        definir claramente áreas separadas para facilitar a 
+        interação do usuário. */
+  margin-bottom: 5px;
+
+}
+
+/* Seleção de elementos <input> e <select> dentro do 
+      contêiner '.relatorio-filtros', que são usados para 
+      inserir dados ou selecionar opções em filtros de relatório. */
+.relatorio-filtros input, .relatorio-filtros select {
+
+  /* Define a largura desses elementos para 100%, fazendo com 
+        que preencham completamente o espaço horizontal disponível 
+        dentro de suas respectivas células de grade, proporcionando 
+        uma interface de usuário coerente e maximizando a área 
+        utilizável para entrada de dados. */
+  width: 100%;
+  
+  /* Adiciona uma margem na parte inferior de 10 pixels 
+        para cada <input> e <select>, separando-os dos outros 
+        elementos abaixo na interface de relatório. Isso ajuda a 
+        evitar que a interface pareça amontoada e melhora a 
+        experiência visual ao preencher ou selecionar filtros. */
+  margin-bottom: 10px;
+
+}
