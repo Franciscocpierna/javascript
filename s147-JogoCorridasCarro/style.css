@@ -1,0 +1,2056 @@
+/* Configura a propriedade CSS `` do seletor atual com o valor informado nesta linha. */
+/* :root = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+:root {
+
+  /* Define a variável CSS `--bg` para reutilizar esse valor em outras regras visuais. */
+  /* --bg = variável personalizada do CSS utilizada para reutilizar este valor em outras propriedades. */
+  /* --bg = variável CSS personalizada que armazena o valor `#050713`. */
+  /* #050713 = código hexadecimal da cor azul-marinho quase preto. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  --bg: #050713;
+
+  /* Define a variável CSS `--painel` para reutilizar esse valor em outras regras visuais. */
+  /* --painel = variável personalizada do CSS utilizada para reutilizar este valor em outras propriedades. */
+  /* --painel = variável CSS personalizada que armazena o valor `rgba(7, 10, 18, .84)`. */
+  /* rgba(7, 10, 18, .84) = representa aproximadamente a cor azul-marinho quase preto com nível alfa .84 de transparência. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  --painel: rgba(7, 10, 18, .84);
+
+  /* Define a variável CSS `--borda` para reutilizar esse valor em outras regras visuais. */
+  /* --borda = variável personalizada do CSS utilizada para reutilizar este valor em outras propriedades. */
+  /* --borda = variável CSS personalizada que armazena o valor `rgba(255,255,255,.18)`. */
+  /* rgba(255,255,255,.18) = representa aproximadamente a cor branco com nível alfa .18 de transparência. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  --borda: rgba(255,255,255,.18);
+
+  /* Define a variável CSS `--texto` para reutilizar esse valor em outras regras visuais. */
+  /* --texto = variável personalizada do CSS utilizada para reutilizar este valor em outras propriedades. */
+  /* --texto = variável CSS personalizada que armazena o valor `#fff`. */
+  /* #fff = código hexadecimal da cor branco. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  --texto: #fff;
+
+  /* Define a variável CSS `--amarelo` para reutilizar esse valor em outras regras visuais. */
+  /* --amarelo = variável personalizada do CSS utilizada para reutilizar este valor em outras propriedades. */
+  /* --amarelo = variável CSS personalizada que armazena o valor `#ffd400`. */
+  /* #ffd400 = código hexadecimal da cor dourado. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  --amarelo: #ffd400;
+
+  /* Define a variável CSS `--azul` para reutilizar esse valor em outras regras visuais. */
+  /* --azul = variável personalizada do CSS utilizada para reutilizar este valor em outras propriedades. */
+  /* --azul = variável CSS personalizada que armazena o valor `#26c9ff`. */
+  /* #26c9ff = código hexadecimal da cor azul dodger. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  --azul: #26c9ff;
+
+  /* Define a variável CSS `--vermelho` para reutilizar esse valor em outras regras visuais. */
+  /* --vermelho = variável personalizada do CSS utilizada para reutilizar este valor em outras propriedades. */
+  /* --vermelho = variável CSS personalizada que armazena o valor `#ff352d`. */
+  /* #ff352d = código hexadecimal da cor laranja avermelhado. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  --vermelho: #ff352d;
+
+/* Encerra o bloco de estilos CSS iniciado anteriormente. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+}
+
+/* Define em uma única regra os estilos aplicados ao seletor `*`. */
+/* * = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* box-sizing = define como largura e altura consideram padding e bordas. */
+/* border-box = valor atribuído à propriedade `box-sizing` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+* { box-sizing: border-box; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `html, body`. */
+/* html, body = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* 100% = valor atribuído à propriedade `width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 100% = valor atribuído à propriedade `height` nesta regra. */
+/* margin = define o espaçamento externo do elemento. */
+/* 0 = valor atribuído à propriedade `margin` nesta regra. */
+/* overflow = define o comportamento do conteúdo que ultrapassa os limites. */
+/* hidden = valor atribuído à propriedade `overflow` nesta regra. */
+/* background = define o fundo do elemento. */
+/* var(--bg) = valor atribuído à propriedade `background` nesta regra. */
+/* font-family = define a família tipográfica utilizada. */
+/* Arial, Helvetica, sans-serif = valor atribuído à propriedade `font-family` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* var(--texto) = valor atribuído à propriedade `color` nesta regra. */
+/* var(--bg) = lê o valor armazenado na variável CSS `--bg`. */
+/* var(--texto) = lê o valor armazenado na variável CSS `--texto`. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+html, body { width:100%; height:100%; margin:0; overflow:hidden; background:var(--bg); font-family:Arial, Helvetica, sans-serif; color:var(--texto); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `button, input, select`. */
+/* button, input, select = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* font = define a configuração visual relacionada a `font`. */
+/* inherit = valor atribuído à propriedade `font` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+button, input, select { font:inherit; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `button`. */
+/* button = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* cursor = define o formato do ponteiro do mouse sobre o elemento. */
+/* pointer = valor atribuído à propriedade `cursor` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+button { cursor:pointer; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `#app, .tela`. */
+/* #app, .tela = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* 100% = valor atribuído à propriedade `width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 100% = valor atribuído à propriedade `height` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+#app, .tela { width:100%; height:100%; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.tela`. */
+/* .tela = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* none = valor atribuído à propriedade `display` nesta regra. */
+/* position = define o método de posicionamento do elemento. */
+/* relative = valor atribuído à propriedade `position` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.tela { display:none; position:relative; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.tela.ativa`. */
+/* .tela.ativa = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.tela.ativa { display:block; }
+
+/* MENU */
+/* Inicia o bloco de estilos aplicado ao seletor `.tela-menu`. */
+/* .tela-menu = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+.tela-menu {
+
+  /* Configura a propriedade CSS `background-image` do seletor atual com o valor informado nesta linha. */
+  /* background-image = define uma ou mais imagens ou gradientes usados como fundo. */
+  /* url('assets/capa_corrida.png'), linear-gradient(135deg,#0b1425,#ff6b1d) = valor atribuído à propriedade `background-image` nesta regra. */
+  /* #0b1425 = código hexadecimal da cor azul petróleo escuro. */
+  /* #ff6b1d = código hexadecimal da cor marrom chocolate. */
+  /* linear-gradient = cria uma transição gradual de cores em linha reta para compor o fundo ou preenchimento. */
+  /* url = referencia um arquivo externo utilizado pela propriedade CSS, como uma imagem de fundo. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  background-image: url('assets/capa_corrida.png'), linear-gradient(135deg,#0b1425,#ff6b1d);
+
+  /* Configura a propriedade CSS `background-size` do seletor atual com o valor informado nesta linha. */
+  /* background-size = define como a imagem de fundo é dimensionada. */
+  /* cover = valor atribuído à propriedade `background-size` nesta regra. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  background-size: cover;
+
+  /* Configura a propriedade CSS `background-position` do seletor atual com o valor informado nesta linha. */
+  /* background-position = define a posição da imagem de fundo. */
+  /* center = valor atribuído à propriedade `background-position` nesta regra. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  background-position: center;
+
+  /* Configura a propriedade CSS `isolation` do seletor atual com o valor informado nesta linha. */
+  /* isolation = cria ou controla um contexto independente de empilhamento. */
+  /* isolate = valor atribuído à propriedade `isolation` nesta regra. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  isolation:isolate;
+
+/* Encerra o bloco de estilos CSS iniciado anteriormente. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+}
+
+/* Define em uma única regra os estilos aplicados ao seletor `.menu-sombra`. */
+/* .menu-sombra = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* inset = define conjuntamente os deslocamentos de posicionamento do elemento. */
+/* 0 = valor atribuído à propriedade `inset` nesta regra. */
+/* background = define o fundo do elemento. */
+/* linear-gradient(90deg,rgba(0,0,0,.91) 0%,rgba(0,0,0,.71) 40%,rgba(0,0,0,.16) 74%,rgba(0,0,0,.34) 100%) = valor atribuído à propriedade `background` nesta regra. */
+/* z-index = define a ordem de empilhamento do elemento. */
+/* -1 = valor atribuído à propriedade `z-index` nesta regra. */
+/* rgba(0,0,0,.91) = representa aproximadamente a cor preto com nível alfa .91 de transparência. */
+/* rgba(0,0,0,.71) = representa aproximadamente a cor preto com nível alfa .71 de transparência. */
+/* rgba(0,0,0,.16) = representa aproximadamente a cor preto com nível alfa .16 de transparência. */
+/* rgba(0,0,0,.34) = representa aproximadamente a cor preto com nível alfa .34 de transparência. */
+/* linear-gradient = cria uma transição gradual de cores em linha reta para compor o fundo ou preenchimento. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.menu-sombra { position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.91) 0%,rgba(0,0,0,.71) 40%,rgba(0,0,0,.16) 74%,rgba(0,0,0,.34) 100%); z-index:-1; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.menu-conteudo`. */
+/* .menu-conteudo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* min(720px,94vw) = valor atribuído à propriedade `width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 100% = valor atribuído à propriedade `height` nesta regra. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* flex = valor atribuído à propriedade `display` nesta regra. */
+/* flex-direction = define a direção de organização dos itens flexíveis. */
+/* column = valor atribuído à propriedade `flex-direction` nesta regra. */
+/* justify-content = define a distribuição dos itens no eixo principal. */
+/* center = valor atribuído à propriedade `justify-content` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 24px 0 46px 5vw = valor atribuído à propriedade `padding` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.menu-conteudo { width:min(720px,94vw); height:100%; display:flex; flex-direction:column; justify-content:center; padding:24px 0 46px 5vw; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.selo`. */
+/* .selo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* margin = define o espaçamento externo do elemento. */
+/* 0 0 8px = valor atribuído à propriedade `margin` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 11px = valor atribuído à propriedade `font-size` nesta regra. */
+/* letter-spacing = define o espaçamento entre os caracteres. */
+/* 2px = valor atribuído à propriedade `letter-spacing` nesta regra. */
+/* font-weight = define a espessura da fonte. */
+/* 800 = valor atribuído à propriedade `font-weight` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #dbeeff = valor atribuído à propriedade `color` nesta regra. */
+/* #dbeeff = código hexadecimal da cor branco azulado. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.selo { margin:0 0 8px; font-size:11px; letter-spacing:2px; font-weight:800; color:#dbeeff; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `h1`. */
+/* h1 = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* margin = define o espaçamento externo do elemento. */
+/* 0 0 10px = valor atribuído à propriedade `margin` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* clamp(40px,5.5vw,74px) = valor atribuído à propriedade `font-size` nesta regra. */
+/* line-height = define a altura de cada linha de texto. */
+/* .86 = valor atribuído à propriedade `line-height` nesta regra. */
+/* font-style = define o estilo tipográfico. */
+/* italic = valor atribuído à propriedade `font-style` nesta regra. */
+/* letter-spacing = define o espaçamento entre os caracteres. */
+/* -3px = valor atribuído à propriedade `letter-spacing` nesta regra. */
+/* text-shadow = aplica uma sombra ao texto. */
+/* 0 5px 25px #000 = valor atribuído à propriedade `text-shadow` nesta regra. */
+/* #000 = código hexadecimal da cor preto. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+h1 { margin:0 0 10px; font-size:clamp(40px,5.5vw,74px); line-height:.86; font-style:italic; letter-spacing:-3px; text-shadow:0 5px 25px #000; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `h1 span`. */
+/* h1 span = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* var(--amarelo) = valor atribuído à propriedade `color` nesta regra. */
+/* var(--amarelo) = lê o valor armazenado na variável CSS `--amarelo`. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+h1 span { color:var(--amarelo); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.descricao`. */
+/* .descricao = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* min(650px,90vw) = valor atribuído à propriedade `width` nesta regra. */
+/* margin = define o espaçamento externo do elemento. */
+/* 0 0 5px = valor atribuído à propriedade `margin` nesta regra. */
+/* line-height = define a altura de cada linha de texto. */
+/* 1.45 = valor atribuído à propriedade `line-height` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #e6eef7 = valor atribuído à propriedade `color` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 14px = valor atribuído à propriedade `font-size` nesta regra. */
+/* text-shadow = aplica uma sombra ao texto. */
+/* 0 2px 8px #000 = valor atribuído à propriedade `text-shadow` nesta regra. */
+/* #e6eef7 = código hexadecimal da cor branco azulado. */
+/* #000 = código hexadecimal da cor preto. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.descricao { width:min(650px,90vw); margin:0 0 5px; line-height:1.45; color:#e6eef7; font-size:14px; text-shadow:0 2px 8px #000; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.configuracao-menu`. */
+/* .configuracao-menu = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* min(680px,92vw) = valor atribuído à propriedade `width` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.configuracao-menu { width:min(680px,92vw); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.campo-label`. */
+/* .campo-label = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 10px = valor atribuído à propriedade `font-size` nesta regra. */
+/* text-transform = define uma transformação de capitalização para o texto. */
+/* uppercase = valor atribuído à propriedade `text-transform` nesta regra. */
+/* letter-spacing = define o espaçamento entre os caracteres. */
+/* 1.2px = valor atribuído à propriedade `letter-spacing` nesta regra. */
+/* font-weight = define a espessura da fonte. */
+/* 800 = valor atribuído à propriedade `font-weight` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #dce7f4 = valor atribuído à propriedade `color` nesta regra. */
+/* margin = define o espaçamento externo do elemento. */
+/* 8px 0 5px = valor atribuído à propriedade `margin` nesta regra. */
+/* #dce7f4 = código hexadecimal da cor branco azulado. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.campo-label { display:block; font-size:10px; text-transform:uppercase; letter-spacing:1.2px; font-weight:800; color:#dce7f4; margin:8px 0 5px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.campo`. */
+/* .campo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* 100% = valor atribuído à propriedade `width` nesta regra. */
+/* min-height = define a altura mínima do elemento. */
+/* 40px = valor atribuído à propriedade `min-height` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.28) = valor atribuído à propriedade `border` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #fff = valor atribuído à propriedade `color` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(5,8,15,.88) = valor atribuído à propriedade `background` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 9px = valor atribuído à propriedade `border-radius` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 9px 12px = valor atribuído à propriedade `padding` nesta regra. */
+/* outline = define o contorno externo do elemento. */
+/* none = valor atribuído à propriedade `outline` nesta regra. */
+/* #fff = código hexadecimal da cor branco. */
+/* rgba(255,255,255,.28) = representa aproximadamente a cor branco com nível alfa .28 de transparência. */
+/* rgba(5,8,15,.88) = representa aproximadamente a cor azul-marinho quase preto com nível alfa .88 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.campo { width:100%; min-height:40px; border:1px solid rgba(255,255,255,.28); color:#fff; background:rgba(5,8,15,.88); border-radius:9px; padding:9px 12px; outline:none; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.campo:focus`. */
+/* .campo:focus = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* border-color = define a cor da borda. */
+/* var(--azul) = valor atribuído à propriedade `border-color` nesta regra. */
+/* box-shadow = aplica uma sombra à caixa do elemento. */
+/* 0 0 0 3px rgba(38,201,255,.15) = valor atribuído à propriedade `box-shadow` nesta regra. */
+/* rgba(38,201,255,.15) = representa aproximadamente a cor azul dodger com nível alfa .15 de transparência. */
+/* var(--azul) = lê o valor armazenado na variável CSS `--azul`. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.campo:focus { border-color:var(--azul); box-shadow:0 0 0 3px rgba(38,201,255,.15); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.linha-opcoes`. */
+/* .linha-opcoes = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* grid = valor atribuído à propriedade `display` nesta regra. */
+/* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+/* 1fr 1fr = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 10px = valor atribuído à propriedade `gap` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.linha-opcoes { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.linha-opcoes-3`. */
+/* .linha-opcoes-3 = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+/* 1.35fr 1fr .75fr = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.linha-opcoes-3 { grid-template-columns:1.35fr 1fr .75fr; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.preview-selecao`. */
+/* .preview-selecao = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* grid = valor atribuído à propriedade `display` nesta regra. */
+/* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+/* 1.2fr 1fr = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 8px = valor atribuído à propriedade `gap` nesta regra. */
+/* margin-top = define o espaçamento externo superior. */
+/* 10px = valor atribuído à propriedade `margin-top` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.preview-selecao { display:grid; grid-template-columns:1.2fr 1fr; gap:8px; margin-top:10px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.preview-carro, .preview-cenario`. */
+/* .preview-carro, .preview-cenario = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* min-height = define a altura mínima do elemento. */
+/* 56px = valor atribuído à propriedade `min-height` nesta regra. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* flex = valor atribuído à propriedade `display` nesta regra. */
+/* align-items = define o alinhamento dos itens no eixo transversal. */
+/* center = valor atribuído à propriedade `align-items` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 12px = valor atribuído à propriedade `gap` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 8px 10px = valor atribuído à propriedade `padding` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 10px = valor atribuído à propriedade `border-radius` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(6,9,15,.73) = valor atribuído à propriedade `background` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.13) = valor atribuído à propriedade `border` nesta regra. */
+/* rgba(6,9,15,.73) = representa aproximadamente a cor azul-marinho quase preto com nível alfa .73 de transparência. */
+/* rgba(255,255,255,.13) = representa aproximadamente a cor branco com nível alfa .13 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.preview-carro, .preview-cenario { min-height:56px; display:flex; align-items:center; gap:12px; padding:8px 10px; border-radius:10px; background:rgba(6,9,15,.73); border:1px solid rgba(255,255,255,.13); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.preview-cenario`. */
+/* .preview-cenario = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* flex-direction = define a direção de organização dos itens flexíveis. */
+/* column = valor atribuído à propriedade `flex-direction` nesta regra. */
+/* align-items = define o alinhamento dos itens no eixo transversal. */
+/* flex-start = valor atribuído à propriedade `align-items` nesta regra. */
+/* justify-content = define a distribuição dos itens no eixo principal. */
+/* center = valor atribuído à propriedade `justify-content` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 2px = valor atribuído à propriedade `gap` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.preview-cenario { flex-direction:column; align-items:flex-start; justify-content:center; gap:2px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.preview-selecao strong`. */
+/* .preview-selecao strong = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 12px = valor atribuído à propriedade `font-size` nesta regra. */
+/* letter-spacing = define o espaçamento entre os caracteres. */
+/* .5px = valor atribuído à propriedade `letter-spacing` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.preview-selecao strong { display:block; font-size:12px; letter-spacing:.5px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.preview-selecao span`. */
+/* .preview-selecao span = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* margin-top = define o espaçamento externo superior. */
+/* 3px = valor atribuído à propriedade `margin-top` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 10px = valor atribuído à propriedade `font-size` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #c6d4e2 = valor atribuído à propriedade `color` nesta regra. */
+/* #c6d4e2 = código hexadecimal da cor cinza claro. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.preview-selecao span { display:block; margin-top:3px; font-size:10px; color:#c6d4e2; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.mini-carro`. */
+/* .mini-carro = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* --carro-cor = variável CSS personalizada que armazena o valor `#e43228`. */
+/* width = define a largura do elemento. */
+/* 66px = valor atribuído à propriedade `width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 32px = valor atribuído à propriedade `height` nesta regra. */
+/* flex = define como um item flexível cresce, encolhe e ocupa espaço. */
+/* 0 0 66px = valor atribuído à propriedade `flex` nesta regra. */
+/* position = define o método de posicionamento do elemento. */
+/* relative = valor atribuído à propriedade `position` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 7px 7px 12px 12px = valor atribuído à propriedade `border-radius` nesta regra. */
+/* background = define o fundo do elemento. */
+/* linear-gradient(180deg,color-mix(in srgb,var(--carro-cor) 82%, white),var(--carro-cor) 48%,#1b1b1d) = valor atribuído à propriedade `background` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.36) = valor atribuído à propriedade `border` nesta regra. */
+/* clip-path = recorta visualmente o elemento usando a forma informada. */
+/* polygon(14% 0,86% 0,100% 75%,88% 100%,12% 100%,0 75%) = valor atribuído à propriedade `clip-path` nesta regra. */
+/* #e43228 = código hexadecimal da cor vermelho carmim. */
+/* #1b1b1d = código hexadecimal da cor preto azulado. */
+/* rgba(255,255,255,.36) = representa aproximadamente a cor branco com nível alfa .36 de transparência. */
+/* var(--carro-cor) = lê o valor armazenado na variável CSS `--carro-cor`. */
+/* linear-gradient = cria uma transição gradual de cores em linha reta para compor o fundo ou preenchimento. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.mini-carro { --carro-cor:#e43228; width:66px; height:32px; flex:0 0 66px; position:relative; border-radius:7px 7px 12px 12px; background:linear-gradient(180deg,color-mix(in srgb,var(--carro-cor) 82%, white),var(--carro-cor) 48%,#1b1b1d); border:1px solid rgba(255,255,255,.36); clip-path:polygon(14% 0,86% 0,100% 75%,88% 100%,12% 100%,0 75%); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.mini-carro::before`. */
+/* .mini-carro::before = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* content = define o conteúdo gerado por pseudoelementos. */
+/* "" = valor atribuído à propriedade `content` nesta regra. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* left = define a posição ou distância em relação ao lado esquerdo. */
+/* 18% = valor atribuído à propriedade `left` nesta regra. */
+/* right = define a posição ou distância em relação ao lado direito. */
+/* 18% = valor atribuído à propriedade `right` nesta regra. */
+/* top = define a posição ou distância em relação ao topo. */
+/* 4px = valor atribuído à propriedade `top` nesta regra. */
+/* height = define a altura do elemento. */
+/* 10px = valor atribuído à propriedade `height` nesta regra. */
+/* background = define o fundo do elemento. */
+/* #101824 = valor atribuído à propriedade `background` nesta regra. */
+/* clip-path = recorta visualmente o elemento usando a forma informada. */
+/* polygon(14% 0,86% 0,100% 100%,0 100%) = valor atribuído à propriedade `clip-path` nesta regra. */
+/* #101824 = código hexadecimal da cor azul petróleo escuro. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.mini-carro::before { content:""; position:absolute; left:18%; right:18%; top:4px; height:10px; background:#101824; clip-path:polygon(14% 0,86% 0,100% 100%,0 100%); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.mini-carro::after`. */
+/* .mini-carro::after = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* content = define o conteúdo gerado por pseudoelementos. */
+/* "" = valor atribuído à propriedade `content` nesta regra. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* left = define a posição ou distância em relação ao lado esquerdo. */
+/* 9px = valor atribuído à propriedade `left` nesta regra. */
+/* right = define a posição ou distância em relação ao lado direito. */
+/* 9px = valor atribuído à propriedade `right` nesta regra. */
+/* bottom = define a posição ou distância em relação à parte inferior. */
+/* 5px = valor atribuído à propriedade `bottom` nesta regra. */
+/* height = define a altura do elemento. */
+/* 4px = valor atribuído à propriedade `height` nesta regra. */
+/* background = define o fundo do elemento. */
+/* linear-gradient(90deg,#ff4a3b 0 28%,transparent 28% 72%,#ff4a3b 72%) = valor atribuído à propriedade `background` nesta regra. */
+/* #ff4a3b = código hexadecimal da cor laranja avermelhado. */
+/* linear-gradient = cria uma transição gradual de cores em linha reta para compor o fundo ou preenchimento. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.mini-carro::after { content:""; position:absolute; left:9px; right:9px; bottom:5px; height:4px; background:linear-gradient(90deg,#ff4a3b 0 28%,transparent 28% 72%,#ff4a3b 72%); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.menu-botoes`. */
+/* .menu-botoes = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* min(680px,92vw) = valor atribuído à propriedade `width` nesta regra. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* grid = valor atribuído à propriedade `display` nesta regra. */
+/* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+/* 1fr 1fr = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 9px = valor atribuído à propriedade `gap` nesta regra. */
+/* margin-top = define o espaçamento externo superior. */
+/* 11px = valor atribuído à propriedade `margin-top` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.menu-botoes { width:min(680px,92vw); display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-top:11px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.botao`. */
+/* .botao = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.22) = valor atribuído à propriedade `border` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 9px = valor atribuído à propriedade `border-radius` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(10,15,25,.9) = valor atribuído à propriedade `background` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #fff = valor atribuído à propriedade `color` nesta regra. */
+/* min-height = define a altura mínima do elemento. */
+/* 42px = valor atribuído à propriedade `min-height` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 9px 14px = valor atribuído à propriedade `padding` nesta regra. */
+/* font-weight = define a espessura da fonte. */
+/* 900 = valor atribuído à propriedade `font-weight` nesta regra. */
+/* letter-spacing = define o espaçamento entre os caracteres. */
+/* .5px = valor atribuído à propriedade `letter-spacing` nesta regra. */
+/* transition = define a animação suave entre mudanças de propriedades. */
+/* transform .16s,border-color .16s = valor atribuído à propriedade `transition` nesta regra. */
+/* #fff = código hexadecimal da cor branco. */
+/* rgba(255,255,255,.22) = representa aproximadamente a cor branco com nível alfa .22 de transparência. */
+/* rgba(10,15,25,.9) = representa aproximadamente a cor azul-marinho quase preto com nível alfa .9 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.botao { border:1px solid rgba(255,255,255,.22); border-radius:9px; background:rgba(10,15,25,.9); color:#fff; min-height:42px; padding:9px 14px; font-weight:900; letter-spacing:.5px; transition:transform .16s,border-color .16s; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.botao:hover`. */
+/* .botao:hover = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* transform = aplica transformações visuais como deslocamento, escala ou rotação. */
+/* translateY(-1px) = valor atribuído à propriedade `transform` nesta regra. */
+/* border-color = define a cor da borda. */
+/* #fff = valor atribuído à propriedade `border-color` nesta regra. */
+/* #fff = código hexadecimal da cor branco. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.botao:hover { transform:translateY(-1px); border-color:#fff; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.botao.primario`. */
+/* .botao.primario = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* grid-column = define em quais colunas da grade o elemento deve ocupar espaço. */
+/* 1/-1 = valor atribuído à propriedade `grid-column` nesta regra. */
+/* background = define o fundo do elemento. */
+/* linear-gradient(100deg,#ffb000,#ff3d23) = valor atribuído à propriedade `background` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #140600 = valor atribuído à propriedade `color` nesta regra. */
+/* border = define a borda do elemento. */
+/* 0 = valor atribuído à propriedade `border` nesta regra. */
+/* #ffb000 = código hexadecimal da cor laranja. */
+/* #ff3d23 = código hexadecimal da cor laranja avermelhado. */
+/* #140600 = código hexadecimal da cor preto. */
+/* linear-gradient = cria uma transição gradual de cores em linha reta para compor o fundo ou preenchimento. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.botao.primario { grid-column:1/-1; background:linear-gradient(100deg,#ffb000,#ff3d23); color:#140600; border:0; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.botao.perigo`. */
+/* .botao.perigo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* background = define o fundo do elemento. */
+/* #641b22 = valor atribuído à propriedade `background` nesta regra. */
+/* margin-top = define o espaçamento externo superior. */
+/* 18px = valor atribuído à propriedade `margin-top` nesta regra. */
+/* #641b22 = código hexadecimal da cor marrom sela. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.botao.perigo { background:#641b22; margin-top:18px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.menu-rodape`. */
+/* .menu-rodape = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* left = define a posição ou distância em relação ao lado esquerdo. */
+/* 5vw = valor atribuído à propriedade `left` nesta regra. */
+/* bottom = define a posição ou distância em relação à parte inferior. */
+/* 12px = valor atribuído à propriedade `bottom` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* rgba(255,255,255,.76) = valor atribuído à propriedade `color` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 11px = valor atribuído à propriedade `font-size` nesta regra. */
+/* rgba(255,255,255,.76) = representa aproximadamente a cor branco com nível alfa .76 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.menu-rodape { position:absolute; left:5vw; bottom:12px; color:rgba(255,255,255,.76); font-size:11px; }
+
+/* JOGO */
+/* Define em uma única regra os estilos aplicados ao seletor `.tela-jogo`. */
+/* .tela-jogo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* background = define o fundo do elemento. */
+/* #09111f = valor atribuído à propriedade `background` nesta regra. */
+/* overflow = define o comportamento do conteúdo que ultrapassa os limites. */
+/* hidden = valor atribuído à propriedade `overflow` nesta regra. */
+/* #09111f = código hexadecimal da cor azul-marinho quase preto. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.tela-jogo { background:#09111f; overflow:hidden; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `#gameCanvas`. */
+/* #gameCanvas = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* 100% = valor atribuído à propriedade `width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 100% = valor atribuído à propriedade `height` nesta regra. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* outline = define o contorno externo do elemento. */
+/* none = valor atribuído à propriedade `outline` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+#gameCanvas { width:100%; height:100%; display:block; outline:none; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.hud`. */
+/* .hud = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* inset = define conjuntamente os deslocamentos de posicionamento do elemento. */
+/* 0 = valor atribuído à propriedade `inset` nesta regra. */
+/* pointer-events = define se o elemento pode receber eventos do ponteiro. */
+/* none = valor atribuído à propriedade `pointer-events` nesta regra. */
+/* font-style = define o estilo tipográfico. */
+/* italic = valor atribuído à propriedade `font-style` nesta regra. */
+/* font-weight = define a espessura da fonte. */
+/* 900 = valor atribuído à propriedade `font-weight` nesta regra. */
+/* text-shadow = aplica uma sombra ao texto. */
+/* 0 2px 5px #000 = valor atribuído à propriedade `text-shadow` nesta regra. */
+/* contain = limita o impacto de layout, pintura ou tamanho do elemento sobre o restante da página. */
+/* layout paint = valor atribuído à propriedade `contain` nesta regra. */
+/* #000 = código hexadecimal da cor preto. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.hud { position:absolute; inset:0; pointer-events:none; font-style:italic; font-weight:900; text-shadow:0 2px 5px #000; contain:layout paint; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.hud-esquerda`. */
+/* .hud-esquerda = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* left = define a posição ou distância em relação ao lado esquerdo. */
+/* 18px = valor atribuído à propriedade `left` nesta regra. */
+/* top = define a posição ou distância em relação ao topo. */
+/* 18px = valor atribuído à propriedade `top` nesta regra. */
+/* width = define a largura do elemento. */
+/* 190px = valor atribuído à propriedade `width` nesta regra. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* grid = valor atribuído à propriedade `display` nesta regra. */
+/* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+/* 1fr 1fr = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 8px = valor atribuído à propriedade `gap` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.hud-esquerda { position:absolute; left:18px; top:18px; width:190px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.painel`. */
+/* .painel = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* background = define o fundo do elemento. */
+/* linear-gradient(145deg,rgba(9,11,18,.9),rgba(18,20,28,.74)) = valor atribuído à propriedade `background` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid var(--borda) = valor atribuído à propriedade `border` nesta regra. */
+/* clip-path = recorta visualmente o elemento usando a forma informada. */
+/* polygon(6% 0,100% 0,94% 100%,0 100%) = valor atribuído à propriedade `clip-path` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 10px 14px = valor atribuído à propriedade `padding` nesta regra. */
+/* backdrop-filter = aplica filtros visuais ao conteúdo que aparece atrás do elemento. */
+/* blur(4px) = valor atribuído à propriedade `backdrop-filter` nesta regra. */
+/* rgba(9,11,18,.9) = representa aproximadamente a cor azul-marinho quase preto com nível alfa .9 de transparência. */
+/* rgba(18,20,28,.74) = representa aproximadamente a cor preto azulado com nível alfa .74 de transparência. */
+/* var(--borda) = lê o valor armazenado na variável CSS `--borda`. */
+/* linear-gradient = cria uma transição gradual de cores em linha reta para compor o fundo ou preenchimento. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.painel { background:linear-gradient(145deg,rgba(9,11,18,.9),rgba(18,20,28,.74)); border:1px solid var(--borda); clip-path:polygon(6% 0,100% 0,94% 100%,0 100%); padding:10px 14px; backdrop-filter:blur(4px); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.painel span`. */
+/* .painel span = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 12px = valor atribuído à propriedade `font-size` nesta regra. */
+/* letter-spacing = define o espaçamento entre os caracteres. */
+/* .8px = valor atribuído à propriedade `letter-spacing` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.painel span { display:block; font-size:12px; letter-spacing:.8px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.painel strong`. */
+/* .painel strong = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 35px = valor atribuído à propriedade `font-size` nesta regra. */
+/* line-height = define a altura de cada linha de texto. */
+/* 1 = valor atribuído à propriedade `line-height` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.painel strong { display:block; font-size:35px; line-height:1; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.painel strong small`. */
+/* .painel strong small = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* font-size = define o tamanho da fonte. */
+/* 16px = valor atribuído à propriedade `font-size` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #d9e2ee = valor atribuído à propriedade `color` nesta regra. */
+/* #d9e2ee = código hexadecimal da cor branco fumaça. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.painel strong small { font-size:16px; color:#d9e2ee; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.posicao strong`. */
+/* .posicao strong = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* var(--amarelo) = valor atribuído à propriedade `color` nesta regra. */
+/* var(--amarelo) = lê o valor armazenado na variável CSS `--amarelo`. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.posicao strong { color:var(--amarelo); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.placar-pilotos`. */
+/* .placar-pilotos = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* grid-column = define em quais colunas da grade o elemento deve ocupar espaço. */
+/* 1/-1 = valor atribuído à propriedade `grid-column` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(6,8,13,.72) = valor atribuído à propriedade `background` nesta regra. */
+/* border-left = define a configuração visual relacionada a `border-left`. */
+/* 3px solid rgba(255,255,255,.2) = valor atribuído à propriedade `border-left` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 6px 8px = valor atribuído à propriedade `padding` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 12px = valor atribuído à propriedade `font-size` nesta regra. */
+/* rgba(6,8,13,.72) = representa aproximadamente a cor azul-marinho quase preto com nível alfa .72 de transparência. */
+/* rgba(255,255,255,.2) = representa aproximadamente a cor branco com nível alfa .2 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.placar-pilotos { grid-column:1/-1; background:rgba(6,8,13,.72); border-left:3px solid rgba(255,255,255,.2); padding:6px 8px; font-size:12px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.linha-piloto`. */
+/* .linha-piloto = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* flex = valor atribuído à propriedade `display` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 8px = valor atribuído à propriedade `gap` nesta regra. */
+/* align-items = define o alinhamento dos itens no eixo transversal. */
+/* center = valor atribuído à propriedade `align-items` nesta regra. */
+/* min-height = define a altura mínima do elemento. */
+/* 22px = valor atribuído à propriedade `min-height` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.linha-piloto { display:flex; gap:8px; align-items:center; min-height:22px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.linha-piloto b`. */
+/* .linha-piloto b = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* 16px = valor atribuído à propriedade `width` nesta regra. */
+/* text-align = define o alinhamento horizontal do texto. */
+/* right = valor atribuído à propriedade `text-align` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.linha-piloto b { width:16px; text-align:right; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.linha-piloto.jogador`. */
+/* .linha-piloto.jogador = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #ff4a35 = valor atribuído à propriedade `color` nesta regra. */
+/* #ff4a35 = código hexadecimal da cor laranja avermelhado. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.linha-piloto.jogador { color:#ff4a35; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.hud-topo-centro`. */
+/* .hud-topo-centro = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* top = define a posição ou distância em relação ao topo. */
+/* 24px = valor atribuído à propriedade `top` nesta regra. */
+/* left = define a posição ou distância em relação ao lado esquerdo. */
+/* 50% = valor atribuído à propriedade `left` nesta regra. */
+/* transform = aplica transformações visuais como deslocamento, escala ou rotação. */
+/* translateX(-50%) = valor atribuído à propriedade `transform` nesta regra. */
+/* width = define a largura do elemento. */
+/* min(520px,44vw) = valor atribuído à propriedade `width` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.hud-topo-centro { position:absolute; top:24px; left:50%; transform:translateX(-50%); width:min(520px,44vw); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.turbo-wrap`. */
+/* .turbo-wrap = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* flex = valor atribuído à propriedade `display` nesta regra. */
+/* align-items = define o alinhamento dos itens no eixo transversal. */
+/* center = valor atribuído à propriedade `align-items` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 14px = valor atribuído à propriedade `gap` nesta regra. */
+/* min-height = define a altura mínima do elemento. */
+/* 45px = valor atribuído à propriedade `min-height` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 8px 18px = valor atribuído à propriedade `padding` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(17,18,21,.67) = valor atribuído à propriedade `background` nesta regra. */
+/* clip-path = recorta visualmente o elemento usando a forma informada. */
+/* polygon(3% 0,97% 0,100% 100%,0 100%) = valor atribuído à propriedade `clip-path` nesta regra. */
+/* rgba(17,18,21,.67) = representa aproximadamente a cor azul-marinho quase preto com nível alfa .67 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.turbo-wrap { display:flex; align-items:center; gap:14px; min-height:45px; padding:8px 18px; background:rgba(17,18,21,.67); clip-path:polygon(3% 0,97% 0,100% 100%,0 100%); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.turbo-wrap > span`. */
+/* .turbo-wrap > span = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* font-size = define o tamanho da fonte. */
+/* 16px = valor atribuído à propriedade `font-size` nesta regra. */
+/* flex = define como um item flexível cresce, encolhe e ocupa espaço. */
+/* 0 0 auto = valor atribuído à propriedade `flex` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.turbo-wrap > span { font-size:16px; flex:0 0 auto; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.turbo-barra`. */
+/* .turbo-barra = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* flex = define como um item flexível cresce, encolhe e ocupa espaço. */
+/* 1 1 auto = valor atribuído à propriedade `flex` nesta regra. */
+/* min-width = define a largura mínima do elemento. */
+/* 0 = valor atribuído à propriedade `min-width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 17px = valor atribuído à propriedade `height` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 3px = valor atribuído à propriedade `padding` nesta regra. */
+/* background = define o fundo do elemento. */
+/* #1d1c19 = valor atribuído à propriedade `background` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.28) = valor atribuído à propriedade `border` nesta regra. */
+/* transform = aplica transformações visuais como deslocamento, escala ou rotação. */
+/* skewX(-9deg) = valor atribuído à propriedade `transform` nesta regra. */
+/* overflow = define o comportamento do conteúdo que ultrapassa os limites. */
+/* hidden = valor atribuído à propriedade `overflow` nesta regra. */
+/* #1d1c19 = código hexadecimal da cor preto azulado. */
+/* rgba(255,255,255,.28) = representa aproximadamente a cor branco com nível alfa .28 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.turbo-barra { flex:1 1 auto; min-width:0; height:17px; padding:3px; background:#1d1c19; border:1px solid rgba(255,255,255,.28); transform:skewX(-9deg); overflow:hidden; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.turbo-barra i`. */
+/* .turbo-barra i = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* height = define a altura do elemento. */
+/* 100% = valor atribuído à propriedade `height` nesta regra. */
+/* width = define a largura do elemento. */
+/* 100% = valor atribuído à propriedade `width` nesta regra. */
+/* transform = aplica transformações visuais como deslocamento, escala ou rotação. */
+/* scaleX(1) = valor atribuído à propriedade `transform` nesta regra. */
+/* transform-origin = define a configuração visual relacionada a `transform-origin`. */
+/* left center = valor atribuído à propriedade `transform-origin` nesta regra. */
+/* background = define o fundo do elemento. */
+/* linear-gradient(90deg,#65edff,#10adff) = valor atribuído à propriedade `background` nesta regra. */
+/* box-shadow = aplica uma sombra à caixa do elemento. */
+/* 0 0 10px #19c9ff = valor atribuído à propriedade `box-shadow` nesta regra. */
+/* will-change = define a configuração visual relacionada a `will-change`. */
+/* transform = valor atribuído à propriedade `will-change` nesta regra. */
+/* #65edff = código hexadecimal da cor azul céu. */
+/* #10adff = código hexadecimal da cor azul dodger. */
+/* #19c9ff = código hexadecimal da cor azul dodger. */
+/* linear-gradient = cria uma transição gradual de cores em linha reta para compor o fundo ou preenchimento. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.turbo-barra i { display:block; height:100%; width:100%; transform:scaleX(1); transform-origin:left center; background:linear-gradient(90deg,#65edff,#10adff); box-shadow:0 0 10px #19c9ff; will-change:transform; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.hud.turbo-ativo .turbo-barra`. */
+/* .hud.turbo-ativo .turbo-barra = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* box-shadow = aplica uma sombra à caixa do elemento. */
+/* 0 0 18px rgba(38,201,255,.45) = valor atribuído à propriedade `box-shadow` nesta regra. */
+/* rgba(38,201,255,.45) = representa aproximadamente a cor azul dodger com nível alfa .45 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.hud.turbo-ativo .turbo-barra { box-shadow:0 0 18px rgba(38,201,255,.45); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.hud-info-corrida`. */
+/* .hud-info-corrida = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* max-content = valor atribuído à propriedade `width` nesta regra. */
+/* max-width = define a largura máxima do elemento. */
+/* 100% = valor atribuído à propriedade `max-width` nesta regra. */
+/* margin = define o espaçamento externo do elemento. */
+/* 5px auto 0 = valor atribuído à propriedade `margin` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 5px 10px = valor atribuído à propriedade `padding` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 7px = valor atribuído à propriedade `border-radius` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(4,6,12,.58) = valor atribuído à propriedade `background` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.12) = valor atribuído à propriedade `border` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 9px = valor atribuído à propriedade `font-size` nesta regra. */
+/* letter-spacing = define o espaçamento entre os caracteres. */
+/* .8px = valor atribuído à propriedade `letter-spacing` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #dceafa = valor atribuído à propriedade `color` nesta regra. */
+/* white-space = define a configuração visual relacionada a `white-space`. */
+/* nowrap = valor atribuído à propriedade `white-space` nesta regra. */
+/* overflow = define o comportamento do conteúdo que ultrapassa os limites. */
+/* hidden = valor atribuído à propriedade `overflow` nesta regra. */
+/* text-overflow = define a configuração visual relacionada a `text-overflow`. */
+/* ellipsis = valor atribuído à propriedade `text-overflow` nesta regra. */
+/* #dceafa = código hexadecimal da cor branco azulado. */
+/* rgba(4,6,12,.58) = representa aproximadamente a cor preto com nível alfa .58 de transparência. */
+/* rgba(255,255,255,.12) = representa aproximadamente a cor branco com nível alfa .12 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.hud-info-corrida { width:max-content; max-width:100%; margin:5px auto 0; padding:5px 10px; border-radius:7px; background:rgba(4,6,12,.58); border:1px solid rgba(255,255,255,.12); font-size:9px; letter-spacing:.8px; color:#dceafa; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.hud-direita`. */
+/* .hud-direita = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* right = define a posição ou distância em relação ao lado direito. */
+/* 18px = valor atribuído à propriedade `right` nesta regra. */
+/* top = define a posição ou distância em relação ao topo. */
+/* 18px = valor atribuído à propriedade `top` nesta regra. */
+/* width = define a largura do elemento. */
+/* 220px = valor atribuído à propriedade `width` nesta regra. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* flex = valor atribuído à propriedade `display` nesta regra. */
+/* flex-direction = define a direção de organização dos itens flexíveis. */
+/* column = valor atribuído à propriedade `flex-direction` nesta regra. */
+/* align-items = define o alinhamento dos itens no eixo transversal. */
+/* stretch = valor atribuído à propriedade `align-items` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 10px = valor atribuído à propriedade `gap` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.hud-direita { position:absolute; right:18px; top:18px; width:220px; display:flex; flex-direction:column; align-items:stretch; gap:10px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.tempo strong`. */
+/* .tempo strong = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* font-size = define o tamanho da fonte. */
+/* 26px = valor atribuído à propriedade `font-size` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.tempo strong { font-size:26px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.velocimetro`. */
+/* .velocimetro = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* margin-top = define o espaçamento externo superior. */
+/* 18px = valor atribuído à propriedade `margin-top` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 14px 18px = valor atribuído à propriedade `padding` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.velocimetro { margin-top:18px; padding:14px 18px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.velocimetro strong`. */
+/* .velocimetro strong = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* font-size = define o tamanho da fonte. */
+/* 60px = valor atribuído à propriedade `font-size` nesta regra. */
+/* letter-spacing = define o espaçamento entre os caracteres. */
+/* -3px = valor atribuído à propriedade `letter-spacing` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.velocimetro strong { font-size:60px; letter-spacing:-3px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.velocimetro em`. */
+/* .velocimetro em = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* text-align = define o alinhamento horizontal do texto. */
+/* right = valor atribuído à propriedade `text-align` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 17px = valor atribuído à propriedade `font-size` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.velocimetro em { display:block; text-align:right; font-size:17px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.rpm`. */
+/* .rpm = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* height = define a altura do elemento. */
+/* 8px = valor atribuído à propriedade `height` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(255,255,255,.15) = valor atribuído à propriedade `background` nesta regra. */
+/* margin-top = define o espaçamento externo superior. */
+/* 8px = valor atribuído à propriedade `margin-top` nesta regra. */
+/* overflow = define o comportamento do conteúdo que ultrapassa os limites. */
+/* hidden = valor atribuído à propriedade `overflow` nesta regra. */
+/* rgba(255,255,255,.15) = representa aproximadamente a cor branco com nível alfa .15 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.rpm { height:8px; background:rgba(255,255,255,.15); margin-top:8px; overflow:hidden; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.rpm i`. */
+/* .rpm i = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* height = define a altura do elemento. */
+/* 100% = valor atribuído à propriedade `height` nesta regra. */
+/* width = define a largura do elemento. */
+/* 100% = valor atribuído à propriedade `width` nesta regra. */
+/* transform = aplica transformações visuais como deslocamento, escala ou rotação. */
+/* scaleX(0) = valor atribuído à propriedade `transform` nesta regra. */
+/* transform-origin = define a configuração visual relacionada a `transform-origin`. */
+/* left center = valor atribuído à propriedade `transform-origin` nesta regra. */
+/* background = define o fundo do elemento. */
+/* linear-gradient(90deg,#2fd0ff 0%,#fff 72%,#ff2d1f 90%) = valor atribuído à propriedade `background` nesta regra. */
+/* will-change = define a configuração visual relacionada a `will-change`. */
+/* transform = valor atribuído à propriedade `will-change` nesta regra. */
+/* #2fd0ff = código hexadecimal da cor azul dodger. */
+/* #fff = código hexadecimal da cor branco. */
+/* #ff2d1f = código hexadecimal da cor laranja avermelhado. */
+/* linear-gradient = cria uma transição gradual de cores em linha reta para compor o fundo ou preenchimento. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.rpm i { display:block; height:100%; width:100%; transform:scaleX(0); transform-origin:left center; background:linear-gradient(90deg,#2fd0ff 0%,#fff 72%,#ff2d1f 90%); will-change:transform; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.camera`. */
+/* .camera = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* padding = define o espaçamento interno do elemento. */
+/* 7px 12px = valor atribuído à propriedade `padding` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 11px = valor atribuído à propriedade `font-size` nesta regra. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* flex = valor atribuído à propriedade `display` nesta regra. */
+/* justify-content = define a distribuição dos itens no eixo principal. */
+/* space-between = valor atribuído à propriedade `justify-content` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 8px = valor atribuído à propriedade `gap` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.camera { padding:7px 12px; font-size:11px; display:flex; justify-content:space-between; gap:8px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.modo-ia`. */
+/* .modo-ia = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* padding = define o espaçamento interno do elemento. */
+/* 8px 12px = valor atribuído à propriedade `padding` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 10px = valor atribuído à propriedade `font-size` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #7be9ff = valor atribuído à propriedade `color` nesta regra. */
+/* text-align = define o alinhamento horizontal do texto. */
+/* center = valor atribuído à propriedade `text-align` nesta regra. */
+/* letter-spacing = define o espaçamento entre os caracteres. */
+/* 1px = valor atribuído à propriedade `letter-spacing` nesta regra. */
+/* #7be9ff = código hexadecimal da cor azul céu. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.modo-ia { padding:8px 12px; font-size:10px; color:#7be9ff; text-align:center; letter-spacing:1px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.hud-inferior`. */
+/* .hud-inferior = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* left = define a posição ou distância em relação ao lado esquerdo. */
+/* 18px = valor atribuído à propriedade `left` nesta regra. */
+/* bottom = define a posição ou distância em relação à parte inferior. */
+/* 18px = valor atribuído à propriedade `bottom` nesta regra. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* flex = valor atribuído à propriedade `display` nesta regra. */
+/* align-items = define o alinhamento dos itens no eixo transversal. */
+/* flex-end = valor atribuído à propriedade `align-items` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 18px = valor atribuído à propriedade `gap` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.hud-inferior { position:absolute; left:18px; bottom:18px; display:flex; align-items:flex-end; gap:18px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `#miniMapa`. */
+/* #miniMapa = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* 150px = valor atribuído à propriedade `width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 150px = valor atribuído à propriedade `height` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 50% = valor atribuído à propriedade `border-radius` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(5,8,15,.58) = valor atribuído à propriedade `background` nesta regra. */
+/* border = define a borda do elemento. */
+/* 2px solid rgba(255,255,255,.65) = valor atribuído à propriedade `border` nesta regra. */
+/* rgba(5,8,15,.58) = representa aproximadamente a cor azul-marinho quase preto com nível alfa .58 de transparência. */
+/* rgba(255,255,255,.65) = representa aproximadamente a cor branco com nível alfa .65 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+#miniMapa { width:150px; height:150px; border-radius:50%; background:rgba(5,8,15,.58); border:2px solid rgba(255,255,255,.65); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.dicas`. */
+/* .dicas = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* background = define o fundo do elemento. */
+/* rgba(4,6,12,.62) = valor atribuído à propriedade `background` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.13) = valor atribuído à propriedade `border` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 8px 12px = valor atribuído à propriedade `padding` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 8px = valor atribuído à propriedade `border-radius` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 10px = valor atribuído à propriedade `font-size` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #e6edf7 = valor atribuído à propriedade `color` nesta regra. */
+/* #e6edf7 = código hexadecimal da cor branco azulado. */
+/* rgba(4,6,12,.62) = representa aproximadamente a cor preto com nível alfa .62 de transparência. */
+/* rgba(255,255,255,.13) = representa aproximadamente a cor branco com nível alfa .13 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.dicas { background:rgba(4,6,12,.62); border:1px solid rgba(255,255,255,.13); padding:8px 12px; border-radius:8px; font-size:10px; color:#e6edf7; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.contagem`. */
+/* .contagem = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* left = define a posição ou distância em relação ao lado esquerdo. */
+/* 50% = valor atribuído à propriedade `left` nesta regra. */
+/* top = define a posição ou distância em relação ao topo. */
+/* 42% = valor atribuído à propriedade `top` nesta regra. */
+/* transform = aplica transformações visuais como deslocamento, escala ou rotação. */
+/* translate(-50%,-50%) = valor atribuído à propriedade `transform` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* clamp(80px,12vw,170px) = valor atribuído à propriedade `font-size` nesta regra. */
+/* font-weight = define a espessura da fonte. */
+/* 1000 = valor atribuído à propriedade `font-weight` nesta regra. */
+/* font-style = define o estilo tipográfico. */
+/* italic = valor atribuído à propriedade `font-style` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #fff = valor atribuído à propriedade `color` nesta regra. */
+/* text-shadow = aplica uma sombra ao texto. */
+/* 0 0 10px #000,0 0 35px #ff6b16 = valor atribuído à propriedade `text-shadow` nesta regra. */
+/* pointer-events = define se o elemento pode receber eventos do ponteiro. */
+/* none = valor atribuído à propriedade `pointer-events` nesta regra. */
+/* #fff = código hexadecimal da cor branco. */
+/* #000 = código hexadecimal da cor preto. */
+/* #ff6b16 = código hexadecimal da cor laranja avermelhado. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.contagem { position:absolute; left:50%; top:42%; transform:translate(-50%,-50%); font-size:clamp(80px,12vw,170px); font-weight:1000; font-style:italic; color:#fff; text-shadow:0 0 10px #000,0 0 35px #ff6b16; pointer-events:none; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.mensagem-corrida`. */
+/* .mensagem-corrida = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* left = define a posição ou distância em relação ao lado esquerdo. */
+/* 50% = valor atribuído à propriedade `left` nesta regra. */
+/* top = define a posição ou distância em relação ao topo. */
+/* 28% = valor atribuído à propriedade `top` nesta regra. */
+/* transform = aplica transformações visuais como deslocamento, escala ou rotação. */
+/* translate(-50%,-50%) = valor atribuído à propriedade `transform` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 10px 24px = valor atribuído à propriedade `padding` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 8px = valor atribuído à propriedade `border-radius` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(6,8,14,.82) = valor atribuído à propriedade `background` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 24px = valor atribuído à propriedade `font-size` nesta regra. */
+/* font-weight = define a espessura da fonte. */
+/* 1000 = valor atribuído à propriedade `font-weight` nesta regra. */
+/* font-style = define o estilo tipográfico. */
+/* italic = valor atribuído à propriedade `font-style` nesta regra. */
+/* opacity = define o nível de transparência do elemento. */
+/* 0 = valor atribuído à propriedade `opacity` nesta regra. */
+/* transition = define a animação suave entre mudanças de propriedades. */
+/* opacity .2s = valor atribuído à propriedade `transition` nesta regra. */
+/* rgba(6,8,14,.82) = representa aproximadamente a cor azul-marinho quase preto com nível alfa .82 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.mensagem-corrida { position:absolute; left:50%; top:28%; transform:translate(-50%,-50%); padding:10px 24px; border-radius:8px; background:rgba(6,8,14,.82); font-size:24px; font-weight:1000; font-style:italic; opacity:0; transition:opacity .2s; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.mensagem-corrida.mostrar`. */
+/* .mensagem-corrida.mostrar = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* opacity = define o nível de transparência do elemento. */
+/* 1 = valor atribuído à propriedade `opacity` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.mensagem-corrida.mostrar { opacity:1; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.btn-pausa`. */
+/* .btn-pausa = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* left = define a posição ou distância em relação ao lado esquerdo. */
+/* 16px = valor atribuído à propriedade `left` nesta regra. */
+/* bottom = define a posição ou distância em relação à parte inferior. */
+/* 184px = valor atribuído à propriedade `bottom` nesta regra. */
+/* width = define a largura do elemento. */
+/* 44px = valor atribuído à propriedade `width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 44px = valor atribuído à propriedade `height` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 50% = valor atribuído à propriedade `border-radius` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.35) = valor atribuído à propriedade `border` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(0,0,0,.52) = valor atribuído à propriedade `background` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #fff = valor atribuído à propriedade `color` nesta regra. */
+/* font-weight = define a espessura da fonte. */
+/* 900 = valor atribuído à propriedade `font-weight` nesta regra. */
+/* #fff = código hexadecimal da cor branco. */
+/* rgba(255,255,255,.35) = representa aproximadamente a cor branco com nível alfa .35 de transparência. */
+/* rgba(0,0,0,.52) = representa aproximadamente a cor preto com nível alfa .52 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.btn-pausa { position:absolute; left:16px; bottom:184px; width:44px; height:44px; border-radius:50%; border:1px solid rgba(255,255,255,.35); background:rgba(0,0,0,.52); color:#fff; font-weight:900; }
+
+/* CONTROLES MOBILE */
+/* Define em uma única regra os estilos aplicados ao seletor `.controles-mobile`. */
+/* .controles-mobile = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* inset = define conjuntamente os deslocamentos de posicionamento do elemento. */
+/* auto 14px 14px 14px = valor atribuído à propriedade `inset` nesta regra. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* none = valor atribuído à propriedade `display` nesta regra. */
+/* justify-content = define a distribuição dos itens no eixo principal. */
+/* space-between = valor atribuído à propriedade `justify-content` nesta regra. */
+/* align-items = define o alinhamento dos itens no eixo transversal. */
+/* flex-end = valor atribuído à propriedade `align-items` nesta regra. */
+/* pointer-events = define se o elemento pode receber eventos do ponteiro. */
+/* none = valor atribuído à propriedade `pointer-events` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.controles-mobile { position:absolute; inset:auto 14px 14px 14px; display:none; justify-content:space-between; align-items:flex-end; pointer-events:none; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.controles-mobile button`. */
+/* .controles-mobile button = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* pointer-events = define se o elemento pode receber eventos do ponteiro. */
+/* auto = valor atribuído à propriedade `pointer-events` nesta regra. */
+/* width = define a largura do elemento. */
+/* 64px = valor atribuído à propriedade `width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 64px = valor atribuído à propriedade `height` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 50% = valor atribuído à propriedade `border-radius` nesta regra. */
+/* border = define a borda do elemento. */
+/* 2px solid rgba(255,255,255,.6) = valor atribuído à propriedade `border` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #fff = valor atribuído à propriedade `color` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(15,18,25,.5) = valor atribuído à propriedade `background` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 30px = valor atribuído à propriedade `font-size` nesta regra. */
+/* font-weight = define a espessura da fonte. */
+/* 900 = valor atribuído à propriedade `font-weight` nesta regra. */
+/* touch-action = define quais gestos de toque o navegador pode tratar. */
+/* none = valor atribuído à propriedade `touch-action` nesta regra. */
+/* #fff = código hexadecimal da cor branco. */
+/* rgba(255,255,255,.6) = representa aproximadamente a cor branco com nível alfa .6 de transparência. */
+/* rgba(15,18,25,.5) = representa aproximadamente a cor azul-marinho quase preto com nível alfa .5 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.controles-mobile button { pointer-events:auto; width:64px; height:64px; border-radius:50%; border:2px solid rgba(255,255,255,.6); color:#fff; background:rgba(15,18,25,.5); font-size:30px; font-weight:900; touch-action:none; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.controles-direcao, .controles-acao`. */
+/* .controles-direcao, .controles-acao = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* flex = valor atribuído à propriedade `display` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 12px = valor atribuído à propriedade `gap` nesta regra. */
+/* align-items = define o alinhamento dos itens no eixo transversal. */
+/* flex-end = valor atribuído à propriedade `align-items` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.controles-direcao, .controles-acao { display:flex; gap:12px; align-items:flex-end; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.controles-acao .acelerar`. */
+/* .controles-acao .acelerar = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* 74px = valor atribuído à propriedade `width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 74px = valor atribuído à propriedade `height` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.controles-acao .acelerar { width:74px; height:74px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.controles-acao .turbo`. */
+/* .controles-acao .turbo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* var(--amarelo) = valor atribuído à propriedade `color` nesta regra. */
+/* var(--amarelo) = lê o valor armazenado na variável CSS `--amarelo`. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.controles-acao .turbo { color:var(--amarelo); }
+
+/* MODAIS */
+/* Define em uma única regra os estilos aplicados ao seletor `.modal`. */
+/* .modal = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* none = valor atribuído à propriedade `display` nesta regra. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* inset = define conjuntamente os deslocamentos de posicionamento do elemento. */
+/* 0 = valor atribuído à propriedade `inset` nesta regra. */
+/* z-index = define a ordem de empilhamento do elemento. */
+/* 30 = valor atribuído à propriedade `z-index` nesta regra. */
+/* align-items = define o alinhamento dos itens no eixo transversal. */
+/* center = valor atribuído à propriedade `align-items` nesta regra. */
+/* justify-content = define a distribuição dos itens no eixo principal. */
+/* center = valor atribuído à propriedade `justify-content` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 20px = valor atribuído à propriedade `padding` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(0,0,0,.76) = valor atribuído à propriedade `background` nesta regra. */
+/* backdrop-filter = aplica filtros visuais ao conteúdo que aparece atrás do elemento. */
+/* blur(7px) = valor atribuído à propriedade `backdrop-filter` nesta regra. */
+/* rgba(0,0,0,.76) = representa aproximadamente a cor preto com nível alfa .76 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.modal { display:none; position:absolute; inset:0; z-index:30; align-items:center; justify-content:center; padding:20px; background:rgba(0,0,0,.76); backdrop-filter:blur(7px); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.modal.aberto`. */
+/* .modal.aberto = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* flex = valor atribuído à propriedade `display` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.modal.aberto { display:flex; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.modal-card`. */
+/* .modal-card = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* relative = valor atribuído à propriedade `position` nesta regra. */
+/* width = define a largura do elemento. */
+/* min(760px,94vw) = valor atribuído à propriedade `width` nesta regra. */
+/* max-height = define a altura máxima do elemento. */
+/* 88vh = valor atribuído à propriedade `max-height` nesta regra. */
+/* overflow = define o comportamento do conteúdo que ultrapassa os limites. */
+/* auto = valor atribuído à propriedade `overflow` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.18) = valor atribuído à propriedade `border` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 18px = valor atribuído à propriedade `border-radius` nesta regra. */
+/* background = define o fundo do elemento. */
+/* linear-gradient(145deg,#111823,#070a11) = valor atribuído à propriedade `background` nesta regra. */
+/* box-shadow = aplica uma sombra à caixa do elemento. */
+/* 0 25px 80px rgba(0,0,0,.6) = valor atribuído à propriedade `box-shadow` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 28px = valor atribuído à propriedade `padding` nesta regra. */
+/* #111823 = código hexadecimal da cor azul petróleo escuro. */
+/* #070a11 = código hexadecimal da cor azul-marinho quase preto. */
+/* rgba(255,255,255,.18) = representa aproximadamente a cor branco com nível alfa .18 de transparência. */
+/* rgba(0,0,0,.6) = representa aproximadamente a cor preto com nível alfa .6 de transparência. */
+/* linear-gradient = cria uma transição gradual de cores em linha reta para compor o fundo ou preenchimento. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.modal-card { position:relative; width:min(760px,94vw); max-height:88vh; overflow:auto; border:1px solid rgba(255,255,255,.18); border-radius:18px; background:linear-gradient(145deg,#111823,#070a11); box-shadow:0 25px 80px rgba(0,0,0,.6); padding:28px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.modal-card h2`. */
+/* .modal-card h2 = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* margin = define o espaçamento externo do elemento. */
+/* 0 0 18px = valor atribuído à propriedade `margin` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 32px = valor atribuído à propriedade `font-size` nesta regra. */
+/* font-style = define o estilo tipográfico. */
+/* italic = valor atribuído à propriedade `font-style` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* var(--amarelo) = valor atribuído à propriedade `color` nesta regra. */
+/* var(--amarelo) = lê o valor armazenado na variável CSS `--amarelo`. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.modal-card h2 { margin:0 0 18px; font-size:32px; font-style:italic; color:var(--amarelo); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.fechar-modal`. */
+/* .fechar-modal = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* position = define o método de posicionamento do elemento. */
+/* absolute = valor atribuído à propriedade `position` nesta regra. */
+/* top = define a posição ou distância em relação ao topo. */
+/* 12px = valor atribuído à propriedade `top` nesta regra. */
+/* right = define a posição ou distância em relação ao lado direito. */
+/* 14px = valor atribuído à propriedade `right` nesta regra. */
+/* width = define a largura do elemento. */
+/* 38px = valor atribuído à propriedade `width` nesta regra. */
+/* height = define a altura do elemento. */
+/* 38px = valor atribuído à propriedade `height` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 50% = valor atribuído à propriedade `border-radius` nesta regra. */
+/* background = define o fundo do elemento. */
+/* transparent = valor atribuído à propriedade `background` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.2) = valor atribuído à propriedade `border` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #fff = valor atribuído à propriedade `color` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 24px = valor atribuído à propriedade `font-size` nesta regra. */
+/* #fff = código hexadecimal da cor branco. */
+/* rgba(255,255,255,.2) = representa aproximadamente a cor branco com nível alfa .2 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.fechar-modal { position:absolute; top:12px; right:14px; width:38px; height:38px; border-radius:50%; background:transparent; border:1px solid rgba(255,255,255,.2); color:#fff; font-size:24px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.grade-info`. */
+/* .grade-info = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* grid = valor atribuído à propriedade `display` nesta regra. */
+/* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+/* 1fr 1fr = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 10px = valor atribuído à propriedade `gap` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.grade-info { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.grade-info article`. */
+/* .grade-info article = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* flex = valor atribuído à propriedade `display` nesta regra. */
+/* flex-direction = define a direção de organização dos itens flexíveis. */
+/* column = valor atribuído à propriedade `flex-direction` nesta regra. */
+/* min-height = define a altura mínima do elemento. */
+/* 80px = valor atribuído à propriedade `min-height` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(255,255,255,.05) = valor atribuído à propriedade `background` nesta regra. */
+/* border = define a borda do elemento. */
+/* 1px solid rgba(255,255,255,.08) = valor atribuído à propriedade `border` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 10px = valor atribuído à propriedade `border-radius` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 12px = valor atribuído à propriedade `padding` nesta regra. */
+/* rgba(255,255,255,.05) = representa aproximadamente a cor branco com nível alfa .05 de transparência. */
+/* rgba(255,255,255,.08) = representa aproximadamente a cor branco com nível alfa .08 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.grade-info article { display:flex; flex-direction:column; min-height:80px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:12px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.grade-info b`. */
+/* .grade-info b = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #33d5ff = valor atribuído à propriedade `color` nesta regra. */
+/* margin-bottom = define o espaçamento externo inferior. */
+/* 5px = valor atribuído à propriedade `margin-bottom` nesta regra. */
+/* #33d5ff = código hexadecimal da cor ciano. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.grade-info b { color:#33d5ff; margin-bottom:5px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.grade-info span, .subtexto`. */
+/* .grade-info span, .subtexto = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #bfcbd8 = valor atribuído à propriedade `color` nesta regra. */
+/* line-height = define a altura de cada linha de texto. */
+/* 1.45 = valor atribuído à propriedade `line-height` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 14px = valor atribuído à propriedade `font-size` nesta regra. */
+/* #bfcbd8 = código hexadecimal da cor cinza claro. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.grade-info span, .subtexto { color:#bfcbd8; line-height:1.45; font-size:14px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.ranking-tabela`. */
+/* .ranking-tabela = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* margin-top = define o espaçamento externo superior. */
+/* 15px = valor atribuído à propriedade `margin-top` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.ranking-tabela { margin-top:15px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.ranking-linha`. */
+/* .ranking-linha = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* grid = valor atribuído à propriedade `display` nesta regra. */
+/* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+/* 50px 1.5fr repeat(4,1fr) = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 8px = valor atribuído à propriedade `gap` nesta regra. */
+/* align-items = define o alinhamento dos itens no eixo transversal. */
+/* center = valor atribuído à propriedade `align-items` nesta regra. */
+/* padding = define o espaçamento interno do elemento. */
+/* 10px 8px = valor atribuído à propriedade `padding` nesta regra. */
+/* border-bottom = define a configuração visual relacionada a `border-bottom`. */
+/* 1px solid rgba(255,255,255,.08) = valor atribuído à propriedade `border-bottom` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 13px = valor atribuído à propriedade `font-size` nesta regra. */
+/* rgba(255,255,255,.08) = representa aproximadamente a cor branco com nível alfa .08 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.ranking-linha { display:grid; grid-template-columns:50px 1.5fr repeat(4,1fr); gap:8px; align-items:center; padding:10px 8px; border-bottom:1px solid rgba(255,255,255,.08); font-size:13px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.ranking-linha.cabecalho`. */
+/* .ranking-linha.cabecalho = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #87def8 = valor atribuído à propriedade `color` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 10px = valor atribuído à propriedade `font-size` nesta regra. */
+/* text-transform = define uma transformação de capitalização para o texto. */
+/* uppercase = valor atribuído à propriedade `text-transform` nesta regra. */
+/* #87def8 = código hexadecimal da cor azul céu. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.ranking-linha.cabecalho { color:#87def8; font-size:10px; text-transform:uppercase; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.pausa-card`. */
+/* .pausa-card = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* min(420px,92vw) = valor atribuído à propriedade `width` nesta regra. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* grid = valor atribuído à propriedade `display` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 10px = valor atribuído à propriedade `gap` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.pausa-card { width:min(420px,92vw); display:grid; gap:10px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.pausa-card .botao.primario`. */
+/* .pausa-card .botao.primario = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* grid-column = define em quais colunas da grade o elemento deve ocupar espaço. */
+/* auto = valor atribuído à propriedade `grid-column` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.pausa-card .botao.primario { grid-column:auto; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.resultado-selo`. */
+/* .resultado-selo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* margin = define o espaçamento externo do elemento. */
+/* 0 = valor atribuído à propriedade `margin` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #8be5ff = valor atribuído à propriedade `color` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 12px = valor atribuído à propriedade `font-size` nesta regra. */
+/* letter-spacing = define o espaçamento entre os caracteres. */
+/* 2px = valor atribuído à propriedade `letter-spacing` nesta regra. */
+/* font-weight = define a espessura da fonte. */
+/* 900 = valor atribuído à propriedade `font-weight` nesta regra. */
+/* #8be5ff = código hexadecimal da cor azul céu. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.resultado-selo { margin:0; color:#8be5ff; font-size:12px; letter-spacing:2px; font-weight:900; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.resultado-card h2`. */
+/* .resultado-card h2 = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* font-size = define o tamanho da fonte. */
+/* 48px = valor atribuído à propriedade `font-size` nesta regra. */
+/* margin = define o espaçamento externo do elemento. */
+/* 6px 0 22px = valor atribuído à propriedade `margin` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.resultado-card h2 { font-size:48px; margin:6px 0 22px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.resultado-grid`. */
+/* .resultado-grid = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* grid = valor atribuído à propriedade `display` nesta regra. */
+/* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+/* 1fr 1fr = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+/* gap = define o espaçamento entre itens de uma grade ou flexbox. */
+/* 10px = valor atribuído à propriedade `gap` nesta regra. */
+/* margin-bottom = define o espaçamento externo inferior. */
+/* 20px = valor atribuído à propriedade `margin-bottom` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.resultado-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.resultado-grid div`. */
+/* .resultado-grid div = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* padding = define o espaçamento interno do elemento. */
+/* 14px = valor atribuído à propriedade `padding` nesta regra. */
+/* border-radius = arredonda os cantos do elemento. */
+/* 10px = valor atribuído à propriedade `border-radius` nesta regra. */
+/* background = define o fundo do elemento. */
+/* rgba(255,255,255,.05) = valor atribuído à propriedade `background` nesta regra. */
+/* rgba(255,255,255,.05) = representa aproximadamente a cor branco com nível alfa .05 de transparência. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.resultado-grid div { padding:14px; border-radius:10px; background:rgba(255,255,255,.05); }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.resultado-grid span`. */
+/* .resultado-grid span = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* display = define o modelo de exibição e organização do elemento. */
+/* block = valor atribuído à propriedade `display` nesta regra. */
+/* font-size = define o tamanho da fonte. */
+/* 11px = valor atribuído à propriedade `font-size` nesta regra. */
+/* color = define a cor do texto ou conteúdo gráfico. */
+/* #aebdcd = valor atribuído à propriedade `color` nesta regra. */
+/* text-transform = define uma transformação de capitalização para o texto. */
+/* uppercase = valor atribuído à propriedade `text-transform` nesta regra. */
+/* #aebdcd = código hexadecimal da cor cinza claro. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.resultado-grid span { display:block; font-size:11px; color:#aebdcd; text-transform:uppercase; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.resultado-grid strong`. */
+/* .resultado-grid strong = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* font-size = define o tamanho da fonte. */
+/* 19px = valor atribuído à propriedade `font-size` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.resultado-grid strong { font-size:19px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.resultado-card .botao`. */
+/* .resultado-card .botao = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* width = define a largura do elemento. */
+/* 100% = valor atribuído à propriedade `width` nesta regra. */
+/* margin-top = define o espaçamento externo superior. */
+/* 8px = valor atribuído à propriedade `margin-top` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.resultado-card .botao { width:100%; margin-top:8px; }
+
+/* Define em uma única regra os estilos aplicados ao seletor `.resultado-card .botao.primario`. */
+/* .resultado-card .botao.primario = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* grid-column = define em quais colunas da grade o elemento deve ocupar espaço. */
+/* auto = valor atribuído à propriedade `grid-column` nesta regra. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+.resultado-card .botao.primario { grid-column:auto; }
+
+/* Inicia uma regra de mídia para aplicar os estilos seguintes somente quando a condição de tela informada for atendida. */
+/* @media (max-height: 760px) and (min-width: 850px) = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+@media (max-height: 760px) and (min-width: 850px) {
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.menu-conteudo`. */
+  /* .menu-conteudo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* justify-content = define a distribuição dos itens no eixo principal. */
+  /* flex-start = valor atribuído à propriedade `justify-content` nesta regra. */
+  /* padding-top = define o espaçamento interno superior. */
+  /* 18px = valor atribuído à propriedade `padding-top` nesta regra. */
+  /* overflow = define o comportamento do conteúdo que ultrapassa os limites. */
+  /* auto = valor atribuído à propriedade `overflow` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .menu-conteudo { justify-content:flex-start; padding-top:18px; overflow:auto; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `h1`. */
+  /* h1 = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* font-size = define o tamanho da fonte. */
+  /* clamp(35px,4.5vw,58px) = valor atribuído à propriedade `font-size` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  h1 { font-size:clamp(35px,4.5vw,58px); }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.descricao`. */
+  /* .descricao = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* font-size = define o tamanho da fonte. */
+  /* 12px = valor atribuído à propriedade `font-size` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .descricao { font-size:12px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.campo`. */
+  /* .campo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* min-height = define a altura mínima do elemento. */
+  /* 36px = valor atribuído à propriedade `min-height` nesta regra. */
+  /* padding = define o espaçamento interno do elemento. */
+  /* 7px 10px = valor atribuído à propriedade `padding` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .campo { min-height:36px; padding:7px 10px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.preview-selecao`. */
+  /* .preview-selecao = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* margin-top = define o espaçamento externo superior. */
+  /* 7px = valor atribuído à propriedade `margin-top` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .preview-selecao { margin-top:7px; }
+
+/* Encerra o bloco de estilos CSS iniciado anteriormente. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+}
+
+/* Inicia uma regra de mídia para aplicar os estilos seguintes somente quando a condição de tela informada for atendida. */
+/* @media (max-width: 900px), (pointer: coarse) = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+@media (max-width: 900px), (pointer: coarse) {
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.controles-mobile`. */
+  /* .controles-mobile = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* display = define o modelo de exibição e organização do elemento. */
+  /* flex = valor atribuído à propriedade `display` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .controles-mobile { display:flex; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.dicas`. */
+  /* .dicas = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* display = define o modelo de exibição e organização do elemento. */
+  /* none = valor atribuído à propriedade `display` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .dicas { display:none; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.hud-esquerda`. */
+  /* .hud-esquerda = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* left = define a posição ou distância em relação ao lado esquerdo. */
+  /* 8px = valor atribuído à propriedade `left` nesta regra. */
+  /* top = define a posição ou distância em relação ao topo. */
+  /* 8px = valor atribuído à propriedade `top` nesta regra. */
+  /* width = define a largura do elemento. */
+  /* 150px = valor atribuído à propriedade `width` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .hud-esquerda { left:8px; top:8px; width:150px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.hud-direita`. */
+  /* .hud-direita = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* right = define a posição ou distância em relação ao lado direito. */
+  /* 8px = valor atribuído à propriedade `right` nesta regra. */
+  /* top = define a posição ou distância em relação ao topo. */
+  /* 8px = valor atribuído à propriedade `top` nesta regra. */
+  /* width = define a largura do elemento. */
+  /* 160px = valor atribuído à propriedade `width` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .hud-direita { right:8px; top:8px; width:160px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.painel`. */
+  /* .painel = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* padding = define o espaçamento interno do elemento. */
+  /* 7px 10px = valor atribuído à propriedade `padding` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .painel { padding:7px 10px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.painel strong`. */
+  /* .painel strong = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* font-size = define o tamanho da fonte. */
+  /* 26px = valor atribuído à propriedade `font-size` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .painel strong { font-size:26px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.velocimetro strong`. */
+  /* .velocimetro strong = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* font-size = define o tamanho da fonte. */
+  /* 40px = valor atribuído à propriedade `font-size` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .velocimetro strong { font-size:40px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.placar-pilotos`. */
+  /* .placar-pilotos = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* display = define o modelo de exibição e organização do elemento. */
+  /* none = valor atribuído à propriedade `display` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .placar-pilotos { display:none; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.hud-topo-centro`. */
+  /* .hud-topo-centro = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* width = define a largura do elemento. */
+  /* 42vw = valor atribuído à propriedade `width` nesta regra. */
+  /* top = define a posição ou distância em relação ao topo. */
+  /* 10px = valor atribuído à propriedade `top` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .hud-topo-centro { width:42vw; top:10px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `#miniMapa`. */
+  /* #miniMapa = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* width = define a largura do elemento. */
+  /* 105px = valor atribuído à propriedade `width` nesta regra. */
+  /* height = define a altura do elemento. */
+  /* 105px = valor atribuído à propriedade `height` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  #miniMapa { width:105px; height:105px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.btn-pausa`. */
+  /* .btn-pausa = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* left = define a posição ou distância em relação ao lado esquerdo. */
+  /* auto = valor atribuído à propriedade `left` nesta regra. */
+  /* right = define a posição ou distância em relação ao lado direito. */
+  /* 12px = valor atribuído à propriedade `right` nesta regra. */
+  /* top = define a posição ou distância em relação ao topo. */
+  /* 148px = valor atribuído à propriedade `top` nesta regra. */
+  /* bottom = define a posição ou distância em relação à parte inferior. */
+  /* auto = valor atribuído à propriedade `bottom` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .btn-pausa { left:auto; right:12px; top:148px; bottom:auto; }
+
+/* Encerra o bloco de estilos CSS iniciado anteriormente. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+}
+
+/* Inicia uma regra de mídia para aplicar os estilos seguintes somente quando a condição de tela informada for atendida. */
+/* @media (max-width: 700px) = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+/* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+/* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+@media (max-width: 700px) {
+
+  /* Define em uma única regra os estilos aplicados ao seletor `html, body`. */
+  /* html, body = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* overflow = define o comportamento do conteúdo que ultrapassa os limites. */
+  /* auto = valor atribuído à propriedade `overflow` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  html, body { overflow:auto; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.tela-menu`. */
+  /* .tela-menu = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* min-height = define a altura mínima do elemento. */
+  /* 100% = valor atribuído à propriedade `min-height` nesta regra. */
+  /* height = define a altura do elemento. */
+  /* auto = valor atribuído à propriedade `height` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .tela-menu { min-height:100%; height:auto; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.menu-conteudo`. */
+  /* .menu-conteudo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* height = define a altura do elemento. */
+  /* auto = valor atribuído à propriedade `height` nesta regra. */
+  /* min-height = define a altura mínima do elemento. */
+  /* 100% = valor atribuído à propriedade `min-height` nesta regra. */
+  /* padding = define o espaçamento interno do elemento. */
+  /* 24px 5vw 50px = valor atribuído à propriedade `padding` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .menu-conteudo { height:auto; min-height:100%; padding:24px 5vw 50px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.linha-opcoes, .linha-opcoes-3, .preview-selecao`. */
+  /* .linha-opcoes, .linha-opcoes-3, .preview-selecao = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+  /* 1fr = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .linha-opcoes, .linha-opcoes-3, .preview-selecao { grid-template-columns:1fr; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.menu-botoes`. */
+  /* .menu-botoes = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+  /* 1fr = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .menu-botoes { grid-template-columns:1fr; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.botao.primario`. */
+  /* .botao.primario = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* grid-column = define em quais colunas da grade o elemento deve ocupar espaço. */
+  /* auto = valor atribuído à propriedade `grid-column` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .botao.primario { grid-column:auto; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.menu-rodape`. */
+  /* .menu-rodape = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* display = define o modelo de exibição e organização do elemento. */
+  /* none = valor atribuído à propriedade `display` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .menu-rodape { display:none; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.grade-info, .resultado-grid`. */
+  /* .grade-info, .resultado-grid = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+  /* 1fr = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .grade-info, .resultado-grid { grid-template-columns:1fr; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.hud-topo-centro`. */
+  /* .hud-topo-centro = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* display = define o modelo de exibição e organização do elemento. */
+  /* none = valor atribuído à propriedade `display` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .hud-topo-centro { display:none; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.tempo`. */
+  /* .tempo = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* display = define o modelo de exibição e organização do elemento. */
+  /* none = valor atribuído à propriedade `display` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .tempo { display:none; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.camera, .modo-ia`. */
+  /* .camera, .modo-ia = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* display = define o modelo de exibição e organização do elemento. */
+  /* none = valor atribuído à propriedade `display` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .camera, .modo-ia { display:none; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.hud-direita`. */
+  /* .hud-direita = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* width = define a largura do elemento. */
+  /* 130px = valor atribuído à propriedade `width` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .hud-direita { width:130px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.velocimetro`. */
+  /* .velocimetro = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* margin-top = define o espaçamento externo superior. */
+  /* 0 = valor atribuído à propriedade `margin-top` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .velocimetro { margin-top:0; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.ranking-linha`. */
+  /* .ranking-linha = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* grid-template-columns = define a quantidade e o tamanho das colunas de uma grade CSS. */
+  /* 35px 1fr 65px = valor atribuído à propriedade `grid-template-columns` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .ranking-linha { grid-template-columns:35px 1fr 65px; }
+
+  /* Define em uma única regra os estilos aplicados ao seletor `.ranking-linha span:nth-child(n+4)`. */
+  /* .ranking-linha span:nth-child(n+4) = seletor CSS que identifica os elementos aos quais estas regras visuais serão aplicadas. */
+  /* display = define o modelo de exibição e organização do elemento. */
+  /* none = valor atribuído à propriedade `display` nesta regra. */
+  /* { = inicia o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+  /* : = separa o nome de uma propriedade CSS do valor configurado para ela. */
+  .ranking-linha span:nth-child(n+4) { display:none; }
+
+/* Encerra o bloco de estilos CSS iniciado anteriormente. */
+/* } = encerra o bloco de declarações pertencente ao seletor ou regra atual. */
+}

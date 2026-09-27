@@ -1,0 +1,1416 @@
+<!-- Declara que o documento utiliza o padrão HTML5 para que o navegador interprete a página corretamente. -->
+<!-- <!DOCTYPE html> = informa ao navegador que a página segue o padrão HTML5. -->
+<!DOCTYPE html>
+
+<!-- Cria ou configura o elemento `<html>`, que define o elemento raiz de todo o documento HTML. -->
+<!-- <html> = define o elemento raiz de todo o documento HTML. -->
+<!-- lang = define o idioma principal do documento. -->
+<!-- "pt-BR" = valor atribuído ao atributo `lang` nesta linha. -->
+<!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+<html lang="pt-BR">
+
+<!-- Cria ou configura o elemento `<head>`, que agrupa metadados, título e referências de recursos do documento. -->
+<!-- <head> = agrupa metadados, título e referências de recursos do documento. -->
+<!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+<head>
+
+  <!-- Cria ou configura o elemento `<meta>`, que fornece metadados e configurações para o navegador. -->
+  <!-- <meta> = fornece metadados e configurações para o navegador. -->
+  <!-- charset = define a codificação de caracteres utilizada pelo documento. -->
+  <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+  <meta charset="UTF-8">
+
+  <!-- Cria ou configura o elemento `<meta>`, que fornece metadados e configurações para o navegador. -->
+  <!-- <meta> = fornece metadados e configurações para o navegador. -->
+  <!-- name = define o nome utilizado para identificar o campo ou metadado. -->
+  <!-- content = define o conteúdo associado ao metadado. -->
+  <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Cria ou configura o elemento `<meta>`, que fornece metadados e configurações para o navegador. -->
+  <!-- <meta> = fornece metadados e configurações para o navegador. -->
+  <!-- name = define o nome utilizado para identificar o campo ou metadado. -->
+  <!-- content = define o conteúdo associado ao metadado. -->
+  <!-- #050713 = código hexadecimal da cor azul-marinho quase preto. -->
+  <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+  <meta name="theme-color" content="#050713">
+
+  <!-- Cria ou configura o elemento `<title>`, que define o título exibido na aba do navegador. -->
+  <!-- <title> = define o título exibido na aba do navegador. -->
+  <!-- "Corrida Costa do Sol - HTML, CSS e JavaScript" = conteúdo textual exibido ao usuário por este elemento. -->
+  <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+  <title>Corrida Costa do Sol - HTML, CSS e JavaScript</title>
+
+  <!-- Cria ou configura o elemento `<link>`, que vincula o documento a um recurso externo como uma folha de estilos. -->
+  <!-- <link> = vincula o documento a um recurso externo como uma folha de estilos. -->
+  <!-- rel = define a relação entre o documento e o recurso vinculado. -->
+  <!-- href = informa o caminho do recurso que será carregado pelo link. -->
+  <!-- "style.css" = valor atribuído ao atributo `href` nesta linha. -->
+  <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+  <link rel="stylesheet" href="style.css">
+
+<!-- Encerra o elemento HTML `<head>` iniciado anteriormente. -->
+<!-- </head> = fecha o elemento HTML `head` iniciado anteriormente. -->
+</head>
+
+<!-- Cria ou configura o elemento `<body>`, que contém todo o conteúdo visível e interativo da página. -->
+<!-- <body> = contém todo o conteúdo visível e interativo da página. -->
+<!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+<body>
+
+  <!-- Cria ou configura o elemento `<main>`, que define a área principal de conteúdo da aplicação. -->
+  <!-- <main> = define a área principal de conteúdo da aplicação. -->
+  <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+  <!-- "app" = valor atribuído ao atributo `id` nesta linha. -->
+  <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+  <main id="app">
+
+    <!-- Cria ou configura o elemento `<section>`, que cria uma seção temática da interface. -->
+    <!-- <section> = cria uma seção temática da interface. -->
+    <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+    <!-- "telaMenu" = valor atribuído ao atributo `id` nesta linha. -->
+    <!-- class = associa uma ou mais classes CSS ao elemento. -->
+    <!-- "tela tela-menu ativa" = valor atribuído ao atributo `class` nesta linha. -->
+    <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+    <!-- "Menu principal" = valor atribuído ao atributo `aria-label` nesta linha. -->
+    <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+    <section id="telaMenu" class="tela tela-menu ativa" aria-label="Menu principal">
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "menu-sombra" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div class="menu-sombra"></div>
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "menu-conteudo" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div class="menu-conteudo">
+
+        <!-- Cria ou configura o elemento `<p>`, que define um parágrafo de texto. -->
+        <!-- <p> = define um parágrafo de texto. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "selo" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- "JOGO DE CORRIDA • HTML + CSS + JAVASCRIPT" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <p class="selo">JOGO DE CORRIDA • HTML + CSS + JAVASCRIPT</p>
+
+        <!-- Cria ou configura o elemento `<h1>`, que define o título principal da interface. -->
+        <!-- <h1> = define o título principal da interface. -->
+        <!-- "CORRIDA" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- "VELOCIDADE TOTAL" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <h1>CORRIDA<br><span>VELOCIDADE TOTAL</span></h1>
+
+        <!-- Cria ou configura o elemento `<p>`, que define um parágrafo de texto. -->
+        <!-- <p> = define um parágrafo de texto. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "descricao" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- "Escolha o carro, o cenário e o modo de jogo. Enfrente 7 adversários com IA ou ative o piloto automático e deixe a própria IA correr por você." = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <p class="descricao">Escolha o carro, o cenário e o modo de jogo. Enfrente 7 adversários com IA ou ative o piloto automático e deixe a própria IA correr por você.</p>
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "configuracao-menu" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div class="configuracao-menu">
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "campo-grupo campo-grupo-nome" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="campo-grupo campo-grupo-nome">
+
+            <!-- Cria ou configura o elemento `<label>`, que define o rótulo associado a um campo de formulário. -->
+            <!-- <label> = define o rótulo associado a um campo de formulário. -->
+            <!-- class = associa uma ou mais classes CSS ao elemento. -->
+            <!-- "campo-label" = valor atribuído ao atributo `class` nesta linha. -->
+            <!-- for = associa o rótulo ao campo que possui o identificador correspondente. -->
+            <!-- "nomeJogador" = valor atribuído ao atributo `for` nesta linha. -->
+            <!-- "Nome do piloto" = conteúdo textual exibido ao usuário por este elemento. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <label class="campo-label" for="nomeJogador">Nome do piloto</label>
+
+            <!-- Cria ou configura o elemento `<input>`, que cria um campo de entrada de dados. -->
+            <!-- <input> = cria um campo de entrada de dados. -->
+            <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+            <!-- "nomeJogador" = valor atribuído ao atributo `id` nesta linha. -->
+            <!-- class = associa uma ou mais classes CSS ao elemento. -->
+            <!-- "campo" = valor atribuído ao atributo `class` nesta linha. -->
+            <!-- type = define o tipo ou comportamento do elemento. -->
+            <!-- "text" = valor atribuído ao atributo `type` nesta linha. -->
+            <!-- maxlength = define a quantidade máxima de caracteres permitida. -->
+            <!-- value = define o valor inicial ou identificador lógico da opção. -->
+            <!-- "Jogador" = valor atribuído ao atributo `value` nesta linha. -->
+            <!-- autocomplete = controla o preenchimento automático do campo pelo navegador. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <input id="nomeJogador" class="campo" type="text" maxlength="18" value="Jogador" autocomplete="off">
+
+          <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+          <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+          </div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "linha-opcoes linha-opcoes-3" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="linha-opcoes linha-opcoes-3">
+
+            <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <div>
+
+              <!-- Cria ou configura o elemento `<label>`, que define o rótulo associado a um campo de formulário. -->
+              <!-- <label> = define o rótulo associado a um campo de formulário. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "campo-label" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- for = associa o rótulo ao campo que possui o identificador correspondente. -->
+              <!-- "modoJogo" = valor atribuído ao atributo `for` nesta linha. -->
+              <!-- "Modo de jogo" = conteúdo textual exibido ao usuário por este elemento. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <label class="campo-label" for="modoJogo">Modo de jogo</label>
+
+              <!-- Cria ou configura o elemento `<select>`, que cria uma lista suspensa de opções. -->
+              <!-- <select> = cria uma lista suspensa de opções. -->
+              <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+              <!-- "modoJogo" = valor atribuído ao atributo `id` nesta linha. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "campo" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <select id="modoJogo" class="campo">
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "manual" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Você controla" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="manual" selected>Você controla</option>
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "automatico" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Piloto automático - IA" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="automatico">Piloto automático - IA</option>
+
+              <!-- Encerra o elemento HTML `<select>` iniciado anteriormente. -->
+              <!-- </select> = fecha o elemento HTML `select` iniciado anteriormente. -->
+              </select>
+
+            <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+            <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+            </div>
+
+            <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <div>
+
+              <!-- Cria ou configura o elemento `<label>`, que define o rótulo associado a um campo de formulário. -->
+              <!-- <label> = define o rótulo associado a um campo de formulário. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "campo-label" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- for = associa o rótulo ao campo que possui o identificador correspondente. -->
+              <!-- "dificuldade" = valor atribuído ao atributo `for` nesta linha. -->
+              <!-- "Dificuldade" = conteúdo textual exibido ao usuário por este elemento. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <label class="campo-label" for="dificuldade">Dificuldade</label>
+
+              <!-- Cria ou configura o elemento `<select>`, que cria uma lista suspensa de opções. -->
+              <!-- <select> = cria uma lista suspensa de opções. -->
+              <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+              <!-- "dificuldade" = valor atribuído ao atributo `id` nesta linha. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "campo" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <select id="dificuldade" class="campo">
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "facil" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Fácil" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="facil">Fácil</option>
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "medio" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Médio" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="medio" selected>Médio</option>
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "avancado" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Avançado" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="avancado">Avançado</option>
+
+              <!-- Encerra o elemento HTML `<select>` iniciado anteriormente. -->
+              <!-- </select> = fecha o elemento HTML `select` iniciado anteriormente. -->
+              </select>
+
+            <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+            <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+            </div>
+
+            <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <div>
+
+              <!-- Cria ou configura o elemento `<label>`, que define o rótulo associado a um campo de formulário. -->
+              <!-- <label> = define o rótulo associado a um campo de formulário. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "campo-label" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- for = associa o rótulo ao campo que possui o identificador correspondente. -->
+              <!-- "voltas" = valor atribuído ao atributo `for` nesta linha. -->
+              <!-- "Voltas" = conteúdo textual exibido ao usuário por este elemento. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <label class="campo-label" for="voltas">Voltas</label>
+
+              <!-- Cria ou configura o elemento `<select>`, que cria uma lista suspensa de opções. -->
+              <!-- <select> = cria uma lista suspensa de opções. -->
+              <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+              <!-- "voltas" = valor atribuído ao atributo `id` nesta linha. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "campo" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <select id="voltas" class="campo">
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "2" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "2 voltas" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="2">2 voltas</option>
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "3" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "3 voltas" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="3" selected>3 voltas</option>
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "5" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "5 voltas" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="5">5 voltas</option>
+
+              <!-- Encerra o elemento HTML `<select>` iniciado anteriormente. -->
+              <!-- </select> = fecha o elemento HTML `select` iniciado anteriormente. -->
+              </select>
+
+            <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+            <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+            </div>
+
+          <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+          <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+          </div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "linha-opcoes" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="linha-opcoes">
+
+            <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <div>
+
+              <!-- Cria ou configura o elemento `<label>`, que define o rótulo associado a um campo de formulário. -->
+              <!-- <label> = define o rótulo associado a um campo de formulário. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "campo-label" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- for = associa o rótulo ao campo que possui o identificador correspondente. -->
+              <!-- "cenario" = valor atribuído ao atributo `for` nesta linha. -->
+              <!-- "Cenário" = conteúdo textual exibido ao usuário por este elemento. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <label class="campo-label" for="cenario">Cenário</label>
+
+              <!-- Cria ou configura o elemento `<select>`, que cria uma lista suspensa de opções. -->
+              <!-- <select> = cria uma lista suspensa de opções. -->
+              <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+              <!-- "cenario" = valor atribuído ao atributo `id` nesta linha. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "campo" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <select id="cenario" class="campo">
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "costa" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Costa do Sol" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="costa" selected>Costa do Sol</option>
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "serra" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Serra Verde" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="serra">Serra Verde</option>
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "neon" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Metrópole Neon" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="neon">Metrópole Neon</option>
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "canion" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Cânion Dourado" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="canion">Cânion Dourado</option>
+
+              <!-- Encerra o elemento HTML `<select>` iniciado anteriormente. -->
+              <!-- </select> = fecha o elemento HTML `select` iniciado anteriormente. -->
+              </select>
+
+            <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+            <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+            </div>
+
+            <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <div>
+
+              <!-- Cria ou configura o elemento `<label>`, que define o rótulo associado a um campo de formulário. -->
+              <!-- <label> = define o rótulo associado a um campo de formulário. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "campo-label" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- for = associa o rótulo ao campo que possui o identificador correspondente. -->
+              <!-- "carro" = valor atribuído ao atributo `for` nesta linha. -->
+              <!-- "Carro" = conteúdo textual exibido ao usuário por este elemento. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <label class="campo-label" for="carro">Carro</label>
+
+              <!-- Cria ou configura o elemento `<select>`, que cria uma lista suspensa de opções. -->
+              <!-- <select> = cria uma lista suspensa de opções. -->
+              <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+              <!-- "carro" = valor atribuído ao atributo `id` nesta linha. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "campo" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <select id="carro" class="campo">
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "veloce" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Veloce R" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="veloce" selected>Veloce R</option>
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "tempest" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Tempest GT" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="tempest">Tempest GT</option>
+
+                <!-- Cria ou configura o elemento `<option>`, que define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- <option> = define uma opção disponível dentro de uma lista suspensa. -->
+                <!-- value = define o valor inicial ou identificador lógico da opção. -->
+                <!-- "falcon" = valor atribuído ao atributo `value` nesta linha. -->
+                <!-- "Falcon X" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <option value="falcon">Falcon X</option>
+
+              <!-- Encerra o elemento HTML `<select>` iniciado anteriormente. -->
+              <!-- </select> = fecha o elemento HTML `select` iniciado anteriormente. -->
+              </select>
+
+            <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+            <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+            </div>
+
+          <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+          <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+          </div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "preview-selecao" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- aria-live = define como alterações dinâmicas do conteúdo devem ser anunciadas por tecnologias assistivas. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="preview-selecao" aria-live="polite">
+
+            <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+            <!-- "previewCarro" = valor atribuído ao atributo `id` nesta linha. -->
+            <!-- class = associa uma ou mais classes CSS ao elemento. -->
+            <!-- "preview-carro" = valor atribuído ao atributo `class` nesta linha. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <div id="previewCarro" class="preview-carro">
+
+              <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+              <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+              <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+              <!-- "miniCarro" = valor atribuído ao atributo `id` nesta linha. -->
+              <!-- class = associa uma ou mais classes CSS ao elemento. -->
+              <!-- "mini-carro" = valor atribuído ao atributo `class` nesta linha. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <div id="miniCarro" class="mini-carro"></div>
+
+              <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+              <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <div>
+
+                <!-- Cria ou configura o elemento `<strong>`, que destaca o conteúdo com importância forte. -->
+                <!-- <strong> = destaca o conteúdo com importância forte. -->
+                <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+                <!-- "previewCarroNome" = valor atribuído ao atributo `id` nesta linha. -->
+                <!-- "Veloce R" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <strong id="previewCarroNome">Veloce R</strong>
+
+                <!-- Cria ou configura o elemento `<span>`, que cria um contêiner textual em linha. -->
+                <!-- <span> = cria um contêiner textual em linha. -->
+                <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+                <!-- "previewCarroStats" = valor atribuído ao atributo `id` nesta linha. -->
+                <!-- "Velocidade 325 • Aceleração 90 • Controle 86" = conteúdo textual exibido ao usuário por este elemento. -->
+                <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+                <span id="previewCarroStats">Velocidade 325 • Aceleração 90 • Controle 86</span>
+
+              <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+              <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+              </div>
+
+            <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+            <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+            </div>
+
+            <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- class = associa uma ou mais classes CSS ao elemento. -->
+            <!-- "preview-cenario" = valor atribuído ao atributo `class` nesta linha. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <div class="preview-cenario">
+
+              <!-- Cria ou configura o elemento `<strong>`, que destaca o conteúdo com importância forte. -->
+              <!-- <strong> = destaca o conteúdo com importância forte. -->
+              <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+              <!-- "previewCenarioNome" = valor atribuído ao atributo `id` nesta linha. -->
+              <!-- "Costa do Sol" = conteúdo textual exibido ao usuário por este elemento. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <strong id="previewCenarioNome">Costa do Sol</strong>
+
+              <!-- Cria ou configura o elemento `<span>`, que cria um contêiner textual em linha. -->
+              <!-- <span> = cria um contêiner textual em linha. -->
+              <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+              <!-- "previewCenarioDesc" = valor atribuído ao atributo `id` nesta linha. -->
+              <!-- "Montanhas, oceano e pôr do sol." = conteúdo textual exibido ao usuário por este elemento. -->
+              <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+              <span id="previewCenarioDesc">Montanhas, oceano e pôr do sol.</span>
+
+            <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+            <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+            </div>
+
+          <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+          <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+          </div>
+
+        <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+        <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+        </div>
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "menu-botoes" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div class="menu-botoes">
+
+          <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+          <!-- <button> = cria um botão interativo. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "btnJogar" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- type = define o tipo ou comportamento do elemento. -->
+          <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "botao primario" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- "INICIAR CORRIDA" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <button id="btnJogar" type="button" class="botao primario">INICIAR CORRIDA</button>
+
+          <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+          <!-- <button> = cria um botão interativo. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "btnComoJogar" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- type = define o tipo ou comportamento do elemento. -->
+          <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "botao" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- "COMO JOGAR" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <button id="btnComoJogar" type="button" class="botao">COMO JOGAR</button>
+
+          <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+          <!-- <button> = cria um botão interativo. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "btnRanking" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- type = define o tipo ou comportamento do elemento. -->
+          <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "botao" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- "RANKING" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <button id="btnRanking" type="button" class="botao">RANKING</button>
+
+        <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+        <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+        </div>
+
+      <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+      <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+      </div>
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "menu-rodape" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- "4 cenários • 3 carros • 8 pilotos • IA automática • Turbo • Drift • 3 câmeras" = conteúdo textual exibido ao usuário por este elemento. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div class="menu-rodape">4 cenários • 3 carros • 8 pilotos • IA automática • Turbo • Drift • 3 câmeras</div>
+
+    <!-- Encerra o elemento HTML `<section>` iniciado anteriormente. -->
+    <!-- </section> = fecha o elemento HTML `section` iniciado anteriormente. -->
+    </section>
+
+    <!-- Cria ou configura o elemento `<section>`, que cria uma seção temática da interface. -->
+    <!-- <section> = cria uma seção temática da interface. -->
+    <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+    <!-- "telaJogo" = valor atribuído ao atributo `id` nesta linha. -->
+    <!-- class = associa uma ou mais classes CSS ao elemento. -->
+    <!-- "tela tela-jogo" = valor atribuído ao atributo `class` nesta linha. -->
+    <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+    <!-- "Corrida" = valor atribuído ao atributo `aria-label` nesta linha. -->
+    <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+    <section id="telaJogo" class="tela tela-jogo" aria-label="Corrida">
+
+      <!-- Cria ou configura o elemento `<canvas>`, que cria uma área gráfica desenhável por JavaScript. -->
+      <!-- <canvas> = cria uma área gráfica desenhável por JavaScript. -->
+      <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+      <!-- "gameCanvas" = valor atribuído ao atributo `id` nesta linha. -->
+      <!-- width = define a largura interna do canvas ou recurso. -->
+      <!-- height = define a altura interna do canvas ou recurso. -->
+      <!-- tabindex = define a participação e a ordem do elemento na navegação por teclado. -->
+      <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+      <!-- "Pista de corrida" = valor atribuído ao atributo `aria-label` nesta linha. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <canvas id="gameCanvas" width="1280" height="720" tabindex="0" aria-label="Pista de corrida"></canvas>
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+      <!-- "hud" = valor atribuído ao atributo `id` nesta linha. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "hud" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div id="hud" class="hud">
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "hud-esquerda" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div class="hud-esquerda">
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "painel posicao" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "hudPosicao" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- "POSIÇÃO" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "1" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "/8" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="painel posicao"><span>POSIÇÃO</span><strong id="hudPosicao">1<small>/8</small></strong></div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "painel volta" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "hudVolta" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- "VOLTA" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "1" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "/3" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="painel volta"><span>VOLTA</span><strong id="hudVolta">1<small>/3</small></strong></div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "placarPilotos" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "placar-pilotos" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div id="placarPilotos" class="placar-pilotos"></div>
+
+        <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+        <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+        </div>
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "hud-topo-centro" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div class="hud-topo-centro">
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "turbo-wrap" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="turbo-wrap">
+
+            <!-- Cria ou configura o elemento `<span>`, que cria um contêiner textual em linha. -->
+            <!-- <span> = cria um contêiner textual em linha. -->
+            <!-- "TURBO" = conteúdo textual exibido ao usuário por este elemento. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <span>TURBO</span>
+
+            <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- class = associa uma ou mais classes CSS ao elemento. -->
+            <!-- "turbo-barra" = valor atribuído ao atributo `class` nesta linha. -->
+            <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+            <!-- "hudTurbo" = valor atribuído ao atributo `id` nesta linha. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <div class="turbo-barra"><i id="hudTurbo"></i></div>
+
+          <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+          <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+          </div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "hudInfoCorrida" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "hud-info-corrida" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- "COSTA DO SOL • VELOCE R" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div id="hudInfoCorrida" class="hud-info-corrida">COSTA DO SOL • VELOCE R</div>
+
+        <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+        <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+        </div>
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "hud-direita" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div class="hud-direita">
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "painel tempo" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "hudTempo" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- "TEMPO" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "00:00.000" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="painel tempo"><span>TEMPO</span><strong id="hudTempo">00:00.000</strong></div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "painel velocimetro" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="painel velocimetro">
+
+            <!-- Cria ou configura o elemento `<span>`, que cria um contêiner textual em linha. -->
+            <!-- <span> = cria um contêiner textual em linha. -->
+            <!-- "VELOCIDADE" = conteúdo textual exibido ao usuário por este elemento. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <span>VELOCIDADE</span>
+
+            <!-- Cria ou configura o elemento `<strong>`, que destaca o conteúdo com importância forte. -->
+            <!-- <strong> = destaca o conteúdo com importância forte. -->
+            <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+            <!-- "hudVelocidade" = valor atribuído ao atributo `id` nesta linha. -->
+            <!-- "0" = conteúdo textual exibido ao usuário por este elemento. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <strong id="hudVelocidade">0</strong>
+
+            <!-- Cria ou configura o elemento `<em>`, que representa conteúdo com ênfase. -->
+            <!-- <em> = representa conteúdo com ênfase. -->
+            <!-- "km/h" = conteúdo textual exibido ao usuário por este elemento. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <em>km/h</em>
+
+            <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+            <!-- class = associa uma ou mais classes CSS ao elemento. -->
+            <!-- "rpm" = valor atribuído ao atributo `class` nesta linha. -->
+            <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+            <!-- "hudRpm" = valor atribuído ao atributo `id` nesta linha. -->
+            <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+            <div class="rpm"><i id="hudRpm"></i></div>
+
+          <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+          <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+          </div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "painel camera" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "hudCamera" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- "CÂMERA 1" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "tecla C" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="painel camera"><span id="hudCamera">CÂMERA 1</span><small>tecla C</small></div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "hudModoIA" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "painel modo-ia" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- "IA NO VOLANTE" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div id="hudModoIA" class="painel modo-ia" hidden>IA NO VOLANTE</div>
+
+        <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+        <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+        </div>
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "hud-inferior" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div class="hud-inferior">
+
+          <!-- Cria ou configura o elemento `<canvas>`, que cria uma área gráfica desenhável por JavaScript. -->
+          <!-- <canvas> = cria uma área gráfica desenhável por JavaScript. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "miniMapa" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- width = define a largura interna do canvas ou recurso. -->
+          <!-- height = define a altura interna do canvas ou recurso. -->
+          <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+          <!-- "Minimapa da pista" = valor atribuído ao atributo `aria-label` nesta linha. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <canvas id="miniMapa" width="180" height="180" aria-label="Minimapa da pista"></canvas>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "dicas" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- "W/↑" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "acelerar &nbsp," = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "S/↓" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "frear &nbsp," = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "A/D" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "virar &nbsp," = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "ESPAÇO" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "turbo &nbsp," = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "SHIFT" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "drift &nbsp," = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "C" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "câmera" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div class="dicas"><b>W/↑</b> acelerar &nbsp; <b>S/↓</b> frear &nbsp; <b>A/D</b> virar &nbsp; <b>ESPAÇO</b> turbo &nbsp; <b>SHIFT</b> drift &nbsp; <b>C</b> câmera</div>
+
+        <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+        <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+        </div>
+
+      <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+      <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+      </div>
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+      <!-- "contagem" = valor atribuído ao atributo `id` nesta linha. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "contagem" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- aria-live = define como alterações dinâmicas do conteúdo devem ser anunciadas por tecnologias assistivas. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div id="contagem" class="contagem" aria-live="polite"></div>
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+      <!-- "mensagemCorrida" = valor atribuído ao atributo `id` nesta linha. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "mensagem-corrida" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- aria-live = define como alterações dinâmicas do conteúdo devem ser anunciadas por tecnologias assistivas. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div id="mensagemCorrida" class="mensagem-corrida" aria-live="polite"></div>
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "controles-mobile" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+      <!-- "Controles para toque" = valor atribuído ao atributo `aria-label` nesta linha. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div class="controles-mobile" aria-label="Controles para toque">
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "controles-direcao" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div class="controles-direcao">
+
+          <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+          <!-- <button> = cria um botão interativo. -->
+          <!-- type = define o tipo ou comportamento do elemento. -->
+          <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+          <!-- data-controle = configura o atributo `data-controle` deste elemento. -->
+          <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+          <!-- "Virar à esquerda" = valor atribuído ao atributo `aria-label` nesta linha. -->
+          <!-- "◀" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <button type="button" data-controle="esquerda" aria-label="Virar à esquerda">◀</button>
+
+          <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+          <!-- <button> = cria um botão interativo. -->
+          <!-- type = define o tipo ou comportamento do elemento. -->
+          <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+          <!-- data-controle = configura o atributo `data-controle` deste elemento. -->
+          <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+          <!-- "Virar à direita" = valor atribuído ao atributo `aria-label` nesta linha. -->
+          <!-- "▶" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <button type="button" data-controle="direita" aria-label="Virar à direita">▶</button>
+
+        <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+        <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+        </div>
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "controles-acao" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div class="controles-acao">
+
+          <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+          <!-- <button> = cria um botão interativo. -->
+          <!-- type = define o tipo ou comportamento do elemento. -->
+          <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+          <!-- data-controle = configura o atributo `data-controle` deste elemento. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "freio" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+          <!-- "Frear" = valor atribuído ao atributo `aria-label` nesta linha. -->
+          <!-- "▼" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <button type="button" data-controle="freio" class="freio" aria-label="Frear">▼</button>
+
+          <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+          <!-- <button> = cria um botão interativo. -->
+          <!-- type = define o tipo ou comportamento do elemento. -->
+          <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+          <!-- data-controle = configura o atributo `data-controle` deste elemento. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "acelerar" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+          <!-- "Acelerar" = valor atribuído ao atributo `aria-label` nesta linha. -->
+          <!-- "▲" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <button type="button" data-controle="acelerar" class="acelerar" aria-label="Acelerar">▲</button>
+
+          <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+          <!-- <button> = cria um botão interativo. -->
+          <!-- type = define o tipo ou comportamento do elemento. -->
+          <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+          <!-- data-controle = configura o atributo `data-controle` deste elemento. -->
+          <!-- class = associa uma ou mais classes CSS ao elemento. -->
+          <!-- "turbo" = valor atribuído ao atributo `class` nesta linha. -->
+          <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+          <!-- "Turbo" = valor atribuído ao atributo `aria-label` nesta linha. -->
+          <!-- "⚡" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <button type="button" data-controle="turbo" class="turbo" aria-label="Turbo">⚡</button>
+
+        <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+        <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+        </div>
+
+      <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+      <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+      </div>
+
+      <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+      <!-- <button> = cria um botão interativo. -->
+      <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+      <!-- "btnPausaRapida" = valor atribuído ao atributo `id` nesta linha. -->
+      <!-- type = define o tipo ou comportamento do elemento. -->
+      <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "btn-pausa" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+      <!-- "Pausar" = valor atribuído ao atributo `aria-label` nesta linha. -->
+      <!-- "Ⅱ" = conteúdo textual exibido ao usuário por este elemento. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <button id="btnPausaRapida" type="button" class="btn-pausa" aria-label="Pausar">Ⅱ</button>
+
+    <!-- Encerra o elemento HTML `<section>` iniciado anteriormente. -->
+    <!-- </section> = fecha o elemento HTML `section` iniciado anteriormente. -->
+    </section>
+
+    <!-- Cria ou configura o elemento `<section>`, que cria uma seção temática da interface. -->
+    <!-- <section> = cria uma seção temática da interface. -->
+    <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+    <!-- "modalComoJogar" = valor atribuído ao atributo `id` nesta linha. -->
+    <!-- class = associa uma ou mais classes CSS ao elemento. -->
+    <!-- "modal" = valor atribuído ao atributo `class` nesta linha. -->
+    <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+    <!-- "Como jogar" = valor atribuído ao atributo `aria-label` nesta linha. -->
+    <!-- aria-hidden = configura o atributo `aria-hidden` deste elemento. -->
+    <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+    <section id="modalComoJogar" class="modal" aria-label="Como jogar" aria-hidden="true">
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "modal-card" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div class="modal-card">
+
+        <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+        <!-- <button> = cria um botão interativo. -->
+        <!-- type = define o tipo ou comportamento do elemento. -->
+        <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "fechar-modal" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- data-fechar = configura o atributo `data-fechar` deste elemento. -->
+        <!-- "×" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <button type="button" class="fechar-modal" data-fechar="modalComoJogar">×</button>
+
+        <!-- Cria ou configura o elemento `<h2>`, que define um título de segundo nível. -->
+        <!-- <h2> = define um título de segundo nível. -->
+        <!-- "COMO JOGAR" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <h2>COMO JOGAR</h2>
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "grade-info" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div class="grade-info">
+
+          <!-- Cria ou configura o elemento `<article>`, que define uma unidade independente de conteúdo. -->
+          <!-- <article> = define uma unidade independente de conteúdo. -->
+          <!-- "W / ↑" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Acelerar o carro." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <article><b>W / ↑</b><span>Acelerar o carro.</span></article>
+
+          <!-- Cria ou configura o elemento `<article>`, que define uma unidade independente de conteúdo. -->
+          <!-- <article> = define uma unidade independente de conteúdo. -->
+          <!-- "S / ↓" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Frear e reduzir a velocidade." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <article><b>S / ↓</b><span>Frear e reduzir a velocidade.</span></article>
+
+          <!-- Cria ou configura o elemento `<article>`, que define uma unidade independente de conteúdo. -->
+          <!-- <article> = define uma unidade independente de conteúdo. -->
+          <!-- "A / D" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Virar para esquerda ou direita." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <article><b>A / D</b><span>Virar para esquerda ou direita.</span></article>
+
+          <!-- Cria ou configura o elemento `<article>`, que define uma unidade independente de conteúdo. -->
+          <!-- <article> = define uma unidade independente de conteúdo. -->
+          <!-- "ESPAÇO" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Ativar o turbo enquanto houver carga. Soltar o turbo não altera o tamanho da tela ou do HUD." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <article><b>ESPAÇO</b><span>Ativar o turbo enquanto houver carga. Soltar o turbo não altera o tamanho da tela ou do HUD.</span></article>
+
+          <!-- Cria ou configura o elemento `<article>`, que define uma unidade independente de conteúdo. -->
+          <!-- <article> = define uma unidade independente de conteúdo. -->
+          <!-- "SHIFT" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Drift: ajuda nas curvas, mas reduz um pouco a velocidade." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <article><b>SHIFT</b><span>Drift: ajuda nas curvas, mas reduz um pouco a velocidade.</span></article>
+
+          <!-- Cria ou configura o elemento `<article>`, que define uma unidade independente de conteúdo. -->
+          <!-- <article> = define uma unidade independente de conteúdo. -->
+          <!-- "C" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Alternar entre três câmeras." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <article><b>C</b><span>Alternar entre três câmeras.</span></article>
+
+          <!-- Cria ou configura o elemento `<article>`, que define uma unidade independente de conteúdo. -->
+          <!-- <article> = define uma unidade independente de conteúdo. -->
+          <!-- "ESC / P" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Pausar ou continuar a corrida." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <article><b>ESC / P</b><span>Pausar ou continuar a corrida.</span></article>
+
+          <!-- Cria ou configura o elemento `<article>`, que define uma unidade independente de conteúdo. -->
+          <!-- <article> = define uma unidade independente de conteúdo. -->
+          <!-- "PILOTO AUTOMÁTICO" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "No menu, escolha este modo para deixar uma IA controlar seu carro do começo ao fim." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <article><b>PILOTO AUTOMÁTICO</b><span>No menu, escolha este modo para deixar uma IA controlar seu carro do começo ao fim.</span></article>
+
+          <!-- Cria ou configura o elemento `<article>`, que define uma unidade independente de conteúdo. -->
+          <!-- <article> = define uma unidade independente de conteúdo. -->
+          <!-- "4 CENÁRIOS" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Costa do Sol, Serra Verde, Metrópole Neon e Cânion Dourado possuem aparência e desenho de pista próprios." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <article><b>4 CENÁRIOS</b><span>Costa do Sol, Serra Verde, Metrópole Neon e Cânion Dourado possuem aparência e desenho de pista próprios.</span></article>
+
+          <!-- Cria ou configura o elemento `<article>`, que define uma unidade independente de conteúdo. -->
+          <!-- <article> = define uma unidade independente de conteúdo. -->
+          <!-- "3 CARROS" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Veloce R, Tempest GT e Falcon X têm velocidade, aceleração e controle diferentes." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <article><b>3 CARROS</b><span>Veloce R, Tempest GT e Falcon X têm velocidade, aceleração e controle diferentes.</span></article>
+
+        <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+        <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+        </div>
+
+      <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+      <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+      </div>
+
+    <!-- Encerra o elemento HTML `<section>` iniciado anteriormente. -->
+    <!-- </section> = fecha o elemento HTML `section` iniciado anteriormente. -->
+    </section>
+
+    <!-- Cria ou configura o elemento `<section>`, que cria uma seção temática da interface. -->
+    <!-- <section> = cria uma seção temática da interface. -->
+    <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+    <!-- "modalRanking" = valor atribuído ao atributo `id` nesta linha. -->
+    <!-- class = associa uma ou mais classes CSS ao elemento. -->
+    <!-- "modal" = valor atribuído ao atributo `class` nesta linha. -->
+    <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+    <!-- "Ranking" = valor atribuído ao atributo `aria-label` nesta linha. -->
+    <!-- aria-hidden = configura o atributo `aria-hidden` deste elemento. -->
+    <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+    <section id="modalRanking" class="modal" aria-label="Ranking" aria-hidden="true">
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "modal-card ranking-card" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div class="modal-card ranking-card">
+
+        <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+        <!-- <button> = cria um botão interativo. -->
+        <!-- type = define o tipo ou comportamento do elemento. -->
+        <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "fechar-modal" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- data-fechar = configura o atributo `data-fechar` deste elemento. -->
+        <!-- "×" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <button type="button" class="fechar-modal" data-fechar="modalRanking">×</button>
+
+        <!-- Cria ou configura o elemento `<h2>`, que define um título de segundo nível. -->
+        <!-- <h2> = define um título de segundo nível. -->
+        <!-- "RANKING DE PILOTOS" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <h2>RANKING DE PILOTOS</h2>
+
+        <!-- Cria ou configura o elemento `<p>`, que define um parágrafo de texto. -->
+        <!-- <p> = define um parágrafo de texto. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "subtexto" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- "Resultados salvos automaticamente no banco local do navegador (IndexedDB)." = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <p class="subtexto">Resultados salvos automaticamente no banco local do navegador (IndexedDB).</p>
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+        <!-- "rankingTabela" = valor atribuído ao atributo `id` nesta linha. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "ranking-tabela" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div id="rankingTabela" class="ranking-tabela"></div>
+
+        <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+        <!-- <button> = cria um botão interativo. -->
+        <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+        <!-- "btnLimparRanking" = valor atribuído ao atributo `id` nesta linha. -->
+        <!-- type = define o tipo ou comportamento do elemento. -->
+        <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "botao perigo" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- "LIMPAR RANKING" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <button id="btnLimparRanking" type="button" class="botao perigo">LIMPAR RANKING</button>
+
+      <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+      <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+      </div>
+
+    <!-- Encerra o elemento HTML `<section>` iniciado anteriormente. -->
+    <!-- </section> = fecha o elemento HTML `section` iniciado anteriormente. -->
+    </section>
+
+    <!-- Cria ou configura o elemento `<section>`, que cria uma seção temática da interface. -->
+    <!-- <section> = cria uma seção temática da interface. -->
+    <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+    <!-- "modalPausa" = valor atribuído ao atributo `id` nesta linha. -->
+    <!-- class = associa uma ou mais classes CSS ao elemento. -->
+    <!-- "modal" = valor atribuído ao atributo `class` nesta linha. -->
+    <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+    <!-- "Jogo pausado" = valor atribuído ao atributo `aria-label` nesta linha. -->
+    <!-- aria-hidden = configura o atributo `aria-hidden` deste elemento. -->
+    <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+    <section id="modalPausa" class="modal" aria-label="Jogo pausado" aria-hidden="true">
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "modal-card pausa-card" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div class="modal-card pausa-card">
+
+        <!-- Cria ou configura o elemento `<h2>`, que define um título de segundo nível. -->
+        <!-- <h2> = define um título de segundo nível. -->
+        <!-- "JOGO PAUSADO" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <h2>JOGO PAUSADO</h2>
+
+        <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+        <!-- <button> = cria um botão interativo. -->
+        <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+        <!-- "btnContinuar" = valor atribuído ao atributo `id` nesta linha. -->
+        <!-- type = define o tipo ou comportamento do elemento. -->
+        <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "botao primario" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- "CONTINUAR" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <button id="btnContinuar" type="button" class="botao primario">CONTINUAR</button>
+
+        <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+        <!-- <button> = cria um botão interativo. -->
+        <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+        <!-- "btnReiniciar" = valor atribuído ao atributo `id` nesta linha. -->
+        <!-- type = define o tipo ou comportamento do elemento. -->
+        <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "botao" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- "REINICIAR CORRIDA" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <button id="btnReiniciar" type="button" class="botao">REINICIAR CORRIDA</button>
+
+        <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+        <!-- <button> = cria um botão interativo. -->
+        <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+        <!-- "btnSairMenu" = valor atribuído ao atributo `id` nesta linha. -->
+        <!-- type = define o tipo ou comportamento do elemento. -->
+        <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "botao" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- "VOLTAR AO MENU" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <button id="btnSairMenu" type="button" class="botao">VOLTAR AO MENU</button>
+
+      <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+      <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+      </div>
+
+    <!-- Encerra o elemento HTML `<section>` iniciado anteriormente. -->
+    <!-- </section> = fecha o elemento HTML `section` iniciado anteriormente. -->
+    </section>
+
+    <!-- Cria ou configura o elemento `<section>`, que cria uma seção temática da interface. -->
+    <!-- <section> = cria uma seção temática da interface. -->
+    <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+    <!-- "modalFim" = valor atribuído ao atributo `id` nesta linha. -->
+    <!-- class = associa uma ou mais classes CSS ao elemento. -->
+    <!-- "modal" = valor atribuído ao atributo `class` nesta linha. -->
+    <!-- aria-label = fornece um rótulo acessível para tecnologias assistivas. -->
+    <!-- "Resultado da corrida" = valor atribuído ao atributo `aria-label` nesta linha. -->
+    <!-- aria-hidden = configura o atributo `aria-hidden` deste elemento. -->
+    <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+    <section id="modalFim" class="modal" aria-label="Resultado da corrida" aria-hidden="true">
+
+      <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+      <!-- class = associa uma ou mais classes CSS ao elemento. -->
+      <!-- "modal-card resultado-card" = valor atribuído ao atributo `class` nesta linha. -->
+      <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+      <div class="modal-card resultado-card">
+
+        <!-- Cria ou configura o elemento `<p>`, que define um parágrafo de texto. -->
+        <!-- <p> = define um parágrafo de texto. -->
+        <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+        <!-- "resultadoSelo" = valor atribuído ao atributo `id` nesta linha. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "resultado-selo" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- "CORRIDA CONCLUÍDA" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <p id="resultadoSelo" class="resultado-selo">CORRIDA CONCLUÍDA</p>
+
+        <!-- Cria ou configura o elemento `<h2>`, que define um título de segundo nível. -->
+        <!-- <h2> = define um título de segundo nível. -->
+        <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+        <!-- "resultadoTitulo" = valor atribuído ao atributo `id` nesta linha. -->
+        <!-- "1º LUGAR!" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <h2 id="resultadoTitulo">1º LUGAR!</h2>
+
+        <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "resultado-grid" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <div class="resultado-grid">
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "fimPosicao" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- "Posição" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "1º" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div><span>Posição</span><strong id="fimPosicao">1º</strong></div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "fimTempo" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- "Tempo" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "00:00.000" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div><span>Tempo</span><strong id="fimTempo">00:00.000</strong></div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "fimMelhorVolta" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- "Melhor volta" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "00:00.000" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div><span>Melhor volta</span><strong id="fimMelhorVolta">00:00.000</strong></div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "fimVelMax" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- "Velocidade máx." = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "0 km/h" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div><span>Velocidade máx.</span><strong id="fimVelMax">0 km/h</strong></div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "fimCenario" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- "Cenário" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Costa do Sol" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div><span>Cenário</span><strong id="fimCenario">Costa do Sol</strong></div>
+
+          <!-- Cria ou configura o elemento `<div>`, que cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- <div> = cria um contêiner genérico usado para organizar elementos da interface. -->
+          <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+          <!-- "fimCarro" = valor atribuído ao atributo `id` nesta linha. -->
+          <!-- "Carro" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- "Veloce R" = conteúdo textual exibido ao usuário por este elemento. -->
+          <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+          <div><span>Carro</span><strong id="fimCarro">Veloce R</strong></div>
+
+        <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+        <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+        </div>
+
+        <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+        <!-- <button> = cria um botão interativo. -->
+        <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+        <!-- "btnJogarNovamente" = valor atribuído ao atributo `id` nesta linha. -->
+        <!-- type = define o tipo ou comportamento do elemento. -->
+        <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "botao primario" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- "CORRER NOVAMENTE" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <button id="btnJogarNovamente" type="button" class="botao primario">CORRER NOVAMENTE</button>
+
+        <!-- Cria ou configura o elemento `<button>`, que cria um botão interativo. -->
+        <!-- <button> = cria um botão interativo. -->
+        <!-- id = define um identificador único usado pelo CSS e pelo JavaScript para localizar o elemento. -->
+        <!-- "btnFimMenu" = valor atribuído ao atributo `id` nesta linha. -->
+        <!-- type = define o tipo ou comportamento do elemento. -->
+        <!-- "button" = valor atribuído ao atributo `type` nesta linha. -->
+        <!-- class = associa uma ou mais classes CSS ao elemento. -->
+        <!-- "botao" = valor atribuído ao atributo `class` nesta linha. -->
+        <!-- "VOLTAR AO MENU" = conteúdo textual exibido ao usuário por este elemento. -->
+        <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+        <button id="btnFimMenu" type="button" class="botao">VOLTAR AO MENU</button>
+
+      <!-- Encerra o elemento HTML `<div>` iniciado anteriormente. -->
+      <!-- </div> = fecha o elemento HTML `div` iniciado anteriormente. -->
+      </div>
+
+    <!-- Encerra o elemento HTML `<section>` iniciado anteriormente. -->
+    <!-- </section> = fecha o elemento HTML `section` iniciado anteriormente. -->
+    </section>
+
+  <!-- Encerra o elemento HTML `<main>` iniciado anteriormente. -->
+  <!-- </main> = fecha o elemento HTML `main` iniciado anteriormente. -->
+  </main>
+
+  <!-- Cria ou configura o elemento `<script>`, que cria ou configura este elemento da estrutura HTML. -->
+  <!-- <script> = representa um elemento da estrutura HTML. -->
+  <!-- src = configura o atributo `src` deste elemento. -->
+  <!-- > = encerra a declaração da tag de abertura do elemento HTML. -->
+  <script src="game.js"></script>
+
+<!-- Encerra o elemento HTML `<body>` iniciado anteriormente. -->
+<!-- </body> = fecha o elemento HTML `body` iniciado anteriormente. -->
+</body>
+
+<!-- Encerra o elemento HTML `<html>` iniciado anteriormente. -->
+<!-- </html> = fecha o elemento HTML `html` iniciado anteriormente. -->
+</html>

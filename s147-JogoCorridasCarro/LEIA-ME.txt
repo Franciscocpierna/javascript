@@ -1,0 +1,96 @@
+CORRIDA VELOCIDADE TOTAL
+HTML + CSS + JAVASCRIPT
+
+COMO ABRIR
+1. Extraia o arquivo ZIP.
+2. Abra a pasta do projeto.
+3. Clique duas vezes em index.html.
+4. Recomenda-se Chrome, Edge ou Firefox atualizado.
+
+ARQUIVOS
+- index.html: estrutura da interface e menus.
+- style.css: aparência do menu, HUD, controles e telas.
+- game.js: pista pseudo-3D, física, IA, cenários, carros, turbo, som e ranking.
+- assets/capa_corrida.png: imagem usada no menu principal.
+
+MODOS
+- Você controla: o jogador dirige normalmente pelo teclado ou pelos botões de toque.
+- Piloto automático - IA: uma IA controla o seu carro do começo ao fim. O usuário apenas assiste, troca a câmera ou pausa.
+
+CENÁRIOS
+1. Costa do Sol: montanhas, oceano e pôr do sol.
+2. Serra Verde: floresta, montanhas e pista com elevações.
+3. Metrópole Neon: corrida noturna, prédios, janelas iluminadas e neon.
+4. Cânion Dourado: deserto, paredões de rocha e retas longas.
+
+CARROS
+1. Veloce R: equilibrado e rápido.
+2. Tempest GT: melhor aceleração e frenagem.
+3. Falcon X: melhor controle nas curvas.
+
+CONTROLES
+W ou seta para cima: acelerar.
+S ou seta para baixo: frear.
+A/D ou setas esquerda/direita: virar.
+Espaço: turbo.
+Shift: drift.
+C: trocar câmera.
+P ou Esc: pausar/continuar.
+
+CORREÇÕES IMPORTANTES DESTA VERSÃO
+- A câmera foi reposicionada corretamente atrás do carro.
+- Os sete adversários agora aparecem corretamente na largada e durante a corrida.
+- Foi adicionada uma lógica leve de aproximação do pelotão para evitar que todos os adversários desapareçam rapidamente da corrida.
+- O cálculo de desenho dos carros verifica a distância real contínua antes de renderizar, evitando carros surgindo ou sumindo por causa da volta da pista.
+- O turbo não altera mais a largura de elementos do HUD. A barra usa transform: scaleX(), portanto não provoca recálculo do layout.
+- O Canvas só é redimensionado quando a tela realmente muda de tamanho, não a cada quadro.
+- Ao iniciar a corrida, o foco é removido do botão do menu. Dessa forma a tecla Espaço ativa apenas o turbo e não dispara novamente o botão INICIAR CORRIDA.
+- O céu e os fundos foram refeitos com desenhos específicos para cada cenário e sem os formatos pontiagudos da versão anterior.
+
+RANKING
+O ranking usa IndexedDB, banco local do navegador. Ao concluir uma corrida são salvos nome, posição, tempo, melhor volta, velocidade máxima, dificuldade, voltas, cenário, carro, modo e pontos.
+
+
+============================================================
+CORREÇÃO DE COLISÕES ENTRE VEÍCULOS
+============================================================
+
+Nesta versão os carros possuem colisão física entre si.
+
+- O carro do jogador não atravessa mais os adversários.
+- Os carros controlados pela IA também colidem uns com os outros.
+- Batidas traseiras reduzem a velocidade do carro que vem atrás.
+- O impacto pode transferir parte da velocidade para o carro da frente.
+- Encostadas laterais empurram os carros para lados opostos.
+- Mudanças de faixa não permitem sobreposição dos veículos.
+- Engavetamentos são resolvidos em múltiplas passadas por quadro.
+- O som de colisão possui pequeno intervalo para não ficar repetindo continuamente.
+- A grade de largada foi reposicionada para os carros começarem sem sobreposição física.
+
+O restante do projeto, incluindo cenários, carros, turbo, câmeras,
+IA automática, ranking e controles, foi preservado.
+
+
+============================================================
+IA COMPETITIVA / CORRIDA MAIS DESAFIADORA
+============================================================
+
+A inteligência artificial foi recalibrada para que os adversários não fiquem
+para trás logo na arrancada.
+
+- Os rivais aceleram de forma mais forte nos primeiros segundos da largada.
+- Cada adversário possui sua própria reserva de turbo.
+- A IA usa turbo em retas, perseguições e tentativas de ultrapassagem.
+- Os carros observam curvas futuras e freiam antes delas.
+- O nível Fácil continua acessível, mas não abandona a disputa.
+- O nível Médio mantém os rivais próximos e exige boa pilotagem.
+- O nível Avançado possui adversários mais rápidos, agressivos e eficientes.
+- Existe recuperação progressiva para carros que ficaram muito para trás.
+- A recuperação NÃO teletransporta veículos: altera somente aceleração e ritmo.
+- Rivais muito à frente reduzem apenas levemente o ritmo para preservar disputa.
+- As ultrapassagens analisam espaço lateral antes da mudança de faixa.
+- As colisões físicas da versão anterior continuam ativas.
+
+O objetivo é manter ultrapassagens e pressão durante toda a corrida, sem fazer
+a IA parecer artificialmente parada ou permitir que o jogador vença apenas
+pela arrancada inicial.
